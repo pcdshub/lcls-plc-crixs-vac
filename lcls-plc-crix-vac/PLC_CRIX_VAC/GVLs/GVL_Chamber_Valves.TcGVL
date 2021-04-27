@@ -3,6 +3,147 @@
   <GVL Name="GVL_Chamber_Valves" Id="{ead97eae-6a6e-4eba-9bd6-9444d4284b1f}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
+	
+	(* Gate valves *)
+	
+	{attribute 'pytmc' :=' pv: CRIX:VGC:01 '}
+	(* 
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
+	*)
+	CRIX_VGC_01 : FB_VGC;
+	
+	{attribute 'pytmc' :=' pv: CRIX:VGC:02 '}
+	(* 
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
+	*)
+	CRIX_VGC_02 : FB_VGC;
+	
+	{attribute 'pytmc' :=' pv: CRIX:VGC:03 '}
+	(* 
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
+	*)
+	CRIX_VGC_03 : FB_VGC;
+	
+	{attribute 'pytmc' :=' pv: CRIX:VGC:04 '}
+	(* 
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
+	*)
+	CRIX_VGC_04 : FB_VGC;
+	
+	{attribute 'pytmc' :=' pv: CRIX:VGC:05 '}
+	(* 
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
+	*)
+	CRIX_VGC_05 : FB_VGC;
+	
+	{attribute 'pytmc' :=' pv: CRIX:VGC:06 '}
+	(* 
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
+	*)
+	CRIX_VGC_06 : FB_VGC;
+	
+	{attribute 'pytmc' :=' pv: CRIX:VGC:07 '}
+	(* 
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
+	*)
+	CRIX_VGC_07 : FB_VGC;
+	
+	{attribute 'pytmc' :=' pv: CRIX:VGC:08 '}
+	(* 
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
+	*)
+	CRIX_VGC_08 : FB_VGC;
+	
+	{attribute 'pytmc' :=' pv: CRIX:VGC:09 '}
+	(* 
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
+	*)
+	CRIX_VGC_09 : FB_VGC;
+	
+	{attribute 'pytmc' :=' pv: CRIX:VGC:10 '}
+	(* 
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
+	*)
+	CRIX_VGC_10 : FB_VGC;
+	
+	{attribute 'pytmc' :=' pv: CRIX:VGC:11 '}
+	(* 
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
+	*)
+	CRIX_VGC_11 : FB_VGC;
+
+(* Cold trap valves; not installed	
+	{attribute 'pytmc' :=' pv: CRIX:VGC:12 '}
+	(* 
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
+	*)
+	CRIX_VGC_12 : FB_VGC;
+	
+	{attribute 'pytmc' :=' pv: CRIX:VGC:13 '}
+	(* 
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
+	*)
+	CRIX_VGC_13 : FB_VGC;
+	
+	{attribute 'pytmc' :=' pv: CRIX:VGC:14 '}
+	(* 
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
+	*)
+	CRIX_VGC_14 : FB_VGC;
+	
+	{attribute 'pytmc' :=' pv: CRIX:VGC:15 '}
+	(* 
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
+	*)
+	CRIX_VGC_15 : FB_VGC;
+Cold trap valves; not installed *)
+   
+	{attribute 'pytmc' :=' pv: CRIX:VGC:16 '}
+	(* 
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
+	*)
+	CRIX_VGC_16 : FB_VGC;
+	
+	{attribute 'pytmc' :=' pv: CRIX:VGC:17 '}
+	(* 
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
+	*)
+	CRIX_VGC_17 : FB_VGC;
+	
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
