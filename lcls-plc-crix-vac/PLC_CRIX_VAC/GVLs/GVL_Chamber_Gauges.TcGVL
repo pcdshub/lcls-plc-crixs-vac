@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <GVL Name="GVL_Chamber_Gauges" Id="{5237aca3-4acc-4857-9d60-04b0502e6857}">
+    <Declaration><![CDATA[//{attribute 'qualified_only'}
+VAR_GLOBAL
+	(* Pirani & Cold Cathode*)
+
+	{attribute 'pytmc' :=' pv: CRIX:GPI:01 '}
+//	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[TMO_K4S2_DRL_02 (EK1100)]^K4S2_02_E1 (EL3174)^AI Standard Channel 2^Value '}
+	CRIX_GPI_01 : FB_MKS275;
+	
+	{attribute 'pytmc' :=' pv: CRIX:GPI:02 '}
+//	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[TMO_K4S2_DRL_02 (EK1100)]^K4S2_02_E1 (EL3174)^AI Standard Channel 2^Value '}
+	CRIX_GPI_02 : FB_MKS275;
+	
+		{attribute 'pytmc' :=' pv: CRIX:GPI:03 '}
+//	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[TMO_K4S2_DRL_02 (EK1100)]^K4S2_02_E1 (EL3174)^AI Standard Channel 2^Value '}
+	CRIX_GPI_03 : FB_MKS275;
+	
+		{attribute 'pytmc' :=' pv: CRIX:GPI:04 '}
+//	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[TMO_K4S2_DRL_02 (EK1100)]^K4S2_02_E1 (EL3174)^AI Standard Channel 2^Value '}
+	CRIX_GPI_04 : FB_MKS275;
+	
+		{attribute 'pytmc' :=' pv: CRIX:GPI:05 '}
+//	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[TMO_K4S2_DRL_02 (EK1100)]^K4S2_02_E1 (EL3174)^AI Standard Channel 2^Value '}
+	CRIX_GPI_05 : FB_MKS275;
+	
+	{attribute 'pytmc' :=' pv: CRIX:GCC:01 '}
+(*
+	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[TMO_K4S2_DRL_02 (EK1100)]^K4S2_02_E1 (EL3174)^AI Standard Channel 3^Value;
+								 .i_xHV_ON	    :=	TIIB[TMO_K4S2_DRL_02 (EK1100)]^K4S2_02_E7 (EL1124)^Channel 3^Input;
+								 .i_xDisc_Active:=	TIIB[TMO_K4S2_DRL_02 (EK1100)]^K4S2_02_E7 (EL1124)^Channel 4^Input;								 
+								 .q_xHV_DIS		:= 	TIIB[TMO_K4S2_DRL_02 (EK1100)]^K4S2_02_E5 (EL2624)^Channel 2^Output	'}	
+*)
+	CRIX_GCC_01 : FB_MKS500;
+	
+	(* Cold Cathod/Micro Pirani combination gauges *)
+	
+	{attribute 'pytmc' :=' pv: CRIX:GCP:01 '}
+	CRIX_GCP_01 : FB_9XX;
+	
+	{attribute 'pytmc' :=' pv: CRIX:GCP:02 '}
+	CRIX_GCP_02 : FB_9XX;
+	
+	{attribute 'pytmc' :=' pv: CRIX:GCP:03 '}
+	CRIX_GCP_03 : FB_9XX;
+	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
