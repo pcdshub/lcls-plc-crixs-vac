@@ -1,7 +1,12 @@
 <?xml version="1.0"?>
 <TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.12">
-	<Project ProjectGUID="{90FC0816-E2E5-457E-95DE-FE6F10247F95}" Target64Bit="true" ShowHideConfigurations="#x106">
+	<Project ProjectGUID="{90FC0816-E2E5-457E-95DE-FE6F10247F95}" TargetNetId="172.21.140.47.1.1" ShowHideConfigurations="#x106">
 		<System>
+			<Licenses>
+				<Target>
+					<ManualSelect>{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</ManualSelect>
+				</Target>
+			</Licenses>
 			<Tasks>
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
@@ -11,5 +16,14 @@
 		<Plc>
 			<Project File="PLC_CRIX_VAC.xti"/>
 		</Plc>
+		<Io>
+			<Device File="Device 1 (EtherCAT).xti" Id="1"/>
+			<Device File="Device 4 (RT-Ethernet Protocol).xti" Id="4"/>
+			<Device File="Device 3 (USB).xti" Id="3"/>
+			<Device File="Device 5 (NOV-DP-RAM).xti" Id="5"/>
+		</Io>
 	</Project>
+	<Mappings>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
+	</Mappings>
 </TcSmProject>

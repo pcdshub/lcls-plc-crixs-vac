@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.12" ClassName="CDevEthernetUsbDef" SubType="57">
+	<Device Id="3" DevType="57" AmsPort="28675">
+		<Name>__FILENAME__</Name>
+		<Image Id="5" AddrType="1" ImageType="3">
+			<Name>Image</Name>
+		</Image>
+		<Box File="Box 1 (CX2100 Power Supply).xti" Id="46"/>
+		<Usb VirtualDeviceName="true"/>
+	</Device>
+</TcSmItem>

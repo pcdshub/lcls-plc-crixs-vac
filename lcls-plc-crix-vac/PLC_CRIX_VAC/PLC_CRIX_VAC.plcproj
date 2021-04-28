@@ -45,13 +45,17 @@
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
-    <PlaceholderReference Include="L2SI Vacuum Library">
-      <DefaultResolution>L2SI Vacuum Library, * (SLAC)</DefaultResolution>
-      <Namespace>L2SI_Vacuum_Library</Namespace>
-    </PlaceholderReference>
     <PlaceholderReference Include="LCLS General">
       <DefaultResolution>LCLS General, * (SLAC)</DefaultResolution>
       <Namespace>LCLS_General</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="LCLS Vacuum">
+      <DefaultResolution>LCLS Vacuum, * (SLAC - LCLS)</DefaultResolution>
+      <Namespace>LCLS_Vacuum</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="LCLSVacuumSerialDriverLib">
+      <DefaultResolution>LCLSVacuumSerialDriverLib, * (SLAC - LCLS)</DefaultResolution>
+      <Namespace>LCLS_Vacuum_Serial</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="PMPS">
       <DefaultResolution>PMPS, * (SLAC - LCLS)</DefaultResolution>
@@ -71,9 +75,9 @@
     </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
-    <PlaceholderResolution Include="L2SI Vacuum Library">
-      <Resolution>L2SI Vacuum Library, 1.1.1 (SLAC)</Resolution>
-    </PlaceholderResolution>
+    <None Include="PLC_CRIX_VAC.tmc">
+      <SubType>Content</SubType>
+    </None>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
