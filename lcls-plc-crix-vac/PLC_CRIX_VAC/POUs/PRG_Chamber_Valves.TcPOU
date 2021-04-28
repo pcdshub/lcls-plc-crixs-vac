@@ -6,18 +6,36 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(*CRIX_VGC_01(
-				i_stUSG :=  , 
-				i_stDSG:=  , 
-				i_xDis_DPIlk := FALSE, 
-				i_xEPS_OK := TRUE,
-				i_xPMPS_OK := TRUE, 
-				i_xExt_OK := TRUE, 
-				i_xOverrideMode :=  , 
-				i_xReset :=  ,
-				io_fbFFHWO :=g_FastFaultOutput2,
-                fbArbiter := g_fbArbiter1
-); *)]]></ST>
+      <ST><![CDATA[CRIX_VGC_01(i_xExtILK_OK:=TRUE,
+			i_xOverrideMode:=xSystemOverride_ChemRIXS,
+			iq_stValve => );
+	
+			
+CRIX_VGC_02(i_xExtILK_OK:=TRUE,
+			i_xOverrideMode:=xSystemOverride_ChemRIXS,
+			iq_stValve => );
+	
+CRIX_VGC_03(i_xExtILK_OK:=TRUE,
+			i_xOverrideMode:=xSystemOverride_ChemRIXS,
+			iq_stValve => );
+			
+			
+CRIX_VGC_04(i_xExtILK_OK:=TRUE,
+			i_xOverrideMode:=xSystemOverride_ChemRIXS,
+			iq_stValve => );
+			
+CRIX_VGC_05(i_xExtILK_OK:=TRUE,
+			i_xOverrideMode:=xSystemOverride_ChemRIXS,
+			iq_stValve => );
+			
+CRIX_VGC_06(i_xExtILK_OK:=TRUE,
+			i_xOverrideMode:=xSystemOverride_ChemRIXS,
+			iq_stValve => );
+			
+CRIX_VGC_07(i_xExtILK_OK:=TRUE,
+			i_xOverrideMode:=xSystemOverride_ChemRIXS,
+			iq_stValve => );
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

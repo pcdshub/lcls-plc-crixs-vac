@@ -106,11 +106,11 @@
 		<Box File="E40 (EL1004).xti" Id="82">
 			<EtherCAT PortABoxInfo="#x01000051"/>
 		</Box>
-		<Box File="E41 (EL2004).xti" Id="83">
+		<Box File="E41 (EL1004).xti" Id="37">
 			<EtherCAT PortABoxInfo="#x01000052"/>
 		</Box>
 		<Box File="E42 (EL1004).xti" Id="84">
-			<EtherCAT PortABoxInfo="#x01000053"/>
+			<EtherCAT PortABoxInfo="#x01000025"/>
 		</Box>
 		<Box File="E43 (EL2794).xti" Id="85">
 			<EtherCAT PortABoxInfo="#x01000054"/>

@@ -7,11 +7,9 @@ VAR_GLOBAL
 	(* Gate valves *)
 	
 	{attribute 'pytmc' :=' pv: CRIX:VGC:01 '}
-	(* 
-	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
-								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
-								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
-	*)
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^EK1 (EK1122)^EK1 (EK1100)^E41 (EL1004)^Channel 1^Input;
+								 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^EK1 (EK1122)^EK1 (EK1100)^E41 (EL1004)^Channel 2^Input;
+								.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^EK1 (EK1122)^EK1 (EK1100)^E39 (EL2004)^Channel 3^Output'}
 	CRIX_VGC_01 : FB_VRC;
 	
 	{attribute 'pytmc' :=' pv: CRIX:VGC:02 '}

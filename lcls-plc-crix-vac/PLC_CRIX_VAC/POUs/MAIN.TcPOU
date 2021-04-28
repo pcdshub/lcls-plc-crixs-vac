@@ -7,7 +7,9 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[
-PRG_Chamber_Gauges();]]></ST>
+PRG_Chamber_Gauges();
+
+PRG_Chamber_Valves();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
