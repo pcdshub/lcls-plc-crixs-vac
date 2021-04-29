@@ -25,6 +25,10 @@
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
     </Compile>
+    <Compile Include="GVLs\GVL_Mech_Room.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
     <Compile Include="GVLs\GVL_Vars.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
@@ -39,6 +43,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_Chamber_Valves.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_Mechanical_Room.TcPOU">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

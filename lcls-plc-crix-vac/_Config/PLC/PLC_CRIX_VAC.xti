@@ -154,14 +154,39 @@
 					<Name>GVL_Chamber_Valves.CRIX_VGC_07.i_xClsLS</Name>
 					<Type>BOOL</Type>
 				</Var>
+				<Var>
+					<Name>GVL_Mech_Room.CRIX_MECH_PRO_01.i_xMPStatus</Name>
+					<Comment><![CDATA[MP status]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Mech_Room.CRIX_MECH_PRO_01.i_xBPStatus</Name>
+					<Comment><![CDATA[BP status]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Mech_Room.CRIX_MECH_PRO_01.i_xWarning</Name>
+					<Comment><![CDATA[Warning status]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Mech_Room.CRIX_MECH_PRO_01.i_xAlarmOK</Name>
+					<Comment><![CDATA[Alarm, maps to error]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Mech_Room.CRIX_MECH_PRO_01.i_xRemote</Name>
+					<Comment><![CDATA[Remote control status]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Mech_Room.CRIX_MECH_GPI_01.i_iPRESS_R</Name>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+					<Type>INT</Type>
+				</Var>
 			</Vars>
 			<Vars VarGrpType="2" AreaNo="1">
 				<Name>PlcTask Outputs</Name>
-				<Var>
-					<Name>GVL_Chamber_Gauges.CRIX_GCC_01.q_xHV_DIS</Name>
-					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.CRIX_VGC_01.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
@@ -179,15 +204,30 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VGC_05.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_Chamber_Valves.CRIX_VGC_06.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.CRIX_VGC_07.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Gauges.CRIX_GCC_01.q_xHV_DIS</Name>
+					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_05.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Mech_Room.CRIX_MECH_PRO_01.q_xMPStart</Name>
+					<Comment><![CDATA[Main Pump start]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Mech_Room.CRIX_MECH_PRO_01.q_xBPStart</Name>
+					<Comment><![CDATA[ Booster Pump start (this can be started by the pump automatically)]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
@@ -222,4 +262,35 @@
 			</TaskPouOids>
 		</Instance>
 	</Project>
+	<Mappings>
+		<OwnerA Name="PLC_CRIX_VAC Instance">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)">
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.CRIX_GCP_03.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E39 (EL2004)">
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_01.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E41 (EL1004)">
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)">
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.CRIX_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 45 (EL2794)">
+				<Link VarA="PlcTask Outputs^GVL_Mech_Room.CRIX_MECH_PRO_01.q_xBPStart" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Mech_Room.CRIX_MECH_PRO_01.q_xMPStart" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 83 (EL1088)">
+				<Link VarA="PlcTask Inputs^GVL_Mech_Room.CRIX_MECH_PRO_01.i_xAlarmOK" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Mech_Room.CRIX_MECH_PRO_01.i_xBPStatus" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Mech_Room.CRIX_MECH_PRO_01.i_xMPStatus" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Mech_Room.CRIX_MECH_PRO_01.i_xRemote" VarB="Channel 5^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Mech_Room.CRIX_MECH_PRO_01.i_xWarning" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 92 (EL3174)">
+				<Link VarA="PlcTask Inputs^GVL_Mech_Room.CRIX_MECH_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
 </TcSmItem>
