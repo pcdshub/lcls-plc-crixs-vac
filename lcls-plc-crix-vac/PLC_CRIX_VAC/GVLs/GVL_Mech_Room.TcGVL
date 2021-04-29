@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <GVL Name="GVL_Mech_Room" Id="{8d9a1d84-5aaf-45ac-a8c9-7a3d3d933026}">
+    <Declaration><![CDATA[//{attribute 'qualified_only'}
+VAR_GLOBAL
+	
+	{attribute 'pytmc' :=' pv: CRIX:MECH:PRO:01 '}
+	{attribute 'TcLinkTo' := '.q_xMPStart := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 45 (EL2794)^Channel 1^Output;
+							  .q_xBPStart := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 45 (EL2794)^Channel 2^Output;
+							  .i_xMPStatus := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 83 (EL1088)^Channel 1^Input;
+							  .i_xBPStatus := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 83 (EL1088)^Channel 2^Input;
+						      .i_xWarning := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 83 (EL1088)^Channel 3^Input;
+						      .i_xAlarmOK := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 83 (EL1088)^Channel 4^Input;
+							  .i_xRemote := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 83 (EL1088)^Channel 5^Input '}
+	CRIX_MECH_PRO_01 : FB_EbaraDryPump; // ChemRIXS roughing pump in B950-R310 "mechanical room"
+	
+(*
+	{attribute 'pytmc' :=' pv: CRIX:MECH:VVC:01 '}
+	{attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 94 (EL2004)^Channel 1^Output '}
+	CRIX_MECH_VVC_01 : FB_VVC;      // Vent valve for rouging line in B950-R310 "mechanical room"
+*)
+	{attribute 'pytmc' :=' pv: CRIX:MECH:GPI:01 '}
+	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 92 (EL3174)^AI Standard Channel 1^Value '}	
+	CRIX_MECH_GPI_01 : FB_MKS275;   // Guage for rouging line in B950-R310 "mechanical room"
+	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

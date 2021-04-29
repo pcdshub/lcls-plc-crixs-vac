@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <POU Name="PRG_Mechanical_Room" Id="{8f0a6d22-d1f5-437c-bf02-cf60d8f0490c}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_Mechanical_Room
+VAR
+	stGauge : ST_VG;
+	//stValve : ST_VVC;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+// Rouging line vent valve (Not needed; controlled by pump)
+(*
+CRIX_MECH_VVC_01(i_xExtILK_OK:=TRUE, // check this logic with frank
+				 i_xOverrideMode:=xSystemOverride_ChemRIXS,
+				 iq_stValve=>stValve);
+*)
+
+// Roughing line gauge
+CRIX_MECH_GPI_01.M_SetBits(30518);
+CRIX_MECH_GPI_01(PG=>stGauge);
+
+// Rouging pump 
+CRIX_MECH_PRO_01(i_stBPGauge:=stGauge,
+			     i_xVlvOpn:=TRUE,   // May tie this to upstream valve?
+ 				 i_xExtIlkOK:=TRUE, // Check logic with frank
+				 stPump=>);
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
