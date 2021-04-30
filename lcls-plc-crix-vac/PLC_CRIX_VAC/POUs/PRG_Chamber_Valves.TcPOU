@@ -70,12 +70,6 @@ CRIX_VVC_07(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve => );
 	
-(*		
-CRIX_VVC_08(i_xExtILK_OK:=TRUE,
-			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => );
-			*)
-			
 CRIX_VVC_09(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve => );

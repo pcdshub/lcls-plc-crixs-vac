@@ -10,6 +10,7 @@ END_VAR
 CRIX_GPI_01.M_SetBits(30518);
 CRIX_GPI_01(PG=>);
 
+(*
 CRIX_GPI_02.M_SetBits(30518);
 CRIX_GPI_02(PG=>);
 
@@ -18,6 +19,7 @@ CRIX_GPI_03(PG=>);
 
 CRIX_GPI_04.M_SetBits(30518);
 CRIX_GPI_04(PG=>);
+*)
 
 CRIX_GPI_05.M_SetBits(30518);
 CRIX_GPI_05(PG=>);
@@ -25,11 +27,13 @@ CRIX_GPI_05(PG=>);
 CRIX_GCC_01.M_SetBits(30518);
 CRIX_GCC_01(PG=>);
 
+(*
 CRIX_GCP_01.M_SetBits(30518);
 CRIX_GCP_01(PG=>);
 
 CRIX_GCP_02.M_SetBits(30518);
 CRIX_GCP_02(PG=>);
+*)
 
 CRIX_GCP_03.M_SetBits(30518);
 CRIX_GCP_03(PG=>);]]></ST>

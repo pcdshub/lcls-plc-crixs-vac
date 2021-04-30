@@ -160,11 +160,6 @@ Cold trap valves; not installed *)
 	{attribute 'TcLinkTo' := 	'q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E36 (EL2004)^Channel 4^Output'}
 	CRIX_VVC_07 : FB_VVC;
 
-(* Missing from EPLAN?	
-	{attribute 'TcLinkTo' := 	'q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E36 (EL2004)^Channel 4^Output'}
-	CRIX_VVC_08 : FB_VVC;	
-*)
-
 	{attribute 'TcLinkTo' := 	'q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E39 (EL2004)^Channel 1^Output'}
 	CRIX_VVC_09 : FB_VVC;
 	
