@@ -188,6 +188,11 @@
 			<Vars VarGrpType="2" AreaNo="1">
 				<Name>PlcTask Outputs</Name>
 				<Var>
+					<Name>GVL_Chamber_Gauges.CRIX_GCC_01.q_xHV_DIS</Name>
+					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_Chamber_Valves.CRIX_VGC_01.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -204,20 +209,15 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_05.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_Chamber_Valves.CRIX_VGC_06.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.CRIX_VGC_07.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Gauges.CRIX_GCC_01.q_xHV_DIS</Name>
-					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VGC_05.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -266,6 +266,34 @@
 		<OwnerA Name="PLC_CRIX_VAC Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)">
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.CRIX_GCP_03.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E21 (EL2004)">
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_02.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_03.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_04.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_05.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E22 (EL1004)">
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_02.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_02.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_03.i_xClsLS" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_03.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E23 (EL1004)">
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_04.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_04.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_05.i_xClsLS" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_05.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E24 (EL2004)">
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_06.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_07.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E25 (EL1004)">
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_06.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_06.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_07.i_xClsLS" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_07.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E39 (EL2004)">
 				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_01.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true" Size="1"/>

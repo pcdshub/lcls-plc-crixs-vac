@@ -3,10 +3,15 @@
   <POU Name="PRG_Chamber_Valves" Id="{f30907aa-2202-42ce-b721-cf743607f31e}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_Chamber_Valves
 VAR
+	bRoughPressOK : BOOL := FALSE;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[CRIX_VGC_01(i_xExtILK_OK:=TRUE,
+      <ST><![CDATA[(* Roughing manifold logic *)
+
+// insert smart stuff here
+
+CRIX_VGC_01(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve => );
 	
@@ -35,6 +40,8 @@ CRIX_VGC_06(i_xExtILK_OK:=TRUE,
 CRIX_VGC_07(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve => );
+			
+			
 ]]></ST>
     </Implementation>
   </POU>
