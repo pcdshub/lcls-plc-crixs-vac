@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <POU Name="PRG_Chamber_Pumps" Id="{b20a9b3c-f30a-4f50-a45e-7b0eccd66336}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_Chamber_Pumps
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+CRIX_PTM_01(i_xExtILKOk:=True, // update logic later
+			iq_stPtm=> );
+			
+CRIX_PTM_02(i_xExtILKOk:=True, // update logic later
+			iq_stPtm=> );			]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
