@@ -5,6 +5,8 @@
 VAR
 	stGauge : ST_VG;
 	//stValve : ST_VVC;
+	stRoughPump : ST_EbaraDryPump;
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -24,7 +26,7 @@ CRIX_MECH_GPI_01(PG=>stGauge);
 CRIX_MECH_PRO_01(i_stBPGauge:=stGauge,
 			     i_xVlvOpn:=TRUE,   // May tie this to upstream valve?
  				 i_xExtIlkOK:=TRUE, // Check logic with frank
-				 stPump=>);
+				 stPump=>stRoughPump);
 ]]></ST>
     </Implementation>
   </POU>

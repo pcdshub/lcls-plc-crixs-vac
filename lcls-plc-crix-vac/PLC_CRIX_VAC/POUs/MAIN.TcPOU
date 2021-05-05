@@ -9,7 +9,9 @@ END_VAR
       <ST><![CDATA[
 PRG_Chamber_Gauges();
 
-PRG_Chamber_Valves();]]></ST>
+PRG_Chamber_Valves();
+
+PRG_Mechanical_Room();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
