@@ -4,7 +4,7 @@
     <Declaration><![CDATA[PROGRAM PRG_Mechanical_Room
 VAR
 	stGauge : ST_VG;
-	//stValve : ST_VVC;
+	stValve : ST_VVC;
 	stRoughPump : ST_EbaraDryPump;
 	
 END_VAR
@@ -12,11 +12,11 @@ END_VAR
     <Implementation>
       <ST><![CDATA[
 // Rouging line vent valve (Not needed; controlled by pump)
-(*
+
 CRIX_MECH_VVC_01(i_xExtILK_OK:=TRUE, // check this logic with frank
 				 i_xOverrideMode:=xSystemOverride_ChemRIXS,
 				 iq_stValve=>stValve);
-*)
+
 
 // Roughing line gauge
 CRIX_MECH_GPI_01.M_SetBits(30518);
@@ -24,7 +24,7 @@ CRIX_MECH_GPI_01(PG=>stGauge);
 
 // Rouging pump 
 CRIX_MECH_PRO_01(i_stBPGauge:=stGauge,
-			     i_xVlvOpn:=TRUE,   // May tie this to upstream valve?
+			     i_xVlvOpn:=stValve.q_xOPN_DO,  
  				 i_xExtIlkOK:=TRUE, // Check logic with frank
 				 stPump=>stRoughPump);
 ]]></ST>
