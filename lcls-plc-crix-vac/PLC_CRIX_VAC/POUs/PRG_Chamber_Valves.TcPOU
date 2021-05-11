@@ -13,70 +13,70 @@ END_VAR
 
 CRIX_VGC_01(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => );
+			iq_stValve => stCRIX_VGC_01);
 	
 			
 CRIX_VGC_02(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => );
+			iq_stValve => stCRIX_VGC_02);
 	
 CRIX_VGC_03(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => );
+			iq_stValve => stCRIX_VGC_03);
 			
 			
 CRIX_VGC_04(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => );
+			iq_stValve => stCRIX_VGC_04);
 			
 CRIX_VGC_05(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => );
+			iq_stValve => stCRIX_VGC_05);
 			
 CRIX_VGC_06(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => );
+			iq_stValve => stCRIX_VGC_06);
 			
 CRIX_VGC_07(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => );
+			iq_stValve => stCRIX_VGC_07);
 			
 // ChemRIXS Vent Valves
 CRIX_VVC_01(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => );
+			iq_stValve => stCRIX_VVC_01);
 			
 CRIX_VVC_02(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => );
+			iq_stValve => stCRIX_VVC_02);
 			
 CRIX_VVC_03(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => );
+			iq_stValve => stCRIX_VVC_03);
 			
 CRIX_VVC_04(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => );
+			iq_stValve => stCRIX_VVC_04);
 			
 CRIX_VVC_05(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => );
+			iq_stValve => stCRIX_VVC_05);
 			
 CRIX_VVC_06(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => );
+			iq_stValve => stCRIX_VVC_06);
 			
 CRIX_VVC_07(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => );
+			iq_stValve => stCRIX_VVC_07);
 	
 CRIX_VVC_09(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => );
+			iq_stValve => stCRIX_VVC_09);
 			
 CRIX_VVC_10(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => );]]></ST>
+			iq_stValve => stCRIX_VVC_10);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
