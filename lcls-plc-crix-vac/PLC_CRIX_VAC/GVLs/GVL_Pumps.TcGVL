@@ -11,11 +11,15 @@ VAR_GLOBAL
 								 .q_RunDO	 :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E43 (EL2794)^Channel 3^Output'}
 	CRIX_PTM_01 : FB_PTM_TurboDrive;
 	
+	stCRIX_PTM_01 : ST_LeyboldPTM;
+	
 	{attribute 'pytmc' :=' pv: CRIX:PTM:02 '}
 	{attribute 'TcLinkTo' := 	'.i_xAtSpd	 :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)^Channel 4^Input;
 								 .i_xFaultNC :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)^Channel 3^Input;
 								 .q_RunDO	 :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E43 (EL2794)^Channel 4^Output'}
 	CRIX_PTM_02 : FB_PTM_TurboDrive;
+	
+	stCRIX_PTM_02 : ST_LeyboldPTM;
 	
 	
 END_VAR]]></Declaration>

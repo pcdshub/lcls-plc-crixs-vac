@@ -8,10 +8,10 @@ END_VAR
     <Implementation>
       <ST><![CDATA[
 CRIX_PTM_01(i_xExtILKOk:=True, // update logic later
-			iq_stPtm=> );
+			iq_stPtm=> stCRIX_PTM_01);
 			
 CRIX_PTM_02(i_xExtILKOk:=True, // update logic later
-			iq_stPtm=> );			]]></ST>
+			iq_stPtm=> stCRIX_PTM_02);			]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
