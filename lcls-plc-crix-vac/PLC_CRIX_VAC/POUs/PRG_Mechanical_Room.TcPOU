@@ -25,7 +25,7 @@ CRIX_MECH_GPI_01(PG=>stGauge);
 // Rouging pump 
 CRIX_MECH_PRO_01(i_stBPGauge:=stGauge,
 			     i_xVlvOpn:=stValve.q_xOPN_DO,  
- 				 i_xExtIlkOK:=TRUE, // Check logic with frank
+ 				 i_xExtIlkOK:=stValve.q_xOPN_DO, // This is a normally open valve, so this logic is OK
 				 stPump=>stRoughPump);
 ]]></ST>
     </Implementation>
