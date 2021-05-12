@@ -21,7 +21,7 @@ VAR_GLOBAL
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 4^Value '}
 	CRIX_GPI_03 : FB_MKS275;
 	
-	stCRIX_GPI_04 : ST_VG;
+	stCRIX_GPI_03 : ST_VG;
 	
 	{attribute 'pytmc' :=' pv: CRIX:GPI:04 '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 1^Value '}

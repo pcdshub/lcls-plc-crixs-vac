@@ -3,14 +3,25 @@
   <POU Name="PRG_Chamber_Pumps" Id="{b20a9b3c-f30a-4f50-a45e-7b0eccd66336}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_Chamber_Pumps
 VAR
+	fbCRIX_PTM_01_ILK : FB_ChemRIXS_Turbo_ILK;
+	CRIX_PTM_01_ILK_OK : BOOL;
+	
+	fbCRIX_PTM_02_ILK : FB_ChemRIXS_Turbo_ILK;
+	CRIX_PTM_02_ILK_OK : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[
-CRIX_PTM_01(i_xExtILKOk:=True, // update logic later
+fbCRIX_PTM_01_ILK(iq_stValve:=stCRIX_VGC_02,
+	              tDelay:=T#30S,
+				  bILK=>CRIX_PTM_01_ILK_OK);
+CRIX_PTM_01(i_xExtILKOk:=CRIX_PTM_01_ILK_OK,
 			iq_stPtm=> stCRIX_PTM_01);
 			
-CRIX_PTM_02(i_xExtILKOk:=True, // update logic later
+fbCRIX_PTM_02_ILK(iq_stValve:=stCRIX_VGC_03,
+	              tDelay:=T#30S,
+				  bILK=>CRIX_PTM_02_ILK_OK);			
+CRIX_PTM_02(i_xExtILKOk:=CRIX_PTM_02_ILK_OK, 
 			iq_stPtm=> stCRIX_PTM_02);			]]></ST>
     </Implementation>
   </POU>

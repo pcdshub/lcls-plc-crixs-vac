@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <POU Name="FB_ChemRIXS_Turbo_ILK" Id="{27fd4342-d102-4d45-83a7-9e474b5c096b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_ChemRIXS_Turbo_ILK
+VAR_INPUT
+	iq_stValve : ST_VRC;
+	tDelay : TIME;
+END_VAR
+VAR_OUTPUT
+	bILK : BOOL;
+END_VAR
+VAR
+	tofDelay : TOF;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+tofDelay.IN := iq_stValve.i_xOpnLS; // Start timer when valve closes (IN goes low)
+tofDelay.PT := tDelay;
+tofDelay();
+bILK := tofDelay.Q; // Assign turbopump output to timer output. When the valve is closed the turbo pump ILK will go False after time elapses.
+			        // Intended to be connected to pump OK to run bit. ]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
