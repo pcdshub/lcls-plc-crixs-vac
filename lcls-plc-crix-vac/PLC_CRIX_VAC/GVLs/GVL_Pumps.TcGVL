@@ -4,7 +4,7 @@
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
 	
-
+	(* Leybold Pumps *)
 	{attribute 'pytmc' :=' pv: CRIX:PTM:01 '}
 	{attribute 'TcLinkTo' := 	'.i_xAtSpd	 :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)^Channel 2^Input;
 								 .i_xFaultNC :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)^Channel 1^Input;
@@ -21,6 +21,45 @@ VAR_GLOBAL
 	
 	stCRIX_PTM_02 : ST_LeyboldPTM;
 	
+	
+	(* Pfeiffer Turbo Pumps TC400 *)
+	(*
+	{attribute 'TcLinkTo' := 	'.i_xAtSpd			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E6 (EL1004)^Channel 4^Input;
+								 .i_xRemote			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E8 (EL1004)^Channel 1^Input;
+								 .i_xFaultNC		:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E8 (EL1004)^Channel 2^Input;					 
+								 .q_RunDO			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E7 (EL2004)^Channel 4^Output;
+								 .q_xRemote			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E9 (EL2004)^Channel 1^Output;
+								 .q_PumpingStation	:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E9 (EL2004)^Channel 2^Output				 
+	'}
+	{attribute 'pytmc' := '
+		pv: VLS:PTM:01
+		io: io
+	'}
+	*)
+    CRIX_PTM_03 : FB_PTM_Pfeiffer;
+	CRIX_PTM_03_xExtIlkOK : BOOL;
+	
+	(*
+	{attribute 'TcLinkTo' := 	'.i_xAtSpd			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E6 (EL1004)^Channel 4^Input;
+								 .i_xRemote			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E8 (EL1004)^Channel 1^Input;
+								 .i_xFaultNC		:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E8 (EL1004)^Channel 2^Input;					 
+								 .q_RunDO			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E7 (EL2004)^Channel 4^Output;
+								 .q_xRemote			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E9 (EL2004)^Channel 1^Output;
+								 .q_PumpingStation	:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E9 (EL2004)^Channel 2^Output				 
+	'}
+	{attribute 'pytmc' := '
+		pv: VLS:PTM:01
+		io: io
+	'}
+	*)
+    CRIX_PTM_04 : FB_PTM_Pfeiffer;
+	CRIX_PTM_04_xExtIlkOK : BOOL;
+
+	
+	st_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
+	st_Pfeiffer_RBK 	: ARRAY[1..20] OF ST_PfeifferStatus;
+	
+	fb_PfeifferCom : FB_PFEIFFER_COM;
 	
 END_VAR]]></Declaration>
   </GVL>
