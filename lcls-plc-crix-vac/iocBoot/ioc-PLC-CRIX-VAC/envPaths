@@ -1,0 +1,2 @@
+epicsEnvSet("IOC_TOP", "/c/Users/tjohnson/workarea/lcls-plc-crixs-vac/lcls-plc-crix-vac/iocBoot/ioc-PLC-CRIX-VAC")
+epicsEnvSet("IOC_DATA", "C:\Users\tjohnson/iocData")
