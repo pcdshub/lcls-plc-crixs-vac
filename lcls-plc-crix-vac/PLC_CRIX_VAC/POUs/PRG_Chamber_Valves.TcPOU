@@ -40,6 +40,22 @@ CRIX_VGC_06(i_xExtILK_OK:=TRUE,
 CRIX_VGC_07(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve => stCRIX_VGC_07);
+(*            
+CRIX_VGC_09(i_stUSG:=CRIX_GPI_01.PG,
+            i_stDSG:=,
+            i_xDis_DPILK:=,
+            i_xPMPS_OK:=,
+            i_xEPS_OK:=,
+            i_xOverrideMode:=xSystemOverride_ChemRIXS,
+            i_xReset:=,
+            i_xIsAperture:=FALSE,
+            i_sDevName:='CRIX_DS_VALVE',
+            i_nTransitionRootID:=,
+            iq_stValve=>,
+            xMPS_OK=>,
+            io_fbFFHWO=>,
+            fbArbiter=> );
+*)
 			
 // ChemRIXS Vent Valves
 CRIX_VVC_01(i_xExtILK_OK:=TRUE,
