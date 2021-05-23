@@ -57,7 +57,7 @@ CRIX_VVC_03(i_xExtILK_OK:=TRUE,
 CRIX_VVC_04(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve => stCRIX_VVC_04);
-			
+(*			
 CRIX_VVC_05(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve => stCRIX_VVC_05);
@@ -76,7 +76,8 @@ CRIX_VVC_09(i_xExtILK_OK:=TRUE,
 			
 CRIX_VVC_10(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => stCRIX_VVC_10);]]></ST>
+			iq_stValve => stCRIX_VVC_10);
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
