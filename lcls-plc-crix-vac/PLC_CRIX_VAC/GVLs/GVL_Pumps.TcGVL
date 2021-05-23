@@ -60,6 +60,7 @@ VAR_GLOBAL
 	st_Pfeiffer_RBK 	: ARRAY[1..20] OF ST_PfeifferStatus;
 	
 	fb_PfeifferCom : FB_PFEIFFER_COM;
+
 	
 END_VAR]]></Declaration>
   </GVL>
