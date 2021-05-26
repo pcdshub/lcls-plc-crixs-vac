@@ -8,6 +8,9 @@ VAR
 	
 	fbCRIX_PTM_02_ILK : FB_ChemRIXS_Turbo_ILK;
 	CRIX_PTM_02_ILK_OK : BOOL;
+	
+	fbCRIX_PTM_03_ILK : FB_ChemRIXS_Turbo_ILK;
+	CRIX_PTM_03_ILK_OK : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -22,7 +25,13 @@ fbCRIX_PTM_02_ILK(iq_stValve:=stCRIX_VGC_03,
 	              tDelay:=T#30S,
 				  bILK=>CRIX_PTM_02_ILK_OK);			
 CRIX_PTM_02(i_xExtILKOk:=CRIX_PTM_02_ILK_OK, 
-			iq_stPtm=> stCRIX_PTM_02);			]]></ST>
+			iq_stPtm=> stCRIX_PTM_02);			
+			
+fbCRIX_PTM_03_ILK(iq_stValve:=stCRIX_VGC_04,
+	              tDelay:=T#30S,
+				  bILK=>CRIX_PTM_03_ILK_OK);			
+CRIX_PTM_02(i_xExtILKOk:=CRIX_PTM_03_ILK_OK, 
+			iq_stPtm=> stCRIX_PTM_03);		]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -37,7 +37,8 @@ VAR_GLOBAL
 	'}
 	*)
     CRIX_PTM_03 : FB_PTM_Pfeiffer;
-	CRIX_PTM_03_xExtIlkOK : BOOL;
+	
+	stCRIX_PTM_03 : ST_PfeifferPTM;
 	
 	(*
 	{attribute 'TcLinkTo' := 	'.i_xAtSpd			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E6 (EL1004)^Channel 4^Input;
@@ -52,8 +53,7 @@ VAR_GLOBAL
 		io: io
 	'}
 	*)
-    CRIX_PTM_04 : FB_PTM_Pfeiffer;
-	CRIX_PTM_04_xExtIlkOK : BOOL;
+//    CRIX_PTM_04 : FB_PTM_Pfeiffer;
 
 	
 	st_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
