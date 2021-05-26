@@ -33,7 +33,7 @@
 		<Box File="Term 1 (EK1200).xti" Id="1">
 			<EtherCAT PortABoxInfo="#x00ffffff"/>
 		</Box>
-		<EtherCAT EnableVirtualSwitch="true" MaxSwitchPorts="2" MaxSwitchFrames="120">
+		<EtherCAT DcSyncMode="3" EnableVirtualSwitch="true" MaxSwitchPorts="2" MaxSwitchFrames="120">
 			<SyncUnit Name="MechRoom_Sync" NoDeleteIfUnused="true"/>
 			<SyncUnit Name="HoffmanBox" NoDeleteIfUnused="true"/>
 		</EtherCAT>

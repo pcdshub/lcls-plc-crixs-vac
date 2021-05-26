@@ -10,11 +10,11 @@
 		<Box File="E1 (EL2794).xti" Id="4">
 			<EtherCAT PortABoxInfo="#x01000003"/>
 		</Box>
-		<Box File="E2 (EL2088).xti" Id="5">
+		<Box File="E2 (EL1088).xti" Id="50">
 			<EtherCAT PortABoxInfo="#x01000004"/>
 		</Box>
 		<Box File="E4 (EL6002).xti" Id="6">
-			<EtherCAT PortABoxInfo="#x01000005"/>
+			<EtherCAT PortABoxInfo="#x01000032"/>
 		</Box>
 		<Box File="E5 (EL6022).xti" Id="7">
 			<EtherCAT PortABoxInfo="#x01000006"/>
@@ -118,13 +118,19 @@
 		<Box File="E44 (EL1088).xti" Id="41">
 			<EtherCAT PortABoxInfo="#x01000028"/>
 		</Box>
-		<Box File="E46 (EK1122).xti" Id="42">
+		<Box File="E46 (EL1259).xti" Id="87">
 			<EtherCAT PortABoxInfo="#x01000029"/>
 		</Box>
-		<Box File="E47 (EK1122-0080).xti" Id="43">
+		<Box File="E47 (EL4134).xti" Id="88">
+			<EtherCAT PortABoxInfo="#x01000057"/>
+		</Box>
+		<Box File="E48 (EK1122).xti" Id="42">
+			<EtherCAT PortABoxInfo="#x01000058"/>
+		</Box>
+		<Box File="E49 (EK1122-0080).xti" Id="43">
 			<EtherCAT PortABoxInfo="#x0200002a"/>
 		</Box>
-		<Box File="E48 (EL9011).xti" Id="96">
+		<Box File="E50 (EL9011).xti" Id="96">
 			<EtherCAT PortABoxInfo="#x0200002b"/>
 		</Box>
 	</Box>
