@@ -36,14 +36,14 @@ CRIX_VGC_02(i_xExtILK_OK:=bVGC_02_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stCRIX_VGC_02);
 	
-bVGC_03_ILK := F_TurboGateValve_ILK(i_Turbo:=CRIX_PTM_01,
-									i_stISG:=CRIX_GPI_01);
+bVGC_03_ILK := F_TurboGateValve_ILK(i_Turbo:=CRIX_PTM_01.iq_stPtm,
+									i_stISG:=CRIX_GPI_01.PG);
 CRIX_VGC_03(i_xExtILK_OK:=(bVGC_03_ILK AND CRIX_GPI_05.PG.xAT_VAC),
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stCRIX_VGC_03);
 			
-bVGC_04_ILK := F_TurboGateValve_ILK(i_Turbo:=CRIX_PTM_03,
-									i_stISG:=CRIX_GPI_01);			
+bVGC_04_ILK := F_TurboGateValve_ILK(i_Turbo:=CRIX_PTM_03.iq_stPTM,
+									i_stISG:=CRIX_GPI_01.PG);			
 CRIX_VGC_04(i_xExtILK_OK:=(bVGC_04_ILK AND CRIX_GPI_05.PG.xAT_VAC),
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stCRIX_VGC_04);

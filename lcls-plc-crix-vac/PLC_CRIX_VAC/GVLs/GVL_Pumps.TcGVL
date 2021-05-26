@@ -40,6 +40,11 @@ VAR_GLOBAL
 	
 	stCRIX_PTM_03 : ST_PfeifferPTM;
 	
+	st_PTM_03_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
+	st_PTM_03_Pfeiffer_RBK 	: ARRAY[1..20] OF ST_PfeifferStatus;
+	
+	fb_PTM_03_PfeifferCom : FB_PFEIFFER_COM;
+	
 	(*
 	{attribute 'TcLinkTo' := 	'.i_xAtSpd			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E6 (EL1004)^Channel 4^Input;
 								 .i_xRemote			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E8 (EL1004)^Channel 1^Input;
@@ -55,11 +60,7 @@ VAR_GLOBAL
 	*)
 //    CRIX_PTM_04 : FB_PTM_Pfeiffer;
 
-	
-	st_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
-	st_Pfeiffer_RBK 	: ARRAY[1..20] OF ST_PfeifferStatus;
-	
-	fb_PfeifferCom : FB_PFEIFFER_COM;
+
 
 	
 END_VAR]]></Declaration>

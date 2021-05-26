@@ -14,7 +14,7 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
+      <ST><![CDATA[// Leybold Pumps
 fbCRIX_PTM_01_ILK(iq_stValve:=stCRIX_VGC_02,
 	              tDelay:=T#30S,
 				  bILK=>CRIX_PTM_01_ILK_OK);
@@ -27,11 +27,24 @@ fbCRIX_PTM_02_ILK(iq_stValve:=stCRIX_VGC_03,
 CRIX_PTM_02(i_xExtILKOk:=CRIX_PTM_02_ILK_OK, 
 			iq_stPtm=> stCRIX_PTM_02);			
 			
+// Pfeiffer Pumps
 fbCRIX_PTM_03_ILK(iq_stValve:=stCRIX_VGC_04,
 	              tDelay:=T#30S,
 				  bILK=>CRIX_PTM_03_ILK_OK);			
-CRIX_PTM_02(i_xExtILKOk:=CRIX_PTM_03_ILK_OK, 
-			iq_stPtm=> stCRIX_PTM_03);		]]></ST>
+CRIX_PTM_03(i_xExtILKOk:=CRIX_PTM_03_ILK_OK, 
+			iq_stPtm=> stCRIX_PTM_03);		
+			
+st_PTM_03_Pfeiffer_CTRL[1].iSerialAddress := 0;
+st_PTM_03_Pfeiffer_CTRL[1].xEnableComm := TRUE;
+
+fb_PTM_03_PfeifferCom(astPfeifferControl:=st_PTM_03_Pfeiffer_CTRL,
+					  astPfeifferStatus:=st_PTM_03_Pfeiffer_RBK,
+					  SerialRXBuffer:=K2S17_E5_CH2_SerialRXBuffer,
+					  SerialTXBuffer:=K2S17_E5_CH2_SerialTXBuffer);
+					  
+CRIX_PTM_03.M_Serial_IO(st_Pfeiffer_RBK:=st_PTM_03_Pfeiffer_RBK[1], st_PTM_03_Pfeiffer_CTRL[1]);
+					  
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

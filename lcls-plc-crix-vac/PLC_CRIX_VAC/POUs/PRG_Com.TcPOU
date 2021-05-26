@@ -6,7 +6,17 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[(*Instanitate Serial port com function *) 
+//ChemRIXS PTM_03 
+K2S17_E5_CH2_fbSerialLineControl(
+	Mode:= SERIALLINEMODE_EL6_22B,
+	pComIn:= ADR(K2S17_E5_CH2_stComIn),
+	pComOut:=ADR(K2S17_E5_CH2_stComOut),
+	SizeComIn:= SIZEOF(K2S17_E5_CH2_stComOut),
+	TxBuffer:= K2S17_E5_CH2_SerialTXBuffer,
+	RxBuffer:= K2S17_E5_CH2_SerialRXBuffer,
+	Error=> ,
+	ErrorID=> );]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
