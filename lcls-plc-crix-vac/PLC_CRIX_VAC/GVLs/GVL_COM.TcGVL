@@ -33,7 +33,7 @@ VAR_GLOBAL
 								 .D[18]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E5 (EL6022)^COM Inputs Channel 2^Data In 18;
 								 .D[19]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E5 (EL6022)^COM Inputs Channel 2^Data In 19;
 								 .D[20]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E5 (EL6022)^COM Inputs Channel 2^Data In 20;
-								 .D[21]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E5 (EL6022)^COM Inputs Channel 2^Data In 21;
+								 .D[21]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E5 (EL6022)^COM Inputs Channel 2^Data In 21
 	'}
 	K2S17_E5_CH2_stComIn		AT %I*	:	EL6inData22B; 
 	{attribute	'TcLinkTo'	:=	'.Ctrl:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E5 (EL6022)^COM Outputs Channel 2^Ctrl;
@@ -58,7 +58,7 @@ VAR_GLOBAL
 								 .D[18]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E5 (EL6022)^COM Outputs Channel 2^Data Out 18;
 								 .D[19]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E5 (EL6022)^COM Outputs Channel 2^Data Out 19;
 								 .D[20]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E5 (EL6022)^COM Outputs Channel 2^Data Out 20;
-								 .D[21]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E5 (EL6022)^COM Outputs Channel 2^Data Out 21;
+								 .D[21]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E5 (EL6022)^COM Outputs Channel 2^Data Out 21
 	'}
 	K2S17_E5_CH2_stComOut		AT %Q*	:	EL6outData22B;
 END_VAR]]></Declaration>
