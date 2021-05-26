@@ -202,6 +202,11 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_06.i_xOpnLS</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_Chamber_Valves.CRIX_VGC_06.i_xClsLS</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -212,11 +217,6 @@
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.CRIX_VGC_07.i_xClsLS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VGC_06.i_xOpnLS</Name>
-					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -425,6 +425,10 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_PMPS.g_FastFaultOutput.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_Pumps.CRIX_PTM_01.q_RunDO</Name>
 					<Comment><![CDATA[ Start/Stop]]></Comment>
 					<Type>BOOL</Type>
@@ -450,10 +454,6 @@
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.CRIX_PTM_03.q_xReset</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PMPS.g_FastFaultOutput.q_xFastFaultOut</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
