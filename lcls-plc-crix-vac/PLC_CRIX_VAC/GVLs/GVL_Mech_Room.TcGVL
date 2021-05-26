@@ -14,6 +14,8 @@ VAR_GLOBAL
 							  .i_xRemote := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 83 (EL1088)^Channel 5^Input '}
 	CRIX_MECH_PRO_01 : FB_EbaraDryPump; // ChemRIXS roughing pump in B950-R310 "mechanical room"
 	
+	stCRIX_MECH_PRO_01 : ST_EbaraDryPump;
+	
 
 	{attribute 'pytmc' :=' pv: CRIX:MECH:VVC:01 '}
 	{attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 45 (EL2794)^Channel 3^Output '}

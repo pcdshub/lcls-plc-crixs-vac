@@ -53,9 +53,6 @@
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\F_VGC_01_ILK.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="POUs\PRG_Chamber_Gauges.TcPOU">
       <SubType>Code</SubType>
     </Compile>

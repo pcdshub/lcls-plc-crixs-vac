@@ -18,7 +18,7 @@ CRIX_MECH_GPI_01(PG=>);
 CRIX_MECH_PRO_01(i_stBPGauge:=CRIX_MECH_GPI_01.PG,
 			     i_xVlvOpn:=True, 
  				 i_xExtIlkOK:=True, // This should always be OK to start. 
-				 stPump=>);
+				 stPump=>stCRIX_MECH_PRO_01);
   
 // Rouging line valve. This valve is responsible for isolating the pump from atmosphere, and should always have power applied when the pump is
 // running. Therefore, we assign the valve "open" output to the run status of the pump. This is a NO valve, so "opening" the valve will close it.
