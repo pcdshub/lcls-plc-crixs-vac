@@ -8324,7 +8324,7 @@ record(bo, "CRIX:PTM:02:REMOTE") {
   info(archive, "VAL")
 }
 
-record(bi, "VLS:PTM:01:RUN_SW_RBV") {
+record(bi, "CRIX:PTM:03:RUN_SW_RBV") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xRunSW")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -8336,7 +8336,7 @@ record(bi, "VLS:PTM:01:RUN_SW_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "VLS:PTM:01:RUN_SW") {
+record(bo, "CRIX:PTM:03:RUN_SW") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xRunSW")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_03.iq_stPTM.xRunSW=")
@@ -8346,7 +8346,7 @@ record(bo, "VLS:PTM:01:RUN_SW") {
   info(archive, "VAL")
 }
 
-record(bi, "VLS:PTM:01:RST_SW_RBV") {
+record(bi, "CRIX:PTM:03:RST_SW_RBV") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xResetSW")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -8358,7 +8358,7 @@ record(bi, "VLS:PTM:01:RST_SW_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "VLS:PTM:01:RST_SW") {
+record(bo, "CRIX:PTM:03:RST_SW") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xResetSW")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_03.iq_stPTM.xResetSW=")
@@ -8368,7 +8368,7 @@ record(bo, "VLS:PTM:01:RST_SW") {
   info(archive, "VAL")
 }
 
-record(bi, "VLS:PTM:01:RUN_DO_RBV") {
+record(bi, "CRIX:PTM:03:RUN_DO_RBV") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_RunDO")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -8380,7 +8380,7 @@ record(bi, "VLS:PTM:01:RUN_DO_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "VLS:PTM:01:ILK_OK_RBV") {
+record(bi, "CRIX:PTM:03:ILK_OK_RBV") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xExtRunOk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -8392,7 +8392,7 @@ record(bi, "VLS:PTM:01:ILK_OK_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "VLS:PTM:01:ACCEL_RBV") {
+record(bi, "CRIX:PTM:03:ACCEL_RBV") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xAccel")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -8404,7 +8404,7 @@ record(bi, "VLS:PTM:01:ACCEL_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "VLS:PTM:01:AT_SPD_RBV") {
+record(bi, "CRIX:PTM:03:AT_SPD_RBV") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xAtSpd")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -8416,7 +8416,7 @@ record(bi, "VLS:PTM:01:AT_SPD_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "VLS:PTM:01:SPEED_RBV") {
+record(longin, "CRIX:PTM:03:SPEED_RBV") {
   # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diCurSpd
   field(DESC, "GVL_Pumps.CRIX_PTM_0..._stPTM.i_diCurSpd")
   field(SCAN, "I/O Intr")
@@ -8428,7 +8428,7 @@ record(longin, "VLS:PTM:01:SPEED_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "VLS:PTM:01:FAULT_RBV") {
+record(bi, "CRIX:PTM:03:FAULT_RBV") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xFault")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -8440,7 +8440,7 @@ record(bi, "VLS:PTM:01:FAULT_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "VLS:PTM:01:WARN_RBV") {
+record(bi, "CRIX:PTM:03:WARN_RBV") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xWarn")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -8452,7 +8452,7 @@ record(bi, "VLS:PTM:01:WARN_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "VLS:PTM:01:ALARM_RBV") {
+record(bi, "CRIX:PTM:03:ALARM_RBV") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xALARM")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -8464,7 +8464,7 @@ record(bi, "VLS:PTM:01:ALARM_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "VLS:PTM:01:BP_SP_RBV") {
+record(ai, "CRIX:PTM:03:BP_SP_RBV") {
   # GVL_Pumps.CRIX_PTM_03.iq_stPTM.rBackingPressureSP
   field(DESC, "GVL_Pumps.CRIX_PTM_0...BackingPressureSP")
   field(SCAN, "I/O Intr")
@@ -8481,7 +8481,7 @@ record(ai, "VLS:PTM:01:BP_SP_RBV") {
   info(archive, "VAL")
 }
 
-record(ao, "VLS:PTM:01:BP_SP") {
+record(ao, "CRIX:PTM:03:BP_SP") {
   # GVL_Pumps.CRIX_PTM_03.iq_stPTM.rBackingPressureSP
   field(DESC, "GVL_Pumps.CRIX_PTM_0...BackingPressureSP")
   field(PINI, "1")
@@ -8496,7 +8496,7 @@ record(ao, "VLS:PTM:01:BP_SP") {
   info(archive, "VAL")
 }
 
-record(ai, "VLS:PTM:01:IP_SP_RBV") {
+record(ai, "CRIX:PTM:03:IP_SP_RBV") {
   # GVL_Pumps.CRIX_PTM_03.iq_stPTM.rInletPressureSP
   field(DESC, "GVL_Pumps.CRIX_PTM_0....rInletPressureSP")
   field(SCAN, "I/O Intr")
@@ -8513,7 +8513,7 @@ record(ai, "VLS:PTM:01:IP_SP_RBV") {
   info(archive, "VAL")
 }
 
-record(ao, "VLS:PTM:01:IP_SP") {
+record(ao, "CRIX:PTM:03:IP_SP") {
   # GVL_Pumps.CRIX_PTM_03.iq_stPTM.rInletPressureSP
   field(DESC, "GVL_Pumps.CRIX_PTM_0....rInletPressureSP")
   field(PINI, "1")
@@ -8528,7 +8528,7 @@ record(ao, "VLS:PTM:01:IP_SP") {
   info(archive, "VAL")
 }
 
-record(mbbi, "VLS:PTM:01:STATE_RBV") {
+record(mbbi, "CRIX:PTM:03:STATE_RBV") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.eState")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -8548,7 +8548,7 @@ record(mbbi, "VLS:PTM:01:STATE_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "VLS:PTM:01:CURR_MON_RBV") {
+record(ai, "CRIX:PTM:03:CURR_MON_RBV") {
   # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_rCurrentMon
   field(DESC, "GVL_Pumps.CRIX_PTM_0...PTM.i_rCurrentMon")
   field(SCAN, "I/O Intr")
@@ -8562,7 +8562,7 @@ record(ai, "VLS:PTM:01:CURR_MON_RBV") {
   info(archive, "VAL")
 }
 
-record(ai, "VLS:PTM:01:TEMP_MON_RBV") {
+record(ai, "CRIX:PTM:03:TEMP_MON_RBV") {
   # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_rTempMon
   field(DESC, "GVL_Pumps.CRIX_PTM_0..._stPTM.i_rTempMon")
   field(SCAN, "I/O Intr")
@@ -8576,7 +8576,7 @@ record(ai, "VLS:PTM:01:TEMP_MON_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "VLS:PTM:01:LOGGER_RBV") {
+record(bi, "CRIX:PTM:03:LOGGER_RBV") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xLog")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -8588,7 +8588,7 @@ record(bi, "VLS:PTM:01:LOGGER_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "VLS:PTM:01:RESET_RBV") {
+record(bi, "CRIX:PTM:03:RESET_RBV") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_xReset")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -8600,7 +8600,7 @@ record(bi, "VLS:PTM:01:RESET_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "VLS:PTM:01:PWR_RBV") {
+record(longin, "CRIX:PTM:03:PWR_RBV") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diPwr")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -8610,7 +8610,7 @@ record(longin, "VLS:PTM:01:PWR_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "VLS:PTM:01:TempElec_RBV") {
+record(longin, "CRIX:PTM:03:TempElec_RBV") {
   # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diElecTemp
   field(DESC, "GVL_Pumps.CRIX_PTM_0...tPTM.i_diElecTemp")
   field(SCAN, "I/O Intr")
@@ -8621,7 +8621,7 @@ record(longin, "VLS:PTM:01:TempElec_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "VLS:PTM:01:TempPump_RBV") {
+record(longin, "CRIX:PTM:03:TempPump_RBV") {
   # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diBtmTemp
   field(DESC, "GVL_Pumps.CRIX_PTM_0...stPTM.i_diBtmTemp")
   field(SCAN, "I/O Intr")
@@ -8632,7 +8632,7 @@ record(longin, "VLS:PTM:01:TempPump_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "VLS:PTM:01:TempBearing_RBV") {
+record(longin, "CRIX:PTM:03:TempBearing_RBV") {
   # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diBrngTemp
   field(DESC, "GVL_Pumps.CRIX_PTM_0...tPTM.i_diBrngTemp")
   field(SCAN, "I/O Intr")
@@ -8643,7 +8643,7 @@ record(longin, "VLS:PTM:01:TempBearing_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "VLS:PTM:01:TempMotor_RBV") {
+record(longin, "CRIX:PTM:03:TempMotor_RBV") {
   # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diMtrTemp
   field(DESC, "GVL_Pumps.CRIX_PTM_0...stPTM.i_diMtrTemp")
   field(SCAN, "I/O Intr")
@@ -8654,7 +8654,7 @@ record(longin, "VLS:PTM:01:TempMotor_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "VLS:PTM:01:ErrorCode_RBV") {
+record(longin, "CRIX:PTM:03:ErrorCode_RBV") {
   # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_iErrorCode
   field(DESC, "GVL_Pumps.CRIX_PTM_0...tPTM.i_iErrorCode")
   field(SCAN, "I/O Intr")
@@ -8665,7 +8665,7 @@ record(longin, "VLS:PTM:01:ErrorCode_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "VLS:PTM:01:WarningCode_RBV") {
+record(longin, "CRIX:PTM:03:WarningCode_RBV") {
   # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_iWarningCode
   field(DESC, "GVL_Pumps.CRIX_PTM_0...TM.i_iWarningCode")
   field(SCAN, "I/O Intr")
@@ -8676,7 +8676,7 @@ record(longin, "VLS:PTM:01:WarningCode_RBV") {
   info(archive, "VAL")
 }
 
-record(bi, "VLS:PTM:01:TempFault_RBV") {
+record(bi, "CRIX:PTM:03:TempFault_RBV") {
   # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xTempFault
   field(DESC, "GVL_Pumps.CRIX_PTM_0...tPTM.i_xTempFault")
   field(SCAN, "I/O Intr")
@@ -8689,7 +8689,7 @@ record(bi, "VLS:PTM:01:TempFault_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "VLS:PTM:01:Power_RBV") {
+record(longin, "CRIX:PTM:03:Power_RBV") {
   # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_uiPowerPctRbk
   field(DESC, "GVL_Pumps.CRIX_PTM_0...M.i_uiPowerPctRbk")
   field(SCAN, "I/O Intr")
@@ -8700,7 +8700,7 @@ record(longin, "VLS:PTM:01:Power_RBV") {
   info(archive, "VAL")
 }
 
-record(longin, "VLS:PTM:01:SET_SPEED_RBV") {
+record(longin, "CRIX:PTM:03:SET_SPEED_RBV") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_dSetSpd")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -8711,7 +8711,7 @@ record(longin, "VLS:PTM:01:SET_SPEED_RBV") {
   info(archive, "VAL")
 }
 
-record(longout, "VLS:PTM:01:SET_SPEED") {
+record(longout, "CRIX:PTM:03:SET_SPEED") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_dSetSpd")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_dSetSpd=")
@@ -8720,7 +8720,7 @@ record(longout, "VLS:PTM:01:SET_SPEED") {
   info(archive, "VAL")
 }
 
-record(bi, "VLS:PTM:01:SET_SPEED_MODE_RBV") {
+record(bi, "CRIX:PTM:03:SET_SPEED_MODE_RBV") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_bSetSpd")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
@@ -8732,7 +8732,7 @@ record(bi, "VLS:PTM:01:SET_SPEED_MODE_RBV") {
   info(archive, "VAL")
 }
 
-record(bo, "VLS:PTM:01:SET_SPEED_MODE") {
+record(bo, "CRIX:PTM:03:SET_SPEED_MODE") {
   field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_bSetSpd")
   field(DTYP, "asynInt32")
   field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_bSetSpd=")
