@@ -15,23 +15,35 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[// Leybold Pumps
-fbCRIX_PTM_01_ILK(iq_stValve:=stCRIX_VGC_02,
-	              tDelay:=T#30S,
+fbCRIX_PTM_01_ILK(i_stValve:=stCRIX_VGC_03,
+				  i_stPump:=stCRIX_PTM_01,
+	              tDelay:=T#200S,
 				  bILK=>CRIX_PTM_01_ILK_OK);
-CRIX_PTM_01(i_xExtILKOk:=CRIX_PTM_01_ILK_OK,
+CRIX_PTM_01(i_xExtILKOk:=(CRIX_PTM_01_ILK_OK AND F_TurboExtILKLogic_2(Turbo:=stCRIX_PTM_01,
+																	 BackingGauge:=CRIX_GPI_05.PG,
+																     InletGauge:=CRIX_GPI_01.PG,
+																     ScrollPump:= stCRIX_MECH_PRO_01)),
 			iq_stPtm=> stCRIX_PTM_01);
 			
-fbCRIX_PTM_02_ILK(iq_stValve:=stCRIX_VGC_03,
-	              tDelay:=T#30S,
+fbCRIX_PTM_02_ILK(i_stValve:=stCRIX_VGC_02,
+				  i_stPump:=stCRIX_PTM_02,
+	              tDelay:=T#200S,
 				  bILK=>CRIX_PTM_02_ILK_OK);			
-CRIX_PTM_02(i_xExtILKOk:=CRIX_PTM_02_ILK_OK, 
+CRIX_PTM_02(i_xExtILKOk:=(CRIX_PTM_02_ILK_OK AND F_TurboExtILKLogic_2(Turbo:=stCRIX_PTM_02,
+																	 BackingGauge:=CRIX_GPI_05.PG,
+																     InletGauge:=CRIX_GPI_01.PG,
+																     ScrollPump:= stCRIX_MECH_PRO_01)),
 			iq_stPtm=> stCRIX_PTM_02);			
 			
 // Pfeiffer Pumps
-fbCRIX_PTM_03_ILK(iq_stValve:=stCRIX_VGC_04,
-	              tDelay:=T#30S,
+fbCRIX_PTM_03_ILK(i_stValve:=stCRIX_VGC_04,
+				  i_stPump:=stCRIX_PTM_03,
+	              tDelay:=T#200S,
 				  bILK=>CRIX_PTM_03_ILK_OK);			
-CRIX_PTM_03(i_xExtILKOk:=CRIX_PTM_03_ILK_OK, 
+CRIX_PTM_03(i_xExtILKOk:=(CRIX_PTM_03_ILK_OK  AND F_TurboExtILKLogic_2(Turbo:=stCRIX_PTM_03,
+																	 BackingGauge:=CRIX_GPI_05.PG,
+																     InletGauge:=CRIX_GPI_01.PG,
+																     ScrollPump:= stCRIX_MECH_PRO_01)), 
 			iq_stPtm=> stCRIX_PTM_03);		
 			
 st_PTM_03_Pfeiffer_CTRL[1].iSerialAddress := 0;
