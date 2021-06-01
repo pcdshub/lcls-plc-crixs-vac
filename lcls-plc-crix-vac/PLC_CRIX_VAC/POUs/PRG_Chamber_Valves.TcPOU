@@ -101,16 +101,33 @@ CRIX_VGC_07(i_xExtILK_OK:=bVGC_07_ILK,  // Not active right now; leave ILK to in
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stCRIX_VGC_07);
 
-(*            
+(*     
+CRIX_VGC_08(
+	i_stUSG:= , 
+	i_stDSG:= CRIX_GPI_01.PG, 
+	i_xDis_DPIlk:= FALSE, 
+	i_xPMPS_OK:= TRUE, 
+	i_xEPS_OK:= , 
+	i_xExt_OK:= , 
+	i_xOverrideMode:= xSystemOverride_ChemRIXS, 
+	i_xReset:= , 
+	i_xIsAperture:= , 
+	i_sDevName:= , 
+	i_nTransitionRootID:= , 
+	iq_stValve=> , 
+	xMPS_OK=> , 
+	io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput, 
+	fbArbiter:= GVL_PMPS.g_Arbiter);
+       
 CRIX_VGC_09(i_stUSG:=CRIX_GPI_01.PG,
             i_stDSG:=,
-            i_xDis_DPILK:=,
-            i_xPMPS_OK:=,
+            i_xDis_DPILK:=FALSE,
+            i_xPMPS_OK:=TRUE,
             i_xEPS_OK:=,
             i_xOverrideMode:=xSystemOverride_ChemRIXS,
             i_xReset:=,
             i_xIsAperture:=FALSE,
-            i_sDevName:='CRIX_DS_VALVE',
+            i_sDevName:= ,
             i_nTransitionRootID:=,
             iq_stValve=>,
             xMPS_OK=>,
