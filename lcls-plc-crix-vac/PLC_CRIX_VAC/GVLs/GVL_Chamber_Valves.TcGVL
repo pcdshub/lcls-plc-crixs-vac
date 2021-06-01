@@ -21,7 +21,7 @@ VAR_GLOBAL
 
 	CRIX_VGC_02 : FB_VGC_2S;
 	
-	stCRIX_VGC_02 : ST_VRC;
+	stCRIX_VGC_02 : ST_VGC_2S;
 	
 	{attribute 'pytmc' :=' pv: CRIX:VGC:03 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E22 (EL1004)^Channel 3^Input;

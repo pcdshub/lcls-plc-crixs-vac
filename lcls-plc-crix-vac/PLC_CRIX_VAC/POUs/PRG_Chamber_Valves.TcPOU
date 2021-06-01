@@ -59,7 +59,7 @@ CRIX_VGC_02(
 	i_xIsAperture:= , 
 	i_sDevName:= , 
 	i_nTransitionRootID:= , 
-	iq_stValve=> , 
+	iq_stValve=> stCRIX_VGC_02, 
 	xMPS_OK=> , 
 	io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput, 
 	fbArbiter:= GVL_PMPS.g_Arbiter);
@@ -113,7 +113,7 @@ bm_dummy_gauge.rPRESS := 5e-9;
 
 CRIX_VGC_08(
 	i_stUSG:= bm_dummy_gauge,// PRG_ADS_Gauges.TM2K2_GCC_Reader.IG, 
-	i_stDSG:= CRIX_GPI_01.PG, 
+	i_stDSG:= CRIX_GCC_01.IG, 
 	i_xDis_DPIlk:= FALSE, 
 	i_xPMPS_OK:= TRUE, 
 	i_xEPS_OK:= , 
@@ -128,7 +128,7 @@ CRIX_VGC_08(
 	io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput, 
 	fbArbiter:= GVL_PMPS.g_Arbiter);
        
-CRIX_VGC_09(i_stUSG:=CRIX_GPI_01.PG,
+CRIX_VGC_09(i_stUSG:=CRIX_GCC_01.IG,
             i_stDSG:=bm_dummy_gauge,// PRG_ADS_Gauges.IM6K2_GCC_Reader.IG,
             i_xDis_DPILK:=FALSE,
             i_xPMPS_OK:=TRUE,

@@ -2926,6 +2926,1634 @@ record(bo, "CRIX:GCP:03:LOGGER") {
   info(archive, "VAL")
 }
 
+record(bi, "CRIX:MECH:PRO:01:RUN_SW_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.pv_xRunSW
+  field(DESC, "GVL_Mech_Room.CRIX_M....stPump.pv_xRunSW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.pv_xRunSW?")
+  field(ZNAM, "Stop")
+  field(ONAM, "Start")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIX:MECH:PRO:01:RUN_SW") {
+  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.pv_xRunSW
+  field(DESC, "GVL_Mech_Room.CRIX_M....stPump.pv_xRunSW")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.pv_xRunSW=")
+  field(ZNAM, "Stop")
+  field(ONAM, "Start")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:PRO:01:RUN_DO_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.q_xRunDo
+  field(DESC, "GVL_Mech_Room.CRIX_M...1.stPump.q_xRunDo")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.q_xRunDo?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:PRO:01:ILK_OK_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.xIlkOK
+  field(DESC, "GVL_Mech_Room.CRIX_M..._01.stPump.xIlkOK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.xIlkOK?")
+  field(ZNAM, "NOT OK")
+  field(ONAM, "OK")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:PRO:01:AT_SPD_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.xAtSpd
+  field(DESC, "GVL_Mech_Room.CRIX_M..._01.stPump.xAtSpd")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.xAtSpd?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:PRO:01:WARN_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.xWrn
+  field(DESC, "GVL_Mech_Room.CRIX_M...RO_01.stPump.xWrn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.xWrn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:PRO:01:ERROR_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.xErr
+  field(DESC, "GVL_Mech_Room.CRIX_M...RO_01.stPump.xErr")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.xErr?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(mbbi, "CRIX:MECH:PRO:01:STATE_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.eState
+  field(DESC, "GVL_Mech_Room.CRIX_M..._01.stPump.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(ZRST, "STOPPED")
+  field(ONST, "STARTING")
+  field(TWST, "RUNNING")
+  field(THST, "FAULT")
+  field(FRST, "STOPPING")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:PRO:01:MPStart_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.q_xMPStart
+  field(DESC, "GVL_Mech_Room.CRIX_M...stPump.q_xMPStart")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.q_xMPStart?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:PRO:01:BPStart_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.q_xBPStart
+  field(DESC, "GVL_Mech_Room.CRIX_M...stPump.q_xBPStart")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.q_xBPStart?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:PRO:01:MPStatus_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xMPStatus
+  field(DESC, "GVL_Mech_Room.CRIX_M...tPump.i_xMPStatus")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xMPStatus?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:PRO:01:BPStatus_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xBPStatus
+  field(DESC, "GVL_Mech_Room.CRIX_M...tPump.i_xBPStatus")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xBPStatus?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:PRO:01:WARN_DI_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xWarning
+  field(DESC, "GVL_Mech_Room.CRIX_M...stPump.i_xWarning")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xWarning?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:PRO:01:ALARM_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xAlarm
+  field(DESC, "GVL_Mech_Room.CRIX_M...1.stPump.i_xAlarm")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xAlarm?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:PRO:01:REMOTE_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xRemote
+  field(DESC, "GVL_Mech_Room.CRIX_M....stPump.i_xRemote")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xRemote?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:VVC:01:OPN_SW_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.pv_xOPN_SW
+  field(DESC, "GVL_Mech_Room.CRIX_M...tValve.pv_xOPN_SW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.pv_xOPN_SW?")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIX:MECH:VVC:01:OPN_SW") {
+  # GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.pv_xOPN_SW
+  field(DESC, "GVL_Mech_Room.CRIX_M...tValve.pv_xOPN_SW")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.pv_xOPN_SW=")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:VVC:01:FORCE_OPN_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOvrdOpn
+  field(DESC, "GVL_Mech_Room.CRIX_M..._stValve.xOvrdOpn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOvrdOpn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "OPEN")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIX:MECH:VVC:01:FORCE_OPN") {
+  # GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOvrdOpn
+  field(DESC, "GVL_Mech_Room.CRIX_M..._stValve.xOvrdOpn")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOvrdOpn=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:VVC:01:OVRD_ON_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOverrideMode
+  field(DESC, "GVL_Mech_Room.CRIX_M...lve.xOverrideMode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOverrideMode?")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIX:MECH:VVC:01:OVRD_ON") {
+  # GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOverrideMode
+  field(DESC, "GVL_Mech_Room.CRIX_M...lve.xOverrideMode")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOverrideMode=")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:VVC:01:OPN_OK_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOPN_OK
+  field(DESC, "GVL_Mech_Room.CRIX_M...q_stValve.xOPN_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOPN_OK?")
+  field(ZNAM, "OPN ILK NOT OK")
+  field(ONAM, "OPN ILK OK")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:VVC:01:OPN_DO_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.q_xOPN_DO
+  field(DESC, "GVL_Mech_Room.CRIX_M...stValve.q_xOPN_DO")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.q_xOPN_DO?")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:MECH:GPI:01:PRESS_RBV") {
+  field(DESC, "GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rPRESS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rPRESS?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:GPI:01:AT_VAC_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xAT_VAC
+  field(DESC, "GVL_Mech_Room.CRIX_M...GPI_01.PG.xAT_VAC")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xAT_VAC?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:GPI:01:PRESS_OK_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xPRESS_OK
+  field(DESC, "GVL_Mech_Room.CRIX_M...I_01.PG.xPRESS_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xPRESS_OK?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(archive, "VAL")
+}
+
+record(mbbi, "CRIX:MECH:GPI:01:STATE_RBV") {
+  field(DESC, "GVL_Mech_Room.CRIX_MECH_GPI_01.PG.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(FVVL, "5")
+  field(SXVL, "6")
+  field(SVVL, "7")
+  field(ZRST, "PressInvalid")
+  field(ONST, "GaugeDisconnected")
+  field(TWST, "OoR")
+  field(THST, "Off")
+  field(FRST, "Starting")
+  field(FVST, "Valid")
+  field(SXST, "ValidHi")
+  field(SVST, "ValidLo")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:GPI:01:HV_SW_RBV") {
+  field(DESC, "GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xHV_SW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xHV_SW?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIX:MECH:GPI:01:HV_SW") {
+  field(DESC, "GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xHV_SW")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xHV_SW=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
+record(longin, "CRIX:MECH:GPI:01:PRESS_AI_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.i_iPRESS_R
+  field(DESC, "GVL_Mech_Room.CRIX_M..._01.PG.i_iPRESS_R")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.i_iPRESS_R?")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:GPI:01:HV_ON_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.i_xHV_ON
+  field(DESC, "GVL_Mech_Room.CRIX_M...PI_01.PG.i_xHV_ON")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.i_xHV_ON?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:GPI:01:DISC_ACTIVE_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.i_xDisc_Active
+  field(DESC, "GVL_Mech_Room.CRIX_M...PG.i_xDisc_Active")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.i_xDisc_Active?")
+  field(ZNAM, "NO DISC")
+  field(ONAM, "DISC ACTIVE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:GPI:01:HV_DIS_DO_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.q_xHV_DIS
+  field(DESC, "GVL_Mech_Room.CRIX_M...I_01.PG.q_xHV_DIS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.q_xHV_DIS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:MECH:GPI:01:VAC_SP_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rVAC_SP
+  field(DESC, "GVL_Mech_Room.CRIX_M...GPI_01.PG.rVAC_SP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rVAC_SP?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ao, "CRIX:MECH:GPI:01:VAC_SP") {
+  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rVAC_SP
+  field(DESC, "GVL_Mech_Room.CRIX_M...GPI_01.PG.rVAC_SP")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rVAC_SP=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:MECH:GPI:01:PRO_SP_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rPRO_SP
+  field(DESC, "GVL_Mech_Room.CRIX_M...GPI_01.PG.rPRO_SP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rPRO_SP?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ao, "CRIX:MECH:GPI:01:PRO_SP") {
+  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rPRO_SP
+  field(DESC, "GVL_Mech_Room.CRIX_M...GPI_01.PG.rPRO_SP")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rPRO_SP=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:MECH:GPI:01:SP_HYS_RBV") {
+  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rHYS_PR
+  field(DESC, "GVL_Mech_Room.CRIX_M...GPI_01.PG.rHYS_PR")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rHYS_PR?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ao, "CRIX:MECH:GPI:01:SP_HYS") {
+  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rHYS_PR
+  field(DESC, "GVL_Mech_Room.CRIX_M...GPI_01.PG.rHYS_PR")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rHYS_PR=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:GPI:01:ILK_OK_RBV") {
+  field(DESC, "GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xILKOk")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xILKOk?")
+  field(ZNAM, "NOT OK")
+  field(ONAM, "OK")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:MECH:GPI:01:LOGGER_RBV") {
+  field(DESC, "GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xLog")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xLog?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIX:MECH:GPI:01:LOGGER") {
+  field(DESC, "GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xLog")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xLog=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:01:RUN_SW_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.xRunSW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.xRunSW?")
+  field(ZNAM, "STOP")
+  field(ONAM, "RUN")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIX:PTM:01:RUN_SW") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.xRunSW")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_01.iq_stPtm.xRunSW=")
+  field(ZNAM, "STOP")
+  field(ONAM, "RUN")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:01:RST_SW_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.xResetSW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.xResetSW?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIX:PTM:01:RST_SW") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.xResetSW")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_01.iq_stPtm.xResetSW=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:01:RUN_DO_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.q_RunDO")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.q_RunDO?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:01:ILK_OK_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.xExtRunOk")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.xExtRunOk?")
+  field(ZNAM, "ILK ACTIVE")
+  field(ONAM, "ILK OK")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:01:ACCEL_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xAccel")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xAccel?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:01:AT_SPD_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xAtSpd")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xAtSpd?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "AT SPEED")
+  info(archive, "VAL")
+}
+
+record(longin, "CRIX:PTM:01:SPEED_RBV") {
+  # GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_diCurSpd
+  field(DESC, "GVL_Pumps.CRIX_PTM_0..._stPtm.i_diCurSpd")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_diCurSpd?")
+  field(EGU, "Hz")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:01:FAULT_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xFault")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xFault?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:01:WARN_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xWarn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xWarn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:01:ALARM_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xALARM")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xALARM?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:PTM:01:BP_SP_RBV") {
+  # GVL_Pumps.CRIX_PTM_01.iq_stPtm.rBackingPressureSP
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...BackingPressureSP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.rBackingPressureSP?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ao, "CRIX:PTM:01:BP_SP") {
+  # GVL_Pumps.CRIX_PTM_01.iq_stPtm.rBackingPressureSP
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...BackingPressureSP")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_01.iq_stPtm.rBackingPressureSP=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:PTM:01:IP_SP_RBV") {
+  # GVL_Pumps.CRIX_PTM_01.iq_stPtm.rInletPressureSP
+  field(DESC, "GVL_Pumps.CRIX_PTM_0....rInletPressureSP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.rInletPressureSP?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ao, "CRIX:PTM:01:IP_SP") {
+  # GVL_Pumps.CRIX_PTM_01.iq_stPtm.rInletPressureSP
+  field(DESC, "GVL_Pumps.CRIX_PTM_0....rInletPressureSP")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_01.iq_stPtm.rInletPressureSP=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
+}
+
+record(mbbi, "CRIX:PTM:01:STATE_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(ZRST, "STOPPED")
+  field(ONST, "STARTING")
+  field(TWST, "RUNNING")
+  field(THST, "FAULT")
+  field(FRST, "STOPPING")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:PTM:01:CURR_MON_RBV") {
+  # GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_rCurrentMon
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...Ptm.i_rCurrentMon")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_rCurrentMon?")
+  field(PREC, "2")
+  field(EGU, "A")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:PTM:01:TEMP_MON_RBV") {
+  # GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_rTempMon
+  field(DESC, "GVL_Pumps.CRIX_PTM_0..._stPtm.i_rTempMon")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_rTempMon?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:01:LOGGER_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.xLog")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.xLog?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:01:DECEL_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xDecel")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xDecel?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(longin, "CRIX:PTM:01:PWR_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_diPwr")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_diPwr?")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:01:OVR_TEMP_RBV") {
+  # GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xTempFault
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...tPtm.i_xTempFault")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xTempFault?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:01:REMOTE_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.q_xRemote")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.q_xRemote?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIX:PTM:01:REMOTE") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.q_xRemote")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_01.iq_stPtm.q_xRemote=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:02:RUN_SW_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.xRunSW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.xRunSW?")
+  field(ZNAM, "STOP")
+  field(ONAM, "RUN")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIX:PTM:02:RUN_SW") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.xRunSW")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_02.iq_stPtm.xRunSW=")
+  field(ZNAM, "STOP")
+  field(ONAM, "RUN")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:02:RST_SW_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.xResetSW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.xResetSW?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIX:PTM:02:RST_SW") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.xResetSW")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_02.iq_stPtm.xResetSW=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:02:RUN_DO_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.q_RunDO")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.q_RunDO?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:02:ILK_OK_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.xExtRunOk")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.xExtRunOk?")
+  field(ZNAM, "ILK ACTIVE")
+  field(ONAM, "ILK OK")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:02:ACCEL_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xAccel")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xAccel?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:02:AT_SPD_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xAtSpd")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xAtSpd?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "AT SPEED")
+  info(archive, "VAL")
+}
+
+record(longin, "CRIX:PTM:02:SPEED_RBV") {
+  # GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_diCurSpd
+  field(DESC, "GVL_Pumps.CRIX_PTM_0..._stPtm.i_diCurSpd")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_diCurSpd?")
+  field(EGU, "Hz")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:02:FAULT_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xFault")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xFault?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:02:WARN_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xWarn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xWarn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:02:ALARM_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xALARM")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xALARM?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:PTM:02:BP_SP_RBV") {
+  # GVL_Pumps.CRIX_PTM_02.iq_stPtm.rBackingPressureSP
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...BackingPressureSP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.rBackingPressureSP?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ao, "CRIX:PTM:02:BP_SP") {
+  # GVL_Pumps.CRIX_PTM_02.iq_stPtm.rBackingPressureSP
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...BackingPressureSP")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_02.iq_stPtm.rBackingPressureSP=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:PTM:02:IP_SP_RBV") {
+  # GVL_Pumps.CRIX_PTM_02.iq_stPtm.rInletPressureSP
+  field(DESC, "GVL_Pumps.CRIX_PTM_0....rInletPressureSP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.rInletPressureSP?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ao, "CRIX:PTM:02:IP_SP") {
+  # GVL_Pumps.CRIX_PTM_02.iq_stPtm.rInletPressureSP
+  field(DESC, "GVL_Pumps.CRIX_PTM_0....rInletPressureSP")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_02.iq_stPtm.rInletPressureSP=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
+}
+
+record(mbbi, "CRIX:PTM:02:STATE_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(ZRST, "STOPPED")
+  field(ONST, "STARTING")
+  field(TWST, "RUNNING")
+  field(THST, "FAULT")
+  field(FRST, "STOPPING")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:PTM:02:CURR_MON_RBV") {
+  # GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_rCurrentMon
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...Ptm.i_rCurrentMon")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_rCurrentMon?")
+  field(PREC, "2")
+  field(EGU, "A")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:PTM:02:TEMP_MON_RBV") {
+  # GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_rTempMon
+  field(DESC, "GVL_Pumps.CRIX_PTM_0..._stPtm.i_rTempMon")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_rTempMon?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:02:LOGGER_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.xLog")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.xLog?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:02:DECEL_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xDecel")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xDecel?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(longin, "CRIX:PTM:02:PWR_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_diPwr")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_diPwr?")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:02:OVR_TEMP_RBV") {
+  # GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xTempFault
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...tPtm.i_xTempFault")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xTempFault?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:02:REMOTE_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.q_xRemote")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.q_xRemote?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIX:PTM:02:REMOTE") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.q_xRemote")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_02.iq_stPtm.q_xRemote=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:03:RUN_SW_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xRunSW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.xRunSW?")
+  field(ZNAM, "STOP")
+  field(ONAM, "RUN")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIX:PTM:03:RUN_SW") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xRunSW")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_03.iq_stPTM.xRunSW=")
+  field(ZNAM, "STOP")
+  field(ONAM, "RUN")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:03:RST_SW_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xResetSW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.xResetSW?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIX:PTM:03:RST_SW") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xResetSW")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_03.iq_stPTM.xResetSW=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:03:RUN_DO_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_RunDO")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_RunDO?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:03:ILK_OK_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xExtRunOk")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.xExtRunOk?")
+  field(ZNAM, "ILK ACTIVE")
+  field(ONAM, "ILK OK")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:03:ACCEL_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xAccel")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xAccel?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:03:AT_SPD_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xAtSpd")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xAtSpd?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "AT SPEED")
+  info(archive, "VAL")
+}
+
+record(longin, "CRIX:PTM:03:SPEED_RBV") {
+  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diCurSpd
+  field(DESC, "GVL_Pumps.CRIX_PTM_0..._stPTM.i_diCurSpd")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diCurSpd?")
+  field(EGU, "Hz")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:03:FAULT_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xFault")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xFault?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:03:WARN_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xWarn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xWarn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:03:ALARM_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xALARM")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xALARM?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:PTM:03:BP_SP_RBV") {
+  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.rBackingPressureSP
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...BackingPressureSP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.rBackingPressureSP?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ao, "CRIX:PTM:03:BP_SP") {
+  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.rBackingPressureSP
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...BackingPressureSP")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_03.iq_stPTM.rBackingPressureSP=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:PTM:03:IP_SP_RBV") {
+  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.rInletPressureSP
+  field(DESC, "GVL_Pumps.CRIX_PTM_0....rInletPressureSP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.rInletPressureSP?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ao, "CRIX:PTM:03:IP_SP") {
+  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.rInletPressureSP
+  field(DESC, "GVL_Pumps.CRIX_PTM_0....rInletPressureSP")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_03.iq_stPTM.rInletPressureSP=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "PREC VAL")
+  info(archive, "VAL")
+}
+
+record(mbbi, "CRIX:PTM:03:STATE_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(ZRST, "STOPPED")
+  field(ONST, "STARTING")
+  field(TWST, "RUNNING")
+  field(THST, "FAULT")
+  field(FRST, "STOPPING")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:PTM:03:CURR_MON_RBV") {
+  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_rCurrentMon
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...PTM.i_rCurrentMon")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_rCurrentMon?")
+  field(PREC, "2")
+  field(EGU, "A")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:PTM:03:TEMP_MON_RBV") {
+  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_rTempMon
+  field(DESC, "GVL_Pumps.CRIX_PTM_0..._stPTM.i_rTempMon")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_rTempMon?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:03:LOGGER_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xLog")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.xLog?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:03:RESET_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_xReset")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_xReset?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(longin, "CRIX:PTM:03:PWR_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diPwr")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diPwr?")
+  info(archive, "VAL")
+}
+
+record(longin, "CRIX:PTM:03:TempElec_RBV") {
+  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diElecTemp
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...tPTM.i_diElecTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diElecTemp?")
+  info(archive, "VAL")
+}
+
+record(longin, "CRIX:PTM:03:TempPump_RBV") {
+  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diBtmTemp
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...stPTM.i_diBtmTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diBtmTemp?")
+  info(archive, "VAL")
+}
+
+record(longin, "CRIX:PTM:03:TempBearing_RBV") {
+  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diBrngTemp
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...tPTM.i_diBrngTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diBrngTemp?")
+  info(archive, "VAL")
+}
+
+record(longin, "CRIX:PTM:03:TempMotor_RBV") {
+  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diMtrTemp
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...stPTM.i_diMtrTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diMtrTemp?")
+  info(archive, "VAL")
+}
+
+record(longin, "CRIX:PTM:03:ErrorCode_RBV") {
+  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_iErrorCode
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...tPTM.i_iErrorCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_iErrorCode?")
+  info(archive, "VAL")
+}
+
+record(longin, "CRIX:PTM:03:WarningCode_RBV") {
+  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_iWarningCode
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...TM.i_iWarningCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_iWarningCode?")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:03:TempFault_RBV") {
+  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xTempFault
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...tPTM.i_xTempFault")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xTempFault?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(longin, "CRIX:PTM:03:Power_RBV") {
+  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_uiPowerPctRbk
+  field(DESC, "GVL_Pumps.CRIX_PTM_0...M.i_uiPowerPctRbk")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_uiPowerPctRbk?")
+  info(archive, "VAL")
+}
+
+record(longin, "CRIX:PTM:03:SET_SPEED_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_dSetSpd")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_dSetSpd?")
+  field(EGU, "Hz")
+  info(archive, "VAL")
+}
+
+record(longout, "CRIX:PTM:03:SET_SPEED") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_dSetSpd")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_dSetSpd=")
+  field(EGU, "Hz")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:PTM:03:SET_SPEED_MODE_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_bSetSpd")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_bSetSpd?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIX:PTM:03:SET_SPEED_MODE") {
+  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_bSetSpd")
+  field(DTYP, "asynInt32")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_bSetSpd=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "VAL")
+  info(archive, "VAL")
+}
+
 record(bi, "CRIX:VGC:01:OPN_SW_RBV") {
   # GVL_Chamber_Valves.CRIX_VGC_01.iq_stValve.pv_xOPN_SW
   field(DESC, "GVL_Chamber_Valves.C...tValve.pv_xOPN_SW")
@@ -7689,1634 +9317,6 @@ record(bi, "CRIX:VVC:10:OPN_DO_RBV") {
   field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_VVC_10.iq_stValve.q_xOPN_DO?")
   field(ZNAM, "CLOSE")
   field(ONAM, "OPEN")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:PRO:01:RUN_SW_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.pv_xRunSW
-  field(DESC, "GVL_Mech_Room.CRIX_M....stPump.pv_xRunSW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.pv_xRunSW?")
-  field(ZNAM, "Stop")
-  field(ONAM, "Start")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIX:MECH:PRO:01:RUN_SW") {
-  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.pv_xRunSW
-  field(DESC, "GVL_Mech_Room.CRIX_M....stPump.pv_xRunSW")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.pv_xRunSW=")
-  field(ZNAM, "Stop")
-  field(ONAM, "Start")
-  info(autosaveFields_pass0, "VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:PRO:01:RUN_DO_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.q_xRunDo
-  field(DESC, "GVL_Mech_Room.CRIX_M...1.stPump.q_xRunDo")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.q_xRunDo?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:PRO:01:ILK_OK_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.xIlkOK
-  field(DESC, "GVL_Mech_Room.CRIX_M..._01.stPump.xIlkOK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.xIlkOK?")
-  field(ZNAM, "NOT OK")
-  field(ONAM, "OK")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:PRO:01:AT_SPD_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.xAtSpd
-  field(DESC, "GVL_Mech_Room.CRIX_M..._01.stPump.xAtSpd")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.xAtSpd?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:PRO:01:WARN_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.xWrn
-  field(DESC, "GVL_Mech_Room.CRIX_M...RO_01.stPump.xWrn")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.xWrn?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:PRO:01:ERROR_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.xErr
-  field(DESC, "GVL_Mech_Room.CRIX_M...RO_01.stPump.xErr")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.xErr?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(mbbi, "CRIX:MECH:PRO:01:STATE_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.eState
-  field(DESC, "GVL_Mech_Room.CRIX_M..._01.stPump.eState")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.eState?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(ZRST, "STOPPED")
-  field(ONST, "STARTING")
-  field(TWST, "RUNNING")
-  field(THST, "FAULT")
-  field(FRST, "STOPPING")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:PRO:01:MPStart_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.q_xMPStart
-  field(DESC, "GVL_Mech_Room.CRIX_M...stPump.q_xMPStart")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.q_xMPStart?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:PRO:01:BPStart_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.q_xBPStart
-  field(DESC, "GVL_Mech_Room.CRIX_M...stPump.q_xBPStart")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.q_xBPStart?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:PRO:01:MPStatus_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xMPStatus
-  field(DESC, "GVL_Mech_Room.CRIX_M...tPump.i_xMPStatus")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xMPStatus?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:PRO:01:BPStatus_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xBPStatus
-  field(DESC, "GVL_Mech_Room.CRIX_M...tPump.i_xBPStatus")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xBPStatus?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:PRO:01:WARN_DI_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xWarning
-  field(DESC, "GVL_Mech_Room.CRIX_M...stPump.i_xWarning")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xWarning?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:PRO:01:ALARM_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xAlarm
-  field(DESC, "GVL_Mech_Room.CRIX_M...1.stPump.i_xAlarm")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xAlarm?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:PRO:01:REMOTE_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xRemote
-  field(DESC, "GVL_Mech_Room.CRIX_M....stPump.i_xRemote")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_PRO_01.stPump.i_xRemote?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:VVC:01:OPN_SW_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.pv_xOPN_SW
-  field(DESC, "GVL_Mech_Room.CRIX_M...tValve.pv_xOPN_SW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.pv_xOPN_SW?")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIX:MECH:VVC:01:OPN_SW") {
-  # GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.pv_xOPN_SW
-  field(DESC, "GVL_Mech_Room.CRIX_M...tValve.pv_xOPN_SW")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.pv_xOPN_SW=")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:VVC:01:FORCE_OPN_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOvrdOpn
-  field(DESC, "GVL_Mech_Room.CRIX_M..._stValve.xOvrdOpn")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOvrdOpn?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "OPEN")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIX:MECH:VVC:01:FORCE_OPN") {
-  # GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOvrdOpn
-  field(DESC, "GVL_Mech_Room.CRIX_M..._stValve.xOvrdOpn")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOvrdOpn=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:VVC:01:OVRD_ON_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOverrideMode
-  field(DESC, "GVL_Mech_Room.CRIX_M...lve.xOverrideMode")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOverrideMode?")
-  field(ZNAM, "Override OFF")
-  field(ONAM, "Override ON")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIX:MECH:VVC:01:OVRD_ON") {
-  # GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOverrideMode
-  field(DESC, "GVL_Mech_Room.CRIX_M...lve.xOverrideMode")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOverrideMode=")
-  field(ZNAM, "Override OFF")
-  field(ONAM, "Override ON")
-  info(autosaveFields_pass0, "VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:VVC:01:OPN_OK_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOPN_OK
-  field(DESC, "GVL_Mech_Room.CRIX_M...q_stValve.xOPN_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.xOPN_OK?")
-  field(ZNAM, "OPN ILK NOT OK")
-  field(ONAM, "OPN ILK OK")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:VVC:01:OPN_DO_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.q_xOPN_DO
-  field(DESC, "GVL_Mech_Room.CRIX_M...stValve.q_xOPN_DO")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_VVC_01.iq_stValve.q_xOPN_DO?")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-  info(archive, "VAL")
-}
-
-record(ai, "CRIX:MECH:GPI:01:PRESS_RBV") {
-  field(DESC, "GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rPRESS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rPRESS?")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:GPI:01:AT_VAC_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xAT_VAC
-  field(DESC, "GVL_Mech_Room.CRIX_M...GPI_01.PG.xAT_VAC")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xAT_VAC?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:GPI:01:PRESS_OK_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xPRESS_OK
-  field(DESC, "GVL_Mech_Room.CRIX_M...I_01.PG.xPRESS_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xPRESS_OK?")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(archive, "VAL")
-}
-
-record(mbbi, "CRIX:MECH:GPI:01:STATE_RBV") {
-  field(DESC, "GVL_Mech_Room.CRIX_MECH_GPI_01.PG.eState")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.eState?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(FVVL, "5")
-  field(SXVL, "6")
-  field(SVVL, "7")
-  field(ZRST, "PressInvalid")
-  field(ONST, "GaugeDisconnected")
-  field(TWST, "OoR")
-  field(THST, "Off")
-  field(FRST, "Starting")
-  field(FVST, "Valid")
-  field(SXST, "ValidHi")
-  field(SVST, "ValidLo")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:GPI:01:HV_SW_RBV") {
-  field(DESC, "GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xHV_SW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xHV_SW?")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIX:MECH:GPI:01:HV_SW") {
-  field(DESC, "GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xHV_SW")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xHV_SW=")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "VAL")
-  info(archive, "VAL")
-}
-
-record(longin, "CRIX:MECH:GPI:01:PRESS_AI_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.i_iPRESS_R
-  field(DESC, "GVL_Mech_Room.CRIX_M..._01.PG.i_iPRESS_R")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.i_iPRESS_R?")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:GPI:01:HV_ON_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.i_xHV_ON
-  field(DESC, "GVL_Mech_Room.CRIX_M...PI_01.PG.i_xHV_ON")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.i_xHV_ON?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:GPI:01:DISC_ACTIVE_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.i_xDisc_Active
-  field(DESC, "GVL_Mech_Room.CRIX_M...PG.i_xDisc_Active")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.i_xDisc_Active?")
-  field(ZNAM, "NO DISC")
-  field(ONAM, "DISC ACTIVE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:GPI:01:HV_DIS_DO_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.q_xHV_DIS
-  field(DESC, "GVL_Mech_Room.CRIX_M...I_01.PG.q_xHV_DIS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.q_xHV_DIS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(ai, "CRIX:MECH:GPI:01:VAC_SP_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rVAC_SP
-  field(DESC, "GVL_Mech_Room.CRIX_M...GPI_01.PG.rVAC_SP")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rVAC_SP?")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ao, "CRIX:MECH:GPI:01:VAC_SP") {
-  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rVAC_SP
-  field(DESC, "GVL_Mech_Room.CRIX_M...GPI_01.PG.rVAC_SP")
-  field(PINI, "1")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rVAC_SP=")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC VAL")
-  info(archive, "VAL")
-}
-
-record(ai, "CRIX:MECH:GPI:01:PRO_SP_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rPRO_SP
-  field(DESC, "GVL_Mech_Room.CRIX_M...GPI_01.PG.rPRO_SP")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rPRO_SP?")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ao, "CRIX:MECH:GPI:01:PRO_SP") {
-  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rPRO_SP
-  field(DESC, "GVL_Mech_Room.CRIX_M...GPI_01.PG.rPRO_SP")
-  field(PINI, "1")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rPRO_SP=")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC VAL")
-  info(archive, "VAL")
-}
-
-record(ai, "CRIX:MECH:GPI:01:SP_HYS_RBV") {
-  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rHYS_PR
-  field(DESC, "GVL_Mech_Room.CRIX_M...GPI_01.PG.rHYS_PR")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rHYS_PR?")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ao, "CRIX:MECH:GPI:01:SP_HYS") {
-  # GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rHYS_PR
-  field(DESC, "GVL_Mech_Room.CRIX_M...GPI_01.PG.rHYS_PR")
-  field(PINI, "1")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.rHYS_PR=")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:GPI:01:ILK_OK_RBV") {
-  field(DESC, "GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xILKOk")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xILKOk?")
-  field(ZNAM, "NOT OK")
-  field(ONAM, "OK")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:MECH:GPI:01:LOGGER_RBV") {
-  field(DESC, "GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xLog")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xLog?")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIX:MECH:GPI:01:LOGGER") {
-  field(DESC, "GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xLog")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Mech_Room.CRIX_MECH_GPI_01.PG.xLog=")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:01:RUN_SW_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.xRunSW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.xRunSW?")
-  field(ZNAM, "STOP")
-  field(ONAM, "RUN")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIX:PTM:01:RUN_SW") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.xRunSW")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_01.iq_stPtm.xRunSW=")
-  field(ZNAM, "STOP")
-  field(ONAM, "RUN")
-  info(autosaveFields_pass0, "VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:01:RST_SW_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.xResetSW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.xResetSW?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIX:PTM:01:RST_SW") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.xResetSW")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_01.iq_stPtm.xResetSW=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:01:RUN_DO_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.q_RunDO")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.q_RunDO?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:01:ILK_OK_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.xExtRunOk")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.xExtRunOk?")
-  field(ZNAM, "ILK ACTIVE")
-  field(ONAM, "ILK OK")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:01:ACCEL_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xAccel")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xAccel?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:01:AT_SPD_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xAtSpd")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xAtSpd?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "AT SPEED")
-  info(archive, "VAL")
-}
-
-record(longin, "CRIX:PTM:01:SPEED_RBV") {
-  # GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_diCurSpd
-  field(DESC, "GVL_Pumps.CRIX_PTM_0..._stPtm.i_diCurSpd")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_diCurSpd?")
-  field(EGU, "Hz")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:01:FAULT_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xFault")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xFault?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:01:WARN_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xWarn")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xWarn?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:01:ALARM_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xALARM")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xALARM?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(ai, "CRIX:PTM:01:BP_SP_RBV") {
-  # GVL_Pumps.CRIX_PTM_01.iq_stPtm.rBackingPressureSP
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...BackingPressureSP")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.rBackingPressureSP?")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ao, "CRIX:PTM:01:BP_SP") {
-  # GVL_Pumps.CRIX_PTM_01.iq_stPtm.rBackingPressureSP
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...BackingPressureSP")
-  field(PINI, "1")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_01.iq_stPtm.rBackingPressureSP=")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC VAL")
-  info(archive, "VAL")
-}
-
-record(ai, "CRIX:PTM:01:IP_SP_RBV") {
-  # GVL_Pumps.CRIX_PTM_01.iq_stPtm.rInletPressureSP
-  field(DESC, "GVL_Pumps.CRIX_PTM_0....rInletPressureSP")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.rInletPressureSP?")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ao, "CRIX:PTM:01:IP_SP") {
-  # GVL_Pumps.CRIX_PTM_01.iq_stPtm.rInletPressureSP
-  field(DESC, "GVL_Pumps.CRIX_PTM_0....rInletPressureSP")
-  field(PINI, "1")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_01.iq_stPtm.rInletPressureSP=")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC VAL")
-  info(archive, "VAL")
-}
-
-record(mbbi, "CRIX:PTM:01:STATE_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.eState")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.eState?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(ZRST, "STOPPED")
-  field(ONST, "STARTING")
-  field(TWST, "RUNNING")
-  field(THST, "FAULT")
-  field(FRST, "STOPPING")
-  info(archive, "VAL")
-}
-
-record(ai, "CRIX:PTM:01:CURR_MON_RBV") {
-  # GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_rCurrentMon
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...Ptm.i_rCurrentMon")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_rCurrentMon?")
-  field(PREC, "2")
-  field(EGU, "A")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "CRIX:PTM:01:TEMP_MON_RBV") {
-  # GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_rTempMon
-  field(DESC, "GVL_Pumps.CRIX_PTM_0..._stPtm.i_rTempMon")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_rTempMon?")
-  field(PREC, "2")
-  field(EGU, "C")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:01:LOGGER_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.xLog")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.xLog?")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:01:DECEL_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xDecel")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xDecel?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(longin, "CRIX:PTM:01:PWR_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_diPwr")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_diPwr?")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:01:OVR_TEMP_RBV") {
-  # GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xTempFault
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...tPtm.i_xTempFault")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.i_xTempFault?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:01:REMOTE_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.q_xRemote")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_01.iq_stPtm.q_xRemote?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIX:PTM:01:REMOTE") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_01.iq_stPtm.q_xRemote")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_01.iq_stPtm.q_xRemote=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:02:RUN_SW_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.xRunSW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.xRunSW?")
-  field(ZNAM, "STOP")
-  field(ONAM, "RUN")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIX:PTM:02:RUN_SW") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.xRunSW")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_02.iq_stPtm.xRunSW=")
-  field(ZNAM, "STOP")
-  field(ONAM, "RUN")
-  info(autosaveFields_pass0, "VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:02:RST_SW_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.xResetSW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.xResetSW?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIX:PTM:02:RST_SW") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.xResetSW")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_02.iq_stPtm.xResetSW=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:02:RUN_DO_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.q_RunDO")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.q_RunDO?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:02:ILK_OK_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.xExtRunOk")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.xExtRunOk?")
-  field(ZNAM, "ILK ACTIVE")
-  field(ONAM, "ILK OK")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:02:ACCEL_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xAccel")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xAccel?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:02:AT_SPD_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xAtSpd")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xAtSpd?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "AT SPEED")
-  info(archive, "VAL")
-}
-
-record(longin, "CRIX:PTM:02:SPEED_RBV") {
-  # GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_diCurSpd
-  field(DESC, "GVL_Pumps.CRIX_PTM_0..._stPtm.i_diCurSpd")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_diCurSpd?")
-  field(EGU, "Hz")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:02:FAULT_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xFault")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xFault?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:02:WARN_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xWarn")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xWarn?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:02:ALARM_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xALARM")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xALARM?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(ai, "CRIX:PTM:02:BP_SP_RBV") {
-  # GVL_Pumps.CRIX_PTM_02.iq_stPtm.rBackingPressureSP
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...BackingPressureSP")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.rBackingPressureSP?")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ao, "CRIX:PTM:02:BP_SP") {
-  # GVL_Pumps.CRIX_PTM_02.iq_stPtm.rBackingPressureSP
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...BackingPressureSP")
-  field(PINI, "1")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_02.iq_stPtm.rBackingPressureSP=")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC VAL")
-  info(archive, "VAL")
-}
-
-record(ai, "CRIX:PTM:02:IP_SP_RBV") {
-  # GVL_Pumps.CRIX_PTM_02.iq_stPtm.rInletPressureSP
-  field(DESC, "GVL_Pumps.CRIX_PTM_0....rInletPressureSP")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.rInletPressureSP?")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ao, "CRIX:PTM:02:IP_SP") {
-  # GVL_Pumps.CRIX_PTM_02.iq_stPtm.rInletPressureSP
-  field(DESC, "GVL_Pumps.CRIX_PTM_0....rInletPressureSP")
-  field(PINI, "1")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_02.iq_stPtm.rInletPressureSP=")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC VAL")
-  info(archive, "VAL")
-}
-
-record(mbbi, "CRIX:PTM:02:STATE_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.eState")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.eState?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(ZRST, "STOPPED")
-  field(ONST, "STARTING")
-  field(TWST, "RUNNING")
-  field(THST, "FAULT")
-  field(FRST, "STOPPING")
-  info(archive, "VAL")
-}
-
-record(ai, "CRIX:PTM:02:CURR_MON_RBV") {
-  # GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_rCurrentMon
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...Ptm.i_rCurrentMon")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_rCurrentMon?")
-  field(PREC, "2")
-  field(EGU, "A")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "CRIX:PTM:02:TEMP_MON_RBV") {
-  # GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_rTempMon
-  field(DESC, "GVL_Pumps.CRIX_PTM_0..._stPtm.i_rTempMon")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_rTempMon?")
-  field(PREC, "2")
-  field(EGU, "C")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:02:LOGGER_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.xLog")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.xLog?")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:02:DECEL_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xDecel")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xDecel?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(longin, "CRIX:PTM:02:PWR_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_diPwr")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_diPwr?")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:02:OVR_TEMP_RBV") {
-  # GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xTempFault
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...tPtm.i_xTempFault")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.i_xTempFault?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:02:REMOTE_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.q_xRemote")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_02.iq_stPtm.q_xRemote?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIX:PTM:02:REMOTE") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_02.iq_stPtm.q_xRemote")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_02.iq_stPtm.q_xRemote=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:03:RUN_SW_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xRunSW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.xRunSW?")
-  field(ZNAM, "STOP")
-  field(ONAM, "RUN")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIX:PTM:03:RUN_SW") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xRunSW")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_03.iq_stPTM.xRunSW=")
-  field(ZNAM, "STOP")
-  field(ONAM, "RUN")
-  info(autosaveFields_pass0, "VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:03:RST_SW_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xResetSW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.xResetSW?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIX:PTM:03:RST_SW") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xResetSW")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_03.iq_stPTM.xResetSW=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:03:RUN_DO_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_RunDO")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_RunDO?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:03:ILK_OK_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xExtRunOk")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.xExtRunOk?")
-  field(ZNAM, "ILK ACTIVE")
-  field(ONAM, "ILK OK")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:03:ACCEL_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xAccel")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xAccel?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:03:AT_SPD_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xAtSpd")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xAtSpd?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "AT SPEED")
-  info(archive, "VAL")
-}
-
-record(longin, "CRIX:PTM:03:SPEED_RBV") {
-  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diCurSpd
-  field(DESC, "GVL_Pumps.CRIX_PTM_0..._stPTM.i_diCurSpd")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diCurSpd?")
-  field(EGU, "Hz")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:03:FAULT_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xFault")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xFault?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:03:WARN_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xWarn")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xWarn?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:03:ALARM_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xALARM")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xALARM?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(ai, "CRIX:PTM:03:BP_SP_RBV") {
-  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.rBackingPressureSP
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...BackingPressureSP")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.rBackingPressureSP?")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ao, "CRIX:PTM:03:BP_SP") {
-  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.rBackingPressureSP
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...BackingPressureSP")
-  field(PINI, "1")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_03.iq_stPTM.rBackingPressureSP=")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC VAL")
-  info(archive, "VAL")
-}
-
-record(ai, "CRIX:PTM:03:IP_SP_RBV") {
-  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.rInletPressureSP
-  field(DESC, "GVL_Pumps.CRIX_PTM_0....rInletPressureSP")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.rInletPressureSP?")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ao, "CRIX:PTM:03:IP_SP") {
-  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.rInletPressureSP
-  field(DESC, "GVL_Pumps.CRIX_PTM_0....rInletPressureSP")
-  field(PINI, "1")
-  field(DTYP, "asynFloat64")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_03.iq_stPTM.rInletPressureSP=")
-  field(PREC, "2")
-  field(EGU, "TORR")
-  field(HOPR, "1000")
-  field(LOPR, "0")
-  info(autosaveFields, "DESC VAL")
-  info(autosaveFields_pass0, "PREC VAL")
-  info(archive, "VAL")
-}
-
-record(mbbi, "CRIX:PTM:03:STATE_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.eState")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.eState?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(ZRST, "STOPPED")
-  field(ONST, "STARTING")
-  field(TWST, "RUNNING")
-  field(THST, "FAULT")
-  field(FRST, "STOPPING")
-  info(archive, "VAL")
-}
-
-record(ai, "CRIX:PTM:03:CURR_MON_RBV") {
-  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_rCurrentMon
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...PTM.i_rCurrentMon")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_rCurrentMon?")
-  field(PREC, "2")
-  field(EGU, "A")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(ai, "CRIX:PTM:03:TEMP_MON_RBV") {
-  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_rTempMon
-  field(DESC, "GVL_Pumps.CRIX_PTM_0..._stPTM.i_rTempMon")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_rTempMon?")
-  field(PREC, "2")
-  field(EGU, "C")
-  info(autosaveFields_pass0, "PREC")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:03:LOGGER_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.xLog")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.xLog?")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:03:RESET_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_xReset")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_xReset?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(longin, "CRIX:PTM:03:PWR_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diPwr")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diPwr?")
-  info(archive, "VAL")
-}
-
-record(longin, "CRIX:PTM:03:TempElec_RBV") {
-  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diElecTemp
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...tPTM.i_diElecTemp")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diElecTemp?")
-  info(archive, "VAL")
-}
-
-record(longin, "CRIX:PTM:03:TempPump_RBV") {
-  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diBtmTemp
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...stPTM.i_diBtmTemp")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diBtmTemp?")
-  info(archive, "VAL")
-}
-
-record(longin, "CRIX:PTM:03:TempBearing_RBV") {
-  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diBrngTemp
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...tPTM.i_diBrngTemp")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diBrngTemp?")
-  info(archive, "VAL")
-}
-
-record(longin, "CRIX:PTM:03:TempMotor_RBV") {
-  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diMtrTemp
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...stPTM.i_diMtrTemp")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_diMtrTemp?")
-  info(archive, "VAL")
-}
-
-record(longin, "CRIX:PTM:03:ErrorCode_RBV") {
-  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_iErrorCode
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...tPTM.i_iErrorCode")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_iErrorCode?")
-  info(archive, "VAL")
-}
-
-record(longin, "CRIX:PTM:03:WarningCode_RBV") {
-  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_iWarningCode
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...TM.i_iWarningCode")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_iWarningCode?")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:03:TempFault_RBV") {
-  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xTempFault
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...tPTM.i_xTempFault")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_xTempFault?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(longin, "CRIX:PTM:03:Power_RBV") {
-  # GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_uiPowerPctRbk
-  field(DESC, "GVL_Pumps.CRIX_PTM_0...M.i_uiPowerPctRbk")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_uiPowerPctRbk?")
-  info(archive, "VAL")
-}
-
-record(longin, "CRIX:PTM:03:SET_SPEED_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_dSetSpd")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_dSetSpd?")
-  field(EGU, "Hz")
-  info(archive, "VAL")
-}
-
-record(longout, "CRIX:PTM:03:SET_SPEED") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_dSetSpd")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_03.iq_stPTM.i_dSetSpd=")
-  field(EGU, "Hz")
-  info(autosaveFields_pass0, "VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIX:PTM:03:SET_SPEED_MODE_RBV") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_bSetSpd")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_bSetSpd?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIX:PTM:03:SET_SPEED_MODE") {
-  field(DESC, "GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_bSetSpd")
-  field(DTYP, "asynInt32")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_PTM_03.iq_stPTM.q_bSetSpd=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "VAL")
   info(archive, "VAL")
 }
 
