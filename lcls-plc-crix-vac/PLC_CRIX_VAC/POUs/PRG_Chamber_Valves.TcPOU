@@ -12,6 +12,8 @@ VAR
 	bVGC_06_ILK : BOOL := FALSE;
 	bVGC_07_ILK : BOOL := FALSE;
 	bChamberAtVac:BOOL;
+	
+	bm_dummy_gauge : ST_VG;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -101,9 +103,16 @@ CRIX_VGC_07(i_xExtILK_OK:=bVGC_07_ILK,  // Not active right now; leave ILK to in
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stCRIX_VGC_07);
 
-(*    
+    
+
+//beamline dummy gauge
+bm_dummy_gauge.xPRESS_OK := TRUE;
+bm_dummy_gauge.xAT_VAC := TRUE;
+bm_dummy_gauge.eState := ValidLo;
+bm_dummy_gauge.rPRESS := 5e-9;
+
 CRIX_VGC_08(
-	i_stUSG:= PRG_ADS_Gauges.TM2K2_GCC_Reader.IG, 
+	i_stUSG:= bm_dummy_gauge,// PRG_ADS_Gauges.TM2K2_GCC_Reader.IG, 
 	i_stDSG:= CRIX_GPI_01.PG, 
 	i_xDis_DPIlk:= FALSE, 
 	i_xPMPS_OK:= TRUE, 
@@ -120,7 +129,7 @@ CRIX_VGC_08(
 	fbArbiter:= GVL_PMPS.g_Arbiter);
        
 CRIX_VGC_09(i_stUSG:=CRIX_GPI_01.PG,
-            i_stDSG:=PRG_ADS_Gauges.IM6K2_GCC_Reader.IG,
+            i_stDSG:=bm_dummy_gauge,// PRG_ADS_Gauges.IM6K2_GCC_Reader.IG,
             i_xDis_DPILK:=FALSE,
             i_xPMPS_OK:=TRUE,
             i_xEPS_OK:=,
@@ -133,7 +142,7 @@ CRIX_VGC_09(i_stUSG:=CRIX_GPI_01.PG,
             xMPS_OK=>,
             io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput, 
 			fbArbiter:= GVL_PMPS.g_Arbiter);
-*)
+
 			
 // ChemRIXS Vent Valves
 CRIX_VVC_01(i_xExtILK_OK:=(NOT stCRIX_VVC_02.q_xOPN_DO),
