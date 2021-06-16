@@ -157,84 +157,6 @@
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_LI3K2.RIX_LI3K2_PTM_01.i_xAtSpd</Name>
-					<Comment><![CDATA[ Normaml operation when true]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_LI3K2.RIX_LI3K2_PTM_01.i_xFault</Name>
-					<Comment><![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Mech_Room.CRIX_MECH_PRO_01.i_xMPStatus</Name>
-					<Comment><![CDATA[MP status]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Mech_Room.CRIX_MECH_PRO_01.i_xBPStatus</Name>
-					<Comment><![CDATA[BP status]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Mech_Room.CRIX_MECH_PRO_01.i_xWarning</Name>
-					<Comment><![CDATA[Warning status]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Mech_Room.CRIX_MECH_PRO_01.i_xAlarmOK</Name>
-					<Comment><![CDATA[Alarm, maps to error]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Mech_Room.CRIX_MECH_PRO_01.i_xRemote</Name>
-					<Comment><![CDATA[Remote control status]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Mech_Room.CRIX_MECH_GPI_01.i_iPRESS_R</Name>
-					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_01.i_xAtSpd</Name>
-					<Comment><![CDATA[ Normaml operation when true]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_01.i_xFaultNC</Name>
-					<Comment><![CDATA[ Error Active when no Error is present]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_02.i_xAtSpd</Name>
-					<Comment><![CDATA[ Normaml operation when true]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_02.i_xFaultNC</Name>
-					<Comment><![CDATA[ Error Active when no Error is present]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_03.i_xAtSpd</Name>
-					<Comment><![CDATA[ Normaml operation when true]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_03.i_xFaultNC</Name>
-					<Comment><![CDATA[ Error]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_03.i_xWarn</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_03.i_xRemote</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_Chamber_Valves.CRIX_VGC_01.i_xOpnLS</Name>
 					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
@@ -324,12 +246,175 @@
 					<Name>GVL_Chamber_Valves.CRIX_VGC_17.i_xClsLS</Name>
 					<Type>BOOL</Type>
 				</Var>
+				<Var>
+					<Name>GVL_LI3K2.RIX_LI3K2_PTM_01.i_xAtSpd</Name>
+					<Comment><![CDATA[ Normaml operation when true]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_LI3K2.RIX_LI3K2_PTM_01.i_xFault</Name>
+					<Comment><![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Mech_Room.CRIX_MECH_PRO_01.i_xMPStatus</Name>
+					<Comment><![CDATA[MP status]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Mech_Room.CRIX_MECH_PRO_01.i_xBPStatus</Name>
+					<Comment><![CDATA[BP status]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Mech_Room.CRIX_MECH_PRO_01.i_xWarning</Name>
+					<Comment><![CDATA[Warning status]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Mech_Room.CRIX_MECH_PRO_01.i_xAlarmOK</Name>
+					<Comment><![CDATA[Alarm, maps to error]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Mech_Room.CRIX_MECH_PRO_01.i_xRemote</Name>
+					<Comment><![CDATA[Remote control status]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Mech_Room.CRIX_MECH_GPI_01.i_iPRESS_R</Name>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_01.i_xAtSpd</Name>
+					<Comment><![CDATA[ Normaml operation when true]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_01.i_xFaultNC</Name>
+					<Comment><![CDATA[ Error Active when no Error is present]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_02.i_xAtSpd</Name>
+					<Comment><![CDATA[ Normaml operation when true]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_02.i_xFaultNC</Name>
+					<Comment><![CDATA[ Error Active when no Error is present]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_03.i_xAtSpd</Name>
+					<Comment><![CDATA[ Normaml operation when true]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_03.i_xFaultNC</Name>
+					<Comment><![CDATA[ Error]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_03.i_xWarn</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_03.i_xRemote</Name>
+					<Type>BOOL</Type>
+				</Var>
 			</Vars>
 			<Vars VarGrpType="2" ContextId="1" AreaNo="17">
 				<Name>PlcTask Outputs</Name>
 				<Var>
 					<Name>GVL_Chamber_Gauges.CRIX_GCC_01.q_xHV_DIS</Name>
 					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_01.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_02.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_03.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_05.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_06.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_07.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_08.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_09.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_04.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_17.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VVC_01.q_xOPN_DO</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VVC_02.q_xOPN_DO</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VVC_03.q_xOPN_DO</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VVC_04.q_xOPN_DO</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VVC_05.q_xOPN_DO</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VVC_06.q_xOPN_DO</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VVC_07.q_xOPN_DO</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VVC_09.q_xOPN_DO</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VVC_10.q_xOPN_DO</Name>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -382,91 +467,6 @@
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.CRIX_PTM_03.q_xReset</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VGC_01.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VGC_02.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VGC_03.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VGC_04.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VGC_05.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VGC_06.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VGC_07.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VGC_08.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VGC_09.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VGC_17.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VVC_01.q_xOPN_DO</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VVC_02.q_xOPN_DO</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VVC_03.q_xOPN_DO</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VVC_04.q_xOPN_DO</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VVC_05.q_xOPN_DO</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VVC_06.q_xOPN_DO</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VVC_07.q_xOPN_DO</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VVC_09.q_xOPN_DO</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_VVC_10.q_xOPN_DO</Name>
-					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>

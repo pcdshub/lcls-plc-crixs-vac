@@ -13,7 +13,9 @@ PRG_Chamber_Valves();
 
 PRG_Chamber_Pumps();
 
-PRG_Mechanical_Room();]]></ST>
+PRG_Mechanical_Room();
+
+//PRG_ADS_Gauges();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
