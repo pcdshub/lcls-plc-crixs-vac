@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <POU Name="MAIN" Id="{9edaa357-6cfe-4c1d-9d92-d5e78575201a}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+PRG_Chamber_Gauges();
+
+PRG_Chamber_Valves();
+
+PRG_Chamber_Pumps();
+
+PRG_Mechanical_Room();
+
+//PRG_ADS_Gauges();]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

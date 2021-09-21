@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <POU Name="PRG_Mechanical_Room" Id="{8f0a6d22-d1f5-437c-bf02-cf60d8f0490c}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_Mechanical_Room
+VAR
+	//stGauge : ST_VG;
+	//stValve : ST_VVC;
+	//stRoughPump : ST_EbaraDryPump;
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Roughing line gauge
+CRIX_MECH_GPI_01.M_SetBits(30518);
+CRIX_MECH_GPI_01(PG=>);
+
+// Rouging pump 
+CRIX_MECH_PRO_01(i_stBPGauge:=CRIX_MECH_GPI_01.PG,
+			     i_xVlvOpn:=True, 
+ 				 i_xExtIlkOK:=True, // This should always be OK to start. 
+				 stPump=>stCRIX_MECH_PRO_01);
+  
+// Rouging line valve. This valve is responsible for isolating the pump from atmosphere, and should always have power applied when the pump is
+// running. Therefore, we assign the valve "open" output to the run status of the pump. This is a NO valve, so "opening" the valve will close it.
+// Similarly, we set the external interlock to the state of the pump. 
+CRIX_MECH_VVC_01.M_Set_OPN_SW(CRIX_MECH_PRO_01.i_xMPStatus);
+CRIX_MECH_VVC_01(i_xExtILK_OK:=CRIX_MECH_PRO_01.i_xMPStatus,
+				 i_xOverrideMode:=xSystemOverride_ChemRIXS,
+				 iq_stValve=>);
+
+            
+                 
+                 
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <POU Name="PRG_Chamber_Gauges" Id="{cf1bb2d6-ee0f-41b1-a857-33af2cd32803}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_Chamber_Gauges
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+CRIX_GPI_01.M_SetBits(30518);
+CRIX_GPI_01(PG=>stCRIX_GPI_01);
+
+(*
+CRIX_GPI_02.M_SetBits(30518);
+CRIX_GPI_02(PG=>stCRIX_GPI_02);
+
+CRIX_GPI_03.M_SetBits(30518);
+CRIX_GPI_03(PG=>stCRIX_GPI_03);
+
+CRIX_GPI_04.M_SetBits(30518);
+CRIX_GPI_04(PG=>stCRIX_GPI_04);
+*)
+
+CRIX_GPI_05.M_SetBits(30518);
+CRIX_GPI_05(PG=>stCRIX_GPI_05);
+
+CRIX_GCC_01.M_SetBits(30518);
+CRIX_GCC_01(PG:=CRIX_GPI_01.PG,
+			IG=>stCRIX_GCC_01);
+
+(*
+CRIX_GCP_01.M_SetBits(30518);
+CRIX_GCP_01(PG=>stCRIX_GCP_01);
+
+CRIX_GCP_02.M_SetBits(30518);
+CRIX_GCP_02(PG=>stCRIX_GCP_02);
+*)
+
+CRIX_GCP_03.M_SetBits(30518);
+CRIX_GCP_03(PG=>stCRIX_GCP_03);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

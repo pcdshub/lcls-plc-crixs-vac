@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <POU Name="PRG_Chamber_Pumps" Id="{b20a9b3c-f30a-4f50-a45e-7b0eccd66336}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_Chamber_Pumps
+VAR
+	fbCRIX_PTM_01_ILK : FB_ChemRIXS_Turbo_ILK;
+	CRIX_PTM_01_ILK_OK : BOOL;
+	
+	fbCRIX_PTM_02_ILK : FB_ChemRIXS_Turbo_ILK;
+	CRIX_PTM_02_ILK_OK : BOOL;
+	
+	fbCRIX_PTM_03_ILK : FB_ChemRIXS_Turbo_ILK;
+	CRIX_PTM_03_ILK_OK : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Leybold Pumps
+fbCRIX_PTM_01_ILK(i_stValve:=stCRIX_VGC_03,
+				  i_stPump:=stCRIX_PTM_01,
+	              tDelay:=T#200S,
+				  bILK=>CRIX_PTM_01_ILK_OK);
+CRIX_PTM_01(i_xExtILKOk:=(CRIX_PTM_01_ILK_OK AND F_TurboExtILKLogic_2(Turbo:=stCRIX_PTM_01,
+																	 BackingGauge:=CRIX_GPI_05.PG,
+																     InletGauge:=CRIX_GPI_01.PG,
+																     ScrollPump:= stCRIX_MECH_PRO_01)),
+			iq_stPtm=> stCRIX_PTM_01);
+			
+fbCRIX_PTM_02_ILK(i_stValve:=stCRIX_VGC_02,
+				  i_stPump:=stCRIX_PTM_02,
+	              tDelay:=T#200S,
+				  bILK=>CRIX_PTM_02_ILK_OK);			
+CRIX_PTM_02(i_xExtILKOk:=(CRIX_PTM_02_ILK_OK AND F_TurboExtILKLogic_2(Turbo:=stCRIX_PTM_02,
+																	 BackingGauge:=CRIX_GPI_05.PG,
+																     InletGauge:=CRIX_GPI_01.PG,
+																     ScrollPump:= stCRIX_MECH_PRO_01)),
+			iq_stPtm=> stCRIX_PTM_02);			
+			
+// Pfeiffer Pumps
+fbCRIX_PTM_03_ILK(i_stValve:=stCRIX_VGC_04,
+				  i_stPump:=stCRIX_PTM_03,
+	              tDelay:=T#200S,
+				  bILK=>CRIX_PTM_03_ILK_OK);			
+CRIX_PTM_03(i_xExtILKOk:=(CRIX_PTM_03_ILK_OK  AND F_TurboExtILKLogic_2(Turbo:=stCRIX_PTM_03,
+																	 BackingGauge:=CRIX_GPI_05.PG,
+																     InletGauge:=CRIX_GPI_01.PG,
+																     ScrollPump:= stCRIX_MECH_PRO_01)), 
+			iq_stPtm=> stCRIX_PTM_03);		
+			
+st_PTM_03_Pfeiffer_CTRL[1].iSerialAddress := 0;
+st_PTM_03_Pfeiffer_CTRL[1].xEnableComm := TRUE;
+
+fb_PTM_03_PfeifferCom(astPfeifferControl:=st_PTM_03_Pfeiffer_CTRL,
+					  astPfeifferStatus:=st_PTM_03_Pfeiffer_RBK,
+					  SerialRXBuffer:=K2S17_E5_CH2_SerialRXBuffer,
+					  SerialTXBuffer:=K2S17_E5_CH2_SerialTXBuffer);
+					  
+CRIX_PTM_03.M_Serial_IO(st_Pfeiffer_RBK:=st_PTM_03_Pfeiffer_RBK[1], st_PTM_03_Pfeiffer_CTRL[1]);
+					  
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <GVL Name="GVL_Vars" Id="{032efb34-86cf-4114-9ae9-dcb0827cb0c8}">
+    <Declaration><![CDATA[//{attribute 'qualified_only'}
+VAR_GLOBAL
+	{attribute 'pytmc' := '
+        pv: CRIX:VAC:OVERRIDE
+    '} 
+	xSystemOverride_ChemRIXS : BOOL := FALSE;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
