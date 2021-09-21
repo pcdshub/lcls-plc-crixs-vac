@@ -4,7 +4,8 @@ python: 3.7
 env:
   global:
     # doctr generated secure variable for documentation upload
-    - secure: "<your secure here>"
+
+    - secure: "epTV+RadPEAH60Pl19UE0vigxg4W6rmafo46nkeEscILBqVZX7wMsMteecJ4lZvcwd8YuGFghkkWg9jyU1Bjcb2yC5OkKkfrQ6ob124ucQBSKW4wbbrILJhp1CwJ905RU1sQ7h821BK7c6Wh4SG/Y7OLJRxCRE/1vR3fnaECdCZySE19REdZ74JCIa3iMNpmorMY7MzPS8eZhWQoiVwm/O36TbFz2nbR7pExFYgp5hY52oi4s1TF+MaCVH6EedJ4HEkqRi9jE2brvX3yIYjwMv9Fa1Mo1heW97cC3GIWXWh/Xu6SRMba95tBNI4fMYCIXGthUQAddjXZ7hkotJHV/dFVaogOXyz7Ej+cI4GPTY70lzdPe5NRMeMWC6E9z3kGxMwlwJHbY3EJTF++nqv7zA+9mp8/yreoarbfV8zeozV9d5scopqIwp6bzE1fUNuCOkYyw6kfyzDiVgjcA0CgRZvLDbed6/b8fgZR0VXAXM1xo90naaN4QucZTpxgK+POXnx/c09584++E0QOp5FBSrn32QdranZywKVHk50OYmN1in6jvXbmWKK2SKow/cgCE32udjCe4zDaiR4fBUheSROPkWqKowKOV9Mx7vM3gj1CCrPgxwfBT4Z+Hdarly5gIm+e9JRNnFzVDO6d/n60pXN6gs7l/3TpPQVFn0WYjt4="
     - TWINCAT_STYLE_EXCLUDE=
     # If using a custom version of the CI helpers, change the following in
     # addition to the `import` block elow:
@@ -12,10 +13,11 @@ env:
     # - CI_HELPER_BRANCH=twincat_shared_configs
 
 # Uncomment this block if you would like to make a test an allowed failure
-#jobs:
-#  allow_failures:
-#    - name: "Style Check"
-#    - name: "Pre-commit Checks"
+
+jobs:
+  allow_failures:
+    - name: "Style Check"
+    - name: "Pre-commit Checks"
 
 import:
   - pcdshub/pcds-ci-helpers:travis/shared_configs/twincat/standard.yml
