@@ -13,7 +13,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[// VLS Vacuum Logic
 
-bVLS_Ext_Press := PA2K4_IP1_GCC_01.IG.xAT_VAC;
+bVLS_Ext_Press := CRIX_GCC_01.IG.xAT_VAC;
 PRG_VLS_WINDOW(bExtPress := bVLS_Ext_Press,
                bOverride := xSystemOverrideMode_VLS,
                bSetup := SetupMode_VLS); // run the vacuum program with interlock bit

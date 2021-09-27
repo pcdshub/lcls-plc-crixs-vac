@@ -9,6 +9,7 @@
 		<EtherCAT SlaveType="1" PdiType="#x0304" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x0a404052" RevisionNo="#x00120002" RepeatSupport="true" PortPhys="17" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EP2624-0002 4Ch. Relay Output, NO (125V AC / 30V DC)" Desc="EP2624-0002">
 			<SyncMan>000f01004400010003000000000000000000000f44090000</SyncMan>
 			<Fmmu>0000000000000000000f00020100000001000000000000000000000000000000</Fmmu>
+			<SuName>VLS</SuName>
 			<Pdo Name="Channel 1" Index="#x1600" InOut="1" Flags="#x0011" SyncMan="0">
 				<Entry Name="Output" Index="#x7000" Sub="#x01">
 					<Type>BIT</Type>

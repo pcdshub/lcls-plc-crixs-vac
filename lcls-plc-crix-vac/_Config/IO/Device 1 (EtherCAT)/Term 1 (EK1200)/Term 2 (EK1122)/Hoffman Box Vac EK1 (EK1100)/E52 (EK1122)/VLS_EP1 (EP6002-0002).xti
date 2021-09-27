@@ -35,6 +35,7 @@
 			<Fmmu>0000000000000000001900010100000002000000000000000000000000000000</Fmmu>
 			<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
 			<BootStrapData>0010f400f410f400</BootStrapData>
+			<SuName>VLS</SuName>
 			<Pdo Name="COM TxPDO-Map Inputs Channel 1" Index="#x1a00" Flags="#x0010">
 				<ExcludePdo>#x1a04</ExcludePdo>
 				<Entry Name="Status__Transmit accepted" Index="#x6000" Sub="#x01">

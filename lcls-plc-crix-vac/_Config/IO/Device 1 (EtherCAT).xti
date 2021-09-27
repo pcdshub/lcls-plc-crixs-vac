@@ -37,8 +37,9 @@
 			<EtherCAT PortABoxInfo="#x00ffffff"/>
 		</Box>
 		<EtherCAT EnableVirtualSwitch="true" MaxSwitchPorts="2" MaxSwitchFrames="120">
-			<SyncUnit Name="MechRoom_Sync" NoDeleteIfUnused="true"/>
 			<SyncUnit Name="HoffmanBox" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="VLS" NoDeleteIfUnused="true" WcStateTolerance="2"/>
+			<SyncUnit Name="Mech Room" NoDeleteIfUnused="true"/>
 		</EtherCAT>
 	</Device>
 </TcSmItem>
