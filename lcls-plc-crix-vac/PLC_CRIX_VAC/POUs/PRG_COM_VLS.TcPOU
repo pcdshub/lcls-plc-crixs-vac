@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="PRG_COM_VLS" Id="{f650620c-8303-4218-babb-5d1f162a32f7}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_COM_VLS
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[VLS_EP1_CH1_fbSerialLineControl(
+	Mode:= SERIALLINEMODE_EL6_22B,
+	pComIn:= ADR(VLS_EP1_CH1_stComIn),
+	pComOut:=ADR(VLS_EP1_CH1_stComOut),
+	SizeComIn:= SIZEOF(VLS_EP1_CH1_stComIn),
+	TxBuffer:= VLS_EP1_CH1_SerialTXBuffer,
+	RxBuffer:= VLS_EP1_CH1_SerialRXBuffer,
+	Error=> ,
+	ErrorID=> );]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_COM_VLS">
+      <LineId Id="6" Count="7" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

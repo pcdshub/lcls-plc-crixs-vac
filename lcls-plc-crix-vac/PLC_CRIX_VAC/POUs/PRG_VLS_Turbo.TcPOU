@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="PRG_VLS_Turbo" Id="{7c9d2b33-fe82-48b8-b6ac-01caf7032917}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_VLS_Turbo
+VAR
+
+	PTM_01_xExtIlkOK : BOOL; 
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+
+//Pfeiffer Turbo
+
+(*Assign adresses to the pfeiffer controllers connected to this serial terminal*)
+st_VLS_Pfeiffer_CTRL[1].iSerialAddress :=1;
+st_VLS_Pfeiffer_CTRL[1].xEnableComm := TRUE;
+	
+(* Instanitate the Function block for serial communication with Pfeiffer*)	
+fb_VLS_PfeifferCom(astPfeifferControl := st_VLS_Pfeiffer_CTRL,
+			   astPfeifferStatus:= st_VLS_Pfeiffer_RBK,
+				SerialRXBuffer:= VLS_EP1_CH1_SerialRXBuffer,
+				SerialTXBuffer:= VLS_EP1_CH1_SerialTXBuffer);
+				
+
+(* Copy Status Pv's into the PTM structure*)
+VLS_PTM_01.M_Serial_IO(st_Pfeiffer_CTRL:=st_VLS_Pfeiffer_CTRL[1],st_Pfeiffer_RBK:=st_VLS_Pfeiffer_RBK[1]);
+
+
+VLS_PTM_01_xExtIlkOK := ( VLS_ROUGH_GPI.PG.xPRESS_OK AND VLS_ROUGH_GPI.PG.rPRESS < VLS_PTM_01.iq_stPTM.rBackingPressureSP ) 
+                        AND (VLS_GPI_01.PG.xPRESS_OK AND VLS_GPI_01.PG.rPRESS < VLS_PTM_01.iq_stPTM.rInletPressureSP) ;	
+VLS_PTM_01(i_xExtIlkOK := VLS_PTM_01_xExtIlkOK , iq_stPTM => );]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_VLS_Turbo">
+      <LineId Id="6" Count="1" />
+      <LineId Id="11" Count="3" />
+      <LineId Id="17" Count="9" />
+      <LineId Id="28" Count="1" />
+      <LineId Id="66" Count="0" />
+      <LineId Id="65" Count="0" />
+      <LineId Id="73" Count="0" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
