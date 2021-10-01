@@ -52,16 +52,21 @@
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-crix-vac_PLC_CRIX_VAC_summary.html#symbols">Symbols</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-crix-vac_PLC_CRIX_VAC_epics.html">Data Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-crix-vac_PLC_CRIX_VAC_epics.html#database-records">Database Records</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">DUTs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DUTs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#e-states">E_STATES</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="#gvls">GVLs</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-chamber-gauges">GVL_Chamber_Gauges</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-chamber-valves">GVL_Chamber_Valves</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-com">GVL_COM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gvl-com-vls">GVL_COM_VLS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-li3k2">GVL_LI3K2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-mech-room">GVL_Mech_Room</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-pmps">GVL_PMPS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-pumps">GVL_Pumps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gvl-vars">GVL_Vars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gvl-vls">GVL_VLS</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#pous">POUs</a><ul>
@@ -72,8 +77,14 @@
 <li class="toctree-l2"><a class="reference internal" href="#prg-chamber-pumps">PRG_Chamber_Pumps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-chamber-valves">PRG_Chamber_Valves</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-com">PRG_Com</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-com-1">PRG_COM_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-com-vls">PRG_COM_VLS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-li3k2">PRG_LI3K2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-mechanical-room">PRG_Mechanical_Room</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-pump">PRG_PUMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-vls-turbo">PRG_VLS_Turbo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-vls-vacuum">PRG_VLS_VACUUM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-vls-window">PRG_VLS_WINDOW</a></li>
 </ul>
 </li>
 </ul>
@@ -104,6 +115,28 @@
              
   <section id="duts">
 <h1>DUTs<a class="headerlink" href="#duts" title="Permalink to this headline"></a></h1>
+<section id="e-states">
+<h2>E_STATES<a class="headerlink" href="#e-states" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;strict&#39;</span><span class="p">}</span>
+<span class="n">TYPE</span> <span class="n">E_STATES</span> <span class="p">:</span>
+<span class="p">(</span>
+    <span class="n">INIT</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">SETUP</span><span class="p">,</span>
+    <span class="n">OVERRIDE</span><span class="p">,</span>
+    <span class="n">READY</span><span class="p">,</span>
+    <span class="n">NOT_SAFE</span>
+<span class="p">);</span>
+<span class="n">END_TYPE</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#e-states">E_STATES</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
 </section>
 <section id="gvls">
 <h1>GVLs<a class="headerlink" href="#gvls" title="Permalink to this headline"></a></h1>
@@ -451,6 +484,76 @@
 </pre></div>
 </div>
 </section>
+<section id="gvl-com-vls">
+<h2>GVL_COM_VLS<a class="headerlink" href="#gvl-com-vls" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
+<span class="n">VAR_GLOBAL</span>
+    <span class="o">//</span> <span class="n">Define</span> <span class="n">COM</span> <span class="n">Ports</span><span class="o">/</span><span class="n">Buffers</span> <span class="n">incl</span><span class="o">.</span> <span class="n">library</span> <span class="n">Tc2_SerialCom</span>
+    <span class="n">VLS_EP1_CH1_SerialRXBuffer</span> <span class="p">:</span> <span class="n">ComBuffer</span><span class="p">;</span>
+    <span class="n">VLS_EP1_CH1_SerialTXBuffer</span> <span class="p">:</span> <span class="n">ComBuffer</span><span class="p">;</span>
+
+    <span class="o">//</span> <span class="n">Serial</span> <span class="n">Terminal</span>
+    <span class="n">VLS_EP1_CH1_fbSerialLineControl</span><span class="p">:</span> <span class="n">SerialLineControl</span><span class="p">;</span>
+
+    <span class="o">//</span><span class="n">SERIAL</span> <span class="n">IO</span>
+            <span class="p">{</span><span class="n">attribute</span>      <span class="s1">&#39;TcLinkTo&#39;</span>      <span class="o">:=</span>      <span class="s1">&#39;.Status:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Status;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">0</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">1</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">2</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">3</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">4</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">5</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">6</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">7</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">8</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">9</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">10</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">11</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">12</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">13</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">14</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">15</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">16</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">17</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">18</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">19</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">20</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">21</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">TxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Inputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">In</span> <span class="mi">21</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">VLS_EP1_CH1_stComIn</span>                     <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span>  <span class="p">:</span>       <span class="n">EL6inData22B</span><span class="p">;</span>
+
+    <span class="p">{</span><span class="n">attribute</span>      <span class="s1">&#39;TcLinkTo&#39;</span>      <span class="o">:=</span>      <span class="s1">&#39;.Ctrl:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Ctrl;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">0</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">1</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">2</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">3</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">4</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">5</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">6</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">7</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">8</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">9</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">10</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">11</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">12</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">13</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">14</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">15</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">16</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">17</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">18</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">18</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">19</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">19</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">20</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="mi">21</span><span class="p">]</span><span class="o">:=</span><span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP1</span> <span class="p">(</span><span class="n">EP6002</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">COM</span> <span class="n">RxPDO</span><span class="o">-</span><span class="n">Map</span> <span class="n">Outputs</span> <span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Data</span> <span class="n">Out</span> <span class="mi">21</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">VLS_EP1_CH1_stComOut</span>            <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span>  <span class="p">:</span>       <span class="n">EL6outData22B</span><span class="p">;</span>
+
+
+
+<span class="n">END_VAR</span>
+</pre></div>
+</div>
+</section>
 <section id="gvl-li3k2">
 <h2>GVL_LI3K2<a class="headerlink" href="#gvl-li3k2" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
@@ -584,6 +687,81 @@
         <span class="n">pv</span><span class="p">:</span> <span class="n">CRIX</span><span class="p">:</span><span class="n">VAC</span><span class="p">:</span><span class="n">OVERRIDE</span>
     <span class="s1">&#39;}</span>
     <span class="n">xSystemOverride_ChemRIXS</span> <span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
+<span class="n">END_VAR</span>
+</pre></div>
+</div>
+</section>
+<section id="gvl-vls">
+<h2>GVL_VLS<a class="headerlink" href="#gvl-vls" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
+<span class="n">VAR_GLOBAL</span>
+
+    <span class="p">(</span><span class="o">*</span> <span class="n">OverrideMode</span> <span class="o">*</span><span class="p">)</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: CRIX:VLS:VAC:OVRD_MODE&#39;</span><span class="p">}</span>
+    <span class="n">xSystemOverrideMode_VLS</span> <span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
+
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: CRIX:VLS:VAC:SETUP_MODE&#39;</span><span class="p">}</span>
+    <span class="n">SetupMode_VLS</span>   <span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
+
+    <span class="p">(</span><span class="o">*</span> <span class="n">Pfeiffer</span> <span class="n">Turbo</span> <span class="n">Pumps</span> <span class="n">TM700</span> <span class="o">*</span><span class="p">)</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xAtSpd                      :=      TIIB[VLS_EP2 (EP2338-0001)]^Channel 1^Input;</span>
+                                                             <span class="o">.</span><span class="n">i_xFaultNC</span>            <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP2</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0001</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+                                                             <span class="o">.</span><span class="n">q_RunDO</span>                       <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP4</span> <span class="p">(</span><span class="n">EP2624</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">3</span><span class="o">^</span><span class="n">Output</span>
+
+    <span class="s1">&#39;}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+            <span class="n">pv</span><span class="p">:</span> <span class="n">CRIX</span><span class="p">:</span><span class="n">VLS</span><span class="p">:</span><span class="n">PTM</span><span class="p">:</span><span class="mi">01</span>
+            <span class="n">io</span><span class="p">:</span> <span class="n">io</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">VLS_PTM_01</span> <span class="p">:</span> <span class="n">FB_PTM_Pfeiffer</span><span class="p">;</span>
+    <span class="n">VLS_PTM_01_xExtIlkOK</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">;</span>
+
+    <span class="o">//</span> <span class="n">They</span> <span class="n">share</span> <span class="n">the</span> <span class="n">same</span> <span class="n">serial</span> <span class="n">port</span>
+    <span class="n">st_VLS_Pfeiffer_CTRL</span>    <span class="p">:</span> <span class="n">ARRAY</span><span class="p">[</span><span class="mf">1..20</span><span class="p">]</span> <span class="n">OF</span> <span class="n">ST_PfeifferControl</span><span class="p">;</span>
+    <span class="n">st_VLS_Pfeiffer_RBK</span>     <span class="p">:</span> <span class="n">ARRAY</span><span class="p">[</span><span class="mf">1..20</span><span class="p">]</span> <span class="n">OF</span> <span class="n">ST_PfeifferStatus</span><span class="p">;</span>
+
+    <span class="n">fb_VLS_PfeifferCom</span> <span class="p">:</span> <span class="n">FB_PFEIFFER_COM</span><span class="p">;</span>
+
+
+    <span class="p">(</span><span class="o">*</span> <span class="n">Valves</span> <span class="o">*</span><span class="p">)</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:VLS:VGC:01 &#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xOpnLS      :=      TIIB[VLS_EP3 (EP2339-0021)]^Channel 6^Input;</span>
+                                                             <span class="o">.</span><span class="n">i_xClsLS</span>      <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP3</span> <span class="p">(</span><span class="n">EP2339</span><span class="o">-</span><span class="mi">0021</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">7</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+                                                            <span class="o">.</span><span class="n">q_xOPN_DO</span>      <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP3</span> <span class="p">(</span><span class="n">EP2339</span><span class="o">-</span><span class="mi">0021</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">21</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
+    <span class="n">VLS_VGC_1</span> <span class="p">:</span> <span class="n">FB_VGC</span><span class="p">;</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:VLS:VWC:01 &#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xOpnLS      :=      TIIB[VLS_EP3 (EP2339-0021)]^Channel 9^Input;</span>
+                                                             <span class="o">.</span><span class="n">i_xClsLS</span>      <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP3</span> <span class="p">(</span><span class="n">EP2339</span><span class="o">-</span><span class="mi">0021</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">10</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+                                                            <span class="o">.</span><span class="n">q_xCLS_DO</span>      <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP3</span> <span class="p">(</span><span class="n">EP2339</span><span class="o">-</span><span class="mi">0021</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">24</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
+    <span class="n">VLS_VGC_W</span> <span class="p">:</span> <span class="n">FB_VRC_NO_FFO</span><span class="p">;</span> <span class="o">//</span> <span class="n">Is</span> <span class="n">the</span> <span class="n">Window</span> <span class="n">valve</span> <span class="n">NO</span>
+
+    <span class="p">(</span><span class="o">*</span> <span class="n">Gauges</span> <span class="o">*</span><span class="p">)</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:VLS:US:GPI &#39;</span><span class="p">}</span>
+    <span class="n">VLS_US_GPI</span>      <span class="p">:</span> <span class="n">FB_MKS275</span><span class="p">;</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:VLS:US:GCC &#39;</span><span class="p">}</span>
+    <span class="n">VLS_US_GCC</span>      <span class="p">:</span> <span class="n">FB_MKS500</span><span class="p">;</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:VLS:GPI:01 &#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    :=      TIIB[VLS_EP5 (EP3174-0002)]^AI Standard Channel 1^Value         &#39;</span><span class="p">}</span>
+    <span class="n">VLS_GPI_01</span>      <span class="p">:</span> <span class="n">FB_MKS275</span><span class="p">;</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:VLS:GCC:01 &#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    :=      TIIB[VLS_EP5 (EP3174-0002)]^AI Standard Channel 2^Value;</span>
+                                                             <span class="o">.</span><span class="n">q_xHV_DIS</span>             <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">VLS_EP4</span> <span class="p">(</span><span class="n">EP2624</span><span class="o">-</span><span class="mi">0002</span><span class="p">)]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Output</span>    <span class="s1">&#39;}</span>
+    <span class="n">VLS_GCC_01</span>      <span class="p">:</span> <span class="n">FB_MKS500</span><span class="p">;</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:VLS:ROUGH:GPI &#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    :=      TIIB[VLS_EP5 (EP3174-0002)]^AI Standard Channel 3^Value &#39;</span><span class="p">}</span>
+    <span class="n">VLS_ROUGH_GPI</span> <span class="p">:</span> <span class="n">FB_9XX</span><span class="p">;</span>
+
+
+
+
 <span class="n">END_VAR</span>
 </pre></div>
 </div>
@@ -995,6 +1173,44 @@
 </pre></div>
 </div>
 </section>
+<section id="prg-com-1">
+<h2>PRG_COM_1<a class="headerlink" href="#prg-com-1" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_COM_1</span>
+<span class="n">VAR</span>
+<span class="n">END_VAR</span>
+<span class="n">fbSerialLineControl</span><span class="p">(</span>
+    <span class="n">Mode</span><span class="o">:=</span> <span class="n">SERIALLINEMODE_EL6_22B</span><span class="p">,</span>
+    <span class="n">pComIn</span><span class="o">:=</span> <span class="n">ADR</span><span class="p">(</span><span class="n">stComIn</span><span class="p">),</span>
+    <span class="n">pComOut</span><span class="o">:=</span><span class="n">ADR</span><span class="p">(</span><span class="n">stComOut</span><span class="p">),</span>
+    <span class="n">SizeComIn</span><span class="o">:=</span> <span class="n">SIZEOF</span><span class="p">(</span><span class="n">stComIn</span><span class="p">),</span>
+    <span class="n">TxBuffer</span><span class="o">:=</span> <span class="n">SerialTXBuffer</span><span class="p">,</span>
+    <span class="n">RxBuffer</span><span class="o">:=</span> <span class="n">SerialRXBuffer</span><span class="p">,</span>
+    <span class="n">Error</span><span class="o">=&gt;</span> <span class="p">,</span>
+    <span class="n">ErrorID</span><span class="o">=&gt;</span> <span class="p">);</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+</section>
+<section id="prg-com-vls">
+<h2>PRG_COM_VLS<a class="headerlink" href="#prg-com-vls" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_COM_VLS</span>
+<span class="n">VAR</span>
+<span class="n">END_VAR</span>
+<span class="n">VLS_EP1_CH1_fbSerialLineControl</span><span class="p">(</span>
+    <span class="n">Mode</span><span class="o">:=</span> <span class="n">SERIALLINEMODE_EL6_22B</span><span class="p">,</span>
+    <span class="n">pComIn</span><span class="o">:=</span> <span class="n">ADR</span><span class="p">(</span><span class="n">VLS_EP1_CH1_stComIn</span><span class="p">),</span>
+    <span class="n">pComOut</span><span class="o">:=</span><span class="n">ADR</span><span class="p">(</span><span class="n">VLS_EP1_CH1_stComOut</span><span class="p">),</span>
+    <span class="n">SizeComIn</span><span class="o">:=</span> <span class="n">SIZEOF</span><span class="p">(</span><span class="n">VLS_EP1_CH1_stComIn</span><span class="p">),</span>
+    <span class="n">TxBuffer</span><span class="o">:=</span> <span class="n">VLS_EP1_CH1_SerialTXBuffer</span><span class="p">,</span>
+    <span class="n">RxBuffer</span><span class="o">:=</span> <span class="n">VLS_EP1_CH1_SerialRXBuffer</span><span class="p">,</span>
+    <span class="n">Error</span><span class="o">=&gt;</span> <span class="p">,</span>
+    <span class="n">ErrorID</span><span class="o">=&gt;</span> <span class="p">);</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+</section>
 <section id="prg-li3k2">
 <h2>PRG_LI3K2<a class="headerlink" href="#prg-li3k2" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>FUNCTION_BLOCK PRG_LI3K2
@@ -1041,6 +1257,252 @@ END_FUNCTION_BLOCK
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
+</section>
+<section id="prg-pump">
+<h2>PRG_PUMP<a class="headerlink" href="#prg-pump" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_PUMP</span>
+<span class="n">VAR</span>
+
+    <span class="n">PTM_01_xExtIlkOK</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+
+<span class="n">END_VAR</span>
+<span class="o">//</span><span class="n">Pfeiffer</span> <span class="n">Turbo</span>
+
+<span class="p">(</span><span class="o">*</span><span class="n">Assign</span> <span class="n">adresses</span> <span class="n">to</span> <span class="n">the</span> <span class="n">pfeiffer</span> <span class="n">controllers</span> <span class="n">connected</span> <span class="n">to</span> <span class="n">this</span> <span class="n">serial</span> <span class="n">terminal</span><span class="o">*</span><span class="p">)</span>
+<span class="n">st_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">iSerialAddress</span> <span class="o">:=</span><span class="mi">1</span><span class="p">;</span>
+<span class="n">st_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">xEnableComm</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+
+<span class="p">(</span><span class="o">*</span> <span class="n">Instanitate</span> <span class="n">the</span> <span class="n">Function</span> <span class="n">block</span> <span class="k">for</span> <span class="n">serial</span> <span class="n">communication</span> <span class="k">with</span> <span class="n">Pfeiffer</span><span class="o">*</span><span class="p">)</span>
+<span class="n">fb_PfeifferCom</span><span class="p">(</span><span class="n">astPfeifferControl</span> <span class="o">:=</span> <span class="n">st_Pfeiffer_CTRL</span><span class="p">,</span>
+                       <span class="n">astPfeifferStatus</span><span class="o">:=</span> <span class="n">st_Pfeiffer_RBK</span><span class="p">,</span>
+                            <span class="n">SerialRXBuffer</span><span class="o">:=</span> <span class="n">SerialRXBuffer</span><span class="p">,</span>
+                            <span class="n">SerialTXBuffer</span><span class="o">:=</span> <span class="n">SerialTXBuffer</span><span class="p">);</span>
+
+
+<span class="p">(</span><span class="o">*</span> <span class="n">Copy</span> <span class="n">Status</span> <span class="n">Pv</span><span class="s1">&#39;s into the PTM structure*)</span>
+<span class="n">PTM_01</span><span class="o">.</span><span class="n">M_Serial_IO</span><span class="p">(</span><span class="n">st_Pfeiffer_CTRL</span><span class="o">:=</span><span class="n">st_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">st_Pfeiffer_RBK</span><span class="o">:=</span><span class="n">st_Pfeiffer_RBK</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+
+
+<span class="n">PTM_01_xExtIlkOK</span> <span class="o">:=</span> <span class="p">(</span> <span class="n">ROUGH_GPI</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">xPRESS_OK</span> <span class="n">AND</span> <span class="n">ROUGH_GPI</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">&lt;</span> <span class="n">PTM_01</span><span class="o">.</span><span class="n">iq_stPTM</span><span class="o">.</span><span class="n">rBackingPressureSP</span> <span class="p">)</span> <span class="n">AND</span> <span class="p">(</span><span class="n">DS_GPI</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">xPRESS_OK</span> <span class="n">AND</span> <span class="n">DS_GPI</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">&lt;</span> <span class="n">PTM_01</span><span class="o">.</span><span class="n">iq_stPTM</span><span class="o">.</span><span class="n">rInletPressureSP</span><span class="p">)</span> <span class="p">;</span>
+<span class="n">PTM_01</span><span class="p">(</span><span class="n">i_xExtIlkOK</span> <span class="o">:=</span> <span class="n">PTM_01_xExtIlkOK</span> <span class="p">,</span> <span class="n">iq_stPTM</span> <span class="o">=&gt;</span> <span class="p">);</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+</section>
+<section id="prg-vls-turbo">
+<h2>PRG_VLS_Turbo<a class="headerlink" href="#prg-vls-turbo" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_VLS_Turbo</span>
+<span class="n">VAR</span>
+
+    <span class="n">PTM_01_xExtIlkOK</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+
+<span class="n">END_VAR</span>
+<span class="o">//</span><span class="n">Pfeiffer</span> <span class="n">Turbo</span>
+
+<span class="p">(</span><span class="o">*</span><span class="n">Assign</span> <span class="n">adresses</span> <span class="n">to</span> <span class="n">the</span> <span class="n">pfeiffer</span> <span class="n">controllers</span> <span class="n">connected</span> <span class="n">to</span> <span class="n">this</span> <span class="n">serial</span> <span class="n">terminal</span><span class="o">*</span><span class="p">)</span>
+<span class="n">st_VLS_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">iSerialAddress</span> <span class="o">:=</span><span class="mi">1</span><span class="p">;</span>
+<span class="n">st_VLS_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">xEnableComm</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+
+<span class="p">(</span><span class="o">*</span> <span class="n">Instanitate</span> <span class="n">the</span> <span class="n">Function</span> <span class="n">block</span> <span class="k">for</span> <span class="n">serial</span> <span class="n">communication</span> <span class="k">with</span> <span class="n">Pfeiffer</span><span class="o">*</span><span class="p">)</span>
+<span class="n">fb_VLS_PfeifferCom</span><span class="p">(</span><span class="n">astPfeifferControl</span> <span class="o">:=</span> <span class="n">st_VLS_Pfeiffer_CTRL</span><span class="p">,</span>
+                       <span class="n">astPfeifferStatus</span><span class="o">:=</span> <span class="n">st_VLS_Pfeiffer_RBK</span><span class="p">,</span>
+                            <span class="n">SerialRXBuffer</span><span class="o">:=</span> <span class="n">VLS_EP1_CH1_SerialRXBuffer</span><span class="p">,</span>
+                            <span class="n">SerialTXBuffer</span><span class="o">:=</span> <span class="n">VLS_EP1_CH1_SerialTXBuffer</span><span class="p">);</span>
+
+
+<span class="p">(</span><span class="o">*</span> <span class="n">Copy</span> <span class="n">Status</span> <span class="n">Pv</span><span class="s1">&#39;s into the PTM structure*)</span>
+<span class="n">VLS_PTM_01</span><span class="o">.</span><span class="n">M_Serial_IO</span><span class="p">(</span><span class="n">st_Pfeiffer_CTRL</span><span class="o">:=</span><span class="n">st_VLS_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">st_Pfeiffer_RBK</span><span class="o">:=</span><span class="n">st_VLS_Pfeiffer_RBK</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+
+
+<span class="n">VLS_PTM_01_xExtIlkOK</span> <span class="o">:=</span> <span class="p">(</span> <span class="n">VLS_ROUGH_GPI</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">xPRESS_OK</span> <span class="n">AND</span> <span class="n">VLS_ROUGH_GPI</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">&lt;</span> <span class="n">VLS_PTM_01</span><span class="o">.</span><span class="n">iq_stPTM</span><span class="o">.</span><span class="n">rBackingPressureSP</span> <span class="p">)</span>
+                        <span class="n">AND</span> <span class="p">(</span><span class="n">VLS_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">xPRESS_OK</span> <span class="n">AND</span> <span class="n">VLS_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">&lt;</span> <span class="n">VLS_PTM_01</span><span class="o">.</span><span class="n">iq_stPTM</span><span class="o">.</span><span class="n">rInletPressureSP</span><span class="p">)</span> <span class="p">;</span>
+<span class="n">VLS_PTM_01</span><span class="p">(</span><span class="n">i_xExtIlkOK</span> <span class="o">:=</span> <span class="n">VLS_PTM_01_xExtIlkOK</span> <span class="p">,</span> <span class="n">iq_stPTM</span> <span class="o">=&gt;</span> <span class="p">);</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+</section>
+<section id="prg-vls-vacuum">
+<h2>PRG_VLS_VACUUM<a class="headerlink" href="#prg-vls-vacuum" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_VLS_VACUUM</span>
+<span class="n">VAR</span>
+
+
+<span class="n">END_VAR</span>
+<span class="n">VAR_INPUT</span>
+    <span class="n">bVLS_Ext_Press</span> <span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span> <span class="o">//</span> <span class="n">external</span> <span class="n">interlock</span> <span class="n">bit</span> <span class="k">for</span> <span class="n">window</span> <span class="n">control</span>
+<span class="n">END_VAR</span>
+<span class="o">//</span> <span class="n">VLS</span> <span class="n">Vacuum</span> <span class="n">Logic</span>
+
+<span class="n">bVLS_Ext_Press</span> <span class="o">:=</span> <span class="n">CRIX_GCC_01</span><span class="o">.</span><span class="n">IG</span><span class="o">.</span><span class="n">xAT_VAC</span><span class="p">;</span>
+<span class="n">PRG_VLS_WINDOW</span><span class="p">(</span><span class="n">bExtPress</span> <span class="o">:=</span> <span class="n">bVLS_Ext_Press</span><span class="p">,</span>
+               <span class="n">bOverride</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode_VLS</span><span class="p">,</span>
+               <span class="n">bSetup</span> <span class="o">:=</span> <span class="n">SetupMode_VLS</span><span class="p">);</span> <span class="o">//</span> <span class="n">run</span> <span class="n">the</span> <span class="n">vacuum</span> <span class="n">program</span> <span class="k">with</span> <span class="n">interlock</span> <span class="n">bit</span>
+
+<span class="o">//</span> <span class="n">VLS</span> <span class="n">Pump</span>
+<span class="n">PRG_VLS_Turbo</span><span class="p">();</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#prg-vls-turbo">PRG_VLS_Turbo</a></p></li>
+<li><p><a class="reference internal" href="#prg-vls-window">PRG_VLS_WINDOW</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prg-vls-window">
+<h2>PRG_VLS_WINDOW<a class="headerlink" href="#prg-vls-window" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PROGRAM PRG_VLS_WINDOW
+VAR
+    xFirstPass              : BOOL;
+    fbFSInit                : R_TRIG;
+
+    state                   : E_STATES;
+
+
+
+    g_FastFaultOutput2: FB_HardwareFFOutput;
+    g_fbArbiter2: FB_Arbiter;
+END_VAR
+VAR_INPUT
+    bExtPress               : BOOL := FALSE; // Input for external interlock with hutch vacuum system
+
+    bOverride               : BOOL;
+
+    bSetup                  : BOOL;
+
+
+END_VAR
+fbFSInit( CLK := TRUE, Q =&gt; xFirstPass);
+(* On first PLC pass, put valve into init state*)
+IF xFirstPass THEN
+    state:= E_STATES.INIT;
+    bOverride := FALSE;
+    bSetup := FALSE;
+END_IF
+
+
+
+//STATE ACTIONS
+CASE state OF
+
+ E_STATES.INIT:
+            VLS_VGC_1.M_Set_OPN_SW(FALSE); //Isolation Valve closed
+            VLS_VGC_W.M_Set_CLS_SW(FALSE); // Window valve OPEN
+            VLS_VGC_1.i_xOverrideMode := VLS_VGC_W.i_xOverrideMode := FALSE;
+            //Transition
+            if (VLS_VGC_1.M_IsClosed() AND VLS_VGC_W.M_IsOpen()) THEN
+                    state:= E_STATES.NOT_SAFE;
+            END_IF
+
+E_STATES.NOT_SAFE: // System is not allowed to actuate, i.e all interlocks are in effect
+    VLS_VGC_1.M_Set_OPN_SW(VLS_VGC_1.iq_stValve.q_xOPN_DO );
+    //C_1.i_xExt_OK := VGC_1.i_xEPS_OPN_OK := VGC_1.i_xEPS_CLS_OK:= FALSE;
+    VLS_VGC_W.i_xExtILK_OK:= FALSE;
+    VLS_VGC_1.i_xOverrideMode := VLS_VGC_W.i_xOverrideMode := FALSE;
+
+    //Transition
+    //IF (US_GCC.IG.xAT_VAC AND DS_GCC.IG.xAT_VAC) THEN state:= E_STATES.READY; END_IF
+    IF (bExtPress AND VLS_GCC_01.IG.xAT_VAC) THEN state:= E_STATES.READY; END_IF
+
+
+
+ E_STATES.READY: // OK to MOVE
+    // Release the external interlock so the differential pressure inlk is in effect
+    VLS_VGC_1.i_xExt_OK:= VLS_VGC_1.i_xEPS_OK :=TRUE;
+    //permission to insert window valve only when US vacuum is good??
+    VLS_VGC_W.i_xExtILK_OK:= bExtPress;
+    // Valves  alternate positions.
+    If (VLS_VGC_W.M_IsClosed()) THEN  VLS_VGC_1.M_Set_OPN_SW(TRUE);
+    ELSIF (VLS_VGC_W.M_IsOpen()) THEN VLS_VGC_1.M_Set_OPN_SW(FALSE);
+    END_IF
+
+// bOverride := TRUE;
+ E_STATES.OVERRIDE:
+    // Override Mode is enabled for all valves
+    VLS_VGC_1.i_xOverrideMode :=VLS_VGC_W.i_xOverrideMode := TRUE;
+    // Exit of Override mode always goes back to init
+    IF NOT(bOverride) THEN state:= E_STATES.INIT; END_IF
+
+
+ E_STATES.SETUP:
+    // Window valve remains retracted
+    VLS_VGC_W.i_xExtILK_OK := FALSE;
+    // Isolation valves operates like standard gate valves
+    VLS_VGC_1.i_xExt_OK := TRUE;
+    // exit to init just to be safe?
+    IF NOT(bSetup) THEN state:= E_STATES.INIT; END_IF
+END_CASE
+
+
+// STATE TRANSITIONS
+// the system can go to setup state from any other state except override
+IF (bSetup) AND (state&lt;&gt;E_STATES.OVERRIDE) THEN state:= E_STATES.SETUP;
+// the system can go to override state from any other state except setup
+ELSIF (bOverride) AND (state&lt;&gt;E_STATES.SETUP) THEN state:= E_STATES.OVERRIDE;
+//Loss of at vac signal makes the system go to init/not safe to move state
+ELSIF (NOT bExtPress) OR (NOT VLS_GCC_01.IG.xAT_VAC) THEN state:= E_STATES.INIT;
+//ELSIF (NOT US_GCC.IG.xAT_VAC) OR (NOT DS_GCC.IG.xAT_VAC) THEN state:= E_STATES.INIT;
+END_IF
+
+
+// Instantiate function blocks
+VLS_US_GPI(PG=&gt;);
+//US_GCC(PG:=US_GPI.PG);
+VLS_GPI_01(PG=&gt;);
+VLS_GCC_01(PG:=VLS_GPI_01.PG , IG=&gt; , bEP := TRUE );
+
+VLS_ROUGH_GPI.M_SetBits(32767);
+VLS_ROUGH_GPI(PG=&gt;);
+
+VLS_VGC_1(
+    i_stUSG:= CRIX_GCC_01.IG ,
+    i_stDSG:= VLS_GCC_01.IG ,
+    i_xDis_DPIlk:= FALSE ,
+    i_xPMPS_OK:= TRUE ,
+    i_xEPS_OK:= ,
+    i_xExt_OK:= ,
+    i_xOverrideMode:= ,
+    i_xReset:= ,
+    i_xIsAperture:= TRUE,
+    i_sDevName:= ,
+    i_nTransitionRootID:= ,
+    iq_stValve=&gt; ,
+    xMPS_OK=&gt; ,
+    io_fbFFHWO:=g_FastFaultOutput2 ,
+    fbArbiter:=g_fbArbiter2
+);
+
+
+VLS_VGC_W(
+    i_xExtILK_OK:= ,
+    i_xOverrideMode:= ,
+    iq_stValve=&gt; ,
+    io_fbFFHWO:= g_FastFaultOutput2 ,
+    fbArbiter:= g_fbArbiter2,
+    i_xPMPS_OK:= TRUE,
+    i_xIsAperture:= TRUE ,
+    i_sDevName:= ,
+    i_nTransitionRootID:= );
+
+
+//VGC_W(i_xExtILK_OK:= ,
+//  i_xOverrideMode:= ,
+ //   iq_stValve=&gt; );
+
+END_PROGRAM
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#e-states">E_STATES</a></p></li>
+</ul>
+</dd>
+</dl>
 </section>
 </section>
 

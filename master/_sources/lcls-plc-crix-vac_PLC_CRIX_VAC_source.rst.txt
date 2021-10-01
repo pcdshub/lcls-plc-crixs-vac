@@ -4,6 +4,28 @@ DUTs
 ----
 
 
+E_STATES
+^^^^^^^^
+
+::
+
+    {attribute 'qualified_only'}
+    {attribute 'strict'}
+    TYPE E_STATES :
+    (
+    	INIT := 0,
+    	SETUP,
+    	OVERRIDE,
+    	READY,
+    	NOT_SAFE
+    );
+    END_TYPE
+
+
+Related:
+    * `E_STATES`_
+
+
 GVLs
 ----
 
@@ -364,6 +386,80 @@ GVL_COM
 
 
 
+GVL_COM_VLS
+^^^^^^^^^^^
+
+::
+
+    //{attribute 'qualified_only'}
+    VAR_GLOBAL
+    	// Define COM Ports/Buffers incl. library Tc2_SerialCom
+    	VLS_EP1_CH1_SerialRXBuffer : ComBuffer;
+    	VLS_EP1_CH1_SerialTXBuffer : ComBuffer;
+
+    	// Serial Terminal
+    	VLS_EP1_CH1_fbSerialLineControl: SerialLineControl;
+    	
+    	//SERIAL IO
+    		{attribute	'TcLinkTo'	:=	'.Status:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Status;
+    								 .D[0]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 0;
+    								 .D[1]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 1;
+    								 .D[2]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 2;
+    								 .D[3]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 3;
+    								 .D[4]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 4;
+    								 .D[5]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 5;
+    								 .D[6]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 6;
+    								 .D[7]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 7;
+    								 .D[8]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 8;
+    								 .D[9]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 9;
+    								 .D[10]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 10;
+    								 .D[11]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 11;
+    								 .D[12]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 12;
+    								 .D[13]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 13;
+    								 .D[14]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 14;
+    								 .D[15]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 15;
+    								 .D[16]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 16;
+    								 .D[17]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 17;
+    								 .D[18]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 18;
+    								 .D[19]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 19;
+    								 .D[20]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 20;
+    								 .D[21]:=TIIB[VLS_EP1 (EP6002-0002)]^COM TxPDO-Map Inputs Channel 1^Data In 21
+    	'}
+    	VLS_EP1_CH1_stComIn			AT %I*	:	EL6inData22B;
+    	
+    	{attribute	'TcLinkTo'	:=	'.Ctrl:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Ctrl;
+    								 .D[0]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 0;
+    								 .D[1]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 1;
+    								 .D[2]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 2;
+    								 .D[3]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 3;
+    								 .D[4]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 4;
+    								 .D[5]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 5;
+    								 .D[6]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 6;
+    								 .D[7]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 7;
+    								 .D[8]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 8;
+    								 .D[9]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 9;
+    								 .D[10]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 10;
+    								 .D[11]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 11;
+    								 .D[12]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 12;
+    								 .D[13]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 13;
+    								 .D[14]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 14;
+    								 .D[15]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 15;
+    								 .D[16]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 16;
+    								 .D[17]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 17;
+    								 .D[18]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 18;
+    								 .D[19]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 19;
+    								 .D[20]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
+    								 .D[21]:=TIIB[VLS_EP1 (EP6002-0002)]^COM RxPDO-Map Outputs Channel 1^Data Out 21
+    	'}
+    	VLS_EP1_CH1_stComOut		AT %Q*	:	EL6outData22B;
+    	
+    	
+    	
+    END_VAR
+
+
+
+
 GVL_LI3K2
 ^^^^^^^^^
 
@@ -516,6 +612,85 @@ GVL_Vars
             pv: CRIX:VAC:OVERRIDE
         '} 
     	xSystemOverride_ChemRIXS : BOOL := FALSE;
+    END_VAR
+
+
+
+
+GVL_VLS
+^^^^^^^
+
+::
+
+    //{attribute 'qualified_only'}
+    VAR_GLOBAL
+
+    	(* OverrideMode *)
+    	{attribute 'pytmc' := 'pv: CRIX:VLS:VAC:OVRD_MODE'}
+    	xSystemOverrideMode_VLS	: BOOL := FALSE; 	
+    	
+    		
+    	{attribute 'pytmc' := ' pv: CRIX:VLS:VAC:SETUP_MODE'}
+    	SetupMode_VLS	: BOOL := FALSE; 
+    	
+    	(* Pfeiffer Turbo Pumps TM700 *)
+    	{attribute 'TcLinkTo' := 	'.i_xAtSpd			:=	TIIB[VLS_EP2 (EP2338-0001)]^Channel 1^Input;
+    								 .i_xFaultNC		:=	TIIB[VLS_EP2 (EP2338-0001)]^Channel 2^Input;
+    								 .q_RunDO			:=	TIIB[VLS_EP4 (EP2624-0002)]^Channel 3^Output
+    			 
+    	'}
+    	{attribute 'pytmc' := '
+    		pv: CRIX:VLS:PTM:01
+    		io: io
+    	'}
+        VLS_PTM_01 : FB_PTM_Pfeiffer;
+    	VLS_PTM_01_xExtIlkOK : Bool;
+
+    	// They share the same serial port
+    	st_VLS_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
+    	st_VLS_Pfeiffer_RBK 	: ARRAY[1..20] OF ST_PfeifferStatus;
+    	
+    	fb_VLS_PfeifferCom : FB_PFEIFFER_COM;
+    	
+    	
+    	(* Valves *)
+    	
+    	{attribute 'pytmc' :=' pv: CRIX:VLS:VGC:01 '}
+    	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 6^Input;
+    								 .i_xClsLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 7^Input;
+    								.q_xOPN_DO	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 21^Output'}
+    	VLS_VGC_1 : FB_VGC;
+    	
+    	{attribute 'pytmc' :=' pv: CRIX:VLS:VWC:01 '}
+    	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 9^Input;
+    								 .i_xClsLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 10^Input;
+    								.q_xCLS_DO	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 24^Output'}	
+    	VLS_VGC_W : FB_VRC_NO_FFO; // Is the Window valve NO 
+    	
+    	(* Gauges *)
+    	
+    	{attribute 'pytmc' :=' pv: CRIX:VLS:US:GPI '}
+    	VLS_US_GPI	: FB_MKS275;
+
+    	{attribute 'pytmc' :=' pv: CRIX:VLS:US:GCC '}
+    	VLS_US_GCC	: FB_MKS500;
+
+    	{attribute 'pytmc' :=' pv: CRIX:VLS:GPI:01 '}
+    	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[VLS_EP5 (EP3174-0002)]^AI Standard Channel 1^Value		'}
+    	VLS_GPI_01	: FB_MKS275;
+
+    	{attribute 'pytmc' :=' pv: CRIX:VLS:GCC:01 '}
+    	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[VLS_EP5 (EP3174-0002)]^AI Standard Channel 2^Value;
+    								 .q_xHV_DIS		:= 	TIIB[VLS_EP4 (EP2624-0002)]^Channel 1^Output	'}		
+    	VLS_GCC_01	: FB_MKS500;
+    	
+    	{attribute 'pytmc' :=' pv: CRIX:VLS:ROUGH:GPI '}
+    	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[VLS_EP5 (EP3174-0002)]^AI Standard Channel 3^Value	'}	
+    	VLS_ROUGH_GPI : FB_9XX;
+    	
+    	
+
+
     END_VAR
 
 
@@ -945,6 +1120,52 @@ PRG_Com
 
 
 
+PRG_COM_1
+^^^^^^^^^
+
+::
+
+    PROGRAM PRG_COM_1
+    VAR
+    END_VAR
+    fbSerialLineControl(
+    	Mode:= SERIALLINEMODE_EL6_22B,
+    	pComIn:= ADR(stComIn),
+    	pComOut:=ADR(stComOut),
+    	SizeComIn:= SIZEOF(stComIn),
+    	TxBuffer:= SerialTXBuffer,
+    	RxBuffer:= SerialRXBuffer,
+    	Error=> ,
+    	ErrorID=> );
+
+    END_PROGRAM
+
+
+
+
+PRG_COM_VLS
+^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_COM_VLS
+    VAR
+    END_VAR
+    VLS_EP1_CH1_fbSerialLineControl(
+    	Mode:= SERIALLINEMODE_EL6_22B,
+    	pComIn:= ADR(VLS_EP1_CH1_stComIn),
+    	pComOut:=ADR(VLS_EP1_CH1_stComOut),
+    	SizeComIn:= SIZEOF(VLS_EP1_CH1_stComIn),
+    	TxBuffer:= VLS_EP1_CH1_SerialTXBuffer,
+    	RxBuffer:= VLS_EP1_CH1_SerialRXBuffer,
+    	Error=> ,
+    	ErrorID=> );
+
+    END_PROGRAM
+
+
+
+
 PRG_LI3K2
 ^^^^^^^^^
 
@@ -998,4 +1219,258 @@ PRG_Mechanical_Room
     END_PROGRAM
 
 
+
+
+PRG_PUMP
+^^^^^^^^
+
+::
+
+    PROGRAM PRG_PUMP
+    VAR
+
+    	PTM_01_xExtIlkOK : BOOL; 
+    	
+    END_VAR
+    //Pfeiffer Turbo
+
+    (*Assign adresses to the pfeiffer controllers connected to this serial terminal*)
+    st_Pfeiffer_CTRL[1].iSerialAddress :=1;
+    st_Pfeiffer_CTRL[1].xEnableComm := TRUE;
+    	
+    (* Instanitate the Function block for serial communication with Pfeiffer*)	
+    fb_PfeifferCom(astPfeifferControl := st_Pfeiffer_CTRL,
+    			   astPfeifferStatus:= st_Pfeiffer_RBK,
+    				SerialRXBuffer:= SerialRXBuffer,
+    				SerialTXBuffer:= SerialTXBuffer);
+    				
+
+    (* Copy Status Pv's into the PTM structure*)
+    PTM_01.M_Serial_IO(st_Pfeiffer_CTRL:=st_Pfeiffer_CTRL[1],st_Pfeiffer_RBK:=st_Pfeiffer_RBK[1]);
+
+
+    PTM_01_xExtIlkOK := ( ROUGH_GPI.PG.xPRESS_OK AND ROUGH_GPI.PG.rPRESS < PTM_01.iq_stPTM.rBackingPressureSP ) AND (DS_GPI.PG.xPRESS_OK AND DS_GPI.PG.rPRESS < PTM_01.iq_stPTM.rInletPressureSP) ;	
+    PTM_01(i_xExtIlkOK := PTM_01_xExtIlkOK , iq_stPTM => );
+
+    END_PROGRAM
+
+
+
+
+PRG_VLS_Turbo
+^^^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_VLS_Turbo
+    VAR
+
+    	PTM_01_xExtIlkOK : BOOL; 
+    	
+    END_VAR
+    //Pfeiffer Turbo
+
+    (*Assign adresses to the pfeiffer controllers connected to this serial terminal*)
+    st_VLS_Pfeiffer_CTRL[1].iSerialAddress :=1;
+    st_VLS_Pfeiffer_CTRL[1].xEnableComm := TRUE;
+    	
+    (* Instanitate the Function block for serial communication with Pfeiffer*)	
+    fb_VLS_PfeifferCom(astPfeifferControl := st_VLS_Pfeiffer_CTRL,
+    			   astPfeifferStatus:= st_VLS_Pfeiffer_RBK,
+    				SerialRXBuffer:= VLS_EP1_CH1_SerialRXBuffer,
+    				SerialTXBuffer:= VLS_EP1_CH1_SerialTXBuffer);
+    				
+
+    (* Copy Status Pv's into the PTM structure*)
+    VLS_PTM_01.M_Serial_IO(st_Pfeiffer_CTRL:=st_VLS_Pfeiffer_CTRL[1],st_Pfeiffer_RBK:=st_VLS_Pfeiffer_RBK[1]);
+
+
+    VLS_PTM_01_xExtIlkOK := ( VLS_ROUGH_GPI.PG.xPRESS_OK AND VLS_ROUGH_GPI.PG.rPRESS < VLS_PTM_01.iq_stPTM.rBackingPressureSP ) 
+                            AND (VLS_GPI_01.PG.xPRESS_OK AND VLS_GPI_01.PG.rPRESS < VLS_PTM_01.iq_stPTM.rInletPressureSP) ;	
+    VLS_PTM_01(i_xExtIlkOK := VLS_PTM_01_xExtIlkOK , iq_stPTM => );
+
+    END_PROGRAM
+
+
+
+
+PRG_VLS_VACUUM
+^^^^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_VLS_VACUUM
+    VAR
+
+
+    END_VAR
+    VAR_INPUT
+    	bVLS_Ext_Press : BOOL := FALSE; // external interlock bit for window control
+    END_VAR
+    // VLS Vacuum Logic
+
+    bVLS_Ext_Press := CRIX_GCC_01.IG.xAT_VAC;
+    PRG_VLS_WINDOW(bExtPress := bVLS_Ext_Press,
+                   bOverride := xSystemOverrideMode_VLS,
+                   bSetup := SetupMode_VLS); // run the vacuum program with interlock bit
+
+    // VLS Pump
+    PRG_VLS_Turbo();
+
+    END_PROGRAM
+
+
+Related:
+    * `PRG_VLS_Turbo`_
+    * `PRG_VLS_WINDOW`_
+
+
+PRG_VLS_WINDOW
+^^^^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_VLS_WINDOW
+    VAR
+    	xFirstPass		: BOOL;
+    	fbFSInit		: R_TRIG;
+    	
+    	state			: E_STATES;
+
+
+
+    	g_FastFaultOutput2: FB_HardwareFFOutput;
+    	g_fbArbiter2: FB_Arbiter;
+    END_VAR
+    VAR_INPUT
+    	bExtPress		: BOOL := FALSE; // Input for external interlock with hutch vacuum system
+
+    	bOverride		: BOOL;
+
+    	bSetup			: BOOL;
+    	
+    	
+    END_VAR
+    fbFSInit( CLK := TRUE, Q => xFirstPass);
+    (* On first PLC pass, put valve into init state*)
+    IF xFirstPass THEN
+    	state:= E_STATES.INIT;
+    	bOverride := FALSE;
+    	bSetup := FALSE;
+    END_IF
+
+
+
+    //STATE ACTIONS
+    CASE state OF
+
+     E_STATES.INIT: 
+    		VLS_VGC_1.M_Set_OPN_SW(FALSE); //Isolation Valve closed
+    		VLS_VGC_W.M_Set_CLS_SW(FALSE); // Window valve OPEN
+    		VLS_VGC_1.i_xOverrideMode := VLS_VGC_W.i_xOverrideMode := FALSE;
+    		//Transition
+    		if (VLS_VGC_1.M_IsClosed() AND VLS_VGC_W.M_IsOpen()) THEN
+    			state:= E_STATES.NOT_SAFE;
+    		END_IF
+    		
+    E_STATES.NOT_SAFE: // System is not allowed to actuate, i.e all interlocks are in effect
+    	VLS_VGC_1.M_Set_OPN_SW(VLS_VGC_1.iq_stValve.q_xOPN_DO );
+     	//C_1.i_xExt_OK := VGC_1.i_xEPS_OPN_OK := VGC_1.i_xEPS_CLS_OK:= FALSE; 
+    	VLS_VGC_W.i_xExtILK_OK:= FALSE; 
+    	VLS_VGC_1.i_xOverrideMode := VLS_VGC_W.i_xOverrideMode := FALSE;
+
+    	//Transition
+    	//IF (US_GCC.IG.xAT_VAC AND DS_GCC.IG.xAT_VAC) THEN state:= E_STATES.READY; END_IF
+    	IF (bExtPress AND VLS_GCC_01.IG.xAT_VAC) THEN state:= E_STATES.READY; END_IF
+    	
+    	
+    	
+     E_STATES.READY: // OK to MOVE
+     	// Release the external interlock so the differential pressure inlk is in effect
+     	VLS_VGC_1.i_xExt_OK:= VLS_VGC_1.i_xEPS_OK :=TRUE;
+    	//permission to insert window valve only when US vacuum is good??
+    	VLS_VGC_W.i_xExtILK_OK:= bExtPress;
+    	// Valves  alternate positions.
+    	If (VLS_VGC_W.M_IsClosed()) THEN  VLS_VGC_1.M_Set_OPN_SW(TRUE);
+    	ELSIF (VLS_VGC_W.M_IsOpen()) THEN VLS_VGC_1.M_Set_OPN_SW(FALSE);
+    	END_IF
+    	
+    // bOverride := TRUE;
+     E_STATES.OVERRIDE: 
+    	// Override Mode is enabled for all valves
+     	VLS_VGC_1.i_xOverrideMode :=VLS_VGC_W.i_xOverrideMode := TRUE;
+    	// Exit of Override mode always goes back to init
+     	IF NOT(bOverride) THEN state:= E_STATES.INIT; END_IF
+    	
+    	
+     E_STATES.SETUP: 
+    	// Window valve remains retracted
+     	VLS_VGC_W.i_xExtILK_OK := FALSE; 
+    	// Isolation valves operates like standard gate valves 
+    	VLS_VGC_1.i_xExt_OK := TRUE;
+    	// exit to init just to be safe?
+    	IF NOT(bSetup) THEN state:= E_STATES.INIT; END_IF
+    END_CASE
+
+
+    // STATE TRANSITIONS
+    // the system can go to setup state from any other state except override
+    IF (bSetup) AND (state<>E_STATES.OVERRIDE) THEN state:= E_STATES.SETUP; 
+    // the system can go to override state from any other state except setup
+    ELSIF (bOverride) AND (state<>E_STATES.SETUP) THEN state:= E_STATES.OVERRIDE;
+    //Loss of at vac signal makes the system go to init/not safe to move state
+    ELSIF (NOT bExtPress) OR (NOT VLS_GCC_01.IG.xAT_VAC) THEN state:= E_STATES.INIT;
+    //ELSIF (NOT US_GCC.IG.xAT_VAC) OR (NOT DS_GCC.IG.xAT_VAC) THEN state:= E_STATES.INIT;
+    END_IF 
+
+
+    // Instantiate function blocks
+    VLS_US_GPI(PG=>);
+    //US_GCC(PG:=US_GPI.PG);
+    VLS_GPI_01(PG=>);
+    VLS_GCC_01(PG:=VLS_GPI_01.PG , IG=> , bEP := TRUE );
+
+    VLS_ROUGH_GPI.M_SetBits(32767);
+    VLS_ROUGH_GPI(PG=>);
+
+    VLS_VGC_1(
+    	i_stUSG:= CRIX_GCC_01.IG , 
+    	i_stDSG:= VLS_GCC_01.IG , 
+    	i_xDis_DPIlk:= FALSE , 
+    	i_xPMPS_OK:= TRUE , 
+    	i_xEPS_OK:= , 
+    	i_xExt_OK:= , 
+    	i_xOverrideMode:= , 
+    	i_xReset:= , 
+    	i_xIsAperture:= TRUE, 
+    	i_sDevName:= , 
+    	i_nTransitionRootID:= ,
+    	iq_stValve=> , 
+    	xMPS_OK=> , 
+    	io_fbFFHWO:=g_FastFaultOutput2 , 
+    	fbArbiter:=g_fbArbiter2
+    );
+
+
+    VLS_VGC_W(
+    	i_xExtILK_OK:= , 
+    	i_xOverrideMode:= , 
+    	iq_stValve=> , 
+    	io_fbFFHWO:= g_FastFaultOutput2 , 
+    	fbArbiter:= g_fbArbiter2, 
+    	i_xPMPS_OK:= TRUE, 
+    	i_xIsAperture:= TRUE , 
+    	i_sDevName:= , 
+    	i_nTransitionRootID:= );
+    	
+    	
+    //VGC_W(i_xExtILK_OK:= , 
+    //	i_xOverrideMode:= ,
+     //   iq_stValve=> );
+
+    END_PROGRAM
+
+
+Related:
+    * `E_STATES`_
 
