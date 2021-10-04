@@ -97,9 +97,6 @@
     <Compile Include="POUs\PRG_Mechanical_Room.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\PRG_PUMP.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="POUs\PRG_VLS_Turbo.TcPOU">
       <SubType>Code</SubType>
     </Compile>

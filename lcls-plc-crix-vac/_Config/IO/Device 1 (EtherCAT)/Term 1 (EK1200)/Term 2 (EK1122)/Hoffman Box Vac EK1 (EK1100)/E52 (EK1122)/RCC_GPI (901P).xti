@@ -12,6 +12,7 @@
 			<Fmmu>0000000000000000001a00010100000002000000000000000000000000000000</Fmmu>
 			<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
 			<BootStrapData>00100c0400180c04</BootStrapData>
+			<SuName>Recirculation</SuName>
 			<Pdo Name="TXPDO Combined" Index="#x1a00" Flags="#x0010" SyncMan="3">
 				<Entry Name="Combination Gauge Reading Valid" Index="#xf640" Sub="#x01">
 					<Type>BIT</Type>
