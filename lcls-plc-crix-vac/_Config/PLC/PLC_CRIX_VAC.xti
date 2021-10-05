@@ -112,56 +112,6 @@
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_01.i_xAtSpd</Name>
-					<Comment>
-						<![CDATA[ Normaml operation when true]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_01.i_xFaultNC</Name>
-					<Comment>
-						<![CDATA[ Error Active when no Error is present]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_02.i_xAtSpd</Name>
-					<Comment>
-						<![CDATA[ Normaml operation when true]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_02.i_xFaultNC</Name>
-					<Comment>
-						<![CDATA[ Error Active when no Error is present]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_03.i_xAtSpd</Name>
-					<Comment>
-						<![CDATA[ Normaml operation when true]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_03.i_xFaultNC</Name>
-					<Comment>
-						<![CDATA[ Error]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_03.i_xWarn</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_03.i_xRemote</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_Chamber_Gauges.CRIX_GPI_01.i_iPRESS_R</Name>
 					<Comment>
 						<![CDATA[ input Pressure // Link to analog Input]]>
@@ -412,6 +362,56 @@
 					<Type>INT</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_01.i_xAtSpd</Name>
+					<Comment>
+						<![CDATA[ Normaml operation when true]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_01.i_xFaultNC</Name>
+					<Comment>
+						<![CDATA[ Error Active when no Error is present]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_02.i_xAtSpd</Name>
+					<Comment>
+						<![CDATA[ Normaml operation when true]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_02.i_xFaultNC</Name>
+					<Comment>
+						<![CDATA[ Error Active when no Error is present]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_03.i_xAtSpd</Name>
+					<Comment>
+						<![CDATA[ Normaml operation when true]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_03.i_xFaultNC</Name>
+					<Comment>
+						<![CDATA[ Error]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_03.i_xWarn</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_03.i_xRemote</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_VLS.VLS_PTM_01.i_xAtSpd</Name>
 					<Comment>
 						<![CDATA[ Normaml operation when true]]>
@@ -518,43 +518,65 @@
 					</Comment>
 					<Type>INT</Type>
 				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_01.i_xClsLS</Name>
+					<Comment>
+						<![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_02.i_xOpnLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_02.i_xClsLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_03.i_xClsLS</Name>
+					<Comment>
+						<![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_04.i_xClsLS</Name>
+					<Comment>
+						<![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.xPress_OK</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.xOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.xUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.i_iPRESS_R</Name>
+					<Comment>
+						<![CDATA[ input Pressure // Link to analog Input]]>
+					</Comment>
+					<Type>REAL</Type>
+				</Var>
 			</Vars>
 			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
 				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_01.q_RunDO</Name>
-					<Comment>
-						<![CDATA[ Start/Stop]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_02.q_RunDO</Name>
-					<Comment>
-						<![CDATA[ Start/Stop]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_03.q_RunDO</Name>
-					<Comment>
-						<![CDATA[ Start/Stop for TC110 link this output to the Pumping station bit]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_03.q_PumpingStation</Name>
-					<Comment>
-						<![CDATA[ Start/Stop interlock]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_03.q_xRemote</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_PTM_03.q_xReset</Name>
+					<Name>PRG_VLS_WINDOW.g_FastFaultOutputNA.q_xFastFaultOut</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -704,6 +726,42 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_01.q_RunDO</Name>
+					<Comment>
+						<![CDATA[ Start/Stop]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_02.q_RunDO</Name>
+					<Comment>
+						<![CDATA[ Start/Stop]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_03.q_RunDO</Name>
+					<Comment>
+						<![CDATA[ Start/Stop for TC110 link this output to the Pumping station bit]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_03.q_PumpingStation</Name>
+					<Comment>
+						<![CDATA[ Start/Stop interlock]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_03.q_xRemote</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_PTM_03.q_xReset</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_VLS.VLS_PTM_01.q_RunDO</Name>
 					<Comment>
 						<![CDATA[ Start/Stop for TC110 link this output to the Pumping station bit]]>
@@ -748,7 +806,19 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>PRG_VLS_WINDOW.g_FastFaultOutputNA.q_xFastFaultOut</Name>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_01.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_02.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_03.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_04.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
@@ -943,7 +1013,28 @@
 				<Link VarA="ComTask Outputs^GVL_COM.K2S17_E5_CH2_stComOut^D[8]" VarB="COM Outputs Channel 2^Data Out 8" AutoLink="true"/>
 				<Link VarA="ComTask Outputs^GVL_COM.K2S17_E5_CH2_stComOut^D[9]" VarB="COM Outputs Channel 2^Data Out 9" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E52 (EK1122)^VLS_EP1 (EP6002-0002)">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)">
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.CRIX_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.CRIX_GPI_02.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.CRIX_GPI_03.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.CRIX_GPI_04.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E1 (EL1004)">
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_VRC_01.i_xClsLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_VRC_02.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_VRC_02.i_xOpnLS" VarB="Channel 4^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_VRC_03.i_xClsLS" VarB="Channel 3^Input" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E2 (EL2004)">
+				<Link VarA="PlcTask Outputs^GVL_Recirculation.CRIX_RCC_VRC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Recirculation.CRIX_RCC_VRC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Recirculation.CRIX_RCC_VRC_03.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Recirculation.CRIX_RCC_VRC_04.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E3 (EL1004)">
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_VRC_04.i_xClsLS" VarB="Channel 1^Input" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP1 (EP6002-0002)">
 				<Link VarA="PlcTask Inputs^GVL_COM_VLS.VLS_EP1_CH1_stComIn^D[0]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 0" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_COM_VLS.VLS_EP1_CH1_stComIn^D[10]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 10" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_COM_VLS.VLS_EP1_CH1_stComIn^D[11]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 11" AutoLink="true"/>
@@ -991,11 +1082,11 @@
 				<Link VarA="PlcTask Outputs^GVL_COM_VLS.VLS_EP1_CH1_stComOut^D[8]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 8" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM_VLS.VLS_EP1_CH1_stComOut^D[9]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 9" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E52 (EK1122)^VLS_EP2 (EP2338-0001)">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP2 (EP2338-0001)">
 				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_PTM_01.i_xAtSpd" VarB="Channel 1^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_PTM_01.i_xFaultNC" VarB="Channel 2^Input" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E52 (EK1122)^VLS_EP3 (EP2339-0021)">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP3 (EP2339-0021)">
 				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_VGC_1.i_xClsLS" VarB="Channel 7^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_VGC_1.i_xOpnLS" VarB="Channel 6^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_VGC_W.i_xClsLS" VarB="Channel 10^Input" AutoLink="true"/>
@@ -1003,20 +1094,14 @@
 				<Link VarA="PlcTask Outputs^GVL_VLS.VLS_VGC_1.q_xOPN_DO" VarB="Channel 21^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_VLS.VLS_VGC_W.q_xCLS_DO" VarB="Channel 24^Output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E52 (EK1122)^VLS_EP4 (EP2624-0002)">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP4 (EP2624-0002)">
 				<Link VarA="PlcTask Outputs^GVL_VLS.VLS_GCC_01.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_VLS.VLS_PTM_01.q_RunDO" VarB="Channel 3^Output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E52 (EK1122)^VLS_EP5 (EP3174-0002)">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP5 (EP3174-0002)">
 				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_GCC_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_ROUGH_GPI.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)">
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.CRIX_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.CRIX_GPI_02.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.CRIX_GPI_03.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.CRIX_GPI_04.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 45 (EL2794)">
 				<Link VarA="PlcTask Outputs^GVL_Mech_Room.CRIX_MECH_PRO_01.q_xBPStart" VarB="Channel 2^Output" AutoLink="true"/>

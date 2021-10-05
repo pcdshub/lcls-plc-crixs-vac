@@ -136,7 +136,7 @@
 		<Box File="E51 (EL4134).xti" Id="88">
 			<EtherCAT PortABoxInfo="#x01000063"/>
 		</Box>
-		<Box File="E52 (EK1122).xti" Id="42">
+		<Box File="VLS_RCC (EK1122).xti" Id="42">
 			<EtherCAT PortABoxInfo="#x01000058"/>
 		</Box>
 		<Box File="E52 (EK1122-0080).xti" Id="43">
