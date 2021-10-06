@@ -412,6 +412,41 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_01.i_xClsLS</Name>
+					<Comment>
+						<![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_02.i_xOpnLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_02.i_xClsLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_03.i_xClsLS</Name>
+					<Comment>
+						<![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_04.i_xClsLS</Name>
+					<Comment>
+						<![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_VLS.VLS_PTM_01.i_xAtSpd</Name>
 					<Comment>
 						<![CDATA[ Normaml operation when true]]>
@@ -517,41 +552,6 @@
 						<![CDATA[ input Pressure // Link to analog Input]]>
 					</Comment>
 					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_VRC_01.i_xClsLS</Name>
-					<Comment>
-						<![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_VRC_02.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_VRC_02.i_xClsLS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_VRC_03.i_xClsLS</Name>
-					<Comment>
-						<![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_VRC_04.i_xClsLS</Name>
-					<Comment>
-						<![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]>
-					</Comment>
-					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.xPress_OK</Name>
@@ -762,6 +762,22 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_01.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_02.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_03.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_VRC_04.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_VLS.VLS_PTM_01.q_RunDO</Name>
 					<Comment>
 						<![CDATA[ Start/Stop for TC110 link this output to the Pumping station bit]]>
@@ -805,22 +821,6 @@
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_VRC_01.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_VRC_02.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_VRC_03.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_VRC_04.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
 			</Vars>
 			<Vars VarGrpType="8">
 				<Name>PlcTask Retains</Name>
@@ -851,6 +851,13 @@
 					<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E51 (EK1122)^VLS_EP5 (EP3174-0002)">
 						<Link VarA="GVL_VLS.VLS_DS_GCC.i_iPRESS_R" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AI Standard Channel 2^Value" AutoLink="true" RestoreInfo="ANotFound"/>
 						<Link VarA="GVL_VLS.VLS_DS_GPI.i_iPRESS_R" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AI Standard Channel 1^Value" AutoLink="true" RestoreInfo="ANotFound"/>
+					</OwnerB>
+				</OwnerA>
+			</UnrestoredVarLinks>
+			<UnrestoredVarLinks ImportTime="2021-10-05T21:33:52">
+				<OwnerA Name="InputDst" Prefix="TIPC^PLC_CRIX_VAC^PLC_CRIX_VAC Instance" Type="1">
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)">
+						<Link VarA="GVL_Recirculation.CRIX_RCC_GCP_01.i_rPRESS_R" TypeA="REAL" InOutA="0" GuidA="{18071995-0000-0000-0000-00000000000D}" VarB="TXPDO Combined^Combination Gauge Active Value" RestoreInfo="ANotFound"/>
 					</OwnerB>
 				</OwnerA>
 			</UnrestoredVarLinks>
@@ -1033,6 +1040,12 @@
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E3 (EL1004)">
 				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_VRC_04.i_xClsLS" VarB="Channel 1^Input" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)">
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_01.i_iPRESS_R" VarB="TXPDO Combined^Combination Gauge Active Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_01.xOverrange" VarB="TXPDO Combined^Combination Gauge Overrange Exceeded" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_01.xPress_OK" VarB="TXPDO Combined^Combination Gauge Reading Valid" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_01.xUnderrange" VarB="TXPDO Combined^Combination Gauge Underrange Exceeded" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP1 (EP6002-0002)">
 				<Link VarA="PlcTask Inputs^GVL_COM_VLS.VLS_EP1_CH1_stComIn^D[0]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 0" AutoLink="true"/>

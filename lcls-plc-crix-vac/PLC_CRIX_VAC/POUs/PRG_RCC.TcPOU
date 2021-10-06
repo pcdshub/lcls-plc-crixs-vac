@@ -8,41 +8,44 @@ VAR
 	CRIX_RCC_VRC_03_OPEN_OK : BOOL;
 	CRIX_RCC_VRC_04_OPEN_OK : BOOL;
 	
+   
+
 	
 END_VAR
+
+
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[CRIX_RCC_GCP_01(PG=>);
 
-(* When CRIX-RCC-VRC-01 open, CRIX-RCC-VRC-02 and 03must be closed*)		
+(* Valve can open only when CRIX-RCC-VRC-02 and 03 are closed*)		
 CRIX_RCC_VRC_01_OPEN_OK := ( CRIX_RCC_VRC_02.iq_stValve.i_xClsLS AND NOT CRIX_RCC_VRC_02.iq_stValve.q_xOPN_DO ) AND
-                           ( CRIX_RCC_VRC_03.iq_stValve.i_xClsLS AND NOT CRIX_RCC_VRC_03.iq_stValve.q_xOPN_DO ) ;
+                                    ( CRIX_RCC_VRC_03.iq_stValve.i_xClsLS AND NOT CRIX_RCC_VRC_03.iq_stValve.q_xOPN_DO ) ;
 						   
 CRIX_RCC_VRC_01(i_xExtILK_OK := CRIX_RCC_VRC_01_OPEN_OK, 
                 i_xOverrideMode := xSystemOverrideMode_RCC, 
                  iq_stValve=> );
 
-(* When CRIX-RCC-VRC-02 open, CRIX-RCC-VRC-01, 03, and 04 must be closed*)				 
+(* Valve can open only when CRIX-RCC-VRC-01 and 04 are closed*)				 
 CRIX_RCC_VRC_02_OPEN_OK := ( CRIX_RCC_VRC_01.iq_stValve.i_xClsLS AND NOT CRIX_RCC_VRC_01.iq_stValve.q_xOPN_DO ) AND
-                           ( CRIX_RCC_VRC_03.iq_stValve.i_xClsLS AND NOT CRIX_RCC_VRC_03.iq_stValve.q_xOPN_DO ) AND 
-                           ( CRIX_RCC_VRC_04.iq_stValve.i_xClsLS AND NOT CRIX_RCC_VRC_04.iq_stValve.q_xOPN_DO );
+                                    ( CRIX_RCC_VRC_04.iq_stValve.i_xClsLS AND NOT CRIX_RCC_VRC_04.iq_stValve.q_xOPN_DO );
 						   
 CRIX_RCC_VRC_02(i_xExtILK_OK := CRIX_RCC_VRC_02_OPEN_OK, 
                 i_xOverrideMode := xSystemOverrideMode_RCC, 
                  iq_stValve=> );				 
 
-(* When CRIX-RCC-VRC-03 open, CRIX-RCC-VRC-01, 02 and 04 must be closed*)							 
-CRIX_RCC_VRC_03_OPEN_OK := ( CRIX_RCC_VRC_01.iq_stValve.i_xClsLS AND NOT CRIX_RCC_VRC_01.iq_stValve.q_xOPN_DO ) AND
-                           ( CRIX_RCC_VRC_02.iq_stValve.i_xClsLS AND NOT CRIX_RCC_VRC_02.iq_stValve.q_xOPN_DO ) AND 
-                           ( CRIX_RCC_VRC_04.iq_stValve.i_xClsLS AND NOT CRIX_RCC_VRC_04.iq_stValve.q_xOPN_DO );				 
+(* Valve can open only when CRIX-RCC-GCP-01 reading <10 Torr and CRIX-RCC-VRC-01 and 04 are closed*)							 
+CRIX_RCC_VRC_03_OPEN_OK := (CRIX_RCC_GCP_01.PG.rPRESS < 10 and CRIX_RCC_GCP_01.PG.xPRESS_OK ) AND
+                                 ( CRIX_RCC_VRC_01.iq_stValve.i_xClsLS AND NOT CRIX_RCC_VRC_01.iq_stValve.q_xOPN_DO ) AND
+                                              ( CRIX_RCC_VRC_04.iq_stValve.i_xClsLS AND NOT CRIX_RCC_VRC_04.iq_stValve.q_xOPN_DO );				 
 
 CRIX_RCC_VRC_03(i_xExtILK_OK := CRIX_RCC_VRC_03_OPEN_OK, 
                 i_xOverrideMode := xSystemOverrideMode_RCC, 
                  iq_stValve=> );
 
-(* When CRIX-RCC-VRC-04 open, CRIX-RCC-VRC-02 and 03must be closed*)		
+(* Valve can open only when CRIX-RCC-VRC-02 and 03 are closed*)		
 CRIX_RCC_VRC_04_OPEN_OK := ( CRIX_RCC_VRC_02.iq_stValve.i_xClsLS AND NOT CRIX_RCC_VRC_02.iq_stValve.q_xOPN_DO ) AND
-                           ( CRIX_RCC_VRC_03.iq_stValve.i_xClsLS AND NOT CRIX_RCC_VRC_03.iq_stValve.q_xOPN_DO ) ;
+                                      ( CRIX_RCC_VRC_03.iq_stValve.i_xClsLS AND NOT CRIX_RCC_VRC_03.iq_stValve.q_xOPN_DO ) ;
 
 CRIX_RCC_VRC_04(i_xExtILK_OK := CRIX_RCC_VRC_04_OPEN_OK, 
                 i_xOverrideMode := xSystemOverrideMode_RCC, 
@@ -56,14 +59,15 @@ CRIX_RCC_VRC_04(i_xExtILK_OK := CRIX_RCC_VRC_04_OPEN_OK,
       <LineId Id="11" Count="1" />
       <LineId Id="40" Count="0" />
       <LineId Id="21" Count="1" />
-      <LineId Id="33" Count="1" />
+      <LineId Id="33" Count="0" />
       <LineId Id="39" Count="0" />
       <LineId Id="23" Count="1" />
       <LineId Id="8" Count="0" />
       <LineId Id="36" Count="0" />
       <LineId Id="35" Count="0" />
-      <LineId Id="37" Count="1" />
-      <LineId Id="7" Count="0" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="62" Count="0" />
+      <LineId Id="38" Count="0" />
       <LineId Id="48" Count="0" />
       <LineId Id="26" Count="1" />
       <LineId Id="6" Count="0" />
