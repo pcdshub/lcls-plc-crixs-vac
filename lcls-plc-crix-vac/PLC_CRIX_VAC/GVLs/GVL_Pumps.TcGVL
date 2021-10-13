@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="GVL_Pumps" Id="{b60d23cc-22cb-47c4-b8e1-68c95529d503}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
@@ -43,6 +43,9 @@ VAR_GLOBAL
 	
 	fb_PTM_03_PfeifferCom : FB_PFEIFFER_COM;
 	
+	
+	
+	(* Pfeiffer Turbo Pumps TC400 *)
 	(*
 	{attribute 'TcLinkTo' := 	'.i_xAtSpd			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E6 (EL1004)^Channel 4^Input;
 								 .i_xRemote			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E8 (EL1004)^Channel 1^Input;
@@ -51,13 +54,18 @@ VAR_GLOBAL
 								 .q_xRemote			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E9 (EL2004)^Channel 1^Output;
 								 .q_PumpingStation	:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E9 (EL2004)^Channel 2^Output				 
 	'}
+	*)
 	{attribute 'pytmc' := '
-		pv: VLS:PTM:01
+		pv: CRIX:PTM:04
 		io: io
 	'}
-	*)
-//    CRIX_PTM_04 : FB_PTM_Pfeiffer;
+    CRIX_PTM_04 : FB_PTM_Pfeiffer;
 
+	// Serial port
+	stCRIX_PTM_04_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
+	stCRIX_PTM_04_Pfeiffer_RBK 	: ARRAY[1..20] OF ST_PfeifferStatus;
+	
+	fb_CRIX_PTM_04_Pfeiffer_PfeifferCom : FB_PFEIFFER_COM;
 
 
 	

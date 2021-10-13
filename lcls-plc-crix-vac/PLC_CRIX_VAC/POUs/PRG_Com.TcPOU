@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_Com" Id="{f62942d6-44b0-4dbc-ab5c-ec4f30fb3bd9}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_Com
 VAR
@@ -16,7 +16,25 @@ K2S17_E5_CH2_fbSerialLineControl(
 	TxBuffer:= K2S17_E5_CH2_SerialTXBuffer,
 	RxBuffer:= K2S17_E5_CH2_SerialRXBuffer,
 	Error=> ,
+	ErrorID=> );
+	
+//ChemRIXS PTM_04
+K2S17_E5_CH1_fbSerialLineControl(
+	Mode:= SERIALLINEMODE_EL6_22B,
+	pComIn:= ADR(K2S17_E5_CH1_stComIn),
+	pComOut:=ADR(K2S17_E5_CH1_stComOut),
+	SizeComIn:= SIZEOF(K2S17_E5_CH1_stComOut),
+	TxBuffer:= K2S17_E5_CH1_SerialTXBuffer,
+	RxBuffer:= K2S17_E5_CH1_SerialRXBuffer,
+	Error=> ,
 	ErrorID=> );]]></ST>
     </Implementation>
+    <LineIds Name="PRG_Com">
+      <LineId Id="3" Count="9" />
+      <LineId Id="2" Count="0" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="18" Count="8" />
+      <LineId Id="17" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

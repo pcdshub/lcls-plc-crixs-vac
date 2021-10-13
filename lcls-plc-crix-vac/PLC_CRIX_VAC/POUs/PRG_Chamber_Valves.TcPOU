@@ -65,8 +65,8 @@ CRIX_VGC_02(
 	i_nTransitionRootID:= , 
 	iq_stValve=> stCRIX_VGC_02, 
 	xMPS_OK=> , 
-	io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput, 
-	fbArbiter:= GVL_PMPS.g_Arbiter);
+	io_fbFFHWO:= dummy_FFFO, 
+	fbArbiter:= dummy_fbArbiter1);
 	
 bVGC_03_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CRIX_PTM_01.iq_stPtm,
 											   i_stISG:=CRIX_GPI_01.PG,
@@ -101,15 +101,18 @@ CRIX_VGC_05(i_xExtILK_OK:=bVGC_05_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stCRIX_VGC_05);
 
-// This is roughing valve for VLS, apply the same logic as roughing valves for chamber			
+// This is roughing valve for Load Lock Chamber , apply the same logic as roughing valves for chamber			
 			
-//bVGC_65_ILK :=
+(*bVGC_06_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CRIX_PTM_04.iq_stPtm,
+											   i_stISG:=CRIX_LLC_GPI_01.PG,
+											   i_stBSG:=CRIX_GPI_05.PG,
+								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);
 
 CRIX_VGC_06(i_xExtILK_OK:=bVGC_06_ILK,  // Not active right now; leave ILK to initialized FALSE
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stCRIX_VGC_06);
 
-
+*)
 (*
 bVGC_07_ILK := F_TurboGateValve_ILK(i_Turbo:=RIX_LI3K2_PTM_01,
 									i_stISG:=);
@@ -210,7 +213,9 @@ CRIX_VVC_10(i_xExtILK_OK:=TRUE,
       <LineId Id="72" Count="0" />
       <LineId Id="232" Count="0" />
       <LineId Id="73" Count="0" />
-      <LineId Id="233" Count="1" />
+      <LineId Id="233" Count="0" />
+      <LineId Id="235" Count="2" />
+      <LineId Id="234" Count="0" />
       <LineId Id="76" Count="90" />
       <LineId Id="2" Count="0" />
     </LineIds>
