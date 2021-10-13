@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_Chamber_Valves" Id="{f30907aa-2202-42ce-b721-cf743607f31e}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_Chamber_Valves
 VAR
@@ -14,12 +14,15 @@ VAR
 	bChamberAtVac:BOOL;
 	
 	bm_dummy_gauge : ST_VG;
+	dummy_FFFO : FB_HardwareFFOutput;
+	dummy_fbArbiter1    :   FB_Arbiter(1);
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* Roughing manifold logic *)
 
 // insert smart stuff here
+// This is not connected to anything right now, not clear what logic will be	
 (*
 bVGC_01_ILK := F_TurboGateValve_ILK(i_Turbo:=RIX_LI3K2_PTM_01.iq_stPtm,
 									i_stISG:=) // need gauge for this
@@ -81,16 +84,27 @@ CRIX_VGC_04(i_xExtILK_OK:=bVGC_04_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stCRIX_VGC_04);
 			
-// This is not connected to anything right now, not clear what logic will be			
-CRIX_VGC_05(i_xExtILK_OK:=TRUE, //bVGC_04_ILK, // Not active right now; leave ILK to initialized FALSE
+// This is roughing valve for VLS, apply the same logic as roughing valves for chamber
+
+(*Roughing valve permit to open condition : 
+Roughing pump is running
+Roughing line pressure is below than configured rough vacuum setpoint
+Turbo is running and no fault.
+The above interlocks will be good for the system is already under vacuum.  For starting pumping down, we can set up VLS to Set Up mode to open both VLS gate valve and window valve. 
+So we can pump down main chamber and VLS together through VGC-02.  
+*)			
+bVGC_05_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=VLS_PTM_01.iq_stPtm,
+											   i_stISG:=VLS_GPI_01.PG,
+											   i_stBSG:=CRIX_GPI_05.PG,
+								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);
+CRIX_VGC_05(i_xExtILK_OK:=bVGC_05_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stCRIX_VGC_05);
+
+// This is roughing valve for VLS, apply the same logic as roughing valves for chamber			
 			
+//bVGC_65_ILK :=
 
-
-(*bVGC_06_ILK := F_TurboGateValve_ILK(i_Turbo:=CRIX_PTM_04,
-									i_stISG:=CRIX_GCP_03);
-*)
 CRIX_VGC_06(i_xExtILK_OK:=bVGC_06_ILK,  // Not active right now; leave ILK to initialized FALSE
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stCRIX_VGC_06);
@@ -183,5 +197,22 @@ CRIX_VVC_10(i_xExtILK_OK:=TRUE,
 			iq_stValve => stCRIX_VVC_10);
 *)]]></ST>
     </Implementation>
+    <LineIds Name="PRG_Chamber_Valves">
+      <LineId Id="3" Count="2" />
+      <LineId Id="181" Count="0" />
+      <LineId Id="6" Count="61" />
+      <LineId Id="216" Count="1" />
+      <LineId Id="219" Count="2" />
+      <LineId Id="184" Count="0" />
+      <LineId Id="223" Count="0" />
+      <LineId Id="202" Count="0" />
+      <LineId Id="226" Count="5" />
+      <LineId Id="72" Count="0" />
+      <LineId Id="232" Count="0" />
+      <LineId Id="73" Count="0" />
+      <LineId Id="233" Count="1" />
+      <LineId Id="76" Count="90" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

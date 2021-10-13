@@ -447,6 +447,25 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.xPress_OK</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.xOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.xUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.i_iPRESS_R</Name>
+					<Comment>
+						<![CDATA[ input Pressure // Link to analog Input]]>
+					</Comment>
+					<Type>REAL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_VLS.VLS_PTM_01.i_xAtSpd</Name>
 					<Comment>
 						<![CDATA[ Normaml operation when true]]>
@@ -552,25 +571,6 @@
 						<![CDATA[ input Pressure // Link to analog Input]]>
 					</Comment>
 					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.xPress_OK</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.xOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.xUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
-					<Type>REAL</Type>
 				</Var>
 			</Vars>
 			<Vars VarGrpType="2">
@@ -819,6 +819,10 @@
 					<Comment>
 						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
 					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_Chamber_Valves.dummy_FFFO.q_xFastFaultOut</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
