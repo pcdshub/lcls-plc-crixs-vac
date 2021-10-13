@@ -10,8 +10,8 @@ VAR
 
 
 
-	g_FastFaultOutput2: FB_HardwareFFOutput;
-	g_fbArbiter2: FB_Arbiter;
+	g_FastFaultOutputNA: FB_HardwareFFOutput;
+	g_fbArbiterNA: FB_Arbiter(2);
 END_VAR
 VAR_INPUT
 	bExtPress		: BOOL := FALSE; // Input for external interlock with hutch vacuum system
@@ -120,8 +120,8 @@ VLS_VGC_1(
 	i_nTransitionRootID:= ,
 	iq_stValve=> , 
 	xMPS_OK=> , 
-	io_fbFFHWO:=g_FastFaultOutput2 , 
-	fbArbiter:=g_fbArbiter2
+	io_fbFFHWO:=g_FastFaultOutputNA , 
+	fbArbiter:= g_fbArbiterNA
 );
 
 
@@ -129,8 +129,8 @@ VLS_VGC_W(
 	i_xExtILK_OK:= , 
 	i_xOverrideMode:= , 
 	iq_stValve=> , 
-	io_fbFFHWO:= g_FastFaultOutput2 , 
-	fbArbiter:= g_fbArbiter2, 
+	io_fbFFHWO:= g_FastFaultOutputNA , 
+	fbArbiter:= g_fbArbiterNA, 
 	i_xPMPS_OK:= TRUE, 
 	i_xIsAperture:= TRUE , 
 	i_sDevName:= , 

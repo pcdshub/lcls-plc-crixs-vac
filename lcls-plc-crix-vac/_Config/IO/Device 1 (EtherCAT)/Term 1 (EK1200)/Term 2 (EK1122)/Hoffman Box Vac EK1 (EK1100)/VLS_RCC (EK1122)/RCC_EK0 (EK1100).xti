@@ -7,37 +7,37 @@
 		<Name>__FILENAME__</Name>
 		<ImageId>1000</ImageId>
 		<EtherCAT SlaveType="1" PdiType="#x0d00" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x044c2c52" RevisionNo="#x00120000" PortPhys="305" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1100 EtherCAT Coupler (2A E-Bus)" Desc="EK1100"/>
-		<Box File="Term 119 (EL1004).xti" Id="119">
+		<Box File="RCC_E1 (EL1004).xti" Id="119">
 			<EtherCAT PortABoxInfo="#x01000076"/>
 		</Box>
-		<Box File="Term 120 (EL2004).xti" Id="120">
+		<Box File="RCC_E2 (EL2004).xti" Id="120">
 			<EtherCAT PortABoxInfo="#x01000077"/>
 		</Box>
-		<Box File="Term 121 (EL1004).xti" Id="121">
+		<Box File="RCC_E3 (EL1004).xti" Id="121">
 			<EtherCAT PortABoxInfo="#x01000078"/>
 		</Box>
-		<Box File="Term 122 (EL1004).xti" Id="122">
+		<Box File="RCC_E4 (EL1004).xti" Id="122">
 			<EtherCAT PortABoxInfo="#x01000079"/>
 		</Box>
-		<Box File="Term 123 (EL2004).xti" Id="123">
+		<Box File="RCC_E5 (EL2004).xti" Id="123">
 			<EtherCAT PortABoxInfo="#x0100007a"/>
 		</Box>
-		<Box File="Term 124 (EL1004).xti" Id="124">
+		<Box File="RCC_E6 (EL1004).xti" Id="124">
 			<EtherCAT PortABoxInfo="#x0100007b"/>
 		</Box>
-		<Box File="Term 125 (EL3314).xti" Id="125">
+		<Box File="RCC_E7 (EL3314).xti" Id="125">
 			<EtherCAT PortABoxInfo="#x0100007c"/>
 		</Box>
-		<Box File="Term 126 (EL2794).xti" Id="126">
+		<Box File="RCC_E8 (EL2794).xti" Id="126">
 			<EtherCAT PortABoxInfo="#x0100007d"/>
 		</Box>
-		<Box File="Term 127 (EL9505).xti" Id="127">
+		<Box File="RCC_E9 (EL9505).xti" Id="127">
 			<EtherCAT PortABoxInfo="#x0100007e"/>
 		</Box>
-		<Box File="Term 128 (EL1124).xti" Id="128">
+		<Box File="RCC_E10 (EL1124).xti" Id="128">
 			<EtherCAT PortABoxInfo="#x0100007f"/>
 		</Box>
-		<Box File="Term 137 (EL9011).xti" Id="138">
+		<Box File="RCC_E11 (EL9011).xti" Id="138">
 			<EtherCAT PortABoxInfo="#x01000080"/>
 		</Box>
 	</Box>

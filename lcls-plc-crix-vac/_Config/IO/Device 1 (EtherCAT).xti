@@ -40,6 +40,7 @@
 			<SyncUnit Name="HoffmanBox" NoDeleteIfUnused="true"/>
 			<SyncUnit Name="VLS" NoDeleteIfUnused="true" WcStateTolerance="2"/>
 			<SyncUnit Name="Mech Room" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="Recirculation" NoDeleteIfUnused="true"/>
 		</EtherCAT>
 	</Device>
 </TcSmItem>

@@ -22,10 +22,10 @@
 		<Box File="VLS_EP5 (EP3174-0002).xti" Id="109">
 			<EtherCAT PortABoxInfo="#x0100006c"/>
 		</Box>
-		<Box File="Term 118 (EK1100).xti" Id="118">
+		<Box File="RCC_EK0 (EK1100).xti" Id="118">
 			<EtherCAT PortABoxInfo="#x0100002a"/>
 		</Box>
-		<Box File="Box 5 (901P).xti" Id="5">
+		<Box File="RCC_GPI (901P).xti" Id="5">
 			<EtherCAT PortABoxInfo="#x02000076"/>
 		</Box>
 	</Box>
