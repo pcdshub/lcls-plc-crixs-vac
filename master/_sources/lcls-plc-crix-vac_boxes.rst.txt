@@ -133,8 +133,8 @@ PDO Channel 4 (Index #x1603, Flags #x0011, SyncMan 0)
    </details>
 
 
-Box 5 (901P)
-^^^^^^^^^^^^
+RCC_GPI (901P)
+^^^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -146,7 +146,7 @@ Box 5 (901P)
     :header: Name, Data
     :align: center
 
-    Name, Box 5 (901P)
+    Name, RCC_GPI (901P)
     ID, 5
         BootStrapData, 00100c0400180c04
         SyncMan, 0010800026000100010000002200c0008000001026010000
@@ -3456,8 +3456,8 @@ PDO Channel 8 (Index #x1a07, Flags #x0011, SyncMan 0)
    </details>
 
 
-E52 (EK1122)
-^^^^^^^^^^^^
+VLS_RCC (EK1122)
+^^^^^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -3469,7 +3469,7 @@ E52 (EK1122)
     :header: Name, Data
     :align: center
 
-    Name, E52 (EK1122)
+    Name, VLS_RCC (EK1122)
     ID, 42
 
 
@@ -5714,8 +5714,8 @@ Term 113 (EK1521-0010)
    </details>
 
 
-Term 118 (EK1100)
-^^^^^^^^^^^^^^^^^
+RCC_EK0 (EK1100)
+^^^^^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -5727,7 +5727,7 @@ Term 118 (EK1100)
     :header: Name, Data
     :align: center
 
-    Name, Term 118 (EK1100)
+    Name, RCC_EK0 (EK1100)
     ID, 118
 
 
@@ -5736,8 +5736,8 @@ Term 118 (EK1100)
    </details>
 
 
-Term 119 (EL1004)
-^^^^^^^^^^^^^^^^^
+RCC_E1 (EL1004)
+^^^^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -5749,7 +5749,7 @@ Term 119 (EL1004)
     :header: Name, Data
     :align: center
 
-    Name, Term 119 (EL1004)
+    Name, RCC_E1 (EL1004)
     ID, 119
         SyncMan, 001001000000010004000000000000000100001000010000
         Fmmu, 0000000000000000001000010100000002000000000000000000000000000000
@@ -5800,8 +5800,8 @@ PDO Channel 4 (Index #x1a03, Flags #x0011, SyncMan 0)
    </details>
 
 
-Term 120 (EL2004)
-^^^^^^^^^^^^^^^^^
+RCC_E2 (EL2004)
+^^^^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -5813,7 +5813,7 @@ Term 120 (EL2004)
     :header: Name, Data
     :align: center
 
-    Name, Term 120 (EL2004)
+    Name, RCC_E2 (EL2004)
     ID, 120
         SyncMan, 000f01004400010003000000000000000000000f44090000
         Fmmu, 0000000000000000000f00020100000001000000000000000000000000000000
@@ -5864,8 +5864,8 @@ PDO Channel 4 (Index #x1603, Flags #x0011, SyncMan 0)
    </details>
 
 
-Term 121 (EL1004)
-^^^^^^^^^^^^^^^^^
+RCC_E3 (EL1004)
+^^^^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -5877,7 +5877,7 @@ Term 121 (EL1004)
     :header: Name, Data
     :align: center
 
-    Name, Term 121 (EL1004)
+    Name, RCC_E3 (EL1004)
     ID, 121
         SyncMan, 001001000000010004000000000000000100001000010000
         Fmmu, 0000000000000000001000010100000002000000000000000000000000000000
@@ -5928,8 +5928,8 @@ PDO Channel 4 (Index #x1a03, Flags #x0011, SyncMan 0)
    </details>
 
 
-Term 122 (EL1004)
-^^^^^^^^^^^^^^^^^
+RCC_E4 (EL1004)
+^^^^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -5941,7 +5941,7 @@ Term 122 (EL1004)
     :header: Name, Data
     :align: center
 
-    Name, Term 122 (EL1004)
+    Name, RCC_E4 (EL1004)
     ID, 122
         SyncMan, 001001000000010004000000000000000100001000010000
         Fmmu, 0000000000000000001000010100000002000000000000000000000000000000
@@ -5992,8 +5992,8 @@ PDO Channel 4 (Index #x1a03, Flags #x0011, SyncMan 0)
    </details>
 
 
-Term 123 (EL2004)
-^^^^^^^^^^^^^^^^^
+RCC_E5 (EL2004)
+^^^^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -6005,7 +6005,7 @@ Term 123 (EL2004)
     :header: Name, Data
     :align: center
 
-    Name, Term 123 (EL2004)
+    Name, RCC_E5 (EL2004)
     ID, 123
         SyncMan, 000f01004400010003000000000000000000000f44090000
         Fmmu, 0000000000000000000f00020100000001000000000000000000000000000000
@@ -6056,8 +6056,8 @@ PDO Channel 4 (Index #x1603, Flags #x0011, SyncMan 0)
    </details>
 
 
-Term 124 (EL1004)
-^^^^^^^^^^^^^^^^^
+RCC_E6 (EL1004)
+^^^^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -6069,7 +6069,7 @@ Term 124 (EL1004)
     :header: Name, Data
     :align: center
 
-    Name, Term 124 (EL1004)
+    Name, RCC_E6 (EL1004)
     ID, 124
         SyncMan, 001001000000010004000000000000000100001000010000
         Fmmu, 0000000000000000001000010100000002000000000000000000000000000000
@@ -6120,8 +6120,8 @@ PDO Channel 4 (Index #x1a03, Flags #x0011, SyncMan 0)
    </details>
 
 
-Term 125 (EL3314)
-^^^^^^^^^^^^^^^^^
+RCC_E7 (EL3314)
+^^^^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -6133,7 +6133,7 @@ Term 125 (EL3314)
     :header: Name, Data
     :align: center
 
-    Name, Term 125 (EL3314)
+    Name, RCC_E7 (EL3314)
     ID, 125
         BootStrapData, 0010f400f410f400
         SyncMan, 001080002600010001000000800080008000001026010000
@@ -6266,8 +6266,8 @@ PDO TC Outputs Channel 4 (Index #x1603, Flags #x0010, SyncMan )
    </details>
 
 
-Term 126 (EL2794)
-^^^^^^^^^^^^^^^^^
+RCC_E8 (EL2794)
+^^^^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -6279,7 +6279,7 @@ Term 126 (EL2794)
     :header: Name, Data
     :align: center
 
-    Name, Term 126 (EL2794)
+    Name, RCC_E8 (EL2794)
     ID, 126
         SyncMan, 000f01004400010003000000000000000000000f44090000
         Fmmu, 0000000000000000000f00020100000001000000000000000000000000000000
@@ -6330,8 +6330,8 @@ PDO Channel 4 (Index #x1603, Flags #x0011, SyncMan 0)
    </details>
 
 
-Term 127 (EL9505)
-^^^^^^^^^^^^^^^^^
+RCC_E9 (EL9505)
+^^^^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -6343,7 +6343,7 @@ Term 127 (EL9505)
     :header: Name, Data
     :align: center
 
-    Name, Term 127 (EL9505)
+    Name, RCC_E9 (EL9505)
     ID, 127
         SyncMan, 001001000000010004000000000000000000001000000000
         Fmmu, 0000000000000000001000010100000002000000000000000000000000000000
@@ -6365,8 +6365,8 @@ PDO Status Uo (Index #x1a00, Flags #x0011, SyncMan 0)
    </details>
 
 
-Term 128 (EL1124)
-^^^^^^^^^^^^^^^^^
+RCC_E10 (EL1124)
+^^^^^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -6378,7 +6378,7 @@ Term 128 (EL1124)
     :header: Name, Data
     :align: center
 
-    Name, Term 128 (EL1124)
+    Name, RCC_E10 (EL1124)
     ID, 128
         SyncMan, 001001000000010004000000000000000100001000010000
         Fmmu, 0000000000000000001000010100000002000000000000000000000000000000
@@ -6429,8 +6429,8 @@ PDO Channel 4 (Index #x1a03, Flags #x0011, SyncMan 0)
    </details>
 
 
-Term 137 (EL9011)
-^^^^^^^^^^^^^^^^^
+RCC_E11 (EL9011)
+^^^^^^^^^^^^^^^^
 
 
 .. raw:: html
@@ -6442,7 +6442,7 @@ Term 137 (EL9011)
     :header: Name, Data
     :align: center
 
-    Name, Term 137 (EL9011)
+    Name, RCC_E11 (EL9011)
     ID, 138
 
 
