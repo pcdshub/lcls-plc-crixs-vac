@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="GVL_Chamber_Gauges" Id="{5237aca3-4acc-4857-9d60-04b0502e6857}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
@@ -48,21 +48,21 @@ VAR_GLOBAL
 	
 	{attribute 'pytmc' :=' pv: CRIX:GCP:01 '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 1^Value '}
-	CRIX_GCP_01 : FB_9XX;
+	CRIX_GCP_01 : FB_972;
 	
 	stCRIX_GCP_01 : ST_VG;
 	
 	{attribute 'pytmc' :=' pv: CRIX:GCP:02 '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 2^Value '}
-	CRIX_GCP_02 : FB_9XX;
+	CRIX_GCP_02 : FB_972;
 	
 	stCRIX_GCP_02 : ST_VG;
 	
 	{attribute 'pytmc' :=' pv: CRIX:GCP:03 '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 3^Value '}
-	CRIX_GCP_03 : FB_9XX;
+	CRIX_GCP_03 : FB_972;
 	
-	stCRIX_GCP_03 : ST_VG;
+//	stCRIX_GCP_03 : ST_VG;
 	
 END_VAR]]></Declaration>
   </GVL>

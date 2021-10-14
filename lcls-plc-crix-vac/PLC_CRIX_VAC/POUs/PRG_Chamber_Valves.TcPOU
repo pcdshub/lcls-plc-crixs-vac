@@ -11,6 +11,7 @@ VAR
 	bVGC_05_ILK : BOOL := FALSE;
 	bVGC_06_ILK : BOOL := FALSE;
 	bVGC_07_ILK : BOOL := FALSE;
+	bVGC_17_ILK : BOOL := FALSE;
 	bChamberAtVac:BOOL;
 	
 	bm_dummy_gauge : ST_VG;
@@ -161,6 +162,10 @@ CRIX_VGC_09(i_stUSG:=CRIX_GCC_01.IG,
             io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput, 
 			fbArbiter:= GVL_PMPS.g_Arbiter);
 
+bVGC_17_ILK := TRUE;
+CRIX_VGC_17(i_xExtILK_OK:=bVGC_17_ILK,
+			i_xOverrideMode:=xSystemOverride_ChemRIXS,
+			iq_stValve =>);
 			
 // ChemRIXS Vent Valves
 CRIX_VVC_01(i_xExtILK_OK:=(NOT stCRIX_VVC_02.q_xOPN_DO),
@@ -216,7 +221,10 @@ CRIX_VVC_10(i_xExtILK_OK:=TRUE,
       <LineId Id="233" Count="0" />
       <LineId Id="235" Count="2" />
       <LineId Id="234" Count="0" />
-      <LineId Id="76" Count="90" />
+      <LineId Id="76" Count="52" />
+      <LineId Id="277" Count="0" />
+      <LineId Id="257" Count="2" />
+      <LineId Id="129" Count="37" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
