@@ -106,12 +106,12 @@ VAR_GLOBAL
 	{attribute 'pytmc' :=' pv: CRIX:VGC:12 '}
 
     {attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E28 (EL2004)^Channel 2^Output'}	
-	CRIX_VGC_12 : FB_VCC;
+	CRIX_VGC_12 : FB_VRC;
 	
 	{attribute 'pytmc' :=' pv: CRIX:VGC:13 '}
 	
     {attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E28 (EL2004)^Channel 3^Output'}	
-	CRIX_VGC_13 : FB_VCC;
+	CRIX_VGC_13 : FB_VRC;
 	
 	
 	(* Cold trap valves; not installed	
