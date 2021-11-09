@@ -3,7 +3,10 @@
 	<Project ProjectGUID="{90FC0816-E2E5-457E-95DE-FE6F10247F95}" TargetNetId="172.21.140.47.1.1" ShowHideConfigurations="#x106">
 		<System>
 			<Licenses CacheOrCheckLicensesOnStartup="true">
-				<Target BkhfOrder="CRIX-Vacuum-PLC">
+				<Target BkhfOrder="00701833">
+					<CustomComment>
+						<![CDATA[ChemRIXS Vacuum PLC Licenses]]>
+					</CustomComment>
 					<ManualSelect>{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</ManualSelect>
 					<TargetSelect TargetId="2">{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</TargetSelect>
 					<TargetSelect TargetId="2">{BCA6EE0A-9CE1-4D3F-98CA-413ABC0D94FD}</TargetSelect>

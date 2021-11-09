@@ -376,6 +376,28 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_12.i_xOpnLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_12.i_xClsLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_13.i_xOpnLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_13.i_xClsLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_Chamber_Valves.CRIX_VGC_17.i_xOpnLS</Name>
 					<Comment>
 						<![CDATA[IO]]>
@@ -766,16 +788,10 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.CRIX_VGC_12.q_xOPN_DO</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.CRIX_VGC_13.q_xOPN_DO</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1113,10 +1129,14 @@ ETHERCAT BRRIDGE COM STATUS
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E31 (EL1004)">
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_10.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_10.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_12.i_xClsLS" VarB="Channel 4^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_12.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E33 (EL1004)">
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_11.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_11.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_13.i_xClsLS" VarB="Channel 4^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_13.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E34 (EL2004)">
 				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VVC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true"/>
@@ -1386,6 +1406,7 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xPTC_VGC_10_CLS" VarB="IO Outputs^bVGC10_CLS" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xPTC_VGC_10_OPN" VarB="IO Outputs^bVGC10_OPN" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xPTC_VGC_11_CLS" VarB="IO Outputs^bVGC11_CLS" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xPTC_VGC_11_OPN" VarB="IO Outputs^bVGC11_OPN" AutoLink="true"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>

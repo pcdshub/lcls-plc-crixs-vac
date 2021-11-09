@@ -9,7 +9,8 @@ VAR_GLOBAL
 	
 	(*ETHERCAT BRRIDGE COM STATUS*)
 	//0: Other side is in OP state, >0: Error
-	{attribute 'TcLinkTo' := 'TIIB[LAMP_PLC_E04_EL6692]^SYNC Inputs^TxPDO state
+
+	{attribute := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^SYNC Inputs^TxPDO state
 	'}
 	xEcatBridge_TxPDO_state AT %I* :BOOL;
 	
@@ -55,7 +56,7 @@ VAR_GLOBAL
 	'}
 	xPTC_VGC_11_CLS AT %Q* : BOOL;
 	
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bVGC1_OPN
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bVGC11_OPN
 	'}
 	xPTC_VGC_11_OPN AT %Q* : BOOL;
 
