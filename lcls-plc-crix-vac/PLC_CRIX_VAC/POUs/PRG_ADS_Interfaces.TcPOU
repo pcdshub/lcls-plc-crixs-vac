@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="PRG_ADS_Interfaces" Id="{70fccf59-f86c-4f14-91bf-6bc2895679a5}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_ADS_Interfaces
+VAR
+	
+    // This variable needs to be instantiated for the Watchdog to work
+	i_iWatchdog : UDINT;
+	
+	// create watch dog for LAMP PLC
+	ads_watch_dog : FB_ADS_WATCHDOG;
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[TM2K2_GCC_01_reader(	sNetId := '172.21.140.69.1.1', // AMS NET ID of RIXS vacuum PLC being read from
+	nPort := 851, // ADS port of the PLC reading from this PLC
+	sVarName := 'GVL_KFE_RIX_VAC.fb_TM2K2_K2B_GCC_1', // Full name of the FB containing the gauge to be read
+	iWatchdog := i_iWatchdog // UDINT required for watchdog functionality
+);
+
+ads_watch_dog(
+	sNetId := '172.21.140.69.1.1', // AMS NET ID of RIXS vacuum PLC reading from this PLC
+	nPort := 851, // ADS port of the PLC reading from this PLC
+	sVarName := 'GVL_RIX_INTF.ads_watch_dog', // the variable name of the watchdog on the remote plc 
+);]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_ADS_Interfaces">
+      <LineId Id="6" Count="9" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

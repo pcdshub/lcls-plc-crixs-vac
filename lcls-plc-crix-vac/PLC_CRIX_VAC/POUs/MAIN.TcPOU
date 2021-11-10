@@ -6,7 +6,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
+      <ST><![CDATA[PRG_ADS_interfaces();
+
 PRG_Chamber_Gauges();
 
 PRG_Chamber_Valves();
@@ -22,7 +23,9 @@ PRG_RCC();
 //PRG_ADS_Gauges();]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
-      <LineId Id="3" Count="7" />
+      <LineId Id="3" Count="0" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="4" Count="6" />
       <LineId Id="16" Count="0" />
       <LineId Id="15" Count="0" />
       <LineId Id="21" Count="0" />

@@ -81,12 +81,12 @@ Turbo pump inlet pressure and backing line pressure are below than configured se
 Roughing valve is open.  When roughing valve closed, start a delay timer to stop turbo after a configured time interval.
 *)
 
-(*
+
 CRIX_PTM_04_ILK_OK := F_TurboExtILK_TOF(Turbo:=CRIX_PTM_04.iq_stPTM, BackingGauge:=CRIX_GPI_05.PG,
-                            InletGauge:=CRIX_xxx_GPI_01.PG, ScrollPump:= stCRIX_MECH_PRO_01, RoughingValve:=CRIX_VGC_06.iq_stValve, tDelay:=T#200S );
+                            InletGauge:=CRIX_GCP_03.PG, ScrollPump:= stCRIX_MECH_PRO_01, RoughingValve:=CRIX_VGC_06.iq_stValve, tDelay:=T#200S );
 		  
 CRIX_PTM_04(i_xExtILKOk:=CRIX_PTM_04_ILK_OK, iq_stPtm=> );
-*)]]></ST>
+]]></ST>
     </Implementation>
     <LineIds Name="PRG_Chamber_Pumps">
       <LineId Id="3" Count="41" />

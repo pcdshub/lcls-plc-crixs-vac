@@ -11,11 +11,20 @@ VAR
 	bVGC_05_ILK : BOOL := FALSE;
 	bVGC_06_ILK : BOOL := FALSE;
 	bVGC_07_ILK : BOOL := FALSE;
+	bVGC_10_CLS_OK : BOOL := FALSE;
+	bVGC_10_OPN_OK : BOOL := FALSE;
+	bVGC_11_CLS_OK : BOOL := FALSE;
+	bVGC_11_OPN_OK : BOOL := FALSE;
+	bVGC_17_ILK : BOOL := FALSE;
 	bChamberAtVac:BOOL;
 	
 	bm_dummy_gauge : ST_VG;
 	dummy_FFFO : FB_HardwareFFOutput;
 	dummy_fbArbiter1    :   FB_Arbiter(1);
+	
+	
+	
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -103,8 +112,8 @@ CRIX_VGC_05(i_xExtILK_OK:=bVGC_05_ILK,
 
 // This is roughing valve for Load Lock Chamber , apply the same logic as roughing valves for chamber			
 			
-(*bVGC_06_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CRIX_PTM_04.iq_stPtm,
-											   i_stISG:=CRIX_LLC_GPI_01.PG,
+bVGC_06_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CRIX_PTM_04.iq_stPtm,
+											   i_stISG:=CRIX_GCP_03.PG,
 											   i_stBSG:=CRIX_GPI_05.PG,
 								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);
 
@@ -112,7 +121,7 @@ CRIX_VGC_06(i_xExtILK_OK:=bVGC_06_ILK,  // Not active right now; leave ILK to in
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stCRIX_VGC_06);
 
-*)
+
 (*
 bVGC_07_ILK := F_TurboGateValve_ILK(i_Turbo:=RIX_LI3K2_PTM_01,
 									i_stISG:=);
@@ -130,12 +139,12 @@ bm_dummy_gauge.eState := ValidLo;
 bm_dummy_gauge.rPRESS := 5e-9;
 
 CRIX_VGC_08(
-	i_stUSG:= bm_dummy_gauge,// PRG_ADS_Gauges.TM2K2_GCC_Reader.IG, 
+	i_stUSG:= TM2K2_GCC_01_reader.IG,// PRG_ADS_Gauges.TM2K2_GCC_Reader.IG, 
 	i_stDSG:= CRIX_GCC_01.IG, 
 	i_xDis_DPIlk:= FALSE, 
 	i_xPMPS_OK:= TRUE, 
 	i_xEPS_OK:= , 
-	i_xExt_OK:= , 
+	i_xExt_OK:= TRUE , 
 	i_xOverrideMode:= xSystemOverride_ChemRIXS, 
 	i_xReset:= , 
 	i_xIsAperture:= , 
@@ -161,6 +170,41 @@ CRIX_VGC_09(i_stUSG:=CRIX_GCC_01.IG,
             io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput, 
 			fbArbiter:= GVL_PMPS.g_Arbiter);
 
+(* ual acting valve, allow to close when motor is at OUT limit switch*, Open interlock pending for requirements *)
+
+bVGC_10_OPN_OK := TRUE;
+bVGC_10_CLS_OK := NOT xEcatBridge_TxPDO_state and NOT xEcatBridge_External_device_not_connected and NOT xEcatBridge_WcState 
+                   AND NOT xPTC_MOT_Y_10_IN and xPTC_MOT_Y_10_OUT;
+CRIX_VGC_10 (
+	i_OPN_OK:= bVGC_10_OPN_OK, 
+	i_CLS_OK:= bVGC_10_CLS_OK, 
+	ibCntrlHold:= FALSE , 
+	i_xOverrideMode:= xSystemOverride_ChemRIXS, 
+	iq_stValve=> );
+	
+(* ual acting valve, allow to close when motor is at OUT limit switch*, Open interlock pending for requirements *)
+
+bVGC_11_OPN_OK := TRUE;
+bVGC_11_CLS_OK := NOT xEcatBridge_TxPDO_state and NOT xEcatBridge_External_device_not_connected and NOT xEcatBridge_WcState 
+                   AND NOT xPTC_MOT_Y_11_IN and xPTC_MOT_Y_11_OUT;
+CRIX_VGC_11(
+	i_OPN_OK:= bVGC_11_OPN_OK, 
+	i_CLS_OK:= bVGC_11_CLS_OK, 
+	ibCntrlHold:= FALSE , 
+	i_xOverrideMode:= xSystemOverride_ChemRIXS, 
+	iq_stValve=> );	
+(*cold trap roughing valve, Open interlock pending for requirements*)
+
+	
+CRIX_VGC_12(i_xExtILK_OK:= True , i_xOverrideMode:= xSystemOverride_ChemRIXS, iq_stValve=> );	
+
+CRIX_VGC_13(i_xExtILK_OK:= True, i_xOverrideMode:= xSystemOverride_ChemRIXS, iq_stValve=> );
+
+
+bVGC_17_ILK := TRUE;
+CRIX_VGC_17(i_xExtILK_OK:=bVGC_17_ILK,
+			i_xOverrideMode:=xSystemOverride_ChemRIXS,
+			iq_stValve =>);
 			
 // ChemRIXS Vent Valves
 CRIX_VVC_01(i_xExtILK_OK:=(NOT stCRIX_VVC_02.q_xOPN_DO),
@@ -198,7 +242,16 @@ CRIX_VVC_09(i_xExtILK_OK:=TRUE,
 CRIX_VVC_10(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve => stCRIX_VVC_10);
-*)]]></ST>
+*)
+
+
+(* PLC interfaces to Motion PLC *)
+xPTC_VGC_10_CLS := CRIX_VGC_10.iq_stValve.i_xClsLS;
+xPTC_VGC_11_CLS := CRIX_VGC_11.iq_stValve.i_xClsLS;
+xPTC_VGC_10_OPN := CRIX_VGC_10.iq_stValve.i_xOpnLS;
+xPTC_VGC_11_OPN := CRIX_VGC_11.iq_stValve.i_xOpnLS;
+
+]]></ST>
     </Implementation>
     <LineIds Name="PRG_Chamber_Valves">
       <LineId Id="3" Count="2" />
@@ -216,8 +269,33 @@ CRIX_VVC_10(i_xExtILK_OK:=TRUE,
       <LineId Id="233" Count="0" />
       <LineId Id="235" Count="2" />
       <LineId Id="234" Count="0" />
-      <LineId Id="76" Count="90" />
+      <LineId Id="76" Count="52" />
+      <LineId Id="319" Count="2" />
+      <LineId Id="303" Count="0" />
+      <LineId Id="296" Count="0" />
+      <LineId Id="316" Count="0" />
+      <LineId Id="305" Count="4" />
+      <LineId Id="304" Count="0" />
+      <LineId Id="310" Count="0" />
+      <LineId Id="322" Count="9" />
+      <LineId Id="311" Count="0" />
+      <LineId Id="337" Count="1" />
+      <LineId Id="333" Count="0" />
+      <LineId Id="332" Count="0" />
+      <LineId Id="336" Count="0" />
+      <LineId Id="335" Count="0" />
+      <LineId Id="334" Count="0" />
+      <LineId Id="277" Count="0" />
+      <LineId Id="257" Count="2" />
+      <LineId Id="129" Count="37" />
       <LineId Id="2" Count="0" />
+      <LineId Id="365" Count="1" />
+      <LineId Id="364" Count="0" />
+      <LineId Id="367" Count="1" />
+      <LineId Id="371" Count="0" />
+      <LineId Id="370" Count="0" />
+      <LineId Id="372" Count="0" />
+      <LineId Id="369" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
