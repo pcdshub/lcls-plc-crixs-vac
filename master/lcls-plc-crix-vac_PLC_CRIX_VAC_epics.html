@@ -54,6 +54,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Data Types</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-general-fb-logmessage">LCLS_General.FB_LogMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-fb-901-ecat">LCLS_Vacuum.FB_901_ECAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-fb-972">LCLS_Vacuum.FB_972</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-fb-9xx">LCLS_Vacuum.FB_9XX</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-fb-ebaradrypump">LCLS_Vacuum.FB_EbaraDryPump</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-fb-mks275">LCLS_Vacuum.FB_MKS275</a></li>
@@ -61,9 +62,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-fb-ptm-pfeiffer">LCLS_Vacuum.FB_PTM_Pfeiffer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-fb-ptm-turbodrive">LCLS_Vacuum.FB_PTM_TurboDrive</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-fb-ptm-twistorr">LCLS_Vacuum.FB_PTM_TwisTorr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-fb-tgcc-ads">LCLS_Vacuum.FB_TGCC_ADS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-fb-vgc">LCLS_Vacuum.FB_VGC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-fb-vgc-2s">LCLS_Vacuum.FB_VGC_2S</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-fb-vrc">LCLS_Vacuum.FB_VRC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-fb-vrc-da">LCLS_Vacuum.FB_VRC_DA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-fb-vrc-nc-clsls">LCLS_Vacuum.FB_VRC_NC_ClsLS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-fb-vrc-no">LCLS_Vacuum.FB_VRC_NO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#lcls-vacuum-fb-vrc-no-ffo">LCLS_Vacuum.FB_VRC_NO_FFO</a></li>
@@ -174,6 +177,266 @@
 </section>
 <section id="lcls-vacuum-fb-901-ecat">
 <h2>LCLS_Vacuum.FB_901_ECAT<a class="headerlink" href="#lcls-vacuum-fb-901-ecat" title="Permalink to this headline"></a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):AT_VAC_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).PG.xAT_VAC</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).PG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).PG.iAutoOnTimer</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):DISC_ACTIVE_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).PG.i_xDisc_Active</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM DISC ACTIVE</div>
+<div class="line">field: ZNAM NO DISC</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):HV_DIS_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).PG.q_xHV_DIS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):HV_ON_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).PG.i_xHV_ON</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):HV_SW</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).PG.xHV_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):HV_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).PG.xHV_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):ILK_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).PG.xILKOk</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OK</div>
+<div class="line">field: ZNAM NOT OK</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):LOGGER</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).PG.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):LOGGER_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).PG.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PRESS_AI_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).PG.i_iPRESS_R</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PRESS_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).PG.xPRESS_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PRESS_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).PG.rPRESS</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PRO_SP</p></td>
+<td><p>ao</p></td>
+<td><p>$(SYMBOL).PG.rPRO_SP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PRO_SP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).PG.rPRO_SP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):SP_HYS</p></td>
+<td><p>ao</p></td>
+<td><p>$(SYMBOL).PG.rHYS_PR</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):SP_HYS_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).PG.rHYS_PR</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>$(SYMBOL).PG.eState</p></td>
+<td><div class="line-block">
+<div class="line">field: FRST Starting</div>
+<div class="line">field: FVST Valid</div>
+<div class="line">field: ONST GaugeDisconnected</div>
+<div class="line">field: SVST ValidLo</div>
+<div class="line">field: SXST ValidHi</div>
+<div class="line">field: THST PressInvalid</div>
+<div class="line">field: TWST OoR</div>
+<div class="line">field: ZRST Off</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):VAC_SP</p></td>
+<td><p>ao</p></td>
+<td><p>$(SYMBOL).PG.rVAC_SP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):VAC_SP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).PG.rVAC_SP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lcls-vacuum-fb-972">
+<h2>LCLS_Vacuum.FB_972<a class="headerlink" href="#lcls-vacuum-fb-972" title="Permalink to this headline"></a></h2>
 <table class="docutils align-center">
 <colgroup>
 <col style="width: 25%" />
@@ -2251,6 +2514,266 @@
 </tbody>
 </table>
 </section>
+<section id="lcls-vacuum-fb-tgcc-ads">
+<h2>LCLS_Vacuum.FB_TGCC_ADS<a class="headerlink" href="#lcls-vacuum-fb-tgcc-ads" title="Permalink to this headline"></a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):AT_VAC_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).IG.xAT_VAC</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).IG.iAutoOnTimer</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):DISC_ACTIVE_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).IG.i_xDisc_Active</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM DISC ACTIVE</div>
+<div class="line">field: ZNAM NO DISC</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):HV_DIS_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).IG.q_xHV_DIS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):HV_ON_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).IG.i_xHV_ON</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):HV_SW</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).IG.xHV_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):HV_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).IG.xHV_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):ILK_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).IG.xILKOk</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OK</div>
+<div class="line">field: ZNAM NOT OK</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):LOGGER</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).IG.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):LOGGER_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).IG.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PRESS_AI_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>$(SYMBOL).IG.i_iPRESS_R</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PRESS_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).IG.xPRESS_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PRESS_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).IG.rPRESS</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):PRO_SP</p></td>
+<td><p>ao</p></td>
+<td><p>$(SYMBOL).IG.rPRO_SP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):PRO_SP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).IG.rPRO_SP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):SP_HYS</p></td>
+<td><p>ao</p></td>
+<td><p>$(SYMBOL).IG.rHYS_PR</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):SP_HYS_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).IG.rHYS_PR</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>$(SYMBOL).IG.eState</p></td>
+<td><div class="line-block">
+<div class="line">field: FRST Starting</div>
+<div class="line">field: FVST Valid</div>
+<div class="line">field: ONST GaugeDisconnected</div>
+<div class="line">field: SVST ValidLo</div>
+<div class="line">field: SXST ValidHi</div>
+<div class="line">field: THST PressInvalid</div>
+<div class="line">field: TWST OoR</div>
+<div class="line">field: ZRST Off</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):VAC_SP</p></td>
+<td><p>ao</p></td>
+<td><p>$(SYMBOL).IG.rVAC_SP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):VAC_SP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>$(SYMBOL).IG.rVAC_SP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="lcls-vacuum-fb-vgc">
 <h2>LCLS_Vacuum.FB_VGC<a class="headerlink" href="#lcls-vacuum-fb-vgc" title="Permalink to this headline"></a></h2>
 <table class="docutils align-center">
@@ -3305,6 +3828,310 @@
 <div class="line">field: ONAM OK</div>
 <div class="line">field: ZNAM NOT OK</div>
 <div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):FORCE_OPN</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).iq_stValve.pv_xOvrdOpn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM FORCE OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):FORCE_OPN_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stValve.pv_xOvrdOpn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM FORCE OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):LOGGER</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).iq_stValve.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):LOGGER_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stValve.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):OPN_DI_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stValve.i_xOpnLS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):OPN_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stValve.q_xOPN_DO</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):OPN_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stValve.xOPN_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPN ILK OK</div>
+<div class="line">field: ZNAM OPN ILK NOT OK</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):OPN_SW</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).iq_stValve.pv_xOPN_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM CLOSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):OPN_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stValve.pv_xOPN_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM CLOSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):OVRD_ON</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).iq_stValve.xOverrideMode</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM Override ON</div>
+<div class="line">field: ZNAM Override OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):OVRD_ON_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stValve.xOverrideMode</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM Override ON</div>
+<div class="line">field: ZNAM Override OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):POS_STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>$(SYMBOL).iq_stValve.eState</p></td>
+<td><div class="line-block">
+<div class="line">field: FRST OPEN_F</div>
+<div class="line">field: ONST CLOSED</div>
+<div class="line">field: THST INVALID</div>
+<div class="line">field: TWST MOVING</div>
+<div class="line">field: ZRST OPEN</div>
+<div class="line">io: input</div>
+<div class="line">type: mbbi</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>$(SYMBOL).iq_stValve.eVGC_State</p></td>
+<td><div class="line-block">
+<div class="line">field: EIST Close Timeout</div>
+<div class="line">field: FRST Ext Fault</div>
+<div class="line">field: FVST AT Vacuum</div>
+<div class="line">field: NIST Open Timeout</div>
+<div class="line">field: ONST At Vacuum</div>
+<div class="line">field: SVST Vacuum Fault</div>
+<div class="line">field: SXST Triggered</div>
+<div class="line">field: THST Lost Vacuum</div>
+<div class="line">field: TWST Differential Pressure</div>
+<div class="line">field: ZRST Vented</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lcls-vacuum-fb-vrc-da">
+<h2>LCLS_Vacuum.FB_VRC_DA<a class="headerlink" href="#lcls-vacuum-fb-vrc-da" title="Permalink to this headline"></a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Record</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Pragma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$(PREFIX):ALM_RST</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).iq_stValve.pv_xAlmRst</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):ALM_RST_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stValve.pv_xAlmRst</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):CLS_DI_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stValve.i_xClsLS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):CLS_DO</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).iq_stValve.q_xCLS_DO</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):CLS_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stValve.q_xCLS_DO</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):CLS_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stValve.xCLS_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):CLS_SW</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).iq_stValve.pv_xCLS_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):CLS_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stValve.pv_xCLS_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):ErrMsg</p></td>
+<td><p>waveform</p></td>
+<td><p>$(SYMBOL).iq_stValve.sErrorMessage</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):ErrMsg_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>$(SYMBOL).iq_stValve.sErrorMessage</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):ERROR</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).iq_stValve.bErrorPresent</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ERROR PRESENT</div>
+<div class="line">field: ZNAM NO ERROR</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):ERROR_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stValve.bErrorPresent</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ERROR PRESENT</div>
+<div class="line">field: ZNAM NO ERROR</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):EXT_ILK_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stValve.xEXT_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OK</div>
+<div class="line">field: ZNAM NOT OK</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>$(PREFIX):FORCE_CLS</p></td>
+<td><p>bo</p></td>
+<td><p>$(SYMBOL).iq_stValve.pv_xOvrdCls</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>$(PREFIX):FORCE_CLS_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>$(SYMBOL).iq_stValve.pv_xOvrdCls</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
 </div>
 </td>
 </tr>
@@ -29116,6 +29943,1018 @@
 </div>
 </td>
 </tr>
+<tr class="row-odd"><td><p>CRIX:VGC:10:ALM_RST</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.pv_xAlmRst</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:10:ALM_RST_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.pv_xAlmRst</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:10:CLS_DI_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.i_xClsLS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:10:CLS_DO</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.q_xCLS_DO</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:10:CLS_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.q_xCLS_DO</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:10:CLS_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.xCLS_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:10:CLS_SW</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.pv_xCLS_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:10:CLS_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.pv_xCLS_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:10:ErrMsg</p></td>
+<td><p>waveform</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.sErrorMessage</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:10:ErrMsg_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.sErrorMessage</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:10:ERROR</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.bErrorPresent</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ERROR PRESENT</div>
+<div class="line">field: ZNAM NO ERROR</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:10:ERROR_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.bErrorPresent</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ERROR PRESENT</div>
+<div class="line">field: ZNAM NO ERROR</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:10:EXT_ILK_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.xEXT_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OK</div>
+<div class="line">field: ZNAM NOT OK</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:10:FORCE_CLS</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.pv_xOvrdCls</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:10:FORCE_CLS_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.pv_xOvrdCls</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:10:FORCE_OPN</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.pv_xOvrdOpn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM FORCE OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:10:FORCE_OPN_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.pv_xOvrdOpn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM FORCE OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:10:LOGGER</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:10:LOGGER_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:10:OPN_DI_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.i_xOpnLS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:10:OPN_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.q_xOPN_DO</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:10:OPN_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.xOPN_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPN ILK OK</div>
+<div class="line">field: ZNAM OPN ILK NOT OK</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:10:OPN_SW</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.pv_xOPN_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM CLOSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:10:OPN_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.pv_xOPN_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM CLOSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:10:OVRD_ON</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.xOverrideMode</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM Override ON</div>
+<div class="line">field: ZNAM Override OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:10:OVRD_ON_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.xOverrideMode</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM Override ON</div>
+<div class="line">field: ZNAM Override OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:10:POS_STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.eState</p></td>
+<td><div class="line-block">
+<div class="line">field: FRST OPEN_F</div>
+<div class="line">field: ONST CLOSED</div>
+<div class="line">field: THST INVALID</div>
+<div class="line">field: TWST MOVING</div>
+<div class="line">field: ZRST OPEN</div>
+<div class="line">io: input</div>
+<div class="line">type: mbbi</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:10:STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_10.iq_stValve.eVGC_State</p></td>
+<td><div class="line-block">
+<div class="line">field: EIST Close Timeout</div>
+<div class="line">field: FRST Ext Fault</div>
+<div class="line">field: FVST AT Vacuum</div>
+<div class="line">field: NIST Open Timeout</div>
+<div class="line">field: ONST At Vacuum</div>
+<div class="line">field: SVST Vacuum Fault</div>
+<div class="line">field: SXST Triggered</div>
+<div class="line">field: THST Lost Vacuum</div>
+<div class="line">field: TWST Differential Pressure</div>
+<div class="line">field: ZRST Vented</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:11:ALM_RST</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.pv_xAlmRst</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:11:ALM_RST_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.pv_xAlmRst</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:11:CLS_DI_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.i_xClsLS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:11:CLS_DO</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.q_xCLS_DO</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:11:CLS_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.q_xCLS_DO</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:11:CLS_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.xCLS_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:11:CLS_SW</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.pv_xCLS_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:11:CLS_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.pv_xCLS_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:11:ErrMsg</p></td>
+<td><p>waveform</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.sErrorMessage</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:11:ErrMsg_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.sErrorMessage</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:11:ERROR</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.bErrorPresent</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ERROR PRESENT</div>
+<div class="line">field: ZNAM NO ERROR</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:11:ERROR_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.bErrorPresent</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ERROR PRESENT</div>
+<div class="line">field: ZNAM NO ERROR</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:11:EXT_ILK_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.xEXT_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OK</div>
+<div class="line">field: ZNAM NOT OK</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:11:FORCE_CLS</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.pv_xOvrdCls</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:11:FORCE_CLS_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.pv_xOvrdCls</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM OPEN</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:11:FORCE_OPN</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.pv_xOvrdOpn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM FORCE OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:11:FORCE_OPN_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.pv_xOvrdOpn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM FORCE OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:11:LOGGER</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:11:LOGGER_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:11:OPN_DI_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.i_xOpnLS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:11:OPN_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.q_xOPN_DO</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:11:OPN_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.xOPN_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPN ILK OK</div>
+<div class="line">field: ZNAM OPN ILK NOT OK</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:11:OPN_SW</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.pv_xOPN_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM CLOSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:11:OPN_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.pv_xOPN_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM CLOSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:11:OVRD_ON</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.xOverrideMode</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM Override ON</div>
+<div class="line">field: ZNAM Override OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:11:OVRD_ON_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.xOverrideMode</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM Override ON</div>
+<div class="line">field: ZNAM Override OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:11:POS_STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.eState</p></td>
+<td><div class="line-block">
+<div class="line">field: FRST OPEN_F</div>
+<div class="line">field: ONST CLOSED</div>
+<div class="line">field: THST INVALID</div>
+<div class="line">field: TWST MOVING</div>
+<div class="line">field: ZRST OPEN</div>
+<div class="line">io: input</div>
+<div class="line">type: mbbi</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:11:STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_11.iq_stValve.eVGC_State</p></td>
+<td><div class="line-block">
+<div class="line">field: EIST Close Timeout</div>
+<div class="line">field: FRST Ext Fault</div>
+<div class="line">field: FVST AT Vacuum</div>
+<div class="line">field: NIST Open Timeout</div>
+<div class="line">field: ONST At Vacuum</div>
+<div class="line">field: SVST Vacuum Fault</div>
+<div class="line">field: SXST Triggered</div>
+<div class="line">field: THST Lost Vacuum</div>
+<div class="line">field: TWST Differential Pressure</div>
+<div class="line">field: ZRST Vented</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:12:ALM_RST</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.pv_xAlmRst</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:12:ALM_RST_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.pv_xAlmRst</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:12:CLS_DI_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.i_xClsLS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:12:CLS_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.xCLS_OK</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:12:ErrMsg</p></td>
+<td><p>waveform</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.sErrorMessage</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:12:ErrMsg_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.sErrorMessage</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:12:ERROR</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.bErrorPresent</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ERROR PRESENT</div>
+<div class="line">field: ZNAM NO ERROR</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:12:ERROR_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.bErrorPresent</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ERROR PRESENT</div>
+<div class="line">field: ZNAM NO ERROR</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:12:EXT_ILK_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.xEXT_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OK</div>
+<div class="line">field: ZNAM NOT OK</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:12:FORCE_OPN</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.pv_xOvrdOpn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM FORCE OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:12:FORCE_OPN_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.pv_xOvrdOpn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM FORCE OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:12:LOGGER</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:12:LOGGER_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:12:OPN_DI_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.i_xOpnLS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:12:OPN_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.q_xOPN_DO</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:12:OPN_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.xOPN_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPN ILK OK</div>
+<div class="line">field: ZNAM OPN ILK NOT OK</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:12:OPN_SW</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.pv_xOPN_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM CLOSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:12:OPN_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.pv_xOPN_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM CLOSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:12:OVRD_ON</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.xOverrideMode</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM Override ON</div>
+<div class="line">field: ZNAM Override OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:12:OVRD_ON_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.xOverrideMode</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM Override ON</div>
+<div class="line">field: ZNAM Override OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:12:POS_STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.eState</p></td>
+<td><div class="line-block">
+<div class="line">field: FRST OPEN_F</div>
+<div class="line">field: ONST CLOSED</div>
+<div class="line">field: THST INVALID</div>
+<div class="line">field: TWST MOVING</div>
+<div class="line">field: ZRST OPEN</div>
+<div class="line">io: input</div>
+<div class="line">type: mbbi</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:12:STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_12.iq_stValve.eVGC_State</p></td>
+<td><div class="line-block">
+<div class="line">field: EIST Close Timeout</div>
+<div class="line">field: FRST Ext Fault</div>
+<div class="line">field: FVST AT Vacuum</div>
+<div class="line">field: NIST Open Timeout</div>
+<div class="line">field: ONST At Vacuum</div>
+<div class="line">field: SVST Vacuum Fault</div>
+<div class="line">field: SXST Triggered</div>
+<div class="line">field: THST Lost Vacuum</div>
+<div class="line">field: TWST Differential Pressure</div>
+<div class="line">field: ZRST Vented</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:13:ALM_RST</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.pv_xAlmRst</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:13:ALM_RST_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.pv_xAlmRst</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:13:CLS_DI_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.i_xClsLS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:13:CLS_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.xCLS_OK</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:13:ErrMsg</p></td>
+<td><p>waveform</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.sErrorMessage</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:13:ErrMsg_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.sErrorMessage</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:13:ERROR</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.bErrorPresent</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ERROR PRESENT</div>
+<div class="line">field: ZNAM NO ERROR</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:13:ERROR_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.bErrorPresent</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ERROR PRESENT</div>
+<div class="line">field: ZNAM NO ERROR</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:13:EXT_ILK_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.xEXT_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OK</div>
+<div class="line">field: ZNAM NOT OK</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:13:FORCE_OPN</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.pv_xOvrdOpn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM FORCE OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:13:FORCE_OPN_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.pv_xOvrdOpn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM FORCE OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:13:LOGGER</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:13:LOGGER_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:13:OPN_DI_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.i_xOpnLS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:13:OPN_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.q_xOPN_DO</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:13:OPN_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.xOPN_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPN ILK OK</div>
+<div class="line">field: ZNAM OPN ILK NOT OK</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:13:OPN_SW</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.pv_xOPN_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM CLOSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:13:OPN_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.pv_xOPN_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM CLOSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:13:OVRD_ON</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.xOverrideMode</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM Override ON</div>
+<div class="line">field: ZNAM Override OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:13:OVRD_ON_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.xOverrideMode</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM Override ON</div>
+<div class="line">field: ZNAM Override OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>CRIX:VGC:13:POS_STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.eState</p></td>
+<td><div class="line-block">
+<div class="line">field: FRST OPEN_F</div>
+<div class="line">field: ONST CLOSED</div>
+<div class="line">field: THST INVALID</div>
+<div class="line">field: TWST MOVING</div>
+<div class="line">field: ZRST OPEN</div>
+<div class="line">io: input</div>
+<div class="line">type: mbbi</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>CRIX:VGC:13:STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.eVGC_State</p></td>
+<td><div class="line-block">
+<div class="line">field: EIST Close Timeout</div>
+<div class="line">field: FRST Ext Fault</div>
+<div class="line">field: FVST AT Vacuum</div>
+<div class="line">field: NIST Open Timeout</div>
+<div class="line">field: ONST At Vacuum</div>
+<div class="line">field: SVST Vacuum Fault</div>
+<div class="line">field: SXST Triggered</div>
+<div class="line">field: THST Lost Vacuum</div>
+<div class="line">field: TWST Differential Pressure</div>
+<div class="line">field: ZRST Vented</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
 <tr class="row-odd"><td><p>CRIX:VGC:17:ALM_RST</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_Chamber_Valves.CRIX_VGC_17.iq_stValve.pv_xAlmRst</p></td>
@@ -32338,6 +34177,246 @@
 <td><div class="line-block">
 <div class="line">field: ONAM Override ON</div>
 <div class="line">field: ZNAM Override OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TM2K2:GCC:01:reader:AT_VAC_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.xAT_VAC</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TM2K2:GCC:01:reader:Auto_On</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TM2K2:GCC:01:reader:Auto_On_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.xAutoOn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TM2K2:GCC:01:reader:AutoOn_timer_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.iAutoOnTimer</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TM2K2:GCC:01:reader:DISC_ACTIVE_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.i_xDisc_Active</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM DISC ACTIVE</div>
+<div class="line">field: ZNAM NO DISC</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TM2K2:GCC:01:reader:HV_DIS_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.q_xHV_DIS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TM2K2:GCC:01:reader:HV_ON_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.i_xHV_ON</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TM2K2:GCC:01:reader:HV_SW</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.xHV_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TM2K2:GCC:01:reader:HV_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.xHV_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TM2K2:GCC:01:reader:ILK_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.xILKOk</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OK</div>
+<div class="line">field: ZNAM NOT OK</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TM2K2:GCC:01:reader:LOGGER</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TM2K2:GCC:01:reader:LOGGER_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TM2K2:GCC:01:reader:PRESS_AI_RBV</p></td>
+<td><p>longin</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.i_iPRESS_R</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TM2K2:GCC:01:reader:PRESS_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.xPRESS_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TM2K2:GCC:01:reader:PRESS_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.rPRESS</p></td>
+<td><div class="line-block">
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TM2K2:GCC:01:reader:PRO_SP</p></td>
+<td><p>ao</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.rPRO_SP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TM2K2:GCC:01:reader:PRO_SP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.rPRO_SP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TM2K2:GCC:01:reader:SP_HYS</p></td>
+<td><p>ao</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.rHYS_PR</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TM2K2:GCC:01:reader:SP_HYS_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.rHYS_PR</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TM2K2:GCC:01:reader:STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.eState</p></td>
+<td><div class="line-block">
+<div class="line">field: FRST Starting</div>
+<div class="line">field: FVST Valid</div>
+<div class="line">field: ONST GaugeDisconnected</div>
+<div class="line">field: SVST ValidLo</div>
+<div class="line">field: SXST ValidHi</div>
+<div class="line">field: THST PressInvalid</div>
+<div class="line">field: TWST OoR</div>
+<div class="line">field: ZRST Off</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TM2K2:GCC:01:reader:VAC_SP</p></td>
+<td><p>ao</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.rVAC_SP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>TM2K2:GCC:01:reader:VAC_SP_RBV</p></td>
+<td><p>ai</p></td>
+<td><p>GVL_ADS_Devices.TM2K2_GCC_01_reader.IG.rVAC_SP</p></td>
+<td><div class="line-block">
+<div class="line">autosave_pass1: VAL DESC</div>
+<div class="line">field: EGU “TORR”</div>
+<div class="line">field: HOPR 1000</div>
+<div class="line">field: LOPR 0</div>
+<div class="line">field: PREC 2</div>
 <div class="line">io: output</div>
 </div>
 </td>

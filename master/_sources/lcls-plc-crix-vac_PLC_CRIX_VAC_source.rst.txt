@@ -30,6 +30,25 @@ GVLs
 ----
 
 
+GVL_ADS_Devices
+^^^^^^^^^^^^^^^
+
+::
+
+    //{attribute 'qualified_only'}
+    VAR_GLOBAL
+
+    //	{attribute 'pytmc' :=' pv: LAMP:ROUGH:GPI04:reader '}
+    //	LAMP_ROUGH_GPI04_reader : FB_TGPI_ADS;
+    	
+     {attribute 'pytmc' :=' pv: TM2K2:GCC:01:reader '}		
+    	TM2K2_GCC_01_reader : FB_TGCC_ADS;
+    		
+    END_VAR
+
+
+
+
 GVL_Chamber_Gauges
 ^^^^^^^^^^^^^^^^^^
 
@@ -82,21 +101,21 @@ GVL_Chamber_Gauges
     	
     	{attribute 'pytmc' :=' pv: CRIX:GCP:01 '}
     	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 1^Value '}
-    	CRIX_GCP_01 : FB_9XX;
+    	CRIX_GCP_01 : FB_972;
     	
     	stCRIX_GCP_01 : ST_VG;
     	
     	{attribute 'pytmc' :=' pv: CRIX:GCP:02 '}
     	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 2^Value '}
-    	CRIX_GCP_02 : FB_9XX;
+    	CRIX_GCP_02 : FB_972;
     	
     	stCRIX_GCP_02 : ST_VG;
     	
     	{attribute 'pytmc' :=' pv: CRIX:GCP:03 '}
     	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 3^Value '}
-    	CRIX_GCP_03 : FB_9XX;
+    	CRIX_GCP_03 : FB_972;
     	
-    	stCRIX_GCP_03 : ST_VG;
+    //	stCRIX_GCP_03 : ST_VG;
     	
     END_VAR
 
@@ -187,39 +206,42 @@ GVL_Chamber_Valves
     								 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E29 (EL1004)^Channel 2^Input;
     								 .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E26 (EL2004)^Channel 1^Output'}
     	CRIX_VGC_09 : FB_VGC;
-    (*	
-    	{attribute 'pytmc' :=' pv: CRIX:VGC:10 '}
-    	(* 
-    	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
-    								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
-    								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
-    	*)
-    	CRIX_VGC_10 : FB_VGC;
+    	
+    	{attribute 'pytmc' :=' pv: CRIX:VGC:10 '}	
+        {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E31 (EL1004)^Channel 1^Input;
+    								 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E31 (EL1004)^Channel 2^Input;
+    								.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E26 (EL2004)^Channel 2^Output;
+                                    .q_xCLS_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E26 (EL2004)^Channel 3^Output'}
+    	
+    		
+    	CRIX_VGC_10 : FB_VRC_DA;
     	
     	{attribute 'pytmc' :=' pv: CRIX:VGC:11 '}
-    	(* 
-    	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
-    								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
-    								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
-    	*)
-    	CRIX_VGC_11 : FB_VGC;
 
-    (* Cold trap valves; not installed	
+         {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E33 (EL1004)^Channel 1^Input;
+    								 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E33 (EL1004)^Channel 2^Input;
+    								.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E26 (EL2004)^Channel 4^Output;
+                                    .q_xCLS_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E28 (EL2004)^Channel 1^Output'}	
+    	
+    	CRIX_VGC_11 : FB_VRC_DA;
+
+
     	{attribute 'pytmc' :=' pv: CRIX:VGC:12 '}
-    	(* 
-    	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
-    								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
-    								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
-    	*)
-    	CRIX_VGC_12 : FB_VGC;
+
+        {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E31 (EL1004)^Channel 3^Input;
+    								 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E31 (EL1004)^Channel 4^Input;
+                                     .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E28 (EL2004)^Channel 2^Output'}	
+    	CRIX_VGC_12 : FB_VRC;
     	
     	{attribute 'pytmc' :=' pv: CRIX:VGC:13 '}
-    	(* 
-    	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;
-    								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
-    								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
-    	*)
-    	CRIX_VGC_13 : FB_VGC;
+    	
+        {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E33 (EL1004)^Channel 3^Input;
+    								 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E33 (EL1004)^Channel 4^Input;
+                                     .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E28 (EL2004)^Channel 3^Output'}	
+    	CRIX_VGC_13 : FB_VRC;
+    	
+    	
+    	(* Cold trap valves; not installed	
     	
     	{attribute 'pytmc' :=' pv: CRIX:VGC:14 '}
     	(* 
@@ -227,6 +249,8 @@ GVL_Chamber_Valves
     								 .i_xClsLS	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 2^Input;
     								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
     	*)
+    	
+    	
     	CRIX_VGC_14 : FB_VGC;
     	
     	{attribute 'pytmc' :=' pv: CRIX:VGC:15 '}
@@ -236,7 +260,11 @@ GVL_Chamber_Valves
     								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
     	*)
     	CRIX_VGC_15 : FB_VGC;
-    Cold trap valves; not installed *)
+
+
+
+
+
        
     	{attribute 'pytmc' :=' pv: CRIX:VGC:16 '}
     	(* 
@@ -578,6 +606,77 @@ GVL_Mech_Room
 
 
 
+GVL_PLC_Interfaces
+^^^^^^^^^^^^^^^^^^
+
+::
+
+    //{attribute 'qualified_only'}
+    VAR_GLOBAL
+    	(*CRIX Vac*)
+    	//Outputs
+    //	fb_ADS_WATCHDOG_VAC_LAMP_TMO:FB_ADS_WATCHDOG;
+    	
+    	(*ETHERCAT BRRIDGE COM STATUS*)
+    	//0: Other side is in OP state, >0: Error
+
+    	{attribute := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^SYNC Inputs^TxPDO state
+    	'}
+    	xEcatBridge_TxPDO_state AT %I* :BOOL;
+    	
+    	//0: External device connectd, 1: External device not connected
+    	{attribute := 'TIIB[Term 95 (EL6695)]^SYNC Inputs^External device not connected
+    	'}
+    	xEcatBridge_External_device_not_connected AT %I* : BOOL;
+    	
+    	//0 = Data valid, 1 = Data invalid
+    	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^WcState^WcState
+    	'}
+    		
+    	xEcatBridge_WcState AT %I* : BOOL;
+    	
+    	(*I/O Inputs to CRIX motion plc*)	
+    	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_IN 
+    	'}
+    	xPTC_MOT_Y_10_IN AT %I* : BOOL;
+    	
+    	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_OUT
+    	'}
+    	xPTC_MOT_Y_10_OUT AT %I* : BOOL;
+    	
+    	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_IN 
+    	'}
+    	xPTC_MOT_Y_11_IN AT %I* : BOOL;
+    	
+    	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_OUT
+    	'}
+    	xPTC_MOT_Y_11_OUT AT %I* : BOOL;
+    	
+    	(*I/O Outputs to CRIX Motion PLC*)
+    	
+    	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bVGC10_CLS
+    	'}
+    	xPTC_VGC_10_CLS AT %Q* : BOOL;
+    	
+    	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bVGC10_OPN
+    	'}
+    	xPTC_VGC_10_OPN AT %Q* : BOOL;
+    	
+    	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bVGC11_CLS
+    	'}
+    	xPTC_VGC_11_CLS AT %Q* : BOOL;
+    	
+    	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bVGC11_OPN
+    	'}
+    	xPTC_VGC_11_OPN AT %Q* : BOOL;
+
+
+    	
+    END_VAR
+
+
+
+
 GVL_PMPS
 ^^^^^^^^
 
@@ -642,15 +741,15 @@ GVL_Pumps
     	
     	
     	(* Pfeiffer Turbo Pumps TC400 *)
-    	(*
-    	{attribute 'TcLinkTo' := 	'.i_xAtSpd			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E6 (EL1004)^Channel 4^Input;
-    								 .i_xRemote			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E8 (EL1004)^Channel 1^Input;
-    								 .i_xFaultNC		:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E8 (EL1004)^Channel 2^Input;					 
-    								 .q_RunDO			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E7 (EL2004)^Channel 4^Output;
-    								 .q_xRemote			:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E9 (EL2004)^Channel 1^Output;
-    								 .q_PumpingStation	:=	TIIB[TMO_K4S6_DRL_01 (EK1100)]^K4S6_01_E9 (EL2004)^Channel 2^Output				 
+    	
+    	{attribute 'TcLinkTo' := 	'.i_xAtSpd			:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E49 (EL1004)^Channel 1^Input;
+    								 .i_xRemote			:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E49 (EL1004)^Channel 2^Input;
+    								 .i_xFaultNC		:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E49 (EL1004)^Channel 3^Input;					 
+    								 .q_RunDO			:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E50 (EL2004)^Channel 1^Output;
+    								 .q_xRemote			:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E50 (EL2004)^Channel 2^Output;
+    								 .q_PumpingStation	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E50 (EL2004)^Channel 3^Output				 
     	'}
-    	*)
+    	
     	{attribute 'pytmc' := '
     		pv: CRIX:PTM:04
     		io: io
@@ -858,6 +957,8 @@ MAIN
     PROGRAM MAIN
     VAR
     END_VAR
+    PRG_ADS_interfaces();
+
     PRG_Chamber_Gauges();
 
     PRG_Chamber_Valves();
@@ -920,6 +1021,38 @@ PRG_ADS_Gauges
 
 
 
+PRG_ADS_Interfaces
+^^^^^^^^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_ADS_Interfaces
+    VAR
+    	
+        // This variable needs to be instantiated for the Watchdog to work
+    	i_iWatchdog : UDINT;
+    	
+    	// create watch dog for LAMP PLC
+    	ads_watch_dog : FB_ADS_WATCHDOG;
+    	
+    END_VAR
+    TM2K2_GCC_01_reader(	sNetId := '172.21.140.69.1.1', // AMS NET ID of RIXS vacuum PLC being read from
+    	nPort := 851, // ADS port of the PLC reading from this PLC
+    	sVarName := 'GVL_KFE_RIX_VAC.fb_TM2K2_K2B_GCC_1', // Full name of the FB containing the gauge to be read
+    	iWatchdog := i_iWatchdog // UDINT required for watchdog functionality
+    );
+
+    ads_watch_dog(
+    	sNetId := '172.21.140.69.1.1', // AMS NET ID of RIXS vacuum PLC reading from this PLC
+    	nPort := 851, // ADS port of the PLC reading from this PLC
+    	sVarName := 'GVL_RIX_INTF.ads_watch_dog', // the variable name of the watchdog on the remote plc 
+    );
+
+    END_PROGRAM
+
+
+
+
 PRG_Chamber_Gauges
 ^^^^^^^^^^^^^^^^^^
 
@@ -949,16 +1082,16 @@ PRG_Chamber_Gauges
     CRIX_GCC_01(PG:=CRIX_GPI_01.PG,
     			IG=>stCRIX_GCC_01);
 
-    (*
+
     CRIX_GCP_01.M_SetBits(30518);
     CRIX_GCP_01(PG=>stCRIX_GCP_01);
 
     CRIX_GCP_02.M_SetBits(30518);
     CRIX_GCP_02(PG=>stCRIX_GCP_02);
-    *)
+
 
     CRIX_GCP_03.M_SetBits(30518);
-    CRIX_GCP_03(PG=>stCRIX_GCP_03);
+    CRIX_GCP_03(PG=>);
 
     END_PROGRAM
 
@@ -1048,12 +1181,11 @@ PRG_Chamber_Pumps
     Roughing valve is open.  When roughing valve closed, start a delay timer to stop turbo after a configured time interval.
     *)
 
-    (*
+
     CRIX_PTM_04_ILK_OK := F_TurboExtILK_TOF(Turbo:=CRIX_PTM_04.iq_stPTM, BackingGauge:=CRIX_GPI_05.PG,
-                                InletGauge:=CRIX_xxx_GPI_01.PG, ScrollPump:= stCRIX_MECH_PRO_01, RoughingValve:=CRIX_VGC_06.iq_stValve, tDelay:=T#200S );
+                                InletGauge:=CRIX_GCP_03.PG, ScrollPump:= stCRIX_MECH_PRO_01, RoughingValve:=CRIX_VGC_06.iq_stValve, tDelay:=T#200S );
     		  
     CRIX_PTM_04(i_xExtILKOk:=CRIX_PTM_04_ILK_OK, iq_stPtm=> );
-    *)
 
     END_PROGRAM
 
@@ -1077,11 +1209,20 @@ PRG_Chamber_Valves
     	bVGC_05_ILK : BOOL := FALSE;
     	bVGC_06_ILK : BOOL := FALSE;
     	bVGC_07_ILK : BOOL := FALSE;
+    	bVGC_10_CLS_OK : BOOL := FALSE;
+    	bVGC_10_OPN_OK : BOOL := FALSE;
+    	bVGC_11_CLS_OK : BOOL := FALSE;
+    	bVGC_11_OPN_OK : BOOL := FALSE;
+    	bVGC_17_ILK : BOOL := FALSE;
     	bChamberAtVac:BOOL;
     	
     	bm_dummy_gauge : ST_VG;
     	dummy_FFFO : FB_HardwareFFOutput;
     	dummy_fbArbiter1    :   FB_Arbiter(1);
+    	
+    	
+    	
+    	
     END_VAR
     (* Roughing manifold logic *)
 
@@ -1167,8 +1308,8 @@ PRG_Chamber_Valves
 
     // This is roughing valve for Load Lock Chamber , apply the same logic as roughing valves for chamber			
     			
-    (*bVGC_06_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CRIX_PTM_04.iq_stPtm,
-    											   i_stISG:=CRIX_LLC_GPI_01.PG,
+    bVGC_06_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CRIX_PTM_04.iq_stPtm,
+    											   i_stISG:=CRIX_GCP_03.PG,
     											   i_stBSG:=CRIX_GPI_05.PG,
     								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);
 
@@ -1176,7 +1317,7 @@ PRG_Chamber_Valves
     			i_xOverrideMode:=xSystemOverride_ChemRIXS,
     			iq_stValve =>stCRIX_VGC_06);
 
-    *)
+
     (*
     bVGC_07_ILK := F_TurboGateValve_ILK(i_Turbo:=RIX_LI3K2_PTM_01,
     									i_stISG:=);
@@ -1194,12 +1335,12 @@ PRG_Chamber_Valves
     bm_dummy_gauge.rPRESS := 5e-9;
 
     CRIX_VGC_08(
-    	i_stUSG:= bm_dummy_gauge,// PRG_ADS_Gauges.TM2K2_GCC_Reader.IG, 
+    	i_stUSG:= TM2K2_GCC_01_reader.IG,// PRG_ADS_Gauges.TM2K2_GCC_Reader.IG, 
     	i_stDSG:= CRIX_GCC_01.IG, 
     	i_xDis_DPIlk:= FALSE, 
     	i_xPMPS_OK:= TRUE, 
     	i_xEPS_OK:= , 
-    	i_xExt_OK:= , 
+    	i_xExt_OK:= TRUE , 
     	i_xOverrideMode:= xSystemOverride_ChemRIXS, 
     	i_xReset:= , 
     	i_xIsAperture:= , 
@@ -1225,6 +1366,41 @@ PRG_Chamber_Valves
                 io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput, 
     			fbArbiter:= GVL_PMPS.g_Arbiter);
 
+    (* ual acting valve, allow to close when motor is at OUT limit switch*, Open interlock pending for requirements *)
+
+    bVGC_10_OPN_OK := TRUE;
+    bVGC_10_CLS_OK := NOT xEcatBridge_TxPDO_state and NOT xEcatBridge_External_device_not_connected and NOT xEcatBridge_WcState 
+                       AND NOT xPTC_MOT_Y_10_IN and xPTC_MOT_Y_10_OUT;
+    CRIX_VGC_10 (
+    	i_OPN_OK:= bVGC_10_OPN_OK, 
+    	i_CLS_OK:= bVGC_10_CLS_OK, 
+    	ibCntrlHold:= FALSE , 
+    	i_xOverrideMode:= xSystemOverride_ChemRIXS, 
+    	iq_stValve=> );
+    	
+    (* ual acting valve, allow to close when motor is at OUT limit switch*, Open interlock pending for requirements *)
+
+    bVGC_11_OPN_OK := TRUE;
+    bVGC_11_CLS_OK := NOT xEcatBridge_TxPDO_state and NOT xEcatBridge_External_device_not_connected and NOT xEcatBridge_WcState 
+                       AND NOT xPTC_MOT_Y_11_IN and xPTC_MOT_Y_11_OUT;
+    CRIX_VGC_11(
+    	i_OPN_OK:= bVGC_11_OPN_OK, 
+    	i_CLS_OK:= bVGC_11_CLS_OK, 
+    	ibCntrlHold:= FALSE , 
+    	i_xOverrideMode:= xSystemOverride_ChemRIXS, 
+    	iq_stValve=> );	
+    (*cold trap roughing valve, Open interlock pending for requirements*)
+
+    	
+    CRIX_VGC_12(i_xExtILK_OK:= True , i_xOverrideMode:= xSystemOverride_ChemRIXS, iq_stValve=> );	
+
+    CRIX_VGC_13(i_xExtILK_OK:= True, i_xOverrideMode:= xSystemOverride_ChemRIXS, iq_stValve=> );
+
+
+    bVGC_17_ILK := TRUE;
+    CRIX_VGC_17(i_xExtILK_OK:=bVGC_17_ILK,
+    			i_xOverrideMode:=xSystemOverride_ChemRIXS,
+    			iq_stValve =>);
     			
     // ChemRIXS Vent Valves
     CRIX_VVC_01(i_xExtILK_OK:=(NOT stCRIX_VVC_02.q_xOPN_DO),
@@ -1263,6 +1439,13 @@ PRG_Chamber_Valves
     			i_xOverrideMode:=xSystemOverride_ChemRIXS,
     			iq_stValve => stCRIX_VVC_10);
     *)
+
+
+    (* PLC interfaces to Motion PLC *)
+    xPTC_VGC_10_CLS := CRIX_VGC_10.iq_stValve.i_xClsLS;
+    xPTC_VGC_11_CLS := CRIX_VGC_11.iq_stValve.i_xClsLS;
+    xPTC_VGC_10_OPN := CRIX_VGC_10.iq_stValve.i_xOpnLS;
+    xPTC_VGC_11_OPN := CRIX_VGC_11.iq_stValve.i_xOpnLS;
 
     END_PROGRAM
 
