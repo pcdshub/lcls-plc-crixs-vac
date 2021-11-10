@@ -682,10 +682,19 @@ GVL_PMPS
 
 ::
 
-    {attribute 'qualified_only'}
+    //{attribute 'qualified_only'}
     VAR_GLOBAL
-    	g_FastFaultOutput: FB_HardwareFFOutput;
-    	g_Arbiter: FB_Arbiter(1);
+        {attribute 'pytmc' := 'pv: PLC:CRIX:VAC:FFO:01    '}
+        {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 113 (EK1521-0010)^Term 154 (EK1501-0010)^PMPS_FFO^Channel 1^Output'}
+        g_FastFaultOutput1: FB_HardwareFFOutput;
+    	
+    	 {attribute 'pytmc' := 'pv: PLC:CRIX:VAC:FFO:02    '}
+        {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 113 (EK1521-0010)^Term 154 (EK1501-0010)^PMPS_PRE^IO Outputs^FFO_Link'}
+        g_FastFaultOutput2: FB_HardwareFFOutput;
+    	
+
+    	{attribute 'pytmc' := '        pv: PLC:CRIX:VAC:ARB:01    '}	
+    	fbArbiter1: FB_Arbiter(1);
     END_VAR
 
 
@@ -971,6 +980,8 @@ MAIN
 
     PRG_RCC();
 
+    PRG_MPS();
+
     //PRG_ADS_Gauges();
 
     END_PROGRAM
@@ -981,6 +992,7 @@ Related:
     * `PRG_Chamber_Gauges`_
     * `PRG_Chamber_Pumps`_
     * `PRG_Chamber_Valves`_
+    * `PRG_MPS`_
     * `PRG_Mechanical_Room`_
     * `PRG_RCC`_
     * `PRG_VLS_VACUUM`_
@@ -1348,14 +1360,15 @@ PRG_Chamber_Valves
     	i_nTransitionRootID:= , 
     	iq_stValve=> , 
     	xMPS_OK=> , 
-    	io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput, 
-    	fbArbiter:= GVL_PMPS.g_Arbiter);
+    	io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput1, 
+    	fbArbiter:= GVL_PMPS.fbArbiter1);
            
     CRIX_VGC_09(i_stUSG:=CRIX_GCC_01.IG,
                 i_stDSG:=bm_dummy_gauge,// PRG_ADS_Gauges.IM6K2_GCC_Reader.IG,
                 i_xDis_DPILK:=FALSE,
                 i_xPMPS_OK:=TRUE,
                 i_xEPS_OK:=,
+    			i_xExt_OK:= TRUE ,
                 i_xOverrideMode:=xSystemOverride_ChemRIXS,
                 i_xReset:=,
                 i_xIsAperture:=FALSE,
@@ -1363,8 +1376,8 @@ PRG_Chamber_Valves
                 i_nTransitionRootID:=,
                 iq_stValve=>,
                 xMPS_OK=>,
-                io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput, 
-    			fbArbiter:= GVL_PMPS.g_Arbiter);
+                io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput1, 
+    			fbArbiter:= GVL_PMPS.fbArbiter1);
 
     (* ual acting valve, allow to close when motor is at OUT limit switch*, Open interlock pending for requirements *)
 
@@ -1590,6 +1603,45 @@ PRG_Mechanical_Room
     END_PROGRAM
 
 
+
+
+PRG_MPS
+^^^^^^^
+
+::
+
+    PROGRAM PRG_MPS
+    VAR
+    fbArbiterIO: FB_SubSysToArbiter_IO;	
+    fb_vetoArbiter: FB_VetoArbiter; 
+    ff2_ff1_link_vac: FB_FastFault := (i_xAutoReset := TRUE, i_DevName := 'CRIX_Vac_FF2 to FF1 Link', i_Desc := 'This is virtual CRIX Vac FF2 fault, Please check the faulting device below', i_TypeCode := 16#9999);
+
+    	
+    END_VAR
+    GVL_PMPS.g_FastFaultOutput1.bAutoReset :=TRUE;
+
+    GVL_PMPS.g_FastFaultOutput1.Execute(i_xVeto := PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT]
+                                           AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]);
+
+
+    GVL_PMPS.g_FastFaultOutput2.Execute(i_xVeto := (PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT] 
+                                          AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN])
+                                           OR PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.ST1K2]);
+
+    (* Arbiter Instantiation*)
+    fbArbiterIO(Arbiter := GVL_PMPS.fbArbiter1, fbFFHWO := GVL_PMPS.g_FastFaultOutput1, i_bVeto := PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT]
+                                           AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]);
+    									   
+    //routed to the arbiter							  
+    ff2_ff1_link_vac(
+    	io_fbFFHWO := GVL_PMPS.g_FastFaultOutput1,
+        i_xOK := GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut);
+
+    END_PROGRAM
+
+
+Related:
+    * `GVL_PMPS`_
 
 
 PRG_RCC

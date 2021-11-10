@@ -85,6 +85,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#prg-com-vls">PRG_COM_VLS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-li3k2">PRG_LI3K2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-mechanical-room">PRG_Mechanical_Room</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-mps">PRG_MPS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-rcc">PRG_RCC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-vls-turbo">PRG_VLS_Turbo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-vls-vacuum">PRG_VLS_VACUUM</a></li>
@@ -761,10 +762,19 @@
 </section>
 <section id="gvl-pmps">
 <h2>GVL_PMPS<a class="headerlink" href="#gvl-pmps" title="Permalink to this headline"></a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
-    <span class="n">g_FastFaultOutput</span><span class="p">:</span> <span class="n">FB_HardwareFFOutput</span><span class="p">;</span>
-    <span class="n">g_Arbiter</span><span class="p">:</span> <span class="n">FB_Arbiter</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: PLC:CRIX:VAC:FFO:01    &#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.q_xFastFaultOut:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 113 (EK1521-0010)^Term 154 (EK1501-0010)^PMPS_FFO^Channel 1^Output&#39;</span><span class="p">}</span>
+    <span class="n">g_FastFaultOutput1</span><span class="p">:</span> <span class="n">FB_HardwareFFOutput</span><span class="p">;</span>
+
+     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: PLC:CRIX:VAC:FFO:02    &#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;.q_xFastFaultOut:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 113 (EK1521-0010)^Term 154 (EK1501-0010)^PMPS_PRE^IO Outputs^FFO_Link&#39;</span><span class="p">}</span>
+    <span class="n">g_FastFaultOutput2</span><span class="p">:</span> <span class="n">FB_HardwareFFOutput</span><span class="p">;</span>
+
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;        pv: PLC:CRIX:VAC:ARB:01    &#39;</span><span class="p">}</span>
+    <span class="n">fbArbiter1</span><span class="p">:</span> <span class="n">FB_Arbiter</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 <span class="n">END_VAR</span>
 </pre></div>
 </div>
@@ -1025,6 +1035,8 @@
 
 <span class="n">PRG_RCC</span><span class="p">();</span>
 
+<span class="n">PRG_MPS</span><span class="p">();</span>
+
 <span class="o">//</span><span class="n">PRG_ADS_Gauges</span><span class="p">();</span>
 
 <span class="n">END_PROGRAM</span>
@@ -1036,6 +1048,7 @@
 <li><p><a class="reference internal" href="#prg-chamber-gauges">PRG_Chamber_Gauges</a></p></li>
 <li><p><a class="reference internal" href="#prg-chamber-pumps">PRG_Chamber_Pumps</a></p></li>
 <li><p><a class="reference internal" href="#prg-chamber-valves">PRG_Chamber_Valves</a></p></li>
+<li><p><a class="reference internal" href="#prg-mps">PRG_MPS</a></p></li>
 <li><p><a class="reference internal" href="#prg-mechanical-room">PRG_Mechanical_Room</a></p></li>
 <li><p><a class="reference internal" href="#prg-rcc">PRG_RCC</a></p></li>
 <li><p><a class="reference internal" href="#prg-vls-vacuum">PRG_VLS_VACUUM</a></p></li>
@@ -1390,14 +1403,15 @@
     <span class="n">i_nTransitionRootID</span><span class="o">:=</span> <span class="p">,</span>
     <span class="n">iq_stValve</span><span class="o">=&gt;</span> <span class="p">,</span>
     <span class="n">xMPS_OK</span><span class="o">=&gt;</span> <span class="p">,</span>
-    <span class="n">io_fbFFHWO</span><span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput</span><span class="p">,</span>
-    <span class="n">fbArbiter</span><span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_Arbiter</span><span class="p">);</span>
+    <span class="n">io_fbFFHWO</span><span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">,</span>
+    <span class="n">fbArbiter</span><span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">fbArbiter1</span><span class="p">);</span>
 
 <span class="n">CRIX_VGC_09</span><span class="p">(</span><span class="n">i_stUSG</span><span class="o">:=</span><span class="n">CRIX_GCC_01</span><span class="o">.</span><span class="n">IG</span><span class="p">,</span>
             <span class="n">i_stDSG</span><span class="o">:=</span><span class="n">bm_dummy_gauge</span><span class="p">,</span><span class="o">//</span> <span class="n">PRG_ADS_Gauges</span><span class="o">.</span><span class="n">IM6K2_GCC_Reader</span><span class="o">.</span><span class="n">IG</span><span class="p">,</span>
             <span class="n">i_xDis_DPILK</span><span class="o">:=</span><span class="n">FALSE</span><span class="p">,</span>
             <span class="n">i_xPMPS_OK</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">,</span>
             <span class="n">i_xEPS_OK</span><span class="o">:=</span><span class="p">,</span>
+                    <span class="n">i_xExt_OK</span><span class="o">:=</span> <span class="n">TRUE</span> <span class="p">,</span>
             <span class="n">i_xOverrideMode</span><span class="o">:=</span><span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
             <span class="n">i_xReset</span><span class="o">:=</span><span class="p">,</span>
             <span class="n">i_xIsAperture</span><span class="o">:=</span><span class="n">FALSE</span><span class="p">,</span>
@@ -1405,8 +1419,8 @@
             <span class="n">i_nTransitionRootID</span><span class="o">:=</span><span class="p">,</span>
             <span class="n">iq_stValve</span><span class="o">=&gt;</span><span class="p">,</span>
             <span class="n">xMPS_OK</span><span class="o">=&gt;</span><span class="p">,</span>
-            <span class="n">io_fbFFHWO</span><span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput</span><span class="p">,</span>
-                    <span class="n">fbArbiter</span><span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_Arbiter</span><span class="p">);</span>
+            <span class="n">io_fbFFHWO</span><span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">,</span>
+                    <span class="n">fbArbiter</span><span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">fbArbiter1</span><span class="p">);</span>
 
 <span class="p">(</span><span class="o">*</span> <span class="n">ual</span> <span class="n">acting</span> <span class="n">valve</span><span class="p">,</span> <span class="n">allow</span> <span class="n">to</span> <span class="n">close</span> <span class="n">when</span> <span class="n">motor</span> <span class="ow">is</span> <span class="n">at</span> <span class="n">OUT</span> <span class="n">limit</span> <span class="n">switch</span><span class="o">*</span><span class="p">,</span> <span class="n">Open</span> <span class="n">interlock</span> <span class="n">pending</span> <span class="k">for</span> <span class="n">requirements</span> <span class="o">*</span><span class="p">)</span>
 
@@ -1616,6 +1630,45 @@ END_FUNCTION_BLOCK
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>
+</section>
+<section id="prg-mps">
+<h2>PRG_MPS<a class="headerlink" href="#prg-mps" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_MPS</span>
+<span class="n">VAR</span>
+<span class="n">fbArbiterIO</span><span class="p">:</span> <span class="n">FB_SubSysToArbiter_IO</span><span class="p">;</span>
+<span class="n">fb_vetoArbiter</span><span class="p">:</span> <span class="n">FB_VetoArbiter</span><span class="p">;</span>
+<span class="n">ff2_ff1_link_vac</span><span class="p">:</span> <span class="n">FB_FastFault</span> <span class="o">:=</span> <span class="p">(</span><span class="n">i_xAutoReset</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">i_DevName</span> <span class="o">:=</span> <span class="s1">&#39;CRIX_Vac_FF2 to FF1 Link&#39;</span><span class="p">,</span> <span class="n">i_Desc</span> <span class="o">:=</span> <span class="s1">&#39;This is virtual CRIX Vac FF2 fault, Please check the faulting device below&#39;</span><span class="p">,</span> <span class="n">i_TypeCode</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#9999);</span>
+
+
+<span class="n">END_VAR</span>
+<span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="o">.</span><span class="n">bAutoReset</span> <span class="o">:=</span><span class="n">TRUE</span><span class="p">;</span>
+
+<span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="o">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">i_xVeto</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aVetoDevices</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">MR1K1_OUT</span><span class="p">]</span>
+                                       <span class="n">AND</span> <span class="n">NOT</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aVetoDevices</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">MR1K1_IN</span><span class="p">]);</span>
+
+
+<span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="o">.</span><span class="n">Execute</span><span class="p">(</span><span class="n">i_xVeto</span> <span class="o">:=</span> <span class="p">(</span><span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aVetoDevices</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">MR1K1_OUT</span><span class="p">]</span>
+                                      <span class="n">AND</span> <span class="n">NOT</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aVetoDevices</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">MR1K1_IN</span><span class="p">])</span>
+                                       <span class="n">OR</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aVetoDevices</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">ST1K2</span><span class="p">]);</span>
+
+<span class="p">(</span><span class="o">*</span> <span class="n">Arbiter</span> <span class="n">Instantiation</span><span class="o">*</span><span class="p">)</span>
+<span class="n">fbArbiterIO</span><span class="p">(</span><span class="n">Arbiter</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">fbArbiter1</span><span class="p">,</span> <span class="n">fbFFHWO</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">,</span> <span class="n">i_bVeto</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aVetoDevices</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">MR1K1_OUT</span><span class="p">]</span>
+                                       <span class="n">AND</span> <span class="n">NOT</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">stCurrentBeamParameters</span><span class="o">.</span><span class="n">aVetoDevices</span><span class="p">[</span><span class="n">PMPS</span><span class="o">.</span><span class="n">K_Stopper</span><span class="o">.</span><span class="n">MR1K1_IN</span><span class="p">]);</span>
+
+<span class="o">//</span><span class="n">routed</span> <span class="n">to</span> <span class="n">the</span> <span class="n">arbiter</span>
+<span class="n">ff2_ff1_link_vac</span><span class="p">(</span>
+    <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">,</span>
+    <span class="n">i_xOK</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="o">.</span><span class="n">q_xFastFaultOut</span><span class="p">);</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#gvl-pmps">GVL_PMPS</a></p></li>
+</ul>
+</dd>
+</dl>
 </section>
 <section id="prg-rcc">
 <h2>PRG_RCC<a class="headerlink" href="#prg-rcc" title="Permalink to this headline"></a></h2>
