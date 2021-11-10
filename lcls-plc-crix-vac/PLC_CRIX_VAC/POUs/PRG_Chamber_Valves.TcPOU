@@ -152,14 +152,15 @@ CRIX_VGC_08(
 	i_nTransitionRootID:= , 
 	iq_stValve=> , 
 	xMPS_OK=> , 
-	io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput, 
-	fbArbiter:= GVL_PMPS.g_Arbiter);
+	io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput1, 
+	fbArbiter:= GVL_PMPS.fbArbiter1);
        
 CRIX_VGC_09(i_stUSG:=CRIX_GCC_01.IG,
             i_stDSG:=bm_dummy_gauge,// PRG_ADS_Gauges.IM6K2_GCC_Reader.IG,
             i_xDis_DPILK:=FALSE,
             i_xPMPS_OK:=TRUE,
             i_xEPS_OK:=,
+			i_xExt_OK:= TRUE ,
             i_xOverrideMode:=xSystemOverride_ChemRIXS,
             i_xReset:=,
             i_xIsAperture:=FALSE,
@@ -167,8 +168,8 @@ CRIX_VGC_09(i_stUSG:=CRIX_GCC_01.IG,
             i_nTransitionRootID:=,
             iq_stValve=>,
             xMPS_OK=>,
-            io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput, 
-			fbArbiter:= GVL_PMPS.g_Arbiter);
+            io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput1, 
+			fbArbiter:= GVL_PMPS.fbArbiter1);
 
 (* ual acting valve, allow to close when motor is at OUT limit switch*, Open interlock pending for requirements *)
 
@@ -269,7 +270,9 @@ xPTC_VGC_11_OPN := CRIX_VGC_11.iq_stValve.i_xOpnLS;
       <LineId Id="233" Count="0" />
       <LineId Id="235" Count="2" />
       <LineId Id="234" Count="0" />
-      <LineId Id="76" Count="52" />
+      <LineId Id="76" Count="43" />
+      <LineId Id="398" Count="0" />
+      <LineId Id="120" Count="8" />
       <LineId Id="319" Count="2" />
       <LineId Id="303" Count="0" />
       <LineId Id="296" Count="0" />
