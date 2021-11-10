@@ -20,6 +20,8 @@ PRG_VLS_VACUUM();
 
 PRG_RCC();
 
+PRG_MPS();
+
 //PRG_ADS_Gauges();]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
@@ -30,6 +32,8 @@ PRG_RCC();
       <LineId Id="15" Count="0" />
       <LineId Id="21" Count="0" />
       <LineId Id="20" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="29" Count="0" />
       <LineId Id="11" Count="0" />
       <LineId Id="2" Count="0" />
     </LineIds>
