@@ -15,7 +15,8 @@ END_VAR
 GVL_PMPS.g_FastFaultOutput2.bAutoReset :=TRUE;
 
 GVL_PMPS.g_FastFaultOutput1.Execute(i_xVeto := PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT]
-                                       AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]);
+                                       AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]
+                                         OR PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.ST1K2]);
 
 
 GVL_PMPS.g_FastFaultOutput2.Execute(i_xVeto := (PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT] 
@@ -24,12 +25,13 @@ GVL_PMPS.g_FastFaultOutput2.Execute(i_xVeto := (PMPS_GVL.stCurrentBeamParameters
 
 (* Arbiter Instantiation*)
 fbArbiterIO(Arbiter := GVL_PMPS.fbArbiter1, fbFFHWO := GVL_PMPS.g_FastFaultOutput1, i_bVeto := PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT]
-                                       AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]);
+                                       AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]
+                                        OR PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.ST1K2]);
 									   
 //routed to the arbiter							  
 ff2_ff1_link_vac(
-	io_fbFFHWO := GVL_PMPS.g_FastFaultOutput1,
-    i_xOK := GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut);
+	io_fbFFHWO := GVL_PMPS.g_FastFaultOutput2,
+    i_xOK := GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut);
 
 
 
@@ -41,11 +43,13 @@ ff2_ff1_link_vac(
       <LineId Id="55" Count="0" />
       <LineId Id="84" Count="0" />
       <LineId Id="56" Count="2" />
+      <LineId Id="85" Count="0" />
       <LineId Id="60" Count="0" />
       <LineId Id="74" Count="0" />
       <LineId Id="77" Count="1" />
       <LineId Id="75" Count="1" />
       <LineId Id="61" Count="2" />
+      <LineId Id="86" Count="0" />
       <LineId Id="79" Count="0" />
       <LineId Id="64" Count="8" />
       <LineId Id="54" Count="0" />
