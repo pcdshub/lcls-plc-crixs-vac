@@ -12,6 +12,7 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[GVL_PMPS.g_FastFaultOutput1.bAutoReset :=TRUE;
+GVL_PMPS.g_FastFaultOutput2.bAutoReset :=TRUE;
 
 GVL_PMPS.g_FastFaultOutput1.Execute(i_xVeto := PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT]
                                        AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]);
@@ -37,7 +38,9 @@ ff2_ff1_link_vac(
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_MPS">
-      <LineId Id="55" Count="3" />
+      <LineId Id="55" Count="0" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="56" Count="2" />
       <LineId Id="60" Count="0" />
       <LineId Id="74" Count="0" />
       <LineId Id="77" Count="1" />
