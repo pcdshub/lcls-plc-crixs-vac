@@ -1663,6 +1663,10 @@ END_FUNCTION_BLOCK
     <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput2</span><span class="p">,</span>
     <span class="n">i_xOK</span> <span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="o">.</span><span class="n">q_xFastFaultOut</span><span class="p">);</span>
 
+
+<span class="o">//</span><span class="n">Code</span> <span class="k">for</span> <span class="n">Removing</span> <span class="n">arbitration</span>
+<span class="n">fbArbiter1</span><span class="o">.</span><span class="n">AddRequest</span><span class="p">(</span><span class="n">nReqID</span> <span class="o">:=</span> <span class="mi">45</span><span class="p">,</span> <span class="n">stReqBp</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span> <span class="n">sDevName</span> <span class="o">:=</span> <span class="s1">&#39;plc-crix-vac&#39;</span><span class="p">);</span>
+
 <span class="n">END_PROGRAM</span>
 </pre></div>
 </div>

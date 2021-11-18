@@ -1640,6 +1640,10 @@ PRG_MPS
     	io_fbFFHWO := GVL_PMPS.g_FastFaultOutput2,
         i_xOK := GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut);
 
+
+    //Code for Removing arbitration 
+    fbArbiter1.AddRequest(nReqID := 45, stReqBp := PMPS_GVL.cstFullBeam, sDevName := 'plc-crix-vac');
+
     END_PROGRAM
 
 
