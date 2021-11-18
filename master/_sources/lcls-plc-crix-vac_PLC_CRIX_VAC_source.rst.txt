@@ -1622,7 +1622,8 @@ PRG_MPS
     GVL_PMPS.g_FastFaultOutput2.bAutoReset :=TRUE;
 
     GVL_PMPS.g_FastFaultOutput1.Execute(i_xVeto := PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT]
-                                           AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]);
+                                           AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]
+                                             OR PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.ST1K2]);
 
 
     GVL_PMPS.g_FastFaultOutput2.Execute(i_xVeto := (PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT] 
@@ -1631,12 +1632,13 @@ PRG_MPS
 
     (* Arbiter Instantiation*)
     fbArbiterIO(Arbiter := GVL_PMPS.fbArbiter1, fbFFHWO := GVL_PMPS.g_FastFaultOutput1, i_bVeto := PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT]
-                                           AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]);
+                                           AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]
+                                            OR PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.ST1K2]);
     									   
     //routed to the arbiter							  
     ff2_ff1_link_vac(
-    	io_fbFFHWO := GVL_PMPS.g_FastFaultOutput1,
-        i_xOK := GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut);
+    	io_fbFFHWO := GVL_PMPS.g_FastFaultOutput2,
+        i_xOK := GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut);
 
     END_PROGRAM
 
