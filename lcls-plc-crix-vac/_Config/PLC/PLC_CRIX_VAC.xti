@@ -961,23 +961,27 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.xPress_OK</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.xOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.xUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.i_iPRESS_R</Name>
 					<Comment>
 						<![CDATA[ input Pressure // Link to analog Input]]>
 					</Comment>
-					<Type>REAL</Type>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_STC_01.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_STC_01.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_STC_01.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_STC_01.iRaw</Name>
+					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_VLS.VLS_PTM_01.i_xAtSpd</Name>
@@ -1568,6 +1572,16 @@ ETHERCAT BRRIDGE COM STATUS
 					</OwnerB>
 				</OwnerA>
 			</UnrestoredVarLinks>
+			<UnrestoredVarLinks ImportTime="2021-11-18T16:26:48">
+				<OwnerA Name="InputDst" Prefix="TIPC^PLC_CRIX_VAC^PLC_CRIX_VAC Instance" Type="1">
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)">
+						<Link VarA="GVL_Recirculation.CRIX_RCC_GCP_01.i_iPRESS_R" TypeA="REAL" InOutA="0" GuidA="{18071995-0000-0000-0000-00000000000D}" VarB="TXPDO Combined^Combination Gauge Active Value" AutoLink="true" RestoreInfo="TypeMismatch" OldTypeA="REAL" OldGuidA="{18071995-0000-0000-0000-00000000000D}" NewTypeA="INT" NewGuidA="{18071995-0000-0000-0000-000000000006}"/>
+						<Link VarA="GVL_Recirculation.CRIX_RCC_GCP_01.xOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TXPDO Combined^Combination Gauge Overrange Exceeded" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_Recirculation.CRIX_RCC_GCP_01.xPress_OK" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TXPDO Combined^Combination Gauge Reading Valid" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+						<Link VarA="GVL_Recirculation.CRIX_RCC_GCP_01.xUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TXPDO Combined^Combination Gauge Underrange Exceeded" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
+					</OwnerB>
+				</OwnerA>
+			</UnrestoredVarLinks>
 			<TaskPouOids>
 				<TaskPouOid Prio="1" OTCID="#x08502001"/>
 				<TaskPouOid Prio="20" OTCID="#x08502002"/>
@@ -1834,11 +1848,11 @@ ETHERCAT BRRIDGE COM STATUS
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E3 (EL1004)">
 				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_VRC_04.i_xClsLS" VarB="Channel 1^Input" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)">
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_01.i_iPRESS_R" VarB="TXPDO Combined^Combination Gauge Active Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_01.xOverrange" VarB="TXPDO Combined^Combination Gauge Overrange Exceeded" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_01.xPress_OK" VarB="TXPDO Combined^Combination Gauge Reading Valid" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_01.xUnderrange" VarB="TXPDO Combined^Combination Gauge Underrange Exceeded" AutoLink="true"/>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E7 (EL3314)">
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_STC_01.bError" VarB="TC Inputs Channel 1^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_STC_01.bOverrange" VarB="TC Inputs Channel 1^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_STC_01.bUnderrange" VarB="TC Inputs Channel 1^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_STC_01.iRaw" VarB="TC Inputs Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP1 (EP6002-0002)">
 				<Link VarA="ComTask Inputs^GVL_COM_VLS.VLS_EP1_CH1_stComIn^D[0]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 0" AutoLink="true"/>
@@ -1905,6 +1919,7 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Outputs^GVL_VLS.VLS_PTM_01.q_RunDO" VarB="Channel 3^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP5 (EP3174-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_01.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_GCC_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_ROUGH_GPI.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
