@@ -33,9 +33,9 @@ LCLS_General.FB_LogMessage
       - | io: input
 
 
-                                                             
-LCLS_Vacuum.FB_901_ECAT
-^^^^^^^^^^^^^^^^^^^^^^^
+ 
+LCLS_General.FB_ThermoCouple
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
     :header-rows: 1
@@ -45,203 +45,27 @@ LCLS_Vacuum.FB_901_ECAT
       - Type
       - Description
       - Pragma
-    * - $(PREFIX):AT_VAC_RBV
+    * - $(PREFIX):STC:CONN_RBV
       - bi
-      - $(SYMBOL).PG.xAT_VAC
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
+      - $(SYMBOL).bConnected
+      - | field: ONAM Connected
+        | field: ZNAM Disconnected
         | io: input
 
 
-    * - $(PREFIX):Auto_On
-      - bo
-      - $(SYMBOL).PG.xAutoOn
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - $(PREFIX):Auto_On_RBV
+    * - $(PREFIX):STC:ERR_RBV
       - bi
-      - $(SYMBOL).PG.xAutoOn
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - $(PREFIX):AutoOn_timer_RBV
-      - longin
-      - $(SYMBOL).PG.iAutoOnTimer
+      - $(SYMBOL).bError
       - | io: input
 
 
-    * - $(PREFIX):DISC_ACTIVE_RBV
-      - bi
-      - $(SYMBOL).PG.i_xDisc_Active
-      - | field: ONAM DISC ACTIVE
-        | field: ZNAM NO DISC
-        | io: input
-
-
-    * - $(PREFIX):HV_DIS_DO_RBV
-      - bi
-      - $(SYMBOL).PG.q_xHV_DIS
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - $(PREFIX):HV_ON_RBV
-      - bi
-      - $(SYMBOL).PG.i_xHV_ON
+    * - $(PREFIX):STC:TEMP_RBV
+      - ai
+      - $(SYMBOL).fTemp
       - | io: input
 
 
-    * - $(PREFIX):HV_SW
-      - bo
-      - $(SYMBOL).PG.xHV_SW
-      - | field: ONAM ON
-        | field: ZNAM OFF
-        | io: output
-
-
-    * - $(PREFIX):HV_SW_RBV
-      - bi
-      - $(SYMBOL).PG.xHV_SW
-      - | field: ONAM ON
-        | field: ZNAM OFF
-        | io: output
-
-
-    * - $(PREFIX):ILK_OK_RBV
-      - bi
-      - $(SYMBOL).PG.xILKOk
-      - | field: ONAM OK
-        | field: ZNAM NOT OK
-        | io: input
-
-
-    * - $(PREFIX):LOGGER
-      - bo
-      - $(SYMBOL).PG.xLog
-      - | field: ONAM ON
-        | field: ZNAM OFF
-        | io: output
-
-
-    * - $(PREFIX):LOGGER_RBV
-      - bi
-      - $(SYMBOL).PG.xLog
-      - | field: ONAM ON
-        | field: ZNAM OFF
-        | io: output
-
-
-    * - $(PREFIX):PRESS_AI_RBV
-      - longin
-      - $(SYMBOL).PG.i_iPRESS_R
-      - | io: input
-
-
-    * - $(PREFIX):PRESS_OK_RBV
-      - bi
-      - $(SYMBOL).PG.xPRESS_OK
-      - | field: ONAM ON
-        | field: ZNAM OFF
-        | io: input
-
-
-    * - $(PREFIX):PRESS_RBV
-      - ai
-      - $(SYMBOL).PG.rPRESS
-      - | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: input
-
-
-    * - $(PREFIX):PRO_SP
-      - ao
-      - $(SYMBOL).PG.rPRO_SP
-      - | autosave_pass1: VAL DESC
-        | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
-    * - $(PREFIX):PRO_SP_RBV
-      - ai
-      - $(SYMBOL).PG.rPRO_SP
-      - | autosave_pass1: VAL DESC
-        | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
-    * - $(PREFIX):SP_HYS
-      - ao
-      - $(SYMBOL).PG.rHYS_PR
-      - | autosave_pass1: VAL DESC
-        | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
-    * - $(PREFIX):SP_HYS_RBV
-      - ai
-      - $(SYMBOL).PG.rHYS_PR
-      - | autosave_pass1: VAL DESC
-        | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
-    * - $(PREFIX):STATE_RBV
-      - mbbi
-      - $(SYMBOL).PG.eState
-      - | field: FRST Starting
-        | field: FVST Valid
-        | field: ONST GaugeDisconnected
-        | field: SVST ValidLo
-        | field: SXST ValidHi
-        | field: THST PressInvalid
-        | field: TWST OoR
-        | field: ZRST Off
-        | io: input
-
-
-    * - $(PREFIX):VAC_SP
-      - ao
-      - $(SYMBOL).PG.rVAC_SP
-      - | autosave_pass1: VAL DESC
-        | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
-    * - $(PREFIX):VAC_SP_RBV
-      - ai
-      - $(SYMBOL).PG.rVAC_SP
-      - | autosave_pass1: VAL DESC
-        | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
- 
+                                                             
 LCLS_Vacuum.FB_972
 ^^^^^^^^^^^^^^^^^^
 
@@ -20292,6 +20116,26 @@ Database Records
         | field: LOPR 0
         | field: PREC 2
         | io: output
+
+
+    * - CRIX:RCC:STC:CONN_RBV
+      - bi
+      - GVL_Recirculation.CRIX_RCC_STC_01.bConnected
+      - | field: ONAM Connected
+        | field: ZNAM Disconnected
+        | io: input
+
+
+    * - CRIX:RCC:STC:ERR_RBV
+      - bi
+      - GVL_Recirculation.CRIX_RCC_STC_01.bError
+      - | io: input
+
+
+    * - CRIX:RCC:STC:TEMP_RBV
+      - ai
+      - GVL_Recirculation.CRIX_RCC_STC_01.fTemp
+      - | io: input
 
 
     * - CRIX:RCC:VAC:OVRD_MODE
