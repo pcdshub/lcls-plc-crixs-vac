@@ -15,6 +15,11 @@
     <Implicit_KindOfTask>{63a0020b-505c-4d7d-b9d5-72186b3f1d8f}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{d80faa15-fe7c-4a07-ac0e-2b93624fa54e}</Implicit_Jitter_Distribution>
     <LibraryReferences>{af46df55-bbbb-4541-bf51-f638d2fb2946}</LibraryReferences>
+    <CombineIds>false</CombineIds>
+    <Company>SLAC</Company>
+    <Released>false</Released>
+    <Title>lcls-plc-crix-vac</Title>
+    <ProjectVersion>0.0.0</ProjectVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ComTask.TcTTO">
