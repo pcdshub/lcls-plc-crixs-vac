@@ -17607,6 +17607,202 @@ Database Records
         | io: output
 
 
+    * - CRIX:GCP:04:AT_VAC_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.xAT_VAC
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - CRIX:GCP:04:Auto_On
+      - bo
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.xAutoOn
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - CRIX:GCP:04:Auto_On_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.xAutoOn
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - CRIX:GCP:04:AutoOn_timer_RBV
+      - longin
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.iAutoOnTimer
+      - | io: input
+
+
+    * - CRIX:GCP:04:DISC_ACTIVE_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.i_xDisc_Active
+      - | field: ONAM DISC ACTIVE
+        | field: ZNAM NO DISC
+        | io: input
+
+
+    * - CRIX:GCP:04:HV_DIS_DO_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.q_xHV_DIS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - CRIX:GCP:04:HV_ON_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.i_xHV_ON
+      - | io: input
+
+
+    * - CRIX:GCP:04:HV_SW
+      - bo
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.xHV_SW
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - CRIX:GCP:04:HV_SW_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.xHV_SW
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - CRIX:GCP:04:ILK_OK_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.xILKOk
+      - | field: ONAM OK
+        | field: ZNAM NOT OK
+        | io: input
+
+
+    * - CRIX:GCP:04:LOGGER
+      - bo
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - CRIX:GCP:04:LOGGER_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - CRIX:GCP:04:PRESS_AI_RBV
+      - longin
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.i_iPRESS_R
+      - | io: input
+
+
+    * - CRIX:GCP:04:PRESS_OK_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.xPRESS_OK
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: input
+
+
+    * - CRIX:GCP:04:PRESS_RBV
+      - ai
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.rPRESS
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: input
+
+
+    * - CRIX:GCP:04:PRO_SP
+      - ao
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.rPRO_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - CRIX:GCP:04:PRO_SP_RBV
+      - ai
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.rPRO_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - CRIX:GCP:04:SP_HYS
+      - ao
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.rHYS_PR
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - CRIX:GCP:04:SP_HYS_RBV
+      - ai
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.rHYS_PR
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - CRIX:GCP:04:STATE_RBV
+      - mbbi
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.eState
+      - | field: FRST Starting
+        | field: FVST Valid
+        | field: ONST GaugeDisconnected
+        | field: SVST ValidLo
+        | field: SXST ValidHi
+        | field: THST PressInvalid
+        | field: TWST OoR
+        | field: ZRST Off
+        | io: input
+
+
+    * - CRIX:GCP:04:VAC_SP
+      - ao
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.rVAC_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - CRIX:GCP:04:VAC_SP_RBV
+      - ai
+      - GVL_Chamber_Gauges.CRIX_GCP_04.PG.rVAC_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
     * - CRIX:GPI:01:AT_VAC_RBV
       - bi
       - GVL_Chamber_Gauges.CRIX_GPI_01.PG.xAT_VAC
@@ -17991,202 +18187,6 @@ Database Records
     * - CRIX:GPI:02:VAC_SP_RBV
       - ai
       - GVL_Chamber_Gauges.CRIX_GPI_02.PG.rVAC_SP
-      - | autosave_pass1: VAL DESC
-        | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
-    * - CRIX:GPI:03:AT_VAC_RBV
-      - bi
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.xAT_VAC
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - CRIX:GPI:03:Auto_On
-      - bo
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.xAutoOn
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIX:GPI:03:Auto_On_RBV
-      - bi
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.xAutoOn
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIX:GPI:03:AutoOn_timer_RBV
-      - longin
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.iAutoOnTimer
-      - | io: input
-
-
-    * - CRIX:GPI:03:DISC_ACTIVE_RBV
-      - bi
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.i_xDisc_Active
-      - | field: ONAM DISC ACTIVE
-        | field: ZNAM NO DISC
-        | io: input
-
-
-    * - CRIX:GPI:03:HV_DIS_DO_RBV
-      - bi
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.q_xHV_DIS
-      - | field: ONAM TRUE
-        | field: ZNAM FALSE
-        | io: input
-
-
-    * - CRIX:GPI:03:HV_ON_RBV
-      - bi
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.i_xHV_ON
-      - | io: input
-
-
-    * - CRIX:GPI:03:HV_SW
-      - bo
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.xHV_SW
-      - | field: ONAM ON
-        | field: ZNAM OFF
-        | io: output
-
-
-    * - CRIX:GPI:03:HV_SW_RBV
-      - bi
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.xHV_SW
-      - | field: ONAM ON
-        | field: ZNAM OFF
-        | io: output
-
-
-    * - CRIX:GPI:03:ILK_OK_RBV
-      - bi
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.xILKOk
-      - | field: ONAM OK
-        | field: ZNAM NOT OK
-        | io: input
-
-
-    * - CRIX:GPI:03:LOGGER
-      - bo
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.xLog
-      - | field: ONAM ON
-        | field: ZNAM OFF
-        | io: output
-
-
-    * - CRIX:GPI:03:LOGGER_RBV
-      - bi
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.xLog
-      - | field: ONAM ON
-        | field: ZNAM OFF
-        | io: output
-
-
-    * - CRIX:GPI:03:PRESS_AI_RBV
-      - longin
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.i_iPRESS_R
-      - | io: input
-
-
-    * - CRIX:GPI:03:PRESS_OK_RBV
-      - bi
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.xPRESS_OK
-      - | field: ONAM ON
-        | field: ZNAM OFF
-        | io: input
-
-
-    * - CRIX:GPI:03:PRESS_RBV
-      - ai
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.rPRESS
-      - | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: input
-
-
-    * - CRIX:GPI:03:PRO_SP
-      - ao
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.rPRO_SP
-      - | autosave_pass1: VAL DESC
-        | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
-    * - CRIX:GPI:03:PRO_SP_RBV
-      - ai
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.rPRO_SP
-      - | autosave_pass1: VAL DESC
-        | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
-    * - CRIX:GPI:03:SP_HYS
-      - ao
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.rHYS_PR
-      - | autosave_pass1: VAL DESC
-        | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
-    * - CRIX:GPI:03:SP_HYS_RBV
-      - ai
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.rHYS_PR
-      - | autosave_pass1: VAL DESC
-        | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
-    * - CRIX:GPI:03:STATE_RBV
-      - mbbi
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.eState
-      - | field: FRST Starting
-        | field: FVST Valid
-        | field: ONST GaugeDisconnected
-        | field: SVST ValidLo
-        | field: SXST ValidHi
-        | field: THST PressInvalid
-        | field: TWST OoR
-        | field: ZRST Off
-        | io: input
-
-
-    * - CRIX:GPI:03:VAC_SP
-      - ao
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.rVAC_SP
-      - | autosave_pass1: VAL DESC
-        | field: EGU "TORR"
-        | field: HOPR 1000
-        | field: LOPR 0
-        | field: PREC 2
-        | io: output
-
-
-    * - CRIX:GPI:03:VAC_SP_RBV
-      - ai
-      - GVL_Chamber_Gauges.CRIX_GPI_03.PG.rVAC_SP
       - | autosave_pass1: VAL DESC
         | field: EGU "TORR"
         | field: HOPR 1000

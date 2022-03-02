@@ -178,9 +178,10 @@
 
     <span class="n">stCRIX_GPI_02</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:GPI:03 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 4^Value &#39;</span><span class="p">}</span>
-    <span class="n">CRIX_GPI_03</span> <span class="p">:</span> <span class="n">FB_MKS275</span><span class="p">;</span>
+
+    <span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:GPI:03 &#39;</span><span class="p">}</span>
+    <span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>      <span class="s1">&#39;.i_iPRESS_R    :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 4^Value &#39;</span><span class="p">}</span>
+    <span class="o">//</span><span class="n">CRIX_GPI_03</span> <span class="p">:</span> <span class="n">FB_MKS275</span><span class="p">;</span>
 
     <span class="n">stCRIX_GPI_03</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
 
@@ -222,6 +223,13 @@
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:GCP:03 &#39;</span><span class="p">}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 3^Value &#39;</span><span class="p">}</span>
     <span class="n">CRIX_GCP_03</span> <span class="p">:</span> <span class="n">FB_972</span><span class="p">;</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:GCP:04 &#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 4^Value &#39;</span><span class="p">}</span>
+    <span class="n">CRIX_GCP_04</span> <span class="p">:</span> <span class="n">FB_972</span><span class="p">;</span>
+
+    <span class="n">stCRIX_GCP_04</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
+
 
 <span class="o">//</span>  <span class="n">stCRIX_GCP_03</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
 
@@ -1168,6 +1176,9 @@
 
 <span class="n">CRIX_GCP_03</span><span class="o">.</span><span class="n">M_SetBits</span><span class="p">(</span><span class="mi">30518</span><span class="p">);</span>
 <span class="n">CRIX_GCP_03</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="p">);</span>
+
+<span class="n">CRIX_GCP_04</span><span class="o">.</span><span class="n">M_SetBits</span><span class="p">(</span><span class="mi">30518</span><span class="p">);</span>
+<span class="n">CRIX_GCP_04</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="n">stCRIX_GCP_04</span><span class="p">);</span>
 
 <span class="n">END_PROGRAM</span>
 </pre></div>
