@@ -37,8 +37,11 @@
 		<Box File="RCC_E10 (EL1124).xti" Id="128">
 			<EtherCAT PortABoxInfo="#x0100007f"/>
 		</Box>
-		<Box File="RCC_E11 (EL9011).xti" Id="138">
+		<Box File="Term 143 (EL3174-0002).xti" Id="143">
 			<EtherCAT PortABoxInfo="#x01000080"/>
+		</Box>
+		<Box File="RCC_E11 (EL9011).xti" Id="138">
+			<EtherCAT PortABoxInfo="#x0100008f"/>
 		</Box>
 	</Box>
 </TcSmItem>
