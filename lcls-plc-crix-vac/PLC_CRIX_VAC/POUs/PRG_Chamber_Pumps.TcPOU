@@ -88,14 +88,5 @@ CRIX_PTM_04_ILK_OK := F_TurboExtILK_TOF(Turbo:=CRIX_PTM_04.iq_stPTM, BackingGaug
 CRIX_PTM_04(i_xExtILKOk:=CRIX_PTM_04_ILK_OK, iq_stPtm=> );
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_Chamber_Pumps">
-      <LineId Id="3" Count="41" />
-      <LineId Id="56" Count="15" />
-      <LineId Id="83" Count="7" />
-      <LineId Id="95" Count="0" />
-      <LineId Id="91" Count="1" />
-      <LineId Id="82" Count="0" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
