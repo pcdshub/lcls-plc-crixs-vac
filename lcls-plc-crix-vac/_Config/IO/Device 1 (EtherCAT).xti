@@ -39,7 +39,6 @@
 		<EtherCAT EnableVirtualSwitch="true" MaxSwitchPorts="3" MaxSwitchFrames="140">
 			<SyncUnit Name="HoffmanBox" NoDeleteIfUnused="true"/>
 			<SyncUnit Name="VLS" NoDeleteIfUnused="true" WcStateTolerance="2"/>
-			<SyncUnit Name="Mech Room" NoDeleteIfUnused="true"/>
 			<SyncUnit Name="Recirculation" NoDeleteIfUnused="true"/>
 			<SyncUnit Name="TO_CRIX_MOTION_PLC" NoDeleteIfUnused="true"/>
 		</EtherCAT>
