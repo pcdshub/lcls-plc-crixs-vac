@@ -210,8 +210,8 @@ GVL_Chamber_Valves
     	CRIX_VGC_08 : FB_VGC;
     	
     	{attribute 'pytmc' :=' pv: CRIX:VGC:09 '}
-    	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E29 (EL1004)^Channel 1^Input;
-    								 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E29 (EL1004)^Channel 2^Input;
+    	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E29 (EL1004)^Channel 2^Input;
+    								 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E29 (EL1004)^Channel 1^Input;
     								 .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E26 (EL2004)^Channel 1^Output'}
     	CRIX_VGC_09 : FB_VGC;
     	
