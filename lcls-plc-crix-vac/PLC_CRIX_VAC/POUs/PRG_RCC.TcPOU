@@ -8,9 +8,6 @@ VAR
 	CRIX_RCC_VRC_03_OPEN_OK : BOOL;
 	CRIX_RCC_VRC_04_OPEN_OK : BOOL;
 	
-   
-
-	
 END_VAR
 
 
@@ -18,7 +15,9 @@ END_VAR
     <Implementation>
       <ST><![CDATA[
 
+CRIX_RCC_GCP_01.M_SetBits(30518);
 CRIX_RCC_GCP_01(PG=>);
+
 CRIX_RCC_GCP_02(PG=>);
 
 CRIX_RCC_STC_01(
