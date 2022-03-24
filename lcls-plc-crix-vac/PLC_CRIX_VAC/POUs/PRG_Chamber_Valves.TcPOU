@@ -156,7 +156,7 @@ CRIX_VGC_08(
 	fbArbiter:= GVL_PMPS.fbArbiter1);
        
 CRIX_VGC_09(i_stUSG:=CRIX_GCC_01.IG,
-            i_stDSG:=bm_dummy_gauge,// PRG_ADS_Gauges.IM6K2_GCC_Reader.IG,
+            i_stDSG:=IM6K2_GCC_01_reader.IG,// PRG_ADS_Gauges.IM6K2_GCC_Reader.IG,
             i_xDis_DPILK:=FALSE,
             i_xPMPS_OK:=TRUE,
             i_xEPS_OK:=TRUE,
@@ -254,51 +254,5 @@ xPTC_VGC_11_OPN := CRIX_VGC_11.iq_stValve.i_xOpnLS;
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_Chamber_Valves">
-      <LineId Id="3" Count="2" />
-      <LineId Id="181" Count="0" />
-      <LineId Id="6" Count="61" />
-      <LineId Id="216" Count="1" />
-      <LineId Id="219" Count="2" />
-      <LineId Id="184" Count="0" />
-      <LineId Id="223" Count="0" />
-      <LineId Id="202" Count="0" />
-      <LineId Id="226" Count="5" />
-      <LineId Id="72" Count="0" />
-      <LineId Id="232" Count="0" />
-      <LineId Id="73" Count="0" />
-      <LineId Id="233" Count="0" />
-      <LineId Id="235" Count="2" />
-      <LineId Id="234" Count="0" />
-      <LineId Id="76" Count="43" />
-      <LineId Id="398" Count="0" />
-      <LineId Id="120" Count="8" />
-      <LineId Id="319" Count="2" />
-      <LineId Id="303" Count="0" />
-      <LineId Id="296" Count="0" />
-      <LineId Id="316" Count="0" />
-      <LineId Id="305" Count="4" />
-      <LineId Id="304" Count="0" />
-      <LineId Id="310" Count="0" />
-      <LineId Id="322" Count="9" />
-      <LineId Id="311" Count="0" />
-      <LineId Id="337" Count="1" />
-      <LineId Id="333" Count="0" />
-      <LineId Id="332" Count="0" />
-      <LineId Id="336" Count="0" />
-      <LineId Id="335" Count="0" />
-      <LineId Id="334" Count="0" />
-      <LineId Id="277" Count="0" />
-      <LineId Id="257" Count="2" />
-      <LineId Id="129" Count="37" />
-      <LineId Id="2" Count="0" />
-      <LineId Id="365" Count="1" />
-      <LineId Id="364" Count="0" />
-      <LineId Id="367" Count="1" />
-      <LineId Id="371" Count="0" />
-      <LineId Id="370" Count="0" />
-      <LineId Id="372" Count="0" />
-      <LineId Id="369" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

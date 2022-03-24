@@ -3,13 +3,12 @@
   <GVL Name="GVL_ADS_Devices" Id="{c11fc916-6044-448a-a326-06c24ffa37e9}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
-
-//	{attribute 'pytmc' :=' pv: LAMP:ROUGH:GPI04:reader '}
-//	LAMP_ROUGH_GPI04_reader : FB_TGPI_ADS;
 	
  {attribute 'pytmc' :=' pv: TM2K2:GCC:01:reader '}		
 	TM2K2_GCC_01_reader : FB_TGCC_ADS;
-		
+ {attribute 'pytmc' :=' pv: IM6K2:GCC:01:reader '}		
+	IM6K2_GCC_01_reader : FB_TGCC_ADS;
+  		
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
