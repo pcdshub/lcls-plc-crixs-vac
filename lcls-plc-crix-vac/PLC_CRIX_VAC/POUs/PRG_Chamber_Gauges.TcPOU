@@ -40,14 +40,7 @@ CRIX_GCP_03.M_SetBits(30518);
 CRIX_GCP_03(PG=>);
 
 CRIX_GCP_04.M_SetBits(30518);
-CRIX_GCP_04(PG=>stCRIX_GCP_04);]]></ST>
+//CRIX_GCP_04(PG=>stCRIX_GCP_04);]]></ST>
     </Implementation>
-    <LineIds Name="PRG_Chamber_Gauges">
-      <LineId Id="3" Count="30" />
-      <LineId Id="2" Count="0" />
-      <LineId Id="38" Count="0" />
-      <LineId Id="40" Count="0" />
-      <LineId Id="39" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
