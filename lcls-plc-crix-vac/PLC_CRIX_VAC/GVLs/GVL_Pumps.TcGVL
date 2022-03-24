@@ -61,6 +61,8 @@ VAR_GLOBAL
 	'}
     CRIX_PTM_04 : FB_PTM_Pfeiffer;
 
+	stCRIX_PTM_04 : ST_PfeifferPTM;  //new
+	
 	// Serial port
 	stCRIX_PTM_04_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
 	stCRIX_PTM_04_Pfeiffer_RBK 	: ARRAY[1..20] OF ST_PfeifferStatus;

@@ -24,6 +24,7 @@ VAR_GLOBAL
 	'}
     VLS_PTM_01 : FB_PTM_Pfeiffer;
 	VLS_PTM_01_xExtIlkOK : Bool;
+	stVLS_PTM_01 : ST_PfeifferPTM;  //new
 
 	// They share the same serial port
 	st_VLS_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
