@@ -150,11 +150,10 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
 
-<span class="o">//</span>  <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: LAMP:ROUGH:GPI04:reader &#39;</span><span class="p">}</span>
-<span class="o">//</span>  <span class="n">LAMP_ROUGH_GPI04_reader</span> <span class="p">:</span> <span class="n">FB_TGPI_ADS</span><span class="p">;</span>
-
  <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: TM2K2:GCC:01:reader &#39;</span><span class="p">}</span>
     <span class="n">TM2K2_GCC_01_reader</span> <span class="p">:</span> <span class="n">FB_TGCC_ADS</span><span class="p">;</span>
+ <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: IM6K2:GCC:01:reader &#39;</span><span class="p">}</span>
+    <span class="n">IM6K2_GCC_01_reader</span> <span class="p">:</span> <span class="n">FB_TGCC_ADS</span><span class="p">;</span>
 
 <span class="n">END_VAR</span>
 </pre></div>
@@ -228,7 +227,7 @@
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 4^Value &#39;</span><span class="p">}</span>
     <span class="n">CRIX_GCP_04</span> <span class="p">:</span> <span class="n">FB_972</span><span class="p">;</span>
 
-    <span class="n">stCRIX_GCP_04</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
+    <span class="o">//</span><span class="n">stCRIX_GCP_04</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
 
 
 <span class="o">//</span>  <span class="n">stCRIX_GCP_03</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
@@ -849,6 +848,8 @@
     <span class="s1">&#39;}</span>
     <span class="n">CRIX_PTM_04</span> <span class="p">:</span> <span class="n">FB_PTM_Pfeiffer</span><span class="p">;</span>
 
+    <span class="n">stCRIX_PTM_04</span> <span class="p">:</span> <span class="n">ST_PfeifferPTM</span><span class="p">;</span>  <span class="o">//</span><span class="n">new</span>
+
     <span class="o">//</span> <span class="n">Serial</span> <span class="n">port</span>
     <span class="n">stCRIX_PTM_04_Pfeiffer_CTRL</span>     <span class="p">:</span> <span class="n">ARRAY</span><span class="p">[</span><span class="mf">1..20</span><span class="p">]</span> <span class="n">OF</span> <span class="n">ST_PfeifferControl</span><span class="p">;</span>
     <span class="n">stCRIX_PTM_04_Pfeiffer_RBK</span>      <span class="p">:</span> <span class="n">ARRAY</span><span class="p">[</span><span class="mf">1..20</span><span class="p">]</span> <span class="n">OF</span> <span class="n">ST_PfeifferStatus</span><span class="p">;</span>
@@ -898,17 +899,18 @@
                                                             <span class="o">.</span><span class="n">q_xOPN_DO</span>      <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">VLS_RCC</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">RCC_EK0</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">RCC_E2</span> <span class="p">(</span><span class="n">EL2004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">4</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
     <span class="n">CRIX_RCC_VRC_04</span> <span class="p">:</span> <span class="n">FB_VRC_NC_ClsLS</span><span class="p">;</span>
 
-<span class="p">(</span><span class="o">*</span>  <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:RCC:GCP:01 &#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:RCC:GCP:02 &#39;</span><span class="p">}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.xPress_OK     :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Reading Valid;</span>
-                                                            <span class="o">.</span><span class="n">xOverrange</span>     <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">VLS_RCC</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">RCC_GPI</span> <span class="p">(</span><span class="mi">901</span><span class="n">P</span><span class="p">)</span><span class="o">^</span><span class="n">TXPDO</span> <span class="n">Combined</span><span class="o">^</span><span class="n">Combination</span> <span class="n">Gauge</span> <span class="n">Overrange</span> <span class="n">Exceeded</span><span class="p">;</span>
+                                 <span class="o">.</span><span class="n">xOverrange</span>        <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">VLS_RCC</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">RCC_GPI</span> <span class="p">(</span><span class="mi">901</span><span class="n">P</span><span class="p">)</span><span class="o">^</span><span class="n">TXPDO</span> <span class="n">Combined</span><span class="o">^</span><span class="n">Combination</span> <span class="n">Gauge</span> <span class="n">Overrange</span> <span class="n">Exceeded</span><span class="p">;</span>
                                                             <span class="o">.</span><span class="n">xUnderrange</span> <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">VLS_RCC</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">RCC_GPI</span> <span class="p">(</span><span class="mi">901</span><span class="n">P</span><span class="p">)</span><span class="o">^</span><span class="n">TXPDO</span> <span class="n">Combined</span><span class="o">^</span><span class="n">Combination</span> <span class="n">Gauge</span> <span class="n">Underrange</span> <span class="n">Exceeded</span><span class="p">;</span>
                                                             <span class="o">.</span><span class="n">i_iPRESS_R</span> <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">VLS_RCC</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">RCC_GPI</span> <span class="p">(</span><span class="mi">901</span><span class="n">P</span><span class="p">)</span><span class="o">^</span><span class="n">TXPDO</span> <span class="n">Combined</span><span class="o">^</span><span class="n">Combination</span> <span class="n">Gauge</span> <span class="n">Active</span> <span class="n">Value</span><span class="s1">&#39;}</span>
-    <span class="n">CRIX_RCC_GCP_01</span> <span class="p">:</span> <span class="n">FB_901_ECAT</span><span class="p">;</span> <span class="o">*</span><span class="p">)</span>
+    <span class="n">CRIX_RCC_GCP_02</span> <span class="p">:</span> <span class="n">FB_901_ECAT</span><span class="p">;</span>
 
 
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:RCC:GCP:01 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP5 (EP3174-0002)^AI Standard Channel 4^Value &#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^Term 143 (EL3174-0002)^AI Standard Channel 1^Value &#39;</span><span class="p">}</span>
+    <span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>      <span class="s1">&#39;.i_iPRESS_R    := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP5 (EP3174-0002)^AI Standard Channel 4^Value &#39;</span><span class="p">}</span>
     <span class="n">CRIX_RCC_GCP_01</span> <span class="p">:</span> <span class="n">FB_972</span><span class="p">;</span>
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:RCC &#39;</span><span class="p">}</span>
@@ -964,6 +966,7 @@
     <span class="s1">&#39;}</span>
     <span class="n">VLS_PTM_01</span> <span class="p">:</span> <span class="n">FB_PTM_Pfeiffer</span><span class="p">;</span>
     <span class="n">VLS_PTM_01_xExtIlkOK</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">;</span>
+    <span class="n">stVLS_PTM_01</span> <span class="p">:</span> <span class="n">ST_PfeifferPTM</span><span class="p">;</span>  <span class="o">//</span><span class="n">new</span>
 
     <span class="o">//</span> <span class="n">They</span> <span class="n">share</span> <span class="n">the</span> <span class="n">same</span> <span class="n">serial</span> <span class="n">port</span>
     <span class="n">st_VLS_Pfeiffer_CTRL</span>    <span class="p">:</span> <span class="n">ARRAY</span><span class="p">[</span><span class="mf">1..20</span><span class="p">]</span> <span class="n">OF</span> <span class="n">ST_PfeifferControl</span><span class="p">;</span>
@@ -1124,9 +1127,15 @@
     <span class="n">ads_watch_dog</span> <span class="p">:</span> <span class="n">FB_ADS_WATCHDOG</span><span class="p">;</span>
 
 <span class="n">END_VAR</span>
-<span class="n">TM2K2_GCC_01_reader</span><span class="p">(</span>        <span class="n">sNetId</span> <span class="o">:=</span> <span class="s1">&#39;172.21.140.69.1.1&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">AMS</span> <span class="n">NET</span> <span class="n">ID</span> <span class="n">of</span> <span class="n">RIXS</span> <span class="n">vacuum</span> <span class="n">PLC</span> <span class="n">being</span> <span class="n">read</span> <span class="kn">from</span>
+<span class="n">TM2K2_GCC_01_reader</span><span class="p">(</span><span class="n">sNetId</span> <span class="o">:=</span> <span class="s1">&#39;172.21.140.69.1.1&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">AMS</span> <span class="n">NET</span> <span class="n">ID</span> <span class="n">of</span> <span class="n">RIXS</span> <span class="n">vacuum</span> <span class="n">PLC</span> <span class="n">being</span> <span class="n">read</span> <span class="kn">from</span>
     <span class="nn">nPort</span> <span class="o">:=</span> <span class="mi">851</span><span class="p">,</span> <span class="o">//</span> <span class="n">ADS</span> <span class="n">port</span> <span class="n">of</span> <span class="n">the</span> <span class="n">PLC</span> <span class="n">reading</span> <span class="kn">from</span> <span class="nn">this</span> <span class="n">PLC</span>
     <span class="n">sVarName</span> <span class="o">:=</span> <span class="s1">&#39;GVL_KFE_RIX_VAC.fb_TM2K2_K2B_GCC_1&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">Full</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">FB</span> <span class="n">containing</span> <span class="n">the</span> <span class="n">gauge</span> <span class="n">to</span> <span class="n">be</span> <span class="n">read</span>
+    <span class="n">iWatchdog</span> <span class="o">:=</span> <span class="n">i_iWatchdog</span> <span class="o">//</span> <span class="n">UDINT</span> <span class="n">required</span> <span class="k">for</span> <span class="n">watchdog</span> <span class="n">functionality</span>
+<span class="p">);</span>
+
+<span class="n">IM6K2_GCC_01_reader</span><span class="p">(</span><span class="n">sNetId</span> <span class="o">:=</span> <span class="s1">&#39;172.21.140.69.1.1&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">AMS</span> <span class="n">NET</span> <span class="n">ID</span> <span class="n">of</span> <span class="n">RIXS</span> <span class="n">vacuum</span> <span class="n">PLC</span> <span class="n">being</span> <span class="n">read</span> <span class="kn">from</span>
+    <span class="nn">nPort</span> <span class="o">:=</span> <span class="mi">851</span><span class="p">,</span> <span class="o">//</span> <span class="n">ADS</span> <span class="n">port</span> <span class="n">of</span> <span class="n">the</span> <span class="n">PLC</span> <span class="n">reading</span> <span class="kn">from</span> <span class="nn">this</span> <span class="n">PLC</span>
+    <span class="n">sVarName</span> <span class="o">:=</span> <span class="s1">&#39;GVL_KFE_RIX_VAC.fb_IM6K2_PPM_GCC_1&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">Full</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">FB</span> <span class="n">containing</span> <span class="n">the</span> <span class="n">gauge</span> <span class="n">to</span> <span class="n">be</span> <span class="n">read</span>
     <span class="n">iWatchdog</span> <span class="o">:=</span> <span class="n">i_iWatchdog</span> <span class="o">//</span> <span class="n">UDINT</span> <span class="n">required</span> <span class="k">for</span> <span class="n">watchdog</span> <span class="n">functionality</span>
 <span class="p">);</span>
 
@@ -1178,7 +1187,7 @@
 <span class="n">CRIX_GCP_03</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="p">);</span>
 
 <span class="n">CRIX_GCP_04</span><span class="o">.</span><span class="n">M_SetBits</span><span class="p">(</span><span class="mi">30518</span><span class="p">);</span>
-<span class="n">CRIX_GCP_04</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="n">stCRIX_GCP_04</span><span class="p">);</span>
+<span class="o">//</span><span class="n">CRIX_GCP_04</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="n">stCRIX_GCP_04</span><span class="p">);</span>
 
 <span class="n">END_PROGRAM</span>
 </pre></div>
@@ -1197,6 +1206,7 @@
     <span class="n">fbCRIX_PTM_03_ILK</span> <span class="p">:</span> <span class="n">FB_ChemRIXS_Turbo_ILK</span><span class="p">;</span>
     <span class="n">CRIX_PTM_03_ILK_OK</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
+    <span class="n">fbCRIX_PTM_04_ILK</span> <span class="p">:</span> <span class="n">FB_ChemRIXS_Turbo_ILK</span><span class="p">;</span> <span class="o">//</span><span class="n">new</span>
     <span class="n">CRIX_PTM_04_ILK_OK</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 <span class="n">END_VAR</span>
 <span class="o">//</span> <span class="n">Leybold</span> <span class="n">Pumps</span>
@@ -1241,9 +1251,31 @@
 
 <span class="n">CRIX_PTM_03</span><span class="o">.</span><span class="n">M_Serial_IO</span><span class="p">(</span><span class="n">st_Pfeiffer_RBK</span><span class="o">:=</span><span class="n">st_PTM_03_Pfeiffer_RBK</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">st_PTM_03_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
 
-<span class="o">//</span><span class="n">Pfeiffer</span> <span class="n">Turbo</span> <span class="n">PTM_04</span>
 
-<span class="p">(</span><span class="o">*</span><span class="n">Assign</span> <span class="n">adresses</span> <span class="n">to</span> <span class="n">the</span> <span class="n">pfeiffer</span> <span class="n">controllers</span> <span class="n">connected</span> <span class="n">to</span> <span class="n">this</span> <span class="n">serial</span> <span class="n">terminal</span><span class="o">*</span><span class="p">)</span>
+<span class="o">//</span> <span class="n">Pfeiffer</span> <span class="n">Turbo</span> <span class="n">pump</span> <span class="mi">04</span> <span class="p">(</span><span class="n">New</span><span class="p">)</span>
+<span class="n">fbCRIX_PTM_04_ILK</span><span class="p">(</span><span class="n">i_stValve</span><span class="o">:=</span><span class="n">stCRIX_VGC_06</span><span class="p">,</span>
+                              <span class="n">i_stPump</span><span class="o">:=</span><span class="n">stCRIX_PTM_04</span><span class="p">,</span>
+                  <span class="n">tDelay</span><span class="o">:=</span><span class="n">T</span><span class="c1">#200S,</span>
+                              <span class="n">bILK</span><span class="o">=&gt;</span><span class="n">CRIX_PTM_04_ILK_OK</span><span class="p">);</span>
+<span class="n">CRIX_PTM_04</span><span class="p">(</span><span class="n">i_xExtILKOk</span><span class="o">:=</span><span class="p">(</span><span class="n">CRIX_PTM_04_ILK_OK</span>  <span class="n">AND</span> <span class="n">F_TurboExtILKLogic_2</span><span class="p">(</span><span class="n">Turbo</span><span class="o">:=</span><span class="n">stCRIX_PTM_04</span><span class="p">,</span>
+                                                                                                                                     <span class="n">BackingGauge</span><span class="o">:=</span><span class="n">CRIX_GPI_05</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>
+                                                                                                                                 <span class="n">InletGauge</span><span class="o">:=</span><span class="n">CRIX_GCP_03</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>
+                                                                                                                                 <span class="n">ScrollPump</span><span class="o">:=</span> <span class="n">stCRIX_MECH_PRO_01</span><span class="p">)),</span>
+                    <span class="n">iq_stPtm</span><span class="o">=&gt;</span> <span class="n">stCRIX_PTM_04</span><span class="p">);</span>
+
+<span class="n">stCRIX_PTM_04_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">iSerialAddress</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">stCRIX_PTM_04_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">xEnableComm</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+
+<span class="n">fb_CRIX_PTM_04_Pfeiffer_PfeifferCom</span><span class="p">(</span><span class="n">astPfeifferControl</span><span class="o">:=</span><span class="n">stCRIX_PTM_04_Pfeiffer_CTRL</span><span class="p">,</span>
+                                      <span class="n">astPfeifferStatus</span><span class="o">:=</span><span class="n">stCRIX_PTM_04_Pfeiffer_RBK</span><span class="p">,</span>
+                                      <span class="n">SerialRXBuffer</span><span class="o">:=</span><span class="n">K2S17_E5_CH1_SerialRXBuffer</span><span class="p">,</span>
+                                      <span class="n">SerialTXBuffer</span><span class="o">:=</span><span class="n">K2S17_E5_CH1_SerialTXBuffer</span><span class="p">);</span>
+
+<span class="n">CRIX_PTM_04</span><span class="o">.</span><span class="n">M_Serial_IO</span><span class="p">(</span><span class="n">st_Pfeiffer_RBK</span><span class="o">:=</span><span class="n">stCRIX_PTM_04_Pfeiffer_RBK</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">stCRIX_PTM_04_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+
+<span class="o">//</span><span class="n">Pfeiffer</span> <span class="n">Turbo</span> <span class="n">PTM_04</span> <span class="p">(</span><span class="n">Old</span> <span class="n">Implementation</span> <span class="n">of</span> <span class="n">timer</span> <span class="n">using</span> <span class="n">Library</span> <span class="p">(</span><span class="mf">2.0.1</span><span class="p">)</span> <span class="n">function</span><span class="p">)</span>
+
+<span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="n">Assign</span> <span class="n">adresses</span> <span class="n">to</span> <span class="n">the</span> <span class="n">pfeiffer</span> <span class="n">controllers</span> <span class="n">connected</span> <span class="n">to</span> <span class="n">this</span> <span class="n">serial</span> <span class="n">terminal</span><span class="o">*</span><span class="p">)</span>
 <span class="n">stCRIX_PTM_04_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">iSerialAddress</span> <span class="o">:=</span><span class="mi">1</span><span class="p">;</span>
 <span class="n">stCRIX_PTM_04_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">xEnableComm</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
 
@@ -1268,7 +1300,7 @@
 <span class="n">CRIX_PTM_04_ILK_OK</span> <span class="o">:=</span> <span class="n">F_TurboExtILK_TOF</span><span class="p">(</span><span class="n">Turbo</span><span class="o">:=</span><span class="n">CRIX_PTM_04</span><span class="o">.</span><span class="n">iq_stPTM</span><span class="p">,</span> <span class="n">BackingGauge</span><span class="o">:=</span><span class="n">CRIX_GPI_05</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>
                             <span class="n">InletGauge</span><span class="o">:=</span><span class="n">CRIX_GCP_03</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span> <span class="n">ScrollPump</span><span class="o">:=</span> <span class="n">stCRIX_MECH_PRO_01</span><span class="p">,</span> <span class="n">RoughingValve</span><span class="o">:=</span><span class="n">CRIX_VGC_06</span><span class="o">.</span><span class="n">iq_stValve</span><span class="p">,</span> <span class="n">tDelay</span><span class="o">:=</span><span class="n">T</span><span class="c1">#200S );</span>
 
-<span class="n">CRIX_PTM_04</span><span class="p">(</span><span class="n">i_xExtILKOk</span><span class="o">:=</span><span class="n">CRIX_PTM_04_ILK_OK</span><span class="p">,</span> <span class="n">iq_stPtm</span><span class="o">=&gt;</span> <span class="p">);</span>
+<span class="n">CRIX_PTM_04</span><span class="p">(</span><span class="n">i_xExtILKOk</span><span class="o">:=</span><span class="n">CRIX_PTM_04_ILK_OK</span><span class="p">,</span> <span class="n">iq_stPtm</span><span class="o">=&gt;</span> <span class="p">);</span> <span class="o">*</span><span class="p">)</span>
 
 <span class="n">END_PROGRAM</span>
 </pre></div>
@@ -1435,7 +1467,7 @@
     <span class="n">fbArbiter</span><span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">fbArbiter1</span><span class="p">);</span>
 
 <span class="n">CRIX_VGC_09</span><span class="p">(</span><span class="n">i_stUSG</span><span class="o">:=</span><span class="n">CRIX_GCC_01</span><span class="o">.</span><span class="n">IG</span><span class="p">,</span>
-            <span class="n">i_stDSG</span><span class="o">:=</span><span class="n">bm_dummy_gauge</span><span class="p">,</span><span class="o">//</span> <span class="n">PRG_ADS_Gauges</span><span class="o">.</span><span class="n">IM6K2_GCC_Reader</span><span class="o">.</span><span class="n">IG</span><span class="p">,</span>
+            <span class="n">i_stDSG</span><span class="o">:=</span><span class="n">IM6K2_GCC_01_reader</span><span class="o">.</span><span class="n">IG</span><span class="p">,</span><span class="o">//</span> <span class="n">PRG_ADS_Gauges</span><span class="o">.</span><span class="n">IM6K2_GCC_Reader</span><span class="o">.</span><span class="n">IG</span><span class="p">,</span>
             <span class="n">i_xDis_DPILK</span><span class="o">:=</span><span class="n">FALSE</span><span class="p">,</span>
             <span class="n">i_xPMPS_OK</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">,</span>
             <span class="n">i_xEPS_OK</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">,</span>
@@ -1714,11 +1746,12 @@ END_FUNCTION_BLOCK
     <span class="n">CRIX_RCC_VRC_03_OPEN_OK</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
     <span class="n">CRIX_RCC_VRC_04_OPEN_OK</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
-
-
-
 <span class="n">END_VAR</span>
+<span class="n">CRIX_RCC_GCP_01</span><span class="o">.</span><span class="n">M_SetBits</span><span class="p">(</span><span class="mi">30518</span><span class="p">);</span>
 <span class="n">CRIX_RCC_GCP_01</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="p">);</span>
+
+<span class="n">CRIX_RCC_GCP_02</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="p">);</span>
+
 <span class="n">CRIX_RCC_STC_01</span><span class="p">(</span>
     <span class="n">iScale</span><span class="o">:=</span> <span class="p">,</span>
     <span class="n">fTemp</span><span class="o">=&gt;</span> <span class="p">,</span>
@@ -1771,6 +1804,16 @@ END_FUNCTION_BLOCK
 <span class="n">END_VAR</span>
 <span class="o">//</span><span class="n">Pfeiffer</span> <span class="n">Turbo</span>
 
+<span class="n">fbVLS_PTM_01_ILK</span><span class="p">(</span><span class="n">i_stValve</span><span class="o">:=</span><span class="n">stCRIX_VGC_05</span><span class="p">,</span>
+                              <span class="n">i_stPump</span><span class="o">:=</span><span class="n">stVLS_PTM_01</span><span class="p">,</span>
+                  <span class="n">tDelay</span><span class="o">:=</span><span class="n">T</span><span class="c1">#200S,</span>
+                              <span class="n">bILK</span><span class="o">=&gt;</span><span class="n">VLS_PTM_01_xExtIlkOK</span><span class="p">);</span>
+<span class="n">VLS_PTM_01</span><span class="p">(</span><span class="n">i_xExtILKOk</span><span class="o">:=</span><span class="p">(</span><span class="n">VLS_PTM_01_xExtIlkOK</span>  <span class="n">AND</span> <span class="n">F_TurboExtILKLogic_2</span><span class="p">(</span><span class="n">Turbo</span><span class="o">:=</span><span class="n">stVLS_PTM_01</span><span class="p">,</span>
+                                                                                                                                     <span class="n">BackingGauge</span><span class="o">:=</span><span class="n">CRIX_GPI_05</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>
+                                                                                                                                 <span class="n">InletGauge</span><span class="o">:=</span><span class="n">VLS_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>
+                                                                                                                                 <span class="n">ScrollPump</span><span class="o">:=</span> <span class="n">stCRIX_MECH_PRO_01</span><span class="p">)),</span>
+                    <span class="n">iq_stPtm</span><span class="o">=&gt;</span> <span class="n">stVLS_PTM_01</span><span class="p">);</span>
+
 <span class="p">(</span><span class="o">*</span><span class="n">Assign</span> <span class="n">adresses</span> <span class="n">to</span> <span class="n">the</span> <span class="n">pfeiffer</span> <span class="n">controllers</span> <span class="n">connected</span> <span class="n">to</span> <span class="n">this</span> <span class="n">serial</span> <span class="n">terminal</span><span class="o">*</span><span class="p">)</span>
 <span class="n">st_VLS_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">iSerialAddress</span> <span class="o">:=</span><span class="mi">1</span><span class="p">;</span>
 <span class="n">st_VLS_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">xEnableComm</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
@@ -1785,7 +1828,7 @@ END_FUNCTION_BLOCK
 <span class="p">(</span><span class="o">*</span> <span class="n">Copy</span> <span class="n">Status</span> <span class="n">Pv</span><span class="s1">&#39;s into the PTM structure*)</span>
 <span class="n">VLS_PTM_01</span><span class="o">.</span><span class="n">M_Serial_IO</span><span class="p">(</span><span class="n">st_Pfeiffer_CTRL</span><span class="o">:=</span><span class="n">st_VLS_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">st_Pfeiffer_RBK</span><span class="o">:=</span><span class="n">st_VLS_Pfeiffer_RBK</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
 
-<span class="p">(</span><span class="o">*</span>
+<span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="o">*</span> \\<span class="n">Old</span> <span class="n">Implementation</span> <span class="n">using</span> <span class="n">Library</span> <span class="p">(</span><span class="mf">2.0.1</span><span class="p">)</span> <span class="n">function</span>
 <span class="n">Turbo</span> <span class="n">pump</span> <span class="n">permit</span> <span class="n">to</span> <span class="n">run</span> <span class="n">when</span><span class="p">:</span>
 <span class="n">Scroll</span> <span class="n">pump</span> <span class="ow">is</span> <span class="n">running</span>
 <span class="n">Turbo</span> <span class="n">pump</span> <span class="n">inlet</span> <span class="n">pressure</span> <span class="ow">and</span> <span class="n">backing</span> <span class="n">line</span> <span class="n">pressure</span> <span class="n">are</span> <span class="n">below</span> <span class="n">than</span> <span class="n">configured</span> <span class="n">setpoints</span>
@@ -1795,7 +1838,7 @@ END_FUNCTION_BLOCK
 <span class="n">VLS_PTM_01_xExtIlkOK</span> <span class="o">:=</span> <span class="n">F_TurboExtILK_TOF</span><span class="p">(</span><span class="n">Turbo</span><span class="o">:=</span><span class="n">VLS_PTM_01</span><span class="o">.</span><span class="n">iq_stPTM</span><span class="p">,</span> <span class="n">BackingGauge</span><span class="o">:=</span><span class="n">CRIX_GPI_05</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>
                             <span class="n">InletGauge</span><span class="o">:=</span><span class="n">VLS_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span> <span class="n">ScrollPump</span><span class="o">:=</span> <span class="n">stCRIX_MECH_PRO_01</span><span class="p">,</span> <span class="n">RoughingValve</span><span class="o">:=</span><span class="n">CRIX_VGC_05</span><span class="o">.</span><span class="n">iq_stValve</span><span class="p">,</span> <span class="n">tDelay</span><span class="o">:=</span><span class="n">T</span><span class="c1">#200S );</span>
 
-<span class="n">VLS_PTM_01</span><span class="p">(</span><span class="n">i_xExtILKOk</span><span class="o">:=</span><span class="n">VLS_PTM_01_xExtIlkOK</span><span class="p">,</span> <span class="n">iq_stPtm</span><span class="o">=&gt;</span> <span class="p">);</span>
+<span class="n">VLS_PTM_01</span><span class="p">(</span><span class="n">i_xExtILKOk</span><span class="o">:=</span><span class="n">VLS_PTM_01_xExtIlkOK</span><span class="p">,</span> <span class="n">iq_stPtm</span><span class="o">=&gt;</span> <span class="p">);</span><span class="o">*</span><span class="p">)</span>
 
 <span class="n">END_PROGRAM</span>
 </pre></div>

@@ -37,13 +37,12 @@ GVL_ADS_Devices
 
     //{attribute 'qualified_only'}
     VAR_GLOBAL
-
-    //	{attribute 'pytmc' :=' pv: LAMP:ROUGH:GPI04:reader '}
-    //	LAMP_ROUGH_GPI04_reader : FB_TGPI_ADS;
     	
      {attribute 'pytmc' :=' pv: TM2K2:GCC:01:reader '}		
     	TM2K2_GCC_01_reader : FB_TGCC_ADS;
-    		
+     {attribute 'pytmc' :=' pv: IM6K2:GCC:01:reader '}		
+    	IM6K2_GCC_01_reader : FB_TGCC_ADS;
+      		
     END_VAR
 
 
@@ -120,7 +119,7 @@ GVL_Chamber_Gauges
     	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 4^Value '}
     	CRIX_GCP_04 : FB_972;
     	
-    	stCRIX_GCP_04 : ST_VG;
+    	//stCRIX_GCP_04 : ST_VG;
     	
     	
     //	stCRIX_GCP_03 : ST_VG;
@@ -773,6 +772,8 @@ GVL_Pumps
     	'}
         CRIX_PTM_04 : FB_PTM_Pfeiffer;
 
+    	stCRIX_PTM_04 : ST_PfeifferPTM;  //new
+    	
     	// Serial port
     	stCRIX_PTM_04_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
     	stCRIX_PTM_04_Pfeiffer_RBK 	: ARRAY[1..20] OF ST_PfeifferStatus;
@@ -826,17 +827,18 @@ GVL_Recirculation
     								.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E2 (EL2004)^Channel 4^Output'}
     	CRIX_RCC_VRC_04 : FB_VRC_NC_ClsLS;	
     	
-    (*	{attribute 'pytmc' :=' pv: CRIX:RCC:GCP:01 '}
-    	{attribute 'TcLinkTo' := 	'.xPress_OK	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Reading Valid;
-    								.xOverrange	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Overrange Exceeded;
+    	{attribute 'pytmc' :=' pv: CRIX:RCC:GCP:02 '}
+        {attribute 'TcLinkTo' := 	'.xPress_OK	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Reading Valid;
+    	                             .xOverrange	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Overrange Exceeded;
     								.xUnderrange := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Underrange Exceeded;
     								.i_iPRESS_R := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Active Value'}
-    	CRIX_RCC_GCP_01 : FB_901_ECAT; *)
+    	CRIX_RCC_GCP_02 : FB_901_ECAT; 
     	
 
     	
     	{attribute 'pytmc' :=' pv: CRIX:RCC:GCP:01 '}
-    	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP5 (EP3174-0002)^AI Standard Channel 4^Value '}
+        {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^Term 143 (EL3174-0002)^AI Standard Channel 1^Value '}
+        //{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP5 (EP3174-0002)^AI Standard Channel 4^Value '}
         CRIX_RCC_GCP_01 : FB_972;
        
         {attribute 'pytmc' :=' pv: CRIX:RCC '}
@@ -900,6 +902,7 @@ GVL_VLS
     	'}
         VLS_PTM_01 : FB_PTM_Pfeiffer;
     	VLS_PTM_01_xExtIlkOK : Bool;
+    	stVLS_PTM_01 : ST_PfeifferPTM;  //new
 
     	// They share the same serial port
     	st_VLS_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
@@ -1073,9 +1076,15 @@ PRG_ADS_Interfaces
     	ads_watch_dog : FB_ADS_WATCHDOG;
     	
     END_VAR
-    TM2K2_GCC_01_reader(	sNetId := '172.21.140.69.1.1', // AMS NET ID of RIXS vacuum PLC being read from
+    TM2K2_GCC_01_reader(sNetId := '172.21.140.69.1.1', // AMS NET ID of RIXS vacuum PLC being read from
     	nPort := 851, // ADS port of the PLC reading from this PLC
     	sVarName := 'GVL_KFE_RIX_VAC.fb_TM2K2_K2B_GCC_1', // Full name of the FB containing the gauge to be read
+    	iWatchdog := i_iWatchdog // UDINT required for watchdog functionality
+    );
+
+    IM6K2_GCC_01_reader(sNetId := '172.21.140.69.1.1', // AMS NET ID of RIXS vacuum PLC being read from
+    	nPort := 851, // ADS port of the PLC reading from this PLC
+    	sVarName := 'GVL_KFE_RIX_VAC.fb_IM6K2_PPM_GCC_1', // Full name of the FB containing the gauge to be read
     	iWatchdog := i_iWatchdog // UDINT required for watchdog functionality
     );
 
@@ -1131,7 +1140,7 @@ PRG_Chamber_Gauges
     CRIX_GCP_03(PG=>);
 
     CRIX_GCP_04.M_SetBits(30518);
-    CRIX_GCP_04(PG=>stCRIX_GCP_04);
+    //CRIX_GCP_04(PG=>stCRIX_GCP_04);
 
     END_PROGRAM
 
@@ -1154,6 +1163,7 @@ PRG_Chamber_Pumps
     	fbCRIX_PTM_03_ILK : FB_ChemRIXS_Turbo_ILK;
     	CRIX_PTM_03_ILK_OK : BOOL;
     	
+    	fbCRIX_PTM_04_ILK : FB_ChemRIXS_Turbo_ILK; //new
     	CRIX_PTM_04_ILK_OK : BOOL;
     END_VAR
     // Leybold Pumps
@@ -1198,9 +1208,31 @@ PRG_Chamber_Pumps
     					  
     CRIX_PTM_03.M_Serial_IO(st_Pfeiffer_RBK:=st_PTM_03_Pfeiffer_RBK[1], st_PTM_03_Pfeiffer_CTRL[1]);
     					  
-    //Pfeiffer Turbo PTM_04
 
-    (*Assign adresses to the pfeiffer controllers connected to this serial terminal*)
+    // Pfeiffer Turbo pump 04 (New)
+    fbCRIX_PTM_04_ILK(i_stValve:=stCRIX_VGC_06,
+    				  i_stPump:=stCRIX_PTM_04,
+    	              tDelay:=T#200S,
+    				  bILK=>CRIX_PTM_04_ILK_OK);			
+    CRIX_PTM_04(i_xExtILKOk:=(CRIX_PTM_04_ILK_OK  AND F_TurboExtILKLogic_2(Turbo:=stCRIX_PTM_04,
+    																	 BackingGauge:=CRIX_GPI_05.PG,
+    																     InletGauge:=CRIX_GCP_03.PG,
+    																     ScrollPump:= stCRIX_MECH_PRO_01)), 
+    			iq_stPtm=> stCRIX_PTM_04);		
+    			
+    stCRIX_PTM_04_Pfeiffer_CTRL[1].iSerialAddress := 1;
+    stCRIX_PTM_04_Pfeiffer_CTRL[1].xEnableComm := TRUE;
+
+    fb_CRIX_PTM_04_Pfeiffer_PfeifferCom(astPfeifferControl:=stCRIX_PTM_04_Pfeiffer_CTRL,
+    					  astPfeifferStatus:=stCRIX_PTM_04_Pfeiffer_RBK,
+    					  SerialRXBuffer:=K2S17_E5_CH1_SerialRXBuffer,
+    					  SerialTXBuffer:=K2S17_E5_CH1_SerialTXBuffer);
+    					  
+    CRIX_PTM_04.M_Serial_IO(st_Pfeiffer_RBK:=stCRIX_PTM_04_Pfeiffer_RBK[1], stCRIX_PTM_04_Pfeiffer_CTRL[1]);
+
+    //Pfeiffer Turbo PTM_04 (Old Implementation of timer using Library (2.0.1) function)
+
+    (*(*Assign adresses to the pfeiffer controllers connected to this serial terminal*)
     stCRIX_PTM_04_Pfeiffer_CTRL[1].iSerialAddress :=1;
     stCRIX_PTM_04_Pfeiffer_CTRL[1].xEnableComm := TRUE;
     	
@@ -1225,7 +1257,7 @@ PRG_Chamber_Pumps
     CRIX_PTM_04_ILK_OK := F_TurboExtILK_TOF(Turbo:=CRIX_PTM_04.iq_stPTM, BackingGauge:=CRIX_GPI_05.PG,
                                 InletGauge:=CRIX_GCP_03.PG, ScrollPump:= stCRIX_MECH_PRO_01, RoughingValve:=CRIX_VGC_06.iq_stValve, tDelay:=T#200S );
     		  
-    CRIX_PTM_04(i_xExtILKOk:=CRIX_PTM_04_ILK_OK, iq_stPtm=> );
+    CRIX_PTM_04(i_xExtILKOk:=CRIX_PTM_04_ILK_OK, iq_stPtm=> ); *)
 
     END_PROGRAM
 
@@ -1392,7 +1424,7 @@ PRG_Chamber_Valves
     	fbArbiter:= GVL_PMPS.fbArbiter1);
            
     CRIX_VGC_09(i_stUSG:=CRIX_GCC_01.IG,
-                i_stDSG:=bm_dummy_gauge,// PRG_ADS_Gauges.IM6K2_GCC_Reader.IG,
+                i_stDSG:=IM6K2_GCC_01_reader.IG,// PRG_ADS_Gauges.IM6K2_GCC_Reader.IG,
                 i_xDis_DPILK:=FALSE,
                 i_xPMPS_OK:=TRUE,
                 i_xEPS_OK:=TRUE,
@@ -1691,11 +1723,12 @@ PRG_RCC
     	CRIX_RCC_VRC_03_OPEN_OK : BOOL;
     	CRIX_RCC_VRC_04_OPEN_OK : BOOL;
     	
-       
-
-    	
     END_VAR
+    CRIX_RCC_GCP_01.M_SetBits(30518);
     CRIX_RCC_GCP_01(PG=>);
+
+    CRIX_RCC_GCP_02(PG=>);
+
     CRIX_RCC_STC_01(
     	iScale:= , 
     	fTemp=> , 
@@ -1752,6 +1785,16 @@ PRG_VLS_Turbo
     END_VAR
     //Pfeiffer Turbo
 
+    fbVLS_PTM_01_ILK(i_stValve:=stCRIX_VGC_05,
+    				  i_stPump:=stVLS_PTM_01,
+    	              tDelay:=T#200S,
+    				  bILK=>VLS_PTM_01_xExtIlkOK);			
+    VLS_PTM_01(i_xExtILKOk:=(VLS_PTM_01_xExtIlkOK  AND F_TurboExtILKLogic_2(Turbo:=stVLS_PTM_01,
+    																	 BackingGauge:=CRIX_GPI_05.PG,
+    																     InletGauge:=VLS_GPI_01.PG,
+    																     ScrollPump:= stCRIX_MECH_PRO_01)), 
+    			iq_stPtm=> stVLS_PTM_01);		
+    			
     (*Assign adresses to the pfeiffer controllers connected to this serial terminal*)
     st_VLS_Pfeiffer_CTRL[1].iSerialAddress :=1;
     st_VLS_Pfeiffer_CTRL[1].xEnableComm := TRUE;
@@ -1766,7 +1809,7 @@ PRG_VLS_Turbo
     (* Copy Status Pv's into the PTM structure*)
     VLS_PTM_01.M_Serial_IO(st_Pfeiffer_CTRL:=st_VLS_Pfeiffer_CTRL[1],st_Pfeiffer_RBK:=st_VLS_Pfeiffer_RBK[1]);
 
-    (*
+    (*(* \\Old Implementation using Library (2.0.1) function 
     Turbo pump permit to run when:
     Scroll pump is running
     Turbo pump inlet pressure and backing line pressure are below than configured setpoints
@@ -1776,7 +1819,7 @@ PRG_VLS_Turbo
     VLS_PTM_01_xExtIlkOK := F_TurboExtILK_TOF(Turbo:=VLS_PTM_01.iq_stPTM, BackingGauge:=CRIX_GPI_05.PG,
                                 InletGauge:=VLS_GPI_01.PG, ScrollPump:= stCRIX_MECH_PRO_01, RoughingValve:=CRIX_VGC_05.iq_stValve, tDelay:=T#200S );
     		  
-    VLS_PTM_01(i_xExtILKOk:=VLS_PTM_01_xExtIlkOK, iq_stPtm=> );
+    VLS_PTM_01(i_xExtILKOk:=VLS_PTM_01_xExtIlkOK, iq_stPtm=> );*)
 
     END_PROGRAM
 
