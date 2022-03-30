@@ -6,7 +6,7 @@ Pragmas
     :header: PLC Name, Total Pragmas, Errors
     :align: center
 
-    :ref:`PLC_CRIX_VAC <PLC_CRIX_VAC_overview_pragmas>`, 162, 0
+    :ref:`PLC_CRIX_VAC <PLC_CRIX_VAC_overview_pragmas>`, 166, 0
 
 
 .. _PLC_CRIX_VAC_overview_pragmas:
@@ -15,7 +15,7 @@ Pragmas
 PLC_CRIX_VAC
 ^^^^^^^^^^^^
 
-Total pragmas found: 162
+Total pragmas found: 166
 Total linter errors: 0
 
 

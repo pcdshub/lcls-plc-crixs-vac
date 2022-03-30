@@ -4396,8 +4396,8 @@ Term 95 (EL6695)
         BootStrapData, 0010140200141402
         SyncMan, 0010000426000100010000008000da050004001026010000
         SyncMan, 0016000422000100020000008000da050004001622010000
-        SyncMan, 001c04006400010003000000000000000000001c64010000
-        SyncMan, 008e06002000010004000000000000000200008e20010000
+        SyncMan, 001c06006400010003000000000000000000001c64010000
+        SyncMan, 008e08002000010004000000000000000200008e20010000
         Fmmu, 0000000000000000001c00020100000001000000000000000000000000000000
         Fmmu, 0000000000000000008e00010100000002000000000000000000000000000000
         Fmmu, 00000000000000000d0800010100000003000000000000000000000000000000
@@ -4471,10 +4471,12 @@ PDO IO Inputs (Index #x1a08, Flags #x0020, SyncMan 3)
     :header: Name, Comment, BitLen, Index, Type
     :align: center
 
-        "bMOTY10_IN", "", 8, "#x6000", "BOOL"
-        "bMOTY10_OUT", "", 8, "#x6000", "BOOL"
-        "bMOTY11_IN", "", 8, "#x6000", "BOOL"
-        "bMOTY11_OUT", "", 8, "#x6000", "BOOL"
+        "bMOTY10_IN", "", , "#x6000", "BOOL"
+        "bMOTY10_OUT", "", , "#x6000", "BOOL"
+        "bMOTY11_IN", "", , "#x6000", "BOOL"
+        "bMOTY11_OUT", "", , "#x6000", "BOOL"
+        "xSDS_MOT_Z_18_IN", "", , "#x6000", "BOOL"
+        "xSDS_MOT_Z_18_OUT", "", , "#x6000", "BOOL"
 
 
 
@@ -4484,10 +4486,12 @@ PDO IO Outputs (Index #x1608, Flags #x0020, SyncMan 2)
     :header: Name, Comment, BitLen, Index, Type
     :align: center
 
-        "bVGC10_CLS", "", 8, "#x7000", "BOOL"
-        "bVGC10_OPN", "", 8, "#x7000", "BOOL"
-        "bVGC11_CLS", "", 8, "#x7000", "BOOL"
-        "bVGC11_OPN", "", 8, "#x7000", "BOOL"
+        "bVGC10_CLS", "", , "#x7000", "BOOL"
+        "bVGC10_OPN", "", , "#x7000", "BOOL"
+        "bVGC11_CLS", "", , "#x7000", "BOOL"
+        "bVGC11_OPN", "", , "#x7000", "BOOL"
+        "xSDS_VGC_16_CLS", "", , "#x7000", "BOOL"
+        "xSDS_VGC_16_OPN", "", , "#x7000", "BOOL"
 
 
 .. raw:: html

@@ -190,6 +190,8 @@ Links
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_12.i_xOpnLS, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E31 (EL1004), Channel 3^Input
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_13.i_xClsLS, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E33 (EL1004), Channel 4^Input
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_13.i_xOpnLS, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E33 (EL1004), Channel 3^Input
+        PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_16.i_xClsLS, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E35 (EL1004), Channel 2^Input
+        PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_16.i_xOpnLS, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E35 (EL1004), Channel 1^Input
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_17.i_xClsLS, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E37 (EL1004), Channel 2^Input
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_17.i_xOpnLS, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E37 (EL1004), Channel 1^Input
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Mech_Room.CRIX_MECH_GPI_01.i_iPRESS_R, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 92 (EL3174), AI Standard Channel 1^Value
@@ -203,6 +205,8 @@ Links
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_PLC_Interfaces.xPTC_MOT_Y_10_OUT, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695), IO Inputs^bMOTY10_OUT
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_PLC_Interfaces.xPTC_MOT_Y_11_IN, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695), IO Inputs^bMOTY11_IN
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_PLC_Interfaces.xPTC_MOT_Y_11_OUT, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695), IO Inputs^bMOTY11_OUT
+        PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_PLC_Interfaces.xSDS_MOT_Z_18_IN, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695), IO Inputs^xSDS_MOT_Z_18_IN
+        PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_PLC_Interfaces.xSDS_MOT_Z_18_OUT, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695), IO Inputs^xSDS_MOT_Z_18_OUT
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Pumps.CRIX_PTM_01.i_xAtSpd, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004), Channel 2^Input
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Pumps.CRIX_PTM_01.i_xFaultNC, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004), Channel 1^Input
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Pumps.CRIX_PTM_02.i_xAtSpd, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004), Channel 4^Input
@@ -214,6 +218,7 @@ Links
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Pumps.CRIX_PTM_04.i_xFaultNC, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E49 (EL1004), Channel 3^Input
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Pumps.CRIX_PTM_04.i_xRemote, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E49 (EL1004), Channel 2^Input
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_01.i_iPRESS_R, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^Term 143 (EL3174-0002), AI Standard Channel 1^Value
+        PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_02.bWcstate, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P), WcState^WcState
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_02.i_iPRESS_R, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P), TXPDO Combined^Combination Gauge Active Value
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_02.xOverrange, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P), TXPDO Combined^Combination Gauge Overrange Exceeded
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_02.xPress_OK, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P), TXPDO Combined^Combination Gauge Reading Valid
@@ -255,6 +260,8 @@ Links
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_11.q_xOPN_DO, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E26 (EL2004), Channel 4^Output
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_12.q_xOPN_DO, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E28 (EL2004), Channel 2^Output
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_13.q_xOPN_DO, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E28 (EL2004), Channel 3^Output
+        PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_16.q_xCLS_DO, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E30 (EL2004), Channel 1^Output
+        PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_16.q_xOPN_DO, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E28 (EL2004), Channel 4^Output
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_17.q_xOPN_DO, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E30 (EL2004), Channel 2^Output
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_Chamber_Valves.CRIX_VVC_01.q_xOPN_DO, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E34 (EL2004), Channel 1^Output
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_Chamber_Valves.CRIX_VVC_02.q_xOPN_DO, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E34 (EL2004), Channel 2^Output
@@ -272,6 +279,8 @@ Links
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_PLC_Interfaces.xPTC_VGC_10_OPN, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695), IO Outputs^bVGC10_OPN
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_PLC_Interfaces.xPTC_VGC_11_CLS, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695), IO Outputs^bVGC11_CLS
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_PLC_Interfaces.xPTC_VGC_11_OPN, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695), IO Outputs^bVGC11_OPN
+        PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_PLC_Interfaces.xSDS_VGC_16_CLS, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695), IO Outputs^xSDS_VGC_16_CLS
+        PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_PLC_Interfaces.xSDS_VGC_16_OPN, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695), IO Outputs^xSDS_VGC_16_OPN
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 113 (EK1521-0010)^Term 154 (EK1501-0010)^PMPS_FFO, Channel 1^Output
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 113 (EK1521-0010)^Term 154 (EK1501-0010)^PMPS_PRE, IO Outputs^FFO_Link
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_Pumps.CRIX_PTM_01.q_RunDO, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E43 (EL2794), Channel 3^Output

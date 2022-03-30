@@ -4068,7 +4068,7 @@ LCLS_Vacuum.FB_VVC
         | io: output
 
 
-              
+ 
 LCLS_Vacuum.ST_EbaraDryPump
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -6496,7 +6496,7 @@ LCLS_Vacuum.ST_VVC
         | io: output
 
 
-       
+                    
 LCLS_Vacuum_Serial.ST_PfeifferControl
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -24227,6 +24227,234 @@ Database Records
     * - CRIX:VGC:13:STATE_RBV
       - mbbi
       - GVL_Chamber_Valves.CRIX_VGC_13.iq_stValve.eVGC_State
+      - | field: EIST Close Timeout
+        | field: FRST Ext Fault
+        | field: FVST AT Vacuum
+        | field: NIST Open Timeout
+        | field: ONST At Vacuum
+        | field: SVST Vacuum Fault
+        | field: SXST Triggered
+        | field: THST Lost Vacuum
+        | field: TWST Differential Pressure
+        | field: ZRST Vented
+        | io: input
+
+
+    * - CRIX:VGC:16:ALM_RST
+      - bo
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.pv_xAlmRst
+      - | io: output
+
+
+    * - CRIX:VGC:16:ALM_RST_RBV
+      - bi
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.pv_xAlmRst
+      - | io: output
+
+
+    * - CRIX:VGC:16:CLS_DI_RBV
+      - bi
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.i_xClsLS
+      - | field: ONAM CLOSE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - CRIX:VGC:16:CLS_DO
+      - bo
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.q_xCLS_DO
+      - | field: ONAM CLOSE
+        | field: ZNAM OPEN
+        | io: output
+
+
+    * - CRIX:VGC:16:CLS_DO_RBV
+      - bi
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.q_xCLS_DO
+      - | field: ONAM CLOSE
+        | field: ZNAM OPEN
+        | io: output
+
+
+    * - CRIX:VGC:16:CLS_OK_RBV
+      - bi
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.xCLS_OK
+      - | field: ONAM CLOSE
+        | field: ZNAM OPEN
+        | io: input
+
+
+    * - CRIX:VGC:16:CLS_SW
+      - bo
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.pv_xCLS_SW
+      - | field: ONAM CLOSE
+        | field: ZNAM OPEN
+        | io: output
+
+
+    * - CRIX:VGC:16:CLS_SW_RBV
+      - bi
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.pv_xCLS_SW
+      - | field: ONAM CLOSE
+        | field: ZNAM OPEN
+        | io: output
+
+
+    * - CRIX:VGC:16:ErrMsg
+      - waveform
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.sErrorMessage
+      - | io: output
+
+
+    * - CRIX:VGC:16:ErrMsg_RBV
+      - waveform
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.sErrorMessage
+      - | io: output
+
+
+    * - CRIX:VGC:16:ERROR
+      - bo
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.bErrorPresent
+      - | field: ONAM ERROR PRESENT
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - CRIX:VGC:16:ERROR_RBV
+      - bi
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.bErrorPresent
+      - | field: ONAM ERROR PRESENT
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - CRIX:VGC:16:EXT_ILK_OK_RBV
+      - bi
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.xEXT_OK
+      - | field: ONAM OK
+        | field: ZNAM NOT OK
+        | io: input
+
+
+    * - CRIX:VGC:16:FORCE_CLS
+      - bo
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.pv_xOvrdCls
+      - | field: ONAM CLOSE
+        | field: ZNAM OPEN
+        | io: output
+
+
+    * - CRIX:VGC:16:FORCE_CLS_RBV
+      - bi
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.pv_xOvrdCls
+      - | field: ONAM CLOSE
+        | field: ZNAM OPEN
+        | io: output
+
+
+    * - CRIX:VGC:16:FORCE_OPN
+      - bo
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.pv_xOvrdOpn
+      - | field: ONAM FORCE OPEN
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - CRIX:VGC:16:FORCE_OPN_RBV
+      - bi
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.pv_xOvrdOpn
+      - | field: ONAM FORCE OPEN
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - CRIX:VGC:16:LOGGER
+      - bo
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - CRIX:VGC:16:LOGGER_RBV
+      - bi
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - CRIX:VGC:16:OPN_DI_RBV
+      - bi
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.i_xOpnLS
+      - | field: ONAM OPEN
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - CRIX:VGC:16:OPN_DO_RBV
+      - bi
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.q_xOPN_DO
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - CRIX:VGC:16:OPN_OK_RBV
+      - bi
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.xOPN_OK
+      - | field: ONAM OPN ILK OK
+        | field: ZNAM OPN ILK NOT OK
+        | io: input
+
+
+    * - CRIX:VGC:16:OPN_SW
+      - bo
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.pv_xOPN_SW
+      - | field: ONAM OPEN
+        | field: ZNAM CLOSE
+        | io: output
+
+
+    * - CRIX:VGC:16:OPN_SW_RBV
+      - bi
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.pv_xOPN_SW
+      - | field: ONAM OPEN
+        | field: ZNAM CLOSE
+        | io: output
+
+
+    * - CRIX:VGC:16:OVRD_ON
+      - bo
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.xOverrideMode
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
+        | io: output
+
+
+    * - CRIX:VGC:16:OVRD_ON_RBV
+      - bi
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.xOverrideMode
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
+        | io: output
+
+
+    * - CRIX:VGC:16:POS_STATE_RBV
+      - mbbi
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.eState
+      - | field: FRST OPEN_F
+        | field: ONST CLOSED
+        | field: THST INVALID
+        | field: TWST MOVING
+        | field: ZRST OPEN
+        | io: input
+        | type: mbbi
+
+
+    * - CRIX:VGC:16:STATE_RBV
+      - mbbi
+      - GVL_Chamber_Valves.CRIX_VGC_16.iq_stValve.eVGC_State
       - | field: EIST Close Timeout
         | field: FRST Ext Fault
         | field: FVST AT Vacuum

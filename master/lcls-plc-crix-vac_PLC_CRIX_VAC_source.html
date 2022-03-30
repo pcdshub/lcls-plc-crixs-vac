@@ -227,7 +227,7 @@
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 4^Value &#39;</span><span class="p">}</span>
     <span class="n">CRIX_GCP_04</span> <span class="p">:</span> <span class="n">FB_972</span><span class="p">;</span>
 
-    <span class="o">//</span><span class="n">stCRIX_GCP_04</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
+    <span class="n">stCRIX_GCP_04</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
 
 
 <span class="o">//</span>  <span class="n">stCRIX_GCP_03</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
@@ -371,20 +371,17 @@
                                                             <span class="o">.</span><span class="n">q_xOPN_DO</span>      <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">TMO_K4S2_DRL_01</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)]</span><span class="o">^</span><span class="n">K4S2_01_E6</span> <span class="p">(</span><span class="n">EL2004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
     <span class="o">*</span><span class="p">)</span>
     <span class="n">CRIX_VGC_15</span> <span class="p">:</span> <span class="n">FB_VGC</span><span class="p">;</span>
-
-
-
+<span class="o">*</span><span class="p">)</span>
 
 
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:VGC:16 &#39;</span><span class="p">}</span>
-    <span class="p">(</span><span class="o">*</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xOpnLS      :=      TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;</span>
-                                                             <span class="o">.</span><span class="n">i_xClsLS</span>      <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">TMO_K4S2_DRL_01</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)]</span><span class="o">^</span><span class="n">K4S2_01_E5</span> <span class="p">(</span><span class="n">EL1004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
-                                                            <span class="o">.</span><span class="n">q_xOPN_DO</span>      <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">TMO_K4S2_DRL_01</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)]</span><span class="o">^</span><span class="n">K4S2_01_E6</span> <span class="p">(</span><span class="n">EL2004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
-    <span class="o">*</span><span class="p">)</span>
-    <span class="n">CRIX_VGC_16</span> <span class="p">:</span> <span class="n">FB_VGC</span><span class="p">;</span>
-<span class="o">*</span><span class="p">)</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xOpnLS      :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E35 (EL1004)^Channel 1^Input;</span>
+                                                             <span class="o">.</span><span class="n">i_xClsLS</span>      <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E35</span> <span class="p">(</span><span class="n">EL1004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+                                                            <span class="o">.</span><span class="n">q_xOPN_DO</span>      <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E28</span> <span class="p">(</span><span class="n">EL2004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">4</span><span class="o">^</span><span class="n">Output</span><span class="p">;</span>
+                                <span class="o">.</span><span class="n">q_xCLS_DO</span>  <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E30</span> <span class="p">(</span><span class="n">EL2004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
+    <span class="n">CRIX_VGC_16</span> <span class="p">:</span> <span class="n">FB_VRC_DA</span><span class="p">;</span>
+
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:VGC:17 &#39;</span><span class="p">}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xOpnLS      :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E37 (EL1004)^Channel 1^Input;</span>
                                                              <span class="o">.</span><span class="n">i_xClsLS</span>      <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E37</span> <span class="p">(</span><span class="n">EL1004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
@@ -743,6 +740,16 @@
     <span class="s1">&#39;}</span>
     <span class="n">xPTC_MOT_Y_11_OUT</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>  <span class="s1">&#39;TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^xSDS_MOT_Z_18_IN</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">xSDS_MOT_Z_18_IN</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^xSDS_MOT_Z_18_OUT</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">xSDS_MOT_Z_18_OUT</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+
+
     <span class="p">(</span><span class="o">*</span><span class="n">I</span><span class="o">/</span><span class="n">O</span> <span class="n">Outputs</span> <span class="n">to</span> <span class="n">CRIX</span> <span class="n">Motion</span> <span class="n">PLC</span><span class="o">*</span><span class="p">)</span>
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>  <span class="s1">&#39;TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bVGC10_CLS</span>
@@ -761,7 +768,13 @@
     <span class="s1">&#39;}</span>
     <span class="n">xPTC_VGC_11_OPN</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>  <span class="s1">&#39;TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^xSDS_VGC_16_CLS</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">xSDS_VGC_16_CLS</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>  <span class="s1">&#39;TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^xSDS_VGC_16_OPN</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">xSDS_VGC_16_OPN</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
 <span class="n">END_VAR</span>
 </pre></div>
@@ -903,7 +916,8 @@
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.xPress_OK     :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Reading Valid;</span>
                                  <span class="o">.</span><span class="n">xOverrange</span>        <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">VLS_RCC</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">RCC_GPI</span> <span class="p">(</span><span class="mi">901</span><span class="n">P</span><span class="p">)</span><span class="o">^</span><span class="n">TXPDO</span> <span class="n">Combined</span><span class="o">^</span><span class="n">Combination</span> <span class="n">Gauge</span> <span class="n">Overrange</span> <span class="n">Exceeded</span><span class="p">;</span>
                                                             <span class="o">.</span><span class="n">xUnderrange</span> <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">VLS_RCC</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">RCC_GPI</span> <span class="p">(</span><span class="mi">901</span><span class="n">P</span><span class="p">)</span><span class="o">^</span><span class="n">TXPDO</span> <span class="n">Combined</span><span class="o">^</span><span class="n">Combination</span> <span class="n">Gauge</span> <span class="n">Underrange</span> <span class="n">Exceeded</span><span class="p">;</span>
-                                                            <span class="o">.</span><span class="n">i_iPRESS_R</span> <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">VLS_RCC</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">RCC_GPI</span> <span class="p">(</span><span class="mi">901</span><span class="n">P</span><span class="p">)</span><span class="o">^</span><span class="n">TXPDO</span> <span class="n">Combined</span><span class="o">^</span><span class="n">Combination</span> <span class="n">Gauge</span> <span class="n">Active</span> <span class="n">Value</span><span class="s1">&#39;}</span>
+                                                            <span class="o">.</span><span class="n">i_iPRESS_R</span> <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">VLS_RCC</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">RCC_GPI</span> <span class="p">(</span><span class="mi">901</span><span class="n">P</span><span class="p">)</span><span class="o">^</span><span class="n">TXPDO</span> <span class="n">Combined</span><span class="o">^</span><span class="n">Combination</span> <span class="n">Gauge</span> <span class="n">Active</span> <span class="n">Value</span><span class="p">;</span>
+                                <span class="o">.</span><span class="n">bWcstate</span> <span class="o">:=</span> <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">VLS_RCC</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">RCC_GPI</span> <span class="p">(</span><span class="mi">901</span><span class="n">P</span><span class="p">)</span><span class="o">^</span><span class="n">WcState</span><span class="o">^</span><span class="n">WcState</span><span class="s1">&#39; }</span>
     <span class="n">CRIX_RCC_GCP_02</span> <span class="p">:</span> <span class="n">FB_901_ECAT</span><span class="p">;</span>
 
 
@@ -1187,7 +1201,7 @@
 <span class="n">CRIX_GCP_03</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="p">);</span>
 
 <span class="n">CRIX_GCP_04</span><span class="o">.</span><span class="n">M_SetBits</span><span class="p">(</span><span class="mi">30518</span><span class="p">);</span>
-<span class="o">//</span><span class="n">CRIX_GCP_04</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="n">stCRIX_GCP_04</span><span class="p">);</span>
+<span class="n">CRIX_GCP_04</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="n">stCRIX_GCP_04</span><span class="p">);</span>
 
 <span class="n">END_PROGRAM</span>
 </pre></div>
@@ -1338,6 +1352,8 @@
 
 
 
+    <span class="n">bVGC_16_OPN_OK</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+    <span class="n">bVGC_16_CLS_OK</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 <span class="n">END_VAR</span>
 <span class="p">(</span><span class="o">*</span> <span class="n">Roughing</span> <span class="n">manifold</span> <span class="n">logic</span> <span class="o">*</span><span class="p">)</span>
 
@@ -1451,7 +1467,7 @@
 
 <span class="n">CRIX_VGC_08</span><span class="p">(</span>
     <span class="n">i_stUSG</span><span class="o">:=</span> <span class="n">TM2K2_GCC_01_reader</span><span class="o">.</span><span class="n">IG</span><span class="p">,</span><span class="o">//</span> <span class="n">PRG_ADS_Gauges</span><span class="o">.</span><span class="n">TM2K2_GCC_Reader</span><span class="o">.</span><span class="n">IG</span><span class="p">,</span>
-    <span class="n">i_stDSG</span><span class="o">:=</span> <span class="n">CRIX_GCC_01</span><span class="o">.</span><span class="n">IG</span><span class="p">,</span>
+    <span class="n">i_stDSG</span><span class="o">:=</span> <span class="n">CRIX_GCP_04</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>
     <span class="n">i_xDis_DPIlk</span><span class="o">:=</span> <span class="n">FALSE</span><span class="p">,</span>
     <span class="n">i_xPMPS_OK</span><span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
     <span class="n">i_xEPS_OK</span><span class="o">:=</span> <span class="n">TRUE</span> <span class="p">,</span>
@@ -1466,7 +1482,7 @@
     <span class="n">io_fbFFHWO</span><span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">g_FastFaultOutput1</span><span class="p">,</span>
     <span class="n">fbArbiter</span><span class="o">:=</span> <span class="n">GVL_PMPS</span><span class="o">.</span><span class="n">fbArbiter1</span><span class="p">);</span>
 
-<span class="n">CRIX_VGC_09</span><span class="p">(</span><span class="n">i_stUSG</span><span class="o">:=</span><span class="n">CRIX_GCC_01</span><span class="o">.</span><span class="n">IG</span><span class="p">,</span>
+<span class="n">CRIX_VGC_09</span><span class="p">(</span><span class="n">i_stUSG</span><span class="o">:=</span><span class="n">CRIX_GCP_04</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>
             <span class="n">i_stDSG</span><span class="o">:=</span><span class="n">IM6K2_GCC_01_reader</span><span class="o">.</span><span class="n">IG</span><span class="p">,</span><span class="o">//</span> <span class="n">PRG_ADS_Gauges</span><span class="o">.</span><span class="n">IM6K2_GCC_Reader</span><span class="o">.</span><span class="n">IG</span><span class="p">,</span>
             <span class="n">i_xDis_DPILK</span><span class="o">:=</span><span class="n">FALSE</span><span class="p">,</span>
             <span class="n">i_xPMPS_OK</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">,</span>
@@ -1484,7 +1500,7 @@
 
 <span class="p">(</span><span class="o">*</span> <span class="n">ual</span> <span class="n">acting</span> <span class="n">valve</span><span class="p">,</span> <span class="n">allow</span> <span class="n">to</span> <span class="n">close</span> <span class="n">when</span> <span class="n">motor</span> <span class="ow">is</span> <span class="n">at</span> <span class="n">OUT</span> <span class="n">limit</span> <span class="n">switch</span><span class="o">*</span><span class="p">,</span> <span class="n">Open</span> <span class="n">interlock</span> <span class="n">pending</span> <span class="k">for</span> <span class="n">requirements</span> <span class="o">*</span><span class="p">)</span>
 
-<span class="n">bVGC_10_OPN_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">bVGC_10_OPN_OK</span> <span class="o">:=</span> <span class="n">CRIX_GCP_02</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">xAT_VAC</span> <span class="n">AND</span> <span class="n">CRIX_GCP_04</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">xAT_VAC</span><span class="p">;</span>
 <span class="n">bVGC_10_CLS_OK</span> <span class="o">:=</span> <span class="n">NOT</span> <span class="n">xEcatBridge_TxPDO_state</span> <span class="ow">and</span> <span class="n">NOT</span> <span class="n">xEcatBridge_External_device_not_connected</span> <span class="ow">and</span> <span class="n">NOT</span> <span class="n">xEcatBridge_WcState</span>
                    <span class="n">AND</span> <span class="n">NOT</span> <span class="n">xPTC_MOT_Y_10_IN</span> <span class="ow">and</span> <span class="n">xPTC_MOT_Y_10_OUT</span><span class="p">;</span>
 <span class="n">CRIX_VGC_10</span> <span class="p">(</span>
@@ -1494,9 +1510,9 @@
     <span class="n">i_xOverrideMode</span><span class="o">:=</span> <span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
     <span class="n">iq_stValve</span><span class="o">=&gt;</span> <span class="p">);</span>
 
-<span class="p">(</span><span class="o">*</span> <span class="n">ual</span> <span class="n">acting</span> <span class="n">valve</span><span class="p">,</span> <span class="n">allow</span> <span class="n">to</span> <span class="n">close</span> <span class="n">when</span> <span class="n">motor</span> <span class="ow">is</span> <span class="n">at</span> <span class="n">OUT</span> <span class="n">limit</span> <span class="n">switch</span><span class="o">*</span><span class="p">,</span> <span class="n">Open</span> <span class="n">interlock</span> <span class="n">pending</span> <span class="k">for</span> <span class="n">requirements</span> <span class="o">*</span><span class="p">)</span>
+<span class="p">(</span><span class="o">*</span><span class="n">Dual</span> <span class="n">acting</span> <span class="n">valve</span><span class="p">,</span> <span class="n">allow</span> <span class="n">to</span> <span class="n">close</span> <span class="n">when</span> <span class="n">motor</span> <span class="ow">is</span> <span class="n">at</span> <span class="n">OUT</span> <span class="n">limit</span> <span class="n">switch</span><span class="o">*</span><span class="p">,</span> <span class="n">Open</span> <span class="n">interlock</span> <span class="n">pending</span> <span class="k">for</span> <span class="n">requirements</span> <span class="o">*</span><span class="p">)</span>
 
-<span class="n">bVGC_11_OPN_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">bVGC_11_OPN_OK</span> <span class="o">:=</span> <span class="n">CRIX_GCP_01</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">xAT_VAC</span> <span class="n">AND</span> <span class="n">CRIX_GCP_04</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">xAT_VAC</span><span class="p">;</span>
 <span class="n">bVGC_11_CLS_OK</span> <span class="o">:=</span> <span class="n">NOT</span> <span class="n">xEcatBridge_TxPDO_state</span> <span class="ow">and</span> <span class="n">NOT</span> <span class="n">xEcatBridge_External_device_not_connected</span> <span class="ow">and</span> <span class="n">NOT</span> <span class="n">xEcatBridge_WcState</span>
                    <span class="n">AND</span> <span class="n">NOT</span> <span class="n">xPTC_MOT_Y_11_IN</span> <span class="ow">and</span> <span class="n">xPTC_MOT_Y_11_OUT</span><span class="p">;</span>
 <span class="n">CRIX_VGC_11</span><span class="p">(</span>
@@ -1511,6 +1527,18 @@
 <span class="n">CRIX_VGC_12</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span> <span class="kc">True</span> <span class="p">,</span> <span class="n">i_xOverrideMode</span><span class="o">:=</span> <span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span> <span class="n">iq_stValve</span><span class="o">=&gt;</span> <span class="p">);</span>
 
 <span class="n">CRIX_VGC_13</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">i_xOverrideMode</span><span class="o">:=</span> <span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span> <span class="n">iq_stValve</span><span class="o">=&gt;</span> <span class="p">);</span>
+
+
+<span class="n">bVGC_16_OPN_OK</span> <span class="o">:=</span> <span class="n">CRIX_GCP_03</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">xAT_VAC</span> <span class="n">AND</span> <span class="n">CRIX_GCP_04</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">xAT_VAC</span><span class="p">;</span>
+<span class="n">bVGC_16_CLS_OK</span> <span class="o">:=</span> <span class="n">NOT</span> <span class="n">xEcatBridge_TxPDO_state</span> <span class="ow">and</span> <span class="n">NOT</span> <span class="n">xEcatBridge_External_device_not_connected</span> <span class="ow">and</span> <span class="n">NOT</span> <span class="n">xEcatBridge_WcState</span>
+                   <span class="n">AND</span> <span class="n">NOT</span> <span class="n">xSDS_MOT_Z_18_IN</span> <span class="ow">and</span> <span class="n">xSDS_MOT_Z_18_OUT</span><span class="p">;</span>
+
+<span class="n">CRIX_VGC_16</span> <span class="p">(</span>
+    <span class="n">i_OPN_OK</span><span class="o">:=</span> <span class="n">bVGC_16_OPN_OK</span><span class="p">,</span>
+    <span class="n">i_CLS_OK</span><span class="o">:=</span> <span class="n">bVGC_16_CLS_OK</span><span class="p">,</span>
+    <span class="n">ibCntrlHold</span><span class="o">:=</span> <span class="n">FALSE</span> <span class="p">,</span>
+    <span class="n">i_xOverrideMode</span><span class="o">:=</span> <span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
+    <span class="n">iq_stValve</span><span class="o">=&gt;</span> <span class="p">);</span>
 
 
 <span class="n">bVGC_17_ILK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
@@ -1562,6 +1590,8 @@
 <span class="n">xPTC_VGC_11_CLS</span> <span class="o">:=</span> <span class="n">CRIX_VGC_11</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xClsLS</span><span class="p">;</span>
 <span class="n">xPTC_VGC_10_OPN</span> <span class="o">:=</span> <span class="n">CRIX_VGC_10</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xOpnLS</span><span class="p">;</span>
 <span class="n">xPTC_VGC_11_OPN</span> <span class="o">:=</span> <span class="n">CRIX_VGC_11</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xOpnLS</span><span class="p">;</span>
+<span class="n">xSDS_VGC_16_CLS</span> <span class="o">:=</span> <span class="n">CRIX_VGC_16</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xClsLS</span><span class="p">;</span>
+<span class="n">xSDS_VGC_16_OPN</span> <span class="o">:=</span> <span class="n">CRIX_VGC_16</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xOpnLS</span><span class="p">;</span>
 
 <span class="n">END_PROGRAM</span>
 </pre></div>
