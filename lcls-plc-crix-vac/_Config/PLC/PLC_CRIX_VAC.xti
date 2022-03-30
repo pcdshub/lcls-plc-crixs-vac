@@ -391,6 +391,14 @@
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
+					<Name>GVL_PLC_Interfaces.xSDS_MOT_Z_18_IN</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xSDS_MOT_Z_18_OUT</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>PRG_MPS.fbArbiterIO.i_stCurrentBP</Name>
 					<Type GUID="{0C6A4924-E177-45F6-9AB0-6F9DB98D3474}">ST_BeamParams_IO</Type>
 					<SubVar>
@@ -961,25 +969,6 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_GCP_02.xPress_OK</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_GCP_02.xOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_GCP_02.xUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.CRIX_RCC_GCP_02.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
-					<Type>REAL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_Recirculation.CRIX_RCC_GCP_01.i_iPRESS_R</Name>
 					<Comment>
 						<![CDATA[ input Pressure // Link to analog Input]]>
@@ -1109,9 +1098,54 @@ ETHERCAT BRRIDGE COM STATUS
 					</Comment>
 					<Type>INT</Type>
 				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_16.i_xOpnLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_16.i_xClsLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_GCP_02.xPress_OK</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_GCP_02.xOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_GCP_02.xUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_GCP_02.i_iPRESS_R</Name>
+					<Comment>
+						<![CDATA[ input Pressure // Link to analog Input]]>
+					</Comment>
+					<Type>REAL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.CRIX_RCC_GCP_02.bWcstate</Name>
+					<Comment>
+						<![CDATA[ 0: date valid, 1: date invalid]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
 			</Vars>
 			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xSDS_VGC_16_CLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xSDS_VGC_16_OPN</Name>
+					<Type>BOOL</Type>
+				</Var>
 				<Var>
 					<Name>PRG_Chamber_Valves.dummy_FFFO.q_xFastFaultOut</Name>
 					<Type>BOOL</Type>
@@ -1551,6 +1585,14 @@ ETHERCAT BRRIDGE COM STATUS
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_16.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_VGC_16.q_xCLS_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
 			</Vars>
 			<Vars VarGrpType="8">
 				<Name>PlcTask Retains</Name>
@@ -1685,12 +1727,14 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_11.q_xCLS_DO" VarB="Channel 1^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_12.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_13.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_16.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E29 (EL1004)">
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_09.i_xClsLS" VarB="Channel 1^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_09.i_xOpnLS" VarB="Channel 2^Input" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E30 (EL2004)">
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_16.q_xCLS_DO" VarB="Channel 1^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VGC_17.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E31 (EL1004)">
@@ -1709,6 +1753,10 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VVC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VVC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VVC_03.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E35 (EL1004)">
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_16.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_VGC_16.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E36 (EL2004)">
 				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_VVC_04.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true"/>
@@ -1884,6 +1932,7 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)">
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_02.bWcstate" VarB="WcState^WcState" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_02.i_iPRESS_R" VarB="TXPDO Combined^Combination Gauge Active Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_02.xOverrange" VarB="TXPDO Combined^Combination Gauge Overrange Exceeded" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Recirculation.CRIX_RCC_GCP_02.xPress_OK" VarB="TXPDO Combined^Combination Gauge Reading Valid" AutoLink="true"/>
@@ -1979,10 +2028,14 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xPTC_MOT_Y_10_OUT" VarB="IO Inputs^bMOTY10_OUT" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xPTC_MOT_Y_11_IN" VarB="IO Inputs^bMOTY11_IN" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xPTC_MOT_Y_11_OUT" VarB="IO Inputs^bMOTY11_OUT" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xSDS_MOT_Z_18_IN" VarB="IO Inputs^xSDS_MOT_Z_18_IN" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xSDS_MOT_Z_18_OUT" VarB="IO Inputs^xSDS_MOT_Z_18_OUT" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xPTC_VGC_10_CLS" VarB="IO Outputs^bVGC10_CLS" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xPTC_VGC_10_OPN" VarB="IO Outputs^bVGC10_OPN" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xPTC_VGC_11_CLS" VarB="IO Outputs^bVGC11_CLS" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xPTC_VGC_11_OPN" VarB="IO Outputs^bVGC11_OPN" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xSDS_VGC_16_CLS" VarB="IO Outputs^xSDS_VGC_16_CLS" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xSDS_VGC_16_OPN" VarB="IO Outputs^xSDS_VGC_16_OPN" AutoLink="true"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>

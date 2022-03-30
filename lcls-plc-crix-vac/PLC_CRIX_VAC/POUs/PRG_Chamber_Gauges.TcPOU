@@ -40,7 +40,7 @@ CRIX_GCP_03.M_SetBits(30518);
 CRIX_GCP_03(PG=>);
 
 CRIX_GCP_04.M_SetBits(30518);
-//CRIX_GCP_04(PG=>stCRIX_GCP_04);]]></ST>
+CRIX_GCP_04(PG=>stCRIX_GCP_04);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
