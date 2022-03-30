@@ -25,6 +25,8 @@ VAR
 	
 	
 	
+	bVGC_16_OPN_OK: BOOL;
+	bVGC_16_CLS_OK: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -140,7 +142,7 @@ bm_dummy_gauge.rPRESS := 5e-9;
 
 CRIX_VGC_08(
 	i_stUSG:= TM2K2_GCC_01_reader.IG,// PRG_ADS_Gauges.TM2K2_GCC_Reader.IG, 
-	i_stDSG:= CRIX_GCC_01.IG, 
+	i_stDSG:= CRIX_GCP_04.PG, 
 	i_xDis_DPIlk:= FALSE, 
 	i_xPMPS_OK:= TRUE, 
 	i_xEPS_OK:= TRUE , 
@@ -155,7 +157,7 @@ CRIX_VGC_08(
 	io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput1, 
 	fbArbiter:= GVL_PMPS.fbArbiter1);
        
-CRIX_VGC_09(i_stUSG:=CRIX_GCC_01.IG,
+CRIX_VGC_09(i_stUSG:=CRIX_GCP_04.PG,
             i_stDSG:=IM6K2_GCC_01_reader.IG,// PRG_ADS_Gauges.IM6K2_GCC_Reader.IG,
             i_xDis_DPILK:=FALSE,
             i_xPMPS_OK:=TRUE,
@@ -173,7 +175,7 @@ CRIX_VGC_09(i_stUSG:=CRIX_GCC_01.IG,
 
 (* ual acting valve, allow to close when motor is at OUT limit switch*, Open interlock pending for requirements *)
 
-bVGC_10_OPN_OK := TRUE;
+bVGC_10_OPN_OK := CRIX_GCP_02.PG.xAT_VAC AND CRIX_GCP_04.PG.xAT_VAC;
 bVGC_10_CLS_OK := NOT xEcatBridge_TxPDO_state and NOT xEcatBridge_External_device_not_connected and NOT xEcatBridge_WcState 
                    AND NOT xPTC_MOT_Y_10_IN and xPTC_MOT_Y_10_OUT;
 CRIX_VGC_10 (
@@ -183,9 +185,9 @@ CRIX_VGC_10 (
 	i_xOverrideMode:= xSystemOverride_ChemRIXS, 
 	iq_stValve=> );
 	
-(* ual acting valve, allow to close when motor is at OUT limit switch*, Open interlock pending for requirements *)
+(*Dual acting valve, allow to close when motor is at OUT limit switch*, Open interlock pending for requirements *)
 
-bVGC_11_OPN_OK := TRUE;
+bVGC_11_OPN_OK := CRIX_GCP_01.PG.xAT_VAC AND CRIX_GCP_04.PG.xAT_VAC;
 bVGC_11_CLS_OK := NOT xEcatBridge_TxPDO_state and NOT xEcatBridge_External_device_not_connected and NOT xEcatBridge_WcState 
                    AND NOT xPTC_MOT_Y_11_IN and xPTC_MOT_Y_11_OUT;
 CRIX_VGC_11(
@@ -202,6 +204,18 @@ CRIX_VGC_12(i_xExtILK_OK:= True , i_xOverrideMode:= xSystemOverride_ChemRIXS, iq
 CRIX_VGC_13(i_xExtILK_OK:= True, i_xOverrideMode:= xSystemOverride_ChemRIXS, iq_stValve=> );
 
 
+bVGC_16_OPN_OK := CRIX_GCP_03.PG.xAT_VAC AND CRIX_GCP_04.PG.xAT_VAC;
+bVGC_16_CLS_OK := NOT xEcatBridge_TxPDO_state and NOT xEcatBridge_External_device_not_connected and NOT xEcatBridge_WcState 
+                   AND NOT xSDS_MOT_Z_18_IN and xSDS_MOT_Z_18_OUT;
+
+CRIX_VGC_16 (
+	i_OPN_OK:= bVGC_16_OPN_OK, 
+	i_CLS_OK:= bVGC_16_CLS_OK, 
+	ibCntrlHold:= FALSE , 
+	i_xOverrideMode:= xSystemOverride_ChemRIXS, 
+	iq_stValve=> );
+					   				   
+				   
 bVGC_17_ILK := TRUE;
 CRIX_VGC_17(i_xExtILK_OK:=bVGC_17_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
@@ -251,6 +265,8 @@ xPTC_VGC_10_CLS := CRIX_VGC_10.iq_stValve.i_xClsLS;
 xPTC_VGC_11_CLS := CRIX_VGC_11.iq_stValve.i_xClsLS;
 xPTC_VGC_10_OPN := CRIX_VGC_10.iq_stValve.i_xOpnLS;
 xPTC_VGC_11_OPN := CRIX_VGC_11.iq_stValve.i_xOpnLS;
+xSDS_VGC_16_CLS := CRIX_VGC_16.iq_stValve.i_xClsLS;
+xSDS_VGC_16_OPN := CRIX_VGC_16.iq_stValve.i_xOpnLS;
 
 ]]></ST>
     </Implementation>

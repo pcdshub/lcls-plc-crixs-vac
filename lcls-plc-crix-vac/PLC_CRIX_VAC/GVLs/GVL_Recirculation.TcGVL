@@ -40,7 +40,8 @@ VAR_GLOBAL
     {attribute 'TcLinkTo' := 	'.xPress_OK	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Reading Valid;
 	                             .xOverrange	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Overrange Exceeded;
 								.xUnderrange := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Underrange Exceeded;
-								.i_iPRESS_R := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Active Value'}
+								.i_iPRESS_R := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Active Value;
+                                .bWcstate := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^WcState^WcState' }
 	CRIX_RCC_GCP_02 : FB_901_ECAT; 
 	
 

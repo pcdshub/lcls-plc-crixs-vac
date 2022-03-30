@@ -2,7 +2,7 @@
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.30" ClassName="CFlbTermDef" SubType="9099">
 	<DataTypes>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-00200000000C}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..11] OF BIT</Name>
+			<Name GUID="{18071995-0000-0000-0000-00200000000C}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..11] OF BIT</Name>
 			<BitSize>12</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
@@ -20,7 +20,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-00200000000A}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..9] OF BIT</Name>
+			<Name GUID="{18071995-0000-0000-0000-00200000000A}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..9] OF BIT</Name>
 			<BitSize>10</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
@@ -553,11 +553,11 @@
 				</Profile>
 			</TreeItem>
 		</Xml>
-		<EtherCAT SlaveType="3" AdsServerAddress="ac158c2f02603004" PdiType="#x0008" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="47" EoeType="1" FoeType="1" VendorId="#x00000002" ProductCode="#x1a273052" RevisionNo="#x00050000" InfoDataAddr="true" InfoDataNetId="true" TimeoutMailbox2="2000" GenerateOwnNetId="true" CheckRevisionNoType="3" PortPhys="51" DcTimeLoopControlOnly="true" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL6695 EtherCAT Bridge terminal (Primary)" Desc="EL6695">
+		<EtherCAT SlaveType="3" AdsServerAddress="ac158c2f02603104" PdiType="#x0008" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="47" EoeType="1" FoeType="1" VendorId="#x00000002" ProductCode="#x1a273052" RevisionNo="#x00050000" InfoDataAddr="true" InfoDataNetId="true" TimeoutMailbox2="2000" GenerateOwnNetId="true" CheckRevisionNoType="3" PortPhys="51" DcTimeLoopControlOnly="true" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL6695 EtherCAT Bridge terminal (Primary)" Desc="EL6695">
 			<SyncMan>0010000426000100010000008000da050004001026010000</SyncMan>
 			<SyncMan>0016000422000100020000008000da050004001622010000</SyncMan>
-			<SyncMan>001c04006400010003000000000000000000001c64010000</SyncMan>
-			<SyncMan>008e06002000010004000000000000000200008e20010000</SyncMan>
+			<SyncMan>001c06006400010003000000000000000000001c64010000</SyncMan>
+			<SyncMan>008e08002000010004000000000000000200008e20010000</SyncMan>
 			<Fmmu>0000000000000000001c00020100000001000000000000000000000000000000</Fmmu>
 			<Fmmu>0000000000000000008e00010100000002000000000000000000000000000000</Fmmu>
 			<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
@@ -702,30 +702,42 @@
 				</Entry>
 			</Pdo>
 			<Pdo Name="IO Inputs" Index="#x1a08" Flags="#x0020" SyncMan="3">
-				<Entry Name="bMOTY10_IN" BitLen="8" Index="#x6000" Sub="#x01">
+				<Entry Name="bMOTY10_IN" Index="#x6000" Sub="#x01">
 					<Type>BOOL</Type>
 				</Entry>
-				<Entry Name="bMOTY10_OUT" BitLen="8" Index="#x6000" Sub="#x02">
+				<Entry Name="bMOTY10_OUT" Index="#x6000" Sub="#x02">
 					<Type>BOOL</Type>
 				</Entry>
-				<Entry Name="bMOTY11_IN" BitLen="8" Index="#x6000" Sub="#x03">
+				<Entry Name="bMOTY11_IN" Index="#x6000" Sub="#x03">
 					<Type>BOOL</Type>
 				</Entry>
-				<Entry Name="bMOTY11_OUT" BitLen="8" Index="#x6000" Sub="#x04">
+				<Entry Name="bMOTY11_OUT" Index="#x6000" Sub="#x04">
+					<Type>BOOL</Type>
+				</Entry>
+				<Entry Name="xSDS_MOT_Z_18_IN" Index="#x6000" Sub="#x05">
+					<Type>BOOL</Type>
+				</Entry>
+				<Entry Name="xSDS_MOT_Z_18_OUT" Index="#x6000" Sub="#x06">
 					<Type>BOOL</Type>
 				</Entry>
 			</Pdo>
 			<Pdo Name="IO Outputs" Index="#x1608" InOut="1" Flags="#x0020" SyncMan="2">
-				<Entry Name="bVGC10_CLS" BitLen="8" Index="#x7000" Sub="#x01">
+				<Entry Name="bVGC10_CLS" Index="#x7000" Sub="#x01">
 					<Type>BOOL</Type>
 				</Entry>
-				<Entry Name="bVGC10_OPN" BitLen="8" Index="#x7000" Sub="#x02">
+				<Entry Name="bVGC10_OPN" Index="#x7000" Sub="#x02">
 					<Type>BOOL</Type>
 				</Entry>
-				<Entry Name="bVGC11_CLS" BitLen="8" Index="#x7000" Sub="#x03">
+				<Entry Name="bVGC11_CLS" Index="#x7000" Sub="#x03">
 					<Type>BOOL</Type>
 				</Entry>
-				<Entry Name="bVGC11_OPN" BitLen="8" Index="#x7000" Sub="#x04">
+				<Entry Name="bVGC11_OPN" Index="#x7000" Sub="#x04">
+					<Type>BOOL</Type>
+				</Entry>
+				<Entry Name="xSDS_VGC_16_CLS" Index="#x7000" Sub="#x05">
+					<Type>BOOL</Type>
+				</Entry>
+				<Entry Name="xSDS_VGC_16_OPN" Index="#x7000" Sub="#x06">
 					<Type>BOOL</Type>
 				</Entry>
 			</Pdo>
