@@ -1998,7 +1998,7 @@ PRG_VLS_WINDOW
     VLS_ROUGH_GPI(PG=>);
 
     VLS_VGC_1(
-    	i_stUSG:= CRIX_GCC_01.IG , 
+    	i_stUSG:= CRIX_GCP_04.PG , 
     	i_stDSG:= VLS_GCC_01.IG , 
     	i_xDis_DPIlk:= FALSE , 
     	i_xPMPS_OK:= TRUE , 
