@@ -1873,7 +1873,7 @@ PRG_VLS_VACUUM
     END_VAR
     // VLS Vacuum Logic
 
-    bVLS_Ext_Press := CRIX_GCC_01.IG.xAT_VAC;
+    bVLS_Ext_Press := CRIX_GPI_01.PG.xAT_VAC;
     PRG_VLS_WINDOW(bExtPress := bVLS_Ext_Press,
                    bOverride := xSystemOverrideMode_VLS,
                    bSetup := SetupMode_VLS); // run the vacuum program with interlock bit
@@ -1945,7 +1945,7 @@ PRG_VLS_WINDOW
 
     	//Transition
     	//IF (US_GCC.IG.xAT_VAC AND DS_GCC.IG.xAT_VAC) THEN state:= E_STATES.READY; END_IF
-    	IF (bExtPress AND VLS_GCC_01.IG.xAT_VAC) THEN state:= E_STATES.READY; END_IF
+    	IF (bExtPress AND VLS_GPI_01.PG.xAT_VAC) THEN state:= E_STATES.READY; END_IF
     	
     	
     	
@@ -1983,7 +1983,7 @@ PRG_VLS_WINDOW
     // the system can go to override state from any other state except setup
     ELSIF (bOverride) AND (state<>E_STATES.SETUP) THEN state:= E_STATES.OVERRIDE;
     //Loss of at vac signal makes the system go to init/not safe to move state
-    ELSIF (NOT bExtPress) OR (NOT VLS_GCC_01.IG.xAT_VAC) THEN state:= E_STATES.INIT;
+    ELSIF (NOT bExtPress) OR (NOT VLS_GPI_01.PG.xAT_VAC) THEN state:= E_STATES.INIT;
     //ELSIF (NOT US_GCC.IG.xAT_VAC) OR (NOT DS_GCC.IG.xAT_VAC) THEN state:= E_STATES.INIT;
     END_IF 
 
