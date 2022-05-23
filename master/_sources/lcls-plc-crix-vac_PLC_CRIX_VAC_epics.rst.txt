@@ -4068,7 +4068,7 @@ LCLS_Vacuum.FB_VVC
         | io: output
 
 
- 
+              
 LCLS_Vacuum.ST_EbaraDryPump
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -6496,7 +6496,7 @@ LCLS_Vacuum.ST_VVC
         | io: output
 
 
-                    
+       
 LCLS_Vacuum_Serial.ST_PfeifferControl
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

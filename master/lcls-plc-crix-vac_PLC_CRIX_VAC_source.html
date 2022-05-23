@@ -686,8 +686,10 @@
 
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:MECH:VVC:01 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.q_xOPN_DO     :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 45 (EL2794)^Channel 3^Output &#39;</span><span class="p">}</span>
-    <span class="n">CRIX_MECH_VVC_01</span> <span class="p">:</span> <span class="n">FB_VVC</span><span class="p">;</span>      <span class="o">//</span> <span class="n">Vent</span> <span class="n">valve</span> <span class="k">for</span> <span class="n">rouging</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">B950</span><span class="o">-</span><span class="n">R310</span> <span class="s2">&quot;mechanical room&quot;</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.q_xOPN_DO     :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 153 (EL2212)^DOX Control Channel 2^Control^Output &#39;</span><span class="p">}</span>
+    <span class="n">CRIX_MECH_VVC_01</span> <span class="p">:</span> <span class="n">FB_VVC</span><span class="p">;</span>
+
+      <span class="o">//</span> <span class="n">Vent</span> <span class="n">valve</span> <span class="k">for</span> <span class="n">rouging</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">B950</span><span class="o">-</span><span class="n">R310</span> <span class="s2">&quot;mechanical room&quot;</span>
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:MECH:GPI:01 &#39;</span><span class="p">}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 92 (EL3174)^AI Standard Channel 1^Value &#39;</span><span class="p">}</span>
@@ -951,6 +953,9 @@
         <span class="n">pv</span><span class="p">:</span> <span class="n">CRIX</span><span class="p">:</span><span class="n">VAC</span><span class="p">:</span><span class="n">OVERRIDE</span>
     <span class="s1">&#39;}</span>
     <span class="n">xSystemOverride_ChemRIXS</span> <span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
+
+    <span class="n">iMechDRL_CurrMon</span> <span class="n">AT</span><span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">INT</span><span class="p">;</span>
+    <span class="n">iMechDrl_VMon</span> <span class="n">At</span><span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span><span class="n">INT</span><span class="p">;</span>
 <span class="n">END_VAR</span>
 </pre></div>
 </div>
