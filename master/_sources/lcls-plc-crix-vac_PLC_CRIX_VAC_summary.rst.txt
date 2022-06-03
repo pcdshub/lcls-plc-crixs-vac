@@ -36,7 +36,7 @@ Libraries
     :header: Library, Vendor, Default, Version
     :align: center
 
-        LCLS General, SLAC, Unset, 2.4.2
+        LCLS General, SLAC, Unset, 2.6.0
         LCLS Vacuum, SLAC - LCLS, Unset, 2.1.0
         LCLSVacuumSerialDriverLib, SLAC - LCLS, Unset, 1.2.2
         PMPS, SLAC - LCLS, Unset, 2.2.1
