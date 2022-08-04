@@ -153,6 +153,8 @@ VAR_GLOBAL
 								.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E24 (EL2004)^Channel 1^Output'}
 
 	SDS_VGC_03 : FB_VRC;
+	
+	stSDS_VGC_03 : ST_VRC;
 
 	// These vent valves only have one NC contact indicating that the valve is closed. No open switch. Ignore the readback for now since there is no FB 
 	// in the vacuum library for this case. 
