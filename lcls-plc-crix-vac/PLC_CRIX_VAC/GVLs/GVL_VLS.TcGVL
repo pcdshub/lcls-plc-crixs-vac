@@ -39,13 +39,13 @@ VAR_GLOBAL
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 6^Input;
 								 .i_xClsLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 7^Input;
 								.q_xOPN_DO	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 21^Output'}
-	VLS_VGC_1 : FB_VGC;
+	VLS_VGC_01 : FB_VGC;
 	
 	{attribute 'pytmc' :=' pv: CRIX:VLS:VWC:01 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 9^Input;
 								 .i_xClsLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 10^Input;
 								.q_xCLS_DO	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 24^Output'}	
-	VLS_VGC_W : FB_VRC_NO_FFO; // Is the Window valve NO 
+	VLS_VWC_01 : FB_VRC_NO_FFO; // Is the Window valve NO 
 	
 	(* Gauges *)
 	
