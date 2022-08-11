@@ -25,7 +25,7 @@ fbCMC_PTM_01_ILK(i_stValve:=stCMC_VGC_01,
 CMC_PTM_01(i_xExtILKOk:=(CMC_PTM_01_ILK_OK AND F_TurboExtILKLogic_2(Turbo:=stCMC_PTM_01,
 																	 BackingGauge:=ROUGH_GPI_01.PG,
 																     InletGauge:=CMC_GPI_01.PG,
-																     ScrollPump:= stCRIX_MECH_PRO_01)),
+																     ScrollPump:= stCRIXS_MECH_PRO_01)),
 			iq_stPtm=> stCMC_PTM_01);			
 
 fbCMC_PTM_02_ILK(i_stValve:=stCMC_VGC_02,
@@ -35,7 +35,7 @@ fbCMC_PTM_02_ILK(i_stValve:=stCMC_VGC_02,
 CMC_PTM_02(i_xExtILKOk:=(CMC_PTM_02_ILK_OK AND F_TurboExtILKLogic_2(Turbo:=stCMC_PTM_02,
 																	 BackingGauge:=ROUGH_GPI_01.PG,
 																     InletGauge:=CMC_GPI_01.PG,
-																     ScrollPump:= stCRIX_MECH_PRO_01)),
+																     ScrollPump:= stCRIXS_MECH_PRO_01)),
 			iq_stPtm=> stCMC_PTM_02);
 			
 // Pfeiffer Pumps
@@ -46,7 +46,7 @@ fbCMC_PTM_03_ILK(i_stValve:=stCMC_VGC_03,
 CMC_PTM_03(i_xExtILKOk:=(CMC_PTM_03_ILK_OK  AND F_TurboExtILKLogic_2(Turbo:=stCMC_PTM_03,
 																	 BackingGauge:=ROUGH_GPI_01.PG,
 																     InletGauge:=CMC_GPI_01.PG,
-																     ScrollPump:= stCRIX_MECH_PRO_01)), 
+																     ScrollPump:= stCRIXS_MECH_PRO_01)), 
 			iq_stPtm=> stCMC_PTM_03);		
 			
 stCMC_PTM_03_Pfeiffer_CTRL[1].iSerialAddress := 0;
@@ -68,7 +68,7 @@ fbSDS_PTM_01_ILK(i_stValve:=stSDS_VGC_03,
 SDS_PTM_01(i_xExtILKOk:=(SDS_PTM_01_ILK_OK  AND F_TurboExtILKLogic_2(Turbo:=stSDS_PTM_01,
 																	 BackingGauge:=ROUGH_GPI_01.PG,
 																     InletGauge:=SDS_GCP_01.PG,
-																     ScrollPump:= stCRIX_MECH_PRO_01)), 
+																     ScrollPump:= stCRIXS_MECH_PRO_01)), 
 			iq_stPtm=> stSDS_PTM_01);		
 			
 stSDS_PTM_01_Pfeiffer_CTRL[1].iSerialAddress := 1;

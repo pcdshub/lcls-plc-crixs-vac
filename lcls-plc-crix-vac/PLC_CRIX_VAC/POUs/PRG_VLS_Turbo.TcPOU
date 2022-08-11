@@ -19,7 +19,7 @@ fbVLS_PTM_01_ILK(i_stValve:=stVLS_VGC_02,
 VLS_PTM_01(i_xExtILKOk:=(VLS_PTM_01_xExtIlkOK  AND F_TurboExtILKLogic_2(Turbo:=stVLS_PTM_01,
 																	 BackingGauge:=ROUGH_GPI_01.PG,
 																     InletGauge:=VLS_GPI_01.PG,
-																     ScrollPump:= stCRIX_MECH_PRO_01)), 
+																     ScrollPump:= stCRIXS_MECH_PRO_01)), 
 			iq_stPtm=> stVLS_PTM_01);		
 			
 (*Assign adresses to the pfeiffer controllers connected to this serial terminal*)

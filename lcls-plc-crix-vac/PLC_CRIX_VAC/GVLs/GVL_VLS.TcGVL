@@ -5,11 +5,11 @@
 VAR_GLOBAL
 
 	(* OverrideMode *)
-	{attribute 'pytmc' := 'pv: CRIX:VLS:VAC:OVRD_MODE'}
+	{attribute 'pytmc' := 'pv: CRIXS:VLS:VAC:OVRD_MODE'}
 	xSystemOverrideMode_VLS	: BOOL := FALSE; 	
 	
 		
-	{attribute 'pytmc' := ' pv: CRIX:VLS:VAC:SETUP_MODE'}
+	{attribute 'pytmc' := ' pv: CRIXS:VLS:VAC:SETUP_MODE'}
 	SetupMode_VLS	: BOOL := FALSE; 
 	
 	(* Pfeiffer Turbo Pumps TM700 *)
@@ -19,7 +19,7 @@ VAR_GLOBAL
 			 
 	'}
 	{attribute 'pytmc' := '
-		pv: CRIX:VLS:PTM:01
+		pv: CRIXS:VLS:PTM:01
 		io: io
 	'}
     VLS_PTM_01 : FB_PTM_Pfeiffer;
@@ -35,13 +35,13 @@ VAR_GLOBAL
 	
 	(* Valves *)
 	
-	{attribute 'pytmc' :=' pv: CRIX:VLS:VGC:01 '}
+	{attribute 'pytmc' :=' pv: CRIXS:VLS:VGC:01 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 6^Input;
 								 .i_xClsLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 7^Input;
 								.q_xOPN_DO	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 21^Output'}
 	VLS_VGC_01 : FB_VGC;
 	
-	{attribute 'pytmc' :=' pv: CRIX:VLS:VWC:01 '}
+	{attribute 'pytmc' :=' pv: CRIXS:VLS:VWC:01 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 9^Input;
 								 .i_xClsLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 10^Input;
 								.q_xCLS_DO	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 24^Output'}	
@@ -49,22 +49,22 @@ VAR_GLOBAL
 	
 	(* Gauges *)
 	
-	{attribute 'pytmc' :=' pv: CRIX:VLS:US:GPI '}
+	{attribute 'pytmc' :=' pv: CRIXS:VLS:US:GPI '}
 	VLS_US_GPI	: FB_MKS275;
 
-	{attribute 'pytmc' :=' pv: CRIX:VLS:US:GCC '}
+	{attribute 'pytmc' :=' pv: CRIXS:VLS:US:GCC '}
 	VLS_US_GCC	: FB_MKS500;
 
-	{attribute 'pytmc' :=' pv: CRIX:VLS:GPI:01 '}
+	{attribute 'pytmc' :=' pv: CRIXS:VLS:GPI:01 '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[VLS_EP5 (EP3174-0002)]^AI Standard Channel 1^Value		'}
 	VLS_GPI_01	: FB_MKS275;
 
-	{attribute 'pytmc' :=' pv: CRIX:VLS:GCC:01 '}
+	{attribute 'pytmc' :=' pv: CRIXS:VLS:GCC:01 '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[VLS_EP5 (EP3174-0002)]^AI Standard Channel 2^Value;
 								 .q_xHV_DIS		:= 	TIIB[VLS_EP4 (EP2624-0002)]^Channel 1^Output	'}		
 	VLS_GCC_01	: FB_MKS500;
 	
-	{attribute 'pytmc' :=' pv: CRIX:VLS:ROUGH:GPI '}
+	{attribute 'pytmc' :=' pv: CRIXS:VLS:ROUGH:GPI '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[VLS_EP5 (EP3174-0002)]^AI Standard Channel 3^Value	'}	
 	VLS_ROUGH_GPI : FB_9XX;
 	

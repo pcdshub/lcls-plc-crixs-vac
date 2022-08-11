@@ -5,7 +5,7 @@
 VAR_GLOBAL
 	
 	(* Leybold Pumps *)
-	{attribute 'pytmc' :=' pv: CRIX:CMC:PTM:02 '}
+	{attribute 'pytmc' :=' pv: CRIXS:CMC:PTM:02 '}
 	{attribute 'TcLinkTo' := 	'.i_xAtSpd	 :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)^Channel 2^Input;
 								 .i_xFaultNC :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)^Channel 1^Input;
 								 .q_RunDO	 :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E43 (EL2794)^Channel 3^Output'}
@@ -13,7 +13,7 @@ VAR_GLOBAL
 	
 	stCMC_PTM_02 : ST_LeyboldPTM;
 	
-	{attribute 'pytmc' :=' pv: CRIX:CMC:PTM:01 '}
+	{attribute 'pytmc' :=' pv: CRIXS:CMC:PTM:01 '}
 	{attribute 'TcLinkTo' := 	'.i_xAtSpd	 :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)^Channel 4^Input;
 								 .i_xFaultNC :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)^Channel 3^Input;
 								 .q_RunDO	 :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E43 (EL2794)^Channel 4^Output'}
@@ -31,7 +31,7 @@ VAR_GLOBAL
 								 .q_PumpingStation	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E47 (EL2004)^Channel 3^Output				 
 	'}
 	{attribute 'pytmc' := '
-		pv: CRIX:CMC:PTM:03
+		pv: CRIXS:CMC:PTM:03
 		io: io
 	'}
     CMC_PTM_03 : FB_PTM_Pfeiffer;
@@ -56,7 +56,7 @@ VAR_GLOBAL
 	'}
 	
 	{attribute 'pytmc' := '
-		pv: CRIX:SDS:PTM:01
+		pv: CRIXS:SDS:PTM:01
 		io: io
 	'}
     SDS_PTM_01 : FB_PTM_Pfeiffer;

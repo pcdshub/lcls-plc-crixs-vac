@@ -57,11 +57,11 @@ END_VAR
 bVGC_01_ILK := F_TurboGateValve_ILK(i_Turbo:=RIX_LI3K2_PTM_01.iq_stPtm,
 									i_stISG:=) // need gauge for this
  *)
-									
-CRIX_VGC_01(i_xExtILK_OK:=TRUE, 
+(*									
+CRIXS_VGC_01(i_xExtILK_OK:=TRUE, 
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve => stCRIX_VGC_01);
-	
+*)	
 
 // Our "special" rouging turbo valve. We rough the chamber through this turbo, and this turbo only. We make sure the roughing pump is running,
 // and that all the other valves to the roughing line are closed so that we don't backstream from the chamber. The operator is responsible for
@@ -76,7 +76,7 @@ IF (bChamberAtVac) THEN
 	CMC_VGC_01.i_xExt_OK := F_TurboGateValve_Protection_ILK(i_Turbo:=CMC_PTM_01.iq_stPtm,
 															 i_stISG:=CMC_GPI_01.PG,
 															 i_stBSG:=ROUGH_GPI_01.PG,
-															 ScrollPump:=CRIX_MECH_PRO_01.stPump);															 
+															 ScrollPump:=CRIXS_MECH_PRO_01.stPump);															 
 ELSE 
 	CMC_VGC_01.i_xExt_OK :=TRUE;
 END_IF
@@ -101,7 +101,7 @@ CMC_VGC_01(
 bCMC_VGC_02_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CMC_PTM_02.iq_stPtm,
 											   i_stISG:=CMC_GPI_01.PG,
 											   i_stBSG:=ROUGH_GPI_01.PG,
-								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);
+								  			   ScrollPump:=CRIXS_MECH_PRO_01.stPump);
 CMC_VGC_02(i_xExtILK_OK:=bCMC_VGC_02_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stCRIX_VGC_03);
@@ -109,7 +109,7 @@ CMC_VGC_02(i_xExtILK_OK:=bCMC_VGC_02_ILK,
 bCMC_VGC_03_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CMC_PTM_03.iq_stPtm,
 											   i_stISG:=CMC_GPI_01.PG,
 											   i_stBSG:=ROUGH_GPI_01.PG,
-								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);			
+								  			   ScrollPump:=CRIXS_MECH_PRO_01.stPump);			
 CMC_VGC_03(i_xExtILK_OK:=bCMC_VGC_03_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stCMC_VGC_03);
@@ -126,7 +126,7 @@ So we can pump down main chamber and VLS together through VGC-02.
 bVLS_VGC_02_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=VLS_PTM_01.iq_stPtm,
 											   i_stISG:=VLS_GPI_01.PG,
 											   i_stBSG:=ROUGH_GPI_01.PG,
-								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);
+								  			   ScrollPump:=CRIXS_MECH_PRO_01.stPump);
 VLS_VGC_02(i_xExtILK_OK:=bVLS_VGC_02_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stVLS_VGC_02);
@@ -136,7 +136,7 @@ VLS_VGC_02(i_xExtILK_OK:=bVLS_VGC_02_ILK,
 bSDS_VGC_03_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=SDS_PTM_01.iq_stPtm,
 											   i_stISG:=SDS_GCP_01.PG,
 											   i_stBSG:=ROUGH_GPI_01.PG,
-								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);
+								  			   ScrollPump:=CRIXS_MECH_PRO_01.stPump);
 
 SDS_VGC_03(i_xExtILK_OK:=bSDS_VGC_03_ILK,  // Not active right now; leave ILK to initialized FALSE
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
@@ -146,11 +146,13 @@ SDS_VGC_03(i_xExtILK_OK:=bSDS_VGC_03_ILK,  // Not active right now; leave ILK to
 (*
 bVGC_07_ILK := F_TurboGateValve_ILK(i_Turbo:=RIX_LI3K2_PTM_01,
 									i_stISG:=);
-*)			
+*)
+
+(*			
 CRIX_VGC_07(i_xExtILK_OK:=bVGC_07_ILK,  // Not active right now; leave ILK to initialized FALSE
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stCRIX_VGC_07);
-
+*)
     
 
 //beamline dummy gauge
@@ -292,7 +294,10 @@ xSDS_VGC_16_OPN := SDS_VGC_01.iq_stValve.i_xOpnLS;
     <LineIds Name="PRG_Chamber_Valves">
       <LineId Id="3" Count="88" />
       <LineId Id="290" Count="0" />
-      <LineId Id="93" Count="147" />
+      <LineId Id="93" Count="7" />
+      <LineId Id="338" Count="0" />
+      <LineId Id="337" Count="0" />
+      <LineId Id="101" Count="139" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
