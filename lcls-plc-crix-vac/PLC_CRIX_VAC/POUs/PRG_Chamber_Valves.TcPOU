@@ -73,7 +73,7 @@ bVGC_02_ILK := (stCRIX_VGC_01.i_xClsLS AND stCRIX_VGC_03.i_xClsLS AND stCRIX_VGC
 *)
 bChamberAtVac := (CRIX_GPI_01.PG.rPRESS < 0.005);
 IF (bChamberAtVac) THEN
-	CMC_VGC_01.i_xExt_OK := F_TurboGateValve_Protection_ILK(i_Turbo:=CRIX_PTM_02.iq_stPtm,
+	CMC_VGC_01.i_xExt_OK := F_TurboGateValve_Protection_ILK(i_Turbo:=CMC_PTM_01.iq_stPtm,
 															 i_stISG:=CRIX_GPI_01.PG,
 															 i_stBSG:=CRIX_GPI_05.PG,
 															 ScrollPump:=CRIX_MECH_PRO_01.stPump);															 
@@ -98,7 +98,7 @@ CMC_VGC_01(
 	io_fbFFHWO:= dummy_FFFO, 
 	fbArbiter:= dummy_fbArbiter1);
 	
-bCMC_VGC_02_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CRIX_PTM_01.iq_stPtm,
+bCMC_VGC_02_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CMC_PTM_02.iq_stPtm,
 											   i_stISG:=CRIX_GPI_01.PG,
 											   i_stBSG:=CRIX_GPI_05.PG,
 								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);
@@ -106,7 +106,7 @@ CMC_VGC_02(i_xExtILK_OK:=bCMC_VGC_02_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stCRIX_VGC_03);
 			
-bCMC_VGC_03_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CRIX_PTM_03.iq_stPtm,
+bCMC_VGC_03_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CMC_PTM_03.iq_stPtm,
 											   i_stISG:=CRIX_GPI_01.PG,
 											   i_stBSG:=CRIX_GPI_05.PG,
 								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);			
