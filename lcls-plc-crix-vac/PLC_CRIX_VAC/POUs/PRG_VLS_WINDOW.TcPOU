@@ -38,19 +38,19 @@ END_IF
 CASE state OF
 
  E_STATES.INIT: 
-		VLS_VGC_1.M_Set_OPN_SW(FALSE); //Isolation Valve closed
-		VLS_VGC_W.M_Set_CLS_SW(FALSE); // Window valve OPEN
-		VLS_VGC_1.i_xOverrideMode := VLS_VGC_W.i_xOverrideMode := FALSE;
+		VLS_VGC_01.M_Set_OPN_SW(FALSE); //Isolation Valve closed
+		VLS_VWC_01.M_Set_CLS_SW(FALSE); // Window valve OPEN
+		VLS_VGC_01.i_xOverrideMode := VLS_VWC_01.i_xOverrideMode := FALSE;
 		//Transition
-		if (VLS_VGC_1.M_IsClosed() AND VLS_VGC_W.M_IsOpen()) THEN
+		if (VLS_VGC_01.M_IsClosed() AND VLS_VWC_01.M_IsOpen()) THEN
 			state:= E_STATES.NOT_SAFE;
 		END_IF
 		
 E_STATES.NOT_SAFE: // System is not allowed to actuate, i.e all interlocks are in effect
-	VLS_VGC_1.M_Set_OPN_SW(VLS_VGC_1.iq_stValve.q_xOPN_DO );
+	VLS_VGC_01.M_Set_OPN_SW(VLS_VGC_01.iq_stValve.q_xOPN_DO );
  	//C_1.i_xExt_OK := VGC_1.i_xEPS_OPN_OK := VGC_1.i_xEPS_CLS_OK:= FALSE; 
-	VLS_VGC_W.i_xExtILK_OK:= FALSE; 
-	VLS_VGC_1.i_xOverrideMode := VLS_VGC_W.i_xOverrideMode := FALSE;
+	VLS_VWC_01.i_xExtILK_OK:= FALSE; 
+	VLS_VGC_01.i_xOverrideMode := VLS_VWC_01.i_xOverrideMode := FALSE;
 
 	//Transition
 	//IF (US_GCC.IG.xAT_VAC AND DS_GCC.IG.xAT_VAC) THEN state:= E_STATES.READY; END_IF
@@ -60,27 +60,27 @@ E_STATES.NOT_SAFE: // System is not allowed to actuate, i.e all interlocks are i
 	
  E_STATES.READY: // OK to MOVE
  	// Release the external interlock so the differential pressure inlk is in effect
- 	VLS_VGC_1.i_xExt_OK:= VLS_VGC_1.i_xEPS_OK :=TRUE;
+ 	VLS_VGC_01.i_xExt_OK:= VLS_VGC_01.i_xEPS_OK :=TRUE;
 	//permission to insert window valve only when US vacuum is good??
-	VLS_VGC_W.i_xExtILK_OK:= bExtPress;
+	VLS_VWC_01.i_xExtILK_OK:= bExtPress;
 	// Valves  alternate positions.
-	If (VLS_VGC_W.M_IsClosed()) THEN  VLS_VGC_1.M_Set_OPN_SW(TRUE);
-	ELSIF (VLS_VGC_W.M_IsOpen()) THEN VLS_VGC_1.M_Set_OPN_SW(FALSE);
+	If (VLS_VWC_01.M_IsClosed()) THEN  VLS_VGC_01.M_Set_OPN_SW(TRUE);
+	ELSIF (VLS_VWC_01.M_IsOpen()) THEN VLS_VGC_01.M_Set_OPN_SW(FALSE);
 	END_IF
 	
 // bOverride := TRUE;
  E_STATES.OVERRIDE: 
 	// Override Mode is enabled for all valves
- 	VLS_VGC_1.i_xOverrideMode :=VLS_VGC_W.i_xOverrideMode := TRUE;
+ 	VLS_VGC_01.i_xOverrideMode :=VLS_VWC_01.i_xOverrideMode := TRUE;
 	// Exit of Override mode always goes back to init
  	IF NOT(bOverride) THEN state:= E_STATES.INIT; END_IF
 	
 	
  E_STATES.SETUP: 
 	// Window valve remains retracted
- 	VLS_VGC_W.i_xExtILK_OK := FALSE; 
+ 	VLS_VWC_01.i_xExtILK_OK := FALSE; 
 	// Isolation valves operates like standard gate valves 
-	VLS_VGC_1.i_xExt_OK := TRUE;
+	VLS_VGC_01.i_xExt_OK := TRUE;
 	// exit to init just to be safe?
 	IF NOT(bSetup) THEN state:= E_STATES.INIT; END_IF
 END_CASE
@@ -106,8 +106,8 @@ VLS_GCC_01(PG:=VLS_GPI_01.PG , IG=> , bEP := TRUE );
 VLS_ROUGH_GPI.M_SetBits(32767);
 VLS_ROUGH_GPI(PG=>);
 
-VLS_VGC_1(
-	i_stUSG:= CRIX_GCP_04.PG , 
+VLS_VGC_01(
+	i_stUSG:= CMC_GCP_01.PG , 
 	i_stDSG:= VLS_GPI_01.PG , 
 	i_xDis_DPIlk:= FALSE , 
 	i_xPMPS_OK:= TRUE , 
@@ -125,7 +125,7 @@ VLS_VGC_1(
 );
 
 
-VLS_VGC_W(
+VLS_VWC_01(
 	i_xExtILK_OK:= , 
 	i_xOverrideMode:= , 
 	iq_stValve=> , 
