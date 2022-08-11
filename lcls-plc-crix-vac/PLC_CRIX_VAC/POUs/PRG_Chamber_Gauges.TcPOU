@@ -7,8 +7,8 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[
-CRIX_GPI_01.M_SetBits(30518);
-CRIX_GPI_01(PG=>stCRIX_GPI_01);
+CMC_GPI_01.M_SetBits(30518);
+CMC_GPI_01(PG=>stCMC_GPI_01);
 
 (*
 CRIX_GPI_02.M_SetBits(30518);
@@ -21,26 +21,30 @@ CRIX_GPI_04.M_SetBits(30518);
 CRIX_GPI_04(PG=>stCRIX_GPI_04);
 *)
 
-CRIX_GPI_05.M_SetBits(30518);
-CRIX_GPI_05(PG=>stCRIX_GPI_05);
+ROUGH_GPI_01.M_SetBits(30518);
+ROUGH_GPI_01(PG=>stROUGH_GPI_01);
 
-CRIX_GCC_01.M_SetBits(30518);
-CRIX_GCC_01(PG:=CRIX_GPI_01.PG,
-			IG=>stCRIX_GCC_01);
-
-
-CRIX_GCP_01.M_SetBits(30518);
-CRIX_GCP_01(PG=>stCRIX_GCP_01);
-
-CRIX_GCP_02.M_SetBits(30518);
-CRIX_GCP_02(PG=>stCRIX_GCP_02);
+CMC_GCC_01.M_SetBits(30518);
+CMC_GCC_01(PG:=CMC_GPI_01.PG,
+			IG=>stCMC_GCC_01);
 
 
-CRIX_GCP_03.M_SetBits(30518);
-CRIX_GCP_03(PG=>);
+CRYO_GCP_02.M_SetBits(30518);
+CRYO_GCP_02(PG=>stCRYO_GCP_02);
 
-CRIX_GCP_04.M_SetBits(30518);
-CRIX_GCP_04(PG=>stCRIX_GCP_04);]]></ST>
+CRYO_GCP_01.M_SetBits(30518);
+CRYO_GCP_01(PG=>stCRYO_GCP_01);
+
+
+SDS_GCP_01.M_SetBits(30518);
+SDS_GCP_01(PG=>);
+
+CMC_GCP_01.M_SetBits(30518);
+CMC_GCP_01(PG=>stCMC_GCP_01);]]></ST>
     </Implementation>
+    <LineIds Name="PRG_Chamber_Gauges">
+      <LineId Id="3" Count="33" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>
