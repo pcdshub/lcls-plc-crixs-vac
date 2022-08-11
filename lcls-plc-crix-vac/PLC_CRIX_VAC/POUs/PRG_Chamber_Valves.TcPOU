@@ -71,19 +71,19 @@ bVGC_02_ILK := (stCRIX_VGC_01.i_xClsLS AND stCRIX_VGC_03.i_xClsLS AND stCRIX_VGC
 				stCRIX_VGC_06.i_xClsLS AND stCRIX_VGC_07.i_xClsLS) AND F_RoughPumpInlet_ILK(ScrollPump:=stCRIX_MECH_PRO_01) AND
 				CRIX_GPI_05.PG.xAT_VAC;
 *)
-bChamberAtVac := (CRIX_GPI_01.PG.rPRESS < 0.005);
+bChamberAtVac := (CMC_GPI_01.PG.rPRESS < 0.005);
 IF (bChamberAtVac) THEN
 	CMC_VGC_01.i_xExt_OK := F_TurboGateValve_Protection_ILK(i_Turbo:=CMC_PTM_01.iq_stPtm,
-															 i_stISG:=CRIX_GPI_01.PG,
-															 i_stBSG:=CRIX_GPI_05.PG,
+															 i_stISG:=CMC_GPI_01.PG,
+															 i_stBSG:=ROUGH_GPI_01.PG,
 															 ScrollPump:=CRIX_MECH_PRO_01.stPump);															 
 ELSE 
 	CMC_VGC_01.i_xExt_OK :=TRUE;
 END_IF
 			
 CMC_VGC_01(
-	i_stUSG:= CRIX_GPI_01.PG, 
-	i_stDSG:= CRIX_GPI_05.PG, 
+	i_stUSG:= CMC_GPI_01.PG, 
+	i_stDSG:= ROUGH_GPI_01.PG, 
 	i_xDis_DPIlk:= FALSE, 
 	i_xPMPS_OK:= TRUE, 
 	i_xEPS_OK:= , 
@@ -99,16 +99,16 @@ CMC_VGC_01(
 	fbArbiter:= dummy_fbArbiter1);
 	
 bCMC_VGC_02_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CMC_PTM_02.iq_stPtm,
-											   i_stISG:=CRIX_GPI_01.PG,
-											   i_stBSG:=CRIX_GPI_05.PG,
+											   i_stISG:=CMC_GPI_01.PG,
+											   i_stBSG:=ROUGH_GPI_01.PG,
 								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);
 CMC_VGC_02(i_xExtILK_OK:=bCMC_VGC_02_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stCRIX_VGC_03);
 			
 bCMC_VGC_03_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CMC_PTM_03.iq_stPtm,
-											   i_stISG:=CRIX_GPI_01.PG,
-											   i_stBSG:=CRIX_GPI_05.PG,
+											   i_stISG:=CMC_GPI_01.PG,
+											   i_stBSG:=ROUGH_GPI_01.PG,
 								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);			
 CMC_VGC_03(i_xExtILK_OK:=bCMC_VGC_03_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
@@ -125,7 +125,7 @@ So we can pump down main chamber and VLS together through VGC-02.
 *)			
 bVLS_VGC_02_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=VLS_PTM_01.iq_stPtm,
 											   i_stISG:=VLS_GPI_01.PG,
-											   i_stBSG:=CRIX_GPI_05.PG,
+											   i_stBSG:=ROUGH_GPI_01.PG,
 								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);
 VLS_VGC_02(i_xExtILK_OK:=bVLS_VGC_02_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
@@ -133,9 +133,9 @@ VLS_VGC_02(i_xExtILK_OK:=bVLS_VGC_02_ILK,
 
 // This is roughing valve for Load Lock Chamber , apply the same logic as roughing valves for chamber			
 			
-bSDS_VGC_03_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CRIX_PTM_04.iq_stPtm,
-											   i_stISG:=CRIX_GCP_03.PG,
-											   i_stBSG:=CRIX_GPI_05.PG,
+bSDS_VGC_03_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=SDS_PTM_01.iq_stPtm,
+											   i_stISG:=SDS_GCP_01.PG,
+											   i_stBSG:=ROUGH_GPI_01.PG,
 								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);
 
 SDS_VGC_03(i_xExtILK_OK:=bSDS_VGC_03_ILK,  // Not active right now; leave ILK to initialized FALSE
@@ -161,7 +161,7 @@ bm_dummy_gauge.rPRESS := 5e-9;
 
 MAIN_VGC_01(
 	i_stUSG:= TM2K2_GCC_01_reader.IG,// PRG_ADS_Gauges.TM2K2_GCC_Reader.IG, 
-	i_stDSG:= CRIX_GCP_04.PG, 
+	i_stDSG:= CMC_GCP_01.PG, 
 	i_xDis_DPIlk:= FALSE, 
 	i_xPMPS_OK:= TRUE, 
 	i_xEPS_OK:= TRUE , 
@@ -176,7 +176,7 @@ MAIN_VGC_01(
 	io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput1, 
 	fbArbiter:= GVL_PMPS.fbArbiter1);
        
-MAIN_VGC_02(i_stUSG:=CRIX_GCP_04.PG,
+MAIN_VGC_02(i_stUSG:=CMC_GCP_01.PG,
             i_stDSG:=IM6K2_GCC_01_reader.IG,// PRG_ADS_Gauges.IM6K2_GCC_Reader.IG,
             i_xDis_DPILK:=FALSE,
             i_xPMPS_OK:=TRUE,
@@ -194,7 +194,7 @@ MAIN_VGC_02(i_stUSG:=CRIX_GCP_04.PG,
 
 (* ual acting valve, allow to close when motor is at OUT limit switch*, Open interlock pending for requirements *)
 
-bCRYO_VGC_01_OPN_OK := CRIX_GCP_02.PG.xAT_VAC AND CRIX_GCP_04.PG.xAT_VAC;
+bCRYO_VGC_01_OPN_OK := CRYO_GCP_01.PG.xAT_VAC AND CMC_GCP_01.PG.xAT_VAC;
 bCRYO_VGC_01_CLS_OK := NOT xEcatBridge_TxPDO_state and NOT xEcatBridge_External_device_not_connected and NOT xEcatBridge_WcState 
                    AND NOT xPTC_MOT_Y_10_IN and xPTC_MOT_Y_10_OUT;
 CRYO_VGC_01 (
@@ -206,7 +206,7 @@ CRYO_VGC_01 (
 	
 (*Dual acting valve, allow to close when motor is at OUT limit switch*, Open interlock pending for requirements *)
 
-bCRYO_VGC_02_OPN_OK := CRIX_GCP_01.PG.xAT_VAC AND CRIX_GCP_04.PG.xAT_VAC;
+bCRYO_VGC_02_OPN_OK := CRYO_GCP_02.PG.xAT_VAC AND CMC_GCP_01.PG.xAT_VAC;
 bCRYO_VGC_02_CLS_OK := NOT xEcatBridge_TxPDO_state and NOT xEcatBridge_External_device_not_connected and NOT xEcatBridge_WcState 
                    AND NOT xPTC_MOT_Y_11_IN and xPTC_MOT_Y_11_OUT;
 CRYO_VGC_02(
@@ -223,7 +223,7 @@ CRYO_VGC_03(i_xExtILK_OK:= True , i_xOverrideMode:= xSystemOverride_ChemRIXS, iq
 CRYO_VGC_04(i_xExtILK_OK:= True, i_xOverrideMode:= xSystemOverride_ChemRIXS, iq_stValve=> );
 
 
-bSDS_VGC_01_OPN_OK := CRIX_GCP_03.PG.xAT_VAC AND CRIX_GCP_04.PG.xAT_VAC;
+bSDS_VGC_01_OPN_OK := SDS_GCP_01.PG.xAT_VAC AND CMC_GCP_01.PG.xAT_VAC;
 bSDS_VGC_01_CLS_OK := NOT xEcatBridge_TxPDO_state and NOT xEcatBridge_External_device_not_connected and NOT xEcatBridge_WcState 
                    AND NOT xSDS_MOT_Z_18_IN and xSDS_MOT_Z_18_OUT;
 
