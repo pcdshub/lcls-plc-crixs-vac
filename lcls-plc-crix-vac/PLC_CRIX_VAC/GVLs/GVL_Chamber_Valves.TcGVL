@@ -16,32 +16,33 @@ VAR_GLOBAL
 	stCRIX_VGC_01 : ST_VRC;
 	*)
 	
-	{attribute 'pytmc' :=' pv: CRIXS:CMC:VGC:01 '}
+	{attribute 'pytmc' :=' pv: CRIXS:TC:VGC:01 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E22 (EL1004)^Channel 1^Input;
 								 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E22 (EL1004)^Channel 2^Input;
 								.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E21 (EL2004)^Channel 1^Output'}
 	
-	CMC_VGC_01 : FB_VGC_2S;
+	TC_VGC_01 : FB_VGC_2S;
 	
-	stCMC_VGC_01 : ST_VGC_2S;
+	stTC_VGC_01 : ST_VGC_2S;
 	
-	{attribute 'pytmc' :=' pv: CRIXS:CMC:VGC:02 '}
+	{attribute 'pytmc' :=' pv: CRIXS:TC:VGC:02 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E22 (EL1004)^Channel 3^Input;
 								 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E22 (EL1004)^Channel 4^Input;
 								.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E21 (EL2004)^Channel 2^Output'}
 
-	CMC_VGC_02 : FB_VRC;
+	TC_VGC_02 : FB_VRC;
 
-	stCMC_VGC_02 : ST_VRC;
+	stTC_VGC_02 : ST_VRC;
 	
-	{attribute 'pytmc' :=' pv: CRIXS:CMC:VGC:03 '}
+	{attribute 'pytmc' :=' pv: CRIXS:TC:VGC:03 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E23 (EL1004)^Channel 1^Input;
 								 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E23 (EL1004)^Channel 2^Input;
 								.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E21 (EL2004)^Channel 3^Output'}
 
-	CMC_VGC_03 : FB_VRC;
+	TC_VGC_03 : FB_VRC;
 	
-	stCMC_VGC_03 : ST_VRC;
+	stTC_VGC_03 : ST_VRC;
+	
 	
 	{attribute 'pytmc' :=' pv: CRIXS:VLS:VGC:02 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E23 (EL1004)^Channel 3^Input;
@@ -52,6 +53,7 @@ VAR_GLOBAL
 
 	stVLS_VGC_02 : ST_VRC;
 	
+	(*
 	stCRIX_VGC_03 : ST_VRC;
 	
 	{attribute 'pytmc' :=' pv: CRIXS:VGC:07 '}
@@ -62,7 +64,8 @@ VAR_GLOBAL
 	CRIX_VGC_07 : FB_VRC;
 	
 	stCRIX_VGC_07 : ST_VRC;
-
+	*)
+	
 	{attribute 'pytmc' :=' pv: CRIXS:MAIN:VGC:01 '}
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E27 (EL1004)^Channel 1^Input;
 								 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E27 (EL1004)^Channel 2^Input;

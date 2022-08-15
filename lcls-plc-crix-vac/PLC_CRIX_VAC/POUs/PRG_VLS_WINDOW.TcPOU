@@ -107,7 +107,7 @@ VLS_ROUGH_GPI.M_SetBits(32767);
 VLS_ROUGH_GPI(PG=>);
 
 VLS_VGC_01(
-	i_stUSG:= CMC_GCP_01.PG , 
+	i_stUSG:= TC_GCP_01.PG , 
 	i_stDSG:= VLS_GPI_01.PG , 
 	i_xDis_DPIlk:= FALSE , 
 	i_xPMPS_OK:= TRUE , 

@@ -5,21 +5,21 @@
 VAR_GLOBAL
 	
 	(* Leybold Pumps *)
-	{attribute 'pytmc' :=' pv: CRIXS:CMC:PTM:02 '}
+	{attribute 'pytmc' :=' pv: CRIXS:TC:PTM:02 '}
 	{attribute 'TcLinkTo' := 	'.i_xAtSpd	 :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)^Channel 2^Input;
 								 .i_xFaultNC :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)^Channel 1^Input;
 								 .q_RunDO	 :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E43 (EL2794)^Channel 3^Output'}
-	CMC_PTM_02 : FB_PTM_TurboDrive;
+	TC_PTM_02 : FB_PTM_TurboDrive;
 	
-	stCMC_PTM_02 : ST_LeyboldPTM;
+	stTC_PTM_02 : ST_LeyboldPTM;
 	
-	{attribute 'pytmc' :=' pv: CRIXS:CMC:PTM:01 '}
+	{attribute 'pytmc' :=' pv: CRIXS:TC:PTM:01 '}
 	{attribute 'TcLinkTo' := 	'.i_xAtSpd	 :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)^Channel 4^Input;
 								 .i_xFaultNC :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)^Channel 3^Input;
 								 .q_RunDO	 :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E43 (EL2794)^Channel 4^Output'}
-	CMC_PTM_01 : FB_PTM_TurboDrive;
+	TC_PTM_01 : FB_PTM_TurboDrive;
 	
-	stCMC_PTM_01 : ST_LeyboldPTM;
+	stTC_PTM_01 : ST_LeyboldPTM;
 	
 	
 	(* Pfeiffer Turbo Pumps TC400 *)
@@ -31,17 +31,17 @@ VAR_GLOBAL
 								 .q_PumpingStation	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E47 (EL2004)^Channel 3^Output				 
 	'}
 	{attribute 'pytmc' := '
-		pv: CRIXS:CMC:PTM:03
+		pv: CRIXS:TC:PTM:03
 		io: io
 	'}
-    CMC_PTM_03 : FB_PTM_Pfeiffer;
+    TC_PTM_03 : FB_PTM_Pfeiffer;
 	
-	stCMC_PTM_03 : ST_PfeifferPTM;
+	stTC_PTM_03 : ST_PfeifferPTM;
 	
-	stCMC_PTM_03_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
-	stCMC_PTM_03_Pfeiffer_RBK 	: ARRAY[1..20] OF ST_PfeifferStatus;
+	stTC_PTM_03_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
+	stTC_PTM_03_Pfeiffer_RBK 	: ARRAY[1..20] OF ST_PfeifferStatus;
 	
-	fbCMC_PTM_03_PfeifferCom : FB_PFEIFFER_COM;
+	fbTC_PTM_03_PfeifferCom : FB_PFEIFFER_COM;
 	
 	
 	
