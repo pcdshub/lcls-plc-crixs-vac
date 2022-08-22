@@ -160,9 +160,12 @@ VAR_GLOBAL
 	SDS_VGC_03 : FB_VRC;
 	
 	stSDS_VGC_03 : ST_VRC;
-
+	
+	
+(*
 	// These vent valves only have one NC contact indicating that the valve is closed. No open switch. Ignore the readback for now since there is no FB 
-	// in the vacuum library for this case. 
+	// in the vacuum library for this case.
+	//These are currently not being used?
 	{attribute 'pytmc' :=' pv: CRIXS:VVC:01 '}
 	{attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E34 (EL2004)^Channel 1^Output'}
 	CRIX_VVC_01 : FB_VVC;
@@ -216,7 +219,8 @@ VAR_GLOBAL
 	CRIX_VVC_10 : FB_VVC;
 
 	stCRIX_VVC_10 : ST_VVC;
-	
+
+*)	
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
