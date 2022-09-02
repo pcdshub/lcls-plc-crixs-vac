@@ -243,41 +243,41 @@ SDS_VGC_02(i_xExtILK_OK:=bSDS_VGC_02_ILK,
 			iq_stValve =>);
 			
 // ChemRIXS Vent Valves
-CRIX_VVC_01(i_xExtILK_OK:=(NOT stCRIX_VVC_02.q_xOPN_DO),
+VENT_VVC_01(i_xExtILK_OK:=(NOT stVENT_VVC_02.q_xOPN_DO),
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stCRIX_VVC_01);
+			iq_stValve =>stVENT_VVC_01);
 			
-CRIX_VVC_02(i_xExtILK_OK:=(NOT stCRIX_VVC_01.q_xOPN_DO),
+VENT_VVC_02(i_xExtILK_OK:=(NOT stVENT_VVC_01.q_xOPN_DO),
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stCRIX_VVC_02);
+			iq_stValve =>stVENT_VVC_02);
 			
-CRIX_VVC_03(i_xExtILK_OK:=(NOT stCRIX_VVC_04.q_xOPN_DO),
+VENT_VVC_03(i_xExtILK_OK:=(NOT stVENT_VVC_04.q_xOPN_DO),
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stCRIX_VVC_03);
+			iq_stValve =>stVENT_VVC_03);
 			
-CRIX_VVC_04(i_xExtILK_OK:=(NOT stCRIX_VVC_03.q_xOPN_DO),
+VENT_VVC_04(i_xExtILK_OK:=(NOT stVENT_VVC_03.q_xOPN_DO),
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stCRIX_VVC_04);
+			iq_stValve =>stVENT_VVC_04);
 (*			
-CRIX_VVC_05(i_xExtILK_OK:=TRUE,
+CRIXS_VVC_05(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => stCRIX_VVC_05);
+			iq_stValve => stCRIXS_VVC_05);
 			
-CRIX_VVC_06(i_xExtILK_OK:=TRUE,
+CRIXS_VVC_06(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => stCRIX_VVC_06);
+			iq_stValve => stCRIXS_VVC_06);
 			
-CRIX_VVC_07(i_xExtILK_OK:=TRUE,
+CRIXS_VVC_07(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => stCRIX_VVC_07);
+			iq_stValve => stCRIXS_VVC_07);
 	
-CRIX_VVC_09(i_xExtILK_OK:=TRUE,
+CRIXS_VVC_09(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => stCRIX_VVC_09);
+			iq_stValve => stCRIXS_VVC_09);
 			
-CRIX_VVC_10(i_xExtILK_OK:=TRUE,
+CRIXS_VVC_10(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => stCRIX_VVC_10);
+			iq_stValve => stCRIXS_VVC_10);
 *)
 
 
