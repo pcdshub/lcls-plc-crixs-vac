@@ -9,7 +9,7 @@ PROJECT_PATH := ../../lcls-plc-crix-vac.tsproj
 PLC := PLC_CRIX_VAC
 
 PYTMC_OPTS := 
-PREFIX := PLC:CRIX:VAC
+PREFIX := PLC:CRIXS:VAC
 
 # With two $$, as in $$(IOC) below, this will be expanded in the
 # environment of st.cmd:
