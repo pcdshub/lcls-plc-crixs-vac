@@ -282,12 +282,12 @@ CRIXS_VVC_10(i_xExtILK_OK:=TRUE,
 
 
 (* PLC interfaces to Motion PLC *)
-xCRYO_VGC_01_CLS := CRYO_VGC_01.iq_stValve.i_xClsLS;
-xCRYO_VGC_02_CLS := CRYO_VGC_02.iq_stValve.i_xClsLS;
-xCRYO_VGC_01_OPN := CRYO_VGC_01.iq_stValve.i_xOpnLS;
-xCRYO_VGC_02_OPN := CRYO_VGC_02.iq_stValve.i_xOpnLS;
-xSDS_VGC_01_CLS := SDS_VGC_01.iq_stValve.i_xClsLS;
-xSDS_VGC_01_OPN := SDS_VGC_01.iq_stValve.i_xOpnLS;
+bCRYO_VGC_01_CLS := CRYO_VGC_01.iq_stValve.i_xClsLS;
+bCRYO_VGC_02_CLS := CRYO_VGC_02.iq_stValve.i_xClsLS;
+bCRYO_VGC_01_OPN := CRYO_VGC_01.iq_stValve.i_xOpnLS;
+bCRYO_VGC_02_OPN := CRYO_VGC_02.iq_stValve.i_xOpnLS;
+bSDS_VGC_01_CLS := SDS_VGC_01.iq_stValve.i_xClsLS;
+bSDS_VGC_01_OPN := SDS_VGC_01.iq_stValve.i_xOpnLS;
 
 ]]></ST>
     </Implementation>
