@@ -56,27 +56,27 @@ VAR_GLOBAL
 	
 	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bVGC10_CLS
 	'}
-	xPTC_VGC_10_CLS AT %Q* : BOOL;
+	xPTC_CRYO_VGC_01_CLS AT %Q* : BOOL;
 	
 	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bVGC10_OPN
 	'}
-	xPTC_VGC_10_OPN AT %Q* : BOOL;
+	xPTC_CRYO_VGC_01_OPN AT %Q* : BOOL;
 	
 	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bVGC11_CLS
 	'}
-	xPTC_VGC_11_CLS AT %Q* : BOOL;
+	xPTC_CRYO_VGC_02_CLS AT %Q* : BOOL;
 	
 	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bVGC11_OPN
 	'}
-	xPTC_VGC_11_OPN AT %Q* : BOOL;
+	xPTC_CRYO_VGC_02_OPN AT %Q* : BOOL;
 
     {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^xSDS_VGC_16_CLS
 	'}
-	xSDS_VGC_16_CLS AT %Q* : BOOL;
+	xPTC_SDS_VGC_01_CLS AT %Q* : BOOL;
 	
 	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^xSDS_VGC_16_OPN
 	'}
-	xSDS_VGC_16_OPN AT %Q* : BOOL;
+	xPTC_SDS_VGC_01_OPN AT %Q* : BOOL;
 	
 END_VAR
 ]]></Declaration>
