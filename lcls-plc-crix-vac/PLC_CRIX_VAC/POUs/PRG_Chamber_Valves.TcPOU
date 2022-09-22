@@ -76,7 +76,7 @@ IF (bChamberAtVac) THEN
 	TC_VGC_01.i_xExt_OK := F_TurboGateValve_Protection_ILK(i_Turbo:=TC_PTM_01.iq_stPtm,
 															 i_stISG:=TC_GPI_01.PG,
 															 i_stBSG:=ROUGH_GPI_01.PG,
-															 ScrollPump:=CRIXS_MECH_PRO_01.stPump);															 
+															 ScrollPump:=MECH_PRO_01.stPump);															 
 ELSE 
 	TC_VGC_01.i_xExt_OK :=TRUE;
 END_IF
@@ -101,7 +101,7 @@ TC_VGC_01(
 bTC_VGC_02_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=TC_PTM_02.iq_stPtm,
 											   i_stISG:=TC_GPI_01.PG,
 											   i_stBSG:=ROUGH_GPI_01.PG,
-								  			   ScrollPump:=CRIXS_MECH_PRO_01.stPump);
+								  			   ScrollPump:=MECH_PRO_01.stPump);
 TC_VGC_02(i_xExtILK_OK:=bTC_VGC_02_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stTC_VGC_02);
@@ -109,7 +109,7 @@ TC_VGC_02(i_xExtILK_OK:=bTC_VGC_02_ILK,
 bTC_VGC_03_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=TC_PTM_03.iq_stPtm,
 											   i_stISG:=TC_GPI_01.PG,
 											   i_stBSG:=ROUGH_GPI_01.PG,
-								  			   ScrollPump:=CRIXS_MECH_PRO_01.stPump);			
+								  			   ScrollPump:=MECH_PRO_01.stPump);			
 TC_VGC_03(i_xExtILK_OK:=bTC_VGC_03_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stTC_VGC_03);
@@ -126,7 +126,7 @@ So we can pump down main chamber and VLS together through VGC-02.
 bVLS_VGC_02_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=VLS_PTM_01.iq_stPtm,
 											   i_stISG:=VLS_GPI_01.PG,
 											   i_stBSG:=ROUGH_GPI_01.PG,
-								  			   ScrollPump:=CRIXS_MECH_PRO_01.stPump);
+								  			   ScrollPump:=MECH_PRO_01.stPump);
 VLS_VGC_02(i_xExtILK_OK:=bVLS_VGC_02_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stVLS_VGC_02);
@@ -136,7 +136,7 @@ VLS_VGC_02(i_xExtILK_OK:=bVLS_VGC_02_ILK,
 bSDS_VGC_03_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=SDS_PTM_01.iq_stPtm,
 											   i_stISG:=SDS_GCP_01.PG,
 											   i_stBSG:=ROUGH_GPI_01.PG,
-								  			   ScrollPump:=CRIXS_MECH_PRO_01.stPump);
+								  			   ScrollPump:=MECH_PRO_01.stPump);
 
 SDS_VGC_03(i_xExtILK_OK:=bSDS_VGC_03_ILK,  // Not active right now; leave ILK to initialized FALSE
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
