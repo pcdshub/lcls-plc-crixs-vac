@@ -12,7 +12,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[//Pfeiffer Turbo
 
-fbVLS_PTM_01_ILK(i_stValve:=stVLS_VGC_02,
+fbVLS_PTM_01_ILK(i_stValve:=stVLS_VRC_01,
 				  i_stPump:=stVLS_PTM_01,
 	              tDelay:=T#200S,
 				  bILK=>VLS_PTM_01_xExtIlkOK);			

@@ -17,15 +17,15 @@ VAR
 //	bVGC_11_OPN_OK : BOOL := FALSE;
 //	bVGC_17_ILK : BOOL := FALSE;
 
-    bTC_VGC_01_ILK : BOOL := FALSE;
-	bTC_VGC_02_ILK : BOOL := FALSE;
-	bTC_VGC_03_ILK : BOOL := FALSE;
+    bTC_VRC_01_ILK : BOOL := FALSE;
+	bTC_VRC_02_ILK : BOOL := FALSE;
+	bTC_VRC_03_ILK : BOOL := FALSE;
 //	bVLS_VGC_01_ILK : BOOL := FALSE;
-	bVLS_VGC_02_ILK : BOOL := FALSE;
+	bVLS_VRC_01_ILK : BOOL := FALSE;
 	bSDS_VGC_01_CLS_OK : BOOL := FALSE;
 	bSDS_VGC_01_OPN_OK : BOOL := FALSE;
-	bSDS_VGC_02_ILK : BOOL := FALSE;
-	bSDS_VGC_03_ILK : BOOL := FALSE;
+	bSDS_VRC_02_ILK : BOOL := FALSE;
+	bSDS_VRC_01_ILK : BOOL := FALSE;
 	
 	bCRYO_VGC_01_CLS_OK : BOOL := FALSE;
 	bCRYO_VGC_01_OPN_OK : BOOL := FALSE;
@@ -33,8 +33,8 @@ VAR
 	bCRYO_VGC_02_CLS_OK : BOOL := FALSE;
 	bCRYO_VGC_02_OPN_OK : BOOL := FALSE;
 	
-	bCRYO_VGC_03_ILK : BOOL := FALSE;
-	bCRYO_VGC_04_ILK : BOOL := FALSE;
+	bCRYO_VRC_01_ILK : BOOL := FALSE;
+	bCRYO_VRC_02_ILK : BOOL := FALSE;
 	bChamberAtVac:BOOL;
 	
 	bm_dummy_gauge : ST_VG;
@@ -73,15 +73,15 @@ bVGC_02_ILK := (stCRIX_VGC_01.i_xClsLS AND stCRIX_VGC_03.i_xClsLS AND stCRIX_VGC
 *)
 bChamberAtVac := (TC_GPI_01.PG.rPRESS < 0.005);
 IF (bChamberAtVac) THEN
-	TC_VGC_01.i_xExt_OK := F_TurboGateValve_Protection_ILK(i_Turbo:=TC_PTM_01.iq_stPtm,
+	TC_VRC_01.i_xExt_OK := F_TurboGateValve_Protection_ILK(i_Turbo:=TC_PTM_01.iq_stPtm,
 															 i_stISG:=TC_GPI_01.PG,
 															 i_stBSG:=ROUGH_GPI_01.PG,
 															 ScrollPump:=MECH_PRO_01.stPump);															 
 ELSE 
-	TC_VGC_01.i_xExt_OK :=TRUE;
+	TC_VRC_01.i_xExt_OK :=TRUE;
 END_IF
 			
-TC_VGC_01(
+TC_VRC_01(
 	i_stUSG:= TC_GPI_01.PG, 
 	i_stDSG:= ROUGH_GPI_01.PG, 
 	i_xDis_DPIlk:= FALSE, 
@@ -93,26 +93,26 @@ TC_VGC_01(
 	i_xIsAperture:= , 
 	i_sDevName:= , 
 	i_nTransitionRootID:= , 
-	iq_stValve=> stTC_VGC_01, 
+	iq_stValve=> stTC_VRC_01, 
 	xMPS_OK=> , 
 	io_fbFFHWO:= dummy_FFFO, 
 	fbArbiter:= dummy_fbArbiter1);
 	
-bTC_VGC_02_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=TC_PTM_02.iq_stPtm,
+bTC_VRC_02_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=TC_PTM_02.iq_stPtm,
 											   i_stISG:=TC_GPI_01.PG,
 											   i_stBSG:=ROUGH_GPI_01.PG,
 								  			   ScrollPump:=MECH_PRO_01.stPump);
-TC_VGC_02(i_xExtILK_OK:=bTC_VGC_02_ILK,
+TC_VRC_02(i_xExtILK_OK:=bTC_VRC_02_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stTC_VGC_02);
+			iq_stValve =>stTC_VRC_02);
 			
-bTC_VGC_03_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=TC_PTM_03.iq_stPtm,
+bTC_VRC_03_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=TC_PTM_03.iq_stPtm,
 											   i_stISG:=TC_GPI_01.PG,
 											   i_stBSG:=ROUGH_GPI_01.PG,
 								  			   ScrollPump:=MECH_PRO_01.stPump);			
-TC_VGC_03(i_xExtILK_OK:=bTC_VGC_03_ILK,
+TC_VRC_03(i_xExtILK_OK:=bTC_VRC_03_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stTC_VGC_03);
+			iq_stValve =>stTC_VRC_03);
 			
 // This is roughing valve for VLS, apply the same logic as roughing valves for chamber
 
@@ -123,24 +123,24 @@ Turbo is running and no fault.
 The above interlocks will be good for the system is already under vacuum.  For starting pumping down, we can set up VLS to Set Up mode to open both VLS gate valve and window valve. 
 So we can pump down main chamber and VLS together through VGC-02.  
 *)			
-bVLS_VGC_02_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=VLS_PTM_01.iq_stPtm,
+bVLS_VRC_01_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=VLS_PTM_01.iq_stPtm,
 											   i_stISG:=VLS_GPI_01.PG,
 											   i_stBSG:=ROUGH_GPI_01.PG,
 								  			   ScrollPump:=MECH_PRO_01.stPump);
-VLS_VGC_02(i_xExtILK_OK:=bVLS_VGC_02_ILK,
+VLS_VRC_01(i_xExtILK_OK:=bVLS_VRC_01_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stVLS_VGC_02);
+			iq_stValve =>stVLS_VRC_01);
 
 // This is roughing valve for Load Lock Chamber , apply the same logic as roughing valves for chamber			
 			
-bSDS_VGC_03_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=SDS_PTM_01.iq_stPtm,
+bSDS_VRC_01_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=SDS_PTM_01.iq_stPtm,
 											   i_stISG:=SDS_GCP_01.PG,
 											   i_stBSG:=ROUGH_GPI_01.PG,
 								  			   ScrollPump:=MECH_PRO_01.stPump);
 
-SDS_VGC_03(i_xExtILK_OK:=bSDS_VGC_03_ILK,  // Not active right now; leave ILK to initialized FALSE
+SDS_VRC_01(i_xExtILK_OK:=bSDS_VRC_01_ILK,  // Not active right now; leave ILK to initialized FALSE
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stSDS_VGC_03);
+			iq_stValve =>stSDS_VRC_01);
 
 
 (*
@@ -220,9 +220,9 @@ CRYO_VGC_02(
 (*cold trap roughing valve, Open interlock pending for requirements*)
 
 	
-CRYO_VGC_03(i_xExtILK_OK:= True , i_xOverrideMode:= xSystemOverride_ChemRIXS, iq_stValve=> );	
+CRYO_VRC_01(i_xExtILK_OK:= True , i_xOverrideMode:= xSystemOverride_ChemRIXS, iq_stValve=> );	
 
-CRYO_VGC_04(i_xExtILK_OK:= True, i_xOverrideMode:= xSystemOverride_ChemRIXS, iq_stValve=> );
+CRYO_VRC_02(i_xExtILK_OK:= True, i_xOverrideMode:= xSystemOverride_ChemRIXS, iq_stValve=> );
 
 
 bSDS_VGC_01_OPN_OK := SDS_GCP_01.PG.xAT_VAC AND TC_GCP_01.PG.xAT_VAC;
@@ -237,8 +237,8 @@ SDS_VGC_01 (
 	iq_stValve=> );
 					   				   
 				   
-bSDS_VGC_02_ILK := TRUE;
-SDS_VGC_02(i_xExtILK_OK:=bSDS_VGC_02_ILK,
+bSDS_VRC_02_ILK := TRUE;
+SDS_VRC_02(i_xExtILK_OK:=bSDS_VRC_02_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>);
 			

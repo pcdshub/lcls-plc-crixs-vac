@@ -18,7 +18,7 @@ VAR
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[// Leybold Pumps
-fbTC_PTM_01_ILK(i_stValve:=stTC_VGC_01,
+fbTC_PTM_01_ILK(i_stValve:=stTC_VRC_01,
 				  i_stPump:=stTC_PTM_01,
 	              tDelay:=T#200S,
 				  bILK=>TC_PTM_01_ILK_OK);			
@@ -28,7 +28,7 @@ TC_PTM_01(i_xExtILKOk:=(TC_PTM_01_ILK_OK AND F_TurboExtILKLogic_2(Turbo:=stTC_PT
 																     ScrollPump:= stMECH_PRO_01)),
 			iq_stPtm=> stTC_PTM_01);			
 
-fbTC_PTM_02_ILK(i_stValve:=stTC_VGC_02,
+fbTC_PTM_02_ILK(i_stValve:=stTC_VRC_02,
 				  i_stPump:=stTC_PTM_02,
 	              tDelay:=T#200S,
 				  bILK=>TC_PTM_02_ILK_OK);
@@ -39,7 +39,7 @@ TC_PTM_02(i_xExtILKOk:=(TC_PTM_02_ILK_OK AND F_TurboExtILKLogic_2(Turbo:=stTC_PT
 			iq_stPtm=> stTC_PTM_02);
 			
 // Pfeiffer Pumps
-fbTC_PTM_03_ILK(i_stValve:=stTC_VGC_03,
+fbTC_PTM_03_ILK(i_stValve:=stTC_VRC_03,
 				  i_stPump:=stTC_PTM_03,
 	              tDelay:=T#200S,
 				  bILK=>TC_PTM_03_ILK_OK);			
@@ -61,7 +61,7 @@ TC_PTM_03.M_Serial_IO(st_Pfeiffer_RBK:=stTC_PTM_03_Pfeiffer_RBK[1], stTC_PTM_03_
 					  
 
 // Pfeiffer Turbo pump 04 (New) SDS
-fbSDS_PTM_01_ILK(i_stValve:=stSDS_VGC_03,
+fbSDS_PTM_01_ILK(i_stValve:=stSDS_VRC_01,
 				  i_stPump:=stSDS_PTM_01,
 	              tDelay:=T#200S,
 				  bILK=>SDS_PTM_01_ILK_OK);			
