@@ -5,21 +5,21 @@
 VAR_GLOBAL
 	
 	(* Leybold Pumps *)
-	{attribute 'pytmc' :=' pv: CRIX:PTM:01 '}
+	{attribute 'pytmc' :=' pv: CRIXS:TC:PTM:02 '}
 	{attribute 'TcLinkTo' := 	'.i_xAtSpd	 :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)^Channel 2^Input;
 								 .i_xFaultNC :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)^Channel 1^Input;
 								 .q_RunDO	 :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E43 (EL2794)^Channel 3^Output'}
-	CRIX_PTM_01 : FB_PTM_TurboDrive;
+	TC_PTM_02 : FB_PTM_TurboDrive;
 	
-	stCRIX_PTM_01 : ST_LeyboldPTM;
+	stTC_PTM_02 : ST_LeyboldPTM;
 	
-	{attribute 'pytmc' :=' pv: CRIX:PTM:02 '}
+	{attribute 'pytmc' :=' pv: CRIXS:TC:PTM:01 '}
 	{attribute 'TcLinkTo' := 	'.i_xAtSpd	 :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)^Channel 4^Input;
 								 .i_xFaultNC :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)^Channel 3^Input;
 								 .q_RunDO	 :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E43 (EL2794)^Channel 4^Output'}
-	CRIX_PTM_02 : FB_PTM_TurboDrive;
+	TC_PTM_01 : FB_PTM_TurboDrive;
 	
-	stCRIX_PTM_02 : ST_LeyboldPTM;
+	stTC_PTM_01 : ST_LeyboldPTM;
 	
 	
 	(* Pfeiffer Turbo Pumps TC400 *)
@@ -31,17 +31,17 @@ VAR_GLOBAL
 								 .q_PumpingStation	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E47 (EL2004)^Channel 3^Output				 
 	'}
 	{attribute 'pytmc' := '
-		pv: CRIX:PTM:03
+		pv: CRIXS:TC:PTM:03
 		io: io
 	'}
-    CRIX_PTM_03 : FB_PTM_Pfeiffer;
+    TC_PTM_03 : FB_PTM_Pfeiffer;
 	
-	stCRIX_PTM_03 : ST_PfeifferPTM;
+	stTC_PTM_03 : ST_PfeifferPTM;
 	
-	st_PTM_03_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
-	st_PTM_03_Pfeiffer_RBK 	: ARRAY[1..20] OF ST_PfeifferStatus;
+	stTC_PTM_03_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
+	stTC_PTM_03_Pfeiffer_RBK 	: ARRAY[1..20] OF ST_PfeifferStatus;
 	
-	fb_PTM_03_PfeifferCom : FB_PFEIFFER_COM;
+	fbTC_PTM_03_PfeifferCom : FB_PFEIFFER_COM;
 	
 	
 	
@@ -56,18 +56,18 @@ VAR_GLOBAL
 	'}
 	
 	{attribute 'pytmc' := '
-		pv: CRIX:PTM:04
+		pv: CRIXS:SDS:PTM:01
 		io: io
 	'}
-    CRIX_PTM_04 : FB_PTM_Pfeiffer;
+    SDS_PTM_01 : FB_PTM_Pfeiffer;
 
-	stCRIX_PTM_04 : ST_PfeifferPTM;  //new
+	stSDS_PTM_01 : ST_PfeifferPTM;  //new
 	
 	// Serial port
-	stCRIX_PTM_04_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
-	stCRIX_PTM_04_Pfeiffer_RBK 	: ARRAY[1..20] OF ST_PfeifferStatus;
+	stSDS_PTM_01_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
+	stSDS_PTM_01_Pfeiffer_RBK 	: ARRAY[1..20] OF ST_PfeifferStatus;
 	
-	fb_CRIX_PTM_04_Pfeiffer_PfeifferCom : FB_PFEIFFER_COM;
+	fb_SDS_PTM_01_Pfeiffer_PfeifferCom : FB_PFEIFFER_COM;
 
 
 	

@@ -3,16 +3,16 @@
   <GVL Name="GVL_PMPS" Id="{d721f736-45f2-417c-b026-01cd251e515b}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
-    {attribute 'pytmc' := 'pv: PLC:CRIX:VAC:FFO:01'}
+    {attribute 'pytmc' := 'pv: PLC:CRIXS:VAC:FFO:01'}
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 113 (EK1521-0010)^Term 154 (EK1501-0010)^PMPS_FFO^Channel 1^Output'}
     g_FastFaultOutput1: FB_HardwareFFOutput :=(i_sNetID:='172.21.42.126.1.1');;
 	
-	 {attribute 'pytmc' := 'pv: PLC:CRIX:VAC:FFO:02'}
+	{attribute 'pytmc' := 'pv: PLC:CRIXS:VAC:FFO:02'}
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 113 (EK1521-0010)^Term 154 (EK1501-0010)^PMPS_PRE^IO Outputs^FFO_Link'}
     g_FastFaultOutput2: FB_HardwareFFOutput :=(i_sNetID:='172.21.42.126.1.1');;
 	
 
-	{attribute 'pytmc' := 'pv: PLC:CRIX:VAC:ARB:01'}	
+	{attribute 'pytmc' := 'pv: PLC:CRIXS:VAC:ARB:01'}	
 	fbArbiter1: FB_Arbiter(1);
 END_VAR
 

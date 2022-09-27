@@ -12,14 +12,14 @@ END_VAR
     <Implementation>
       <ST><![CDATA[//Pfeiffer Turbo
 
-fbVLS_PTM_01_ILK(i_stValve:=stCRIX_VGC_05,
+fbVLS_PTM_01_ILK(i_stValve:=stVLS_VRC_01,
 				  i_stPump:=stVLS_PTM_01,
 	              tDelay:=T#200S,
 				  bILK=>VLS_PTM_01_xExtIlkOK);			
 VLS_PTM_01(i_xExtILKOk:=(VLS_PTM_01_xExtIlkOK  AND F_TurboExtILKLogic_2(Turbo:=stVLS_PTM_01,
-																	 BackingGauge:=CRIX_GPI_05.PG,
+																	 BackingGauge:=ROUGH_GPI_01.PG,
 																     InletGauge:=VLS_GPI_01.PG,
-																     ScrollPump:= stCRIX_MECH_PRO_01)), 
+																     ScrollPump:= stMECH_PRO_01)), 
 			iq_stPtm=> stVLS_PTM_01);		
 			
 (*Assign adresses to the pfeiffer controllers connected to this serial terminal*)
@@ -50,5 +50,9 @@ VLS_PTM_01(i_xExtILKOk:=VLS_PTM_01_xExtIlkOK, iq_stPtm=> );*)
 
 ]]></ST>
     </Implementation>
+    <LineIds Name="PRG_VLS_Turbo">
+      <LineId Id="3" Count="37" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

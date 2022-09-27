@@ -4,18 +4,37 @@
     <Declaration><![CDATA[PROGRAM PRG_Chamber_Valves
 VAR
 	bRoughPressOK : BOOL := FALSE;
-	bVGC_01_ILK : BOOL := FALSE;
-	bVGC_02_ILK : BOOL := FALSE;
-	bVGC_03_ILK : BOOL := FALSE;
-	bVGC_04_ILK : BOOL := FALSE;
-	bVGC_05_ILK : BOOL := FALSE;
-	bVGC_06_ILK : BOOL := FALSE;
-	bVGC_07_ILK : BOOL := FALSE;
-	bVGC_10_CLS_OK : BOOL := FALSE;
-	bVGC_10_OPN_OK : BOOL := FALSE;
-	bVGC_11_CLS_OK : BOOL := FALSE;
-	bVGC_11_OPN_OK : BOOL := FALSE;
-	bVGC_17_ILK : BOOL := FALSE;
+//	bVGC_01_ILK : BOOL := FALSE;
+//	bVGC_02_ILK : BOOL := FALSE;
+//	bVGC_03_ILK : BOOL := FALSE;
+//	bVGC_04_ILK : BOOL := FALSE;
+//	bVGC_05_ILK : BOOL := FALSE;
+//	bVGC_06_ILK : BOOL := FALSE;
+//	bVGC_07_ILK : BOOL := FALSE;
+//	bVGC_10_CLS_OK : BOOL := FALSE;
+//	bVGC_10_OPN_OK : BOOL := FALSE;
+//	bVGC_11_CLS_OK : BOOL := FALSE;
+//	bVGC_11_OPN_OK : BOOL := FALSE;
+//	bVGC_17_ILK : BOOL := FALSE;
+
+    bTC_VRC_01_ILK : BOOL := FALSE;
+	bTC_VRC_02_ILK : BOOL := FALSE;
+	bTC_VRC_03_ILK : BOOL := FALSE;
+//	bVLS_VGC_01_ILK : BOOL := FALSE;
+	bVLS_VRC_01_ILK : BOOL := FALSE;
+	bSDS_VGC_01_CLS_OK : BOOL := FALSE;
+	bSDS_VGC_01_OPN_OK : BOOL := FALSE;
+	bSDS_VRC_02_ILK : BOOL := FALSE;
+	bSDS_VRC_01_ILK : BOOL := FALSE;
+	
+	bCRYO_VGC_01_CLS_OK : BOOL := FALSE;
+	bCRYO_VGC_01_OPN_OK : BOOL := FALSE;
+	
+	bCRYO_VGC_02_CLS_OK : BOOL := FALSE;
+	bCRYO_VGC_02_OPN_OK : BOOL := FALSE;
+	
+	bCRYO_VRC_01_ILK : BOOL := FALSE;
+	bCRYO_VRC_02_ILK : BOOL := FALSE;
 	bChamberAtVac:BOOL;
 	
 	bm_dummy_gauge : ST_VG;
@@ -25,8 +44,8 @@ VAR
 	
 	
 	
-	bVGC_16_OPN_OK: BOOL;
-	bVGC_16_CLS_OK: BOOL;
+//	bVGC_16_OPN_OK: BOOL;
+//	bVGC_16_CLS_OK: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -38,11 +57,11 @@ END_VAR
 bVGC_01_ILK := F_TurboGateValve_ILK(i_Turbo:=RIX_LI3K2_PTM_01.iq_stPtm,
 									i_stISG:=) // need gauge for this
  *)
-									
-CRIX_VGC_01(i_xExtILK_OK:=TRUE, 
+(*									
+CRIXS_VGC_01(i_xExtILK_OK:=TRUE, 
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve => stCRIX_VGC_01);
-	
+*)	
 
 // Our "special" rouging turbo valve. We rough the chamber through this turbo, and this turbo only. We make sure the roughing pump is running,
 // and that all the other valves to the roughing line are closed so that we don't backstream from the chamber. The operator is responsible for
@@ -52,19 +71,19 @@ bVGC_02_ILK := (stCRIX_VGC_01.i_xClsLS AND stCRIX_VGC_03.i_xClsLS AND stCRIX_VGC
 				stCRIX_VGC_06.i_xClsLS AND stCRIX_VGC_07.i_xClsLS) AND F_RoughPumpInlet_ILK(ScrollPump:=stCRIX_MECH_PRO_01) AND
 				CRIX_GPI_05.PG.xAT_VAC;
 *)
-bChamberAtVac := (CRIX_GPI_01.PG.rPRESS < 0.005);
+bChamberAtVac := (TC_GPI_01.PG.rPRESS < 0.005);
 IF (bChamberAtVac) THEN
-	CRIX_VGC_02.i_xExt_OK := F_TurboGateValve_Protection_ILK(i_Turbo:=CRIX_PTM_02.iq_stPtm,
-															 i_stISG:=CRIX_GPI_01.PG,
-															 i_stBSG:=CRIX_GPI_05.PG,
-															 ScrollPump:=CRIX_MECH_PRO_01.stPump);															 
+	TC_VRC_01.i_xExt_OK := F_TurboGateValve_Protection_ILK(i_Turbo:=TC_PTM_01.iq_stPtm,
+															 i_stISG:=TC_GPI_01.PG,
+															 i_stBSG:=ROUGH_GPI_01.PG,
+															 ScrollPump:=MECH_PRO_01.stPump);															 
 ELSE 
-	CRIX_VGC_02.i_xExt_OK :=TRUE;
+	TC_VRC_01.i_xExt_OK :=TRUE;
 END_IF
 			
-CRIX_VGC_02(
-	i_stUSG:= CRIX_GPI_01.PG, 
-	i_stDSG:= CRIX_GPI_05.PG, 
+TC_VRC_01(
+	i_stUSG:= TC_GPI_01.PG, 
+	i_stDSG:= ROUGH_GPI_01.PG, 
 	i_xDis_DPIlk:= FALSE, 
 	i_xPMPS_OK:= TRUE, 
 	i_xEPS_OK:= , 
@@ -74,26 +93,26 @@ CRIX_VGC_02(
 	i_xIsAperture:= , 
 	i_sDevName:= , 
 	i_nTransitionRootID:= , 
-	iq_stValve=> stCRIX_VGC_02, 
+	iq_stValve=> stTC_VRC_01, 
 	xMPS_OK=> , 
 	io_fbFFHWO:= dummy_FFFO, 
 	fbArbiter:= dummy_fbArbiter1);
 	
-bVGC_03_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CRIX_PTM_01.iq_stPtm,
-											   i_stISG:=CRIX_GPI_01.PG,
-											   i_stBSG:=CRIX_GPI_05.PG,
-								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);
-CRIX_VGC_03(i_xExtILK_OK:=bVGC_03_ILK,
+bTC_VRC_02_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=TC_PTM_02.iq_stPtm,
+											   i_stISG:=TC_GPI_01.PG,
+											   i_stBSG:=ROUGH_GPI_01.PG,
+								  			   ScrollPump:=MECH_PRO_01.stPump);
+TC_VRC_02(i_xExtILK_OK:=bTC_VRC_02_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stCRIX_VGC_03);
+			iq_stValve =>stTC_VRC_02);
 			
-bVGC_04_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CRIX_PTM_03.iq_stPtm,
-											   i_stISG:=CRIX_GPI_01.PG,
-											   i_stBSG:=CRIX_GPI_05.PG,
-								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);			
-CRIX_VGC_04(i_xExtILK_OK:=bVGC_04_ILK,
+bTC_VRC_03_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=TC_PTM_03.iq_stPtm,
+											   i_stISG:=TC_GPI_01.PG,
+											   i_stBSG:=ROUGH_GPI_01.PG,
+								  			   ScrollPump:=MECH_PRO_01.stPump);			
+TC_VRC_03(i_xExtILK_OK:=bTC_VRC_03_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stCRIX_VGC_04);
+			iq_stValve =>stTC_VRC_03);
 			
 // This is roughing valve for VLS, apply the same logic as roughing valves for chamber
 
@@ -104,34 +123,36 @@ Turbo is running and no fault.
 The above interlocks will be good for the system is already under vacuum.  For starting pumping down, we can set up VLS to Set Up mode to open both VLS gate valve and window valve. 
 So we can pump down main chamber and VLS together through VGC-02.  
 *)			
-bVGC_05_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=VLS_PTM_01.iq_stPtm,
+bVLS_VRC_01_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=VLS_PTM_01.iq_stPtm,
 											   i_stISG:=VLS_GPI_01.PG,
-											   i_stBSG:=CRIX_GPI_05.PG,
-								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);
-CRIX_VGC_05(i_xExtILK_OK:=bVGC_05_ILK,
+											   i_stBSG:=ROUGH_GPI_01.PG,
+								  			   ScrollPump:=MECH_PRO_01.stPump);
+VLS_VRC_01(i_xExtILK_OK:=bVLS_VRC_01_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stCRIX_VGC_05);
+			iq_stValve =>stVLS_VRC_01);
 
 // This is roughing valve for Load Lock Chamber , apply the same logic as roughing valves for chamber			
 			
-bVGC_06_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=CRIX_PTM_04.iq_stPtm,
-											   i_stISG:=CRIX_GCP_03.PG,
-											   i_stBSG:=CRIX_GPI_05.PG,
-								  			   ScrollPump:=CRIX_MECH_PRO_01.stPump);
+bSDS_VRC_01_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=SDS_PTM_01.iq_stPtm,
+											   i_stISG:=SDS_GCP_01.PG,
+											   i_stBSG:=ROUGH_GPI_01.PG,
+								  			   ScrollPump:=MECH_PRO_01.stPump);
 
-CRIX_VGC_06(i_xExtILK_OK:=bVGC_06_ILK,  // Not active right now; leave ILK to initialized FALSE
+SDS_VRC_01(i_xExtILK_OK:=bSDS_VRC_01_ILK,  // Not active right now; leave ILK to initialized FALSE
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stCRIX_VGC_06);
+			iq_stValve =>stSDS_VRC_01);
 
 
 (*
 bVGC_07_ILK := F_TurboGateValve_ILK(i_Turbo:=RIX_LI3K2_PTM_01,
 									i_stISG:=);
-*)			
+*)
+
+(*			
 CRIX_VGC_07(i_xExtILK_OK:=bVGC_07_ILK,  // Not active right now; leave ILK to initialized FALSE
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>stCRIX_VGC_07);
-
+*)
     
 
 //beamline dummy gauge
@@ -140,9 +161,9 @@ bm_dummy_gauge.xAT_VAC := TRUE;
 bm_dummy_gauge.eState := ValidLo;
 bm_dummy_gauge.rPRESS := 5e-9;
 
-CRIX_VGC_08(
+MAIN_VGC_01(
 	i_stUSG:= TM2K2_GCC_01_reader.IG,// PRG_ADS_Gauges.TM2K2_GCC_Reader.IG, 
-	i_stDSG:= CRIX_GCP_04.PG, 
+	i_stDSG:= TC_GCP_01.PG, 
 	i_xDis_DPIlk:= FALSE, 
 	i_xPMPS_OK:= TRUE, 
 	i_xEPS_OK:= TRUE , 
@@ -150,14 +171,14 @@ CRIX_VGC_08(
 	i_xOverrideMode:= xSystemOverride_ChemRIXS, 
 	i_xReset:= , 
 	i_xIsAperture:= , 
-	i_sDevName:='CRIX:VGC:08' , 
+	i_sDevName:='CRIXS:MAIN:VGC:01' , 
 	i_nTransitionRootID:= , 
 	iq_stValve=> , 
 	xMPS_OK=> , 
 	io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput1, 
 	fbArbiter:= GVL_PMPS.fbArbiter1);
        
-CRIX_VGC_09(i_stUSG:=CRIX_GCP_04.PG,
+MAIN_VGC_02(i_stUSG:=TC_GCP_01.PG,
             i_stDSG:=IM6K2_GCC_01_reader.IG,// PRG_ADS_Gauges.IM6K2_GCC_Reader.IG,
             i_xDis_DPILK:=FALSE,
             i_xPMPS_OK:=TRUE,
@@ -166,7 +187,7 @@ CRIX_VGC_09(i_stUSG:=CRIX_GCP_04.PG,
             i_xOverrideMode:=xSystemOverride_ChemRIXS,
             i_xReset:=,
             i_xIsAperture:=FALSE,
-            i_sDevName:= 'CRIX:VGC:09',
+            i_sDevName:= 'CRIXS:MAIN:VGC:02',
             i_nTransitionRootID:=,
             iq_stValve=>,
             xMPS_OK=>,
@@ -175,100 +196,109 @@ CRIX_VGC_09(i_stUSG:=CRIX_GCP_04.PG,
 
 (* ual acting valve, allow to close when motor is at OUT limit switch*, Open interlock pending for requirements *)
 
-bVGC_10_OPN_OK := CRIX_GCP_02.PG.xAT_VAC AND CRIX_GCP_04.PG.xAT_VAC;
-bVGC_10_CLS_OK := NOT xEcatBridge_TxPDO_state and NOT xEcatBridge_External_device_not_connected and NOT xEcatBridge_WcState 
+bCRYO_VGC_01_OPN_OK := CRYO_GCP_01.PG.xAT_VAC AND TC_GCP_01.PG.xAT_VAC;
+bCRYO_VGC_01_CLS_OK := NOT xEcatBridge_TxPDO_state and NOT xEcatBridge_External_device_not_connected and NOT xEcatBridge_WcState 
                    AND NOT xPTC_MOT_Y_10_IN and xPTC_MOT_Y_10_OUT;
-CRIX_VGC_10 (
-	i_OPN_OK:= bVGC_10_OPN_OK, 
-	i_CLS_OK:= bVGC_10_CLS_OK, 
+CRYO_VGC_01 (
+	i_OPN_OK:= bCRYO_VGC_01_OPN_OK, 
+	i_CLS_OK:= bCRYO_VGC_01_CLS_OK, 
 	ibCntrlHold:= FALSE , 
 	i_xOverrideMode:= xSystemOverride_ChemRIXS, 
 	iq_stValve=> );
 	
 (*Dual acting valve, allow to close when motor is at OUT limit switch*, Open interlock pending for requirements *)
 
-bVGC_11_OPN_OK := CRIX_GCP_01.PG.xAT_VAC AND CRIX_GCP_04.PG.xAT_VAC;
-bVGC_11_CLS_OK := NOT xEcatBridge_TxPDO_state and NOT xEcatBridge_External_device_not_connected and NOT xEcatBridge_WcState 
+bCRYO_VGC_02_OPN_OK := CRYO_GCP_02.PG.xAT_VAC AND TC_GCP_01.PG.xAT_VAC;
+bCRYO_VGC_02_CLS_OK := NOT xEcatBridge_TxPDO_state and NOT xEcatBridge_External_device_not_connected and NOT xEcatBridge_WcState 
                    AND NOT xPTC_MOT_Y_11_IN and xPTC_MOT_Y_11_OUT;
-CRIX_VGC_11(
-	i_OPN_OK:= bVGC_11_OPN_OK, 
-	i_CLS_OK:= bVGC_11_CLS_OK, 
+CRYO_VGC_02(
+	i_OPN_OK:= bCRYO_VGC_02_OPN_OK, 
+	i_CLS_OK:= bCRYO_VGC_02_CLS_OK, 
 	ibCntrlHold:= FALSE , 
 	i_xOverrideMode:= xSystemOverride_ChemRIXS, 
 	iq_stValve=> );	
 (*cold trap roughing valve, Open interlock pending for requirements*)
 
 	
-CRIX_VGC_12(i_xExtILK_OK:= True , i_xOverrideMode:= xSystemOverride_ChemRIXS, iq_stValve=> );	
+CRYO_VRC_01(i_xExtILK_OK:= True , i_xOverrideMode:= xSystemOverride_ChemRIXS, iq_stValve=> );	
 
-CRIX_VGC_13(i_xExtILK_OK:= True, i_xOverrideMode:= xSystemOverride_ChemRIXS, iq_stValve=> );
+CRYO_VRC_02(i_xExtILK_OK:= True, i_xOverrideMode:= xSystemOverride_ChemRIXS, iq_stValve=> );
 
 
-bVGC_16_OPN_OK := CRIX_GCP_03.PG.xAT_VAC AND CRIX_GCP_04.PG.xAT_VAC;
-bVGC_16_CLS_OK := NOT xEcatBridge_TxPDO_state and NOT xEcatBridge_External_device_not_connected and NOT xEcatBridge_WcState 
+bSDS_VGC_01_OPN_OK := SDS_GCP_01.PG.xAT_VAC AND TC_GCP_01.PG.xAT_VAC;
+bSDS_VGC_01_CLS_OK := NOT xEcatBridge_TxPDO_state and NOT xEcatBridge_External_device_not_connected and NOT xEcatBridge_WcState 
                    AND NOT xSDS_MOT_Z_18_IN and xSDS_MOT_Z_18_OUT;
 
-CRIX_VGC_16 (
-	i_OPN_OK:= bVGC_16_OPN_OK, 
-	i_CLS_OK:= bVGC_16_CLS_OK, 
+SDS_VGC_01 (
+	i_OPN_OK:= bSDS_VGC_01_OPN_OK, 
+	i_CLS_OK:= bSDS_VGC_01_CLS_OK, 
 	ibCntrlHold:= FALSE , 
 	i_xOverrideMode:= xSystemOverride_ChemRIXS, 
 	iq_stValve=> );
 					   				   
 				   
-bVGC_17_ILK := TRUE;
-CRIX_VGC_17(i_xExtILK_OK:=bVGC_17_ILK,
+bSDS_VRC_02_ILK := TRUE;
+SDS_VRC_02(i_xExtILK_OK:=bSDS_VRC_02_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>);
 			
 // ChemRIXS Vent Valves
-CRIX_VVC_01(i_xExtILK_OK:=(NOT stCRIX_VVC_02.q_xOPN_DO),
+VENT_VVC_01(i_xExtILK_OK:=(NOT stVENT_VVC_02.q_xOPN_DO),
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stCRIX_VVC_01);
+			iq_stValve =>stVENT_VVC_01);
 			
-CRIX_VVC_02(i_xExtILK_OK:=(NOT stCRIX_VVC_01.q_xOPN_DO),
+VENT_VVC_02(i_xExtILK_OK:=(NOT stVENT_VVC_01.q_xOPN_DO),
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stCRIX_VVC_02);
+			iq_stValve =>stVENT_VVC_02);
 			
-CRIX_VVC_03(i_xExtILK_OK:=(NOT stCRIX_VVC_04.q_xOPN_DO),
+VENT_VVC_03(i_xExtILK_OK:=(NOT stVENT_VVC_04.q_xOPN_DO),
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stCRIX_VVC_03);
+			iq_stValve =>stVENT_VVC_03);
 			
-CRIX_VVC_04(i_xExtILK_OK:=(NOT stCRIX_VVC_03.q_xOPN_DO),
+VENT_VVC_04(i_xExtILK_OK:=(NOT stVENT_VVC_03.q_xOPN_DO),
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stCRIX_VVC_04);
+			iq_stValve =>stVENT_VVC_04);
 (*			
-CRIX_VVC_05(i_xExtILK_OK:=TRUE,
+CRIXS_VVC_05(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => stCRIX_VVC_05);
+			iq_stValve => stCRIXS_VVC_05);
 			
-CRIX_VVC_06(i_xExtILK_OK:=TRUE,
+CRIXS_VVC_06(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => stCRIX_VVC_06);
+			iq_stValve => stCRIXS_VVC_06);
 			
-CRIX_VVC_07(i_xExtILK_OK:=TRUE,
+CRIXS_VVC_07(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => stCRIX_VVC_07);
+			iq_stValve => stCRIXS_VVC_07);
 	
-CRIX_VVC_09(i_xExtILK_OK:=TRUE,
+CRIXS_VVC_09(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => stCRIX_VVC_09);
+			iq_stValve => stCRIXS_VVC_09);
 			
-CRIX_VVC_10(i_xExtILK_OK:=TRUE,
+CRIXS_VVC_10(i_xExtILK_OK:=TRUE,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => stCRIX_VVC_10);
+			iq_stValve => stCRIXS_VVC_10);
 *)
 
 
 (* PLC interfaces to Motion PLC *)
-xPTC_VGC_10_CLS := CRIX_VGC_10.iq_stValve.i_xClsLS;
-xPTC_VGC_11_CLS := CRIX_VGC_11.iq_stValve.i_xClsLS;
-xPTC_VGC_10_OPN := CRIX_VGC_10.iq_stValve.i_xOpnLS;
-xPTC_VGC_11_OPN := CRIX_VGC_11.iq_stValve.i_xOpnLS;
-xSDS_VGC_16_CLS := CRIX_VGC_16.iq_stValve.i_xClsLS;
-xSDS_VGC_16_OPN := CRIX_VGC_16.iq_stValve.i_xOpnLS;
+bCRYO_VGC_01_CLS := CRYO_VGC_01.iq_stValve.i_xClsLS;
+bCRYO_VGC_02_CLS := CRYO_VGC_02.iq_stValve.i_xClsLS;
+bCRYO_VGC_01_OPN := CRYO_VGC_01.iq_stValve.i_xOpnLS;
+bCRYO_VGC_02_OPN := CRYO_VGC_02.iq_stValve.i_xOpnLS;
+bSDS_VGC_01_CLS := SDS_VGC_01.iq_stValve.i_xClsLS;
+bSDS_VGC_01_OPN := SDS_VGC_01.iq_stValve.i_xOpnLS;
 
 ]]></ST>
     </Implementation>
+    <LineIds Name="PRG_Chamber_Valves">
+      <LineId Id="3" Count="88" />
+      <LineId Id="290" Count="0" />
+      <LineId Id="93" Count="7" />
+      <LineId Id="338" Count="0" />
+      <LineId Id="337" Count="0" />
+      <LineId Id="101" Count="139" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

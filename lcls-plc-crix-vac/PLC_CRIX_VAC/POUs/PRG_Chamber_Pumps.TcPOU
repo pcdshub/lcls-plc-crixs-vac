@@ -3,83 +3,83 @@
   <POU Name="PRG_Chamber_Pumps" Id="{b20a9b3c-f30a-4f50-a45e-7b0eccd66336}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_Chamber_Pumps
 VAR
-	fbCRIX_PTM_01_ILK : FB_ChemRIXS_Turbo_ILK;
-	CRIX_PTM_01_ILK_OK : BOOL;
 	
-	fbCRIX_PTM_02_ILK : FB_ChemRIXS_Turbo_ILK;
-	CRIX_PTM_02_ILK_OK : BOOL;
+	fbTC_PTM_01_ILK : FB_ChemRIXS_Turbo_ILK;
+	TC_PTM_01_ILK_OK : BOOL;
 	
-	fbCRIX_PTM_03_ILK : FB_ChemRIXS_Turbo_ILK;
-	CRIX_PTM_03_ILK_OK : BOOL;
+	fbTC_PTM_02_ILK : FB_ChemRIXS_Turbo_ILK;
+	TC_PTM_02_ILK_OK : BOOL;
 	
-	fbCRIX_PTM_04_ILK : FB_ChemRIXS_Turbo_ILK; //new
-	CRIX_PTM_04_ILK_OK : BOOL;
-END_VAR
-]]></Declaration>
+	fbTC_PTM_03_ILK : FB_ChemRIXS_Turbo_ILK;
+	TC_PTM_03_ILK_OK : BOOL;
+	
+	fbSDS_PTM_01_ILK : FB_ChemRIXS_Turbo_ILK; //new
+	SDS_PTM_01_ILK_OK : BOOL;
+END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[// Leybold Pumps
-fbCRIX_PTM_01_ILK(i_stValve:=stCRIX_VGC_03,
-				  i_stPump:=stCRIX_PTM_01,
+fbTC_PTM_01_ILK(i_stValve:=stTC_VRC_01,
+				  i_stPump:=stTC_PTM_01,
 	              tDelay:=T#200S,
-				  bILK=>CRIX_PTM_01_ILK_OK);
-CRIX_PTM_01(i_xExtILKOk:=(CRIX_PTM_01_ILK_OK AND F_TurboExtILKLogic_2(Turbo:=stCRIX_PTM_01,
-																	 BackingGauge:=CRIX_GPI_05.PG,
-																     InletGauge:=CRIX_GPI_01.PG,
-																     ScrollPump:= stCRIX_MECH_PRO_01)),
-			iq_stPtm=> stCRIX_PTM_01);
-			
-fbCRIX_PTM_02_ILK(i_stValve:=stCRIX_VGC_02,
-				  i_stPump:=stCRIX_PTM_02,
+				  bILK=>TC_PTM_01_ILK_OK);			
+TC_PTM_01(i_xExtILKOk:=(TC_PTM_01_ILK_OK AND F_TurboExtILKLogic_2(Turbo:=stTC_PTM_01,
+																	 BackingGauge:=ROUGH_GPI_01.PG,
+																     InletGauge:=TC_GPI_01.PG,
+																     ScrollPump:= stMECH_PRO_01)),
+			iq_stPtm=> stTC_PTM_01);			
+
+fbTC_PTM_02_ILK(i_stValve:=stTC_VRC_02,
+				  i_stPump:=stTC_PTM_02,
 	              tDelay:=T#200S,
-				  bILK=>CRIX_PTM_02_ILK_OK);			
-CRIX_PTM_02(i_xExtILKOk:=(CRIX_PTM_02_ILK_OK AND F_TurboExtILKLogic_2(Turbo:=stCRIX_PTM_02,
-																	 BackingGauge:=CRIX_GPI_05.PG,
-																     InletGauge:=CRIX_GPI_01.PG,
-																     ScrollPump:= stCRIX_MECH_PRO_01)),
-			iq_stPtm=> stCRIX_PTM_02);			
+				  bILK=>TC_PTM_02_ILK_OK);
+TC_PTM_02(i_xExtILKOk:=(TC_PTM_02_ILK_OK AND F_TurboExtILKLogic_2(Turbo:=stTC_PTM_02,
+																	 BackingGauge:=ROUGH_GPI_01.PG,
+																     InletGauge:=TC_GPI_01.PG,
+																     ScrollPump:= stMECH_PRO_01)),
+			iq_stPtm=> stTC_PTM_02);
 			
 // Pfeiffer Pumps
-fbCRIX_PTM_03_ILK(i_stValve:=stCRIX_VGC_04,
-				  i_stPump:=stCRIX_PTM_03,
+fbTC_PTM_03_ILK(i_stValve:=stTC_VRC_03,
+				  i_stPump:=stTC_PTM_03,
 	              tDelay:=T#200S,
-				  bILK=>CRIX_PTM_03_ILK_OK);			
-CRIX_PTM_03(i_xExtILKOk:=(CRIX_PTM_03_ILK_OK  AND F_TurboExtILKLogic_2(Turbo:=stCRIX_PTM_03,
-																	 BackingGauge:=CRIX_GPI_05.PG,
-																     InletGauge:=CRIX_GPI_01.PG,
-																     ScrollPump:= stCRIX_MECH_PRO_01)), 
-			iq_stPtm=> stCRIX_PTM_03);		
+				  bILK=>TC_PTM_03_ILK_OK);			
+TC_PTM_03(i_xExtILKOk:=(TC_PTM_03_ILK_OK  AND F_TurboExtILKLogic_2(Turbo:=stTC_PTM_03,
+																	 BackingGauge:=ROUGH_GPI_01.PG,
+																     InletGauge:=TC_GPI_01.PG,
+																     ScrollPump:= stMECH_PRO_01)), 
+			iq_stPtm=> stTC_PTM_03);		
 			
-st_PTM_03_Pfeiffer_CTRL[1].iSerialAddress := 0;
-st_PTM_03_Pfeiffer_CTRL[1].xEnableComm := TRUE;
+stTC_PTM_03_Pfeiffer_CTRL[1].iSerialAddress := 0;
+stTC_PTM_03_Pfeiffer_CTRL[1].xEnableComm := TRUE;
 
-fb_PTM_03_PfeifferCom(astPfeifferControl:=st_PTM_03_Pfeiffer_CTRL,
-					  astPfeifferStatus:=st_PTM_03_Pfeiffer_RBK,
+fbTC_PTM_03_PfeifferCom(astPfeifferControl:=stTC_PTM_03_Pfeiffer_CTRL,
+					  astPfeifferStatus:=stTC_PTM_03_Pfeiffer_RBK,
 					  SerialRXBuffer:=K2S17_E5_CH2_SerialRXBuffer,
 					  SerialTXBuffer:=K2S17_E5_CH2_SerialTXBuffer);
 					  
-CRIX_PTM_03.M_Serial_IO(st_Pfeiffer_RBK:=st_PTM_03_Pfeiffer_RBK[1], st_PTM_03_Pfeiffer_CTRL[1]);
+TC_PTM_03.M_Serial_IO(st_Pfeiffer_RBK:=stTC_PTM_03_Pfeiffer_RBK[1], stTC_PTM_03_Pfeiffer_CTRL[1]);
 					  
 
-// Pfeiffer Turbo pump 04 (New)
-fbCRIX_PTM_04_ILK(i_stValve:=stCRIX_VGC_06,
-				  i_stPump:=stCRIX_PTM_04,
+// Pfeiffer Turbo pump 04 (New) SDS
+fbSDS_PTM_01_ILK(i_stValve:=stSDS_VRC_01,
+				  i_stPump:=stSDS_PTM_01,
 	              tDelay:=T#200S,
-				  bILK=>CRIX_PTM_04_ILK_OK);			
-CRIX_PTM_04(i_xExtILKOk:=(CRIX_PTM_04_ILK_OK  AND F_TurboExtILKLogic_2(Turbo:=stCRIX_PTM_04,
-																	 BackingGauge:=CRIX_GPI_05.PG,
-																     InletGauge:=CRIX_GCP_03.PG,
-																     ScrollPump:= stCRIX_MECH_PRO_01)), 
-			iq_stPtm=> stCRIX_PTM_04);		
+				  bILK=>SDS_PTM_01_ILK_OK);			
+SDS_PTM_01(i_xExtILKOk:=(SDS_PTM_01_ILK_OK  AND F_TurboExtILKLogic_2(Turbo:=stSDS_PTM_01,
+																	 BackingGauge:=ROUGH_GPI_01.PG,
+																     InletGauge:=SDS_GCP_01.PG,
+																     ScrollPump:= stMECH_PRO_01)), 
+			iq_stPtm=> stSDS_PTM_01);		
 			
-stCRIX_PTM_04_Pfeiffer_CTRL[1].iSerialAddress := 1;
-stCRIX_PTM_04_Pfeiffer_CTRL[1].xEnableComm := TRUE;
+stSDS_PTM_01_Pfeiffer_CTRL[1].iSerialAddress := 1;
+stSDS_PTM_01_Pfeiffer_CTRL[1].xEnableComm := TRUE;
 
-fb_CRIX_PTM_04_Pfeiffer_PfeifferCom(astPfeifferControl:=stCRIX_PTM_04_Pfeiffer_CTRL,
-					  astPfeifferStatus:=stCRIX_PTM_04_Pfeiffer_RBK,
+fb_SDS_PTM_01_Pfeiffer_PfeifferCom(astPfeifferControl:=stSDS_PTM_01_Pfeiffer_CTRL,
+					  astPfeifferStatus:=stSDS_PTM_01_Pfeiffer_RBK,
 					  SerialRXBuffer:=K2S17_E5_CH1_SerialRXBuffer,
 					  SerialTXBuffer:=K2S17_E5_CH1_SerialTXBuffer);
 					  
-CRIX_PTM_04.M_Serial_IO(st_Pfeiffer_RBK:=stCRIX_PTM_04_Pfeiffer_RBK[1], stCRIX_PTM_04_Pfeiffer_CTRL[1]);
+SDS_PTM_01.M_Serial_IO(st_Pfeiffer_RBK:=stSDS_PTM_01_Pfeiffer_RBK[1], stSDS_PTM_01_Pfeiffer_CTRL[1]);
 
 //Pfeiffer Turbo PTM_04 (Old Implementation of timer using Library (2.0.1) function)
 
@@ -111,5 +111,12 @@ CRIX_PTM_04_ILK_OK := F_TurboExtILK_TOF(Turbo:=CRIX_PTM_04.iq_stPTM, BackingGaug
 CRIX_PTM_04(i_xExtILKOk:=CRIX_PTM_04_ILK_OK, iq_stPtm=> ); *)
 ]]></ST>
     </Implementation>
+    <LineIds Name="PRG_Chamber_Pumps">
+      <LineId Id="3" Count="0" />
+      <LineId Id="14" Count="8" />
+      <LineId Id="130" Count="9" />
+      <LineId Id="23" Count="71" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>
