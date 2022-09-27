@@ -4486,12 +4486,12 @@ PDO IO Outputs (Index #x1608, Flags #x0020, SyncMan 2)
     :header: Name, Comment, BitLen, Index, Type
     :align: center
 
-        "bVGC10_CLS", "", , "#x7000", "BOOL"
-        "bVGC10_OPN", "", , "#x7000", "BOOL"
-        "bVGC11_CLS", "", , "#x7000", "BOOL"
-        "bVGC11_OPN", "", , "#x7000", "BOOL"
-        "xSDS_VGC_16_CLS", "", , "#x7000", "BOOL"
-        "xSDS_VGC_16_OPN", "", , "#x7000", "BOOL"
+        "bCRYO_VGC_01_CLS", "", , "#x7000", "BOOL"
+        "bCRYO_VGC_01_OPN", "", , "#x7000", "BOOL"
+        "bCRYO_VGC_02_CLS", "", , "#x7000", "BOOL"
+        "bCRYO_VGC_02_OPN", "", , "#x7000", "BOOL"
+        "bSDS_VGC_01_CLS", "", , "#x7000", "BOOL"
+        "bSDS_VGC_01_OPN", "", , "#x7000", "BOOL"
 
 
 .. raw:: html
