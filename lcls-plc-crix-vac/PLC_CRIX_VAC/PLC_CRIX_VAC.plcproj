@@ -104,9 +104,6 @@
     <Compile Include="POUs\PRG_Com.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\PRG_COM_1.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="POUs\PRG_COM_VLS.TcPOU">
       <SubType>Code</SubType>
     </Compile>
