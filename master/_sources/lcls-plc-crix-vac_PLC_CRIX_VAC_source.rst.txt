@@ -267,7 +267,7 @@ GVL_Chamber_Valves
     								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
     	*)
     	CRIX_VGC_15 : FB_VGC;
-    *)
+        *)
 
 
        
@@ -853,7 +853,8 @@ GVL_Recirculation
     	{attribute 'TcLinkTo' := 	'.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E3 (EL1004)^Channel 1^Input;
     								.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E2 (EL2004)^Channel 4^Output'}
     	RCC_VRC_04 : FB_VRC_NC_ClsLS;	
-    	
+
+    	(*
     	{attribute 'pytmc' :=' pv: CRIXS:RCC:GCP:02 '}
         {attribute 'TcLinkTo' := 	'.xPress_OK	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Reading Valid;
     	                             .xOverrange	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Overrange Exceeded;
@@ -861,7 +862,7 @@ GVL_Recirculation
     								.i_iPRESS_R := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Active Value;
                                     .bWcstate := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^WcState^WcState' }
     	RCC_GCP_02 : FB_901_ECAT; 
-    	
+    	*)
 
     	
     	{attribute 'pytmc' :=' pv: CRIXS:RCC:GCP:01 '}
@@ -957,12 +958,6 @@ GVL_VLS
     	VLS_VWC_01 : FB_VRC_NO_FFO; // Is the Window valve NO 
     	
     	(* Gauges *)
-    	
-    	{attribute 'pytmc' :=' pv: CRIXS:VLS:US:GPI '}
-    	VLS_US_GPI	: FB_MKS275;
-
-    	{attribute 'pytmc' :=' pv: CRIXS:VLS:US:GCC '}
-    	VLS_US_GCC	: FB_MKS500;
 
     	{attribute 'pytmc' :=' pv: CRIXS:VLS:GPI:01 '}
     	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[VLS_EP5 (EP3174-0002)]^AI Standard Channel 1^Value		'}
@@ -1634,29 +1629,6 @@ PRG_Com
 
 
 
-PRG_COM_1
-^^^^^^^^^
-
-::
-
-    PROGRAM PRG_COM_1
-    VAR
-    END_VAR
-    fbSerialLineControl(
-    	Mode:= SERIALLINEMODE_EL6_22B,
-    	pComIn:= ADR(stComIn),
-    	pComOut:=ADR(stComOut),
-    	SizeComIn:= SIZEOF(stComIn),
-    	TxBuffer:= SerialTXBuffer,
-    	RxBuffer:= SerialRXBuffer,
-    	Error=> ,
-    	ErrorID=> );
-
-    END_PROGRAM
-
-
-
-
 PRG_COM_VLS
 ^^^^^^^^^^^
 
@@ -1798,7 +1770,7 @@ PRG_RCC
     RCC_GCP_01.M_SetBits(30518);
     RCC_GCP_01(PG=>);
 
-    RCC_GCP_02(PG=>);
+    ///RCC_GCP_02(PG=>);
 
     RCC_STC_01(
     	iScale:= , 
@@ -2030,8 +2002,6 @@ PRG_VLS_WINDOW
 
 
     // Instantiate function blocks
-    VLS_US_GPI(PG=>);
-    //US_GCC(PG:=US_GPI.PG);
     VLS_GPI_01(PG=>);
     VLS_GCC_01(PG:=VLS_GPI_01.PG , IG=> , bEP := TRUE );
 
