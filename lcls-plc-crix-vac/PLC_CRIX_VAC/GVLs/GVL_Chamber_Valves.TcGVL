@@ -132,7 +132,7 @@ VAR_GLOBAL
 								.q_xOPN_DO	:=	TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E6 (EL2004)^Channel 1^Output'}
 	*)
 	CRIX_VGC_15 : FB_VGC;
-*)
+    *)
 
 
    

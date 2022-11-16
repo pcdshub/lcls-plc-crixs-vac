@@ -48,12 +48,6 @@ VAR_GLOBAL
 	VLS_VWC_01 : FB_VRC_NO_FFO; // Is the Window valve NO 
 	
 	(* Gauges *)
-	
-	{attribute 'pytmc' :=' pv: CRIXS:VLS:US:GPI '}
-	VLS_US_GPI	: FB_MKS275;
-
-	{attribute 'pytmc' :=' pv: CRIXS:VLS:US:GCC '}
-	VLS_US_GCC	: FB_MKS500;
 
 	{attribute 'pytmc' :=' pv: CRIXS:VLS:GPI:01 '}
 	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[VLS_EP5 (EP3174-0002)]^AI Standard Channel 1^Value		'}

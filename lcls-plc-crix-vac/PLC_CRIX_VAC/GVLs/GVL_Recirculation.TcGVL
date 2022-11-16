@@ -35,7 +35,8 @@ VAR_GLOBAL
 	{attribute 'TcLinkTo' := 	'.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E3 (EL1004)^Channel 1^Input;
 								.q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E2 (EL2004)^Channel 4^Output'}
 	RCC_VRC_04 : FB_VRC_NC_ClsLS;	
-	
+
+	(*
 	{attribute 'pytmc' :=' pv: CRIXS:RCC:GCP:02 '}
     {attribute 'TcLinkTo' := 	'.xPress_OK	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Reading Valid;
 	                             .xOverrange	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Overrange Exceeded;
@@ -43,7 +44,7 @@ VAR_GLOBAL
 								.i_iPRESS_R := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^TXPDO Combined^Combination Gauge Active Value;
                                 .bWcstate := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)^WcState^WcState' }
 	RCC_GCP_02 : FB_901_ECAT; 
-	
+	*)
 
 	
 	{attribute 'pytmc' :=' pv: CRIXS:RCC:GCP:01 '}

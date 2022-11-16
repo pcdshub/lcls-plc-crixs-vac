@@ -98,8 +98,6 @@ END_IF
 
 
 // Instantiate function blocks
-VLS_US_GPI(PG=>);
-//US_GCC(PG:=US_GPI.PG);
 VLS_GPI_01(PG=>);
 VLS_GCC_01(PG:=VLS_GPI_01.PG , IG=> , bEP := TRUE );
 
@@ -145,7 +143,8 @@ VLS_VWC_01(
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_VLS_WINDOW">
-      <LineId Id="3" Count="97" />
+      <LineId Id="3" Count="73" />
+      <LineId Id="79" Count="21" />
       <LineId Id="139" Count="0" />
       <LineId Id="101" Count="18" />
       <LineId Id="2" Count="0" />

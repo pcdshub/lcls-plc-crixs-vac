@@ -18,7 +18,7 @@ END_VAR
 RCC_GCP_01.M_SetBits(30518);
 RCC_GCP_01(PG=>);
 
-RCC_GCP_02(PG=>);
+///RCC_GCP_02(PG=>);
 
 RCC_STC_01(
 	iScale:= , 
