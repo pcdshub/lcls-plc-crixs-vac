@@ -13,12 +13,7 @@ END_VAR
 
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-
-///RCC_GCP_01.M_SetBits(30518);
-///RCC_GCP_01(PG=>);
-
-RCC_GCP_02(PG=>);
+      <ST><![CDATA[RCC_GCP_01(PG=>);
 
 RCC_STC_01(
 	iScale:= , 
@@ -58,7 +53,7 @@ RCC_VRC_04(i_xExtILK_OK := RCC_VRC_04_OPEN_OK,
                  iq_stValve=> );				 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_RCC">
-      <LineId Id="3" Count="41" />
+      <LineId Id="8" Count="36" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
