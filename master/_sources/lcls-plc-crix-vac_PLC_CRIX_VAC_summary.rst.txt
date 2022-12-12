@@ -24,7 +24,7 @@ Settings
 Pragmas
 -------
 
-Total pragmas found: 164
+Total pragmas found: 161
 Total linter errors: 0
 
 
@@ -37,7 +37,7 @@ Libraries
     :align: center
 
         LCLS General, SLAC, Unset, 2.6.0
-        LCLS Vacuum, SLAC - LCLS, Unset, 2.2.0
+        LCLS Vacuum, SLAC - LCLS, Unset, 2.3.0
         LCLSVacuumSerialDriverLib, SLAC - LCLS, Unset, 1.2.2
         PMPS, SLAC - LCLS, Unset, 2.2.1
         SysDir, System, , 3.5.8.0
@@ -860,14 +860,18 @@ GVL_Recirculation
 .. raw:: html
 
    <details>
-       <summary>21 Symbols</summary>
+       <summary>25 Symbols</summary>
 
 .. csv-table::
     :header: Symbol, Type, Offset/Size
     :align: center
 
-        GVL_Recirculation.RCC_GCP_01, FB_972, 643044736 (86080)
-        GVL_Recirculation.RCC_GCP_01.i_iPRESS_R, INT, 643130768 (16)
+        GVL_Recirculation.RCC_GCP_01, FB_901_ECAT, 643044736 (86080)
+        GVL_Recirculation.RCC_GCP_01.bWcstate, BOOL, 643130784 (8)
+        GVL_Recirculation.RCC_GCP_01.i_iPRESS_R, REAL, 643130752 (32)
+        GVL_Recirculation.RCC_GCP_01.xOverrange, BOOL, 643130736 (8)
+        GVL_Recirculation.RCC_GCP_01.xPress_OK, BOOL, 643130728 (8)
+        GVL_Recirculation.RCC_GCP_01.xUnderrange, BOOL, 643130744 (8)
         GVL_Recirculation.RCC_STC_01, FB_ThermoCouple, 643130816 (192)
         GVL_Recirculation.RCC_STC_01.bError, BOOL, 643130952 (8)
         GVL_Recirculation.RCC_STC_01.bOverrange, BOOL, 643130968 (8)

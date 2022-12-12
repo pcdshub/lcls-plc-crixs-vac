@@ -66,6 +66,214 @@ LCLS_General.FB_ThermoCouple
 
 
                                                              
+LCLS_Vacuum.FB_901_ECAT
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):AT_VAC_RBV
+      - bi
+      - $(SYMBOL).PG.xAT_VAC
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):Auto_On
+      - bo
+      - $(SYMBOL).PG.xAutoOn
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - $(PREFIX):Auto_On_RBV
+      - bi
+      - $(SYMBOL).PG.xAutoOn
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - $(PREFIX):AutoOn_timer_RBV
+      - longin
+      - $(SYMBOL).PG.iAutoOnTimer
+      - | io: input
+
+
+    * - $(PREFIX):DISC_ACTIVE_RBV
+      - bi
+      - $(SYMBOL).PG.i_xDisc_Active
+      - | field: ONAM DISC ACTIVE
+        | field: ZNAM NO DISC
+        | io: input
+
+
+    * - $(PREFIX):HV_DIS_DO_RBV
+      - bi
+      - $(SYMBOL).PG.q_xHV_DIS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):HV_ON_RBV
+      - bi
+      - $(SYMBOL).PG.i_xHV_ON
+      - | io: input
+
+
+    * - $(PREFIX):HV_SW
+      - bo
+      - $(SYMBOL).PG.xHV_SW
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - $(PREFIX):HV_SW_RBV
+      - bi
+      - $(SYMBOL).PG.xHV_SW
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - $(PREFIX):ILK_OK_RBV
+      - bi
+      - $(SYMBOL).PG.xILKOk
+      - | field: ONAM OK
+        | field: ZNAM NOT OK
+        | io: input
+
+
+    * - $(PREFIX):LOGGER
+      - bo
+      - $(SYMBOL).PG.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - $(PREFIX):LOGGER_RBV
+      - bi
+      - $(SYMBOL).PG.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - $(PREFIX):PRESS_AI_RBV
+      - longin
+      - $(SYMBOL).PG.i_iPRESS_R
+      - | io: input
+
+
+    * - $(PREFIX):PRESS_OK_RBV
+      - bi
+      - $(SYMBOL).PG.xPRESS_OK
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: input
+
+
+    * - $(PREFIX):PRESS_RBV
+      - ai
+      - $(SYMBOL).PG.rPRESS
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: input
+
+
+    * - $(PREFIX):PRO_SP
+      - ao
+      - $(SYMBOL).PG.rPRO_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):PRO_SP_RBV
+      - ai
+      - $(SYMBOL).PG.rPRO_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):SP_HYS
+      - ao
+      - $(SYMBOL).PG.rHYS_PR
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):SP_HYS_RBV
+      - ai
+      - $(SYMBOL).PG.rHYS_PR
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):STATE_RBV
+      - mbbi
+      - $(SYMBOL).PG.eState
+      - | field: FRST Starting
+        | field: FVST Valid
+        | field: ONST GaugeDisconnected
+        | field: SVST ValidLo
+        | field: SXST ValidHi
+        | field: THST PressInvalid
+        | field: TWST OoR
+        | field: ZRST Off
+        | io: input
+
+
+    * - $(PREFIX):VAC_SP
+      - ao
+      - $(SYMBOL).PG.rVAC_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):VAC_SP_RBV
+      - ai
+      - $(SYMBOL).PG.rVAC_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+ 
 LCLS_Vacuum.FB_972
 ^^^^^^^^^^^^^^^^^^
 
@@ -2985,16 +3193,16 @@ LCLS_Vacuum.FB_VRC_DA
     * - $(PREFIX):FORCE_CLS
       - bo
       - $(SYMBOL).iq_stValve.pv_xOvrdCls
-      - | field: ONAM CLOSE
-        | field: ZNAM OPEN
+      - | field: ONAM FORCE CLOSE
+        | field: ZNAM FALSE
         | io: output
 
 
     * - $(PREFIX):FORCE_CLS_RBV
       - bi
       - $(SYMBOL).iq_stValve.pv_xOvrdCls
-      - | field: ONAM CLOSE
-        | field: ZNAM OPEN
+      - | field: ONAM FORCE CLOSE
+        | field: ZNAM FALSE
         | io: output
 
 
@@ -3415,16 +3623,16 @@ LCLS_Vacuum.FB_VRC_NO
     * - $(PREFIX):FORCE_CLS
       - bo
       - $(SYMBOL).iq_stValve.pv_xOvrdCls
-      - | field: ONAM CLOSE
-        | field: ZNAM OPEN
+      - | field: ONAM FORCE CLOSE
+        | field: ZNAM FALSE
         | io: output
 
 
     * - $(PREFIX):FORCE_CLS_RBV
       - bi
       - $(SYMBOL).iq_stValve.pv_xOvrdCls
-      - | field: ONAM CLOSE
-        | field: ZNAM OPEN
+      - | field: ONAM FORCE CLOSE
+        | field: ZNAM FALSE
         | io: output
 
 
@@ -3655,16 +3863,16 @@ LCLS_Vacuum.FB_VRC_NO_FFO
     * - $(PREFIX):FORCE_CLS
       - bo
       - $(SYMBOL).iq_stValve.pv_xOvrdCls
-      - | field: ONAM CLOSE
-        | field: ZNAM OPEN
+      - | field: ONAM FORCE CLOSE
+        | field: ZNAM FALSE
         | io: output
 
 
     * - $(PREFIX):FORCE_CLS_RBV
       - bi
       - $(SYMBOL).iq_stValve.pv_xOvrdCls
-      - | field: ONAM CLOSE
-        | field: ZNAM OPEN
+      - | field: ONAM FORCE CLOSE
+        | field: ZNAM FALSE
         | io: output
 
 
@@ -3799,7 +4007,7 @@ LCLS_Vacuum.FB_VVC
     * - $(PREFIX):FORCE_OPN
       - bo
       - $(SYMBOL).iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -3807,7 +4015,7 @@ LCLS_Vacuum.FB_VVC
     * - $(PREFIX):FORCE_OPN_RBV
       - bi
       - $(SYMBOL).iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -6083,16 +6291,16 @@ LCLS_Vacuum.ST_VRC_NO
     * - $(PREFIX):FORCE_CLS
       - bo
       - $(SYMBOL).pv_xOvrdCls
-      - | field: ONAM CLOSE
-        | field: ZNAM OPEN
+      - | field: ONAM FORCE CLOSE
+        | field: ZNAM FALSE
         | io: output
 
 
     * - $(PREFIX):FORCE_CLS_RBV
       - bi
       - $(SYMBOL).pv_xOvrdCls
-      - | field: ONAM CLOSE
-        | field: ZNAM OPEN
+      - | field: ONAM FORCE CLOSE
+        | field: ZNAM FALSE
         | io: output
 
 
@@ -6227,7 +6435,7 @@ LCLS_Vacuum.ST_VVC
     * - $(PREFIX):FORCE_OPN
       - bo
       - $(SYMBOL).xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -6235,7 +6443,7 @@ LCLS_Vacuum.ST_VVC
     * - $(PREFIX):FORCE_OPN_RBV
       - bi
       - $(SYMBOL).xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -18370,7 +18578,7 @@ Database Records
     * - CRIXS:VENT:VVC:09:FORCE_OPN_RBV
       - bi
       - GVL_Chamber_Valves.CRIXS_VENT_VVC_09.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -18378,7 +18586,7 @@ Database Records
     * - CRIXS:VENT:VVC:09:FORCE_OPN
       - bo
       - GVL_Chamber_Valves.CRIXS_VENT_VVC_09.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -18490,16 +18698,16 @@ Database Records
     * - CRIXS:CRYO:VGC:01:FORCE_CLS_RBV
       - bi
       - GVL_Chamber_Valves.CRYO_VGC_01.iq_stValve.pv_xOvrdCls
-      - | field: ONAM CLOSE
-        | field: ZNAM OPEN
+      - | field: ONAM FORCE CLOSE
+        | field: ZNAM FALSE
         | io: output
 
 
     * - CRIXS:CRYO:VGC:01:FORCE_CLS
       - bo
       - GVL_Chamber_Valves.CRYO_VGC_01.iq_stValve.pv_xOvrdCls
-      - | field: ONAM CLOSE
-        | field: ZNAM OPEN
+      - | field: ONAM FORCE CLOSE
+        | field: ZNAM FALSE
         | io: output
 
 
@@ -18718,16 +18926,16 @@ Database Records
     * - CRIXS:CRYO:VGC:02:FORCE_CLS_RBV
       - bi
       - GVL_Chamber_Valves.CRYO_VGC_02.iq_stValve.pv_xOvrdCls
-      - | field: ONAM CLOSE
-        | field: ZNAM OPEN
+      - | field: ONAM FORCE CLOSE
+        | field: ZNAM FALSE
         | io: output
 
 
     * - CRIXS:CRYO:VGC:02:FORCE_CLS
       - bo
       - GVL_Chamber_Valves.CRYO_VGC_02.iq_stValve.pv_xOvrdCls
-      - | field: ONAM CLOSE
-        | field: ZNAM OPEN
+      - | field: ONAM FORCE CLOSE
+        | field: ZNAM FALSE
         | io: output
 
 
@@ -19994,16 +20202,16 @@ Database Records
     * - CRIXS:SDS:VGC:01:FORCE_CLS_RBV
       - bi
       - GVL_Chamber_Valves.SDS_VGC_01.iq_stValve.pv_xOvrdCls
-      - | field: ONAM CLOSE
-        | field: ZNAM OPEN
+      - | field: ONAM FORCE CLOSE
+        | field: ZNAM FALSE
         | io: output
 
 
     * - CRIXS:SDS:VGC:01:FORCE_CLS
       - bo
       - GVL_Chamber_Valves.SDS_VGC_01.iq_stValve.pv_xOvrdCls
-      - | field: ONAM CLOSE
-        | field: ZNAM OPEN
+      - | field: ONAM FORCE CLOSE
+        | field: ZNAM FALSE
         | io: output
 
 
@@ -21268,7 +21476,7 @@ Database Records
     * - CRIXS:VENT:VVC:01:FORCE_OPN_RBV
       - bi
       - GVL_Chamber_Valves.VENT_VVC_01.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -21276,7 +21484,7 @@ Database Records
     * - CRIXS:VENT:VVC:01:FORCE_OPN
       - bo
       - GVL_Chamber_Valves.VENT_VVC_01.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -21332,7 +21540,7 @@ Database Records
     * - CRIXS:VENT:VVC:02:FORCE_OPN_RBV
       - bi
       - GVL_Chamber_Valves.VENT_VVC_02.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -21340,7 +21548,7 @@ Database Records
     * - CRIXS:VENT:VVC:02:FORCE_OPN
       - bo
       - GVL_Chamber_Valves.VENT_VVC_02.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -21396,7 +21604,7 @@ Database Records
     * - CRIXS:VENT:VVC:03:FORCE_OPN_RBV
       - bi
       - GVL_Chamber_Valves.VENT_VVC_03.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -21404,7 +21612,7 @@ Database Records
     * - CRIXS:VENT:VVC:03:FORCE_OPN
       - bo
       - GVL_Chamber_Valves.VENT_VVC_03.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -21460,7 +21668,7 @@ Database Records
     * - CRIXS:VENT:VVC:04:FORCE_OPN_RBV
       - bi
       - GVL_Chamber_Valves.VENT_VVC_04.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -21468,7 +21676,7 @@ Database Records
     * - CRIXS:VENT:VVC:04:FORCE_OPN
       - bo
       - GVL_Chamber_Valves.VENT_VVC_04.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -21524,7 +21732,7 @@ Database Records
     * - CRIXS:VENT:VVC:05:FORCE_OPN_RBV
       - bi
       - GVL_Chamber_Valves.VENT_VVC_05.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -21532,7 +21740,7 @@ Database Records
     * - CRIXS:VENT:VVC:05:FORCE_OPN
       - bo
       - GVL_Chamber_Valves.VENT_VVC_05.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -21588,7 +21796,7 @@ Database Records
     * - CRIXS:VENT:VVC:06:FORCE_OPN_RBV
       - bi
       - GVL_Chamber_Valves.VENT_VVC_06.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -21596,7 +21804,7 @@ Database Records
     * - CRIXS:VENT:VVC:06:FORCE_OPN
       - bo
       - GVL_Chamber_Valves.VENT_VVC_06.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -21652,7 +21860,7 @@ Database Records
     * - CRIXS:VENT:VVC:07:FORCE_OPN_RBV
       - bi
       - GVL_Chamber_Valves.VENT_VVC_07.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -21660,7 +21868,7 @@ Database Records
     * - CRIXS:VENT:VVC:07:FORCE_OPN
       - bo
       - GVL_Chamber_Valves.VENT_VVC_07.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -21716,7 +21924,7 @@ Database Records
     * - CRIXS:VENT:VVC:10:FORCE_OPN_RBV
       - bi
       - GVL_Chamber_Valves.VENT_VVC_10.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -21724,7 +21932,7 @@ Database Records
     * - CRIXS:VENT:VVC:10:FORCE_OPN
       - bo
       - GVL_Chamber_Valves.VENT_VVC_10.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -22313,7 +22521,7 @@ Database Records
     * - CRIXS:MECH:VVC:01:FORCE_OPN_RBV
       - bi
       - GVL_Mech_Room.MECH_VVC_01.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -22321,7 +22529,7 @@ Database Records
     * - CRIXS:MECH:VVC:01:FORCE_OPN
       - bo
       - GVL_Mech_Room.MECH_VVC_01.iq_stValve.xOvrdOpn
-      - | field: ONAM OPEN
+      - | field: ONAM FORCE OPEN
         | field: ZNAM FALSE
         | io: output
 
@@ -40666,16 +40874,16 @@ Database Records
     * - CRIXS:VLS:VWC:01:FORCE_CLS_RBV
       - bi
       - GVL_VLS.VLS_VWC_01.iq_stValve.pv_xOvrdCls
-      - | field: ONAM CLOSE
-        | field: ZNAM OPEN
+      - | field: ONAM FORCE CLOSE
+        | field: ZNAM FALSE
         | io: output
 
 
     * - CRIXS:VLS:VWC:01:FORCE_CLS
       - bo
       - GVL_VLS.VLS_VWC_01.iq_stValve.pv_xOvrdCls
-      - | field: ONAM CLOSE
-        | field: ZNAM OPEN
+      - | field: ONAM FORCE CLOSE
+        | field: ZNAM FALSE
         | io: output
 
 
