@@ -563,15 +563,15 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_PLC_Interfaces.xPTC_MOT_Y_11_OUT</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_Chamber_Gauges.TC_GPI_01.i_iPRESS_R</Name>
 					<Comment>
 						<![CDATA[ input Pressure // Link to analog Input]]>
 					</Comment>
 					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xPTC_MOT_Y_11_OUT</Name>
-					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.xSDS_MOT_Z_18_IN</Name>
@@ -582,10 +582,21 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Chamber_Gauges.CRYO_GPI_01.i_iPRESS_R</Name>
+					<Comment>
+						<![CDATA[ input Pressure // Link to analog Input]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>GVL_Chamber_Gauges.ROUGH_GPI_01.i_iPRESS_R</Name>
 					<Comment>
 						<![CDATA[ input Pressure // Link to analog Input]]>
 					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Vars.iMechDRL_CurrMon</Name>
 					<Type>INT</Type>
 				</Var>
 				<Var>
@@ -610,22 +621,18 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Chamber_Gauges.CRYO_GCP_02.i_iPRESS_R</Name>
+					<Name>GVL_Vars.iMechDrl_VMon</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Gauges.CRYO_GCP_01.i_iPRESS_R</Name>
 					<Comment>
 						<![CDATA[ input Pressure // Link to analog Input]]>
 					</Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Vars.iMechDRL_CurrMon</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Vars.iMechDrl_VMon</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Gauges.CRYO_GCP_01.i_iPRESS_R</Name>
+					<Name>GVL_Chamber_Gauges.CRYO_GCP_02.i_iPRESS_R</Name>
 					<Comment>
 						<![CDATA[ input Pressure // Link to analog Input]]>
 					</Comment>
@@ -1231,14 +1238,14 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_PLC_Interfaces.bSDS_VGC_01_OPN</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_Chamber_Gauges.TC_GCC_01.q_xHV_DIS</Name>
 					<Comment>
 						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
 					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.bSDS_VGC_01_OPN</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1303,69 +1310,6 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.SDS_VRC_01.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.VENT_VVC_01.q_xOPN_DO</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.VENT_VVC_02.q_xOPN_DO</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.VENT_VVC_03.q_xOPN_DO</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.VENT_VVC_04.q_xOPN_DO</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.VENT_VVC_05.q_xOPN_DO</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.VENT_VVC_06.q_xOPN_DO</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.VENT_VVC_07.q_xOPN_DO</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIXS_VENT_VVC_09.q_xOPN_DO</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.VENT_VVC_10.q_xOPN_DO</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1980,28 +1924,13 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VRC_02.i_xClsLS" VarB="Channel 4^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VRC_02.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E34 (EL2004)">
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.VENT_VVC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.VENT_VVC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.VENT_VVC_03.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true"/>
-			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E35 (EL1004)">
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VGC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VGC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E36 (EL2004)">
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.VENT_VVC_04.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.VENT_VVC_05.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.VENT_VVC_06.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.VENT_VVC_07.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true"/>
-			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E37 (EL1004)">
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_02.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_02.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E39 (EL2004)">
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIXS_VENT_VVC_09.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.VENT_VVC_10.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)">
 				<Link VarA="PlcTask Inputs^GVL_Pumps.TC_PTM_01.i_xAtSpd" VarB="Channel 4^Input" AutoLink="true"/>
@@ -2128,6 +2057,7 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Outputs^GVL_Pumps.SDS_PTM_01.q_xRemote" VarB="Channel 2^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)">
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.CRYO_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.TC_GCP_01.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.TC_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 			</OwnerB>
