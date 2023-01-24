@@ -241,44 +241,6 @@ bSDS_VRC_02_ILK := TRUE;
 SDS_VRC_02(i_xExtILK_OK:=bSDS_VRC_02_ILK,
 			i_xOverrideMode:=xSystemOverride_ChemRIXS,
 			iq_stValve =>);
-			
-// ChemRIXS Vent Valves
-VENT_VVC_01(i_xExtILK_OK:=(NOT stVENT_VVC_02.q_xOPN_DO),
-			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stVENT_VVC_01);
-			
-VENT_VVC_02(i_xExtILK_OK:=(NOT stVENT_VVC_01.q_xOPN_DO),
-			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stVENT_VVC_02);
-			
-VENT_VVC_03(i_xExtILK_OK:=(NOT stVENT_VVC_04.q_xOPN_DO),
-			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stVENT_VVC_03);
-			
-VENT_VVC_04(i_xExtILK_OK:=(NOT stVENT_VVC_03.q_xOPN_DO),
-			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve =>stVENT_VVC_04);
-(*			
-CRIXS_VVC_05(i_xExtILK_OK:=TRUE,
-			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => stCRIXS_VVC_05);
-			
-CRIXS_VVC_06(i_xExtILK_OK:=TRUE,
-			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => stCRIXS_VVC_06);
-			
-CRIXS_VVC_07(i_xExtILK_OK:=TRUE,
-			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => stCRIXS_VVC_07);
-	
-CRIXS_VVC_09(i_xExtILK_OK:=TRUE,
-			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => stCRIXS_VVC_09);
-			
-CRIXS_VVC_10(i_xExtILK_OK:=TRUE,
-			i_xOverrideMode:=xSystemOverride_ChemRIXS,
-			iq_stValve => stCRIXS_VVC_10);
-*)
 
 
 (* PLC interfaces to Motion PLC *)
@@ -297,7 +259,8 @@ bSDS_VGC_01_OPN := SDS_VGC_01.iq_stValve.i_xOpnLS;
       <LineId Id="93" Count="7" />
       <LineId Id="338" Count="0" />
       <LineId Id="337" Count="0" />
-      <LineId Id="101" Count="139" />
+      <LineId Id="101" Count="91" />
+      <LineId Id="231" Count="9" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
