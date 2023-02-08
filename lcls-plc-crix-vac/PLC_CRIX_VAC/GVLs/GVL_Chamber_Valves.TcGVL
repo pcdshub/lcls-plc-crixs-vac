@@ -106,6 +106,7 @@ VAR_GLOBAL
 								 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E31 (EL1004)^Channel 4^Input;
                                  .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E28 (EL2004)^Channel 2^Output'}	
 	CRYO_VRC_01 : FB_VRC;
+
 	
 	{attribute 'pytmc' :=' pv: CRIXS:CRYO:VRC:02 '}
 	
@@ -113,7 +114,6 @@ VAR_GLOBAL
 								 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E33 (EL1004)^Channel 4^Input;
                                  .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E28 (EL2004)^Channel 3^Output'}	
 	CRYO_VRC_02 : FB_VRC;
-	
 
 
 	/// SDS Valves   
