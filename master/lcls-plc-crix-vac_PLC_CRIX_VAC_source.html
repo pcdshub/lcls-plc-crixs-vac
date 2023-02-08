@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DUTs &mdash; pcdshub/lcls-plc-crixs-vac  documentation</title>
@@ -11,13 +11,11 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/doctr-versions-menu.js"></script>
+        <script src="_static/docs-versions-menu.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -29,11 +27,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> pcdshub/lcls-plc-crixs-vac
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pcdshub/lcls-plc-crixs-vac
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -108,7 +110,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">DUTs</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/lcls-plc-crix-vac_PLC_CRIX_VAC_source.rst.txt" rel="nofollow"> View page source</a>
@@ -172,26 +174,13 @@
 
     <span class="n">stTC_GPI_01</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
 
-    <span class="p">(</span><span class="o">*</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:GPI:02 &#39;</span><span class="p">}</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:CRYO:GPI:01 &#39;</span><span class="p">}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 3^Value &#39;</span><span class="p">}</span>
-    <span class="n">CRIX_GPI_02</span> <span class="p">:</span> <span class="n">FB_MKS275</span><span class="p">;</span>
+    <span class="n">CRYO_GPI_01</span> <span class="p">:</span> <span class="n">FB_MKS275</span><span class="p">;</span>
 
-    <span class="n">stCRIX_GPI_02</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
+    <span class="n">stCRYO_GPI_01</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
 
-
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:GPI:03 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 4^Value &#39;</span><span class="p">}</span>
-    <span class="n">CRIX_GPI_03</span> <span class="p">:</span> <span class="n">FB_MKS275</span><span class="p">;</span>
-
-    <span class="n">stCRIX_GPI_03</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
-
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:GPI:04 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 1^Value &#39;</span><span class="p">}</span>
-    <span class="n">CRIX_GPI_04</span> <span class="p">:</span> <span class="n">FB_MKS275</span><span class="p">;</span>
-
-    <span class="n">stCRIX_GPI_04</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
-    <span class="o">*</span><span class="p">)</span>
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:ROUGH:GPI:01 &#39;</span><span class="p">}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 4^Value &#39;</span><span class="p">}</span>
@@ -208,13 +197,8 @@
 
     <span class="n">stTC_GCC_01</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
 
-    <span class="p">(</span><span class="o">*</span> <span class="n">Cold</span> <span class="n">Cathod</span><span class="o">/</span><span class="n">Micro</span> <span class="n">Pirani</span> <span class="n">combination</span> <span class="n">gauges</span> <span class="o">*</span><span class="p">)</span>
+    <span class="p">(</span><span class="o">*</span> <span class="n">Micro</span> <span class="n">Pirani</span> <span class="n">combination</span> <span class="n">gauges</span> <span class="o">*</span><span class="p">)</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:CRYO:GCP:02 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 1^Value &#39;</span><span class="p">}</span>
-    <span class="n">CRYO_GCP_02</span> <span class="p">:</span> <span class="n">FB_972</span><span class="p">;</span>
-
-    <span class="n">stCRYO_GCP_02</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:CRYO:GCP:01 &#39;</span><span class="p">}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 2^Value &#39;</span><span class="p">}</span>
@@ -222,9 +206,17 @@
 
     <span class="n">stCRYO_GCP_01</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
 
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:CRYO:GCP:02 &#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 1^Value &#39;</span><span class="p">}</span>
+    <span class="n">CRYO_GCP_02</span> <span class="p">:</span> <span class="n">FB_972</span><span class="p">;</span>
+
+    <span class="n">stCRYO_GCP_02</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
+
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:SDS:GCP:01 &#39;</span><span class="p">}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 3^Value &#39;</span><span class="p">}</span>
     <span class="n">SDS_GCP_01</span> <span class="p">:</span> <span class="n">FB_972</span><span class="p">;</span>
+
+    <span class="n">stSDS_GCP_01</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:TC:GCP:01 &#39;</span><span class="p">}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_iPRESS_R    :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 4^Value &#39;</span><span class="p">}</span>
@@ -232,8 +224,6 @@
 
     <span class="n">stTC_GCP_01</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
 
-
-<span class="o">//</span>  <span class="n">stCRIX_GCP_03</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
 
 <span class="n">END_VAR</span>
 </pre></div>
@@ -306,6 +296,7 @@
     <span class="n">stCRIX_VGC_07</span> <span class="p">:</span> <span class="n">ST_VRC</span><span class="p">;</span>
     <span class="o">*</span><span class="p">)</span>
 
+    <span class="o">///</span> <span class="n">Entry</span> <span class="ow">and</span> <span class="n">Exit</span> <span class="n">Valves</span> <span class="k">for</span> <span class="n">Target</span> <span class="n">Chamber</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:MAIN:VGC:01 &#39;</span><span class="p">}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xOpnLS      :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E27 (EL1004)^Channel 1^Input;</span>
                                                              <span class="o">.</span><span class="n">i_xClsLS</span>      <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E27</span> <span class="p">(</span><span class="n">EL1004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
@@ -319,6 +310,7 @@
                                                              <span class="o">.</span><span class="n">q_xOPN_DO</span>     <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E26</span> <span class="p">(</span><span class="n">EL2004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
     <span class="n">MAIN_VGC_02</span> <span class="p">:</span> <span class="n">FB_VGC</span><span class="p">;</span>
 
+    <span class="o">///</span> <span class="n">Cryopump</span> <span class="n">Roughing</span> <span class="ow">and</span> <span class="n">Double</span> <span class="n">Action</span> <span class="n">Valves</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:CRYO:VGC:01 &#39;</span><span class="p">}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xOpnLS      :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E31 (EL1004)^Channel 1^Input;</span>
                                                              <span class="o">.</span><span class="n">i_xClsLS</span>      <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E31</span> <span class="p">(</span><span class="n">EL1004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
@@ -345,6 +337,7 @@
                                  <span class="o">.</span><span class="n">q_xOPN_DO</span> <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E28</span> <span class="p">(</span><span class="n">EL2004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
     <span class="n">CRYO_VRC_01</span> <span class="p">:</span> <span class="n">FB_VRC</span><span class="p">;</span>
 
+
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:CRYO:VRC:02 &#39;</span><span class="p">}</span>
 
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xOpnLS      :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E33 (EL1004)^Channel 3^Input;</span>
@@ -353,29 +346,7 @@
     <span class="n">CRYO_VRC_02</span> <span class="p">:</span> <span class="n">FB_VRC</span><span class="p">;</span>
 
 
-    <span class="p">(</span><span class="o">*</span> <span class="n">Cold</span> <span class="n">trap</span> <span class="n">valves</span><span class="p">;</span> <span class="ow">not</span> <span class="n">installed</span>
-
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:VGC:14 &#39;</span><span class="p">}</span>
-    <span class="p">(</span><span class="o">*</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xOpnLS      :=      TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;</span>
-                                                             <span class="o">.</span><span class="n">i_xClsLS</span>      <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">TMO_K4S2_DRL_01</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)]</span><span class="o">^</span><span class="n">K4S2_01_E5</span> <span class="p">(</span><span class="n">EL1004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
-                                                            <span class="o">.</span><span class="n">q_xOPN_DO</span>      <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">TMO_K4S2_DRL_01</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)]</span><span class="o">^</span><span class="n">K4S2_01_E6</span> <span class="p">(</span><span class="n">EL2004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
-    <span class="o">*</span><span class="p">)</span>
-
-
-    <span class="n">CRIX_VGC_14</span> <span class="p">:</span> <span class="n">FB_VGC</span><span class="p">;</span>
-
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:VGC:15 &#39;</span><span class="p">}</span>
-    <span class="p">(</span><span class="o">*</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xOpnLS      :=      TIIB[TMO_K4S2_DRL_01 (EK1100)]^K4S2_01_E5 (EL1004)^Channel 1^Input;</span>
-                                                             <span class="o">.</span><span class="n">i_xClsLS</span>      <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">TMO_K4S2_DRL_01</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)]</span><span class="o">^</span><span class="n">K4S2_01_E5</span> <span class="p">(</span><span class="n">EL1004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
-                                                            <span class="o">.</span><span class="n">q_xOPN_DO</span>      <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">TMO_K4S2_DRL_01</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)]</span><span class="o">^</span><span class="n">K4S2_01_E6</span> <span class="p">(</span><span class="n">EL2004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
-    <span class="o">*</span><span class="p">)</span>
-    <span class="n">CRIX_VGC_15</span> <span class="p">:</span> <span class="n">FB_VGC</span><span class="p">;</span>
-    <span class="o">*</span><span class="p">)</span>
-
-
-
+    <span class="o">///</span> <span class="n">SDS</span> <span class="n">Valves</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:SDS:VGC:01 &#39;</span><span class="p">}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xOpnLS      :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E35 (EL1004)^Channel 1^Input;</span>
                                                              <span class="o">.</span><span class="n">i_xClsLS</span>      <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E35</span> <span class="p">(</span><span class="n">EL1004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
@@ -401,62 +372,6 @@
 
     <span class="n">stSDS_VRC_01</span> <span class="p">:</span> <span class="n">ST_VRC</span><span class="p">;</span>
 
-
-    <span class="o">//</span> <span class="n">These</span> <span class="n">vent</span> <span class="n">valves</span> <span class="n">only</span> <span class="n">have</span> <span class="n">one</span> <span class="n">NC</span> <span class="n">contact</span> <span class="n">indicating</span> <span class="n">that</span> <span class="n">the</span> <span class="n">valve</span> <span class="ow">is</span> <span class="n">closed</span><span class="o">.</span> <span class="n">No</span> <span class="nb">open</span> <span class="n">switch</span><span class="o">.</span> <span class="n">Ignore</span> <span class="n">the</span> <span class="n">readback</span> <span class="k">for</span> <span class="n">now</span> <span class="n">since</span> <span class="n">there</span> <span class="ow">is</span> <span class="n">no</span> <span class="n">FB</span>
-    <span class="o">//</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">vacuum</span> <span class="n">library</span> <span class="k">for</span> <span class="n">this</span> <span class="n">case</span><span class="o">.</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:VENT:VVC:01 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.q_xOPN_DO     :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E34 (EL2004)^Channel 1^Output&#39;</span><span class="p">}</span>
-    <span class="n">VENT_VVC_01</span> <span class="p">:</span> <span class="n">FB_VVC</span><span class="p">;</span>
-
-    <span class="n">stVENT_VVC_01</span> <span class="p">:</span> <span class="n">ST_VVC</span><span class="p">;</span>
-
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:VENT:VVC:02 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.q_xOPN_DO     :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E34 (EL2004)^Channel 2^Output&#39;</span><span class="p">}</span>
-    <span class="n">VENT_VVC_02</span> <span class="p">:</span> <span class="n">FB_VVC</span><span class="p">;</span>
-
-    <span class="n">stVENT_VVC_02</span> <span class="p">:</span> <span class="n">ST_VVC</span><span class="p">;</span>
-
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:VENT:VVC:03 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.q_xOPN_DO     :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E34 (EL2004)^Channel 3^Output&#39;</span><span class="p">}</span>
-    <span class="n">VENT_VVC_03</span> <span class="p">:</span> <span class="n">FB_VVC</span><span class="p">;</span>
-
-    <span class="n">stVENT_VVC_03</span> <span class="p">:</span> <span class="n">ST_VVC</span><span class="p">;</span>
-
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:VENT:VVC:04 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.q_xOPN_DO     :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E36 (EL2004)^Channel 1^Output&#39;</span><span class="p">}</span>
-    <span class="n">VENT_VVC_04</span> <span class="p">:</span> <span class="n">FB_VVC</span><span class="p">;</span>
-
-    <span class="n">stVENT_VVC_04</span> <span class="p">:</span> <span class="n">ST_VVC</span><span class="p">;</span>
-
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:VENT:VVC:05 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.q_xOPN_DO     :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E36 (EL2004)^Channel 2^Output&#39;</span><span class="p">}</span>
-    <span class="n">VENT_VVC_05</span> <span class="p">:</span> <span class="n">FB_VVC</span><span class="p">;</span>
-
-    <span class="n">stVENT_VVC_05</span> <span class="p">:</span> <span class="n">ST_VVC</span><span class="p">;</span>
-
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:VENT:VVC:06 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.q_xOPN_DO     :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E36 (EL2004)^Channel 3^Output&#39;</span><span class="p">}</span>
-    <span class="n">VENT_VVC_06</span> <span class="p">:</span> <span class="n">FB_VVC</span><span class="p">;</span>
-
-    <span class="n">stCRIXS_VENT_VVC_06</span> <span class="p">:</span> <span class="n">ST_VVC</span><span class="p">;</span>
-
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:VENT:VVC:07 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.q_xOPN_DO     :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E36 (EL2004)^Channel 4^Output&#39;</span><span class="p">}</span>
-    <span class="n">VENT_VVC_07</span> <span class="p">:</span> <span class="n">FB_VVC</span><span class="p">;</span>
-
-    <span class="n">stVENT_VVC_07</span> <span class="p">:</span> <span class="n">ST_VVC</span><span class="p">;</span>
-
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:VENT:VVC:09 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.q_xOPN_DO     :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E39 (EL2004)^Channel 1^Output&#39;</span><span class="p">}</span>
-    <span class="n">CRIXS_VENT_VVC_09</span> <span class="p">:</span> <span class="n">FB_VVC</span><span class="p">;</span>
-
-    <span class="n">stCRIXS_VENT_VVC_09</span> <span class="p">:</span> <span class="n">ST_VVC</span><span class="p">;</span>
-
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:VENT:VVC:10 &#39;</span><span class="p">}</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.q_xOPN_DO     :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E39 (EL2004)^Channel 2^Output&#39;</span><span class="p">}</span>
-    <span class="n">VENT_VVC_10</span> <span class="p">:</span> <span class="n">FB_VVC</span><span class="p">;</span>
-
-    <span class="n">stVENT_VVC_10</span> <span class="p">:</span> <span class="n">ST_VVC</span><span class="p">;</span>
 
 <span class="n">END_VAR</span>
 </pre></div>
@@ -1182,16 +1097,8 @@
 <span class="n">TC_GPI_01</span><span class="o">.</span><span class="n">M_SetBits</span><span class="p">(</span><span class="mi">30518</span><span class="p">);</span>
 <span class="n">TC_GPI_01</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="n">stTC_GPI_01</span><span class="p">);</span>
 
-<span class="p">(</span><span class="o">*</span>
-<span class="n">CRIX_GPI_02</span><span class="o">.</span><span class="n">M_SetBits</span><span class="p">(</span><span class="mi">30518</span><span class="p">);</span>
-<span class="n">CRIX_GPI_02</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="n">stCRIX_GPI_02</span><span class="p">);</span>
-
-<span class="n">CRIX_GPI_03</span><span class="o">.</span><span class="n">M_SetBits</span><span class="p">(</span><span class="mi">30518</span><span class="p">);</span>
-<span class="n">CRIX_GPI_03</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="n">stCRIX_GPI_03</span><span class="p">);</span>
-
-<span class="n">CRIX_GPI_04</span><span class="o">.</span><span class="n">M_SetBits</span><span class="p">(</span><span class="mi">30518</span><span class="p">);</span>
-<span class="n">CRIX_GPI_04</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="n">stCRIX_GPI_04</span><span class="p">);</span>
-<span class="o">*</span><span class="p">)</span>
+<span class="n">CRYO_GPI_01</span><span class="o">.</span><span class="n">M_SetBits</span><span class="p">(</span><span class="mi">30518</span><span class="p">);</span>
+<span class="n">CRYO_GPI_01</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="n">stCRYO_GPI_01</span><span class="p">);</span>
 
 <span class="n">ROUGH_GPI_01</span><span class="o">.</span><span class="n">M_SetBits</span><span class="p">(</span><span class="mi">30518</span><span class="p">);</span>
 <span class="n">ROUGH_GPI_01</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="n">stROUGH_GPI_01</span><span class="p">);</span>
@@ -1365,6 +1272,9 @@
     <span class="n">bSDS_VGC_01_OPN_OK</span> <span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
     <span class="n">bSDS_VRC_02_ILK</span> <span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
     <span class="n">bSDS_VRC_01_ILK</span> <span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
+
+    <span class="n">bCRYO_VRC_01_OPN_OK</span> <span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
+    <span class="n">bCRYO_VRC_02_OPN_OK</span> <span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
 
     <span class="n">bCRYO_VGC_01_CLS_OK</span> <span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
     <span class="n">bCRYO_VGC_01_OPN_OK</span> <span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
@@ -1554,12 +1464,18 @@
     <span class="n">ibCntrlHold</span><span class="o">:=</span> <span class="n">FALSE</span> <span class="p">,</span>
     <span class="n">i_xOverrideMode</span><span class="o">:=</span> <span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
     <span class="n">iq_stValve</span><span class="o">=&gt;</span> <span class="p">);</span>
-<span class="p">(</span><span class="o">*</span><span class="n">cold</span> <span class="n">trap</span> <span class="n">roughing</span> <span class="n">valve</span><span class="p">,</span> <span class="n">Open</span> <span class="n">interlock</span> <span class="n">pending</span> <span class="k">for</span> <span class="n">requirements</span><span class="o">*</span><span class="p">)</span>
 
 
-<span class="n">CRYO_VRC_01</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span> <span class="kc">True</span> <span class="p">,</span> <span class="n">i_xOverrideMode</span><span class="o">:=</span> <span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span> <span class="n">iq_stValve</span><span class="o">=&gt;</span> <span class="p">);</span>
+<span class="p">(</span><span class="o">*</span><span class="n">cold</span> <span class="n">trap</span> <span class="n">roughing</span> <span class="n">valves</span><span class="o">*</span><span class="p">)</span>
+<span class="n">bCRYO_VRC_01_OPN_OK</span> <span class="o">:=</span> <span class="p">(</span><span class="n">CRYO_VGC_01</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xClsLS</span> <span class="n">AND</span> <span class="n">CRYO_VRC_02</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xClsLS</span><span class="p">)</span> <span class="n">AND</span>
+                                            <span class="p">(</span><span class="n">CRYO_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">&lt;</span> <span class="mf">0.050</span> <span class="n">AND</span> <span class="n">CRYO_GCP_01</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">&lt;</span> <span class="mf">0.050</span><span class="p">);</span>
 
-<span class="n">CRYO_VRC_02</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">i_xOverrideMode</span><span class="o">:=</span> <span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span> <span class="n">iq_stValve</span><span class="o">=&gt;</span> <span class="p">);</span>
+<span class="n">bCRYO_VRC_02_OPN_OK</span> <span class="o">:=</span> <span class="p">(</span><span class="n">CRYO_VGC_02</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xClsLS</span> <span class="n">AND</span> <span class="n">CRYO_VRC_01</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xClsLS</span><span class="p">)</span> <span class="n">AND</span>
+                                            <span class="p">(</span><span class="n">CRYO_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">&lt;</span> <span class="mf">0.050</span> <span class="n">AND</span> <span class="n">CRYO_GCP_02</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">&lt;</span> <span class="mf">0.050</span><span class="p">);</span>
+
+<span class="n">CRYO_VRC_01</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span> <span class="n">bCRYO_VRC_01_OPN_OK</span> <span class="p">,</span> <span class="n">i_xOverrideMode</span><span class="o">:=</span> <span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span> <span class="n">iq_stValve</span><span class="o">=&gt;</span> <span class="p">);</span>
+
+<span class="n">CRYO_VRC_02</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span> <span class="n">bCRYO_VRC_02_OPN_OK</span><span class="p">,</span> <span class="n">i_xOverrideMode</span><span class="o">:=</span> <span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span> <span class="n">iq_stValve</span><span class="o">=&gt;</span> <span class="p">);</span>
 
 
 <span class="n">bSDS_VGC_01_OPN_OK</span> <span class="o">:=</span> <span class="n">SDS_GCP_01</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">xAT_VAC</span> <span class="n">AND</span> <span class="n">TC_GCP_01</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">xAT_VAC</span><span class="p">;</span>
@@ -1578,44 +1494,6 @@
 <span class="n">SDS_VRC_02</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span><span class="n">bSDS_VRC_02_ILK</span><span class="p">,</span>
                     <span class="n">i_xOverrideMode</span><span class="o">:=</span><span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
                     <span class="n">iq_stValve</span> <span class="o">=&gt;</span><span class="p">);</span>
-
-<span class="o">//</span> <span class="n">ChemRIXS</span> <span class="n">Vent</span> <span class="n">Valves</span>
-<span class="n">VENT_VVC_01</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span><span class="p">(</span><span class="n">NOT</span> <span class="n">stVENT_VVC_02</span><span class="o">.</span><span class="n">q_xOPN_DO</span><span class="p">),</span>
-                    <span class="n">i_xOverrideMode</span><span class="o">:=</span><span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
-                    <span class="n">iq_stValve</span> <span class="o">=&gt;</span><span class="n">stVENT_VVC_01</span><span class="p">);</span>
-
-<span class="n">VENT_VVC_02</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span><span class="p">(</span><span class="n">NOT</span> <span class="n">stVENT_VVC_01</span><span class="o">.</span><span class="n">q_xOPN_DO</span><span class="p">),</span>
-                    <span class="n">i_xOverrideMode</span><span class="o">:=</span><span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
-                    <span class="n">iq_stValve</span> <span class="o">=&gt;</span><span class="n">stVENT_VVC_02</span><span class="p">);</span>
-
-<span class="n">VENT_VVC_03</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span><span class="p">(</span><span class="n">NOT</span> <span class="n">stVENT_VVC_04</span><span class="o">.</span><span class="n">q_xOPN_DO</span><span class="p">),</span>
-                    <span class="n">i_xOverrideMode</span><span class="o">:=</span><span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
-                    <span class="n">iq_stValve</span> <span class="o">=&gt;</span><span class="n">stVENT_VVC_03</span><span class="p">);</span>
-
-<span class="n">VENT_VVC_04</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span><span class="p">(</span><span class="n">NOT</span> <span class="n">stVENT_VVC_03</span><span class="o">.</span><span class="n">q_xOPN_DO</span><span class="p">),</span>
-                    <span class="n">i_xOverrideMode</span><span class="o">:=</span><span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
-                    <span class="n">iq_stValve</span> <span class="o">=&gt;</span><span class="n">stVENT_VVC_04</span><span class="p">);</span>
-<span class="p">(</span><span class="o">*</span>
-<span class="n">CRIXS_VVC_05</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">,</span>
-                    <span class="n">i_xOverrideMode</span><span class="o">:=</span><span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
-                    <span class="n">iq_stValve</span> <span class="o">=&gt;</span> <span class="n">stCRIXS_VVC_05</span><span class="p">);</span>
-
-<span class="n">CRIXS_VVC_06</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">,</span>
-                    <span class="n">i_xOverrideMode</span><span class="o">:=</span><span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
-                    <span class="n">iq_stValve</span> <span class="o">=&gt;</span> <span class="n">stCRIXS_VVC_06</span><span class="p">);</span>
-
-<span class="n">CRIXS_VVC_07</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">,</span>
-                    <span class="n">i_xOverrideMode</span><span class="o">:=</span><span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
-                    <span class="n">iq_stValve</span> <span class="o">=&gt;</span> <span class="n">stCRIXS_VVC_07</span><span class="p">);</span>
-
-<span class="n">CRIXS_VVC_09</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">,</span>
-                    <span class="n">i_xOverrideMode</span><span class="o">:=</span><span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
-                    <span class="n">iq_stValve</span> <span class="o">=&gt;</span> <span class="n">stCRIXS_VVC_09</span><span class="p">);</span>
-
-<span class="n">CRIXS_VVC_10</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span><span class="n">TRUE</span><span class="p">,</span>
-                    <span class="n">i_xOverrideMode</span><span class="o">:=</span><span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
-                    <span class="n">iq_stValve</span> <span class="o">=&gt;</span> <span class="n">stCRIXS_VVC_10</span><span class="p">);</span>
-<span class="o">*</span><span class="p">)</span>
 
 
 <span class="p">(</span><span class="o">*</span> <span class="n">PLC</span> <span class="n">interfaces</span> <span class="n">to</span> <span class="n">Motion</span> <span class="n">PLC</span> <span class="o">*</span><span class="p">)</span>
@@ -2084,7 +1962,7 @@ END_PROGRAM
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, SLAC National Accelerator Laboratory.</p>
+    <p>&#169; Copyright 2023, SLAC National Accelerator Laboratory.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

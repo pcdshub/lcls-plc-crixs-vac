@@ -4068,7 +4068,7 @@ LCLS_Vacuum.FB_VVC
         | io: output
 
 
-              
+                                        
 LCLS_Vacuum.ST_EbaraDryPump
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -17547,6 +17547,202 @@ Database Records
         | io: input
 
 
+    * - CRIXS:CRYO:GPI:01:STATE_RBV
+      - mbbi
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.eState
+      - | field: FRST Starting
+        | field: FVST Valid
+        | field: ONST GaugeDisconnected
+        | field: SVST ValidLo
+        | field: SXST ValidHi
+        | field: THST PressInvalid
+        | field: TWST OoR
+        | field: ZRST Off
+        | io: input
+
+
+    * - CRIXS:CRYO:GPI:01:AutoOn_timer_RBV
+      - longin
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.iAutoOnTimer
+      - | io: input
+
+
+    * - CRIXS:CRYO:GPI:01:PRESS_AI_RBV
+      - longin
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.i_iPRESS_R
+      - | io: input
+
+
+    * - CRIXS:CRYO:GPI:01:DISC_ACTIVE_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.i_xDisc_Active
+      - | field: ONAM DISC ACTIVE
+        | field: ZNAM NO DISC
+        | io: input
+
+
+    * - CRIXS:CRYO:GPI:01:HV_ON_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.i_xHV_ON
+      - | io: input
+
+
+    * - CRIXS:CRYO:GPI:01:HV_DIS_DO_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.q_xHV_DIS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - CRIXS:CRYO:GPI:01:SP_HYS_RBV
+      - ai
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.rHYS_PR
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - CRIXS:CRYO:GPI:01:SP_HYS
+      - ao
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.rHYS_PR
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - CRIXS:CRYO:GPI:01:PRESS_RBV
+      - ai
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.rPRESS
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: input
+
+
+    * - CRIXS:CRYO:GPI:01:PRO_SP_RBV
+      - ai
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.rPRO_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - CRIXS:CRYO:GPI:01:PRO_SP
+      - ao
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.rPRO_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - CRIXS:CRYO:GPI:01:VAC_SP_RBV
+      - ai
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.rVAC_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - CRIXS:CRYO:GPI:01:VAC_SP
+      - ao
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.rVAC_SP
+      - | autosave_pass1: VAL DESC
+        | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - CRIXS:CRYO:GPI:01:AT_VAC_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.xAT_VAC
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - CRIXS:CRYO:GPI:01:Auto_On_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.xAutoOn
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - CRIXS:CRYO:GPI:01:Auto_On
+      - bo
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.xAutoOn
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - CRIXS:CRYO:GPI:01:HV_SW_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.xHV_SW
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - CRIXS:CRYO:GPI:01:HV_SW
+      - bo
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.xHV_SW
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - CRIXS:CRYO:GPI:01:ILK_OK_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.xILKOk
+      - | field: ONAM OK
+        | field: ZNAM NOT OK
+        | io: input
+
+
+    * - CRIXS:CRYO:GPI:01:LOGGER_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - CRIXS:CRYO:GPI:01:LOGGER
+      - bo
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - CRIXS:CRYO:GPI:01:PRESS_OK_RBV
+      - bi
+      - GVL_Chamber_Gauges.CRYO_GPI_01.PG.xPRESS_OK
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: input
+
+
     * - CRIXS:ROUGH:GPI:01:STATE_RBV
       - mbbi
       - GVL_Chamber_Gauges.ROUGH_GPI_01.PG.eState
@@ -18525,70 +18721,6 @@ Database Records
       - | field: ONAM ON
         | field: ZNAM OFF
         | io: input
-
-
-    * - CRIXS:VENT:VVC:09:OPN_SW_RBV
-      - bi
-      - GVL_Chamber_Valves.CRIXS_VENT_VVC_09.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:09:OPN_SW
-      - bo
-      - GVL_Chamber_Valves.CRIXS_VENT_VVC_09.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:09:OPN_DO_RBV
-      - bi
-      - GVL_Chamber_Valves.CRIXS_VENT_VVC_09.iq_stValve.q_xOPN_DO
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:09:OPN_OK_RBV
-      - bi
-      - GVL_Chamber_Valves.CRIXS_VENT_VVC_09.iq_stValve.xOPN_OK
-      - | field: ONAM OPN ILK OK
-        | field: ZNAM OPN ILK NOT OK
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:09:OVRD_ON_RBV
-      - bi
-      - GVL_Chamber_Valves.CRIXS_VENT_VVC_09.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:09:OVRD_ON
-      - bo
-      - GVL_Chamber_Valves.CRIXS_VENT_VVC_09.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:09:FORCE_OPN_RBV
-      - bi
-      - GVL_Chamber_Valves.CRIXS_VENT_VVC_09.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:09:FORCE_OPN
-      - bo
-      - GVL_Chamber_Valves.CRIXS_VENT_VVC_09.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
-        | io: output
 
 
     * - CRIXS:CRYO:VGC:01:ERROR_RBV
@@ -21422,518 +21554,6 @@ Database Records
       - GVL_Chamber_Valves.TC_VRC_03.iq_stValve.xOverrideMode
       - | field: ONAM Override ON
         | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:01:OPN_SW_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_01.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:01:OPN_SW
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_01.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:01:OPN_DO_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_01.iq_stValve.q_xOPN_DO
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:01:OPN_OK_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_01.iq_stValve.xOPN_OK
-      - | field: ONAM OPN ILK OK
-        | field: ZNAM OPN ILK NOT OK
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:01:OVRD_ON_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_01.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:01:OVRD_ON
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_01.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:01:FORCE_OPN_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_01.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:01:FORCE_OPN
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_01.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:02:OPN_SW_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_02.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:02:OPN_SW
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_02.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:02:OPN_DO_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_02.iq_stValve.q_xOPN_DO
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:02:OPN_OK_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_02.iq_stValve.xOPN_OK
-      - | field: ONAM OPN ILK OK
-        | field: ZNAM OPN ILK NOT OK
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:02:OVRD_ON_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_02.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:02:OVRD_ON
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_02.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:02:FORCE_OPN_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_02.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:02:FORCE_OPN
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_02.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:03:OPN_SW_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_03.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:03:OPN_SW
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_03.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:03:OPN_DO_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_03.iq_stValve.q_xOPN_DO
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:03:OPN_OK_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_03.iq_stValve.xOPN_OK
-      - | field: ONAM OPN ILK OK
-        | field: ZNAM OPN ILK NOT OK
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:03:OVRD_ON_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_03.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:03:OVRD_ON
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_03.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:03:FORCE_OPN_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_03.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:03:FORCE_OPN
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_03.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:04:OPN_SW_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_04.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:04:OPN_SW
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_04.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:04:OPN_DO_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_04.iq_stValve.q_xOPN_DO
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:04:OPN_OK_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_04.iq_stValve.xOPN_OK
-      - | field: ONAM OPN ILK OK
-        | field: ZNAM OPN ILK NOT OK
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:04:OVRD_ON_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_04.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:04:OVRD_ON
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_04.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:04:FORCE_OPN_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_04.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:04:FORCE_OPN
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_04.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:05:OPN_SW_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_05.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:05:OPN_SW
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_05.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:05:OPN_DO_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_05.iq_stValve.q_xOPN_DO
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:05:OPN_OK_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_05.iq_stValve.xOPN_OK
-      - | field: ONAM OPN ILK OK
-        | field: ZNAM OPN ILK NOT OK
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:05:OVRD_ON_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_05.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:05:OVRD_ON
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_05.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:05:FORCE_OPN_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_05.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:05:FORCE_OPN
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_05.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:06:OPN_SW_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_06.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:06:OPN_SW
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_06.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:06:OPN_DO_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_06.iq_stValve.q_xOPN_DO
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:06:OPN_OK_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_06.iq_stValve.xOPN_OK
-      - | field: ONAM OPN ILK OK
-        | field: ZNAM OPN ILK NOT OK
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:06:OVRD_ON_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_06.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:06:OVRD_ON
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_06.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:06:FORCE_OPN_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_06.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:06:FORCE_OPN
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_06.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:07:OPN_SW_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_07.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:07:OPN_SW
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_07.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:07:OPN_DO_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_07.iq_stValve.q_xOPN_DO
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:07:OPN_OK_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_07.iq_stValve.xOPN_OK
-      - | field: ONAM OPN ILK OK
-        | field: ZNAM OPN ILK NOT OK
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:07:OVRD_ON_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_07.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:07:OVRD_ON
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_07.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:07:FORCE_OPN_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_07.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:07:FORCE_OPN
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_07.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:10:OPN_SW_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_10.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:10:OPN_SW
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_10.iq_stValve.pv_xOPN_SW
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:10:OPN_DO_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_10.iq_stValve.q_xOPN_DO
-      - | field: ONAM OPEN
-        | field: ZNAM CLOSE
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:10:OPN_OK_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_10.iq_stValve.xOPN_OK
-      - | field: ONAM OPN ILK OK
-        | field: ZNAM OPN ILK NOT OK
-        | io: input
-
-
-    * - CRIXS:VENT:VVC:10:OVRD_ON_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_10.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:10:OVRD_ON
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_10.iq_stValve.xOverrideMode
-      - | field: ONAM Override ON
-        | field: ZNAM Override OFF
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:10:FORCE_OPN_RBV
-      - bi
-      - GVL_Chamber_Valves.VENT_VVC_10.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
-        | io: output
-
-
-    * - CRIXS:VENT:VVC:10:FORCE_OPN
-      - bo
-      - GVL_Chamber_Valves.VENT_VVC_10.iq_stValve.xOvrdOpn
-      - | field: ONAM FORCE OPEN
-        | field: ZNAM FALSE
         | io: output
 
 
