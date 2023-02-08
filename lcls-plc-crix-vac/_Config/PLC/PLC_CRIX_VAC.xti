@@ -559,19 +559,19 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Chamber_Gauges.TC_GPI_01.i_iPRESS_R</Name>
+					<Comment>
+						<![CDATA[ input Pressure // Link to analog Input]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>GVL_PLC_Interfaces.xPTC_MOT_Y_11_IN</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.xPTC_MOT_Y_11_OUT</Name>
 					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Gauges.TC_GPI_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
-					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.xSDS_MOT_Z_18_IN</Name>
@@ -596,10 +596,6 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Vars.iMechDRL_CurrMon</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
 					<Name>GVL_Chamber_Gauges.TC_GCC_01.i_iPRESS_R</Name>
 					<Comment>
 						<![CDATA[ Controls and I/Os]]>
@@ -619,6 +615,10 @@ ETHERCAT BRRIDGE COM STATUS
 						<![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]>
 					</Comment>
 					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Vars.iMechDRL_CurrMon</Name>
+					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Vars.iMechDrl_VMon</Name>
