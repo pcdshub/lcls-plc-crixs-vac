@@ -35,7 +35,7 @@ ff2_ff1_link_vac(
 
 
 //Code for Removing arbitration 
-fbArbiter1.AddRequest(nReqID := 45, stReqBp := PMPS_GVL.cstFullBeam, sDevName := 'plc-crix-vac');]]></ST>
+fbArbiter1.AddRequest(nReqID := 16#FAFB, stReqBp := PMPS_GVL.cstFullBeam, sDevName := 'plc-crix-vac');]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
