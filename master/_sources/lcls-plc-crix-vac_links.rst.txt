@@ -433,7 +433,6 @@ Links
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_PLC_Interfaces.bSDS_VGC_01_CLS, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695), IO Outputs^bSDS_VGC_01_CLS
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_PLC_Interfaces.bSDS_VGC_01_OPN, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695), IO Outputs^bSDS_VGC_01_OPN
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 113 (EK1521-0010)^Term 154 (EK1501-0010)^PMPS_FFO, Channel 1^Output
-        PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 113 (EK1521-0010)^Term 154 (EK1501-0010)^PMPS_PRE, IO Outputs^FFO_Link
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_Pumps.SDS_PTM_01.q_PumpingStation, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E50 (EL2004), Channel 3^Output
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_Pumps.SDS_PTM_01.q_RunDO, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E50 (EL2004), Channel 1^Output
         PLC_CRIX_VAC Instance, PlcTask Outputs^GVL_Pumps.SDS_PTM_01.q_xRemote, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E50 (EL2004), Channel 2^Output

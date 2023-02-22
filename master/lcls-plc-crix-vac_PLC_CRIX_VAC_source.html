@@ -11,8 +11,10 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
         <script src="_static/docs-versions-menu.js"></script>
@@ -1649,7 +1651,7 @@ END_FUNCTION_BLOCK
 
 
 <span class="o">//</span><span class="n">Code</span> <span class="k">for</span> <span class="n">Removing</span> <span class="n">arbitration</span>
-<span class="n">fbArbiter1</span><span class="o">.</span><span class="n">AddRequest</span><span class="p">(</span><span class="n">nReqID</span> <span class="o">:=</span> <span class="mi">45</span><span class="p">,</span> <span class="n">stReqBp</span> <span class="o">:=</span> <span class="n">PMPS_GVL</span><span class="o">.</span><span class="n">cstFullBeam</span><span class="p">,</span> <span class="n">sDevName</span> <span class="o">:=</span> <span class="s1">&#39;plc-crix-vac&#39;</span><span class="p">);</span>
+<span class="n">fbArbiter1</span><span class="o">.</span><span class="n">AddRequest</span><span class="p">(</span><span class="n">nReqID</span> <span class="o">:=</span> <span class="mi">16</span><span class="c1">#FAFB, stReqBp := PMPS_GVL.cstFullBeam, sDevName := &#39;plc-crix-vac&#39;);</span>
 
 <span class="n">END_PROGRAM</span>
 </pre></div>

@@ -1615,7 +1615,7 @@ PRG_MPS
 
 
     //Code for Removing arbitration 
-    fbArbiter1.AddRequest(nReqID := 45, stReqBp := PMPS_GVL.cstFullBeam, sDevName := 'plc-crix-vac');
+    fbArbiter1.AddRequest(nReqID := 16#FAFB, stReqBp := PMPS_GVL.cstFullBeam, sDevName := 'plc-crix-vac');
 
     END_PROGRAM
 
