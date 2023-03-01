@@ -1,0 +1,419 @@
+Box Hierarchy
+-------------
+
+
+#. **Term 1 (EK1200) [ID: 1]**
+        EK1200-5000 EtherCAT Power supply (2A E-Bus)
+
+    #. Term 47 (EL6070) [ID: 47]
+            EL6070 1Ch. Licensing-Terminal
+
+
+
+    #. Term 2 (EK1122) [ID: 2]
+            EK1122 2 port EtherCAT junction
+
+        #. **Hoffman Box Vac EK1 (EK1100) [ID: 3]**
+                EK1100 EtherCAT Coupler (2A E-Bus)
+
+            #. E1 (EL2794) [ID: 4]
+                    EL2794 4Ch. Dig. Output 24V AC/DC, 2A, short-circuit-proof
+
+
+
+            #. E2 (EL1088) [ID: 50]
+                    EL1088 8Ch. Dig. Input 24V, 3ms, negative
+
+
+
+            #. E4 (EL6002) [ID: 6]
+                    EL6002 Interface 2Ch. (RS232)
+
+
+
+            #. E5 (EL6022) [ID: 7]
+                    EL6022 Interface 2Ch. (RS422/485)
+
+
+
+            #. E6 (EL6022) [ID: 8]
+                    EL6022 Interface 2Ch. (RS422/485)
+
+
+
+            #. E7 (EL9410) [ID: 9]
+                    EL9410 E-Bus Power Supplier  (Diagnostics)
+
+
+
+            #. E8 (EL3174) [ID: 10]
+                    EL3174 4Ch. Ana. Input +/-10V Diff., +/-20mA SingleEnded, 16 Bit
+
+
+
+            #. E11 (EL3174) [ID: 11]
+                    EL3174 4Ch. Ana. Input +/-10V Diff., +/-20mA SingleEnded, 16 Bit
+
+
+
+            #. E14 (EL3174) [ID: 12]
+                    EL3174 4Ch. Ana. Input +/-10V Diff., +/-20mA SingleEnded, 16 Bit
+
+
+
+            #. E17 (EL2624) [ID: 13]
+                    EL2624 4Ch. Relay Output, NO (125V AC / 30V DC)
+
+
+
+            #. E18 (EL9505) [ID: 14]
+                    EL9505 Power supply terminal 5V
+
+
+
+            #. E19 (EL1124) [ID: 15]
+                    EL1124 4Ch. Dig. Input 5V, 10µs, Sensor Power
+
+
+
+            #. E20 (EL9410) [ID: 16]
+                    EL9410 E-Bus Power Supplier  (Diagnostics)
+
+
+
+            #. E21 (EL2004) [ID: 17]
+                    EL2004 4Ch. Dig. Output 24V, 0.5A
+
+
+
+            #. E22 (EL1004) [ID: 18]
+                    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+            #. E23 (EL1004) [ID: 19]
+                    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+            #. E24 (EL2004) [ID: 20]
+                    EL2004 4Ch. Dig. Output 24V, 0.5A
+
+
+
+            #. E25 (EL1004) [ID: 21]
+                    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+            #. E26 (EL2004) [ID: 22]
+                    EL2004 4Ch. Dig. Output 24V, 0.5A
+
+
+
+            #. E27 (EL1004) [ID: 23]
+                    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+            #. E28 (EL2004) [ID: 24]
+                    EL2004 4Ch. Dig. Output 24V, 0.5A
+
+
+
+            #. E29 (EL1004) [ID: 25]
+                    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+            #. E30 (EL2004) [ID: 26]
+                    EL2004 4Ch. Dig. Output 24V, 0.5A
+
+
+
+            #. E31 (EL1004) [ID: 27]
+                    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+            #. E32 (EL9410) [ID: 28]
+                    EL9410 E-Bus Power Supplier  (Diagnostics)
+
+
+
+            #. E33 (EL1004) [ID: 29]
+                    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+            #. E34 (EL2004) [ID: 30]
+                    EL2004 4Ch. Dig. Output 24V, 0.5A
+
+
+
+            #. E35 (EL1004) [ID: 31]
+                    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+            #. E36 (EL2004) [ID: 32]
+                    EL2004 4Ch. Dig. Output 24V, 0.5A
+
+
+
+            #. E37 (EL1004) [ID: 33]
+                    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+            #. E38 (EL1004) [ID: 34]
+                    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+            #. E39 (EL2004) [ID: 35]
+                    EL2004 4Ch. Dig. Output 24V, 0.5A
+
+
+
+            #. E40 (EL1004) [ID: 36]
+                    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+            #. E41 (EL1004) [ID: 38]
+                    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+            #. E42 (EL1004) [ID: 39]
+                    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+            #. E43 (EL2794) [ID: 40]
+                    EL2794 4Ch. Dig. Output 24V AC/DC, 2A, short-circuit-proof
+
+
+
+            #. E44 (EL1088) [ID: 41]
+                    EL1088 8Ch. Dig. Input 24V, 3ms, negative
+
+
+
+            #. E46 (EL1004) [ID: 89]
+                    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+            #. E47 (EL2004) [ID: 90]
+                    EL2004 4Ch. Dig. Output 24V, 0.5A
+
+
+
+            #. E48 (EL9410) [ID: 101]
+                    EL9410 E-Bus Power Supplier  (Diagnostics)
+
+
+
+            #. E49 (EL1004) [ID: 91]
+                      ( **SyncUnit=HoffmanBox** )    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+            #. E50 (EL2004) [ID: 99]
+                      ( **SyncUnit=HoffmanBox** )    EL2004 4Ch. Dig. Output 24V, 0.5A
+
+
+
+            #. E51 (EL4134) [ID: 88]
+                      ( **SyncUnit=HoffmanBox** )    EL4134 4Ch. Ana. Output -10/+10V, 16bit
+
+
+
+            #. VLS_RCC (EK1122) [ID: 42]
+                    EK1122 2 port EtherCAT junction
+
+                #. **VLS_EP1 (EP6002-0002) [ID: 105]**
+                          ( **SyncUnit=VLS** )    EP6002-0002 Interface (RS232/422/485)
+
+
+
+                #. **VLS_EP2 (EP2338-0001) [ID: 106]**
+                          ( **SyncUnit=VLS** )    EP2338-0001 8 Ch. Dig. Input/Output 24V, 0,5A, M8
+
+
+
+                #. **VLS_EP3 (EP2339-0021) [ID: 107]**
+                          ( **SyncUnit=VLS** )    EP2339-0021 16 Ch. Dig. Input/Output 24V, 0,5A, M8
+
+
+
+                #. **VLS_EP4 (EP2624-0002) [ID: 108]**
+                          ( **SyncUnit=VLS** )    EP2624-0002 4Ch. Relay Output, NO (125V AC / 30V DC)
+
+
+
+                #. **VLS_EP5 (EP3174-0002) [ID: 109]**
+                          ( **SyncUnit=VLS** )    EP3174-0002 4Ch. Ana. Input +/-10V, 0-10V, 0/4-20mA configurable
+
+
+
+                #. **RCC_EK0 (EK1100) [ID: 118]**
+                        EK1100 EtherCAT Coupler (2A E-Bus)
+
+                    #. RCC_E1 (EL1004) [ID: 119]
+                              ( **SyncUnit=Recirculation** )    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+                    #. RCC_E2 (EL2004) [ID: 120]
+                              ( **SyncUnit=Recirculation** )    EL2004 4Ch. Dig. Output 24V, 0.5A
+
+
+
+                    #. RCC_E3 (EL1004) [ID: 121]
+                              ( **SyncUnit=Recirculation** )    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+                    #. RCC_E4 (EL1004) [ID: 122]
+                              ( **SyncUnit=Recirculation** )    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+                    #. RCC_E5 (EL2004) [ID: 123]
+                              ( **SyncUnit=Recirculation** )    EL2004 4Ch. Dig. Output 24V, 0.5A
+
+
+
+                    #. RCC_E6 (EL1004) [ID: 124]
+                              ( **SyncUnit=Recirculation** )    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+                    #. RCC_E7 (EL3314) [ID: 125]
+                              ( **SyncUnit=Recirculation** )    EL3314 4Ch. Ana. Input Thermocouple (TC)
+
+
+
+                    #. RCC_E8 (EL2794) [ID: 126]
+                              ( **SyncUnit=Recirculation** )    EL2794 4Ch. Dig. Output 24V AC/DC, 2A, short-circuit-proof
+
+
+
+                    #. RCC_E9 (EL9505) [ID: 127]
+                              ( **SyncUnit=Recirculation** )    EL9505 Power supply terminal 5V
+
+
+
+                    #. RCC_E10 (EL1124) [ID: 128]
+                              ( **SyncUnit=Recirculation** )    EL1124 4Ch. Dig. Input 5V, 10µs, Sensor Power
+
+
+
+                    #. Term 143 (EL3174-0002) [ID: 143]
+                            EL3174-0002 4Ch. Ana. Input +/-10V, +/-20mA 16 Bit, Isolated Channels
+
+
+
+                    #. RCC_E11 (EL9011) [ID: 138]
+                            EL9011 End Terminal
+
+
+
+
+
+                #. **RCC_GPI (901P) [ID: 5]**
+                          ( **SyncUnit=Recirculation** )    901P
+
+
+
+
+
+            #. E52 (EK1122-0080) [ID: 43]
+                    EK1122-0080 2 port EtherCAT junction (Fast Hot Connect)
+
+
+
+            #. E53 (EL9011) [ID: 96]
+                    EL9011 End Terminal
+
+
+
+
+
+        #. **Mech Room Vac EK1 (EK1101) [ID: 44]**
+                EK1101 EtherCAT Coupler (2A E-Bus, ID switch)
+
+            #. Term 45 (EL2794) [ID: 45]
+                      ( **SyncUnit=MechRoom** )    EL2794 4Ch. Dig. Output 24V AC/DC, 2A, short-circuit-proof
+
+
+
+            #. Term 83 (EL1088) [ID: 83]
+                      ( **SyncUnit=MechRoom** )    EL1088 8Ch. Dig. Input 24V, 3ms, negative
+
+
+
+            #. Term 92 (EL3174) [ID: 92]
+                      ( **SyncUnit=MechRoom** )    EL3174 4Ch. Ana. Input +/-10V Diff., +/-20mA SingleEnded, 16 Bit
+
+
+
+            #. Term 93 (EL1004) [ID: 93]
+                      ( **SyncUnit=MechRoom** )    EL1004 4Ch. Dig. Input 24V, 3ms
+
+
+
+            #. Term 94 (EL2004) [ID: 94]
+                      ( **SyncUnit=MechRoom** )    EL2004 4Ch. Dig. Output 24V, 0.5A
+
+
+
+            #. Term 153 (EL2212) [ID: 153]
+                    EL2212 2Ch. dig. output with overexcitation (24V DC, 2.5A, 10A Peak)
+
+
+
+            #. Term 96 (EL9011) [ID: 97]
+                    EL9011 End Terminal
+
+
+
+
+
+
+
+    #. Term 95 (EL6695) [ID: 95]
+              ( **SyncUnit=TO_CRIX_MOTION_PLC** )    EL6695 EtherCAT Bridge terminal (Primary)
+
+
+
+    #. Term 113 (EK1521-0010) [ID: 113]
+            EK1521-0010 1 port EtherCAT junction (FX-SingleMode)
+
+        #. **Term 154 (EK1501-0010) [ID: 154]**
+                EK1501-0010 EtherCAT Coupler (2A E-Bus, FX-SingleMode, ID switch)
+
+            #. PMPS_FFO [ID: 155]
+                    EL2202 2Ch. Dig. Output 24V, 0.5A
+
+
+
+            #. PMPS_PRE [ID: 156]
+                    EL6695 EtherCAT Bridge terminal (Primary)
+
+
+
+            #. Term 159 (EL9011) [ID: 160]
+                    EL9011 End Terminal
+
+
+
+
+
+
+
+
+
