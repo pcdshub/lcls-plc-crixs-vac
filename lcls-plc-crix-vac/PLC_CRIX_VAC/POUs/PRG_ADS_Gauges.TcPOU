@@ -3,34 +3,30 @@
   <POU Name="PRG_ADS_Gauges" Id="{987f64de-7f79-4420-9e0c-b19649a7caa1}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_ADS_Gauges
 VAR
-	{attribute 'pytmc' :=' pv: CRIXS:TM2K2:GCC:01 '}
-	TM2K2_GCC_Reader : FB_TGCC_ADS;
-	
-	{attribute 'pytmc' :=' pv: CRIXS:IM6K2:GCC:01 '}
-	IM6K2_GCC_Reader : FB_TGCC_ADS;
-	
-	// This variable needs to be instantiated for the Watchdog to work
-	ADS_connection_counter : UDINT;
+    {attribute 'pytmc' :=' pv: CRIXS:TM2K2:GCC:01 '}
+    TM2K2_GCC_Reader : FB_TGCC_ADS;
+
+    {attribute 'pytmc' :=' pv: CRIXS:IM6K2:GCC:01 '}
+    IM6K2_GCC_Reader : FB_TGCC_ADS;
+
+    // This variable needs to be instantiated for the Watchdog to work
+    ADS_connection_counter : UDINT;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[TM2K2_GCC_Reader(
-	sNetId := '172.21.140.69.1.1', // plc-kfe-rix-vac
-	nPort := 851, // ADS port of the PLC reading from this PLC
-	sVarName := 'PRG_KFE_RIX_VAC.fb_TM2K2_K2B_GCC_1', // Full name of the FB containing the gauge to be read
-	iWatchdog := ADS_connection_counter // UDINT required for watchdog functionality
+    sNetId := '172.21.140.69.1.1', // plc-kfe-rix-vac
+    nPort := 851, // ADS port of the PLC reading from this PLC
+    sVarName := 'PRG_KFE_RIX_VAC.fb_TM2K2_K2B_GCC_1', // Full name of the FB containing the gauge to be read
+    iWatchdog := ADS_connection_counter // UDINT required for watchdog functionality
 );
 
 IM6K2_GCC_Reader(
-	sNetId := '172.21.140.69.1.1', // plc-kfe-rix-vac
-	nPort := 851, // ADS port of the PLC reading from this PLC
-	sVarName := 'PRG_KFE_RIX_VAC.fb_IM6K2_PPM_GCC_1', // Full name of the FB containing the gauge to be read
-	iWatchdog := ADS_connection_counter // UDINT required for watchdog functionality
+    sNetId := '172.21.140.69.1.1', // plc-kfe-rix-vac
+    nPort := 851, // ADS port of the PLC reading from this PLC
+    sVarName := 'PRG_KFE_RIX_VAC.fb_IM6K2_PPM_GCC_1', // Full name of the FB containing the gauge to be read
+    iWatchdog := ADS_connection_counter // UDINT required for watchdog functionality
 );]]></ST>
     </Implementation>
-    <LineIds Name="PRG_ADS_Gauges">
-      <LineId Id="3" Count="11" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
