@@ -10,6 +10,8 @@ VAR_GLOBAL
 	
 	iMechDRL_CurrMon AT%I* : INT;
 	iMechDrl_VMon At%I* :INT;
+	
+	fbLogHandler : FB_loghandler;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
