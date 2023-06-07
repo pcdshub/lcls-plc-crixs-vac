@@ -3,82 +3,82 @@
   <POU Name="PRG_Chamber_Pumps" Id="{b20a9b3c-f30a-4f50-a45e-7b0eccd66336}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_Chamber_Pumps
 VAR
-	
-	fbTC_PTM_01_ILK : FB_ChemRIXS_Turbo_ILK;
-	TC_PTM_01_ILK_OK : BOOL;
-	
-	fbTC_PTM_02_ILK : FB_ChemRIXS_Turbo_ILK;
-	TC_PTM_02_ILK_OK : BOOL;
-	
-	fbTC_PTM_03_ILK : FB_ChemRIXS_Turbo_ILK;
-	TC_PTM_03_ILK_OK : BOOL;
-	
-	fbSDS_PTM_01_ILK : FB_ChemRIXS_Turbo_ILK; //new
-	SDS_PTM_01_ILK_OK : BOOL;
+
+    fbTC_PTM_01_ILK : FB_ChemRIXS_Turbo_ILK;
+    TC_PTM_01_ILK_OK : BOOL;
+
+    fbTC_PTM_02_ILK : FB_ChemRIXS_Turbo_ILK;
+    TC_PTM_02_ILK_OK : BOOL;
+
+    fbTC_PTM_03_ILK : FB_ChemRIXS_Turbo_ILK;
+    TC_PTM_03_ILK_OK : BOOL;
+
+    fbSDS_PTM_01_ILK : FB_ChemRIXS_Turbo_ILK; //new
+    SDS_PTM_01_ILK_OK : BOOL;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[// Leybold Pumps
 fbTC_PTM_01_ILK(i_stValve:=stTC_VRC_01,
-				  i_stPump:=stTC_PTM_01,
-	              tDelay:=T#200S,
-				  bILK=>TC_PTM_01_ILK_OK);			
+                  i_stPump:=stTC_PTM_01,
+                  tDelay:=T#200S,
+                  bILK=>TC_PTM_01_ILK_OK);
 TC_PTM_01(i_xExtILKOk:=(TC_PTM_01_ILK_OK AND F_TurboExtILKLogic_2(Turbo:=stTC_PTM_01,
-																	 BackingGauge:=ROUGH_GPI_01.PG,
-																     InletGauge:=TC_GPI_01.PG,
-																     ScrollPump:= stMECH_PRO_01)),
-			iq_stPtm=> stTC_PTM_01);			
+                                                                     BackingGauge:=ROUGH_GPI_01.PG,
+                                                                     InletGauge:=TC_GPI_01.PG,
+                                                                     ScrollPump:= stMECH_PRO_01)),
+            iq_stPtm=> stTC_PTM_01);
 
 fbTC_PTM_02_ILK(i_stValve:=stTC_VRC_02,
-				  i_stPump:=stTC_PTM_02,
-	              tDelay:=T#200S,
-				  bILK=>TC_PTM_02_ILK_OK);
+                  i_stPump:=stTC_PTM_02,
+                  tDelay:=T#200S,
+                  bILK=>TC_PTM_02_ILK_OK);
 TC_PTM_02(i_xExtILKOk:=(TC_PTM_02_ILK_OK AND F_TurboExtILKLogic_2(Turbo:=stTC_PTM_02,
-																	 BackingGauge:=ROUGH_GPI_01.PG,
-																     InletGauge:=TC_GPI_01.PG,
-																     ScrollPump:= stMECH_PRO_01)),
-			iq_stPtm=> stTC_PTM_02);
-			
+                                                                     BackingGauge:=ROUGH_GPI_01.PG,
+                                                                     InletGauge:=TC_GPI_01.PG,
+                                                                     ScrollPump:= stMECH_PRO_01)),
+            iq_stPtm=> stTC_PTM_02);
+
 // Pfeiffer Pumps
 fbTC_PTM_03_ILK(i_stValve:=stTC_VRC_03,
-				  i_stPump:=stTC_PTM_03,
-	              tDelay:=T#200S,
-				  bILK=>TC_PTM_03_ILK_OK);			
+                  i_stPump:=stTC_PTM_03,
+                  tDelay:=T#200S,
+                  bILK=>TC_PTM_03_ILK_OK);
 TC_PTM_03(i_xExtILKOk:=(TC_PTM_03_ILK_OK  AND F_TurboExtILKLogic_2(Turbo:=stTC_PTM_03,
-																	 BackingGauge:=ROUGH_GPI_01.PG,
-																     InletGauge:=TC_GPI_01.PG,
-																     ScrollPump:= stMECH_PRO_01)), 
-			iq_stPtm=> stTC_PTM_03);		
-			
+                                                                     BackingGauge:=ROUGH_GPI_01.PG,
+                                                                     InletGauge:=TC_GPI_01.PG,
+                                                                     ScrollPump:= stMECH_PRO_01)),
+            iq_stPtm=> stTC_PTM_03);
+
 stTC_PTM_03_Pfeiffer_CTRL[1].iSerialAddress := 0;
 stTC_PTM_03_Pfeiffer_CTRL[1].xEnableComm := TRUE;
 
 fbTC_PTM_03_PfeifferCom(astPfeifferControl:=stTC_PTM_03_Pfeiffer_CTRL,
-					  astPfeifferStatus:=stTC_PTM_03_Pfeiffer_RBK,
-					  SerialRXBuffer:=K2S17_E5_CH2_SerialRXBuffer,
-					  SerialTXBuffer:=K2S17_E5_CH2_SerialTXBuffer);
-					  
+                      astPfeifferStatus:=stTC_PTM_03_Pfeiffer_RBK,
+                      SerialRXBuffer:=K2S17_E5_CH2_SerialRXBuffer,
+                      SerialTXBuffer:=K2S17_E5_CH2_SerialTXBuffer);
+
 TC_PTM_03.M_Serial_IO(st_Pfeiffer_RBK:=stTC_PTM_03_Pfeiffer_RBK[1], stTC_PTM_03_Pfeiffer_CTRL[1]);
-					  
+
 
 // Pfeiffer Turbo pump 04 (New) SDS
 fbSDS_PTM_01_ILK(i_stValve:=stSDS_VRC_01,
-				  i_stPump:=stSDS_PTM_01,
-	              tDelay:=T#200S,
-				  bILK=>SDS_PTM_01_ILK_OK);			
+                  i_stPump:=stSDS_PTM_01,
+                  tDelay:=T#200S,
+                  bILK=>SDS_PTM_01_ILK_OK);
 SDS_PTM_01(i_xExtILKOk:=(SDS_PTM_01_ILK_OK  AND F_TurboExtILKLogic_2(Turbo:=stSDS_PTM_01,
-																	 BackingGauge:=ROUGH_GPI_01.PG,
-																     InletGauge:=SDS_GCP_01.PG,
-																     ScrollPump:= stMECH_PRO_01)), 
-			iq_stPtm=> stSDS_PTM_01);		
-			
+                                                                     BackingGauge:=ROUGH_GPI_01.PG,
+                                                                     InletGauge:=SDS_GCP_01.PG,
+                                                                     ScrollPump:= stMECH_PRO_01)),
+            iq_stPtm=> stSDS_PTM_01);
+
 stSDS_PTM_01_Pfeiffer_CTRL[1].iSerialAddress := 1;
 stSDS_PTM_01_Pfeiffer_CTRL[1].xEnableComm := TRUE;
 
 fb_SDS_PTM_01_Pfeiffer_PfeifferCom(astPfeifferControl:=stSDS_PTM_01_Pfeiffer_CTRL,
-					  astPfeifferStatus:=stSDS_PTM_01_Pfeiffer_RBK,
-					  SerialRXBuffer:=K2S17_E5_CH1_SerialRXBuffer,
-					  SerialTXBuffer:=K2S17_E5_CH1_SerialTXBuffer);
-					  
+                      astPfeifferStatus:=stSDS_PTM_01_Pfeiffer_RBK,
+                      SerialRXBuffer:=K2S17_E5_CH1_SerialRXBuffer,
+                      SerialTXBuffer:=K2S17_E5_CH1_SerialTXBuffer);
+
 SDS_PTM_01.M_Serial_IO(st_Pfeiffer_RBK:=stSDS_PTM_01_Pfeiffer_RBK[1], stSDS_PTM_01_Pfeiffer_CTRL[1]);
 
 //Pfeiffer Turbo PTM_04 (Old Implementation of timer using Library (2.0.1) function)
@@ -86,13 +86,13 @@ SDS_PTM_01.M_Serial_IO(st_Pfeiffer_RBK:=stSDS_PTM_01_Pfeiffer_RBK[1], stSDS_PTM_
 (*(*Assign adresses to the pfeiffer controllers connected to this serial terminal*)
 stCRIX_PTM_04_Pfeiffer_CTRL[1].iSerialAddress :=1;
 stCRIX_PTM_04_Pfeiffer_CTRL[1].xEnableComm := TRUE;
-	
-(* Instanitate the Function block for serial communication with Pfeiffer*)	
+
+(* Instanitate the Function block for serial communication with Pfeiffer*)
 fb_CRIX_PTM_04_Pfeiffer_PfeifferCom(astPfeifferControl := stCRIX_PTM_04_Pfeiffer_CTRL,
-			   astPfeifferStatus:= stCRIX_PTM_04_Pfeiffer_RBK,
-				SerialRXBuffer:= K2S17_E5_CH1_SerialRXBuffer,
-				SerialTXBuffer:= K2S17_E5_CH1_SerialTXBuffer);
-				
+               astPfeifferStatus:= stCRIX_PTM_04_Pfeiffer_RBK,
+                SerialRXBuffer:= K2S17_E5_CH1_SerialRXBuffer,
+                SerialTXBuffer:= K2S17_E5_CH1_SerialTXBuffer);
+
 
 (* Copy Status Pv's into the PTM structure*)
 CRIX_PTM_04.M_Serial_IO(st_Pfeiffer_CTRL:=stCRIX_PTM_04_Pfeiffer_CTRL[1],st_Pfeiffer_RBK:=stCRIX_PTM_04_Pfeiffer_RBK[1]);
@@ -107,16 +107,9 @@ Roughing valve is open.  When roughing valve closed, start a delay timer to stop
 
 CRIX_PTM_04_ILK_OK := F_TurboExtILK_TOF(Turbo:=CRIX_PTM_04.iq_stPTM, BackingGauge:=CRIX_GPI_05.PG,
                             InletGauge:=CRIX_GCP_03.PG, ScrollPump:= stCRIX_MECH_PRO_01, RoughingValve:=CRIX_VGC_06.iq_stValve, tDelay:=T#200S );
-		  
+
 CRIX_PTM_04(i_xExtILKOk:=CRIX_PTM_04_ILK_OK, iq_stPtm=> ); *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_Chamber_Pumps">
-      <LineId Id="3" Count="0" />
-      <LineId Id="14" Count="8" />
-      <LineId Id="130" Count="9" />
-      <LineId Id="23" Count="71" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

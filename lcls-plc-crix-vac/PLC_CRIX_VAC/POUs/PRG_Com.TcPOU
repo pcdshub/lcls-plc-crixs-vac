@@ -6,35 +6,28 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(*Instanitate Serial port com function *) 
-//ChemRIXS PTM_03 
+      <ST><![CDATA[(*Instanitate Serial port com function *)
+//ChemRIXS PTM_03
 K2S17_E5_CH2_fbSerialLineControl(
-	Mode:= SERIALLINEMODE_EL6_22B,
-	pComIn:= ADR(K2S17_E5_CH2_stComIn),
-	pComOut:=ADR(K2S17_E5_CH2_stComOut),
-	SizeComIn:= SIZEOF(K2S17_E5_CH2_stComOut),
-	TxBuffer:= K2S17_E5_CH2_SerialTXBuffer,
-	RxBuffer:= K2S17_E5_CH2_SerialRXBuffer,
-	Error=> ,
-	ErrorID=> );
-	
+    Mode:= SERIALLINEMODE_EL6_22B,
+    pComIn:= ADR(K2S17_E5_CH2_stComIn),
+    pComOut:=ADR(K2S17_E5_CH2_stComOut),
+    SizeComIn:= SIZEOF(K2S17_E5_CH2_stComOut),
+    TxBuffer:= K2S17_E5_CH2_SerialTXBuffer,
+    RxBuffer:= K2S17_E5_CH2_SerialRXBuffer,
+    Error=> ,
+    ErrorID=> );
+
 //ChemRIXS PTM_04
 K2S17_E5_CH1_fbSerialLineControl(
-	Mode:= SERIALLINEMODE_EL6_22B,
-	pComIn:= ADR(K2S17_E5_CH1_stComIn),
-	pComOut:=ADR(K2S17_E5_CH1_stComOut),
-	SizeComIn:= SIZEOF(K2S17_E5_CH1_stComOut),
-	TxBuffer:= K2S17_E5_CH1_SerialTXBuffer,
-	RxBuffer:= K2S17_E5_CH1_SerialRXBuffer,
-	Error=> ,
-	ErrorID=> );]]></ST>
+    Mode:= SERIALLINEMODE_EL6_22B,
+    pComIn:= ADR(K2S17_E5_CH1_stComIn),
+    pComOut:=ADR(K2S17_E5_CH1_stComOut),
+    SizeComIn:= SIZEOF(K2S17_E5_CH1_stComOut),
+    TxBuffer:= K2S17_E5_CH1_SerialTXBuffer,
+    RxBuffer:= K2S17_E5_CH1_SerialRXBuffer,
+    Error=> ,
+    ErrorID=> );]]></ST>
     </Implementation>
-    <LineIds Name="PRG_Com">
-      <LineId Id="3" Count="9" />
-      <LineId Id="2" Count="0" />
-      <LineId Id="16" Count="0" />
-      <LineId Id="18" Count="8" />
-      <LineId Id="17" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

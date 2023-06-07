@@ -3,65 +3,65 @@
   <GVL Name="GVL_Chamber_Gauges" Id="{5237aca3-4acc-4857-9d60-04b0502e6857}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
-	(* Pirani & Cold Cathode*)
+    (* Pirani & Cold Cathode*)
 
-	{attribute 'pytmc' :=' pv: CRIXS:TC:GPI:01 '}
-	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 2^Value '}
-	TC_GPI_01 : FB_MKS275;
-	
-	stTC_GPI_01 : ST_VG;
-	
-	
-	{attribute 'pytmc' :=' pv: CRIXS:CRYO:GPI:01 '}
-	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 3^Value '}
-	CRYO_GPI_01 : FB_MKS275;
-	
-	stCRYO_GPI_01 : ST_VG;
-	
-	
-	{attribute 'pytmc' :=' pv: CRIXS:ROUGH:GPI:01 '}
-	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 4^Value '}
-	ROUGH_GPI_01 : FB_MKS275;
-	
-	stROUGH_GPI_01 : ST_VG;
-	
-	{attribute 'pytmc' :=' pv: CRIXS:TC:GCC:01 '}
-	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E14 (EL3174)^AI Standard Channel 1^Value;
-								 .i_xHV_ON	    :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E19 (EL1124)^Channel 1^Input;
-								 .i_xDisc_Active:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E19 (EL1124)^Channel 2^Input;								 
-								 .q_xHV_DIS		:= 	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E17 (EL2624)^Channel 1^Output	'}	
-	TC_GCC_01 : FB_MKS500;
-	
-	stTC_GCC_01 : ST_VG;
-	
-	(* Micro Pirani combination gauges *)
-	
-		
-	{attribute 'pytmc' :=' pv: CRIXS:CRYO:GCP:01 '}
-	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 2^Value '}
-	CRYO_GCP_01 : FB_972;
-	
-	stCRYO_GCP_01 : ST_VG;
-	
-	{attribute 'pytmc' :=' pv: CRIXS:CRYO:GCP:02 '}
-	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 1^Value '}
-	CRYO_GCP_02 : FB_972;
-	
-	stCRYO_GCP_02 : ST_VG;
-	
-	{attribute 'pytmc' :=' pv: CRIXS:SDS:GCP:01 '}
-	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 3^Value '}
-	SDS_GCP_01 : FB_972;
-	
-	stSDS_GCP_01 : ST_VG;
-	
-	{attribute 'pytmc' :=' pv: CRIXS:TC:GCP:01 '}
-	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 4^Value '}
-	TC_GCP_01 : FB_972;
-	
-	stTC_GCP_01 : ST_VG;
-	
-	
+    {attribute 'pytmc' :=' pv: CRIXS:TC:GPI:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 2^Value '}
+    TC_GPI_01 : FB_MKS275;
+
+    stTC_GPI_01 : ST_VG;
+
+
+    {attribute 'pytmc' :=' pv: CRIXS:CRYO:GPI:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 3^Value '}
+    CRYO_GPI_01 : FB_MKS275;
+
+    stCRYO_GPI_01 : ST_VG;
+
+
+    {attribute 'pytmc' :=' pv: CRIXS:ROUGH:GPI:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 4^Value '}
+    ROUGH_GPI_01 : FB_MKS275;
+
+    stROUGH_GPI_01 : ST_VG;
+
+    {attribute 'pytmc' :=' pv: CRIXS:TC:GCC:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E14 (EL3174)^AI Standard Channel 1^Value;
+                                 .i_xHV_ON	    :=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E19 (EL1124)^Channel 1^Input;
+                                 .i_xDisc_Active:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E19 (EL1124)^Channel 2^Input;
+                                 .q_xHV_DIS		:= 	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E17 (EL2624)^Channel 1^Output	'}
+    TC_GCC_01 : FB_MKS500;
+
+    stTC_GCC_01 : ST_VG;
+
+    (* Micro Pirani combination gauges *)
+
+
+    {attribute 'pytmc' :=' pv: CRIXS:CRYO:GCP:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 2^Value '}
+    CRYO_GCP_01 : FB_972;
+
+    stCRYO_GCP_01 : ST_VG;
+
+    {attribute 'pytmc' :=' pv: CRIXS:CRYO:GCP:02 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 1^Value '}
+    CRYO_GCP_02 : FB_972;
+
+    stCRYO_GCP_02 : ST_VG;
+
+    {attribute 'pytmc' :=' pv: CRIXS:SDS:GCP:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E11 (EL3174)^AI Standard Channel 3^Value '}
+    SDS_GCP_01 : FB_972;
+
+    stSDS_GCP_01 : ST_VG;
+
+    {attribute 'pytmc' :=' pv: CRIXS:TC:GCP:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)^AI Standard Channel 4^Value '}
+    TC_GCP_01 : FB_972;
+
+    stTC_GCP_01 : ST_VG;
+
+
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

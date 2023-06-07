@@ -4,65 +4,65 @@
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
 
-	(* OverrideMode *)
-	{attribute 'pytmc' := 'pv: CRIXS:VLS:VAC:OVRD_MODE'}
-	xSystemOverrideMode_VLS	: BOOL := FALSE; 	
-	
-		
-	{attribute 'pytmc' := ' pv: CRIXS:VLS:VAC:SETUP_MODE'}
-	SetupMode_VLS	: BOOL := FALSE; 
-	
-	(* Pfeiffer Turbo Pumps TM700 *)
-	{attribute 'TcLinkTo' := 	'.i_xAtSpd			:=	TIIB[VLS_EP2 (EP2338-0001)]^Channel 1^Input;
-								 .i_xFaultNC		:=	TIIB[VLS_EP2 (EP2338-0001)]^Channel 2^Input;
-								 .q_RunDO			:=	TIIB[VLS_EP4 (EP2624-0002)]^Channel 3^Output
-			 
-	'}
-	{attribute 'pytmc' := '
-		pv: CRIXS:VLS:PTM:01
-		io: io
-	'}
+    (* OverrideMode *)
+    {attribute 'pytmc' := 'pv: CRIXS:VLS:VAC:OVRD_MODE'}
+    xSystemOverrideMode_VLS	: BOOL := FALSE;
+
+
+    {attribute 'pytmc' := ' pv: CRIXS:VLS:VAC:SETUP_MODE'}
+    SetupMode_VLS	: BOOL := FALSE;
+
+    (* Pfeiffer Turbo Pumps TM700 *)
+    {attribute 'TcLinkTo' := 	'.i_xAtSpd			:=	TIIB[VLS_EP2 (EP2338-0001)]^Channel 1^Input;
+                                 .i_xFaultNC		:=	TIIB[VLS_EP2 (EP2338-0001)]^Channel 2^Input;
+                                 .q_RunDO			:=	TIIB[VLS_EP4 (EP2624-0002)]^Channel 3^Output
+
+    '}
+    {attribute 'pytmc' := '
+        pv: CRIXS:VLS:PTM:01
+        io: io
+    '}
     VLS_PTM_01 : FB_PTM_Pfeiffer;
-	VLS_PTM_01_xExtIlkOK : Bool;
-	stVLS_PTM_01 : ST_PfeifferPTM;  //new
+    VLS_PTM_01_xExtIlkOK : Bool;
+    stVLS_PTM_01 : ST_PfeifferPTM;  //new
 
-	// They share the same serial port
-	st_VLS_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
-	st_VLS_Pfeiffer_RBK 	: ARRAY[1..20] OF ST_PfeifferStatus;
-	
-	fb_VLS_PfeifferCom : FB_PFEIFFER_COM;
-	
-	
-	(* Valves *)
-	
-	{attribute 'pytmc' :=' pv: CRIXS:VLS:VGC:01 '}
-	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 6^Input;
-								 .i_xClsLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 7^Input;
-								.q_xOPN_DO	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 21^Output'}
-	VLS_VGC_01 : FB_VGC;
-	
-	{attribute 'pytmc' :=' pv: CRIXS:VLS:VWC:01 '}
-	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 9^Input;
-								 .i_xClsLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 10^Input;
-								.q_xCLS_DO	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 24^Output'}	
-	VLS_VWC_01 : FB_VRC_NO_FFO; // Is the Window valve NO 
-	
-	(* Gauges *)
+    // They share the same serial port
+    st_VLS_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
+    st_VLS_Pfeiffer_RBK 	: ARRAY[1..20] OF ST_PfeifferStatus;
 
-	{attribute 'pytmc' :=' pv: CRIXS:VLS:GPI:01 '}
-	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[VLS_EP5 (EP3174-0002)]^AI Standard Channel 1^Value		'}
-	VLS_GPI_01	: FB_MKS275;
+    fb_VLS_PfeifferCom : FB_PFEIFFER_COM;
 
-	{attribute 'pytmc' :=' pv: CRIXS:VLS:GCC:01 '}
-	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[VLS_EP5 (EP3174-0002)]^AI Standard Channel 2^Value;
-								 .q_xHV_DIS		:= 	TIIB[VLS_EP4 (EP2624-0002)]^Channel 1^Output	'}		
-	VLS_GCC_01	: FB_MKS500;
-	
-	{attribute 'pytmc' :=' pv: CRIXS:VLS:ROUGH:GPI '}
-	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[VLS_EP5 (EP3174-0002)]^AI Standard Channel 3^Value	'}	
-	VLS_ROUGH_GPI : FB_9XX;
-	
-	
+
+    (* Valves *)
+
+    {attribute 'pytmc' :=' pv: CRIXS:VLS:VGC:01 '}
+    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 6^Input;
+                                 .i_xClsLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 7^Input;
+                                .q_xOPN_DO	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 21^Output'}
+    VLS_VGC_01 : FB_VGC;
+
+    {attribute 'pytmc' :=' pv: CRIXS:VLS:VWC:01 '}
+    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 9^Input;
+                                 .i_xClsLS	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 10^Input;
+                                .q_xCLS_DO	:=	TIIB[VLS_EP3 (EP2339-0021)]^Channel 24^Output'}
+    VLS_VWC_01 : FB_VRC_NO_FFO; // Is the Window valve NO
+
+    (* Gauges *)
+
+    {attribute 'pytmc' :=' pv: CRIXS:VLS:GPI:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[VLS_EP5 (EP3174-0002)]^AI Standard Channel 1^Value		'}
+    VLS_GPI_01	: FB_MKS275;
+
+    {attribute 'pytmc' :=' pv: CRIXS:VLS:GCC:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[VLS_EP5 (EP3174-0002)]^AI Standard Channel 2^Value;
+                                 .q_xHV_DIS		:= 	TIIB[VLS_EP4 (EP2624-0002)]^Channel 1^Output	'}
+    VLS_GCC_01	: FB_MKS500;
+
+    {attribute 'pytmc' :=' pv: CRIXS:VLS:ROUGH:GPI '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[VLS_EP5 (EP3174-0002)]^AI Standard Channel 3^Value	'}
+    VLS_ROUGH_GPI : FB_9XX;
+
+
 
 
 END_VAR]]></Declaration>

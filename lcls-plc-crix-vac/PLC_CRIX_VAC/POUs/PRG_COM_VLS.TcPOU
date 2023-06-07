@@ -7,18 +7,14 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[VLS_EP1_CH1_fbSerialLineControl(
-	Mode:= SERIALLINEMODE_EL6_22B,
-	pComIn:= ADR(VLS_EP1_CH1_stComIn),
-	pComOut:=ADR(VLS_EP1_CH1_stComOut),
-	SizeComIn:= SIZEOF(VLS_EP1_CH1_stComIn),
-	TxBuffer:= VLS_EP1_CH1_SerialTXBuffer,
-	RxBuffer:= VLS_EP1_CH1_SerialRXBuffer,
-	Error=> ,
-	ErrorID=> );]]></ST>
+    Mode:= SERIALLINEMODE_EL6_22B,
+    pComIn:= ADR(VLS_EP1_CH1_stComIn),
+    pComOut:=ADR(VLS_EP1_CH1_stComOut),
+    SizeComIn:= SIZEOF(VLS_EP1_CH1_stComIn),
+    TxBuffer:= VLS_EP1_CH1_SerialTXBuffer,
+    RxBuffer:= VLS_EP1_CH1_SerialRXBuffer,
+    Error=> ,
+    ErrorID=> );]]></ST>
     </Implementation>
-    <LineIds Name="PRG_COM_VLS">
-      <LineId Id="6" Count="7" />
-      <LineId Id="5" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

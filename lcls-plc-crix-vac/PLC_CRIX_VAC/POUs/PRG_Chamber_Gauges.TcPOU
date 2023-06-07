@@ -18,7 +18,7 @@ ROUGH_GPI_01(PG=>stROUGH_GPI_01);
 
 TC_GCC_01.M_SetBits(30518);
 TC_GCC_01(PG:=TC_GPI_01.PG,
-			IG=>stTC_GCC_01);
+            IG=>stTC_GCC_01);
 
 
 CRYO_GCP_02.M_SetBits(30518);
@@ -34,11 +34,5 @@ SDS_GCP_01(PG=>);
 TC_GCP_01.M_SetBits(30518);
 TC_GCP_01(PG=>stTC_GCP_01);]]></ST>
     </Implementation>
-    <LineIds Name="PRG_Chamber_Gauges">
-      <LineId Id="3" Count="2" />
-      <LineId Id="7" Count="2" />
-      <LineId Id="17" Count="19" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

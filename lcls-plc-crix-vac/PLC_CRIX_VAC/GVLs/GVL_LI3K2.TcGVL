@@ -7,13 +7,13 @@ VAR_GLOBAL
     // LI3K2 PTM
     (*
     {attribute 'pytmc' :=' pv: RIX:LI3K2:PTM:01 '}
-	{attribute 'TcLinkTo' := '.i_xAtSpd := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 45 (EL2794)^Channel 1^Output;
-							  .i_xFault := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 45 (EL2794)^Channel 2^Output;
-							  .q_RunDO := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 83 (EL1088)^Channel 1^Input'}
+    {attribute 'TcLinkTo' := '.i_xAtSpd := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 45 (EL2794)^Channel 1^Output;
+                              .i_xFault := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 45 (EL2794)^Channel 2^Output;
+                              .q_RunDO := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 83 (EL1088)^Channel 1^Input'}
     *)
     // TODO: Update I/O mapping
     RIX_LI3K2_PTM_01 : FB_PTM_TwisTorr;
-    
+
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

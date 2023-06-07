@@ -3,81 +3,81 @@
   <GVL Name="GVL_PLC_Interfaces" Id="{1d11fe91-059a-4926-a549-d60eb53c47d4}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
-	(*CRIX Vac*)
-	//Outputs
+    (*CRIX Vac*)
+    //Outputs
 //	fb_ADS_WATCHDOG_VAC_LAMP_TMO:FB_ADS_WATCHDOG;
-	
-	(*ETHERCAT BRRIDGE COM STATUS*)
-	//0: Other side is in OP state, >0: Error
 
-	{attribute := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^SYNC Inputs^TxPDO state
-	'}
-	xEcatBridge_TxPDO_state AT %I* :BOOL;
-	
-	//0: External device connectd, 1: External device not connected
-	{attribute := 'TIIB[Term 95 (EL6695)]^SYNC Inputs^External device not connected
-	'}
-	xEcatBridge_External_device_not_connected AT %I* : BOOL;
-	
-	//0 = Data valid, 1 = Data invalid
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^WcState^WcState
-	'}
-		
-	xEcatBridge_WcState AT %I* : BOOL;
-	
-	(*I/O Inputs to CRIX motion plc*)	
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_IN 
-	'}
-	xPTC_MOT_Y_10_IN AT %I* : BOOL;
-	
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_OUT
-	'}
-	xPTC_MOT_Y_10_OUT AT %I* : BOOL;
-	
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_IN 
-	'}
-	xPTC_MOT_Y_11_IN AT %I* : BOOL;
-	
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_OUT
-	'}
-	xPTC_MOT_Y_11_OUT AT %I* : BOOL;
-	
-	
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^xSDS_MOT_Z_18_IN 
-	'}
-	xSDS_MOT_Z_18_IN AT %I* : BOOL;
-	
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^xSDS_MOT_Z_18_OUT
-	'}
-	xSDS_MOT_Z_18_OUT AT %I* : BOOL;
-	
-	
-	(*I/O Outputs to CRIX Motion PLC*)
-	
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bCRYO_VGC_01_CLS
-	'}
-	bCRYO_VGC_01_CLS AT %Q* : BOOL;
-	
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bCRYO_VGC_01_OPN
-	'}
-	bCRYO_VGC_01_OPN AT %Q* : BOOL;
-	
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bCRYO_VGC_02_CLS
-	'}
-	bCRYO_VGC_02_CLS AT %Q* : BOOL;
-	
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bCRYO_VGC_02_OPN
-	'}
-	bCRYO_VGC_02_OPN AT %Q* : BOOL;
+    (*ETHERCAT BRRIDGE COM STATUS*)
+    //0: Other side is in OP state, >0: Error
+
+    {attribute := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^SYNC Inputs^TxPDO state
+    '}
+    xEcatBridge_TxPDO_state AT %I* :BOOL;
+
+    //0: External device connectd, 1: External device not connected
+    {attribute := 'TIIB[Term 95 (EL6695)]^SYNC Inputs^External device not connected
+    '}
+    xEcatBridge_External_device_not_connected AT %I* : BOOL;
+
+    //0 = Data valid, 1 = Data invalid
+    {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^WcState^WcState
+    '}
+
+    xEcatBridge_WcState AT %I* : BOOL;
+
+    (*I/O Inputs to CRIX motion plc*)
+    {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_IN
+    '}
+    xPTC_MOT_Y_10_IN AT %I* : BOOL;
+
+    {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_OUT
+    '}
+    xPTC_MOT_Y_10_OUT AT %I* : BOOL;
+
+    {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_IN
+    '}
+    xPTC_MOT_Y_11_IN AT %I* : BOOL;
+
+    {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_OUT
+    '}
+    xPTC_MOT_Y_11_OUT AT %I* : BOOL;
+
+
+    {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^xSDS_MOT_Z_18_IN
+    '}
+    xSDS_MOT_Z_18_IN AT %I* : BOOL;
+
+    {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^xSDS_MOT_Z_18_OUT
+    '}
+    xSDS_MOT_Z_18_OUT AT %I* : BOOL;
+
+
+    (*I/O Outputs to CRIX Motion PLC*)
+
+    {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bCRYO_VGC_01_CLS
+    '}
+    bCRYO_VGC_01_CLS AT %Q* : BOOL;
+
+    {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bCRYO_VGC_01_OPN
+    '}
+    bCRYO_VGC_01_OPN AT %Q* : BOOL;
+
+    {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bCRYO_VGC_02_CLS
+    '}
+    bCRYO_VGC_02_CLS AT %Q* : BOOL;
+
+    {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bCRYO_VGC_02_OPN
+    '}
+    bCRYO_VGC_02_OPN AT %Q* : BOOL;
 
     {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bSDS_VGC_01_CLS
-	'}
-	bSDS_VGC_01_CLS AT %Q* : BOOL;
-	
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bSDS_VGC_01_OPN
-	'}
-	bSDS_VGC_01_OPN AT %Q* : BOOL;
-	
+    '}
+    bSDS_VGC_01_CLS AT %Q* : BOOL;
+
+    {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Outputs^bSDS_VGC_01_OPN
+    '}
+    bSDS_VGC_01_OPN AT %Q* : BOOL;
+
 END_VAR
 ]]></Declaration>
   </GVL>

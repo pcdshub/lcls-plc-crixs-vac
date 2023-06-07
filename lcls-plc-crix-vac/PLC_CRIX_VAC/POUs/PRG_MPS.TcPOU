@@ -3,11 +3,11 @@
   <POU Name="PRG_MPS" Id="{591c99b8-647a-4d7c-a020-41ee2929a59e}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_MPS
 VAR
-fbArbiterIO: FB_SubSysToArbiter_IO;	
-fb_vetoArbiter: FB_VetoArbiter; 
+fbArbiterIO: FB_SubSysToArbiter_IO;
+fb_vetoArbiter: FB_VetoArbiter;
 ff2_ff1_link_vac: FB_FastFault := (i_xAutoReset := TRUE, i_DevName := 'CRIX_Vac_FF2 to FF1 Link', i_Desc := 'This is virtual CRIX Vac FF2 fault, Please check the faulting device below', i_TypeCode := 16#9999);
 
-	
+
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -19,7 +19,7 @@ GVL_PMPS.g_FastFaultOutput1.Execute(i_xVeto := PMPS_GVL.stCurrentBeamParameters.
                                          OR PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.ST1K2]);
 
 
-GVL_PMPS.g_FastFaultOutput2.Execute(i_xVeto := (PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT] 
+GVL_PMPS.g_FastFaultOutput2.Execute(i_xVeto := (PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT]
                                       AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN])
                                        OR PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.ST1K2]);
 
@@ -27,14 +27,14 @@ GVL_PMPS.g_FastFaultOutput2.Execute(i_xVeto := (PMPS_GVL.stCurrentBeamParameters
 fbArbiterIO(Arbiter := GVL_PMPS.fbArbiter1, fbFFHWO := GVL_PMPS.g_FastFaultOutput1, i_bVeto := PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT]
                                        AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]
                                         OR PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.ST1K2]);
-									   
-//routed to the arbiter							  
+
+//routed to the arbiter
 ff2_ff1_link_vac(
-	io_fbFFHWO := GVL_PMPS.g_FastFaultOutput2,
+    io_fbFFHWO := GVL_PMPS.g_FastFaultOutput2,
     i_xOK := GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut);
 
 
-//Code for Removing arbitration 
+//Code for Removing arbitration
 fbArbiter1.AddRequest(nReqID := 16#FAFB, stReqBp := PMPS_GVL.cstFullBeam, sDevName := 'plc-crix-vac');]]></ST>
     </Implementation>
   </POU>
