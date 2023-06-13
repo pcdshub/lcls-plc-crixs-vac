@@ -15,10 +15,9 @@ END_VAR
     <Implementation>
       <ST><![CDATA[RCC_GCP_01(PG=>);
 
-RCC_STC_01(
-    iScale:= ,
-    fTemp=> ,
-    );
+RCC_STC_01();
+RCC_STC_02();
+
 (* Valve can open only when CRIX-RCC-VRC-02 and 03 are closed*)
 RCC_VRC_01_OPEN_OK := ( RCC_VRC_02.iq_stValve.i_xClsLS AND NOT RCC_VRC_02.iq_stValve.q_xOPN_DO ) AND
                                     ( RCC_VRC_03.iq_stValve.i_xClsLS AND NOT RCC_VRC_03.iq_stValve.q_xOPN_DO ) ;
