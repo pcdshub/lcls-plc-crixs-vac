@@ -46,14 +46,19 @@ VAR_GLOBAL
     RCC_GCP_01 : FB_901_ECAT;
 
 
-    {attribute 'pytmc' :=' pv: CRIXS:RCC '}
-    {attribute 'TcLinkTo' := ' .bError := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E7 (EL3314)^TC Inputs Channel 1^Status^Error;
-                               .bUnderrange := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E7 (EL3314)^TC Inputs Channel 1^Status^Underrange;
-                               .bOverrange :=  TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E7 (EL3314)^TC Inputs Channel 1^Status^Overrange;
-                               .iRaw	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E7 (EL3314)^TC Inputs Channel 1^Value '}
-   RCC_STC_01 : FB_ThermoCouple;
+    {attribute 'pytmc' :=' pv: CRIXS:RCC:01 '}
+    {attribute 'TcLinkTo' := ' .bError := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E7 (EL3314)^TC Inputs Channel 3^Status^Error;
+                               .bUnderrange := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E7 (EL3314)^TC Inputs Channel 3^Status^Underrange;
+                               .bOverrange :=  TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E7 (EL3314)^TC Inputs Channel 3^Status^Overrange;
+                               .iRaw	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E7 (EL3314)^TC Inputs Channel 3^Value '}
+   RCC_STC_01 : FB_TempSensor;
 
-
+    {attribute 'pytmc' :=' pv: CRIXS:RCC:02 '}
+    {attribute 'TcLinkTo' := ' .bError := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E7 (EL3314)^TC Inputs Channel 4^Status^Error;
+                               .bUnderrange := TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E7 (EL3314)^TC Inputs Channel 4^Status^Underrange;
+                               .bOverrange :=  TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E7 (EL3314)^TC Inputs Channel 4^Status^Overrange;
+                               .iRaw	:= TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E7 (EL3314)^TC Inputs Channel 4^Value '}
+   RCC_STC_02 : FB_TempSensor;
 
 
 
