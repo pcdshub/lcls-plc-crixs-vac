@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_LI3K2" Id="{ac208cdc-02fb-4676-8502-445d3aa00a8a}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK PRG_LI3K2
 VAR_INPUT
