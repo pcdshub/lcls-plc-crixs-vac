@@ -2,7 +2,7 @@
   <PropertyGroup>
     <FileVersion>1.0.0.0</FileVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{c10df9ba-f932-4159-9c9b-9d10850ec60c}</ProjectGuid>
+    <ProjectGuid>{97b8d32e-44ef-4b51-9bac-b7361d049ccb}</ProjectGuid>
     <SubObjectsSortedByName>True</SubObjectsSortedByName>
     <Name>PLC_CRIX_VAC</Name>
     <ProgramVersion>3.1.4022.7</ProgramVersion>
@@ -12,6 +12,11 @@
     <Implicit_KindOfTask>{fbc0c324-590e-4688-86a7-c7c2f7cc12ee}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{e12ce928-82d5-4a26-a123-4a530b60dbbf}</Implicit_Jitter_Distribution>
     <LibraryReferences>{aed880e4-b9a0-4688-902e-883580edadcb}</LibraryReferences>
+    <CombineIds>false</CombineIds>
+    <Company>SLAC - LCLS</Company>
+    <Released>false</Released>
+    <ProjectVersion>0.0.0</ProjectVersion>
+    <Title>plc-crix-vac</Title>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DUTs\E_STATES.TcDUT">
@@ -192,8 +197,8 @@
   <ProjectExtensions>
     <PlcProjectOptions>
       <XmlArchive>
-  <Data>
-    <o xml:space="preserve" t="OptionKey">
+        <Data>
+          <o xml:space="preserve" t="OptionKey">
       <v n="Name">"&lt;ProjectRoot&gt;"</v>
       <d n="SubKeys" t="Hashtable" ckt="String" cvt="OptionKey">
         <v>{192FAD59-8248-4824-A8DE-9177C94C195A}</v>
@@ -220,13 +225,13 @@
       </d>
       <d n="Values" t="Hashtable" />
     </o>
-  </Data>
-  <TypeList>
-    <Type n="Hashtable">System.Collections.Hashtable</Type>
-    <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
-    <Type n="String">System.String</Type>
-  </TypeList>
-</XmlArchive>
+        </Data>
+        <TypeList>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+          <Type n="String">System.String</Type>
+        </TypeList>
+      </XmlArchive>
     </PlcProjectOptions>
   </ProjectExtensions>
 </Project>
