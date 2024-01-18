@@ -3156,10 +3156,6 @@ PDO Channel 4 (Index #x1a03, Flags #x0011, SyncMan 0)
    </details>
 
 
-Box 1 (CX2100 Power Supply)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
 E41 (EL1004)
 ^^^^^^^^^^^^
 

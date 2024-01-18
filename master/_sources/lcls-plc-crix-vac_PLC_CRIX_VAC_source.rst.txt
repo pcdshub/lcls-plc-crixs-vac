@@ -1277,7 +1277,7 @@ PRG_Chamber_Valves
                     stCRIX_VGC_06.i_xClsLS AND stCRIX_VGC_07.i_xClsLS) AND F_RoughPumpInlet_ILK(ScrollPump:=stCRIX_MECH_PRO_01) AND
                     CRIX_GPI_05.PG.xAT_VAC;
     *)
-    bChamberAtVac := (TC_GPI_01.PG.rPRESS < 0.005);
+    bChamberAtVac := (TC_GPI_01.PG.rPRESS < 0.003);
     IF (bChamberAtVac) THEN
         TC_VRC_01.i_xExt_OK := F_TurboGateValve_Protection_ILK(i_Turbo:=TC_PTM_01.iq_stPtm,
                                                                  i_stISG:=TC_GPI_01.PG,
@@ -1645,6 +1645,10 @@ PRG_RCC
         RCC_VRC_03_OPEN_OK : BOOL;
         RCC_VRC_04_OPEN_OK : BOOL;
 
+
+        {attribute 'pytmc' :=' pv: CRIXS:RCC:GCP:01:ILK_Setpoint '}
+        RCC_GCP_01_INTERLOCK_SETPOINT : REAL := 10;
+
     END_VAR
     RCC_GCP_01(PG=>);
 
@@ -1667,8 +1671,8 @@ PRG_RCC
                     i_xOverrideMode := xSystemOverrideMode_RCC,
                      iq_stValve=> );
 
-    (* Valve can open only when CRIX-RCC-GCP-01 reading <10 Torr and CRIX-RCC-VRC-01 and 04 are closed*)
-    RCC_VRC_03_OPEN_OK := (RCC_GCP_01.PG.rPRESS < 10 and RCC_GCP_01.PG.xPRESS_OK ) AND
+    (* Valve can open only when CRIX-RCC-GCP-01 reading < setpoint Torr and CRIX-RCC-VRC-01 and 04 are closed*)
+    RCC_VRC_03_OPEN_OK := (RCC_GCP_01.PG.rPRESS < RCC_GCP_01_INTERLOCK_SETPOINT and RCC_GCP_01.PG.xPRESS_OK ) AND
                                      ( RCC_VRC_01.iq_stValve.i_xClsLS AND NOT RCC_VRC_01.iq_stValve.q_xOPN_DO ) AND
                                                   ( RCC_VRC_04.iq_stValve.i_xClsLS AND NOT RCC_VRC_04.iq_stValve.q_xOPN_DO );
 

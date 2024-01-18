@@ -953,7 +953,7 @@ LCLS_General.ST_PendingEvent
       - | io: input
 
 
-                                                                            
+                                                                             
 LCLS_Vacuum.FB_901_ECAT
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -4956,7 +4956,7 @@ LCLS_Vacuum.FB_VVC
         | io: output
 
 
-                                        
+              
 LCLS_Vacuum.ST_EbaraDryPump
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -7384,9 +7384,9 @@ LCLS_Vacuum.ST_VVC
         | io: output
 
 
-       
-LCLS_Vacuum_Serial.ST_PfeifferControl
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        
+LCLSVacuumSerialDriverLib.ST_PfeifferControl
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
     :header-rows: 1
@@ -7473,8 +7473,8 @@ LCLS_Vacuum_Serial.ST_PfeifferControl
 
 
  
-LCLS_Vacuum_Serial.ST_PfeifferStatus
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+LCLSVacuumSerialDriverLib.ST_PfeifferStatus
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
     :header-rows: 1
@@ -7605,8 +7605,8 @@ LCLS_Vacuum_Serial.ST_PfeifferStatus
 
 
  
-LCLS_Vacuum_Serial.ST_TD20Status
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+LCLSVacuumSerialDriverLib.ST_TD20Status
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
     :header-rows: 1
@@ -7676,7 +7676,7 @@ LCLS_Vacuum_Serial.ST_TD20Status
       - | io: input
 
 
-      
+     
 PMPS.FB_Arbiter
 ^^^^^^^^^^^^^^^
 
@@ -49065,6 +49065,18 @@ Database Records
       - PMPS_GVL.stRequestedBeamParameters.xValid
       - | archive: 1s monitor
         | io: input
+
+
+    * - CRIXS:RCC:GCP:01:ILK_Setpoint_RBV
+      - ai
+      - PRG_RCC.RCC_GCP_01_INTERLOCK_SETPOINT
+      - | io: output
+
+
+    * - CRIXS:RCC:GCP:01:ILK_Setpoint
+      - ao
+      - PRG_RCC.RCC_GCP_01_INTERLOCK_SETPOINT
+      - | io: output
 
 
 
