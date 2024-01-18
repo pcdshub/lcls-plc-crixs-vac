@@ -953,7 +953,7 @@ LCLS_General.ST_PendingEvent
       - | io: input
 
 
-                                                                            
+                                                                             
 LCLS_Vacuum.FB_901_ECAT
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -4956,7 +4956,7 @@ LCLS_Vacuum.FB_VVC
         | io: output
 
 
-                                        
+              
 LCLS_Vacuum.ST_EbaraDryPump
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -7384,9 +7384,9 @@ LCLS_Vacuum.ST_VVC
         | io: output
 
 
-       
-LCLS_Vacuum_Serial.ST_PfeifferControl
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        
+LCLSVacuumSerialDriverLib.ST_PfeifferControl
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
     :header-rows: 1
@@ -7473,8 +7473,8 @@ LCLS_Vacuum_Serial.ST_PfeifferControl
 
 
  
-LCLS_Vacuum_Serial.ST_PfeifferStatus
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+LCLSVacuumSerialDriverLib.ST_PfeifferStatus
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
     :header-rows: 1
@@ -7605,8 +7605,8 @@ LCLS_Vacuum_Serial.ST_PfeifferStatus
 
 
  
-LCLS_Vacuum_Serial.ST_TD20Status
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+LCLSVacuumSerialDriverLib.ST_TD20Status
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
     :header-rows: 1
@@ -7676,7 +7676,7 @@ LCLS_Vacuum_Serial.ST_TD20Status
       - | io: input
 
 
-      
+     
 PMPS.FB_Arbiter
 ^^^^^^^^^^^^^^^
 
@@ -26285,6 +26285,540 @@ Database Records
     * - CRIXS:SDS:VRC:02:OVRD_ON
       - bo
       - GVL_Chamber_Valves.SDS_VRC_02.iq_stValve.xOverrideMode
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
+        | io: output
+
+
+    * - CRIXS:SDS:VRC:03:ERROR_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.bErrorPresent
+      - | field: ONAM ERROR PRESENT
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - CRIXS:SDS:VRC:03:ERROR
+      - bo
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.bErrorPresent
+      - | field: ONAM ERROR PRESENT
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - CRIXS:SDS:VRC:03:POS_STATE_RBV
+      - mbbi
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.eState
+      - | field: FRST OPEN_F
+        | field: ONST CLOSED
+        | field: THST INVALID
+        | field: TWST MOVING
+        | field: ZRST OPEN
+        | io: input
+        | type: mbbi
+
+
+    * - CRIXS:SDS:VRC:03:STATE_RBV
+      - mbbi
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.eVGC_State
+      - | field: EIST Close Timeout
+        | field: FRST Ext Fault
+        | field: FVST AT Vacuum
+        | field: NIST Open Timeout
+        | field: ONST At Vacuum
+        | field: SVST Vacuum Fault
+        | field: SXST Triggered
+        | field: THST Lost Vacuum
+        | field: TWST Differential Pressure
+        | field: ZRST Vented
+        | io: input
+
+
+    * - CRIXS:SDS:VRC:03:CLS_DI_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.i_xClsLS
+      - | field: ONAM CLOSE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - CRIXS:SDS:VRC:03:OPN_DI_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.i_xOpnLS
+      - | field: ONAM OPEN
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - CRIXS:SDS:VRC:03:ALM_RST_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.pv_xAlmRst
+      - | io: output
+
+
+    * - CRIXS:SDS:VRC:03:ALM_RST
+      - bo
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.pv_xAlmRst
+      - | io: output
+
+
+    * - CRIXS:SDS:VRC:03:OPN_SW_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.pv_xOPN_SW
+      - | field: ONAM OPEN
+        | field: ZNAM CLOSE
+        | io: output
+
+
+    * - CRIXS:SDS:VRC:03:OPN_SW
+      - bo
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.pv_xOPN_SW
+      - | field: ONAM OPEN
+        | field: ZNAM CLOSE
+        | io: output
+
+
+    * - CRIXS:SDS:VRC:03:FORCE_OPN_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.pv_xOvrdOpn
+      - | field: ONAM FORCE OPEN
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - CRIXS:SDS:VRC:03:FORCE_OPN
+      - bo
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.pv_xOvrdOpn
+      - | field: ONAM FORCE OPEN
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - CRIXS:SDS:VRC:03:OPN_DO_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.q_xOPN_DO
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - CRIXS:SDS:VRC:03:ErrMsg_RBV
+      - waveform
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.sErrorMessage
+      - | io: output
+
+
+    * - CRIXS:SDS:VRC:03:ErrMsg
+      - waveform
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.sErrorMessage
+      - | io: output
+
+
+    * - CRIXS:SDS:VRC:03:CLS_OK_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.xCLS_OK
+      - | io: input
+
+
+    * - CRIXS:SDS:VRC:03:EXT_ILK_OK_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.xEXT_OK
+      - | field: ONAM OK
+        | field: ZNAM NOT OK
+        | io: input
+
+
+    * - CRIXS:SDS:VRC:03:LOGGER_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - CRIXS:SDS:VRC:03:LOGGER
+      - bo
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - CRIXS:SDS:VRC:03:OPN_OK_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.xOPN_OK
+      - | field: ONAM OPN ILK OK
+        | field: ZNAM OPN ILK NOT OK
+        | io: input
+
+
+    * - CRIXS:SDS:VRC:03:OVRD_ON_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.xOverrideMode
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
+        | io: output
+
+
+    * - CRIXS:SDS:VRC:03:OVRD_ON
+      - bo
+      - GVL_Chamber_Valves.SDS_VRC_03.iq_stValve.xOverrideMode
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:01:ERROR_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.bErrorPresent
+      - | field: ONAM ERROR PRESENT
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:01:ERROR
+      - bo
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.bErrorPresent
+      - | field: ONAM ERROR PRESENT
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:01:POS_STATE_RBV
+      - mbbi
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.eState
+      - | field: FRST OPEN_F
+        | field: ONST CLOSED
+        | field: THST INVALID
+        | field: TWST MOVING
+        | field: ZRST OPEN
+        | io: input
+        | type: mbbi
+
+
+    * - CRIXS:SDS:VVC:01:STATE_RBV
+      - mbbi
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.eVGC_State
+      - | field: EIST Close Timeout
+        | field: FRST Ext Fault
+        | field: FVST AT Vacuum
+        | field: NIST Open Timeout
+        | field: ONST At Vacuum
+        | field: SVST Vacuum Fault
+        | field: SXST Triggered
+        | field: THST Lost Vacuum
+        | field: TWST Differential Pressure
+        | field: ZRST Vented
+        | io: input
+
+
+    * - CRIXS:SDS:VVC:01:CLS_DI_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.i_xClsLS
+      - | field: ONAM CLOSE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - CRIXS:SDS:VVC:01:OPN_DI_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.i_xOpnLS
+      - | field: ONAM OPEN
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - CRIXS:SDS:VVC:01:ALM_RST_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xAlmRst
+      - | io: output
+
+
+    * - CRIXS:SDS:VVC:01:ALM_RST
+      - bo
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xAlmRst
+      - | io: output
+
+
+    * - CRIXS:SDS:VVC:01:OPN_SW_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xOPN_SW
+      - | field: ONAM OPEN
+        | field: ZNAM CLOSE
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:01:OPN_SW
+      - bo
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xOPN_SW
+      - | field: ONAM OPEN
+        | field: ZNAM CLOSE
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:01:FORCE_OPN_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xOvrdOpn
+      - | field: ONAM FORCE OPEN
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:01:FORCE_OPN
+      - bo
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xOvrdOpn
+      - | field: ONAM FORCE OPEN
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:01:OPN_DO_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.q_xOPN_DO
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - CRIXS:SDS:VVC:01:ErrMsg_RBV
+      - waveform
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.sErrorMessage
+      - | io: output
+
+
+    * - CRIXS:SDS:VVC:01:ErrMsg
+      - waveform
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.sErrorMessage
+      - | io: output
+
+
+    * - CRIXS:SDS:VVC:01:CLS_OK_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xCLS_OK
+      - | io: input
+
+
+    * - CRIXS:SDS:VVC:01:EXT_ILK_OK_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xEXT_OK
+      - | field: ONAM OK
+        | field: ZNAM NOT OK
+        | io: input
+
+
+    * - CRIXS:SDS:VVC:01:LOGGER_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:01:LOGGER
+      - bo
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:01:OPN_OK_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xOPN_OK
+      - | field: ONAM OPN ILK OK
+        | field: ZNAM OPN ILK NOT OK
+        | io: input
+
+
+    * - CRIXS:SDS:VVC:01:OVRD_ON_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xOverrideMode
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:01:OVRD_ON
+      - bo
+      - GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xOverrideMode
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:02:ERROR_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.bErrorPresent
+      - | field: ONAM ERROR PRESENT
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:02:ERROR
+      - bo
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.bErrorPresent
+      - | field: ONAM ERROR PRESENT
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:02:POS_STATE_RBV
+      - mbbi
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.eState
+      - | field: FRST OPEN_F
+        | field: ONST CLOSED
+        | field: THST INVALID
+        | field: TWST MOVING
+        | field: ZRST OPEN
+        | io: input
+        | type: mbbi
+
+
+    * - CRIXS:SDS:VVC:02:STATE_RBV
+      - mbbi
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.eVGC_State
+      - | field: EIST Close Timeout
+        | field: FRST Ext Fault
+        | field: FVST AT Vacuum
+        | field: NIST Open Timeout
+        | field: ONST At Vacuum
+        | field: SVST Vacuum Fault
+        | field: SXST Triggered
+        | field: THST Lost Vacuum
+        | field: TWST Differential Pressure
+        | field: ZRST Vented
+        | io: input
+
+
+    * - CRIXS:SDS:VVC:02:CLS_DI_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.i_xClsLS
+      - | field: ONAM CLOSE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - CRIXS:SDS:VVC:02:OPN_DI_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.i_xOpnLS
+      - | field: ONAM OPEN
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - CRIXS:SDS:VVC:02:ALM_RST_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xAlmRst
+      - | io: output
+
+
+    * - CRIXS:SDS:VVC:02:ALM_RST
+      - bo
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xAlmRst
+      - | io: output
+
+
+    * - CRIXS:SDS:VVC:02:OPN_SW_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xOPN_SW
+      - | field: ONAM OPEN
+        | field: ZNAM CLOSE
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:02:OPN_SW
+      - bo
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xOPN_SW
+      - | field: ONAM OPEN
+        | field: ZNAM CLOSE
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:02:FORCE_OPN_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xOvrdOpn
+      - | field: ONAM FORCE OPEN
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:02:FORCE_OPN
+      - bo
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xOvrdOpn
+      - | field: ONAM FORCE OPEN
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:02:OPN_DO_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.q_xOPN_DO
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - CRIXS:SDS:VVC:02:ErrMsg_RBV
+      - waveform
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.sErrorMessage
+      - | io: output
+
+
+    * - CRIXS:SDS:VVC:02:ErrMsg
+      - waveform
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.sErrorMessage
+      - | io: output
+
+
+    * - CRIXS:SDS:VVC:02:CLS_OK_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xCLS_OK
+      - | io: input
+
+
+    * - CRIXS:SDS:VVC:02:EXT_ILK_OK_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xEXT_OK
+      - | field: ONAM OK
+        | field: ZNAM NOT OK
+        | io: input
+
+
+    * - CRIXS:SDS:VVC:02:LOGGER_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:02:LOGGER
+      - bo
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:02:OPN_OK_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xOPN_OK
+      - | field: ONAM OPN ILK OK
+        | field: ZNAM OPN ILK NOT OK
+        | io: input
+
+
+    * - CRIXS:SDS:VVC:02:OVRD_ON_RBV
+      - bi
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xOverrideMode
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
+        | io: output
+
+
+    * - CRIXS:SDS:VVC:02:OVRD_ON
+      - bo
+      - GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xOverrideMode
       - | field: ONAM Override ON
         | field: ZNAM Override OFF
         | io: output
@@ -49065,6 +49599,18 @@ Database Records
       - PMPS_GVL.stRequestedBeamParameters.xValid
       - | archive: 1s monitor
         | io: input
+
+
+    * - CRIXS:RCC:GCP:01:ILK_Setpoint_RBV
+      - ai
+      - PRG_RCC.RCC_GCP_01_INTERLOCK_SETPOINT
+      - | io: output
+
+
+    * - CRIXS:RCC:GCP:01:ILK_Setpoint
+      - ao
+      - PRG_RCC.RCC_GCP_01_INTERLOCK_SETPOINT
+      - | io: output
 
 
 

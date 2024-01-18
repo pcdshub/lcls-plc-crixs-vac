@@ -163,7 +163,6 @@ GVL_Chamber_Valves
                                     .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E21 (EL2004)^Channel 3^Output'}
 
         TC_VRC_03 : FB_VRC;
-
         stTC_VRC_03 : ST_VRC;
 
 
@@ -178,16 +177,13 @@ GVL_Chamber_Valves
 
         (*
         stCRIX_VGC_03 : ST_VRC;
-
-        {attribute 'pytmc' :=' pv: CRIXS:VGC:07 '}
+        *)
+        {attribute 'pytmc' :=' pv: CRIXS:SDS:VRC:03 '}
         {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E25 (EL1004)^Channel 3^Input;
                                      .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E25 (EL1004)^Channel 4^Input;
                                     .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E24 (EL2004)^Channel 2^Output'}
 
-        CRIX_VGC_07 : FB_VRC;
-
-        stCRIX_VGC_07 : ST_VRC;
-        *)
+        SDS_VRC_03 : FB_VRC;
 
         /// Entry and Exit Valves for Target Chamber
         {attribute 'pytmc' :=' pv: CRIXS:MAIN:VGC:01 '}
@@ -264,6 +260,17 @@ GVL_Chamber_Valves
         SDS_VRC_01 : FB_VRC;
 
         stSDS_VRC_01 : ST_VRC;
+
+         // Vent Package Valves
+        {attribute 'pytmc' :=' pv: CRIXS:SDS:VVC:01 '}
+        {attribute 'TcLinkTo' := 	'.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E40 (EL1004)^Channel 3^Input;
+                                    .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E39 (EL2004)^Channel 1^Output'}
+        SDS_VVC_01 : FB_VRC_NC_ClsLs;
+
+        {attribute 'pytmc' :=' pv: CRIXS:SDS:VVC:02 '}
+        {attribute 'TcLinkTo' := 	'.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E40 (EL1004)^Channel 4^Input;
+                                    .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E39 (EL2004)^Channel 2^Output'}
+        SDS_VVC_02 : FB_VRC_NC_ClsLs;
 
 
     END_VAR
@@ -1249,11 +1256,11 @@ PRG_Chamber_Valves
         dummy_FFFO : FB_HardwareFFOutput;
         dummy_fbArbiter1    :   FB_Arbiter(1);
 
-
-
+        bSDS_VVC_VENT_OK : BOOL := False;
 
     //	bVGC_16_OPN_OK: BOOL;
     //	bVGC_16_CLS_OK: BOOL;
+        bSDS_VRC_03_ILK: BOOL;
     END_VAR
     (* Roughing manifold logic *)
 
@@ -1277,7 +1284,7 @@ PRG_Chamber_Valves
                     stCRIX_VGC_06.i_xClsLS AND stCRIX_VGC_07.i_xClsLS) AND F_RoughPumpInlet_ILK(ScrollPump:=stCRIX_MECH_PRO_01) AND
                     CRIX_GPI_05.PG.xAT_VAC;
     *)
-    bChamberAtVac := (TC_GPI_01.PG.rPRESS < 0.005);
+    bChamberAtVac := (TC_GPI_01.PG.rPRESS < 0.003);
     IF (bChamberAtVac) THEN
         TC_VRC_01.i_xExt_OK := F_TurboGateValve_Protection_ILK(i_Turbo:=TC_PTM_01.iq_stPtm,
                                                                  i_stISG:=TC_GPI_01.PG,
@@ -1454,6 +1461,12 @@ PRG_Chamber_Valves
                 i_xOverrideMode:=xSystemOverride_ChemRIXS,
                 iq_stValve =>);
 
+    bSDS_VRC_03_ILK := SDS_VGC_01.M_IsClosed() AND SDS_VRC_02.M_IsClosed() AND SDS_VRC_01.M_IsClosed();
+
+    SDS_VRC_03(i_xExtILK_OK:=bSDS_VRC_03_ILK,
+                i_xOverrideMode:=xSystemOverride_ChemRIXS,
+                iq_stValve =>);
+
 
     (* PLC interfaces to Motion PLC *)
     bCRYO_VGC_01_CLS := CRYO_VGC_01.iq_stValve.i_xClsLS;
@@ -1462,6 +1475,22 @@ PRG_Chamber_Valves
     bCRYO_VGC_02_OPN := CRYO_VGC_02.iq_stValve.i_xOpnLS;
     bSDS_VGC_01_CLS := SDS_VGC_01.iq_stValve.i_xClsLS;
     bSDS_VGC_01_OPN := SDS_VGC_01.iq_stValve.i_xOpnLS;
+
+    (* Vent Package *)
+
+    bSDS_VVC_VENT_OK := SDS_VGC_01.M_IsClosed() AND SDS_VRC_02.M_IsClosed();
+
+    SDS_VVC_01 (
+        i_xExtILK_OK := bSDS_VVC_VENT_OK,
+        i_xOverrideMode := xSystemOverride_ChemRIXS,
+        iq_stValve =>
+    );
+
+    SDS_VVC_02 (
+        i_xExtILK_OK := bSDS_VVC_VENT_OK,
+        i_xOverrideMode := xSystemOverride_ChemRIXS,
+        iq_stValve =>
+    );
 
     END_PROGRAM
 
@@ -1645,6 +1674,10 @@ PRG_RCC
         RCC_VRC_03_OPEN_OK : BOOL;
         RCC_VRC_04_OPEN_OK : BOOL;
 
+
+        {attribute 'pytmc' :=' pv: CRIXS:RCC:GCP:01:ILK_Setpoint '}
+        RCC_GCP_01_INTERLOCK_SETPOINT : REAL := 10;
+
     END_VAR
     RCC_GCP_01(PG=>);
 
@@ -1667,8 +1700,8 @@ PRG_RCC
                     i_xOverrideMode := xSystemOverrideMode_RCC,
                      iq_stValve=> );
 
-    (* Valve can open only when CRIX-RCC-GCP-01 reading <10 Torr and CRIX-RCC-VRC-01 and 04 are closed*)
-    RCC_VRC_03_OPEN_OK := (RCC_GCP_01.PG.rPRESS < 10 and RCC_GCP_01.PG.xPRESS_OK ) AND
+    (* Valve can open only when CRIX-RCC-GCP-01 reading < setpoint Torr and CRIX-RCC-VRC-01 and 04 are closed*)
+    RCC_VRC_03_OPEN_OK := (RCC_GCP_01.PG.rPRESS < RCC_GCP_01_INTERLOCK_SETPOINT and RCC_GCP_01.PG.xPRESS_OK ) AND
                                      ( RCC_VRC_01.iq_stValve.i_xClsLS AND NOT RCC_VRC_01.iq_stValve.q_xOPN_DO ) AND
                                                   ( RCC_VRC_04.iq_stValve.i_xClsLS AND NOT RCC_VRC_04.iq_stValve.q_xOPN_DO );
 

@@ -1,22 +1,24 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DUTs &mdash; pcdshub/lcls-plc-crixs-vac  documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/tree.css?v=837a00b9" />
+      <link rel="stylesheet" type="text/css" href="_static/width.css?v=ab210c7a" />
+
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/docs-versions-menu.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/docs-versions-menu.js?v=3d6a1aea"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -46,7 +48,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-crix-vac_pragmas.html">Pragmas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-crix-vac_nc.html">NC Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lcls-plc-crix-vac_ethercat.html">Box Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcls-plc-crix-vac_ethercat.html">EtherCAT Terminals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-crix-vac_boxes.html">Boxes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lcls-plc-crix-vac_links.html">Links</a></li>
 </ul>
@@ -124,9 +126,9 @@
            <div itemprop="articleBody">
              
   <section id="duts">
-<h1>DUTs<a class="headerlink" href="#duts" title="Permalink to this heading"></a></h1>
+<h1>DUTs<a class="headerlink" href="#duts" title="Link to this heading"></a></h1>
 <section id="e-states">
-<h2>E_STATES<a class="headerlink" href="#e-states" title="Permalink to this heading"></a></h2>
+<h2>E_STATES<a class="headerlink" href="#e-states" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;strict&#39;</span><span class="p">}</span>
 <span class="n">TYPE</span> <span class="n">E_STATES</span> <span class="p">:</span>
@@ -149,9 +151,9 @@
 </section>
 </section>
 <section id="gvls">
-<h1>GVLs<a class="headerlink" href="#gvls" title="Permalink to this heading"></a></h1>
+<h1>GVLs<a class="headerlink" href="#gvls" title="Link to this heading"></a></h1>
 <section id="gvl-ads-devices">
-<h2>GVL_ADS_Devices<a class="headerlink" href="#gvl-ads-devices" title="Permalink to this heading"></a></h2>
+<h2>GVL_ADS_Devices<a class="headerlink" href="#gvl-ads-devices" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
 
@@ -165,7 +167,7 @@
 </div>
 </section>
 <section id="gvl-chamber-gauges">
-<h2>GVL_Chamber_Gauges<a class="headerlink" href="#gvl-chamber-gauges" title="Permalink to this heading"></a></h2>
+<h2>GVL_Chamber_Gauges<a class="headerlink" href="#gvl-chamber-gauges" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="p">(</span><span class="o">*</span> <span class="n">Pirani</span> <span class="o">&amp;</span> <span class="n">Cold</span> <span class="n">Cathode</span><span class="o">*</span><span class="p">)</span>
@@ -232,7 +234,7 @@
 </div>
 </section>
 <section id="gvl-chamber-valves">
-<h2>GVL_Chamber_Valves<a class="headerlink" href="#gvl-chamber-valves" title="Permalink to this heading"></a></h2>
+<h2>GVL_Chamber_Valves<a class="headerlink" href="#gvl-chamber-valves" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
 
@@ -272,7 +274,6 @@
                                 <span class="o">.</span><span class="n">q_xOPN_DO</span>  <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E21</span> <span class="p">(</span><span class="n">EL2004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">3</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
 
     <span class="n">TC_VRC_03</span> <span class="p">:</span> <span class="n">FB_VRC</span><span class="p">;</span>
-
     <span class="n">stTC_VRC_03</span> <span class="p">:</span> <span class="n">ST_VRC</span><span class="p">;</span>
 
 
@@ -287,16 +288,13 @@
 
     <span class="p">(</span><span class="o">*</span>
     <span class="n">stCRIX_VGC_03</span> <span class="p">:</span> <span class="n">ST_VRC</span><span class="p">;</span>
-
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:VGC:07 &#39;</span><span class="p">}</span>
+    <span class="o">*</span><span class="p">)</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:SDS:VRC:03 &#39;</span><span class="p">}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xOpnLS      :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E25 (EL1004)^Channel 3^Input;</span>
                                  <span class="o">.</span><span class="n">i_xClsLS</span>  <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E25</span> <span class="p">(</span><span class="n">EL1004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">4</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
                                 <span class="o">.</span><span class="n">q_xOPN_DO</span>  <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E24</span> <span class="p">(</span><span class="n">EL2004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
 
-    <span class="n">CRIX_VGC_07</span> <span class="p">:</span> <span class="n">FB_VRC</span><span class="p">;</span>
-
-    <span class="n">stCRIX_VGC_07</span> <span class="p">:</span> <span class="n">ST_VRC</span><span class="p">;</span>
-    <span class="o">*</span><span class="p">)</span>
+    <span class="n">SDS_VRC_03</span> <span class="p">:</span> <span class="n">FB_VRC</span><span class="p">;</span>
 
     <span class="o">///</span> <span class="n">Entry</span> <span class="ow">and</span> <span class="n">Exit</span> <span class="n">Valves</span> <span class="k">for</span> <span class="n">Target</span> <span class="n">Chamber</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:MAIN:VGC:01 &#39;</span><span class="p">}</span>
@@ -374,6 +372,17 @@
 
     <span class="n">stSDS_VRC_01</span> <span class="p">:</span> <span class="n">ST_VRC</span><span class="p">;</span>
 
+     <span class="o">//</span> <span class="n">Vent</span> <span class="n">Package</span> <span class="n">Valves</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:SDS:VVC:01 &#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xClsLS      :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E40 (EL1004)^Channel 3^Input;</span>
+                                <span class="o">.</span><span class="n">q_xOPN_DO</span>  <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E39</span> <span class="p">(</span><span class="n">EL2004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">1</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
+    <span class="n">SDS_VVC_01</span> <span class="p">:</span> <span class="n">FB_VRC_NC_ClsLs</span><span class="p">;</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:SDS:VVC:02 &#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xClsLS      :=      TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E40 (EL1004)^Channel 4^Input;</span>
+                                <span class="o">.</span><span class="n">q_xOPN_DO</span>  <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">2</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">Hoffman</span> <span class="n">Box</span> <span class="n">Vac</span> <span class="n">EK1</span> <span class="p">(</span><span class="n">EK1100</span><span class="p">)</span><span class="o">^</span><span class="n">E39</span> <span class="p">(</span><span class="n">EL2004</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
+    <span class="n">SDS_VVC_02</span> <span class="p">:</span> <span class="n">FB_VRC_NC_ClsLs</span><span class="p">;</span>
+
 
 <span class="n">END_VAR</span>
 </pre></div>
@@ -386,7 +395,7 @@
 </dl>
 </section>
 <section id="gvl-com">
-<h2>GVL_COM<a class="headerlink" href="#gvl-com" title="Permalink to this heading"></a></h2>
+<h2>GVL_COM<a class="headerlink" href="#gvl-com" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="o">//</span> <span class="n">PTM</span><span class="o">-</span><span class="mi">03</span> <span class="n">on</span> <span class="n">CH2</span><span class="p">,</span> <span class="n">PTM</span><span class="o">-</span><span class="mi">04</span> <span class="n">on</span> <span class="n">CH1</span>
@@ -513,7 +522,7 @@
 </div>
 </section>
 <section id="gvl-com-vls">
-<h2>GVL_COM_VLS<a class="headerlink" href="#gvl-com-vls" title="Permalink to this heading"></a></h2>
+<h2>GVL_COM_VLS<a class="headerlink" href="#gvl-com-vls" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="o">//</span> <span class="n">Define</span> <span class="n">COM</span> <span class="n">Ports</span><span class="o">/</span><span class="n">Buffers</span> <span class="n">incl</span><span class="o">.</span> <span class="n">library</span> <span class="n">Tc2_SerialCom</span>
@@ -583,7 +592,7 @@
 </div>
 </section>
 <section id="gvl-li3k2">
-<h2>GVL_LI3K2<a class="headerlink" href="#gvl-li3k2" title="Permalink to this heading"></a></h2>
+<h2>GVL_LI3K2<a class="headerlink" href="#gvl-li3k2" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
 
@@ -602,7 +611,7 @@
 </div>
 </section>
 <section id="gvl-mech-room">
-<h2>GVL_Mech_Room<a class="headerlink" href="#gvl-mech-room" title="Permalink to this heading"></a></h2>
+<h2>GVL_Mech_Room<a class="headerlink" href="#gvl-mech-room" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
 
@@ -634,7 +643,7 @@
 </div>
 </section>
 <section id="gvl-plc-interfaces">
-<h2>GVL_PLC_Interfaces<a class="headerlink" href="#gvl-plc-interfaces" title="Permalink to this heading"></a></h2>
+<h2>GVL_PLC_Interfaces<a class="headerlink" href="#gvl-plc-interfaces" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="p">(</span><span class="o">*</span><span class="n">CRIX</span> <span class="n">Vac</span><span class="o">*</span><span class="p">)</span>
@@ -717,7 +726,7 @@
 </div>
 </section>
 <section id="gvl-pmps">
-<h2>GVL_PMPS<a class="headerlink" href="#gvl-pmps" title="Permalink to this heading"></a></h2>
+<h2>GVL_PMPS<a class="headerlink" href="#gvl-pmps" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;pv: PLC:CRIXS:VAC:FFO:01&#39;</span><span class="p">}</span>
@@ -736,7 +745,7 @@
 </div>
 </section>
 <section id="gvl-pumps">
-<h2>GVL_Pumps<a class="headerlink" href="#gvl-pumps" title="Permalink to this heading"></a></h2>
+<h2>GVL_Pumps<a class="headerlink" href="#gvl-pumps" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
 
@@ -812,7 +821,7 @@
 </div>
 </section>
 <section id="gvl-recirculation">
-<h2>GVL_Recirculation<a class="headerlink" href="#gvl-recirculation" title="Permalink to this heading"></a></h2>
+<h2>GVL_Recirculation<a class="headerlink" href="#gvl-recirculation" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="p">(</span><span class="o">*</span> <span class="n">OverrideMode</span> <span class="o">*</span><span class="p">)</span>
@@ -880,7 +889,7 @@
 </div>
 </section>
 <section id="gvl-vars">
-<h2>GVL_Vars<a class="headerlink" href="#gvl-vars" title="Permalink to this heading"></a></h2>
+<h2>GVL_Vars<a class="headerlink" href="#gvl-vars" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
@@ -897,7 +906,7 @@
 </div>
 </section>
 <section id="gvl-vls">
-<h2>GVL_VLS<a class="headerlink" href="#gvl-vls" title="Permalink to this heading"></a></h2>
+<h2>GVL_VLS<a class="headerlink" href="#gvl-vls" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;qualified_only&#39;</span><span class="p">}</span>
 <span class="n">VAR_GLOBAL</span>
 
@@ -968,9 +977,9 @@
 </section>
 </section>
 <section id="pous">
-<h1>POUs<a class="headerlink" href="#pous" title="Permalink to this heading"></a></h1>
+<h1>POUs<a class="headerlink" href="#pous" title="Link to this heading"></a></h1>
 <section id="fb-chemrixs-turbo-ilk">
-<h2>FB_ChemRIXS_Turbo_ILK<a class="headerlink" href="#fb-chemrixs-turbo-ilk" title="Permalink to this heading"></a></h2>
+<h2>FB_ChemRIXS_Turbo_ILK<a class="headerlink" href="#fb-chemrixs-turbo-ilk" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_ChemRIXS_Turbo_ILK</span>
 <span class="n">VAR_INPUT</span>
     <span class="n">i_stValve</span> <span class="p">:</span> <span class="n">ST_ValveBase</span><span class="p">;</span>
@@ -994,7 +1003,7 @@
 </div>
 </section>
 <section id="main">
-<h2>MAIN<a class="headerlink" href="#main" title="Permalink to this heading"></a></h2>
+<h2>MAIN<a class="headerlink" href="#main" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">MAIN</span>
 <span class="n">VAR</span>
 <span class="n">END_VAR</span>
@@ -1036,7 +1045,7 @@
 </dl>
 </section>
 <section id="prg-ads-gauges">
-<h2>PRG_ADS_Gauges<a class="headerlink" href="#prg-ads-gauges" title="Permalink to this heading"></a></h2>
+<h2>PRG_ADS_Gauges<a class="headerlink" href="#prg-ads-gauges" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_ADS_Gauges</span>
 <span class="n">VAR</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:TM2K2:GCC:01 &#39;</span><span class="p">}</span>
@@ -1067,7 +1076,7 @@
 </div>
 </section>
 <section id="prg-ads-interfaces">
-<h2>PRG_ADS_Interfaces<a class="headerlink" href="#prg-ads-interfaces" title="Permalink to this heading"></a></h2>
+<h2>PRG_ADS_Interfaces<a class="headerlink" href="#prg-ads-interfaces" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_ADS_Interfaces</span>
 <span class="n">VAR</span>
 
@@ -1101,7 +1110,7 @@
 </div>
 </section>
 <section id="prg-chamber-gauges">
-<h2>PRG_Chamber_Gauges<a class="headerlink" href="#prg-chamber-gauges" title="Permalink to this heading"></a></h2>
+<h2>PRG_Chamber_Gauges<a class="headerlink" href="#prg-chamber-gauges" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_Chamber_Gauges</span>
 <span class="n">VAR</span>
 <span class="n">END_VAR</span>
@@ -1137,7 +1146,7 @@
 </div>
 </section>
 <section id="prg-chamber-pumps">
-<h2>PRG_Chamber_Pumps<a class="headerlink" href="#prg-chamber-pumps" title="Permalink to this heading"></a></h2>
+<h2>PRG_Chamber_Pumps<a class="headerlink" href="#prg-chamber-pumps" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_Chamber_Pumps</span>
 <span class="n">VAR</span>
 
@@ -1257,7 +1266,7 @@
 </dl>
 </section>
 <section id="prg-chamber-valves">
-<h2>PRG_Chamber_Valves<a class="headerlink" href="#prg-chamber-valves" title="Permalink to this heading"></a></h2>
+<h2>PRG_Chamber_Valves<a class="headerlink" href="#prg-chamber-valves" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_Chamber_Valves</span>
 <span class="n">VAR</span>
     <span class="n">bRoughPressOK</span> <span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">;</span>
@@ -1301,11 +1310,11 @@
     <span class="n">dummy_FFFO</span> <span class="p">:</span> <span class="n">FB_HardwareFFOutput</span><span class="p">;</span>
     <span class="n">dummy_fbArbiter1</span>    <span class="p">:</span>   <span class="n">FB_Arbiter</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 
-
-
+    <span class="n">bSDS_VVC_VENT_OK</span> <span class="p">:</span> <span class="n">BOOL</span> <span class="o">:=</span> <span class="kc">False</span><span class="p">;</span>
 
 <span class="o">//</span>  <span class="n">bVGC_16_OPN_OK</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 <span class="o">//</span>  <span class="n">bVGC_16_CLS_OK</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+    <span class="n">bSDS_VRC_03_ILK</span><span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 <span class="n">END_VAR</span>
 <span class="p">(</span><span class="o">*</span> <span class="n">Roughing</span> <span class="n">manifold</span> <span class="n">logic</span> <span class="o">*</span><span class="p">)</span>
 
@@ -1329,7 +1338,7 @@
                 <span class="n">stCRIX_VGC_06</span><span class="o">.</span><span class="n">i_xClsLS</span> <span class="n">AND</span> <span class="n">stCRIX_VGC_07</span><span class="o">.</span><span class="n">i_xClsLS</span><span class="p">)</span> <span class="n">AND</span> <span class="n">F_RoughPumpInlet_ILK</span><span class="p">(</span><span class="n">ScrollPump</span><span class="o">:=</span><span class="n">stCRIX_MECH_PRO_01</span><span class="p">)</span> <span class="n">AND</span>
                 <span class="n">CRIX_GPI_05</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">xAT_VAC</span><span class="p">;</span>
 <span class="o">*</span><span class="p">)</span>
-<span class="n">bChamberAtVac</span> <span class="o">:=</span> <span class="p">(</span><span class="n">TC_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">&lt;</span> <span class="mf">0.005</span><span class="p">);</span>
+<span class="n">bChamberAtVac</span> <span class="o">:=</span> <span class="p">(</span><span class="n">TC_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">&lt;</span> <span class="mf">0.003</span><span class="p">);</span>
 <span class="n">IF</span> <span class="p">(</span><span class="n">bChamberAtVac</span><span class="p">)</span> <span class="n">THEN</span>
     <span class="n">TC_VRC_01</span><span class="o">.</span><span class="n">i_xExt_OK</span> <span class="o">:=</span> <span class="n">F_TurboGateValve_Protection_ILK</span><span class="p">(</span><span class="n">i_Turbo</span><span class="o">:=</span><span class="n">TC_PTM_01</span><span class="o">.</span><span class="n">iq_stPtm</span><span class="p">,</span>
                                                              <span class="n">i_stISG</span><span class="o">:=</span><span class="n">TC_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>
@@ -1506,6 +1515,12 @@
             <span class="n">i_xOverrideMode</span><span class="o">:=</span><span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
             <span class="n">iq_stValve</span> <span class="o">=&gt;</span><span class="p">);</span>
 
+<span class="n">bSDS_VRC_03_ILK</span> <span class="o">:=</span> <span class="n">SDS_VGC_01</span><span class="o">.</span><span class="n">M_IsClosed</span><span class="p">()</span> <span class="n">AND</span> <span class="n">SDS_VRC_02</span><span class="o">.</span><span class="n">M_IsClosed</span><span class="p">()</span> <span class="n">AND</span> <span class="n">SDS_VRC_01</span><span class="o">.</span><span class="n">M_IsClosed</span><span class="p">();</span>
+
+<span class="n">SDS_VRC_03</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span><span class="n">bSDS_VRC_03_ILK</span><span class="p">,</span>
+            <span class="n">i_xOverrideMode</span><span class="o">:=</span><span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
+            <span class="n">iq_stValve</span> <span class="o">=&gt;</span><span class="p">);</span>
+
 
 <span class="p">(</span><span class="o">*</span> <span class="n">PLC</span> <span class="n">interfaces</span> <span class="n">to</span> <span class="n">Motion</span> <span class="n">PLC</span> <span class="o">*</span><span class="p">)</span>
 <span class="n">bCRYO_VGC_01_CLS</span> <span class="o">:=</span> <span class="n">CRYO_VGC_01</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xClsLS</span><span class="p">;</span>
@@ -1514,6 +1529,22 @@
 <span class="n">bCRYO_VGC_02_OPN</span> <span class="o">:=</span> <span class="n">CRYO_VGC_02</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xOpnLS</span><span class="p">;</span>
 <span class="n">bSDS_VGC_01_CLS</span> <span class="o">:=</span> <span class="n">SDS_VGC_01</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xClsLS</span><span class="p">;</span>
 <span class="n">bSDS_VGC_01_OPN</span> <span class="o">:=</span> <span class="n">SDS_VGC_01</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xOpnLS</span><span class="p">;</span>
+
+<span class="p">(</span><span class="o">*</span> <span class="n">Vent</span> <span class="n">Package</span> <span class="o">*</span><span class="p">)</span>
+
+<span class="n">bSDS_VVC_VENT_OK</span> <span class="o">:=</span> <span class="n">SDS_VGC_01</span><span class="o">.</span><span class="n">M_IsClosed</span><span class="p">()</span> <span class="n">AND</span> <span class="n">SDS_VRC_02</span><span class="o">.</span><span class="n">M_IsClosed</span><span class="p">();</span>
+
+<span class="n">SDS_VVC_01</span> <span class="p">(</span>
+    <span class="n">i_xExtILK_OK</span> <span class="o">:=</span> <span class="n">bSDS_VVC_VENT_OK</span><span class="p">,</span>
+    <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
+    <span class="n">iq_stValve</span> <span class="o">=&gt;</span>
+<span class="p">);</span>
+
+<span class="n">SDS_VVC_02</span> <span class="p">(</span>
+    <span class="n">i_xExtILK_OK</span> <span class="o">:=</span> <span class="n">bSDS_VVC_VENT_OK</span><span class="p">,</span>
+    <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
+    <span class="n">iq_stValve</span> <span class="o">=&gt;</span>
+<span class="p">);</span>
 
 <span class="n">END_PROGRAM</span>
 </pre></div>
@@ -1528,7 +1559,7 @@
 </dl>
 </section>
 <section id="prg-com">
-<h2>PRG_Com<a class="headerlink" href="#prg-com" title="Permalink to this heading"></a></h2>
+<h2>PRG_Com<a class="headerlink" href="#prg-com" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_Com</span>
 <span class="n">VAR</span>
 <span class="n">END_VAR</span>
@@ -1560,7 +1591,7 @@
 </div>
 </section>
 <section id="prg-com-vls">
-<h2>PRG_COM_VLS<a class="headerlink" href="#prg-com-vls" title="Permalink to this heading"></a></h2>
+<h2>PRG_COM_VLS<a class="headerlink" href="#prg-com-vls" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_COM_VLS</span>
 <span class="n">VAR</span>
 <span class="n">END_VAR</span>
@@ -1579,7 +1610,7 @@
 </div>
 </section>
 <section id="prg-li3k2">
-<h2>PRG_LI3K2<a class="headerlink" href="#prg-li3k2" title="Permalink to this heading"></a></h2>
+<h2>PRG_LI3K2<a class="headerlink" href="#prg-li3k2" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>FUNCTION_BLOCK PRG_LI3K2
 VAR_INPUT
 END_VAR
@@ -1595,7 +1626,7 @@ END_FUNCTION_BLOCK
 </div>
 </section>
 <section id="prg-mechanical-room">
-<h2>PRG_Mechanical_Room<a class="headerlink" href="#prg-mechanical-room" title="Permalink to this heading"></a></h2>
+<h2>PRG_Mechanical_Room<a class="headerlink" href="#prg-mechanical-room" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_Mechanical_Room</span>
 <span class="n">VAR</span>
     <span class="o">//</span><span class="n">stGauge</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
@@ -1627,7 +1658,7 @@ END_FUNCTION_BLOCK
 </div>
 </section>
 <section id="prg-mps">
-<h2>PRG_MPS<a class="headerlink" href="#prg-mps" title="Permalink to this heading"></a></h2>
+<h2>PRG_MPS<a class="headerlink" href="#prg-mps" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_MPS</span>
 <span class="n">VAR</span>
 <span class="n">fbArbiterIO</span><span class="p">:</span> <span class="n">FB_SubSysToArbiter_IO</span><span class="p">;</span>
@@ -1673,13 +1704,17 @@ END_FUNCTION_BLOCK
 </dl>
 </section>
 <section id="prg-rcc">
-<h2>PRG_RCC<a class="headerlink" href="#prg-rcc" title="Permalink to this heading"></a></h2>
+<h2>PRG_RCC<a class="headerlink" href="#prg-rcc" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_RCC</span>
 <span class="n">VAR</span>
     <span class="n">RCC_VRC_01_OPEN_OK</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
     <span class="n">RCC_VRC_02_OPEN_OK</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
     <span class="n">RCC_VRC_03_OPEN_OK</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
     <span class="n">RCC_VRC_04_OPEN_OK</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
+
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIXS:RCC:GCP:01:ILK_Setpoint &#39;</span><span class="p">}</span>
+    <span class="n">RCC_GCP_01_INTERLOCK_SETPOINT</span> <span class="p">:</span> <span class="n">REAL</span> <span class="o">:=</span> <span class="mi">10</span><span class="p">;</span>
 
 <span class="n">END_VAR</span>
 <span class="n">RCC_GCP_01</span><span class="p">(</span><span class="n">PG</span><span class="o">=&gt;</span><span class="p">);</span>
@@ -1703,8 +1738,8 @@ END_FUNCTION_BLOCK
                 <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode_RCC</span><span class="p">,</span>
                  <span class="n">iq_stValve</span><span class="o">=&gt;</span> <span class="p">);</span>
 
-<span class="p">(</span><span class="o">*</span> <span class="n">Valve</span> <span class="n">can</span> <span class="nb">open</span> <span class="n">only</span> <span class="n">when</span> <span class="n">CRIX</span><span class="o">-</span><span class="n">RCC</span><span class="o">-</span><span class="n">GCP</span><span class="o">-</span><span class="mi">01</span> <span class="n">reading</span> <span class="o">&lt;</span><span class="mi">10</span> <span class="n">Torr</span> <span class="ow">and</span> <span class="n">CRIX</span><span class="o">-</span><span class="n">RCC</span><span class="o">-</span><span class="n">VRC</span><span class="o">-</span><span class="mi">01</span> <span class="ow">and</span> <span class="mi">04</span> <span class="n">are</span> <span class="n">closed</span><span class="o">*</span><span class="p">)</span>
-<span class="n">RCC_VRC_03_OPEN_OK</span> <span class="o">:=</span> <span class="p">(</span><span class="n">RCC_GCP_01</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">RCC_GCP_01</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">xPRESS_OK</span> <span class="p">)</span> <span class="n">AND</span>
+<span class="p">(</span><span class="o">*</span> <span class="n">Valve</span> <span class="n">can</span> <span class="nb">open</span> <span class="n">only</span> <span class="n">when</span> <span class="n">CRIX</span><span class="o">-</span><span class="n">RCC</span><span class="o">-</span><span class="n">GCP</span><span class="o">-</span><span class="mi">01</span> <span class="n">reading</span> <span class="o">&lt;</span> <span class="n">setpoint</span> <span class="n">Torr</span> <span class="ow">and</span> <span class="n">CRIX</span><span class="o">-</span><span class="n">RCC</span><span class="o">-</span><span class="n">VRC</span><span class="o">-</span><span class="mi">01</span> <span class="ow">and</span> <span class="mi">04</span> <span class="n">are</span> <span class="n">closed</span><span class="o">*</span><span class="p">)</span>
+<span class="n">RCC_VRC_03_OPEN_OK</span> <span class="o">:=</span> <span class="p">(</span><span class="n">RCC_GCP_01</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">&lt;</span> <span class="n">RCC_GCP_01_INTERLOCK_SETPOINT</span> <span class="ow">and</span> <span class="n">RCC_GCP_01</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">xPRESS_OK</span> <span class="p">)</span> <span class="n">AND</span>
                                  <span class="p">(</span> <span class="n">RCC_VRC_01</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xClsLS</span> <span class="n">AND</span> <span class="n">NOT</span> <span class="n">RCC_VRC_01</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">q_xOPN_DO</span> <span class="p">)</span> <span class="n">AND</span>
                                               <span class="p">(</span> <span class="n">RCC_VRC_04</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xClsLS</span> <span class="n">AND</span> <span class="n">NOT</span> <span class="n">RCC_VRC_04</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">q_xOPN_DO</span> <span class="p">);</span>
 
@@ -1725,7 +1760,7 @@ END_FUNCTION_BLOCK
 </div>
 </section>
 <section id="prg-vls-turbo">
-<h2>PRG_VLS_Turbo<a class="headerlink" href="#prg-vls-turbo" title="Permalink to this heading"></a></h2>
+<h2>PRG_VLS_Turbo<a class="headerlink" href="#prg-vls-turbo" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_VLS_Turbo</span>
 <span class="n">VAR</span>
 
@@ -1782,7 +1817,7 @@ END_FUNCTION_BLOCK
 </dl>
 </section>
 <section id="prg-vls-vacuum">
-<h2>PRG_VLS_VACUUM<a class="headerlink" href="#prg-vls-vacuum" title="Permalink to this heading"></a></h2>
+<h2>PRG_VLS_VACUUM<a class="headerlink" href="#prg-vls-vacuum" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_VLS_VACUUM</span>
 <span class="n">VAR</span>
 
@@ -1813,7 +1848,7 @@ END_FUNCTION_BLOCK
 </dl>
 </section>
 <section id="prg-vls-window">
-<h2>PRG_VLS_WINDOW<a class="headerlink" href="#prg-vls-window" title="Permalink to this heading"></a></h2>
+<h2>PRG_VLS_WINDOW<a class="headerlink" href="#prg-vls-window" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PROGRAM PRG_VLS_WINDOW
 VAR
     xFirstPass              : BOOL;
@@ -1972,7 +2007,7 @@ END_PROGRAM
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, SLAC National Accelerator Laboratory.</p>
+    <p>&#169; Copyright 2024, SLAC National Accelerator Laboratory.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
