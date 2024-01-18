@@ -28,9 +28,6 @@
 		</Plc>
 		<Io>
 			<Device File="Device 1 (EtherCAT).xti" Id="1"/>
-			<Device File="Device 4 (RT-Ethernet Protocol).xti" Id="4"/>
-			<Device File="Device 3 (USB).xti" Id="3"/>
-			<Device File="Device 5 (NOV-DP-RAM).xti" Id="5"/>
 		</Io>
 	</Project>
 	<Mappings>

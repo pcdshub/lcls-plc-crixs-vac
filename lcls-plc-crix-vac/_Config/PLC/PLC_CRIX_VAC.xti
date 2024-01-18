@@ -974,6 +974,99 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_01.i_xClsLS</Name>
+					<Comment>
+						<![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_02.i_xOpnLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_02.i_xClsLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_03.i_xClsLS</Name>
+					<Comment>
+						<![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_04.i_xClsLS</Name>
+					<Comment>
+						<![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_GCP_01.xPress_OK</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_GCP_01.xOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_GCP_01.xUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_GCP_01.i_iPRESS_R</Name>
+					<Comment>
+						<![CDATA[ input Pressure // Link to analog Input]]>
+					</Comment>
+					<Type>REAL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_GCP_01.bWcstate</Name>
+					<Comment>
+						<![CDATA[ 0: date valid, 1: date invalid]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_STC_01.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_STC_01.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_STC_01.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_STC_01.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_STC_02.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_STC_02.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_STC_02.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_STC_02.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>GVL_VLS.VLS_PTM_01.i_xAtSpd</Name>
 					<Comment>
 						<![CDATA[ Normaml operation when true]]>
@@ -1050,83 +1143,6 @@ ETHERCAT BRRIDGE COM STATUS
 					<Comment>
 						<![CDATA[ input Pressure // Link to analog Input]]>
 					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_01.i_xClsLS</Name>
-					<Comment>
-						<![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_02.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_02.i_xClsLS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_03.i_xClsLS</Name>
-					<Comment>
-						<![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_04.i_xClsLS</Name>
-					<Comment>
-						<![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_GCP_01.xPress_OK</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_GCP_01.xOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_GCP_01.xUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_GCP_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
-					<Type>REAL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_GCP_01.bWcstate</Name>
-					<Comment>
-						<![CDATA[ 0: date valid, 1: date invalid]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_STC_01.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_STC_01.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_STC_01.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_STC_01.iRaw</Name>
 					<Type>INT</Type>
 				</Var>
 			</Vars>
@@ -1463,6 +1479,22 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_01.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_02.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_03.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_04.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_VLS.VLS_PTM_01.q_RunDO</Name>
 					<Comment>
 						<![CDATA[ Start/Stop for TC110 link this output to the Pumping station bit]]>
@@ -1497,22 +1529,6 @@ ETHERCAT BRRIDGE COM STATUS
 					<Comment>
 						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
 					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_01.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_02.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_03.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_04.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
@@ -2141,6 +2157,10 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_01.bOverrange" VarB="TC Inputs Channel 3^Status^Overrange" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_01.bUnderrange" VarB="TC Inputs Channel 3^Status^Underrange" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_01.iRaw" VarB="TC Inputs Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_02.bError" VarB="TC Inputs Channel 4^Status^Error" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_02.bOverrange" VarB="TC Inputs Channel 4^Status^Overrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_02.bUnderrange" VarB="TC Inputs Channel 4^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_02.iRaw" VarB="TC Inputs Channel 4^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)">
 				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_GCP_01.bWcstate" VarB="WcState^WcState" AutoLink="true"/>
