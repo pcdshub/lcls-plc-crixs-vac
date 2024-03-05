@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="PRG_RCC" Id="{89e03fdd-ce79-4cd4-8b3e-f2ec4b282ec5}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_RCC
 VAR
@@ -9,7 +9,7 @@ VAR
     RCC_VRC_04_OPEN_OK : BOOL;
 
 
-    {attribute 'pytmc' :=' pv: CRIXS:GCP:01:INLK_Setpoint '}
+    {attribute 'pytmc' :=' pv: CRIXS:RCC:GCP:01:ILK_Setpoint '}
     RCC_GCP_01_INTERLOCK_SETPOINT : REAL := 10;
 
 END_VAR
