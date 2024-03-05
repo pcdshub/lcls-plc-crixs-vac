@@ -74,7 +74,7 @@ bVGC_02_ILK := (stCRIX_VGC_01.i_xClsLS AND stCRIX_VGC_03.i_xClsLS AND stCRIX_VGC
                 stCRIX_VGC_06.i_xClsLS AND stCRIX_VGC_07.i_xClsLS) AND F_RoughPumpInlet_ILK(ScrollPump:=stCRIX_MECH_PRO_01) AND
                 CRIX_GPI_05.PG.xAT_VAC;
 *)
-bChamberAtVac := (TC_GPI_01.PG.rPRESS < 0.005);
+bChamberAtVac := (TC_GPI_01.PG.rPRESS < 0.003);
 IF (bChamberAtVac) THEN
     TC_VRC_01.i_xExt_OK := F_TurboGateValve_Protection_ILK(i_Turbo:=TC_PTM_01.iq_stPtm,
                                                              i_stISG:=TC_GPI_01.PG,

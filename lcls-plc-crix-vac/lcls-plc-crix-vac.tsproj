@@ -9,8 +9,8 @@
 					</CustomComment>
 					<ManualSelect>{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</ManualSelect>
 					<TargetSelect TargetId="2">{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</TargetSelect>
-					<TargetSelect TargetId="2">{BCA6EE0A-9CE1-4D3F-98CA-413ABC0D94FD}</TargetSelect>
 					<TargetSelect TargetId="2">{66689887-CCBD-452C-AC9A-039D997C6E66}</TargetSelect>
+					<TargetSelect TargetId="2">{BCA6EE0A-9CE1-4D3F-98CA-413ABC0D94FD}</TargetSelect>
 					<LicenseDevice DongleHardwareId="2" DongleDevice="#x0302002f" DongleSystemId="{D99DB62F-1B2C-5CD1-8021-EBCB8B81E148}"/>
 				</Target>
 			</Licenses>
@@ -28,13 +28,9 @@
 		</Plc>
 		<Io>
 			<Device File="Device 1 (EtherCAT).xti" Id="1"/>
-			<Device File="Device 4 (RT-Ethernet Protocol).xti" Id="4"/>
-			<Device File="Device 3 (USB).xti" Id="3"/>
-			<Device File="Device 5 (NOV-DP-RAM).xti" Id="5"/>
 		</Io>
 	</Project>
 	<Mappings>
-		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
-		<MappingInfo Identifier="{00000000-2002-0850-0120-500821000403}" Id="#x02030020"/>
+		<MappingInfo Identifier="{00000000-2002-0850-0020-500810000403}" Id="#x02030010"/>
 	</Mappings>
 </TcSmProject>
