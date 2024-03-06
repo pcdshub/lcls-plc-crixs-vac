@@ -53015,3 +53015,25 @@ record(bi, "$(PREFIX)RequestedBP:Valid_RBV") {
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "monitor 1: VAL")
 }
+
+record(ai, "CRIXS:RCC:GCP:01:ILK_Setpoint_RBV") {
+  field(DESC, "PRG_RCC.RCC_GCP_01_INTERLOCK_SETPOINT")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_RCC.RCC_GCP_01_INTERLOCK_SETPOINT?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(ao, "CRIXS:RCC:GCP:01:ILK_Setpoint") {
+  field(DESC, "PRG_RCC.RCC_GCP_01_INTERLOCK_SETPOINT")
+  field(DTYP, "asynFloat64")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_RCC.RCC_GCP_01_INTERLOCK_SETPOINT=")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
+  info(archive, "VAL")
+}
