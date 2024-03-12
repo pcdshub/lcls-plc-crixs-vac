@@ -223,10 +223,10 @@ CRYO_VGC_02(
 
 
 (*cold trap roughing valves*)
-bCRYO_VRC_01_OPN_OK := (CRYO_VGC_01.iq_stValve.i_xClsLS AND CRYO_VRC_02.iq_stValve.i_xClsLS) AND
+bCRYO_VRC_01_OPN_OK := (CRYO_VGC_01.iq_stValve.i_xClsLS) AND
                         (CRYO_GPI_01.PG.rPRESS < 0.050 AND CRYO_GCP_01.PG.rPRESS < 0.050);
 
-bCRYO_VRC_02_OPN_OK := (CRYO_VGC_02.iq_stValve.i_xClsLS AND CRYO_VRC_01.iq_stValve.i_xClsLS) AND
+bCRYO_VRC_02_OPN_OK := (CRYO_VGC_02.iq_stValve.i_xClsLS) AND
                         (CRYO_GPI_01.PG.rPRESS < 0.050 AND CRYO_GCP_02.PG.rPRESS < 0.050);
 
 CRYO_VRC_01(i_xExtILK_OK:= bCRYO_VRC_01_OPN_OK , i_xOverrideMode:= xSystemOverride_ChemRIXS, iq_stValve=> );
