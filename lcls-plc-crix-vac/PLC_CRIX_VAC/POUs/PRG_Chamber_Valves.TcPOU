@@ -44,7 +44,16 @@ VAR
     dummy_FFFO : FB_HardwareFFOutput;
     dummy_fbArbiter1    :   FB_Arbiter(1);
 
+    // Vent Package Valves
+    {attribute 'pytmc' :=' pv: CRIXS:VPKG:VRC:01 '}
+    {attribute 'TcLinkTo' := 	'.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E40 (EL1004)^Channel 2^Input;
+                                .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E39 (EL2004)^Channel 1^Output'}
+    fbVP1 : FB_VRC_NC_ClsLs;
 
+    {attribute 'pytmc' :=' pv: CRIXS:VPKG:VRC:02 '}
+    {attribute 'TcLinkTo' := 	'.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E40 (EL1004)^Channel 4^Input;
+                                .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E39 (EL2004)^Channel 2^Output'}
+    fbVP2 : FB_VRC_NC_ClsLs;
 
 
 //	bVGC_16_OPN_OK: BOOL;
@@ -259,6 +268,19 @@ bCRYO_VGC_01_OPN := CRYO_VGC_01.iq_stValve.i_xOpnLS;
 bCRYO_VGC_02_OPN := CRYO_VGC_02.iq_stValve.i_xOpnLS;
 bSDS_VGC_01_CLS := SDS_VGC_01.iq_stValve.i_xClsLS;
 bSDS_VGC_01_OPN := SDS_VGC_01.iq_stValve.i_xOpnLS;
+
+(* Vent Package *)
+fbVP1 (
+    i_xExtILK_OK := True,
+    i_xOverrideMode := xSystemOverride_ChemRIXS,
+    iq_stValve =>
+);
+
+fbVP2 (
+    i_xExtILK_OK := True,
+    i_xOverrideMode := xSystemOverride_ChemRIXS,
+    iq_stValve =>
+);
 
 ]]></ST>
     </Implementation>
