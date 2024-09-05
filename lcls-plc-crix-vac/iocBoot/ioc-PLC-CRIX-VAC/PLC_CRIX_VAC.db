@@ -6954,6 +6954,654 @@ record(bo, "CRIXS:SDS:VRC:02:OVRD_ON") {
   info(archive, "VAL")
 }
 
+record(bi, "CRIXS:SDS:VVC:01:ERROR_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.bErrorPresent
+  field(DESC, "GVL_Chamber_Valves.S...lve.bErrorPresent")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.bErrorPresent?")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIXS:SDS:VVC:01:ERROR") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.bErrorPresent
+  field(DESC, "GVL_Chamber_Valves.S...lve.bErrorPresent")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.bErrorPresent=")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(mbbi, "CRIXS:SDS:VVC:01:POS_STATE_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.eState
+  field(DESC, "GVL_Chamber_Valves.S...iq_stValve.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(ZRST, "OPEN")
+  field(ONST, "CLOSED")
+  field(TWST, "MOVING")
+  field(THST, "INVALID")
+  field(FRST, "OPEN_F")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+}
+
+record(mbbi, "CRIXS:SDS:VVC:01:STATE_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.eVGC_State
+  field(DESC, "GVL_Chamber_Valves.S...tValve.eVGC_State")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.eVGC_State?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(FVVL, "5")
+  field(SXVL, "6")
+  field(SVVL, "7")
+  field(EIVL, "8")
+  field(NIVL, "9")
+  field(ZRST, "Vented")
+  field(ONST, "At Vacuum")
+  field(TWST, "Differential Pressure")
+  field(THST, "Lost Vacuum")
+  field(FRST, "Ext Fault")
+  field(FVST, "AT Vacuum")
+  field(SXST, "Triggered")
+  field(SVST, "Vacuum Fault")
+  field(EIST, "Close Timeout")
+  field(NIST, "Open Timeout")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:01:CLS_DI_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.i_xClsLS
+  field(DESC, "GVL_Chamber_Valves.S..._stValve.i_xClsLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.i_xClsLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "CLOSE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:01:OPN_DI_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.i_xOpnLS
+  field(DESC, "GVL_Chamber_Valves.S..._stValve.i_xOpnLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.i_xOpnLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:01:ALM_RST_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xAlmRst
+  field(DESC, "GVL_Chamber_Valves.S...tValve.pv_xAlmRst")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xAlmRst?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIXS:SDS:VVC:01:ALM_RST") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xAlmRst
+  field(DESC, "GVL_Chamber_Valves.S...tValve.pv_xAlmRst")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xAlmRst=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:01:OPN_SW_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xOPN_SW
+  field(DESC, "GVL_Chamber_Valves.S...tValve.pv_xOPN_SW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xOPN_SW?")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIXS:SDS:VVC:01:OPN_SW") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xOPN_SW
+  field(DESC, "GVL_Chamber_Valves.S...tValve.pv_xOPN_SW")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xOPN_SW=")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:01:FORCE_OPN_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xOvrdOpn
+  field(DESC, "GVL_Chamber_Valves.S...Valve.pv_xOvrdOpn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xOvrdOpn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIXS:SDS:VVC:01:FORCE_OPN") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xOvrdOpn
+  field(DESC, "GVL_Chamber_Valves.S...Valve.pv_xOvrdOpn")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.pv_xOvrdOpn=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE OPEN")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:01:OPN_DO_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.q_xOPN_DO
+  field(DESC, "GVL_Chamber_Valves.S...stValve.q_xOPN_DO")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.q_xOPN_DO?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(waveform, "CRIXS:SDS:VVC:01:ErrMsg_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.sErrorMessage
+  field(DESC, "GVL_Chamber_Valves.S...lve.sErrorMessage")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.sErrorMessage?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "CRIXS:SDS:VVC:01:ErrMsg") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.sErrorMessage
+  field(DESC, "GVL_Chamber_Valves.S...lve.sErrorMessage")
+  field(DTYP, "asynInt8ArrayOut")
+  field(UDFS, "0")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.sErrorMessage=")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:01:CLS_OK_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xCLS_OK
+  field(DESC, "GVL_Chamber_Valves.S...q_stValve.xCLS_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xCLS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:01:EXT_ILK_OK_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xEXT_OK
+  field(DESC, "GVL_Chamber_Valves.S...q_stValve.xEXT_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xEXT_OK?")
+  field(ZNAM, "NOT OK")
+  field(ONAM, "OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:01:LOGGER_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xLog
+  field(DESC, "GVL_Chamber_Valves.S...1.iq_stValve.xLog")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xLog?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIXS:SDS:VVC:01:LOGGER") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xLog
+  field(DESC, "GVL_Chamber_Valves.S...1.iq_stValve.xLog")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xLog=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:01:OPN_OK_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xOPN_OK
+  field(DESC, "GVL_Chamber_Valves.S...q_stValve.xOPN_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xOPN_OK?")
+  field(ZNAM, "OPN ILK NOT OK")
+  field(ONAM, "OPN ILK OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:01:OVRD_ON_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xOverrideMode
+  field(DESC, "GVL_Chamber_Valves.S...lve.xOverrideMode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xOverrideMode?")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIXS:SDS:VVC:01:OVRD_ON") {
+  # GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xOverrideMode
+  field(DESC, "GVL_Chamber_Valves.S...lve.xOverrideMode")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.SDS_VVC_01.iq_stValve.xOverrideMode=")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:02:ERROR_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.bErrorPresent
+  field(DESC, "GVL_Chamber_Valves.S...lve.bErrorPresent")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.bErrorPresent?")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIXS:SDS:VVC:02:ERROR") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.bErrorPresent
+  field(DESC, "GVL_Chamber_Valves.S...lve.bErrorPresent")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.bErrorPresent=")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(mbbi, "CRIXS:SDS:VVC:02:POS_STATE_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.eState
+  field(DESC, "GVL_Chamber_Valves.S...iq_stValve.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(ZRST, "OPEN")
+  field(ONST, "CLOSED")
+  field(TWST, "MOVING")
+  field(THST, "INVALID")
+  field(FRST, "OPEN_F")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+}
+
+record(mbbi, "CRIXS:SDS:VVC:02:STATE_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.eVGC_State
+  field(DESC, "GVL_Chamber_Valves.S...tValve.eVGC_State")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.eVGC_State?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(FVVL, "5")
+  field(SXVL, "6")
+  field(SVVL, "7")
+  field(EIVL, "8")
+  field(NIVL, "9")
+  field(ZRST, "Vented")
+  field(ONST, "At Vacuum")
+  field(TWST, "Differential Pressure")
+  field(THST, "Lost Vacuum")
+  field(FRST, "Ext Fault")
+  field(FVST, "AT Vacuum")
+  field(SXST, "Triggered")
+  field(SVST, "Vacuum Fault")
+  field(EIST, "Close Timeout")
+  field(NIST, "Open Timeout")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:02:CLS_DI_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.i_xClsLS
+  field(DESC, "GVL_Chamber_Valves.S..._stValve.i_xClsLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.i_xClsLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "CLOSE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:02:OPN_DI_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.i_xOpnLS
+  field(DESC, "GVL_Chamber_Valves.S..._stValve.i_xOpnLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.i_xOpnLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:02:ALM_RST_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xAlmRst
+  field(DESC, "GVL_Chamber_Valves.S...tValve.pv_xAlmRst")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xAlmRst?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIXS:SDS:VVC:02:ALM_RST") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xAlmRst
+  field(DESC, "GVL_Chamber_Valves.S...tValve.pv_xAlmRst")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xAlmRst=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:02:OPN_SW_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xOPN_SW
+  field(DESC, "GVL_Chamber_Valves.S...tValve.pv_xOPN_SW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xOPN_SW?")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIXS:SDS:VVC:02:OPN_SW") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xOPN_SW
+  field(DESC, "GVL_Chamber_Valves.S...tValve.pv_xOPN_SW")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xOPN_SW=")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:02:FORCE_OPN_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xOvrdOpn
+  field(DESC, "GVL_Chamber_Valves.S...Valve.pv_xOvrdOpn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xOvrdOpn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIXS:SDS:VVC:02:FORCE_OPN") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xOvrdOpn
+  field(DESC, "GVL_Chamber_Valves.S...Valve.pv_xOvrdOpn")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.pv_xOvrdOpn=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE OPEN")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:02:OPN_DO_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.q_xOPN_DO
+  field(DESC, "GVL_Chamber_Valves.S...stValve.q_xOPN_DO")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.q_xOPN_DO?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(waveform, "CRIXS:SDS:VVC:02:ErrMsg_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.sErrorMessage
+  field(DESC, "GVL_Chamber_Valves.S...lve.sErrorMessage")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.sErrorMessage?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+}
+
+record(waveform, "CRIXS:SDS:VVC:02:ErrMsg") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.sErrorMessage
+  field(DESC, "GVL_Chamber_Valves.S...lve.sErrorMessage")
+  field(DTYP, "asynInt8ArrayOut")
+  field(UDFS, "0")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.sErrorMessage=")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:02:CLS_OK_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xCLS_OK
+  field(DESC, "GVL_Chamber_Valves.S...q_stValve.xCLS_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xCLS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:02:EXT_ILK_OK_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xEXT_OK
+  field(DESC, "GVL_Chamber_Valves.S...q_stValve.xEXT_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xEXT_OK?")
+  field(ZNAM, "NOT OK")
+  field(ONAM, "OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:02:LOGGER_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xLog
+  field(DESC, "GVL_Chamber_Valves.S...2.iq_stValve.xLog")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xLog?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIXS:SDS:VVC:02:LOGGER") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xLog
+  field(DESC, "GVL_Chamber_Valves.S...2.iq_stValve.xLog")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xLog=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:02:OPN_OK_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xOPN_OK
+  field(DESC, "GVL_Chamber_Valves.S...q_stValve.xOPN_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xOPN_OK?")
+  field(ZNAM, "OPN ILK NOT OK")
+  field(ONAM, "OPN ILK OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SDS:VVC:02:OVRD_ON_RBV") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xOverrideMode
+  field(DESC, "GVL_Chamber_Valves.S...lve.xOverrideMode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xOverrideMode?")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+}
+
+record(bo, "CRIXS:SDS:VVC:02:OVRD_ON") {
+  # GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xOverrideMode
+  field(DESC, "GVL_Chamber_Valves.S...lve.xOverrideMode")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.SDS_VVC_02.iq_stValve.xOverrideMode=")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
 record(bi, "CRIXS:TC:VRC:01:Dis_DPIlk_RBV") {
   # GVL_Chamber_Valves.TC_VRC_01.i_xDis_DPIlk
   field(DESC, "GVL_Chamber_Valves.T...C_01.i_xDis_DPIlk")
@@ -53016,646 +53664,26 @@ record(bi, "$(PREFIX)RequestedBP:Valid_RBV") {
   info(archive, "monitor 1: VAL")
 }
 
-record(bi, "CRIXS:VPKG:VRC:01:ERROR_RBV") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.bErrorPresent
-  field(DESC, "PRG_Chamber_Valves.f...lve.bErrorPresent")
+record(bi, "CRIXS:SDS:VVC:VENT_OK_RBV") {
+  field(DESC, "SDS VENT PACKAGE ILK OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP1.iq_stValve.bErrorPresent?")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "ERROR PRESENT")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIXS:VPKG:VRC:01:ERROR") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.bErrorPresent
-  field(DESC, "PRG_Chamber_Valves.f...lve.bErrorPresent")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_Chamber_Valves.fbVP1.iq_stValve.bErrorPresent=")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "ERROR PRESENT")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(mbbi, "CRIXS:VPKG:VRC:01:POS_STATE_RBV") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.eState
-  field(DESC, "PRG_Chamber_Valves.f...iq_stValve.eState")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP1.iq_stValve.eState?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(ZRST, "OPEN")
-  field(ONST, "CLOSED")
-  field(TWST, "MOVING")
-  field(THST, "INVALID")
-  field(FRST, "OPEN_F")
-  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
-  info(archive, "VAL")
-}
-
-record(mbbi, "CRIXS:VPKG:VRC:01:STATE_RBV") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.eVGC_State
-  field(DESC, "PRG_Chamber_Valves.f...tValve.eVGC_State")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP1.iq_stValve.eVGC_State?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(FVVL, "5")
-  field(SXVL, "6")
-  field(SVVL, "7")
-  field(EIVL, "8")
-  field(NIVL, "9")
-  field(ZRST, "Vented")
-  field(ONST, "At Vacuum")
-  field(TWST, "Differential Pressure")
-  field(THST, "Lost Vacuum")
-  field(FRST, "Ext Fault")
-  field(FVST, "AT Vacuum")
-  field(SXST, "Triggered")
-  field(SVST, "Vacuum Fault")
-  field(EIST, "Close Timeout")
-  field(NIST, "Open Timeout")
-  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:01:CLS_DI_RBV") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.i_xClsLS
-  field(DESC, "PRG_Chamber_Valves.f..._stValve.i_xClsLS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP1.iq_stValve.i_xClsLS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "CLOSE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:01:OPN_DI_RBV") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.i_xOpnLS
-  field(DESC, "PRG_Chamber_Valves.f..._stValve.i_xOpnLS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP1.iq_stValve.i_xOpnLS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:01:ALM_RST_RBV") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.pv_xAlmRst
-  field(DESC, "PRG_Chamber_Valves.f...tValve.pv_xAlmRst")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP1.iq_stValve.pv_xAlmRst?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.bSDS_VVC_VENT_OK?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
 }
 
-record(bo, "CRIXS:VPKG:VRC:01:ALM_RST") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.pv_xAlmRst
-  field(DESC, "PRG_Chamber_Valves.f...tValve.pv_xAlmRst")
+record(bo, "CRIXS:SDS:VVC:VENT_OK") {
+  field(DESC, "SDS VENT PACKAGE ILK OK")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_Chamber_Valves.fbVP1.iq_stValve.pv_xAlmRst=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_Chamber_Valves.bSDS_VVC_VENT_OK=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:01:OPN_SW_RBV") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.pv_xOPN_SW
-  field(DESC, "PRG_Chamber_Valves.f...tValve.pv_xOPN_SW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP1.iq_stValve.pv_xOPN_SW?")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIXS:VPKG:VRC:01:OPN_SW") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.pv_xOPN_SW
-  field(DESC, "PRG_Chamber_Valves.f...tValve.pv_xOPN_SW")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_Chamber_Valves.fbVP1.iq_stValve.pv_xOPN_SW=")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:01:FORCE_OPN_RBV") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.pv_xOvrdOpn
-  field(DESC, "PRG_Chamber_Valves.f...Valve.pv_xOvrdOpn")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP1.iq_stValve.pv_xOvrdOpn?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "FORCE OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIXS:VPKG:VRC:01:FORCE_OPN") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.pv_xOvrdOpn
-  field(DESC, "PRG_Chamber_Valves.f...Valve.pv_xOvrdOpn")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_Chamber_Valves.fbVP1.iq_stValve.pv_xOvrdOpn=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "FORCE OPEN")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:01:OPN_DO_RBV") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.q_xOPN_DO
-  field(DESC, "PRG_Chamber_Valves.f...stValve.q_xOPN_DO")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP1.iq_stValve.q_xOPN_DO?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(waveform, "CRIXS:VPKG:VRC:01:ErrMsg_RBV") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.sErrorMessage
-  field(DESC, "PRG_Chamber_Valves.f...lve.sErrorMessage")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP1.iq_stValve.sErrorMessage?")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(waveform, "CRIXS:VPKG:VRC:01:ErrMsg") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.sErrorMessage
-  field(DESC, "PRG_Chamber_Valves.f...lve.sErrorMessage")
-  field(DTYP, "asynInt8ArrayOut")
-  field(UDFS, "0")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_Chamber_Valves.fbVP1.iq_stValve.sErrorMessage=")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:01:CLS_OK_RBV") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.xCLS_OK
-  field(DESC, "PRG_Chamber_Valves.f...q_stValve.xCLS_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP1.iq_stValve.xCLS_OK?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:01:EXT_ILK_OK_RBV") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.xEXT_OK
-  field(DESC, "PRG_Chamber_Valves.f...q_stValve.xEXT_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP1.iq_stValve.xEXT_OK?")
-  field(ZNAM, "NOT OK")
-  field(ONAM, "OK")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:01:LOGGER_RBV") {
-  field(DESC, "PRG_Chamber_Valves.fbVP1.iq_stValve.xLog")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP1.iq_stValve.xLog?")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIXS:VPKG:VRC:01:LOGGER") {
-  field(DESC, "PRG_Chamber_Valves.fbVP1.iq_stValve.xLog")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_Chamber_Valves.fbVP1.iq_stValve.xLog=")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:01:OPN_OK_RBV") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.xOPN_OK
-  field(DESC, "PRG_Chamber_Valves.f...q_stValve.xOPN_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP1.iq_stValve.xOPN_OK?")
-  field(ZNAM, "OPN ILK NOT OK")
-  field(ONAM, "OPN ILK OK")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:01:OVRD_ON_RBV") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.xOverrideMode
-  field(DESC, "PRG_Chamber_Valves.f...lve.xOverrideMode")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP1.iq_stValve.xOverrideMode?")
-  field(ZNAM, "Override OFF")
-  field(ONAM, "Override ON")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIXS:VPKG:VRC:01:OVRD_ON") {
-  # PRG_Chamber_Valves.fbVP1.iq_stValve.xOverrideMode
-  field(DESC, "PRG_Chamber_Valves.f...lve.xOverrideMode")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_Chamber_Valves.fbVP1.iq_stValve.xOverrideMode=")
-  field(ZNAM, "Override OFF")
-  field(ONAM, "Override ON")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:02:ERROR_RBV") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.bErrorPresent
-  field(DESC, "PRG_Chamber_Valves.f...lve.bErrorPresent")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP2.iq_stValve.bErrorPresent?")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "ERROR PRESENT")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIXS:VPKG:VRC:02:ERROR") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.bErrorPresent
-  field(DESC, "PRG_Chamber_Valves.f...lve.bErrorPresent")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_Chamber_Valves.fbVP2.iq_stValve.bErrorPresent=")
-  field(ZNAM, "NO ERROR")
-  field(ONAM, "ERROR PRESENT")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(mbbi, "CRIXS:VPKG:VRC:02:POS_STATE_RBV") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.eState
-  field(DESC, "PRG_Chamber_Valves.f...iq_stValve.eState")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP2.iq_stValve.eState?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(ZRST, "OPEN")
-  field(ONST, "CLOSED")
-  field(TWST, "MOVING")
-  field(THST, "INVALID")
-  field(FRST, "OPEN_F")
-  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
-  info(archive, "VAL")
-}
-
-record(mbbi, "CRIXS:VPKG:VRC:02:STATE_RBV") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.eVGC_State
-  field(DESC, "PRG_Chamber_Valves.f...tValve.eVGC_State")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP2.iq_stValve.eVGC_State?")
-  field(ZRVL, "0")
-  field(ONVL, "1")
-  field(TWVL, "2")
-  field(THVL, "3")
-  field(FRVL, "4")
-  field(FVVL, "5")
-  field(SXVL, "6")
-  field(SVVL, "7")
-  field(EIVL, "8")
-  field(NIVL, "9")
-  field(ZRST, "Vented")
-  field(ONST, "At Vacuum")
-  field(TWST, "Differential Pressure")
-  field(THST, "Lost Vacuum")
-  field(FRST, "Ext Fault")
-  field(FVST, "AT Vacuum")
-  field(SXST, "Triggered")
-  field(SVST, "Vacuum Fault")
-  field(EIST, "Close Timeout")
-  field(NIST, "Open Timeout")
-  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:02:CLS_DI_RBV") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.i_xClsLS
-  field(DESC, "PRG_Chamber_Valves.f..._stValve.i_xClsLS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP2.iq_stValve.i_xClsLS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "CLOSE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:02:OPN_DI_RBV") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.i_xOpnLS
-  field(DESC, "PRG_Chamber_Valves.f..._stValve.i_xOpnLS")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP2.iq_stValve.i_xOpnLS?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:02:ALM_RST_RBV") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.pv_xAlmRst
-  field(DESC, "PRG_Chamber_Valves.f...tValve.pv_xAlmRst")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP2.iq_stValve.pv_xAlmRst?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIXS:VPKG:VRC:02:ALM_RST") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.pv_xAlmRst
-  field(DESC, "PRG_Chamber_Valves.f...tValve.pv_xAlmRst")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_Chamber_Valves.fbVP2.iq_stValve.pv_xAlmRst=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:02:OPN_SW_RBV") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.pv_xOPN_SW
-  field(DESC, "PRG_Chamber_Valves.f...tValve.pv_xOPN_SW")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP2.iq_stValve.pv_xOPN_SW?")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIXS:VPKG:VRC:02:OPN_SW") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.pv_xOPN_SW
-  field(DESC, "PRG_Chamber_Valves.f...tValve.pv_xOPN_SW")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_Chamber_Valves.fbVP2.iq_stValve.pv_xOPN_SW=")
-  field(ZNAM, "CLOSE")
-  field(ONAM, "OPEN")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:02:FORCE_OPN_RBV") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.pv_xOvrdOpn
-  field(DESC, "PRG_Chamber_Valves.f...Valve.pv_xOvrdOpn")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP2.iq_stValve.pv_xOvrdOpn?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "FORCE OPEN")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIXS:VPKG:VRC:02:FORCE_OPN") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.pv_xOvrdOpn
-  field(DESC, "PRG_Chamber_Valves.f...Valve.pv_xOvrdOpn")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_Chamber_Valves.fbVP2.iq_stValve.pv_xOvrdOpn=")
-  field(ZNAM, "FALSE")
-  field(ONAM, "FORCE OPEN")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:02:OPN_DO_RBV") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.q_xOPN_DO
-  field(DESC, "PRG_Chamber_Valves.f...stValve.q_xOPN_DO")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP2.iq_stValve.q_xOPN_DO?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(waveform, "CRIXS:VPKG:VRC:02:ErrMsg_RBV") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.sErrorMessage
-  field(DESC, "PRG_Chamber_Valves.f...lve.sErrorMessage")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt8ArrayIn")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP2.iq_stValve.sErrorMessage?")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
-  info(archive, "VAL")
-}
-
-record(waveform, "CRIXS:VPKG:VRC:02:ErrMsg") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.sErrorMessage
-  field(DESC, "PRG_Chamber_Valves.f...lve.sErrorMessage")
-  field(DTYP, "asynInt8ArrayOut")
-  field(UDFS, "0")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/PRG_Chamber_Valves.fbVP2.iq_stValve.sErrorMessage=")
-  field(FTVL, "CHAR")
-  field(NELM, "80")
-  field(MPST, "On Change")
-  field(APST, "On Change")
-  info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:02:CLS_OK_RBV") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.xCLS_OK
-  field(DESC, "PRG_Chamber_Valves.f...q_stValve.xCLS_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP2.iq_stValve.xCLS_OK?")
-  field(ZNAM, "FALSE")
-  field(ONAM, "TRUE")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:02:EXT_ILK_OK_RBV") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.xEXT_OK
-  field(DESC, "PRG_Chamber_Valves.f...q_stValve.xEXT_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP2.iq_stValve.xEXT_OK?")
-  field(ZNAM, "NOT OK")
-  field(ONAM, "OK")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:02:LOGGER_RBV") {
-  field(DESC, "PRG_Chamber_Valves.fbVP2.iq_stValve.xLog")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP2.iq_stValve.xLog?")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIXS:VPKG:VRC:02:LOGGER") {
-  field(DESC, "PRG_Chamber_Valves.fbVP2.iq_stValve.xLog")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_Chamber_Valves.fbVP2.iq_stValve.xLog=")
-  field(ZNAM, "OFF")
-  field(ONAM, "ON")
-  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:02:OPN_OK_RBV") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.xOPN_OK
-  field(DESC, "PRG_Chamber_Valves.f...q_stValve.xOPN_OK")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP2.iq_stValve.xOPN_OK?")
-  field(ZNAM, "OPN ILK NOT OK")
-  field(ONAM, "OPN ILK OK")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bi, "CRIXS:VPKG:VRC:02:OVRD_ON_RBV") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.xOverrideMode
-  field(DESC, "PRG_Chamber_Valves.f...lve.xOverrideMode")
-  field(SCAN, "I/O Intr")
-  field(PINI, "1")
-  field(TSE, "-2")
-  field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/PRG_Chamber_Valves.fbVP2.iq_stValve.xOverrideMode?")
-  field(ZNAM, "Override OFF")
-  field(ONAM, "Override ON")
-  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
-  info(archive, "VAL")
-}
-
-record(bo, "CRIXS:VPKG:VRC:02:OVRD_ON") {
-  # PRG_Chamber_Valves.fbVP2.iq_stValve.xOverrideMode
-  field(DESC, "PRG_Chamber_Valves.f...lve.xOverrideMode")
-  field(DTYP, "asynInt32")
-  field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/PRG_Chamber_Valves.fbVP2.iq_stValve.xOverrideMode=")
-  field(ZNAM, "Override OFF")
-  field(ONAM, "Override ON")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
   info(archive, "VAL")
 }
