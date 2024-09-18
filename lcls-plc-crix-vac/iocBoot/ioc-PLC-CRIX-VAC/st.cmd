@@ -43,7 +43,7 @@ epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
 epicsEnvSet("IPADDR",           "172.21.140.47")
 epicsEnvSet("AMSID",            "172.21.140.47.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "5041")
+epicsEnvSet("ADS_MAX_PARAMS",   "5039")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
@@ -112,8 +112,8 @@ cd "$(IOC_TOP)"
 ## PLC Project Database files ##
 dbLoadRecords("PLC_CRIX_VAC.db", "PORT=$(ASYN_PORT),PREFIX=PLC:CRIXS:VAC:,IOCNAME=$(IOC),IOC=$(IOC)")
 
-# Total records: 4041
-callbackSetQueueSize(10082)
+# Total records: 4039
+callbackSetQueueSize(10078)
 
 # Autosave and archive settings:
 save_restoreSet_status_prefix("PLC:CRIXS:VAC:")

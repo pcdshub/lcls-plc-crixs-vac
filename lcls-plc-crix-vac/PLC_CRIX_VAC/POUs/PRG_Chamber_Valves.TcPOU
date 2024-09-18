@@ -44,11 +44,6 @@ VAR
     dummy_FFFO : FB_HardwareFFOutput;
     dummy_fbArbiter1    :   FB_Arbiter(1);
 
-    {attribute 'pytmc' :='
-        pv: CRIXS:SDS:VVC:VENT_OK
-        io: o
-        field: DESC SDS VENT PACKAGE ILK OK
-'}
     bSDS_VVC_VENT_OK : BOOL := False;
 
 //	bVGC_16_OPN_OK: BOOL;

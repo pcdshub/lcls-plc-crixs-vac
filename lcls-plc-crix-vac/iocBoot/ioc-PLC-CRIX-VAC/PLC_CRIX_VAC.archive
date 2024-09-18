@@ -4035,7 +4035,5 @@ $(PREFIX)RequestedBP:Transmission_RBV.VAL	1	monitor
 $(PREFIX)RequestedBP:PhotonEnergy_RBV.VAL	1	monitor
 $(PREFIX)RequestedBP:eVRanges_RBV.VAL	1	monitor
 $(PREFIX)RequestedBP:Valid_RBV.VAL	1	monitor
-CRIXS:SDS:VVC:VENT_OK_RBV.VAL	1	scan
-CRIXS:SDS:VVC:VENT_OK.VAL	1	scan
 CRIXS:RCC:GCP:01:ILK_Setpoint_RBV.VAL	1	scan
 CRIXS:RCC:GCP:01:ILK_Setpoint.VAL	1	scan
