@@ -261,7 +261,7 @@ bSDS_VGC_01_OPN := SDS_VGC_01.iq_stValve.i_xOpnLS;
 
 (* Vent Package *)
 
-bSDS_VVC_VENT_OK := SDS_VRC_01.M_IsClosed() AND SDS_VRC_02.M_IsClosed();
+bSDS_VVC_VENT_OK := SDS_VGC_01.M_IsClosed() AND SDS_VRC_02.M_IsClosed();
 
 SDS_VVC_01 (
     i_xExtILK_OK := bSDS_VVC_VENT_OK,
