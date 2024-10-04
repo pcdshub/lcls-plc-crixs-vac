@@ -144,7 +144,7 @@ VAR_GLOBAL
 
      // Vent Package Valves
     {attribute 'pytmc' :=' pv: CRIXS:SDS:VVC:01 '}
-    {attribute 'TcLinkTo' := 	'.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E40 (EL1004)^Channel 2^Input;
+    {attribute 'TcLinkTo' := 	'.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E40 (EL1004)^Channel 3^Input;
                                 .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E39 (EL2004)^Channel 1^Output'}
     SDS_VVC_01 : FB_VRC_NC_ClsLs;
 

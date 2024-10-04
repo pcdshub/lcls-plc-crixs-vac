@@ -2044,7 +2044,7 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.SDS_VVC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E40 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VVC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VVC_01.i_xClsLS" VarB="Channel 3^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VVC_02.i_xClsLS" VarB="Channel 4^Input" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)">
