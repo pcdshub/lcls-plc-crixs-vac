@@ -1143,6 +1143,17 @@ ETHERCAT BRRIDGE COM STATUS
 					</Comment>
 					<Type>INT</Type>
 				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.SDS_VRC_03.i_xOpnLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.SDS_VRC_03.i_xClsLS</Name>
+					<Type>BOOL</Type>
+				</Var>
 			</Vars>
 			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
@@ -1547,6 +1558,10 @@ ETHERCAT BRRIDGE COM STATUS
 					<Comment>
 						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
 					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.SDS_VRC_03.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
@@ -1990,10 +2005,13 @@ ETHERCAT BRRIDGE COM STATUS
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E24 (EL2004)">
 				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.MAIN_VGC_01.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.SDS_VRC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.SDS_VRC_03.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E25 (EL1004)">
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_03.i_xClsLS" VarB="Channel 4^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_03.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E26 (EL2004)">
 				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRYO_VGC_01.q_xCLS_DO" VarB="Channel 3^Output" AutoLink="true"/>

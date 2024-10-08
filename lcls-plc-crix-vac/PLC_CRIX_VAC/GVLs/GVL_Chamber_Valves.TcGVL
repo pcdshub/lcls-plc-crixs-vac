@@ -40,7 +40,6 @@ VAR_GLOBAL
                                 .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E21 (EL2004)^Channel 3^Output'}
 
     TC_VRC_03 : FB_VRC;
-
     stTC_VRC_03 : ST_VRC;
 
 
@@ -55,16 +54,13 @@ VAR_GLOBAL
 
     (*
     stCRIX_VGC_03 : ST_VRC;
-
-    {attribute 'pytmc' :=' pv: CRIXS:VGC:07 '}
+	*)
+    {attribute 'pytmc' :=' pv: CRIXS:SDS:VRC:03 '}
     {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E25 (EL1004)^Channel 3^Input;
                                  .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E25 (EL1004)^Channel 4^Input;
                                 .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E24 (EL2004)^Channel 2^Output'}
 
-    CRIX_VGC_07 : FB_VRC;
-
-    stCRIX_VGC_07 : ST_VRC;
-    *)
+    SDS_VRC_03 : FB_VRC;
 
     /// Entry and Exit Valves for Target Chamber
     {attribute 'pytmc' :=' pv: CRIXS:MAIN:VGC:01 '}
