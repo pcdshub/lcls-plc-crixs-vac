@@ -48,7 +48,7 @@ VAR
 
 //	bVGC_16_OPN_OK: BOOL;
 //	bVGC_16_CLS_OK: BOOL;
-	bSDS_VRC_03_ILK: BOOL;
+    bSDS_VRC_03_ILK: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -250,7 +250,7 @@ bSDS_VRC_02_ILK := TRUE;
 SDS_VRC_02(i_xExtILK_OK:=bSDS_VRC_02_ILK,
             i_xOverrideMode:=xSystemOverride_ChemRIXS,
             iq_stValve =>);
-			
+
 bSDS_VRC_03_ILK := SDS_VGC_01.M_IsClosed() AND SDS_VRC_02.M_IsClosed() AND SDS_VRC_01.M_IsClosed();
 
 SDS_VRC_03(i_xExtILK_OK:=bSDS_VRC_03_ILK,
