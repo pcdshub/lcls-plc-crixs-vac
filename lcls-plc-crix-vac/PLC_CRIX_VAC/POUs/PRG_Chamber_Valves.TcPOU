@@ -44,11 +44,11 @@ VAR
     dummy_FFFO : FB_HardwareFFOutput;
     dummy_fbArbiter1    :   FB_Arbiter(1);
 
-
-
+    bSDS_VVC_VENT_OK : BOOL := False;
 
 //	bVGC_16_OPN_OK: BOOL;
 //	bVGC_16_CLS_OK: BOOL;
+    bSDS_VRC_03_ILK: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -251,6 +251,12 @@ SDS_VRC_02(i_xExtILK_OK:=bSDS_VRC_02_ILK,
             i_xOverrideMode:=xSystemOverride_ChemRIXS,
             iq_stValve =>);
 
+bSDS_VRC_03_ILK := SDS_VGC_01.M_IsClosed() AND SDS_VRC_02.M_IsClosed() AND SDS_VRC_01.M_IsClosed();
+
+SDS_VRC_03(i_xExtILK_OK:=bSDS_VRC_03_ILK,
+            i_xOverrideMode:=xSystemOverride_ChemRIXS,
+            iq_stValve =>);
+
 
 (* PLC interfaces to Motion PLC *)
 bCRYO_VGC_01_CLS := CRYO_VGC_01.iq_stValve.i_xClsLS;
@@ -259,6 +265,22 @@ bCRYO_VGC_01_OPN := CRYO_VGC_01.iq_stValve.i_xOpnLS;
 bCRYO_VGC_02_OPN := CRYO_VGC_02.iq_stValve.i_xOpnLS;
 bSDS_VGC_01_CLS := SDS_VGC_01.iq_stValve.i_xClsLS;
 bSDS_VGC_01_OPN := SDS_VGC_01.iq_stValve.i_xOpnLS;
+
+(* Vent Package *)
+
+bSDS_VVC_VENT_OK := SDS_VGC_01.M_IsClosed() AND SDS_VRC_02.M_IsClosed();
+
+SDS_VVC_01 (
+    i_xExtILK_OK := bSDS_VVC_VENT_OK,
+    i_xOverrideMode := xSystemOverride_ChemRIXS,
+    iq_stValve =>
+);
+
+SDS_VVC_02 (
+    i_xExtILK_OK := bSDS_VVC_VENT_OK,
+    i_xOverrideMode := xSystemOverride_ChemRIXS,
+    iq_stValve =>
+);
 
 ]]></ST>
     </Implementation>

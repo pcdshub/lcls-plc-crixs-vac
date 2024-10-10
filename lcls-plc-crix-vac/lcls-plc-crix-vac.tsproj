@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.30">
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4022.30" TcVersionFixed="true">
 	<Project ProjectGUID="{90FC0816-E2E5-457E-95DE-FE6F10247F95}" TargetNetId="172.21.140.47.1.1" ShowHideConfigurations="#x106">
 		<System>
 			<Licenses CacheOrCheckLicensesOnStartup="true">
@@ -9,17 +9,14 @@
 					</CustomComment>
 					<ManualSelect>{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</ManualSelect>
 					<TargetSelect TargetId="2">{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</TargetSelect>
-					<TargetSelect TargetId="2">{66689887-CCBD-452C-AC9A-039D997C6E66}</TargetSelect>
 					<TargetSelect TargetId="2">{BCA6EE0A-9CE1-4D3F-98CA-413ABC0D94FD}</TargetSelect>
+					<TargetSelect TargetId="2">{66689887-CCBD-452C-AC9A-039D997C6E66}</TargetSelect>
 					<LicenseDevice DongleHardwareId="2" DongleDevice="#x0302002f" DongleSystemId="{D99DB62F-1B2C-5CD1-8021-EBCB8B81E148}"/>
 				</Target>
 			</Licenses>
 			<Tasks>
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" DisableFpExceptions="true" AdtTasks="true">
 					<Name>PlcTask</Name>
-				</Task>
-				<Task Id="4" Priority="1" CycleTime="100000" AmsPort="351" AdtTasks="true">
-					<Name>ComTask</Name>
 				</Task>
 			</Tasks>
 		</System>
@@ -31,6 +28,6 @@
 		</Io>
 	</Project>
 	<Mappings>
-		<MappingInfo Identifier="{00000000-2002-0850-0020-500810000403}" Id="#x02030010"/>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
 	</Mappings>
 </TcSmProject>
