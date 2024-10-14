@@ -65,11 +65,17 @@ fbSDS_PTM_01_ILK(i_stValve:=stSDS_VRC_01,
                   i_stPump:=stSDS_PTM_01,
                   tDelay:=T#200S,
                   bILK=>SDS_PTM_01_ILK_OK);
+
 SDS_PTM_01(i_xExtILKOk:=(SDS_PTM_01_ILK_OK  AND F_TurboExtILKLogic_2(Turbo:=stSDS_PTM_01,
                                                                      BackingGauge:=ROUGH_GPI_01.PG,
                                                                      InletGauge:=SDS_GCP_01.PG,
                                                                      ScrollPump:= stMECH_PRO_01)),
             iq_stPtm=> stSDS_PTM_01);
+
+// SDS-PTM-01 vent package interlock
+IF SDS_VRC_02.M_IsClosed() THEN
+    SDS_PTM_01(i_xExtILKOk:=TRUE, iq_stPtm=> stSDS_PTM_01);
+END_IF
 
 stSDS_PTM_01_Pfeiffer_CTRL[1].iSerialAddress := 1;
 stSDS_PTM_01_Pfeiffer_CTRL[1].xEnableComm := TRUE;
