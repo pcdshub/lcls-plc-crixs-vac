@@ -253,8 +253,7 @@ SDS_VRC_02(i_xExtILK_OK:=bSDS_VRC_02_ILK,
 
 bSDS_VRC_03_ILK := SDS_VGC_01.M_IsClosed() AND SDS_VRC_02.M_IsClosed() AND SDS_VRC_01.M_IsClosed() AND
                    SDS_VVC_01.M_IsClosed() AND SDS_VVC_02.M_IsClosed() AND
-                   VLS_VRC_01.M_IsClosed() AND TC_VRC_02.M_IsClosed() AND TC_VRC_01.M_IsClosed() AND TC_VRC_03.M_IsClosed() AND
-                   (SDS_GCP_01.PG.rPRESS < 1);
+                   NOT (VLS_VRC_01.M_IsOpen() AND TC_VRC_02.M_IsOpen() AND TC_VRC_01.M_IsOpen() AND TC_VRC_03.M_IsOpen() AND (SDS_GCP_01.PG.rPRESS > 1));
 
 
 SDS_VRC_03(i_xExtILK_OK:=bSDS_VRC_03_ILK,
