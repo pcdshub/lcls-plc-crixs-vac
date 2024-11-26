@@ -534,6 +534,21 @@
 					<Type>BIT</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Vars.iMechDRL_CurrMon</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Vars.iMechDrl_VMon</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Gauges.TC_GPI_01.i_iPRESS_R</Name>
+					<Comment>
+						<![CDATA[ input Pressure // Link to analog Input]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>GVL_PLC_Interfaces.xEcatBridge_TxPDO_state</Name>
 					<Comment>
 						<![CDATA[CRIX Vac
@@ -543,6 +558,13 @@ ETHERCAT BRRIDGE COM STATUS
 0: Other side is in OP state, >0: Error]]>
 					</Comment>
 					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Gauges.CRYO_GPI_01.i_iPRESS_R</Name>
+					<Comment>
+						<![CDATA[ input Pressure // Link to analog Input]]>
+					</Comment>
+					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected</Name>
@@ -570,100 +592,7 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_01.i_xClsLS</Name>
-					<Comment>
-						<![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_02.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_02.i_xClsLS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_03.i_xClsLS</Name>
-					<Comment>
-						<![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_04.i_xClsLS</Name>
-					<Comment>
-						<![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_GCP_01.xPress_OK</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_GCP_01.xOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_GCP_01.xUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_GCP_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
-					<Type>REAL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_GCP_01.bWcstate</Name>
-					<Comment>
-						<![CDATA[ 0: date valid, 1: date invalid]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_STC_01.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_STC_01.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_STC_01.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_STC_01.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_STC_02.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_STC_02.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_STC_02.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_STC_02.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Gauges.TC_GPI_01.i_iPRESS_R</Name>
+					<Name>GVL_Chamber_Gauges.ROUGH_GPI_01.i_iPRESS_R</Name>
 					<Comment>
 						<![CDATA[ input Pressure // Link to analog Input]]>
 					</Comment>
@@ -686,20 +615,6 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Chamber_Gauges.CRYO_GPI_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Gauges.ROUGH_GPI_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
 					<Name>GVL_Chamber_Gauges.TC_GCC_01.i_iPRESS_R</Name>
 					<Comment>
 						<![CDATA[ Controls and I/Os]]>
@@ -719,14 +634,6 @@ ETHERCAT BRRIDGE COM STATUS
 						<![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]>
 					</Comment>
 					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Vars.iMechDRL_CurrMon</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Vars.iMechDrl_VMon</Name>
-					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Gauges.CRYO_GCP_01.i_iPRESS_R</Name>
@@ -1076,6 +983,99 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_01.i_xClsLS</Name>
+					<Comment>
+						<![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_02.i_xOpnLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_02.i_xClsLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_03.i_xClsLS</Name>
+					<Comment>
+						<![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_04.i_xClsLS</Name>
+					<Comment>
+						<![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_GCP_01.xPress_OK</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_GCP_01.xOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_GCP_01.xUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_GCP_01.i_iPRESS_R</Name>
+					<Comment>
+						<![CDATA[ input Pressure // Link to analog Input]]>
+					</Comment>
+					<Type>REAL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_GCP_01.bWcstate</Name>
+					<Comment>
+						<![CDATA[ 0: date valid, 1: date invalid]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_STC_01.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_STC_01.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_STC_01.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_STC_01.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_STC_02.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_STC_02.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_STC_02.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_STC_02.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>GVL_VLS.VLS_PTM_01.i_xAtSpd</Name>
 					<Comment>
 						<![CDATA[ Normaml operation when true]]>
@@ -1296,19 +1296,10 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_01.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_02.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_03.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Recirculation.RCC_VRC_04.q_xOPN_DO</Name>
+					<Name>GVL_Chamber_Gauges.TC_GCC_01.q_xHV_DIS</Name>
+					<Comment>
+						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
+					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1336,13 +1327,6 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.bSDS_VGC_01_OPN</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Gauges.TC_GCC_01.q_xHV_DIS</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
-					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1525,6 +1509,22 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.SDS_PTM_01.q_xReset</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_01.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_02.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_03.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Recirculation.RCC_VRC_04.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
