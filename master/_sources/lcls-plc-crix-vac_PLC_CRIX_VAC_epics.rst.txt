@@ -28167,6 +28167,42 @@ Database Records
         | io: output
 
 
+    * - CRIX:VAC2MOT:ECATBRG:External_device_not_connected_RBV
+      - bi
+      - GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected
+      - | io: output
+
+
+    * - CRIX:VAC2MOT:ECATBRG:External_device_not_connected
+      - bo
+      - GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected
+      - | io: output
+
+
+    * - CRIX:VAC2MOT:ECATBRG:TxPDO_state_RBV
+      - bi
+      - GVL_PLC_Interfaces.xEcatBridge_TxPDO_state
+      - | io: output
+
+
+    * - CRIX:VAC2MOT:ECATBRG:TxPDO_state
+      - bo
+      - GVL_PLC_Interfaces.xEcatBridge_TxPDO_state
+      - | io: output
+
+
+    * - CRIX:VAC2MOT:ECATBRG:WcState_RBV
+      - bi
+      - GVL_PLC_Interfaces.xEcatBridge_WcState
+      - | io: output
+
+
+    * - CRIX:VAC2MOT:ECATBRG:WcState
+      - bo
+      - GVL_PLC_Interfaces.xEcatBridge_WcState
+      - | io: output
+
+
     * - PLC:CRIXS:VAC:ARB:01:AP:Entry:010:Live_RBV
       - bi
       - Assertion Pool

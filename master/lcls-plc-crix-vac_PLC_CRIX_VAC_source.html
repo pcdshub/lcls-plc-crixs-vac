@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DUTs &mdash; pcdshub/lcls-plc-crixs-vac  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/tree.css?v=837a00b9" />
       <link rel="stylesheet" type="text/css" href="_static/width.css?v=ab210c7a" />
@@ -81,6 +81,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#pous">POUs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#f-turbogatevalve-protection-ilk-turbo-off-ok-no-gpi-read">F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#fb-chemrixs-turbo-ilk">FB_ChemRIXS_Turbo_ILK</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#main">MAIN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prg-ads-gauges">PRG_ADS_Gauges</a></li>
@@ -653,36 +654,31 @@
     <span class="p">(</span><span class="o">*</span><span class="n">ETHERCAT</span> <span class="n">BRRIDGE</span> <span class="n">COM</span> <span class="n">STATUS</span><span class="o">*</span><span class="p">)</span>
     <span class="o">//</span><span class="mi">0</span><span class="p">:</span> <span class="n">Other</span> <span class="n">side</span> <span class="ow">is</span> <span class="ow">in</span> <span class="n">OP</span> <span class="n">state</span><span class="p">,</span> <span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span> <span class="n">Error</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="o">:=</span> <span class="s1">&#39;TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^SYNC Inputs^TxPDO state</span>
-    <span class="s1">&#39;}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:VAC2MOT:ECATBRG:TxPDO_state&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span><span class="o">:=</span> <span class="s1">&#39;TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^SYNC Inputs^TxPDO state&#39;</span><span class="p">}</span>
     <span class="n">xEcatBridge_TxPDO_state</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span><span class="n">BOOL</span><span class="p">;</span>
 
     <span class="o">//</span><span class="mi">0</span><span class="p">:</span> <span class="n">External</span> <span class="n">device</span> <span class="n">connectd</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="n">External</span> <span class="n">device</span> <span class="ow">not</span> <span class="n">connected</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="o">:=</span> <span class="s1">&#39;TIIB[Term 95 (EL6695)]^SYNC Inputs^External device not connected</span>
-    <span class="s1">&#39;}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:VAC2MOT:ECATBRG:External_device_not_connected&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span><span class="o">:=</span> <span class="s1">&#39;TIIB[Term 95 (EL6695)]^SYNC Inputs^External device not connected&#39;</span><span class="p">}</span>
     <span class="n">xEcatBridge_External_device_not_connected</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
     <span class="o">//</span><span class="mi">0</span> <span class="o">=</span> <span class="n">Data</span> <span class="n">valid</span><span class="p">,</span> <span class="mi">1</span> <span class="o">=</span> <span class="n">Data</span> <span class="n">invalid</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^WcState^WcState</span>
-    <span class="s1">&#39;}</span>
-
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span><span class="s1">&#39; pv: CRIX:VAC2MOT:ECATBRG:WcState&#39;</span><span class="p">}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^WcState^WcState&#39;</span><span class="p">}</span>
     <span class="n">xEcatBridge_WcState</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
     <span class="p">(</span><span class="o">*</span><span class="n">I</span><span class="o">/</span><span class="n">O</span> <span class="n">Inputs</span> <span class="n">to</span> <span class="n">CRIX</span> <span class="n">motion</span> <span class="n">plc</span><span class="o">*</span><span class="p">)</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>  <span class="s1">&#39;TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_IN</span>
-    <span class="s1">&#39;}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>  <span class="s1">&#39;TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_IN&#39;</span><span class="p">}</span>
     <span class="n">xPTC_MOT_Y_10_IN</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_OUT</span>
-    <span class="s1">&#39;}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_OUT&#39;</span><span class="p">}</span>
     <span class="n">xPTC_MOT_Y_10_OUT</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>  <span class="s1">&#39;TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_IN</span>
-    <span class="s1">&#39;}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>  <span class="s1">&#39;TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_IN&#39;</span><span class="p">}</span>
     <span class="n">xPTC_MOT_Y_11_IN</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_OUT</span>
-    <span class="s1">&#39;}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span> <span class="s1">&#39;TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_OUT&#39;</span><span class="p">}</span>
     <span class="n">xPTC_MOT_Y_11_OUT</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
 
@@ -978,6 +974,27 @@
 </section>
 <section id="pous">
 <h1>POUs<a class="headerlink" href="#pous" title="Link to this heading"></a></h1>
+<section id="f-turbogatevalve-protection-ilk-turbo-off-ok-no-gpi-read">
+<h2>F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ<a class="headerlink" href="#f-turbogatevalve-protection-ilk-turbo-off-ok-no-gpi-read" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="o">*</span> <span class="n">This</span> <span class="n">Function</span> <span class="n">Block</span> <span class="n">evaluates</span> <span class="n">the</span> <span class="n">ILK</span> <span class="n">condition</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Turbo</span> <span class="n">Gate</span> <span class="n">valve</span> <span class="o">*</span><span class="p">)</span>
+<span class="p">(</span><span class="o">*</span> <span class="n">The</span> <span class="n">logic</span> <span class="n">Protects</span> <span class="n">the</span> <span class="n">Turbo</span> <span class="n">pump</span> <span class="kn">from</span><span class="w"> </span><span class="nn">inlet</span> <span class="n">pressure</span> <span class="n">above</span> <span class="n">the</span> <span class="n">SP</span><span class="o">*</span><span class="p">)</span>
+<span class="p">(</span><span class="o">*</span> <span class="n">And</span> <span class="n">Protects</span> <span class="n">the</span> <span class="n">Turbo</span> <span class="n">pump</span> <span class="kn">from</span><span class="w"> </span><span class="nn">backing</span> <span class="n">pressure</span> <span class="n">above</span> <span class="n">the</span> <span class="n">SP</span><span class="o">*</span><span class="p">)</span>
+<span class="n">FUNCTION</span> <span class="n">F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ</span> <span class="p">:</span> <span class="n">BOOL</span>
+<span class="n">VAR_INPUT</span>
+    <span class="n">i_Turbo</span> <span class="p">:</span> <span class="n">ST_PTM</span><span class="p">;</span> <span class="o">//</span> <span class="n">Turbo</span> <span class="n">Pump</span>
+    <span class="n">i_stISG</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span> <span class="o">//</span><span class="n">Gauge</span> <span class="n">measuring</span> <span class="n">inlet</span> <span class="n">Pressure</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span> <span class="n">Pirani</span>
+    <span class="n">i_stBSG</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span> <span class="o">//</span><span class="n">Gauge</span> <span class="n">measuring</span> <span class="n">backing</span> <span class="n">Pressure</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span> <span class="n">Pirani</span>
+    <span class="n">ScrollPump</span>      <span class="p">:</span>       <span class="n">ST_RoughPump</span><span class="p">;</span> <span class="o">//</span> <span class="n">Roughing</span> <span class="n">pump</span>
+<span class="n">END_VAR</span>
+<span class="n">VAR</span>
+<span class="n">END_VAR</span>
+<span class="n">F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ</span> <span class="o">:=</span> <span class="p">(</span><span class="n">i_stBSG</span><span class="o">.</span><span class="n">xPRESS_OK</span> <span class="n">AND</span> <span class="n">i_stBSG</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">&lt;</span> <span class="n">i_Turbo</span><span class="o">.</span><span class="n">rBackingPressureSP</span><span class="p">)</span>
+                        <span class="n">AND</span> <span class="p">(</span><span class="n">ScrollPump</span><span class="o">.</span><span class="n">eState</span> <span class="o">=</span> <span class="n">pumpRUNNING</span><span class="p">);</span>
+
+<span class="n">END_FUNCTION</span>
+</pre></div>
+</div>
+</section>
 <section id="fb-chemrixs-turbo-ilk">
 <h2>FB_ChemRIXS_Turbo_ILK<a class="headerlink" href="#fb-chemrixs-turbo-ilk" title="Link to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION_BLOCK</span> <span class="n">FB_ChemRIXS_Turbo_ILK</span>
@@ -1059,14 +1076,14 @@
 <span class="n">END_VAR</span>
 <span class="n">TM2K2_GCC_Reader</span><span class="p">(</span>
     <span class="n">sNetId</span> <span class="o">:=</span> <span class="s1">&#39;172.21.140.69.1.1&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">plc</span><span class="o">-</span><span class="n">kfe</span><span class="o">-</span><span class="n">rix</span><span class="o">-</span><span class="n">vac</span>
-    <span class="n">nPort</span> <span class="o">:=</span> <span class="mi">851</span><span class="p">,</span> <span class="o">//</span> <span class="n">ADS</span> <span class="n">port</span> <span class="n">of</span> <span class="n">the</span> <span class="n">PLC</span> <span class="n">reading</span> <span class="kn">from</span> <span class="nn">this</span> <span class="n">PLC</span>
+    <span class="n">nPort</span> <span class="o">:=</span> <span class="mi">851</span><span class="p">,</span> <span class="o">//</span> <span class="n">ADS</span> <span class="n">port</span> <span class="n">of</span> <span class="n">the</span> <span class="n">PLC</span> <span class="n">reading</span> <span class="kn">from</span><span class="w"> </span><span class="nn">this</span> <span class="n">PLC</span>
     <span class="n">sVarName</span> <span class="o">:=</span> <span class="s1">&#39;PRG_KFE_RIX_VAC.fb_TM2K2_K2B_GCC_1&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">Full</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">FB</span> <span class="n">containing</span> <span class="n">the</span> <span class="n">gauge</span> <span class="n">to</span> <span class="n">be</span> <span class="n">read</span>
     <span class="n">iWatchdog</span> <span class="o">:=</span> <span class="n">ADS_connection_counter</span> <span class="o">//</span> <span class="n">UDINT</span> <span class="n">required</span> <span class="k">for</span> <span class="n">watchdog</span> <span class="n">functionality</span>
 <span class="p">);</span>
 
 <span class="n">IM6K2_GCC_Reader</span><span class="p">(</span>
     <span class="n">sNetId</span> <span class="o">:=</span> <span class="s1">&#39;172.21.140.69.1.1&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">plc</span><span class="o">-</span><span class="n">kfe</span><span class="o">-</span><span class="n">rix</span><span class="o">-</span><span class="n">vac</span>
-    <span class="n">nPort</span> <span class="o">:=</span> <span class="mi">851</span><span class="p">,</span> <span class="o">//</span> <span class="n">ADS</span> <span class="n">port</span> <span class="n">of</span> <span class="n">the</span> <span class="n">PLC</span> <span class="n">reading</span> <span class="kn">from</span> <span class="nn">this</span> <span class="n">PLC</span>
+    <span class="n">nPort</span> <span class="o">:=</span> <span class="mi">851</span><span class="p">,</span> <span class="o">//</span> <span class="n">ADS</span> <span class="n">port</span> <span class="n">of</span> <span class="n">the</span> <span class="n">PLC</span> <span class="n">reading</span> <span class="kn">from</span><span class="w"> </span><span class="nn">this</span> <span class="n">PLC</span>
     <span class="n">sVarName</span> <span class="o">:=</span> <span class="s1">&#39;PRG_KFE_RIX_VAC.fb_IM6K2_PPM_GCC_1&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">Full</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">FB</span> <span class="n">containing</span> <span class="n">the</span> <span class="n">gauge</span> <span class="n">to</span> <span class="n">be</span> <span class="n">read</span>
     <span class="n">iWatchdog</span> <span class="o">:=</span> <span class="n">ADS_connection_counter</span> <span class="o">//</span> <span class="n">UDINT</span> <span class="n">required</span> <span class="k">for</span> <span class="n">watchdog</span> <span class="n">functionality</span>
 <span class="p">);</span>
@@ -1088,20 +1105,20 @@
 
 <span class="n">END_VAR</span>
 <span class="n">TM2K2_GCC_01_reader</span><span class="p">(</span><span class="n">sNetId</span> <span class="o">:=</span> <span class="s1">&#39;172.21.140.69.1.1&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">AMS</span> <span class="n">NET</span> <span class="n">ID</span> <span class="n">of</span> <span class="n">RIXS</span> <span class="n">vacuum</span> <span class="n">PLC</span> <span class="n">being</span> <span class="n">read</span> <span class="kn">from</span>
-    <span class="nn">nPort</span> <span class="o">:=</span> <span class="mi">851</span><span class="p">,</span> <span class="o">//</span> <span class="n">ADS</span> <span class="n">port</span> <span class="n">of</span> <span class="n">the</span> <span class="n">PLC</span> <span class="n">reading</span> <span class="kn">from</span> <span class="nn">this</span> <span class="n">PLC</span>
+<span class="w">    </span><span class="nn">nPort</span> <span class="o">:=</span> <span class="mi">851</span><span class="p">,</span> <span class="o">//</span> <span class="n">ADS</span> <span class="n">port</span> <span class="n">of</span> <span class="n">the</span> <span class="n">PLC</span> <span class="n">reading</span> <span class="kn">from</span><span class="w"> </span><span class="nn">this</span> <span class="n">PLC</span>
     <span class="n">sVarName</span> <span class="o">:=</span> <span class="s1">&#39;GVL_KFE_RIX_VAC.fb_TM2K2_K2B_GCC_1&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">Full</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">FB</span> <span class="n">containing</span> <span class="n">the</span> <span class="n">gauge</span> <span class="n">to</span> <span class="n">be</span> <span class="n">read</span>
     <span class="n">iWatchdog</span> <span class="o">:=</span> <span class="n">i_iWatchdog</span> <span class="o">//</span> <span class="n">UDINT</span> <span class="n">required</span> <span class="k">for</span> <span class="n">watchdog</span> <span class="n">functionality</span>
 <span class="p">);</span>
 
 <span class="n">IM6K2_GCC_01_reader</span><span class="p">(</span><span class="n">sNetId</span> <span class="o">:=</span> <span class="s1">&#39;172.21.140.69.1.1&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">AMS</span> <span class="n">NET</span> <span class="n">ID</span> <span class="n">of</span> <span class="n">RIXS</span> <span class="n">vacuum</span> <span class="n">PLC</span> <span class="n">being</span> <span class="n">read</span> <span class="kn">from</span>
-    <span class="nn">nPort</span> <span class="o">:=</span> <span class="mi">851</span><span class="p">,</span> <span class="o">//</span> <span class="n">ADS</span> <span class="n">port</span> <span class="n">of</span> <span class="n">the</span> <span class="n">PLC</span> <span class="n">reading</span> <span class="kn">from</span> <span class="nn">this</span> <span class="n">PLC</span>
+<span class="w">    </span><span class="nn">nPort</span> <span class="o">:=</span> <span class="mi">851</span><span class="p">,</span> <span class="o">//</span> <span class="n">ADS</span> <span class="n">port</span> <span class="n">of</span> <span class="n">the</span> <span class="n">PLC</span> <span class="n">reading</span> <span class="kn">from</span><span class="w"> </span><span class="nn">this</span> <span class="n">PLC</span>
     <span class="n">sVarName</span> <span class="o">:=</span> <span class="s1">&#39;GVL_KFE_RIX_VAC.fb_IM6K2_PPM_GCC_1&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">Full</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">FB</span> <span class="n">containing</span> <span class="n">the</span> <span class="n">gauge</span> <span class="n">to</span> <span class="n">be</span> <span class="n">read</span>
     <span class="n">iWatchdog</span> <span class="o">:=</span> <span class="n">i_iWatchdog</span> <span class="o">//</span> <span class="n">UDINT</span> <span class="n">required</span> <span class="k">for</span> <span class="n">watchdog</span> <span class="n">functionality</span>
 <span class="p">);</span>
 
 <span class="n">ads_watch_dog</span><span class="p">(</span>
-    <span class="n">sNetId</span> <span class="o">:=</span> <span class="s1">&#39;172.21.140.69.1.1&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">AMS</span> <span class="n">NET</span> <span class="n">ID</span> <span class="n">of</span> <span class="n">RIXS</span> <span class="n">vacuum</span> <span class="n">PLC</span> <span class="n">reading</span> <span class="kn">from</span> <span class="nn">this</span> <span class="n">PLC</span>
-    <span class="n">nPort</span> <span class="o">:=</span> <span class="mi">851</span><span class="p">,</span> <span class="o">//</span> <span class="n">ADS</span> <span class="n">port</span> <span class="n">of</span> <span class="n">the</span> <span class="n">PLC</span> <span class="n">reading</span> <span class="kn">from</span> <span class="nn">this</span> <span class="n">PLC</span>
+    <span class="n">sNetId</span> <span class="o">:=</span> <span class="s1">&#39;172.21.140.69.1.1&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">AMS</span> <span class="n">NET</span> <span class="n">ID</span> <span class="n">of</span> <span class="n">RIXS</span> <span class="n">vacuum</span> <span class="n">PLC</span> <span class="n">reading</span> <span class="kn">from</span><span class="w"> </span><span class="nn">this</span> <span class="n">PLC</span>
+    <span class="n">nPort</span> <span class="o">:=</span> <span class="mi">851</span><span class="p">,</span> <span class="o">//</span> <span class="n">ADS</span> <span class="n">port</span> <span class="n">of</span> <span class="n">the</span> <span class="n">PLC</span> <span class="n">reading</span> <span class="kn">from</span><span class="w"> </span><span class="nn">this</span> <span class="n">PLC</span>
     <span class="n">sVarName</span> <span class="o">:=</span> <span class="s1">&#39;GVL_RIX_INTF.ads_watch_dog&#39;</span><span class="p">,</span> <span class="o">//</span> <span class="n">the</span> <span class="n">variable</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">watchdog</span> <span class="n">on</span> <span class="n">the</span> <span class="n">remote</span> <span class="n">plc</span>
 <span class="p">);</span>
 
@@ -1205,16 +1222,24 @@
 <span class="n">TC_PTM_03</span><span class="o">.</span><span class="n">M_Serial_IO</span><span class="p">(</span><span class="n">st_Pfeiffer_RBK</span><span class="o">:=</span><span class="n">stTC_PTM_03_Pfeiffer_RBK</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">stTC_PTM_03_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
 
 
-<span class="o">//</span> <span class="n">Pfeiffer</span> <span class="n">Turbo</span> <span class="n">pump</span> <span class="mi">04</span> <span class="p">(</span><span class="n">New</span><span class="p">)</span> <span class="n">SDS</span>
-<span class="n">fbSDS_PTM_01_ILK</span><span class="p">(</span><span class="n">i_stValve</span><span class="o">:=</span><span class="n">stSDS_VRC_01</span><span class="p">,</span>
+
+<span class="o">//</span> <span class="n">SDS</span><span class="o">-</span><span class="n">PTM</span><span class="o">-</span><span class="mi">01</span> <span class="n">vent</span> <span class="n">package</span> <span class="n">interlock</span><span class="p">;</span>  <span class="n">iF</span> <span class="n">SDS_VRC</span><span class="o">-</span><span class="mi">02</span> <span class="ow">is</span> <span class="n">closed</span> <span class="n">SDS</span><span class="o">-</span><span class="n">PTM</span><span class="o">-</span><span class="mi">01</span> <span class="n">stays</span> <span class="n">ON</span><span class="o">.</span>
+<span class="n">IF</span> <span class="n">SDS_VRC_02</span><span class="o">.</span><span class="n">M_IsClosed</span><span class="p">()</span> <span class="n">THEN</span>
+    <span class="n">SDS_PTM_01_ILK_OK</span><span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">ELSE</span>
+    <span class="o">//</span> <span class="n">Pfeiffer</span> <span class="n">Turbo</span> <span class="n">pump</span> <span class="mi">04</span> <span class="p">(</span><span class="n">New</span><span class="p">)</span> <span class="n">SDS</span>
+    <span class="n">fbSDS_PTM_01_ILK</span><span class="p">(</span><span class="n">i_stValve</span><span class="o">:=</span><span class="n">stSDS_VRC_01</span><span class="p">,</span>
                   <span class="n">i_stPump</span><span class="o">:=</span><span class="n">stSDS_PTM_01</span><span class="p">,</span>
                   <span class="n">tDelay</span><span class="o">:=</span><span class="n">T</span><span class="c1">#200S,</span>
                   <span class="n">bILK</span><span class="o">=&gt;</span><span class="n">SDS_PTM_01_ILK_OK</span><span class="p">);</span>
-<span class="n">SDS_PTM_01</span><span class="p">(</span><span class="n">i_xExtILKOk</span><span class="o">:=</span><span class="p">(</span><span class="n">SDS_PTM_01_ILK_OK</span>  <span class="n">AND</span> <span class="n">F_TurboExtILKLogic_2</span><span class="p">(</span><span class="n">Turbo</span><span class="o">:=</span><span class="n">stSDS_PTM_01</span><span class="p">,</span>
+
+    <span class="n">SDS_PTM_01_ILK_OK</span> <span class="o">:=</span> <span class="n">SDS_PTM_01_ILK_OK</span> <span class="n">AND</span> <span class="n">F_TurboExtILKLogic_2</span><span class="p">(</span><span class="n">Turbo</span><span class="o">:=</span><span class="n">stSDS_PTM_01</span><span class="p">,</span>
                                                                      <span class="n">BackingGauge</span><span class="o">:=</span><span class="n">ROUGH_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>
                                                                      <span class="n">InletGauge</span><span class="o">:=</span><span class="n">SDS_GCP_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>
-                                                                     <span class="n">ScrollPump</span><span class="o">:=</span> <span class="n">stMECH_PRO_01</span><span class="p">)),</span>
-            <span class="n">iq_stPtm</span><span class="o">=&gt;</span> <span class="n">stSDS_PTM_01</span><span class="p">);</span>
+                                                                     <span class="n">ScrollPump</span><span class="o">:=</span> <span class="n">stMECH_PRO_01</span><span class="p">);</span>
+<span class="n">END_IF</span>
+
+<span class="n">SDS_PTM_01</span><span class="p">(</span><span class="n">i_xExtILKOk</span><span class="o">:=</span><span class="n">SDS_PTM_01_ILK_OK</span><span class="p">,</span> <span class="n">iq_stPtm</span><span class="o">=&gt;</span> <span class="n">stSDS_PTM_01</span><span class="p">);</span>
 
 <span class="n">stSDS_PTM_01_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">iSerialAddress</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="n">stSDS_PTM_01_Pfeiffer_CTRL</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">xEnableComm</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
@@ -1390,6 +1415,7 @@
 <span class="n">The</span> <span class="n">above</span> <span class="n">interlocks</span> <span class="n">will</span> <span class="n">be</span> <span class="n">good</span> <span class="k">for</span> <span class="n">the</span> <span class="n">system</span> <span class="ow">is</span> <span class="n">already</span> <span class="n">under</span> <span class="n">vacuum</span><span class="o">.</span>  <span class="n">For</span> <span class="n">starting</span> <span class="n">pumping</span> <span class="n">down</span><span class="p">,</span> <span class="n">we</span> <span class="n">can</span> <span class="nb">set</span> <span class="n">up</span> <span class="n">VLS</span> <span class="n">to</span> <span class="n">Set</span> <span class="n">Up</span> <span class="n">mode</span> <span class="n">to</span> <span class="nb">open</span> <span class="n">both</span> <span class="n">VLS</span> <span class="n">gate</span> <span class="n">valve</span> <span class="ow">and</span> <span class="n">window</span> <span class="n">valve</span><span class="o">.</span>
 <span class="n">So</span> <span class="n">we</span> <span class="n">can</span> <span class="n">pump</span> <span class="n">down</span> <span class="n">main</span> <span class="n">chamber</span> <span class="ow">and</span> <span class="n">VLS</span> <span class="n">together</span> <span class="n">through</span> <span class="n">VGC</span><span class="o">-</span><span class="mf">02.</span>
 <span class="o">*</span><span class="p">)</span>
+
 <span class="n">bVLS_VRC_01_ILK</span> <span class="o">:=</span> <span class="n">F_TurboGateValve_Protection_ILK</span><span class="p">(</span><span class="n">i_Turbo</span><span class="o">:=</span><span class="n">VLS_PTM_01</span><span class="o">.</span><span class="n">iq_stPtm</span><span class="p">,</span>
                                                <span class="n">i_stISG</span><span class="o">:=</span><span class="n">VLS_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>
                                                <span class="n">i_stBSG</span><span class="o">:=</span><span class="n">ROUGH_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>
@@ -1400,10 +1426,13 @@
 
 <span class="o">//</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">roughing</span> <span class="n">valve</span> <span class="k">for</span> <span class="n">Load</span> <span class="n">Lock</span> <span class="n">Chamber</span> <span class="p">,</span> <span class="n">apply</span> <span class="n">the</span> <span class="n">same</span> <span class="n">logic</span> <span class="k">as</span> <span class="n">roughing</span> <span class="n">valves</span> <span class="k">for</span> <span class="n">chamber</span>
 
-<span class="n">bSDS_VRC_01_ILK</span> <span class="o">:=</span> <span class="n">F_TurboGateValve_Protection_ILK</span><span class="p">(</span><span class="n">i_Turbo</span><span class="o">:=</span><span class="n">SDS_PTM_01</span><span class="o">.</span><span class="n">iq_stPtm</span><span class="p">,</span>
+<span class="o">//</span> <span class="n">auto</span> <span class="n">pump</span> <span class="n">down</span><span class="p">:</span> <span class="n">dont</span> <span class="n">want</span> <span class="n">to</span> <span class="n">read</span> <span class="n">SDS_GCP_01</span> <span class="ow">or</span> <span class="n">ptm</span> <span class="mi">01</span> <span class="k">for</span> <span class="n">sds_vrc_01</span>
+<span class="n">bSDS_VRC_01_ILK</span> <span class="o">:=</span> <span class="n">F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ</span><span class="p">(</span><span class="n">i_Turbo</span><span class="o">:=</span><span class="n">SDS_PTM_01</span><span class="o">.</span><span class="n">iq_stPtm</span><span class="p">,</span>
                                                <span class="n">i_stISG</span><span class="o">:=</span><span class="n">SDS_GCP_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>
                                                <span class="n">i_stBSG</span><span class="o">:=</span><span class="n">ROUGH_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span>
                                                  <span class="n">ScrollPump</span><span class="o">:=</span><span class="n">MECH_PRO_01</span><span class="o">.</span><span class="n">stPump</span><span class="p">);</span>
+
+
 
 <span class="n">SDS_VRC_01</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span><span class="n">bSDS_VRC_01_ILK</span><span class="p">,</span>  <span class="o">//</span> <span class="n">Not</span> <span class="n">active</span> <span class="n">right</span> <span class="n">now</span><span class="p">;</span> <span class="n">leave</span> <span class="n">ILK</span> <span class="n">to</span> <span class="n">initialized</span> <span class="n">FALSE</span>
             <span class="n">i_xOverrideMode</span><span class="o">:=</span><span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
@@ -1515,7 +1544,10 @@
             <span class="n">i_xOverrideMode</span><span class="o">:=</span><span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
             <span class="n">iq_stValve</span> <span class="o">=&gt;</span><span class="p">);</span>
 
-<span class="n">bSDS_VRC_03_ILK</span> <span class="o">:=</span> <span class="n">SDS_VGC_01</span><span class="o">.</span><span class="n">M_IsClosed</span><span class="p">()</span> <span class="n">AND</span> <span class="n">SDS_VRC_02</span><span class="o">.</span><span class="n">M_IsClosed</span><span class="p">()</span> <span class="n">AND</span> <span class="n">SDS_VRC_01</span><span class="o">.</span><span class="n">M_IsClosed</span><span class="p">();</span>
+<span class="n">bSDS_VRC_03_ILK</span> <span class="o">:=</span> <span class="n">SDS_VGC_01</span><span class="o">.</span><span class="n">M_IsClosed</span><span class="p">()</span> <span class="n">AND</span> <span class="n">SDS_VRC_02</span><span class="o">.</span><span class="n">M_IsClosed</span><span class="p">()</span> <span class="n">AND</span> <span class="n">SDS_VRC_01</span><span class="o">.</span><span class="n">M_IsClosed</span><span class="p">()</span> <span class="n">AND</span>
+                   <span class="n">SDS_VVC_01</span><span class="o">.</span><span class="n">M_IsClosed</span><span class="p">()</span> <span class="n">AND</span> <span class="n">SDS_VVC_02</span><span class="o">.</span><span class="n">M_IsClosed</span><span class="p">()</span> <span class="n">AND</span> <span class="o">//</span> <span class="n">Vent</span> <span class="n">package</span> <span class="n">valves</span> <span class="n">are</span> <span class="n">closed</span>
+                   <span class="n">NOT</span> <span class="p">(</span><span class="n">VLS_VRC_01</span><span class="o">.</span><span class="n">M_IsOpen</span><span class="p">()</span> <span class="n">AND</span> <span class="n">TC_VRC_02</span><span class="o">.</span><span class="n">M_IsOpen</span><span class="p">()</span> <span class="n">AND</span> <span class="n">TC_VRC_01</span><span class="o">.</span><span class="n">M_IsOpen</span><span class="p">()</span> <span class="n">AND</span> <span class="n">TC_VRC_03</span><span class="o">.</span><span class="n">M_IsOpen</span><span class="p">()</span> <span class="n">AND</span> <span class="p">(</span><span class="n">SDS_GCP_01</span><span class="o">.</span><span class="n">PG</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">));</span>
+
 
 <span class="n">SDS_VRC_03</span><span class="p">(</span><span class="n">i_xExtILK_OK</span><span class="o">:=</span><span class="n">bSDS_VRC_03_ILK</span><span class="p">,</span>
             <span class="n">i_xOverrideMode</span><span class="o">:=</span><span class="n">xSystemOverride_ChemRIXS</span><span class="p">,</span>
@@ -1551,6 +1583,7 @@
 </div>
 <dl class="simple">
 <dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#f-turbogatevalve-protection-ilk-turbo-off-ok-no-gpi-read">F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ</a></p></li>
 <li><p><a class="reference internal" href="#gvl-pmps">GVL_PMPS</a></p></li>
 <li><p><a class="reference internal" href="#main">MAIN</a></p></li>
 <li><p><a class="reference internal" href="#prg-ads-gauges">PRG_ADS_Gauges</a></p></li>
@@ -1644,7 +1677,7 @@ END_FUNCTION_BLOCK
                   <span class="n">i_xExtIlkOK</span><span class="o">:=</span><span class="kc">True</span><span class="p">,</span> <span class="o">//</span> <span class="n">This</span> <span class="n">should</span> <span class="n">always</span> <span class="n">be</span> <span class="n">OK</span> <span class="n">to</span> <span class="n">start</span><span class="o">.</span>
                  <span class="n">stPump</span><span class="o">=&gt;</span><span class="n">stMECH_PRO_01</span><span class="p">);</span>
 
-<span class="o">//</span> <span class="n">Rouging</span> <span class="n">line</span> <span class="n">valve</span><span class="o">.</span> <span class="n">This</span> <span class="n">valve</span> <span class="ow">is</span> <span class="n">responsible</span> <span class="k">for</span> <span class="n">isolating</span> <span class="n">the</span> <span class="n">pump</span> <span class="kn">from</span> <span class="nn">atmosphere</span><span class="p">,</span> <span class="ow">and</span> <span class="n">should</span> <span class="n">always</span> <span class="n">have</span> <span class="n">power</span> <span class="n">applied</span> <span class="n">when</span> <span class="n">the</span> <span class="n">pump</span> <span class="ow">is</span>
+<span class="o">//</span> <span class="n">Rouging</span> <span class="n">line</span> <span class="n">valve</span><span class="o">.</span> <span class="n">This</span> <span class="n">valve</span> <span class="ow">is</span> <span class="n">responsible</span> <span class="k">for</span> <span class="n">isolating</span> <span class="n">the</span> <span class="n">pump</span> <span class="kn">from</span><span class="w"> </span><span class="nn">atmosphere</span><span class="p">,</span> <span class="ow">and</span> <span class="n">should</span> <span class="n">always</span> <span class="n">have</span> <span class="n">power</span> <span class="n">applied</span> <span class="n">when</span> <span class="n">the</span> <span class="n">pump</span> <span class="ow">is</span>
 <span class="o">//</span> <span class="n">running</span><span class="o">.</span> <span class="n">Therefore</span><span class="p">,</span> <span class="n">we</span> <span class="n">assign</span> <span class="n">the</span> <span class="n">valve</span> <span class="s2">&quot;open&quot;</span> <span class="n">output</span> <span class="n">to</span> <span class="n">the</span> <span class="n">run</span> <span class="n">status</span> <span class="n">of</span> <span class="n">the</span> <span class="n">pump</span><span class="o">.</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">NO</span> <span class="n">valve</span><span class="p">,</span> <span class="n">so</span> <span class="s2">&quot;opening&quot;</span> <span class="n">the</span> <span class="n">valve</span> <span class="n">will</span> <span class="n">close</span> <span class="n">it</span><span class="o">.</span>
 <span class="o">//</span> <span class="n">Similarly</span><span class="p">,</span> <span class="n">we</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">external</span> <span class="n">interlock</span> <span class="n">to</span> <span class="n">the</span> <span class="n">state</span> <span class="n">of</span> <span class="n">the</span> <span class="n">pump</span><span class="o">.</span>
 
@@ -2007,7 +2040,7 @@ END_PROGRAM
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, SLAC National Accelerator Laboratory.</p>
+    <p>&#169; Copyright 2025, SLAC National Accelerator Laboratory.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

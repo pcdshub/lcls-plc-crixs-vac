@@ -300,6 +300,7 @@ Links
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Mech_Room.MECH_PRO_01.i_xMPStatus, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 83 (EL1088), Channel 1^Input
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Mech_Room.MECH_PRO_01.i_xRemote, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 83 (EL1088), Channel 5^Input
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Mech_Room.MECH_PRO_01.i_xWarning, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 83 (EL1088), Channel 3^Input
+        PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695), SYNC Inputs^External device not connected
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_TxPDO_state, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695), SYNC Inputs^TxPDO state
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_WcState, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695), WcState^WcState
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_PLC_Interfaces.xPTC_MOT_Y_10_IN, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695), IO Inputs^bMOTY10_IN
@@ -345,8 +346,6 @@ Links
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_VLS.VLS_VGC_01.i_xOpnLS, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP3 (EP2339-0021), Channel 6^Input
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_VLS.VLS_VWC_01.i_xClsLS, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP3 (EP2339-0021), Channel 10^Input
         PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_VLS.VLS_VWC_01.i_xOpnLS, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP3 (EP2339-0021), Channel 9^Input
-        PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Vars.iMechDRL_CurrMon, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 153 (EL2212), DOX Synchron info data Channel 2^Info data 1
-        PLC_CRIX_VAC Instance, PlcTask Inputs^GVL_Vars.iMechDrl_VMon, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 153 (EL2212), DOX Synchron info data Channel 2^Info data 2
         PLC_CRIX_VAC Instance, PlcTask Inputs^PRG_MPS.fbArbiterIO.i_stCurrentBP, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 113 (EK1521-0010)^Term 154 (EK1501-0010)^PMPS_PRE, IO Inputs^CurrentBP
         PLC_CRIX_VAC Instance, PlcTask Inputs^PRG_MPS.fbArbiterIO.xTxPDO_state, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 113 (EK1521-0010)^Term 154 (EK1501-0010)^PMPS_PRE, SYNC Inputs^TxPDO state
         PLC_CRIX_VAC Instance, PlcTask Inputs^PRG_MPS.fbArbiterIO.xTxPDO_toggle, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 113 (EK1521-0010)^Term 154 (EK1501-0010)^PMPS_PRE, SYNC Inputs^TxPDO toggle

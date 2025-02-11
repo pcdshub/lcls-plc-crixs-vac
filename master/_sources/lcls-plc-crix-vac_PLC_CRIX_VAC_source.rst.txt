@@ -558,36 +558,31 @@ GVL_PLC_Interfaces
         (*ETHERCAT BRRIDGE COM STATUS*)
         //0: Other side is in OP state, >0: Error
 
-        {attribute := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^SYNC Inputs^TxPDO state
-        '}
+        {attribute 'pytmc' :=' pv: CRIX:VAC2MOT:ECATBRG:TxPDO_state'}
+        {attribute 'TcLinkTo':= 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^SYNC Inputs^TxPDO state'}
         xEcatBridge_TxPDO_state AT %I* :BOOL;
 
         //0: External device connectd, 1: External device not connected
-        {attribute := 'TIIB[Term 95 (EL6695)]^SYNC Inputs^External device not connected
-        '}
+        {attribute 'pytmc' :=' pv: CRIX:VAC2MOT:ECATBRG:External_device_not_connected'}
+        {attribute 'TcLinkTo':= 'TIIB[Term 95 (EL6695)]^SYNC Inputs^External device not connected'}
         xEcatBridge_External_device_not_connected AT %I* : BOOL;
 
         //0 = Data valid, 1 = Data invalid
-        {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^WcState^WcState
-        '}
-
+        {attribute 'pytmc' :=' pv: CRIX:VAC2MOT:ECATBRG:WcState'}
+        {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^WcState^WcState'}
         xEcatBridge_WcState AT %I* : BOOL;
 
         (*I/O Inputs to CRIX motion plc*)
-        {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_IN
-        '}
+        {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_IN'}
         xPTC_MOT_Y_10_IN AT %I* : BOOL;
 
-        {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_OUT
-        '}
+        {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_OUT'}
         xPTC_MOT_Y_10_OUT AT %I* : BOOL;
 
-        {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_IN
-        '}
+        {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_IN'}
         xPTC_MOT_Y_11_IN AT %I* : BOOL;
 
-        {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_OUT
-        '}
+        {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_OUT'}
         xPTC_MOT_Y_11_OUT AT %I* : BOOL;
 
 
@@ -905,6 +900,31 @@ POUs
 ----
 
 
+F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    (* This Function Block evaluates the ILK condition of the Turbo Gate valve *)
+    (* The logic Protects the Turbo pump from inlet pressure above the SP*)
+    (* And Protects the Turbo pump from backing pressure above the SP*)
+    FUNCTION F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ : BOOL
+    VAR_INPUT
+        i_Turbo : ST_PTM; // Turbo Pump
+        i_stISG : ST_VG; //Gauge measuring inlet Pressure e.g Pirani
+        i_stBSG : ST_VG; //Gauge measuring backing Pressure e.g Pirani
+        ScrollPump	:	ST_RoughPump; // Roughing pump
+    END_VAR
+    VAR
+    END_VAR
+    F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ := (i_stBSG.xPRESS_OK AND i_stBSG.rPRESS < i_Turbo.rBackingPressureSP)
+                            AND (ScrollPump.eState = pumpRUNNING);
+
+    END_FUNCTION
+
+
+
+
 FB_ChemRIXS_Turbo_ILK
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -1151,16 +1171,24 @@ PRG_Chamber_Pumps
     TC_PTM_03.M_Serial_IO(st_Pfeiffer_RBK:=stTC_PTM_03_Pfeiffer_RBK[1], stTC_PTM_03_Pfeiffer_CTRL[1]);
 
 
-    // Pfeiffer Turbo pump 04 (New) SDS
-    fbSDS_PTM_01_ILK(i_stValve:=stSDS_VRC_01,
+
+    // SDS-PTM-01 vent package interlock;  iF SDS_VRC-02 is closed SDS-PTM-01 stays ON.
+    IF SDS_VRC_02.M_IsClosed() THEN
+        SDS_PTM_01_ILK_OK:= TRUE;
+    ELSE
+        // Pfeiffer Turbo pump 04 (New) SDS
+        fbSDS_PTM_01_ILK(i_stValve:=stSDS_VRC_01,
                       i_stPump:=stSDS_PTM_01,
                       tDelay:=T#200S,
                       bILK=>SDS_PTM_01_ILK_OK);
-    SDS_PTM_01(i_xExtILKOk:=(SDS_PTM_01_ILK_OK  AND F_TurboExtILKLogic_2(Turbo:=stSDS_PTM_01,
+
+        SDS_PTM_01_ILK_OK := SDS_PTM_01_ILK_OK AND F_TurboExtILKLogic_2(Turbo:=stSDS_PTM_01,
                                                                          BackingGauge:=ROUGH_GPI_01.PG,
                                                                          InletGauge:=SDS_GCP_01.PG,
-                                                                         ScrollPump:= stMECH_PRO_01)),
-                iq_stPtm=> stSDS_PTM_01);
+                                                                         ScrollPump:= stMECH_PRO_01);
+    END_IF
+
+    SDS_PTM_01(i_xExtILKOk:=SDS_PTM_01_ILK_OK, iq_stPtm=> stSDS_PTM_01);
 
     stSDS_PTM_01_Pfeiffer_CTRL[1].iSerialAddress := 1;
     stSDS_PTM_01_Pfeiffer_CTRL[1].xEnableComm := TRUE;
@@ -1336,6 +1364,7 @@ PRG_Chamber_Valves
     The above interlocks will be good for the system is already under vacuum.  For starting pumping down, we can set up VLS to Set Up mode to open both VLS gate valve and window valve.
     So we can pump down main chamber and VLS together through VGC-02.
     *)
+
     bVLS_VRC_01_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=VLS_PTM_01.iq_stPtm,
                                                    i_stISG:=VLS_GPI_01.PG,
                                                    i_stBSG:=ROUGH_GPI_01.PG,
@@ -1346,10 +1375,13 @@ PRG_Chamber_Valves
 
     // This is roughing valve for Load Lock Chamber , apply the same logic as roughing valves for chamber
 
-    bSDS_VRC_01_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=SDS_PTM_01.iq_stPtm,
+    // auto pump down: dont want to read SDS_GCP_01 or ptm 01 for sds_vrc_01
+    bSDS_VRC_01_ILK := F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ(i_Turbo:=SDS_PTM_01.iq_stPtm,
                                                    i_stISG:=SDS_GCP_01.PG,
                                                    i_stBSG:=ROUGH_GPI_01.PG,
                                                      ScrollPump:=MECH_PRO_01.stPump);
+
+
 
     SDS_VRC_01(i_xExtILK_OK:=bSDS_VRC_01_ILK,  // Not active right now; leave ILK to initialized FALSE
                 i_xOverrideMode:=xSystemOverride_ChemRIXS,
@@ -1461,7 +1493,10 @@ PRG_Chamber_Valves
                 i_xOverrideMode:=xSystemOverride_ChemRIXS,
                 iq_stValve =>);
 
-    bSDS_VRC_03_ILK := SDS_VGC_01.M_IsClosed() AND SDS_VRC_02.M_IsClosed() AND SDS_VRC_01.M_IsClosed();
+    bSDS_VRC_03_ILK := SDS_VGC_01.M_IsClosed() AND SDS_VRC_02.M_IsClosed() AND SDS_VRC_01.M_IsClosed() AND
+                       SDS_VVC_01.M_IsClosed() AND SDS_VVC_02.M_IsClosed() AND // Vent package valves are closed
+                       NOT (VLS_VRC_01.M_IsOpen() AND TC_VRC_02.M_IsOpen() AND TC_VRC_01.M_IsOpen() AND TC_VRC_03.M_IsOpen() AND (SDS_GCP_01.PG.rPRESS > 1));
+
 
     SDS_VRC_03(i_xExtILK_OK:=bSDS_VRC_03_ILK,
                 i_xOverrideMode:=xSystemOverride_ChemRIXS,
@@ -1496,6 +1531,7 @@ PRG_Chamber_Valves
 
 
 Related:
+    * `F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ`_
     * `GVL_PMPS`_
     * `MAIN`_
     * `PRG_ADS_Gauges`_
