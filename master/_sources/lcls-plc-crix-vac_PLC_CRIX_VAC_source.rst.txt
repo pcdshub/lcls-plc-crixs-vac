@@ -40,8 +40,8 @@ GVL_ADS_Devices
 
      {attribute 'pytmc' :=' pv: TM2K2:GCC:01:reader '}
         TM2K2_GCC_01_reader : FB_TGCC_ADS;
-     {attribute 'pytmc' :=' pv: IM6K2:GCC:01:reader '}
-        IM6K2_GCC_01_reader : FB_TGCC_ADS;
+     {attribute 'pytmc' :=' pv: AT3K2:GCC:01:reader '}
+        AT3K2_GCC_01_reader : FB_TGCC_ADS;
 
     END_VAR
 
@@ -113,6 +113,17 @@ GVL_Chamber_Gauges
 
         stTC_GCP_01 : ST_VG;
 
+        {attribute 'pytmc' :=' pv: CRIXS:SVLS:GCP:01 '}
+        {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[SVLS_PR01 E9 (EL3174-0002)]^AI Standard Channel 1^Value '}
+        CRIX_SVLS_GCP_01 : FB_972;
+
+        stCRIX_SVLS_GCP_01 : ST_VG;
+
+        {attribute 'pytmc' :=' pv: CRIXS:SVLS:GCP:02 '}
+        {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[SVLS_PR01 E9 (EL3174-0002)]^AI Standard Channel 2^Value '}
+        CRIX_SVLS_GCP_02 : FB_972;
+
+        stCRIX_SVLS_GCP_02 : ST_VG;
 
     END_VAR
 
@@ -272,6 +283,23 @@ GVL_Chamber_Valves
                                     .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E39 (EL2004)^Channel 2^Output'}
         SDS_VVC_02 : FB_VRC_NC_ClsLs;
 
+        {attribute 'pytmc' :=' pv: CRIXS:SVLS:VWC:01 '}
+        {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[SVLS_PR01 E5 (EL1004)]^Channel 1^Input;
+                                     .i_xClsLS	:=	TIIB[SVLS_PR01 E5 (EL1004)]^Channel 2^Input;
+                                    .q_xCLS_DO	:=	TIIB[SVLS_PR01 E6 (EL2004)]^Channel 1^Output'}
+
+        CRIX_SVLS_VWC_01 : FB_VRC_NO;
+
+        stCRIX_SVLS_VWC_01 : ST_VRC_NO;
+
+        {attribute 'pytmc' :=' pv: CRIXS:SVLS:VRC:01 '}
+        {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E41 (EL1004)^Channel 1^Input;
+                                     .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E41 (EL1004)^Channel 2^Input;
+                                     .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E39 (EL2004)^Channel 3^Output'}
+
+        CRIX_SVLS_VRC_01 : FB_VRC;
+
+        stCRIX_SVLS_VRC_01 : ST_VRC;
 
     END_VAR
 
@@ -406,6 +434,67 @@ GVL_COM
                                      .D[21]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E5 (EL6022)^COM Outputs Channel 1^Data Out 21
         '}
         K2S17_E5_CH1_stComOut		AT %Q*	:	EL6outData22B;
+
+        // SVLS PTM-01
+        CRIX_SVLS_SerialRXBuffer : ComBuffer;
+        CRIX_SVLS_SerialTXBuffer : ComBuffer;
+
+        // Serial Terminal
+        CRIX_SVLS_fbSerialLineControl: SerialLineControl;
+
+        //SERIAL IO CRIX SVLS E4 (EL6021)
+        {attribute	'TcLinkTo'	:=	'.Status:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Status;
+                                     .D[0]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 0;
+                                     .D[1]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 1;
+                                     .D[2]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 2;
+                                     .D[3]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 3;
+                                     .D[4]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 4;
+                                     .D[5]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 5;
+                                     .D[6]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 6;
+                                     .D[7]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 7;
+                                     .D[8]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 8;
+                                     .D[9]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 9;
+                                     .D[10]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 10;
+                                     .D[11]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 11;
+                                     .D[12]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 12;
+                                     .D[13]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 13;
+                                     .D[14]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 14;
+                                     .D[15]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 15;
+                                     .D[16]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 16;
+                                     .D[17]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 17;
+                                     .D[18]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 18;
+                                     .D[19]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 19;
+                                     .D[20]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 20;
+                                     .D[21]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 21
+        '}
+        CRIX_SVLS_stComIn		AT %I*	:	EL6inData22B;
+        {attribute	'TcLinkTo'	:=	'.Ctrl:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Ctrl;
+                                     .D[0]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 0;
+                                     .D[1]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 1;
+                                     .D[2]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 2;
+                                     .D[3]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 3;
+                                     .D[4]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 4;
+                                     .D[5]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 5;
+                                     .D[6]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 6;
+                                     .D[7]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 7;
+                                     .D[8]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 8;
+                                     .D[9]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 9;
+                                     .D[10]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 10;
+                                     .D[11]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 11;
+                                     .D[12]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 12;
+                                     .D[13]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 13;
+                                     .D[14]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 14;
+                                     .D[15]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 15;
+                                     .D[16]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 16;
+                                     .D[17]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 17;
+                                     .D[18]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 18;
+                                     .D[19]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 19;
+                                     .D[20]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 20;
+                                     .D[21]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 21
+        '}
+        CRIX_SVLS_stComOut		AT %Q*	:	EL6outData22B;
+
+
     END_VAR
 
 
@@ -558,36 +647,31 @@ GVL_PLC_Interfaces
         (*ETHERCAT BRRIDGE COM STATUS*)
         //0: Other side is in OP state, >0: Error
 
-        {attribute := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^SYNC Inputs^TxPDO state
-        '}
+        {attribute 'pytmc' :=' pv: CRIX:VAC2MOT:ECATBRG:TxPDO_state'}
+        {attribute 'TcLinkTo':= 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^SYNC Inputs^TxPDO state'}
         xEcatBridge_TxPDO_state AT %I* :BOOL;
 
         //0: External device connectd, 1: External device not connected
-        {attribute := 'TIIB[Term 95 (EL6695)]^SYNC Inputs^External device not connected
-        '}
+        {attribute 'pytmc' :=' pv: CRIX:VAC2MOT:ECATBRG:External_device_not_connected'}
+        {attribute 'TcLinkTo':= 'TIIB[Term 95 (EL6695)]^SYNC Inputs^External device not connected'}
         xEcatBridge_External_device_not_connected AT %I* : BOOL;
 
         //0 = Data valid, 1 = Data invalid
-        {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^WcState^WcState
-        '}
-
+        {attribute 'pytmc' :=' pv: CRIX:VAC2MOT:ECATBRG:WcState'}
+        {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^WcState^WcState'}
         xEcatBridge_WcState AT %I* : BOOL;
 
         (*I/O Inputs to CRIX motion plc*)
-        {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_IN
-        '}
+        {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_IN'}
         xPTC_MOT_Y_10_IN AT %I* : BOOL;
 
-        {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_OUT
-        '}
+        {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_OUT'}
         xPTC_MOT_Y_10_OUT AT %I* : BOOL;
 
-        {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_IN
-        '}
+        {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_IN'}
         xPTC_MOT_Y_11_IN AT %I* : BOOL;
 
-        {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_OUT
-        '}
+        {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_OUT'}
         xPTC_MOT_Y_11_OUT AT %I* : BOOL;
 
 
@@ -727,7 +811,32 @@ GVL_Pumps
 
         fb_SDS_PTM_01_Pfeiffer_PfeifferCom : FB_PFEIFFER_COM;
 
+        (* Pfeiffer Turbo Pumps TC110 *)
+        // SVLS
 
+        {attribute 'pytmc' := ' pv: CRIX:SVLS:PTM:01'}
+        {attribute 'TcLinkTo' := 	'.i_xAtSpd		      := TIIB[SVLS_PR01 E2 (EL1004)]^Channel 1^Input;
+                                   .i_xFaultNC		  := TIIB[SVLS_PR01 E2 (EL1004)]^Channel 2^Input;
+                                   .q_RunDO           := TIIB[SVLS_PR01 E3 (EL2794)]^Channel 1^Output;
+                                   .q_xReset          := TIIB[SVLS_PR01 E3 (EL2794)]^Channel 2^Output
+        '}
+        CRIX_SVLS_PTM_01 : FB_PTM_Pfeiffer;
+        stCRIX_SVLS_PTM_01 : ST_PfeifferPTM;
+
+        // Serial port
+        stCRIX_SVLS_PTM_01_Pfeiffer_CTRL 	: ARRAY[1..20] OF ST_PfeifferControl;
+        stCRIX_SVLS_PTM_01_Pfeiffer_RBK 	: ARRAY[1..20] OF ST_PfeifferStatus;
+
+        fb_CRIX_SVLS_PTM_01_PfeifferCom : FB_PFEIFFER_COM;
+
+        // SIP PIP NexTORR Pumps
+        {attribute 'pytmc' := ' pv: CRIX:SVLS:PIP:1 '}
+        {attribute 'TcLinkTo' := 	'.i_iPRESS		:=	TIIB[SVLS_PR01 E9 (EL3174-0002)]^AI Standard Channel 1^Value;
+                                     .i_xIP_ON		:= 	TIIB[SVLS_PR01 E11 (EL1124)]^Channel 1^Input;
+                                     .i_xError      :=  TIIB[SVLS_PR01 E11 (EL1124)]^Channel 2^Input;
+                                     .q_xHVEna_DO	:= 	TIIB[SVLS_PR01 E3 (EL2794)]^Channel 3^Output
+        '}
+        CRIX_SVLS_PIP_1 : FB_PIP_SIP;
 
     END_VAR
 
@@ -905,6 +1014,31 @@ POUs
 ----
 
 
+F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    (* This Function Block evaluates the ILK condition of the Turbo Gate valve *)
+    (* The logic Protects the Turbo pump from inlet pressure above the SP*)
+    (* And Protects the Turbo pump from backing pressure above the SP*)
+    FUNCTION F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ : BOOL
+    VAR_INPUT
+        i_Turbo : ST_PTM; // Turbo Pump
+        i_stISG : ST_VG; //Gauge measuring inlet Pressure e.g Pirani
+        i_stBSG : ST_VG; //Gauge measuring backing Pressure e.g Pirani
+        ScrollPump	:	ST_RoughPump; // Roughing pump
+    END_VAR
+    VAR
+    END_VAR
+    F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ := (i_stBSG.xPRESS_OK AND i_stBSG.rPRESS < i_Turbo.rBackingPressureSP)
+                            AND (ScrollPump.eState = pumpRUNNING);
+
+    END_FUNCTION
+
+
+
+
 FB_ChemRIXS_Turbo_ILK
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -985,8 +1119,8 @@ PRG_ADS_Gauges
         {attribute 'pytmc' :=' pv: CRIXS:TM2K2:GCC:01 '}
         TM2K2_GCC_Reader : FB_TGCC_ADS;
 
-        {attribute 'pytmc' :=' pv: CRIXS:IM6K2:GCC:01 '}
-        IM6K2_GCC_Reader : FB_TGCC_ADS;
+        //{attribute 'pytmc' :=' pv: CRIXS:AT3K2:GCC:01 '}
+        //AT3K2_GCC_Reader : FB_TGCC_ADS;
 
         // This variable needs to be instantiated for the Watchdog to work
         ADS_connection_counter : UDINT;
@@ -998,12 +1132,12 @@ PRG_ADS_Gauges
         iWatchdog := ADS_connection_counter // UDINT required for watchdog functionality
     );
 
-    IM6K2_GCC_Reader(
-        sNetId := '172.21.140.69.1.1', // plc-kfe-rix-vac
-        nPort := 851, // ADS port of the PLC reading from this PLC
-        sVarName := 'PRG_KFE_RIX_VAC.fb_IM6K2_PPM_GCC_1', // Full name of the FB containing the gauge to be read
-        iWatchdog := ADS_connection_counter // UDINT required for watchdog functionality
-    );
+    //AT3K2_GCC_Reader(
+    //    sNetId := '172.21.140.69.1.1', // plc-kfe-rix-vac
+    //    nPort := 851, // ADS port of the PLC reading from this PLC
+    //    sVarName := 'PRG_KFE_RIX_VAC.fb_AT3K2_SOLID_GCC_1', // Full name of the FB containing the gauge to be read
+    //    iWatchdog := ADS_connection_counter // UDINT required for watchdog functionality
+    //);
 
     END_PROGRAM
 
@@ -1031,9 +1165,9 @@ PRG_ADS_Interfaces
         iWatchdog := i_iWatchdog // UDINT required for watchdog functionality
     );
 
-    IM6K2_GCC_01_reader(sNetId := '172.21.140.69.1.1', // AMS NET ID of RIXS vacuum PLC being read from
+    AT3K2_GCC_01_reader(sNetId := '172.21.140.69.1.1', // AMS NET ID of RIXS vacuum PLC being read from
         nPort := 851, // ADS port of the PLC reading from this PLC
-        sVarName := 'GVL_KFE_RIX_VAC.fb_IM6K2_PPM_GCC_1', // Full name of the FB containing the gauge to be read
+        sVarName := 'GVL_KFE_RIX_VAC.fb_AT3K2_SOLID_GCC_1', // Full name of the FB containing the gauge to be read
         iWatchdog := i_iWatchdog // UDINT required for watchdog functionality
     );
 
@@ -1083,6 +1217,12 @@ PRG_Chamber_Gauges
     TC_GCP_01.M_SetBits(30518);
     TC_GCP_01(PG=>stTC_GCP_01);
 
+    CRIX_SVLS_GCP_01.M_SetBits(30518);
+    CRIX_SVLS_GCP_01(PG=>stCRIX_SVLS_GCP_01);
+
+    CRIX_SVLS_GCP_02.M_SetBits(30518);
+    CRIX_SVLS_GCP_02(PG=>stCRIX_SVLS_GCP_02);
+
     END_PROGRAM
 
 
@@ -1107,6 +1247,9 @@ PRG_Chamber_Pumps
 
         fbSDS_PTM_01_ILK : FB_ChemRIXS_Turbo_ILK; //new
         SDS_PTM_01_ILK_OK : BOOL;
+
+        fbCRIX_SVLS_PTM_01_ILK: FB_ChemRIXS_Turbo_ILK;
+        CRIX_SVLS_PTM_01_xExtIlkOK: BOOL;
     END_VAR
     // Leybold Pumps
     fbTC_PTM_01_ILK(i_stValve:=stTC_VRC_01,
@@ -1151,16 +1294,24 @@ PRG_Chamber_Pumps
     TC_PTM_03.M_Serial_IO(st_Pfeiffer_RBK:=stTC_PTM_03_Pfeiffer_RBK[1], stTC_PTM_03_Pfeiffer_CTRL[1]);
 
 
-    // Pfeiffer Turbo pump 04 (New) SDS
-    fbSDS_PTM_01_ILK(i_stValve:=stSDS_VRC_01,
+
+    // SDS-PTM-01 vent package interlock;  iF SDS_VRC-02 is closed SDS-PTM-01 stays ON.
+    IF SDS_VRC_02.M_IsClosed() THEN
+        SDS_PTM_01_ILK_OK:= TRUE;
+    ELSE
+        // Pfeiffer Turbo pump 04 (New) SDS
+        fbSDS_PTM_01_ILK(i_stValve:=stSDS_VRC_01,
                       i_stPump:=stSDS_PTM_01,
                       tDelay:=T#200S,
                       bILK=>SDS_PTM_01_ILK_OK);
-    SDS_PTM_01(i_xExtILKOk:=(SDS_PTM_01_ILK_OK  AND F_TurboExtILKLogic_2(Turbo:=stSDS_PTM_01,
+
+        SDS_PTM_01_ILK_OK := SDS_PTM_01_ILK_OK AND F_TurboExtILKLogic_2(Turbo:=stSDS_PTM_01,
                                                                          BackingGauge:=ROUGH_GPI_01.PG,
                                                                          InletGauge:=SDS_GCP_01.PG,
-                                                                         ScrollPump:= stMECH_PRO_01)),
-                iq_stPtm=> stSDS_PTM_01);
+                                                                         ScrollPump:= stMECH_PRO_01);
+    END_IF
+
+    SDS_PTM_01(i_xExtILKOk:=SDS_PTM_01_ILK_OK, iq_stPtm=> stSDS_PTM_01);
 
     stSDS_PTM_01_Pfeiffer_CTRL[1].iSerialAddress := 1;
     stSDS_PTM_01_Pfeiffer_CTRL[1].xEnableComm := TRUE;
@@ -1200,6 +1351,31 @@ PRG_Chamber_Pumps
                                 InletGauge:=CRIX_GCP_03.PG, ScrollPump:= stCRIX_MECH_PRO_01, RoughingValve:=CRIX_VGC_06.iq_stValve, tDelay:=T#200S );
 
     CRIX_PTM_04(i_xExtILKOk:=CRIX_PTM_04_ILK_OK, iq_stPtm=> ); *)
+
+    // Pfeiffer Turbo Pump TC110
+    fbCRIX_SVLS_PTM_01_ILK(i_stValve:=stCRIX_SVLS_VRC_01,
+                      i_stPump:=stCRIX_SVLS_PTM_01,
+                      tDelay:=T#200S,
+                      bILK=>CRIX_SVLS_PTM_01_xExtIlkOK);
+
+    CRIX_SVLS_PTM_01(i_xExtILKOk:=(CRIX_SVLS_PTM_01_xExtIlkOK and F_TurboExtILKLogic_2(Turbo:=stCRIX_SVLS_PTM_01,
+                                                                         BackingGauge:=ROUGH_GPI_01.PG,
+                                                                         InletGauge:=CRIX_SVLS_GCP_01.PG,
+                                                                         ScrollPump:= stMECH_PRO_01)),
+                iq_stPtm=> stCRIX_SVLS_PTM_01);
+
+    stCRIX_SVLS_PTM_01_Pfeiffer_CTRL[1].iSerialAddress := 1;
+    stCRIX_SVLS_PTM_01_Pfeiffer_CTRL[1].xEnableComm := TRUE;
+
+    fb_CRIX_SVLS_PTM_01_PfeifferCom(astPfeifferControl:=stCRIX_SVLS_PTM_01_Pfeiffer_CTRL,
+                          astPfeifferStatus:=stCRIX_SVLS_PTM_01_Pfeiffer_RBK,
+                          SerialRXBuffer:=CRIX_SVLS_SerialRXBuffer,
+                          SerialTXBuffer:=CRIX_SVLS_SerialTXBuffer);
+
+    CRIX_SVLS_PTM_01.M_Serial_IO(st_Pfeiffer_RBK:=stCRIX_SVLS_PTM_01_Pfeiffer_RBK[1], stCRIX_SVLS_PTM_01_Pfeiffer_CTRL[1]);
+
+    // SIP NexTORR Ion Pump
+    CRIX_SVLS_PIP_1(i_stGauge := CRIX_SVLS_GCP_02.PG, i_xOverrideMode := xSystemOverride_ChemRIXS);
 
     END_PROGRAM
 
@@ -1261,6 +1437,15 @@ PRG_Chamber_Valves
     //	bVGC_16_OPN_OK: BOOL;
     //	bVGC_16_CLS_OK: BOOL;
         bSDS_VRC_03_ILK: BOOL;
+
+        bCRIX_SVLS_VWC_01_ILK_OK: BOOL;
+        rCRIX_SVLS_VWC_01_Pres_US_SP: REAL := 0.001;
+        rCRIX_SVLS_VWC_01_Pres_DS_SP: REAL := 0.001;
+
+        g_FastFaultOutputNA: FB_HardwareFFOutput;
+        g_fbArbiterNA: FB_Arbiter(1);
+
+        bCRIX_SVLS_VRC_01_ILK_OK : BOOL;
     END_VAR
     (* Roughing manifold logic *)
 
@@ -1336,6 +1521,7 @@ PRG_Chamber_Valves
     The above interlocks will be good for the system is already under vacuum.  For starting pumping down, we can set up VLS to Set Up mode to open both VLS gate valve and window valve.
     So we can pump down main chamber and VLS together through VGC-02.
     *)
+
     bVLS_VRC_01_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=VLS_PTM_01.iq_stPtm,
                                                    i_stISG:=VLS_GPI_01.PG,
                                                    i_stBSG:=ROUGH_GPI_01.PG,
@@ -1346,10 +1532,13 @@ PRG_Chamber_Valves
 
     // This is roughing valve for Load Lock Chamber , apply the same logic as roughing valves for chamber
 
-    bSDS_VRC_01_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=SDS_PTM_01.iq_stPtm,
+    // auto pump down: dont want to read SDS_GCP_01 or ptm 01 for sds_vrc_01
+    bSDS_VRC_01_ILK := F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ(i_Turbo:=SDS_PTM_01.iq_stPtm,
                                                    i_stISG:=SDS_GCP_01.PG,
                                                    i_stBSG:=ROUGH_GPI_01.PG,
                                                      ScrollPump:=MECH_PRO_01.stPump);
+
+
 
     SDS_VRC_01(i_xExtILK_OK:=bSDS_VRC_01_ILK,  // Not active right now; leave ILK to initialized FALSE
                 i_xOverrideMode:=xSystemOverride_ChemRIXS,
@@ -1392,7 +1581,7 @@ PRG_Chamber_Valves
         fbArbiter:= GVL_PMPS.fbArbiter1);
 
     MAIN_VGC_02(i_stUSG:=TC_GCP_01.PG,
-                i_stDSG:=IM6K2_GCC_01_reader.IG,// PRG_ADS_Gauges.IM6K2_GCC_Reader.IG,
+                i_stDSG:=AT3K2_GCC_01_reader.IG,// PRG_ADS_Gauges.IM6K2_GCC_Reader.IG,
                 i_xDis_DPILK:=FALSE,
                 i_xPMPS_OK:=TRUE,
                 i_xEPS_OK:=TRUE,
@@ -1461,7 +1650,10 @@ PRG_Chamber_Valves
                 i_xOverrideMode:=xSystemOverride_ChemRIXS,
                 iq_stValve =>);
 
-    bSDS_VRC_03_ILK := SDS_VGC_01.M_IsClosed() AND SDS_VRC_02.M_IsClosed() AND SDS_VRC_01.M_IsClosed();
+    bSDS_VRC_03_ILK := SDS_VGC_01.M_IsClosed() AND SDS_VRC_02.M_IsClosed() AND SDS_VRC_01.M_IsClosed() AND
+                       SDS_VVC_01.M_IsClosed() AND SDS_VVC_02.M_IsClosed() AND // Vent package valves are closed
+                       NOT (VLS_VRC_01.M_IsOpen() AND TC_VRC_02.M_IsOpen() AND TC_VRC_01.M_IsOpen() AND TC_VRC_03.M_IsOpen() AND (SDS_GCP_01.PG.rPRESS > 1));
+
 
     SDS_VRC_03(i_xExtILK_OK:=bSDS_VRC_03_ILK,
                 i_xOverrideMode:=xSystemOverride_ChemRIXS,
@@ -1492,10 +1684,31 @@ PRG_Chamber_Valves
         iq_stValve =>
     );
 
+    bCRIX_SVLS_VWC_01_ILK_OK := (rCRIX_SVLS_VWC_01_Pres_US_SP > CRIX_SVLS_GCP_01.PG.rPRESS) and CRIX_SVLS_GCP_01.PG.xAT_VAC
+                                and (rCRIX_SVLS_VWC_01_Pres_DS_SP > CRIX_SVLS_GCP_02.PG.rPRESS) and CRIX_SVLS_GCP_02.PG.xAT_VAC;
+
+
+
+    CRIX_SVLS_VWC_01 (
+        i_xExtILK_OK:= bCRIX_SVLS_VWC_01_ILK_OK,
+        i_xOverrideMode:= xSystemOverride_ChemRIXS,
+        iq_stValve=> stCRIX_SVLS_VWC_01,
+    );
+
+
+    bCRIX_SVLS_VRC_01_ILK_OK := F_TurboGateValve_Protection_ILK(i_Turbo:=CRIX_SVLS_PTM_01.iq_stPtm,
+                                                   i_stISG:=CRIX_SVLS_GCP_01.PG,
+                                                   i_stBSG:=ROUGH_GPI_01.PG,
+                                                     ScrollPump:=MECH_PRO_01.stPump);
+    CRIX_SVLS_VRC_01(i_xExtILK_OK:=bCRIX_SVLS_VRC_01_ILK_OK,
+                i_xOverrideMode:=xSystemOverride_ChemRIXS,
+                iq_stValve =>stCRIX_SVLS_VRC_01);
+
     END_PROGRAM
 
 
 Related:
+    * `F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ`_
     * `GVL_PMPS`_
     * `MAIN`_
     * `PRG_ADS_Gauges`_
@@ -1529,6 +1742,16 @@ PRG_Com
         SizeComIn:= SIZEOF(K2S17_E5_CH1_stComOut),
         TxBuffer:= K2S17_E5_CH1_SerialTXBuffer,
         RxBuffer:= K2S17_E5_CH1_SerialRXBuffer,
+        Error=> ,
+        ErrorID=> );
+
+    CRIX_SVLS_fbSerialLineControl(
+        Mode:= SERIALLINEMODE_EL6_22B,
+        pComIn:=ADR(CRIX_SVLS_stComIn),
+        pComOut:=ADR(CRIX_SVLS_stComOut),
+        SizeComIn:=SIZEOF(CRIX_SVLS_stComIn),
+        TxBuffer:=CRIX_SVLS_SerialTXBuffer,
+        RxBuffer:=CRIX_SVLS_SerialRXBuffer,
         Error=> ,
         ErrorID=> );
 
