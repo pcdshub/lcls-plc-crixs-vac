@@ -4,8 +4,8 @@
 #         Project: lcls-plc-crix-vac.tsproj
 #        PLC name: PLC_CRIX_VAC (PLC_CRIX_VAC Instance)
 # Generated using: pytmc 2.17.0
-# Project version: 4fa2a58
-#    Project hash: 4fa2a5856e21d731404e8e1562450167b22f51c2
+# Project version: b072df2
+#    Project hash: b072df2fcdc54e845cb85fcf6c4c986648389c0e
 #     PLC IP/host: 172.21.140.47
 #      PLC Net ID: 172.21.140.47.1.1
 #  ** Production mode IOC **
@@ -88,7 +88,7 @@ dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:CRIXS:VAC,IDX=1")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:CRIXS:VAC")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:CRIXS:VAC,PROJECT=lcls-plc-crix-vac.tsproj,HASH=4fa2a58,VERSION=4fa2a58,PYTMC=2.17.0,PLC_HOST=172.21.140.47")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:CRIXS:VAC,PROJECT=lcls-plc-crix-vac.tsproj,HASH=b072df2,VERSION=b072df2,PYTMC=2.17.0,PLC_HOST=172.21.140.47")
 
 #   LCLS General: * -> 2.6.0 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:CRIXS:VAC,DEPENDENCY=LCLS_General,VERSION=2.6.0,VENDOR=SLAC")
