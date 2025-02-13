@@ -77,6 +77,9 @@
     <Compile Include="POUs\FB_ChemRIXS_Turbo_ILK.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>

@@ -126,6 +126,7 @@ Turbo is running and no fault.
 The above interlocks will be good for the system is already under vacuum.  For starting pumping down, we can set up VLS to Set Up mode to open both VLS gate valve and window valve.
 So we can pump down main chamber and VLS together through VGC-02.
 *)
+
 bVLS_VRC_01_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=VLS_PTM_01.iq_stPtm,
                                                i_stISG:=VLS_GPI_01.PG,
                                                i_stBSG:=ROUGH_GPI_01.PG,
@@ -136,10 +137,13 @@ VLS_VRC_01(i_xExtILK_OK:=bVLS_VRC_01_ILK,
 
 // This is roughing valve for Load Lock Chamber , apply the same logic as roughing valves for chamber
 
-bSDS_VRC_01_ILK := F_TurboGateValve_Protection_ILK(i_Turbo:=SDS_PTM_01.iq_stPtm,
+// auto pump down: dont want to read SDS_GCP_01 or ptm 01 for sds_vrc_01
+bSDS_VRC_01_ILK := F_TurboGateValve_Protection_ILK_Turbo_OFF_OK_NO_GPI_READ(i_Turbo:=SDS_PTM_01.iq_stPtm,
                                                i_stISG:=SDS_GCP_01.PG,
                                                i_stBSG:=ROUGH_GPI_01.PG,
                                                  ScrollPump:=MECH_PRO_01.stPump);
+
+
 
 SDS_VRC_01(i_xExtILK_OK:=bSDS_VRC_01_ILK,  // Not active right now; leave ILK to initialized FALSE
             i_xOverrideMode:=xSystemOverride_ChemRIXS,
@@ -251,7 +255,10 @@ SDS_VRC_02(i_xExtILK_OK:=bSDS_VRC_02_ILK,
             i_xOverrideMode:=xSystemOverride_ChemRIXS,
             iq_stValve =>);
 
-bSDS_VRC_03_ILK := SDS_VGC_01.M_IsClosed() AND SDS_VRC_02.M_IsClosed() AND SDS_VRC_01.M_IsClosed();
+bSDS_VRC_03_ILK := SDS_VGC_01.M_IsClosed() AND SDS_VRC_02.M_IsClosed() AND SDS_VRC_01.M_IsClosed() AND
+                   SDS_VVC_01.M_IsClosed() AND SDS_VVC_02.M_IsClosed() AND // Vent package valves are closed
+                   NOT (VLS_VRC_01.M_IsOpen() AND TC_VRC_02.M_IsOpen() AND TC_VRC_01.M_IsOpen() AND TC_VRC_03.M_IsOpen() AND (SDS_GCP_01.PG.rPRESS > 1));
+
 
 SDS_VRC_03(i_xExtILK_OK:=bSDS_VRC_03_ILK,
             i_xOverrideMode:=xSystemOverride_ChemRIXS,

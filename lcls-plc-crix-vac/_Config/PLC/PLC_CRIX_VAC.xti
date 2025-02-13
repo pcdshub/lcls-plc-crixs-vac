@@ -2296,8 +2296,6 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_ROUGH_GPI.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 153 (EL2212)">
-				<Link VarA="PlcTask Inputs^GVL_Vars.iMechDRL_CurrMon" VarB="DOX Synchron info data Channel 2^Info data 1"/>
-				<Link VarA="PlcTask Inputs^GVL_Vars.iMechDrl_VMon" VarB="DOX Synchron info data Channel 2^Info data 2"/>
 				<Link VarA="PlcTask Outputs^GVL_Mech_Room.MECH_VVC_01.q_xOPN_DO" VarB="DOX Control Channel 2^Control^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 45 (EL2794)">
@@ -2315,7 +2313,6 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Inputs^GVL_Mech_Room.MECH_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)">
-				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_TxPDO_state" VarB="SYNC Inputs^TxPDO state"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_WcState" VarB="WcState^WcState" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xPTC_MOT_Y_10_IN" VarB="IO Inputs^bMOTY10_IN" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xPTC_MOT_Y_10_OUT" VarB="IO Inputs^bMOTY10_OUT" AutoLink="true"/>
