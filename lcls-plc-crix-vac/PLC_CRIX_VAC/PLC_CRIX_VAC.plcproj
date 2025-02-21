@@ -19,6 +19,9 @@
     <Title>plc-crix-vac</Title>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CommTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DUTs\E_STATES.TcDUT">
       <SubType>Code</SubType>
     </Compile>
