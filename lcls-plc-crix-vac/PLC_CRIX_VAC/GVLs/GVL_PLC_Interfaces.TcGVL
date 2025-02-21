@@ -9,14 +9,18 @@ VAR_GLOBAL
 
     (*ETHERCAT BRRIDGE COM STATUS*)
     //0: Other side is in OP state, >0: Error
-    {attribute := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^SYNC Inputs^TxPDO state'}
+
+    {attribute 'pytmc' :=' pv: CRIX:VAC2MOT:ECATBRG:TxPDO_state'}
+    {attribute 'TcLinkTo':= 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^SYNC Inputs^TxPDO state'}
     xEcatBridge_TxPDO_state AT %I* :BOOL;
 
     //0: External device connectd, 1: External device not connected
-    {attribute := 'TIIB[Term 95 (EL6695)]^SYNC Inputs^External device not connected'}
+    {attribute 'pytmc' :=' pv: CRIX:VAC2MOT:ECATBRG:External_device_not_connected'}
+    {attribute 'TcLinkTo':= 'TIIB[Term 95 (EL6695)]^SYNC Inputs^External device not connected'}
     xEcatBridge_External_device_not_connected AT %I* : BOOL;
 
     //0 = Data valid, 1 = Data invalid
+    {attribute 'pytmc' :=' pv: CRIX:VAC2MOT:ECATBRG:WcState'}
     {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^WcState^WcState'}
     xEcatBridge_WcState AT %I* : BOOL;
 
@@ -27,12 +31,10 @@ VAR_GLOBAL
     {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY10_OUT'}
     xPTC_MOT_Y_10_OUT AT %I* : BOOL;
 
-    {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_IN
-    '}
+    {attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_IN'}
     xPTC_MOT_Y_11_IN AT %I* : BOOL;
 
-    {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_OUT
-    '}
+    {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)^IO Inputs^bMOTY11_OUT'}
     xPTC_MOT_Y_11_OUT AT %I* : BOOL;
 
 

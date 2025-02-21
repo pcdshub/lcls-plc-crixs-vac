@@ -4,8 +4,8 @@
 #         Project: lcls-plc-crix-vac.tsproj
 #        PLC name: PLC_CRIX_VAC (PLC_CRIX_VAC Instance)
 # Generated using: pytmc 2.17.0
-# Project version: 0aad75b
-#    Project hash: 0aad75b7e61a7c030390bc2ca55b459193c4321d
+# Project version: b072df2
+#    Project hash: b072df2fcdc54e845cb85fcf6c4c986648389c0e
 #     PLC IP/host: 172.21.140.47
 #      PLC Net ID: 172.21.140.47.1.1
 #  ** Production mode IOC **
@@ -43,7 +43,7 @@ epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
 epicsEnvSet("IPADDR",           "172.21.140.47")
 epicsEnvSet("AMSID",            "172.21.140.47.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "5061")
+epicsEnvSet("ADS_MAX_PARAMS",   "5067")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
@@ -85,10 +85,10 @@ dbLoadRecords("save_restoreStatus.db", "P=PLC:CRIXS:VAC:")
 dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 
 ## TwinCAT task, application, and project information databases ##
-dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:CRIXS:VAC,IDX=2")
+dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:CRIXS:VAC,IDX=1")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:CRIXS:VAC")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:CRIXS:VAC,PROJECT=lcls-plc-crix-vac.tsproj,HASH=0aad75b,VERSION=0aad75b,PYTMC=2.17.0,PLC_HOST=172.21.140.47")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:CRIXS:VAC,PROJECT=lcls-plc-crix-vac.tsproj,HASH=b072df2,VERSION=b072df2,PYTMC=2.17.0,PLC_HOST=172.21.140.47")
 
 #   LCLS General: * -> 2.6.0 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:CRIXS:VAC,DEPENDENCY=LCLS_General,VERSION=2.6.0,VENDOR=SLAC")
@@ -112,8 +112,8 @@ cd "$(IOC_TOP)"
 ## PLC Project Database files ##
 dbLoadRecords("PLC_CRIX_VAC.db", "PORT=$(ASYN_PORT),PREFIX=PLC:CRIXS:VAC:,IOCNAME=$(IOC),IOC=$(IOC)")
 
-# Total records: 4061
-callbackSetQueueSize(10122)
+# Total records: 4067
+callbackSetQueueSize(10134)
 
 # Autosave and archive settings:
 save_restoreSet_status_prefix("PLC:CRIXS:VAC:")

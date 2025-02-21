@@ -10781,6 +10781,85 @@ record(bo, "CRIXS:MECH:VVC:01:FORCE_OPN") {
   info(archive, "VAL")
 }
 
+record(bi, "CRIX:VAC2MOT:ECATBRG:External_device_not_connected_RBV") {
+  # GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected
+  field(DESC, "GVL_PLC_Interfaces.x...ice_not_connected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIX:VAC2MOT:ECATBRG:External_device_not_connected") {
+  # GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected
+  field(DESC, "GVL_PLC_Interfaces.x...ice_not_connected")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:VAC2MOT:ECATBRG:TxPDO_state_RBV") {
+  # GVL_PLC_Interfaces.xEcatBridge_TxPDO_state
+  field(DESC, "GVL_PLC_Interfaces.x...ridge_TxPDO_state")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_PLC_Interfaces.xEcatBridge_TxPDO_state?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIX:VAC2MOT:ECATBRG:TxPDO_state") {
+  # GVL_PLC_Interfaces.xEcatBridge_TxPDO_state
+  field(DESC, "GVL_PLC_Interfaces.x...ridge_TxPDO_state")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_PLC_Interfaces.xEcatBridge_TxPDO_state=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:VAC2MOT:ECATBRG:WcState_RBV") {
+  field(DESC, "GVL_PLC_Interfaces.xEcatBridge_WcState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_PLC_Interfaces.xEcatBridge_WcState?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIX:VAC2MOT:ECATBRG:WcState") {
+  field(DESC, "GVL_PLC_Interfaces.xEcatBridge_WcState")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_PLC_Interfaces.xEcatBridge_WcState=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
 record(bi, "PLC:CRIXS:VAC:ARB:01:AP:Entry:010:Live_RBV") {
   field(DESC, "Assertion Pool")
   field(SCAN, "I/O Intr")
