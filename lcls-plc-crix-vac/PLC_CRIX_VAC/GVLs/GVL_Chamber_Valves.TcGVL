@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <GVL Name="GVL_Chamber_Valves" Id="{ead97eae-6a6e-4eba-9bd6-9444d4284b1f}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
@@ -148,7 +148,15 @@ VAR_GLOBAL
     {attribute 'TcLinkTo' := 	'.i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E40 (EL1004)^Channel 4^Input;
                                 .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E39 (EL2004)^Channel 2^Output'}
     SDS_VVC_02 : FB_VRC_NC_ClsLs;
+	
+	{attribute 'pytmc' :=' pv: CRIXS:SVLS:VRC:01 '}
+    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[SVLS Vac (EL1004_E5)]^Channel 1^Input;
+                                 .i_xClsLS	:=	TIIB[SVLS Vac (EL1004_E5)]^Channel 5^Input;
+                                .q_xOPN_DO	:=	TIIB[SVLS Vac (EL2004_E6)]^Channel 1^Input'}
 
+    CRIX_SVLS_VRC_01 : FB_VRC;
+	
+	stCRIX_SVLS_VRC_01 : ST_VRC;
 
 END_VAR]]></Declaration>
   </GVL>

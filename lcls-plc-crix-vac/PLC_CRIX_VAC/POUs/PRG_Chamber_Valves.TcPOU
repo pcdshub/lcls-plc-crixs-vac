@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="PRG_Chamber_Valves" Id="{f30907aa-2202-42ce-b721-cf743607f31e}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_Chamber_Valves
 VAR
@@ -49,6 +49,8 @@ VAR
 //	bVGC_16_OPN_OK: BOOL;
 //	bVGC_16_CLS_OK: BOOL;
     bSDS_VRC_03_ILK: BOOL;
+
+	bCRIX_SVLS_VRC_01_ILK: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -289,7 +291,24 @@ SDS_VVC_02 (
     iq_stValve =>
 );
 
+
+bCRIX_SVLS_VRC_01_ILK := (CRIX_SVLS_GPI_01.PG.rPRESS > 0.005) AND (CRIX_SVLS_GPI_02.PG.rPRESS > 0.005);
+
+CRIX_SVLS_VRC_01 (
+    i_xExtILK_OK := bCRIX_SVLS_VRC_01_ILK,
+    i_xOverrideMode := xSystemOverride_ChemRIXS,
+    iq_stValve =>
+);
 ]]></ST>
     </Implementation>
+    <LineIds Name="PRG_Chamber_Valves">
+      <LineId Id="3" Count="235" />
+      <LineId Id="353" Count="0" />
+      <LineId Id="302" Count="0" />
+      <LineId Id="301" Count="0" />
+      <LineId Id="289" Count="1" />
+      <LineId Id="293" Count="3" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

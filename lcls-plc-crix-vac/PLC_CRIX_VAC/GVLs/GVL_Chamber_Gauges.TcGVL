@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <GVL Name="GVL_Chamber_Gauges" Id="{5237aca3-4acc-4857-9d60-04b0502e6857}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
@@ -61,6 +61,17 @@ VAR_GLOBAL
 
     stTC_GCP_01 : ST_VG;
 
+	{attribute 'pytmc' :=' pv: CRIXS:SVLS:GPI:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[SVLS Vac E9 (EL3174)]^AI Standard Channel 1^Value '}
+    CRIX_SVLS_GPI_01 : FB_972;
+
+    stCRIX_SVLS_GPI_01 : ST_VG;
+	
+    {attribute 'pytmc' :=' pv: CRIXS:SVLS:GPI:02 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[SVLS Vac E9 (EL3174)]^AI Standard Channel 2^Value '}
+    CRIX_SVLS_GPI_02 : FB_972;
+
+    stCRIX_SVLS_GPI_02 : ST_VG;
 
 END_VAR]]></Declaration>
   </GVL>
