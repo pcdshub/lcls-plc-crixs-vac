@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.30" ClassName="CNestedPlcProjDef">
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35" ClassName="CNestedPlcProjDef">
 	<DataTypes>
 		<DataType>
 			<Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
@@ -52,9 +52,7 @@
 			<SubItem>
 				<Name>Width</Name>
 				<Type GUID="{18071995-0000-0000-0000-00000000000D}">REAL</Type>
-				<Comment>
-					<![CDATA[ distance between horizontal slits (x)]]>
-				</Comment>
+				<Comment><![CDATA[ distance between horizontal slits (x)]]></Comment>
 				<BitSize>32</BitSize>
 				<BitOffs>0</BitOffs>
 				<Properties>
@@ -69,9 +67,7 @@
 			<SubItem>
 				<Name>Height</Name>
 				<Type GUID="{18071995-0000-0000-0000-00000000000D}">REAL</Type>
-				<Comment>
-					<![CDATA[ distance between vertical slits (y)]]>
-				</Comment>
+				<Comment><![CDATA[ distance between vertical slits (y)]]></Comment>
 				<BitSize>32</BitSize>
 				<BitOffs>32</BitOffs>
 				<Properties>
@@ -86,9 +82,7 @@
 			<SubItem>
 				<Name>xOK</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<Comment>
-					<![CDATA[ status of aperture, false if error or in motion]]>
-				</Comment>
+				<Comment><![CDATA[ status of aperture, false if error or in motion]]></Comment>
 				<BitSize>8</BitSize>
 				<BitOffs>64</BitOffs>
 				<Properties>
@@ -106,9 +100,7 @@
 			<SubItem>
 				<Name>nTran</Name>
 				<Type GUID="{18071995-0000-0000-0000-00000000000D}">REAL</Type>
-				<Comment TxtId="">
-					<![CDATA[Requested pre-optic attenuation - 1 is full transmission]]>
-				</Comment>
+				<Comment TxtId=""><![CDATA[Requested pre-optic attenuation - 1 is full transmission]]></Comment>
 				<BitSize>32</BitSize>
 				<BitOffs>0</BitOffs>
 				<Default>
@@ -127,9 +119,7 @@
 			<SubItem>
 				<Name>nRate</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
-				<Comment>
-					<![CDATA[ Pulse-rate ]]>
-				</Comment>
+				<Comment><![CDATA[ Pulse-rate ]]></Comment>
 				<BitSize>32</BitSize>
 				<BitOffs>32</BitOffs>
 				<Default>
@@ -146,9 +136,7 @@
 			<SubItem>
 				<Name>neVRange</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000007}">DWORD</Type>
-				<Comment>
-					<![CDATA[ Photon energy ranges ]]>
-				</Comment>
+				<Comment><![CDATA[ Photon energy ranges ]]></Comment>
 				<BitSize>32</BitSize>
 				<BitOffs>64</BitOffs>
 				<Default>
@@ -169,9 +157,7 @@
 			<SubItem>
 				<Name>neV</Name>
 				<Type GUID="{18071995-0000-0000-0000-00000000000D}">REAL</Type>
-				<Comment TxtId="">
-					<![CDATA[Current Photon energy as calculated by the arbiter]]>
-				</Comment>
+				<Comment TxtId=""><![CDATA[Current Photon energy as calculated by the arbiter]]></Comment>
 				<BitSize>32</BitSize>
 				<BitOffs>96</BitOffs>
 			</SubItem>
@@ -209,9 +195,7 @@
 					<LBound>1</LBound>
 					<Elements>16</Elements>
 				</ArrayInfo>
-				<Comment>
-					<![CDATA[ Beamline attenuators ]]>
-				</Comment>
+				<Comment><![CDATA[ Beamline attenuators ]]></Comment>
 				<BitSize>1024</BitSize>
 				<BitOffs>160</BitOffs>
 				<Properties>
@@ -239,9 +223,7 @@
 					<LBound>1</LBound>
 					<Elements>16</Elements>
 				</ArrayInfo>
-				<Comment>
-					<![CDATA[ Stopper statuses ]]>
-				</Comment>
+				<Comment><![CDATA[ Stopper statuses ]]></Comment>
 				<BitSize>128</BitSize>
 				<BitOffs>1568</BitOffs>
 				<Properties>
@@ -255,18 +237,14 @@
 			<SubItem>
 				<Name>xValidToggle</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<Comment>
-					<![CDATA[ Toggle for watchdog]]>
-				</Comment>
+				<Comment><![CDATA[ Toggle for watchdog]]></Comment>
 				<BitSize>8</BitSize>
 				<BitOffs>1696</BitOffs>
 			</SubItem>
 			<SubItem>
 				<Name>xValid</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000030}">BOOL</Type>
-				<Comment>
-					<![CDATA[ Beam parameter set is valid (if readback), or acknowledged (if request)]]>
-				</Comment>
+				<Comment><![CDATA[ Beam parameter set is valid (if readback), or acknowledged (if request)]]></Comment>
 				<BitSize>8</BitSize>
 				<BitOffs>1704</BitOffs>
 				<Properties>
@@ -280,9 +258,7 @@
 			<SubItem>
 				<Name>nCohortInt</Name>
 				<Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
-				<Comment>
-					<![CDATA[ Cohort index. Identifies which cohort this BP set was included in arbitration]]>
-				</Comment>
+				<Comment><![CDATA[ Cohort index. Identifies which cohort this BP set was included in arbitration]]></Comment>
 				<BitSize>32</BitSize>
 				<BitOffs>1728</BitOffs>
 				<Properties>
@@ -322,13 +298,11 @@
 		</DataType>
 		<DataType>
 			<Name GUID="{0146173C-D895-D219-E209-CC005AC77636}" Namespace="Tc2_SerialCom" AutoDeleteType="true">EL6inData22B</Name>
-			<Comment>
-				<![CDATA[ This data type is corresponding to the
+			<Comment><![CDATA[ This data type is corresponding to the
    EL-6xxx data structure used in the
    TwinCAT SystemManager
    (EL-6xxx version using 22 data bytes) 
-]]>
-			</Comment>
+]]></Comment>
 			<BitSize>192</BitSize>
 			<SubItem>
 				<Name>Status</Name>
@@ -349,13 +323,11 @@
 		</DataType>
 		<DataType>
 			<Name GUID="{D6B0A42D-897A-4B90-95E8-3C741C3CE3EE}" Namespace="Tc2_SerialCom" AutoDeleteType="true">EL6outData22B</Name>
-			<Comment>
-				<![CDATA[ This data type is corresponding to the
+			<Comment><![CDATA[ This data type is corresponding to the
    EL-6xxx data structure used in the
    TwinCAT SystemManager
    (EL-6xxx version using 22 data bytes) 
-]]>
-			</Comment>
+]]></Comment>
 			<BitSize>192</BitSize>
 			<SubItem>
 				<Name>Ctrl</Name>
@@ -376,154 +348,24 @@
 		</DataType>
 	</DataTypes>
 	<Project GUID="{97B8D32E-44EF-4B51-9BAC-B7361D049CCB}" Name="PLC_CRIX_VAC" PrjFilePath="..\..\PLC_CRIX_VAC\PLC_CRIX_VAC.plcproj" TmcFilePath="..\..\PLC_CRIX_VAC\PLC_CRIX_VAC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC_CRIX_VAC\PLC_CRIX_VAC.tmc">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC_CRIX_VAC\PLC_CRIX_VAC.tmc" TmcHash="{06A5B436-BA8D-BE7E-0BD0-4CA7C94B9156}">
 			<Name>PLC_CRIX_VAC Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
 				<Name>PlcTask Inputs</Name>
 				<Var>
 					<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
-					<Comment>
-						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
-					</Comment>
+					<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
 					<Name>LCLS_Vacuum.Global_Variables.g_stSystem.I_EcatMaster1</Name>
-					<Comment>
-						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
-					</Comment>
+					<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
 					<Name>PRG_MPS.fbArbiterIO.i_stCurrentBP</Name>
 					<Type GUID="{292CD354-C7C0-4A61-AAD0-1C85DD69646B}">ST_BeamParams_IO</Type>
-					<SubVar>
-						<Name>nTran</Name>
-						<Comment>
-							<![CDATA[Requested pre-optic attenuation - 1 is full transmission]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>nRate</Name>
-						<Comment>
-							<![CDATA[ Pulse-rate ]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>neVRange</Name>
-						<Comment>
-							<![CDATA[ Photon energy ranges ]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>neV</Name>
-						<Comment>
-							<![CDATA[Current Photon energy as calculated by the arbiter]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astAttenuators</Name>
-						<Comment>
-							<![CDATA[ Beamline attenuators ]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[1]^Width</Name>
-						<Comment>
-							<![CDATA[ distance between horizontal slits (x)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[1]^Height</Name>
-						<Comment>
-							<![CDATA[ distance between vertical slits (y)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[1]^xOK</Name>
-						<Comment>
-							<![CDATA[ status of aperture, false if error or in motion]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[2]^Width</Name>
-						<Comment>
-							<![CDATA[ distance between horizontal slits (x)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[2]^Height</Name>
-						<Comment>
-							<![CDATA[ distance between vertical slits (y)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[2]^xOK</Name>
-						<Comment>
-							<![CDATA[ status of aperture, false if error or in motion]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[3]^Width</Name>
-						<Comment>
-							<![CDATA[ distance between horizontal slits (x)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[3]^Height</Name>
-						<Comment>
-							<![CDATA[ distance between vertical slits (y)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[3]^xOK</Name>
-						<Comment>
-							<![CDATA[ status of aperture, false if error or in motion]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[4]^Width</Name>
-						<Comment>
-							<![CDATA[ distance between horizontal slits (x)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[4]^Height</Name>
-						<Comment>
-							<![CDATA[ distance between vertical slits (y)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[4]^xOK</Name>
-						<Comment>
-							<![CDATA[ status of aperture, false if error or in motion]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>aVetoDevices</Name>
-						<Comment>
-							<![CDATA[ Stopper statuses ]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>xValidToggle</Name>
-						<Comment>
-							<![CDATA[ Toggle for watchdog]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>xValid</Name>
-						<Comment>
-							<![CDATA[ Beam parameter set is valid (if readback), or acknowledged (if request)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>nCohortInt</Name>
-						<Comment>
-							<![CDATA[ Cohort index. Identifies which cohort this BP set was included in arbitration]]>
-						</Comment>
-					</SubVar>
 				</Var>
 				<Var>
 					<Name>PRG_MPS.fbArbiterIO.xTxPDO_toggle</Name>
@@ -543,48 +385,36 @@
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Gauges.TC_GPI_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.xEcatBridge_TxPDO_state</Name>
-					<Comment>
-						<![CDATA[CRIX Vac
+					<Comment><![CDATA[CRIX Vac
 Outputs
 	fb_ADS_WATCHDOG_VAC_LAMP_TMO:FB_ADS_WATCHDOG;
 ETHERCAT BRRIDGE COM STATUS
-0: Other side is in OP state, >0: Error]]>
-					</Comment>
+0: Other side is in OP state, >0: Error]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Gauges.CRYO_GPI_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected</Name>
-					<Comment>
-						<![CDATA[0: External device connectd, 1: External device not connected]]>
-					</Comment>
+					<Comment><![CDATA[0: External device connectd, 1: External device not connected]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.xEcatBridge_WcState</Name>
-					<Comment>
-						<![CDATA[0 = Data valid, 1 = Data invalid]]>
-					</Comment>
+					<Comment><![CDATA[0 = Data valid, 1 = Data invalid]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.xPTC_MOT_Y_10_IN</Name>
-					<Comment>
-						<![CDATA[I/O Inputs to CRIX motion plc]]>
-					</Comment>
+					<Comment><![CDATA[I/O Inputs to CRIX motion plc]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -593,9 +423,7 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Gauges.ROUGH_GPI_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
@@ -616,58 +444,42 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Gauges.TC_GCC_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ Controls and I/Os]]>
-					</Comment>
+					<Comment><![CDATA[ Controls and I/Os]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Gauges.TC_GCC_01.i_xHV_ON</Name>
-					<Comment>
-						<![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Gauges.TC_GCC_01.i_xDisc_Active</Name>
-					<Comment>
-						<![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Gauges.CRYO_GCP_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Gauges.CRYO_GCP_02.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Gauges.SDS_GCP_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Gauges.TC_GCP_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.TC_VRC_01.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -676,9 +488,7 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.TC_VRC_02.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -687,9 +497,7 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.TC_VRC_03.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -698,9 +506,7 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.VLS_VRC_01.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -709,9 +515,7 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.SDS_VRC_03.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -720,9 +524,7 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.MAIN_VGC_01.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -731,9 +533,7 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.MAIN_VGC_02.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -742,9 +542,7 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.CRYO_VGC_01.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -753,9 +551,7 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.CRYO_VGC_02.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -764,9 +560,7 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.CRYO_VRC_01.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -775,9 +569,7 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.CRYO_VRC_02.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -786,9 +578,7 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.SDS_VGC_01.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -797,9 +587,7 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.SDS_VRC_02.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -808,9 +596,7 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.SDS_VRC_01.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -819,137 +605,99 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.SDS_VVC_01.i_xClsLS</Name>
-					<Comment>
-						<![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]>
-					</Comment>
+					<Comment><![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Valves.SDS_VVC_02.i_xClsLS</Name>
-					<Comment>
-						<![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]>
-					</Comment>
+					<Comment><![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_COM.K2S17_E5_CH2_stComIn</Name>
-					<Comment>
-						<![CDATA[SERIAL IO K2S17_E5_CH2 (EL6022)]]>
-					</Comment>
+					<Comment><![CDATA[SERIAL IO K2S17_E5_CH2 (EL6022)]]></Comment>
 					<Type GUID="{0146173C-D895-D219-E209-CC005AC77636}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_COM.K2S17_E5_CH1_stComIn</Name>
-					<Comment>
-						<![CDATA[SERIAL IO K2S17_E5_CH1 (EL6022)]]>
-					</Comment>
+					<Comment><![CDATA[SERIAL IO K2S17_E5_CH1 (EL6022)]]></Comment>
 					<Type GUID="{0146173C-D895-D219-E209-CC005AC77636}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_COM_VLS.VLS_EP1_CH1_stComIn</Name>
-					<Comment>
-						<![CDATA[SERIAL IO]]>
-					</Comment>
+					<Comment><![CDATA[SERIAL IO]]></Comment>
 					<Type GUID="{0146173C-D895-D219-E209-CC005AC77636}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_LI3K2.RIX_LI3K2_PTM_01.i_xAtSpd</Name>
-					<Comment>
-						<![CDATA[ Normaml operation when true]]>
-					</Comment>
+					<Comment><![CDATA[ Normaml operation when true]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_LI3K2.RIX_LI3K2_PTM_01.i_xFault</Name>
-					<Comment>
-						<![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]>
-					</Comment>
+					<Comment><![CDATA[ Error // this open collector output signal is ON when a system fault condition is detected]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Mech_Room.MECH_PRO_01.i_xMPStatus</Name>
-					<Comment>
-						<![CDATA[MP status]]>
-					</Comment>
+					<Comment><![CDATA[MP status]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Mech_Room.MECH_PRO_01.i_xBPStatus</Name>
-					<Comment>
-						<![CDATA[BP status]]>
-					</Comment>
+					<Comment><![CDATA[BP status]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Mech_Room.MECH_PRO_01.i_xWarning</Name>
-					<Comment>
-						<![CDATA[Warning status]]>
-					</Comment>
+					<Comment><![CDATA[Warning status]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Mech_Room.MECH_PRO_01.i_xAlarmOK</Name>
-					<Comment>
-						<![CDATA[Alarm, maps to error]]>
-					</Comment>
+					<Comment><![CDATA[Alarm, maps to error]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Mech_Room.MECH_PRO_01.i_xRemote</Name>
-					<Comment>
-						<![CDATA[Remote control status]]>
-					</Comment>
+					<Comment><![CDATA[Remote control status]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Mech_Room.MECH_GPI_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.TC_PTM_02.i_xAtSpd</Name>
-					<Comment>
-						<![CDATA[ Normaml operation when true]]>
-					</Comment>
+					<Comment><![CDATA[ Normaml operation when true]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.TC_PTM_02.i_xFaultNC</Name>
-					<Comment>
-						<![CDATA[ Error Active when no Error is present]]>
-					</Comment>
+					<Comment><![CDATA[ Error Active when no Error is present]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.TC_PTM_01.i_xAtSpd</Name>
-					<Comment>
-						<![CDATA[ Normaml operation when true]]>
-					</Comment>
+					<Comment><![CDATA[ Normaml operation when true]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.TC_PTM_01.i_xFaultNC</Name>
-					<Comment>
-						<![CDATA[ Error Active when no Error is present]]>
-					</Comment>
+					<Comment><![CDATA[ Error Active when no Error is present]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.TC_PTM_03.i_xAtSpd</Name>
-					<Comment>
-						<![CDATA[ Normaml operation when true]]>
-					</Comment>
+					<Comment><![CDATA[ Normaml operation when true]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.TC_PTM_03.i_xFaultNC</Name>
-					<Comment>
-						<![CDATA[ Error]]>
-					</Comment>
+					<Comment><![CDATA[ Error]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -962,16 +710,12 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.SDS_PTM_01.i_xAtSpd</Name>
-					<Comment>
-						<![CDATA[ Normaml operation when true]]>
-					</Comment>
+					<Comment><![CDATA[ Normaml operation when true]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.SDS_PTM_01.i_xFaultNC</Name>
-					<Comment>
-						<![CDATA[ Error]]>
-					</Comment>
+					<Comment><![CDATA[ Error]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -984,17 +728,13 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Recirculation.RCC_VRC_01.i_xClsLS</Name>
-					<Comment>
-						<![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]>
-					</Comment>
+					<Comment><![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Recirculation.RCC_VRC_02.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1003,18 +743,14 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Recirculation.RCC_VRC_03.i_xClsLS</Name>
-					<Comment>
-						<![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]>
-					</Comment>
+					<Comment><![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Recirculation.RCC_VRC_04.i_xClsLS</Name>
-					<Comment>
-						<![CDATA[IO
-	i_xOpnLS	AT%I*: BOOL;]]>
-					</Comment>
+					<Comment><![CDATA[IO
+	i_xOpnLS	AT%I*: BOOL;]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1031,16 +767,12 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Recirculation.RCC_GCP_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 					<Type>REAL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Recirculation.RCC_GCP_01.bWcstate</Name>
-					<Comment>
-						<![CDATA[ 0: date valid, 1: date invalid]]>
-					</Comment>
+					<Comment><![CDATA[ 0: date valid, 1: date invalid]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1077,16 +809,12 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_VLS.VLS_PTM_01.i_xAtSpd</Name>
-					<Comment>
-						<![CDATA[ Normaml operation when true]]>
-					</Comment>
+					<Comment><![CDATA[ Normaml operation when true]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_VLS.VLS_PTM_01.i_xFaultNC</Name>
-					<Comment>
-						<![CDATA[ Error]]>
-					</Comment>
+					<Comment><![CDATA[ Error]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1099,9 +827,7 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_VLS.VLS_VGC_01.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1110,9 +836,7 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_VLS.VLS_VWC_01.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1121,41 +845,31 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_VLS.VLS_GPI_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_VLS.VLS_GCC_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ Controls and I/Os]]>
-					</Comment>
+					<Comment><![CDATA[ Controls and I/Os]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_VLS.VLS_GCC_01.i_xHV_ON</Name>
-					<Comment>
-						<![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_VLS.VLS_GCC_01.i_xDisc_Active</Name>
-					<Comment>
-						<![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_VLS.VLS_ROUGH_GPI.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 					<Type>INT</Type>
 				</Var>
 			</Vars>
-			<Vars VarGrpType="2">
+			<Vars VarGrpType="2" AreaNo="1">
 				<Name>PlcTask Outputs</Name>
 				<Var>
 					<Name>PRG_Chamber_Valves.dummy_FFFO.q_xFastFaultOut</Name>
@@ -1164,132 +878,6 @@ ETHERCAT BRRIDGE COM STATUS
 				<Var>
 					<Name>PRG_MPS.fbArbiterIO.q_stRequestedBP</Name>
 					<Type GUID="{292CD354-C7C0-4A61-AAD0-1C85DD69646B}">ST_BeamParams_IO</Type>
-					<SubVar>
-						<Name>nTran</Name>
-						<Comment>
-							<![CDATA[Requested pre-optic attenuation - 1 is full transmission]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>nRate</Name>
-						<Comment>
-							<![CDATA[ Pulse-rate ]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>neVRange</Name>
-						<Comment>
-							<![CDATA[ Photon energy ranges ]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>neV</Name>
-						<Comment>
-							<![CDATA[Current Photon energy as calculated by the arbiter]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astAttenuators</Name>
-						<Comment>
-							<![CDATA[ Beamline attenuators ]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[1]^Width</Name>
-						<Comment>
-							<![CDATA[ distance between horizontal slits (x)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[1]^Height</Name>
-						<Comment>
-							<![CDATA[ distance between vertical slits (y)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[1]^xOK</Name>
-						<Comment>
-							<![CDATA[ status of aperture, false if error or in motion]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[2]^Width</Name>
-						<Comment>
-							<![CDATA[ distance between horizontal slits (x)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[2]^Height</Name>
-						<Comment>
-							<![CDATA[ distance between vertical slits (y)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[2]^xOK</Name>
-						<Comment>
-							<![CDATA[ status of aperture, false if error or in motion]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[3]^Width</Name>
-						<Comment>
-							<![CDATA[ distance between horizontal slits (x)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[3]^Height</Name>
-						<Comment>
-							<![CDATA[ distance between vertical slits (y)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[3]^xOK</Name>
-						<Comment>
-							<![CDATA[ status of aperture, false if error or in motion]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[4]^Width</Name>
-						<Comment>
-							<![CDATA[ distance between horizontal slits (x)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[4]^Height</Name>
-						<Comment>
-							<![CDATA[ distance between vertical slits (y)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>astApertures^astApertures[4]^xOK</Name>
-						<Comment>
-							<![CDATA[ status of aperture, false if error or in motion]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>aVetoDevices</Name>
-						<Comment>
-							<![CDATA[ Stopper statuses ]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>xValidToggle</Name>
-						<Comment>
-							<![CDATA[ Toggle for watchdog]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>xValid</Name>
-						<Comment>
-							<![CDATA[ Beam parameter set is valid (if readback), or acknowledged (if request)]]>
-						</Comment>
-					</SubVar>
-					<SubVar>
-						<Name>nCohortInt</Name>
-						<Comment>
-							<![CDATA[ Cohort index. Identifies which cohort this BP set was included in arbitration]]>
-						</Comment>
-					</SubVar>
 				</Var>
 				<Var>
 					<Name>PRG_VLS_WINDOW.g_FastFaultOutputNA.q_xFastFaultOut</Name>
@@ -1297,16 +885,12 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Gauges.TC_GCC_01.q_xHV_DIS</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
-					</Comment>
+					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.bCRYO_VGC_01_CLS</Name>
-					<Comment>
-						<![CDATA[I/O Outputs to CRIX Motion PLC]]>
-					</Comment>
+					<Comment><![CDATA[I/O Outputs to CRIX Motion PLC]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1419,30 +1003,22 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_LI3K2.RIX_LI3K2_PTM_01.q_RunDO</Name>
-					<Comment>
-						<![CDATA[ Start/Stop]]>
-					</Comment>
+					<Comment><![CDATA[ Start/Stop]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Mech_Room.MECH_PRO_01.q_xMPStart</Name>
-					<Comment>
-						<![CDATA[Main Pump start]]>
-					</Comment>
+					<Comment><![CDATA[Main Pump start]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Mech_Room.MECH_PRO_01.q_xBPStart</Name>
-					<Comment>
-						<![CDATA[ Booster Pump start (this can be started by the pump automatically)]]>
-					</Comment>
+					<Comment><![CDATA[ Booster Pump start (this can be started by the pump automatically)]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Mech_Room.MECH_VVC_01.q_xOPN_DO</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1455,30 +1031,22 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.TC_PTM_02.q_RunDO</Name>
-					<Comment>
-						<![CDATA[ Start/Stop]]>
-					</Comment>
+					<Comment><![CDATA[ Start/Stop]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.TC_PTM_01.q_RunDO</Name>
-					<Comment>
-						<![CDATA[ Start/Stop]]>
-					</Comment>
+					<Comment><![CDATA[ Start/Stop]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.TC_PTM_03.q_RunDO</Name>
-					<Comment>
-						<![CDATA[ Start/Stop for TC110 link this output to the Pumping station bit]]>
-					</Comment>
+					<Comment><![CDATA[ Start/Stop for TC110 link this output to the Pumping station bit]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.TC_PTM_03.q_PumpingStation</Name>
-					<Comment>
-						<![CDATA[ Start/Stop interlock]]>
-					</Comment>
+					<Comment><![CDATA[ Start/Stop interlock]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1491,16 +1059,12 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.SDS_PTM_01.q_RunDO</Name>
-					<Comment>
-						<![CDATA[ Start/Stop for TC110 link this output to the Pumping station bit]]>
-					</Comment>
+					<Comment><![CDATA[ Start/Stop for TC110 link this output to the Pumping station bit]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.SDS_PTM_01.q_PumpingStation</Name>
-					<Comment>
-						<![CDATA[ Start/Stop interlock]]>
-					</Comment>
+					<Comment><![CDATA[ Start/Stop interlock]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1529,16 +1093,12 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_VLS.VLS_PTM_01.q_RunDO</Name>
-					<Comment>
-						<![CDATA[ Start/Stop for TC110 link this output to the Pumping station bit]]>
-					</Comment>
+					<Comment><![CDATA[ Start/Stop for TC110 link this output to the Pumping station bit]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_VLS.VLS_PTM_01.q_PumpingStation</Name>
-					<Comment>
-						<![CDATA[ Start/Stop interlock]]>
-					</Comment>
+					<Comment><![CDATA[ Start/Stop interlock]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1559,27 +1119,21 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_VLS.VLS_GCC_01.q_xHV_DIS</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
-					</Comment>
+					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
-			<Vars VarGrpType="8">
+			<Vars VarGrpType="8" AreaNo="4">
 				<Name>PlcTask Retains</Name>
 				<Var>
 					<Name>PMPS_GVL.SuccessfulPreemption</Name>
-					<Comment>
-						<![CDATA[ Any time BPTM applies a new BP request which is confirmed]]>
-					</Comment>
+					<Comment><![CDATA[ Any time BPTM applies a new BP request which is confirmed]]></Comment>
 					<Type>UDINT</Type>
 					<InOut>7</InOut>
 				</Var>
 				<Var>
 					<Name>PMPS_GVL.AccumulatedFF</Name>
-					<Comment>
-						<![CDATA[ Any time a FF occurs]]>
-					</Comment>
+					<Comment><![CDATA[ Any time a FF occurs]]></Comment>
 					<Type>UDINT</Type>
 					<InOut>7</InOut>
 				</Var>
@@ -1952,6 +1506,17 @@ ETHERCAT BRRIDGE COM STATUS
 					</OwnerB>
 				</OwnerA>
 			</UnrestoredVarLinks>
+			<Contexts>
+				<Context>
+					<Id NeedCalleeCall="true">0</Id>
+					<Name>PlcTask</Name>
+					<ManualConfig>
+						<OTCID>#x02010030</OTCID>
+					</ManualConfig>
+					<Priority>20</Priority>
+					<CycleTime>10000000</CycleTime>
+				</Context>
+			</Contexts>
 			<TaskPouOids>
 				<TaskPouOid Prio="20" OTCID="#x08502001"/>
 			</TaskPouOids>
@@ -1960,7 +1525,7 @@ ETHERCAT BRRIDGE COM STATUS
 	<Mappings>
 		<OwnerA Name="PLC_CRIX_VAC Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 113 (EK1521-0010)^Term 154 (EK1501-0010)^PMPS_FFO">
-				<Link VarA="PlcTask Outputs^GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 113 (EK1521-0010)^Term 154 (EK1501-0010)^PMPS_PRE">
 				<Link VarA="PlcTask Inputs^PRG_MPS.fbArbiterIO.i_stCurrentBP" VarB="IO Inputs^CurrentBP" AutoLink="true"/>
@@ -1978,117 +1543,117 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.TC_GCC_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E17 (EL2624)">
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Gauges.TC_GCC_01.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Gauges.TC_GCC_01.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E19 (EL1124)">
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.TC_GCC_01.i_xDisc_Active" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.TC_GCC_01.i_xHV_ON" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.TC_GCC_01.i_xDisc_Active" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.TC_GCC_01.i_xHV_ON" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E21 (EL2004)">
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.TC_VRC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.TC_VRC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.TC_VRC_03.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.VLS_VRC_01.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.TC_VRC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.TC_VRC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.TC_VRC_03.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.VLS_VRC_01.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E22 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.TC_VRC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.TC_VRC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.TC_VRC_02.i_xClsLS" VarB="Channel 4^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.TC_VRC_02.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.TC_VRC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.TC_VRC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.TC_VRC_02.i_xClsLS" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.TC_VRC_02.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E23 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.TC_VRC_03.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.TC_VRC_03.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.VLS_VRC_01.i_xClsLS" VarB="Channel 4^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.VLS_VRC_01.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.TC_VRC_03.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.TC_VRC_03.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.VLS_VRC_01.i_xClsLS" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.VLS_VRC_01.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E24 (EL2004)">
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.MAIN_VGC_01.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.SDS_VRC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.SDS_VRC_03.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.MAIN_VGC_01.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.SDS_VRC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.SDS_VRC_03.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E25 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_03.i_xClsLS" VarB="Channel 4^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_03.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_03.i_xClsLS" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_03.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E26 (EL2004)">
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRYO_VGC_01.q_xCLS_DO" VarB="Channel 3^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRYO_VGC_01.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRYO_VGC_02.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.MAIN_VGC_02.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRYO_VGC_01.q_xCLS_DO" VarB="Channel 3^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRYO_VGC_01.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRYO_VGC_02.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.MAIN_VGC_02.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E27 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.MAIN_VGC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.MAIN_VGC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.MAIN_VGC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.MAIN_VGC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E28 (EL2004)">
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRYO_VGC_02.q_xCLS_DO" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRYO_VRC_01.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRYO_VRC_02.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.SDS_VGC_01.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRYO_VGC_02.q_xCLS_DO" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRYO_VRC_01.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRYO_VRC_02.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.SDS_VGC_01.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E29 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.MAIN_VGC_02.i_xClsLS" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.MAIN_VGC_02.i_xOpnLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.MAIN_VGC_02.i_xClsLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.MAIN_VGC_02.i_xOpnLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E30 (EL2004)">
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.SDS_VGC_01.q_xCLS_DO" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.SDS_VRC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.SDS_VGC_01.q_xCLS_DO" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.SDS_VRC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E31 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VGC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VGC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VRC_01.i_xClsLS" VarB="Channel 4^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VRC_01.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VGC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VGC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VRC_01.i_xClsLS" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VRC_01.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E33 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VGC_02.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VGC_02.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VRC_02.i_xClsLS" VarB="Channel 4^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VRC_02.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VGC_02.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VGC_02.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VRC_02.i_xClsLS" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRYO_VRC_02.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E35 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VGC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VGC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VGC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VGC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E37 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_02.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_02.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_02.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VRC_02.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E39 (EL2004)">
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.SDS_VVC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.SDS_VVC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.SDS_VVC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.SDS_VVC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E40 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VVC_01.i_xClsLS" VarB="Channel 3^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VVC_02.i_xClsLS" VarB="Channel 4^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VVC_01.i_xClsLS" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.SDS_VVC_02.i_xClsLS" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E42 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_Pumps.TC_PTM_01.i_xAtSpd" VarB="Channel 4^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Pumps.TC_PTM_01.i_xFaultNC" VarB="Channel 3^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Pumps.TC_PTM_02.i_xAtSpd" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Pumps.TC_PTM_02.i_xFaultNC" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Pumps.TC_PTM_01.i_xAtSpd" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Pumps.TC_PTM_01.i_xFaultNC" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Pumps.TC_PTM_02.i_xAtSpd" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Pumps.TC_PTM_02.i_xFaultNC" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E43 (EL2794)">
-				<Link VarA="PlcTask Outputs^GVL_Pumps.TC_PTM_01.q_RunDO" VarB="Channel 4^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Pumps.TC_PTM_02.q_RunDO" VarB="Channel 3^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Pumps.TC_PTM_01.q_RunDO" VarB="Channel 4^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Pumps.TC_PTM_02.q_RunDO" VarB="Channel 3^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E46 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_Pumps.TC_PTM_03.i_xAtSpd" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Pumps.TC_PTM_03.i_xFaultNC" VarB="Channel 3^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Pumps.TC_PTM_03.i_xRemote" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Pumps.TC_PTM_03.i_xAtSpd" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Pumps.TC_PTM_03.i_xFaultNC" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Pumps.TC_PTM_03.i_xRemote" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E47 (EL2004)">
-				<Link VarA="PlcTask Outputs^GVL_Pumps.TC_PTM_03.q_PumpingStation" VarB="Channel 3^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Pumps.TC_PTM_03.q_RunDO" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Pumps.TC_PTM_03.q_xRemote" VarB="Channel 2^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Pumps.TC_PTM_03.q_PumpingStation" VarB="Channel 3^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Pumps.TC_PTM_03.q_RunDO" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Pumps.TC_PTM_03.q_xRemote" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E49 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_Pumps.SDS_PTM_01.i_xAtSpd" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Pumps.SDS_PTM_01.i_xFaultNC" VarB="Channel 3^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Pumps.SDS_PTM_01.i_xRemote" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Pumps.SDS_PTM_01.i_xAtSpd" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Pumps.SDS_PTM_01.i_xFaultNC" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Pumps.SDS_PTM_01.i_xRemote" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E5 (EL6022)">
 				<Link VarA="PlcTask Inputs^GVL_COM.K2S17_E5_CH1_stComIn^D[0]" VarB="COM Inputs Channel 1^Data In 0" AutoLink="true"/>
@@ -2185,9 +1750,9 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Outputs^GVL_COM.K2S17_E5_CH2_stComOut^D[9]" VarB="COM Outputs Channel 2^Data Out 9" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E50 (EL2004)">
-				<Link VarA="PlcTask Outputs^GVL_Pumps.SDS_PTM_01.q_PumpingStation" VarB="Channel 3^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Pumps.SDS_PTM_01.q_RunDO" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Pumps.SDS_PTM_01.q_xRemote" VarB="Channel 2^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Pumps.SDS_PTM_01.q_PumpingStation" VarB="Channel 3^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Pumps.SDS_PTM_01.q_RunDO" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Pumps.SDS_PTM_01.q_xRemote" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E8 (EL3174)">
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.CRYO_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
@@ -2195,36 +1760,36 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.TC_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E1 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_VRC_01.i_xClsLS" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_VRC_02.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_VRC_02.i_xOpnLS" VarB="Channel 4^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_VRC_03.i_xClsLS" VarB="Channel 3^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_VRC_01.i_xClsLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_VRC_02.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_VRC_02.i_xOpnLS" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_VRC_03.i_xClsLS" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E2 (EL2004)">
-				<Link VarA="PlcTask Outputs^GVL_Recirculation.RCC_VRC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Recirculation.RCC_VRC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Recirculation.RCC_VRC_03.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Recirculation.RCC_VRC_04.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Recirculation.RCC_VRC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Recirculation.RCC_VRC_02.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Recirculation.RCC_VRC_03.q_xOPN_DO" VarB="Channel 3^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Recirculation.RCC_VRC_04.q_xOPN_DO" VarB="Channel 4^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E3 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_VRC_04.i_xClsLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_VRC_04.i_xClsLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E7 (EL3314)">
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_01.bError" VarB="TC Inputs Channel 3^Status^Error" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_01.bOverrange" VarB="TC Inputs Channel 3^Status^Overrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_01.bUnderrange" VarB="TC Inputs Channel 3^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_01.bError" VarB="TC Inputs Channel 3^Status^Error" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_01.bOverrange" VarB="TC Inputs Channel 3^Status^Overrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_01.bUnderrange" VarB="TC Inputs Channel 3^Status^Underrange" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_01.iRaw" VarB="TC Inputs Channel 3^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_02.bError" VarB="TC Inputs Channel 4^Status^Error" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_02.bOverrange" VarB="TC Inputs Channel 4^Status^Overrange" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_02.bUnderrange" VarB="TC Inputs Channel 4^Status^Underrange" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_02.bError" VarB="TC Inputs Channel 4^Status^Error" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_02.bOverrange" VarB="TC Inputs Channel 4^Status^Overrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_02.bUnderrange" VarB="TC Inputs Channel 4^Status^Underrange" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_STC_02.iRaw" VarB="TC Inputs Channel 4^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_GPI (901P)">
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_GCP_01.bWcstate" VarB="WcState^WcState" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_GCP_01.bWcstate" VarB="WcState^WcState" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_GCP_01.i_iPRESS_R" VarB="TXPDO Combined^Combination Gauge Active Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_GCP_01.xOverrange" VarB="TXPDO Combined^Combination Gauge Overrange Exceeded" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_GCP_01.xPress_OK" VarB="TXPDO Combined^Combination Gauge Reading Valid" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_GCP_01.xUnderrange" VarB="TXPDO Combined^Combination Gauge Underrange Exceeded" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_GCP_01.xOverrange" VarB="TXPDO Combined^Combination Gauge Overrange Exceeded" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_GCP_01.xPress_OK" VarB="TXPDO Combined^Combination Gauge Reading Valid" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_GCP_01.xUnderrange" VarB="TXPDO Combined^Combination Gauge Underrange Exceeded" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP1 (EP6002-0002)">
 				<Link VarA="PlcTask Inputs^GVL_COM_VLS.VLS_EP1_CH1_stComIn^D[0]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 0" AutoLink="true"/>
@@ -2275,20 +1840,20 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Outputs^GVL_COM_VLS.VLS_EP1_CH1_stComOut^D[9]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 9" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP2 (EP2338-0001)">
-				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_PTM_01.i_xAtSpd" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_PTM_01.i_xFaultNC" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_PTM_01.i_xAtSpd" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_PTM_01.i_xFaultNC" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP3 (EP2339-0021)">
-				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_VGC_01.i_xClsLS" VarB="Channel 7^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_VGC_01.i_xOpnLS" VarB="Channel 6^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_VWC_01.i_xClsLS" VarB="Channel 10^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_VWC_01.i_xOpnLS" VarB="Channel 9^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_VLS.VLS_VGC_01.q_xOPN_DO" VarB="Channel 21^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_VLS.VLS_VWC_01.q_xCLS_DO" VarB="Channel 24^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_VGC_01.i_xClsLS" VarB="Channel 7^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_VGC_01.i_xOpnLS" VarB="Channel 6^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_VWC_01.i_xClsLS" VarB="Channel 10^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_VWC_01.i_xOpnLS" VarB="Channel 9^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_VLS.VLS_VGC_01.q_xOPN_DO" VarB="Channel 21^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_VLS.VLS_VWC_01.q_xCLS_DO" VarB="Channel 24^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP4 (EP2624-0002)">
-				<Link VarA="PlcTask Outputs^GVL_VLS.VLS_GCC_01.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_VLS.VLS_PTM_01.q_RunDO" VarB="Channel 3^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_VLS.VLS_GCC_01.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_VLS.VLS_PTM_01.q_RunDO" VarB="Channel 3^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^VLS_EP5 (EP3174-0002)">
 				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_GCC_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
@@ -2296,26 +1861,26 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Inputs^GVL_VLS.VLS_ROUGH_GPI.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 153 (EL2212)">
-				<Link VarA="PlcTask Outputs^GVL_Mech_Room.MECH_VVC_01.q_xOPN_DO" VarB="DOX Control Channel 2^Control^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Mech_Room.MECH_VVC_01.q_xOPN_DO" VarB="DOX Control Channel 2^Control^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 45 (EL2794)">
-				<Link VarA="PlcTask Outputs^GVL_Mech_Room.MECH_PRO_01.q_xBPStart" VarB="Channel 2^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Mech_Room.MECH_PRO_01.q_xMPStart" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Mech_Room.MECH_PRO_01.q_xBPStart" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_Mech_Room.MECH_PRO_01.q_xMPStart" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 83 (EL1088)">
-				<Link VarA="PlcTask Inputs^GVL_Mech_Room.MECH_PRO_01.i_xAlarmOK" VarB="Channel 4^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Mech_Room.MECH_PRO_01.i_xBPStatus" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Mech_Room.MECH_PRO_01.i_xMPStatus" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Mech_Room.MECH_PRO_01.i_xRemote" VarB="Channel 5^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Mech_Room.MECH_PRO_01.i_xWarning" VarB="Channel 3^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Mech_Room.MECH_PRO_01.i_xAlarmOK" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Mech_Room.MECH_PRO_01.i_xBPStatus" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Mech_Room.MECH_PRO_01.i_xMPStatus" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Mech_Room.MECH_PRO_01.i_xRemote" VarB="Channel 5^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_Mech_Room.MECH_PRO_01.i_xWarning" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Mech Room Vac EK1 (EK1101)^Term 92 (EL3174)">
 				<Link VarA="PlcTask Inputs^GVL_Mech_Room.MECH_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 95 (EL6695)">
-				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected" VarB="SYNC Inputs^External device not connected" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_TxPDO_state" VarB="SYNC Inputs^TxPDO state" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_WcState" VarB="WcState^WcState" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected" VarB="SYNC Inputs^External device not connected" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_TxPDO_state" VarB="SYNC Inputs^TxPDO state" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_WcState" VarB="WcState^WcState" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xPTC_MOT_Y_10_IN" VarB="IO Inputs^bMOTY10_IN" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xPTC_MOT_Y_10_OUT" VarB="IO Inputs^bMOTY10_OUT" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xPTC_MOT_Y_11_IN" VarB="IO Inputs^bMOTY11_IN" AutoLink="true"/>

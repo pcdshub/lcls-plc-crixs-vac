@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="GVL_Pumps" Id="{b60d23cc-22cb-47c4-b8e1-68c95529d503}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
@@ -69,7 +69,8 @@ VAR_GLOBAL
 
     fb_SDS_PTM_01_Pfeiffer_PfeifferCom : FB_PFEIFFER_COM;
 	
-	(* Pfeiffer Turbo Pumps TC110 *)
+	(* Pfeiffer Turbo Pumps TC110 *) 
+    // SVLS 
 	
 	{attribute 'pytmc' := ' pv: CRIX:SVLS:PTM:01'}
 	{attribute 'TcLinkTo' := 	'.i_xAtSpd		      := TIIB[SVLS Vac (EL1004_E2)]^Channel 1^Input;
@@ -87,6 +88,11 @@ VAR_GLOBAL
 	
 	// SIP PIP NexTORR Pumps
 	{attribute 'pytmc' := ' pv: CRIX:SVLS:PIP:1 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:=	TIIB[SVLS-VAC-E9 (EL3174-0002)]^AI Standard Channel 1^Value;
+                                 .i_xIP_ON		:= 	TIIB[SVLS-VAC-E11 (EL1124)]^Channel 1^Input;
+                                 .i_xError      :=  TIIB[SVLS-VAC-E11 (EL1124)]^Channel 5^Input;
+                                 .q_xHVEna_DO	:= 	TIIB[SVLS-VAC-E3 (EL2794)]^Channel 4^Output
+    '}
 	CRIX_SVLS_PIP_1 : FB_PIP_SIP;
 
 END_VAR]]></Declaration>
