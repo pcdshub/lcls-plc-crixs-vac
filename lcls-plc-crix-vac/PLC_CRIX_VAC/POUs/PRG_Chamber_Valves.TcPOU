@@ -302,8 +302,7 @@ CRIX_SVLS_VRC_01 (
     i_xExtILK_OK := TRUE,
     i_xOverrideMode := xSystemOverride_ChemRIXS,
     iq_stValve => stCRIX_SVLS_VRC_01
-);
-]]></ST>
+);]]></ST>
     </Implementation>
     <LineIds Name="PRG_Chamber_Valves">
       <LineId Id="3" Count="235" />
@@ -317,7 +316,6 @@ CRIX_SVLS_VRC_01 (
       <LineId Id="405" Count="0" />
       <LineId Id="290" Count="0" />
       <LineId Id="293" Count="3" />
-      <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
