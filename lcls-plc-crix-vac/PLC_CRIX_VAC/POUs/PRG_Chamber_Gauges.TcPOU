@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <POU Name="PRG_Chamber_Gauges" Id="{cf1bb2d6-ee0f-41b1-a857-33af2cd32803}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_Chamber_Gauges
 VAR
@@ -38,8 +38,7 @@ CRIX_SVLS_GPI_01.M_SetBits(30518);
 CRIX_SVLS_GPI_01(PG=>stCRIX_SVLS_GPI_01);
 
 CRIX_SVLS_GPI_02.M_SetBits(30518);
-CRIX_SVLS_GPI_02(PG=>stCRIX_SVLS_GPI_02);
-]]></ST>
+CRIX_SVLS_GPI_02(PG=>stCRIX_SVLS_GPI_02);]]></ST>
     </Implementation>
     <LineIds Name="PRG_Chamber_Gauges">
       <LineId Id="3" Count="25" />
@@ -49,7 +48,6 @@ CRIX_SVLS_GPI_02(PG=>stCRIX_SVLS_GPI_02);
       <LineId Id="36" Count="0" />
       <LineId Id="38" Count="0" />
       <LineId Id="37" Count="0" />
-      <LineId Id="35" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
