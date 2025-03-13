@@ -122,7 +122,7 @@ CRIX_PTM_04(i_xExtILKOk:=CRIX_PTM_04_ILK_OK, iq_stPtm=> ); *)
 
 // Pfeiffer Turbo Pump TC110
 CRIX_SVLS_PTM_01(i_xExtILKOk:=(F_TurboExtILKLogic_2(Turbo:=stCRIX_SVLS_PTM_01,
-                                                                     BackingGauge:=CRIX_SVLS_GPI_02.PG,
+                                                                     BackingGauge:=ROUGH_GPI_01.PG,
                                                                      InletGauge:=CRIX_SVLS_GPI_01.PG,
                                                                      ScrollPump:= stMECH_PRO_01)),
             iq_stPtm=> stCRIX_SVLS_PTM_01);
