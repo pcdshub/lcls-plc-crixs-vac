@@ -154,9 +154,9 @@ VAR_GLOBAL
                                  .i_xClsLS	:=	TIIB[SVLS Vac (EL1004_E5)]^Channel 5^Input;
                                 .q_xOPN_DO	:=	TIIB[SVLS Vac (EL2004_E6)]^Channel 1^Input'}
 
-    CRIX_SVLS_VRC_01 : FB_VRC;
+    CRIX_SVLS_VWC_01 : FB_VRC_NO_FFO;
 
-	stCRIX_SVLS_VRC_01 : ST_VRC;
+	stCRIX_SVLS_VWC_01 : ST_VRC;
 
 END_VAR]]></Declaration>
   </GVL>

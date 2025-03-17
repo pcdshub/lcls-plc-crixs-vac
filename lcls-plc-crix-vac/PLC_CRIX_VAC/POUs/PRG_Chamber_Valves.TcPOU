@@ -50,7 +50,9 @@ VAR
 //	bVGC_16_CLS_OK: BOOL;
     bSDS_VRC_03_ILK: BOOL;
 
-	bCRIX_SVLS_VRC_01_NOT_AT_VAC: BOOL;
+	bCRIX_SVLS_VWC_01_AT_VAC: BOOL;
+    g_FastFaultOutputNA: FB_HardwareFFOutput;
+    g_fbArbiterNA: FB_Arbiter(1);
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -293,15 +295,18 @@ SDS_VVC_02 (
 
 
 //bCRIX_SVLS_VRC_01_ILK := (CRIX_SVLS_GPI_01.PG.rPRESS > 0.005) AND (CRIX_SVLS_GPI_02.PG.rPRESS > 0.005);
-bCRIX_SVLS_VRC_01_NOT_AT_VAC := (NOT CRIX_SVLS_GPI_01.PG.xAT_VAC) AND (NOT CRIX_SVLS_GPI_02.PG.xAT_VAC);
-IF bCRIX_SVLS_VRC_01_NOT_AT_VAC THEN
-    CRIX_SVLS_VRC_01.M_Set_OPN_SW(TRUE);
-END_IF
+bCRIX_SVLS_VWC_01_AT_VAC := CRIX_SVLS_GPI_01.PG.xAT_VAC AND CRIX_SVLS_GPI_02.PG.xAT_VAC;
 
-CRIX_SVLS_VRC_01 (
-    i_xExtILK_OK := TRUE,
-    i_xOverrideMode := xSystemOverride_ChemRIXS,
-    iq_stValve => stCRIX_SVLS_VRC_01
+CRIX_SVLS_VWC_01 (
+    i_xExtILK_OK:= bCRIX_SVLS_VWC_01_AT_VAC,
+    i_xOverrideMode:= xSystemOverride_ChemRIXS,
+    iq_stValve=> stCRIX_SVLS_VWC_01,
+    io_fbFFHWO:= g_FastFaultOutputNA,
+    fbArbiter:= g_fbArbiterNA,
+    i_xPMPS_OK:= TRUE,
+    i_xIsAperture:= ,
+    i_sDevName:= ,
+    i_nTransitionRootID:=
 );]]></ST>
     </Implementation>
     <LineIds Name="PRG_Chamber_Valves">
@@ -310,12 +315,11 @@ CRIX_SVLS_VRC_01 (
       <LineId Id="302" Count="0" />
       <LineId Id="301" Count="0" />
       <LineId Id="289" Count="0" />
-      <LineId Id="406" Count="0" />
-      <LineId Id="411" Count="0" />
-      <LineId Id="408" Count="0" />
       <LineId Id="405" Count="0" />
       <LineId Id="290" Count="0" />
-      <LineId Id="293" Count="3" />
+      <LineId Id="465" Count="7" />
+      <LineId Id="464" Count="0" />
+      <LineId Id="296" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
