@@ -34,11 +34,11 @@ SDS_GCP_01(PG=>);
 TC_GCP_01.M_SetBits(30518);
 TC_GCP_01(PG=>stTC_GCP_01);
 
-CRIX_SVLS_GPI_01.M_SetBits(30518);
-CRIX_SVLS_GPI_01(PG=>stCRIX_SVLS_GPI_01);
+CRIX_SVLS_GCP_01.M_SetBits(30518);
+CRIX_SVLS_GCP_01(PG=>stCRIX_SVLS_GCP_01);
 
-CRIX_SVLS_GPI_02.M_SetBits(30518);
-CRIX_SVLS_GPI_02(PG=>stCRIX_SVLS_GPI_02);]]></ST>
+CRIX_SVLS_GCP_02.M_SetBits(30518);
+CRIX_SVLS_GCP_02(PG=>stCRIX_SVLS_GCP_02);]]></ST>
     </Implementation>
     <LineIds Name="PRG_Chamber_Gauges">
       <LineId Id="3" Count="25" />

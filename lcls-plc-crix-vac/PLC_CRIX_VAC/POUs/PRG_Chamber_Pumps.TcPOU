@@ -123,7 +123,7 @@ CRIX_PTM_04(i_xExtILKOk:=CRIX_PTM_04_ILK_OK, iq_stPtm=> ); *)
 // Pfeiffer Turbo Pump TC110
 CRIX_SVLS_PTM_01(i_xExtILKOk:=(F_TurboExtILKLogic_2(Turbo:=stCRIX_SVLS_PTM_01,
                                                                      BackingGauge:=ROUGH_GPI_01.PG,
-                                                                     InletGauge:=CRIX_SVLS_GPI_01.PG,
+                                                                     InletGauge:=CRIX_SVLS_GCP_01.PG,
                                                                      ScrollPump:= stMECH_PRO_01)),
             iq_stPtm=> stCRIX_SVLS_PTM_01);
 
@@ -138,7 +138,7 @@ fb_CRIX_SVLS_PTM_01_PfeifferCom(astPfeifferControl:=stCRIX_SVLS_PTM_01_Pfeiffer_
 CRIX_SVLS_PTM_01.M_Serial_IO(st_Pfeiffer_RBK:=stCRIX_SVLS_PTM_01_Pfeiffer_RBK[1], stCRIX_SVLS_PTM_01_Pfeiffer_CTRL[1]);
 
 // SIP NexTORR Ion Pump
-CRIX_SVLS_PIP_1(i_stGauge := CRIX_SVLS_GPI_02.PG, i_xOverrideMode := xSystemOverride_ChemRIXS);
+CRIX_SVLS_PIP_1(i_stGauge := CRIX_SVLS_GCP_02.PG, i_xOverrideMode := xSystemOverride_ChemRIXS);
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_Chamber_Pumps">
