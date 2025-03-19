@@ -15,8 +15,8 @@ VAR
 
     fbSDS_PTM_01_ILK : FB_ChemRIXS_Turbo_ILK; //new
     SDS_PTM_01_ILK_OK : BOOL;
-	
-	CRIX_SVLS_PTM_01_ILK_OK: BOOL;
+
+    CRIX_SVLS_PTM_01_ILK_OK: BOOL;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[// Leybold Pumps
@@ -141,13 +141,5 @@ CRIX_SVLS_PTM_01.M_Serial_IO(st_Pfeiffer_RBK:=stCRIX_SVLS_PTM_01_Pfeiffer_RBK[1]
 CRIX_SVLS_PIP_1(i_stGauge := CRIX_SVLS_GCP_02.PG, i_xOverrideMode := xSystemOverride_ChemRIXS);
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_Chamber_Pumps">
-      <LineId Id="3" Count="99" />
-      <LineId Id="136" Count="0" />
-      <LineId Id="135" Count="0" />
-      <LineId Id="141" Count="15" />
-      <LineId Id="117" Count="1" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

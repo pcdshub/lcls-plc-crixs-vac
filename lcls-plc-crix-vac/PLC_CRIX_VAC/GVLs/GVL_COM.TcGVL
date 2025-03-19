@@ -122,8 +122,8 @@ VAR_GLOBAL
                                  .D[21]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E5 (EL6022)^COM Outputs Channel 1^Data Out 21
     '}
     K2S17_E5_CH1_stComOut		AT %Q*	:	EL6outData22B;
-	
-	// SVLS PTM-01
+
+    // SVLS PTM-01
     CRIX_SVLS_SerialRXBuffer : ComBuffer;
     CRIX_SVLS_SerialTXBuffer : ComBuffer;
 

@@ -40,14 +40,5 @@ CRIX_SVLS_GCP_01(PG=>stCRIX_SVLS_GCP_01);
 CRIX_SVLS_GCP_02.M_SetBits(30518);
 CRIX_SVLS_GCP_02(PG=>stCRIX_SVLS_GCP_02);]]></ST>
     </Implementation>
-    <LineIds Name="PRG_Chamber_Gauges">
-      <LineId Id="3" Count="25" />
-      <LineId Id="2" Count="0" />
-      <LineId Id="33" Count="1" />
-      <LineId Id="32" Count="0" />
-      <LineId Id="36" Count="0" />
-      <LineId Id="38" Count="0" />
-      <LineId Id="37" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
