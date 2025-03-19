@@ -2301,6 +2301,10 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.TC_GCP_01.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.TC_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E9 (EL3174-0002)">
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^VLS_RCC (EK1122)^RCC_EK0 (EK1100)^RCC_E1 (EL1004)">
 				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_VRC_01.i_xClsLS" VarB="Channel 1^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Recirculation.RCC_VRC_02.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>

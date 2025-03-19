@@ -150,9 +150,9 @@ VAR_GLOBAL
     SDS_VVC_02 : FB_VRC_NC_ClsLs;
 
     {attribute 'pytmc' :=' pv: CRIXS:SVLS:VRC:01 '}
-    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[SVLS Vac (EL1004_E5)]^Channel 1^Input;
-                                 .i_xClsLS	:=	TIIB[SVLS Vac (EL1004_E5)]^Channel 5^Input;
-                                .q_xOPN_DO	:=	TIIB[SVLS Vac (EL2004_E6)]^Channel 1^Input'}
+    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[SVLS_PR01 E5 (EL1004)]^Channel 1^Input;
+                                 .i_xClsLS	:=	TIIB[SVLS_PR01 E5 (EL1004)]^Channel 5^Input;
+                                .q_xOPN_DO	:=	TIIB[SVLS_PR01 E6 (EL2004)]^Channel 1^Input'}
 
     CRIX_SVLS_VWC_01 : FB_VRC_NO_FFO;
 
