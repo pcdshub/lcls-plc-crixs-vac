@@ -688,6 +688,696 @@ record(bi, "TM2K2:GCC:01:reader:PRESS_OK_RBV") {
   field(ASG, "NO_WRITE")
 }
 
+record(mbbi, "CRIXS:SVLS:GPI:01:STATE_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.eState
+  field(DESC, "GVL_Chamber_Gauges.C..._GCP_01.PG.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(FVVL, "5")
+  field(SXVL, "6")
+  field(SVVL, "7")
+  field(ZRST, "Off")
+  field(ONST, "GaugeDisconnected")
+  field(TWST, "OoR")
+  field(THST, "PressInvalid")
+  field(FRST, "Starting")
+  field(FVST, "Valid")
+  field(SXST, "ValidHi")
+  field(SVST, "ValidLo")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "CRIXS:SVLS:GPI:01:AutoOn_timer_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.iAutoOnTimer
+  field(DESC, "GVL_Chamber_Gauges.C...1.PG.iAutoOnTimer")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.iAutoOnTimer?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "CRIXS:SVLS:GPI:01:PRESS_AI_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.i_iPRESS_R
+  field(DESC, "GVL_Chamber_Gauges.C..._01.PG.i_iPRESS_R")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.i_iPRESS_R?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIXS:SVLS:GPI:01:DISC_ACTIVE_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.i_xDisc_Active
+  field(DESC, "GVL_Chamber_Gauges.C...PG.i_xDisc_Active")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.i_xDisc_Active?")
+  field(ZNAM, "NO DISC")
+  field(ONAM, "DISC ACTIVE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIXS:SVLS:GPI:01:HV_ON_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.i_xHV_ON
+  field(DESC, "GVL_Chamber_Gauges.C...CP_01.PG.i_xHV_ON")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.i_xHV_ON?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIXS:SVLS:GPI:01:HV_DIS_DO_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.q_xHV_DIS
+  field(DESC, "GVL_Chamber_Gauges.C...P_01.PG.q_xHV_DIS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.q_xHV_DIS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ai, "CRIXS:SVLS:GPI:01:SP_HYS_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.rHYS_PR
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_01.PG.rHYS_PR")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.rHYS_PR?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ao, "CRIXS:SVLS:GPI:01:SP_HYS") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.rHYS_PR
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_01.PG.rHYS_PR")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.rHYS_PR=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIXS:SVLS:GPI:01:PRESS_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.rPRESS
+  field(DESC, "GVL_Chamber_Gauges.C..._GCP_01.PG.rPRESS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.rPRESS?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ai, "CRIXS:SVLS:GPI:01:PRO_SP_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.rPRO_SP
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_01.PG.rPRO_SP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.rPRO_SP?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ao, "CRIXS:SVLS:GPI:01:PRO_SP") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.rPRO_SP
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_01.PG.rPRO_SP")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.rPRO_SP=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIXS:SVLS:GPI:01:VAC_SP_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.rVAC_SP
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_01.PG.rVAC_SP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.rVAC_SP?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ao, "CRIXS:SVLS:GPI:01:VAC_SP") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.rVAC_SP
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_01.PG.rVAC_SP")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.rVAC_SP=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SVLS:GPI:01:AT_VAC_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xAT_VAC
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_01.PG.xAT_VAC")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xAT_VAC?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIXS:SVLS:GPI:01:Auto_On_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xAutoOn
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_01.PG.xAutoOn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xAutoOn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIXS:SVLS:GPI:01:Auto_On") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xAutoOn
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_01.PG.xAutoOn")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xAutoOn=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SVLS:GPI:01:HV_SW_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xHV_SW
+  field(DESC, "GVL_Chamber_Gauges.C..._GCP_01.PG.xHV_SW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xHV_SW?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIXS:SVLS:GPI:01:HV_SW") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xHV_SW
+  field(DESC, "GVL_Chamber_Gauges.C..._GCP_01.PG.xHV_SW")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xHV_SW=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SVLS:GPI:01:ILK_OK_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xILKOk
+  field(DESC, "GVL_Chamber_Gauges.C..._GCP_01.PG.xILKOk")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xILKOk?")
+  field(ZNAM, "NOT OK")
+  field(ONAM, "OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIXS:SVLS:GPI:01:LOGGER_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xLog
+  field(DESC, "GVL_Chamber_Gauges.C...LS_GCP_01.PG.xLog")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xLog?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIXS:SVLS:GPI:01:LOGGER") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xLog
+  field(DESC, "GVL_Chamber_Gauges.C...LS_GCP_01.PG.xLog")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xLog=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SVLS:GPI:01:PRESS_OK_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xPRESS_OK
+  field(DESC, "GVL_Chamber_Gauges.C...P_01.PG.xPRESS_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.PG.xPRESS_OK?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(mbbi, "CRIXS:SVLS:GPI:02:STATE_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.eState
+  field(DESC, "GVL_Chamber_Gauges.C..._GCP_02.PG.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(FVVL, "5")
+  field(SXVL, "6")
+  field(SVVL, "7")
+  field(ZRST, "Off")
+  field(ONST, "GaugeDisconnected")
+  field(TWST, "OoR")
+  field(THST, "PressInvalid")
+  field(FRST, "Starting")
+  field(FVST, "Valid")
+  field(SXST, "ValidHi")
+  field(SVST, "ValidLo")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "CRIXS:SVLS:GPI:02:AutoOn_timer_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.iAutoOnTimer
+  field(DESC, "GVL_Chamber_Gauges.C...2.PG.iAutoOnTimer")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.iAutoOnTimer?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "CRIXS:SVLS:GPI:02:PRESS_AI_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.i_iPRESS_R
+  field(DESC, "GVL_Chamber_Gauges.C..._02.PG.i_iPRESS_R")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.i_iPRESS_R?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIXS:SVLS:GPI:02:DISC_ACTIVE_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.i_xDisc_Active
+  field(DESC, "GVL_Chamber_Gauges.C...PG.i_xDisc_Active")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.i_xDisc_Active?")
+  field(ZNAM, "NO DISC")
+  field(ONAM, "DISC ACTIVE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIXS:SVLS:GPI:02:HV_ON_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.i_xHV_ON
+  field(DESC, "GVL_Chamber_Gauges.C...CP_02.PG.i_xHV_ON")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.i_xHV_ON?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIXS:SVLS:GPI:02:HV_DIS_DO_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.q_xHV_DIS
+  field(DESC, "GVL_Chamber_Gauges.C...P_02.PG.q_xHV_DIS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.q_xHV_DIS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ai, "CRIXS:SVLS:GPI:02:SP_HYS_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.rHYS_PR
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_02.PG.rHYS_PR")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.rHYS_PR?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ao, "CRIXS:SVLS:GPI:02:SP_HYS") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.rHYS_PR
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_02.PG.rHYS_PR")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.rHYS_PR=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIXS:SVLS:GPI:02:PRESS_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.rPRESS
+  field(DESC, "GVL_Chamber_Gauges.C..._GCP_02.PG.rPRESS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.rPRESS?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ai, "CRIXS:SVLS:GPI:02:PRO_SP_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.rPRO_SP
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_02.PG.rPRO_SP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.rPRO_SP?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ao, "CRIXS:SVLS:GPI:02:PRO_SP") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.rPRO_SP
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_02.PG.rPRO_SP")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.rPRO_SP=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIXS:SVLS:GPI:02:VAC_SP_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.rVAC_SP
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_02.PG.rVAC_SP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.rVAC_SP?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ao, "CRIXS:SVLS:GPI:02:VAC_SP") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.rVAC_SP
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_02.PG.rVAC_SP")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.rVAC_SP=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SVLS:GPI:02:AT_VAC_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xAT_VAC
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_02.PG.xAT_VAC")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xAT_VAC?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIXS:SVLS:GPI:02:Auto_On_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xAutoOn
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_02.PG.xAutoOn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xAutoOn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIXS:SVLS:GPI:02:Auto_On") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xAutoOn
+  field(DESC, "GVL_Chamber_Gauges.C...GCP_02.PG.xAutoOn")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xAutoOn=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SVLS:GPI:02:HV_SW_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xHV_SW
+  field(DESC, "GVL_Chamber_Gauges.C..._GCP_02.PG.xHV_SW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xHV_SW?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIXS:SVLS:GPI:02:HV_SW") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xHV_SW
+  field(DESC, "GVL_Chamber_Gauges.C..._GCP_02.PG.xHV_SW")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xHV_SW=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SVLS:GPI:02:ILK_OK_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xILKOk
+  field(DESC, "GVL_Chamber_Gauges.C..._GCP_02.PG.xILKOk")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xILKOk?")
+  field(ZNAM, "NOT OK")
+  field(ONAM, "OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIXS:SVLS:GPI:02:LOGGER_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xLog
+  field(DESC, "GVL_Chamber_Gauges.C...LS_GCP_02.PG.xLog")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xLog?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIXS:SVLS:GPI:02:LOGGER") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xLog
+  field(DESC, "GVL_Chamber_Gauges.C...LS_GCP_02.PG.xLog")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xLog=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SVLS:GPI:02:PRESS_OK_RBV") {
+  # GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xPRESS_OK
+  field(DESC, "GVL_Chamber_Gauges.C...P_02.PG.xPRESS_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.PG.xPRESS_OK?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
 record(mbbi, "CRIXS:CRYO:GCP:01:STATE_RBV") {
   field(DESC, "GVL_Chamber_Gauges.CRYO_GCP_01.PG.eState")
   field(SCAN, "I/O Intr")
@@ -3356,6 +4046,426 @@ record(bi, "CRIXS:TC:GPI:01:PRESS_OK_RBV") {
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
   field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIXS:SVLS:VRC:01:ERROR_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.bErrorPresent
+  field(DESC, "GVL_Chamber_Valves.C...lve.bErrorPresent")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.bErrorPresent?")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIXS:SVLS:VRC:01:ERROR") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.bErrorPresent
+  field(DESC, "GVL_Chamber_Valves.C...lve.bErrorPresent")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.bErrorPresent=")
+  field(ZNAM, "NO ERROR")
+  field(ONAM, "ERROR PRESENT")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(mbbi, "CRIXS:SVLS:VRC:01:POS_STATE_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.eState
+  field(DESC, "GVL_Chamber_Valves.C...iq_stValve.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(ZRST, "OPEN")
+  field(ONST, "CLOSED")
+  field(TWST, "MOVING")
+  field(THST, "INVALID")
+  field(FRST, "OPEN_F")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(mbbi, "CRIXS:SVLS:VRC:01:STATE_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.eVGC_State
+  field(DESC, "GVL_Chamber_Valves.C...tValve.eVGC_State")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.eVGC_State?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(FVVL, "5")
+  field(SXVL, "6")
+  field(SVVL, "7")
+  field(EIVL, "8")
+  field(NIVL, "9")
+  field(ZRST, "Vented")
+  field(ONST, "At Vacuum")
+  field(TWST, "Differential Pressure")
+  field(THST, "Lost Vacuum")
+  field(FRST, "Ext Fault")
+  field(FVST, "AT Vacuum")
+  field(SXST, "Triggered")
+  field(SVST, "Vacuum Fault")
+  field(EIST, "Close Timeout")
+  field(NIST, "Open Timeout")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIXS:SVLS:VRC:01:CLS_DI_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.i_xClsLS
+  field(DESC, "GVL_Chamber_Valves.C..._stValve.i_xClsLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.i_xClsLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "CLOSE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIXS:SVLS:VRC:01:OPN_DI_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.i_xOpnLS
+  field(DESC, "GVL_Chamber_Valves.C..._stValve.i_xOpnLS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.i_xOpnLS?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIXS:SVLS:VRC:01:ALM_RST_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xAlmRst
+  field(DESC, "GVL_Chamber_Valves.C...tValve.pv_xAlmRst")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xAlmRst?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIXS:SVLS:VRC:01:ALM_RST") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xAlmRst
+  field(DESC, "GVL_Chamber_Valves.C...tValve.pv_xAlmRst")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xAlmRst=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SVLS:VRC:01:CLS_SW_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xCLS_SW
+  field(DESC, "GVL_Chamber_Valves.C...tValve.pv_xCLS_SW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xCLS_SW?")
+  field(ZNAM, "OPEN")
+  field(ONAM, "CLOSE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIXS:SVLS:VRC:01:CLS_SW") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xCLS_SW
+  field(DESC, "GVL_Chamber_Valves.C...tValve.pv_xCLS_SW")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xCLS_SW=")
+  field(ZNAM, "OPEN")
+  field(ONAM, "CLOSE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SVLS:VRC:01:OPN_SW_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xOPN_SW
+  field(DESC, "GVL_Chamber_Valves.C...tValve.pv_xOPN_SW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xOPN_SW?")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIXS:SVLS:VRC:01:OPN_SW") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xOPN_SW
+  field(DESC, "GVL_Chamber_Valves.C...tValve.pv_xOPN_SW")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xOPN_SW=")
+  field(ZNAM, "CLOSE")
+  field(ONAM, "OPEN")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SVLS:VRC:01:FORCE_CLS_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xOvrdCls
+  field(DESC, "GVL_Chamber_Valves.C...Valve.pv_xOvrdCls")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xOvrdCls?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE CLOSE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIXS:SVLS:VRC:01:FORCE_CLS") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xOvrdCls
+  field(DESC, "GVL_Chamber_Valves.C...Valve.pv_xOvrdCls")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xOvrdCls=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE CLOSE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SVLS:VRC:01:FORCE_OPN_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xOvrdOpn
+  field(DESC, "GVL_Chamber_Valves.C...Valve.pv_xOvrdOpn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xOvrdOpn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE OPEN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIXS:SVLS:VRC:01:FORCE_OPN") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xOvrdOpn
+  field(DESC, "GVL_Chamber_Valves.C...Valve.pv_xOvrdOpn")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.pv_xOvrdOpn=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE OPEN")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SVLS:VRC:01:CLS_DO_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.q_xCLS_DO
+  field(DESC, "GVL_Chamber_Valves.C...stValve.q_xCLS_DO")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.q_xCLS_DO?")
+  field(ZNAM, "OPEN")
+  field(ONAM, "CLOSE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIXS:SVLS:VRC:01:CLS_DO") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.q_xCLS_DO
+  field(DESC, "GVL_Chamber_Valves.C...stValve.q_xCLS_DO")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.q_xCLS_DO=")
+  field(ZNAM, "OPEN")
+  field(ONAM, "CLOSE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SVLS:VRC:01:OPN_DO_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.q_xOPN_DO
+  field(DESC, "GVL_Chamber_Valves.C...stValve.q_xOPN_DO")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.q_xOPN_DO?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(waveform, "CRIXS:SVLS:VRC:01:ErrMsg_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.sErrorMessage
+  field(DESC, "GVL_Chamber_Valves.C...lve.sErrorMessage")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.sErrorMessage?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(waveform, "CRIXS:SVLS:VRC:01:ErrMsg") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.sErrorMessage
+  field(DESC, "GVL_Chamber_Valves.C...lve.sErrorMessage")
+  field(DTYP, "asynInt8ArrayOut")
+  field(UDFS, "0")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.sErrorMessage=")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SVLS:VRC:01:CLS_OK_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.xCLS_OK
+  field(DESC, "GVL_Chamber_Valves.C...q_stValve.xCLS_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.xCLS_OK?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIXS:SVLS:VRC:01:EXT_ILK_OK_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.xEXT_OK
+  field(DESC, "GVL_Chamber_Valves.C...q_stValve.xEXT_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.xEXT_OK?")
+  field(ZNAM, "NOT OK")
+  field(ONAM, "OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIXS:SVLS:VRC:01:LOGGER_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.xLog
+  field(DESC, "GVL_Chamber_Valves.C...1.iq_stValve.xLog")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.xLog?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIXS:SVLS:VRC:01:LOGGER") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.xLog
+  field(DESC, "GVL_Chamber_Valves.C...1.iq_stValve.xLog")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.xLog=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIXS:SVLS:VRC:01:OPN_OK_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.xOPN_OK
+  field(DESC, "GVL_Chamber_Valves.C...q_stValve.xOPN_OK")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.xOPN_OK?")
+  field(ZNAM, "OPN ILK NOT OK")
+  field(ONAM, "OPN ILK OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIXS:SVLS:VRC:01:OVRD_ON_RBV") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.xOverrideMode
+  field(DESC, "GVL_Chamber_Valves.C...lve.xOverrideMode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.xOverrideMode?")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIXS:SVLS:VRC:01:OVRD_ON") {
+  # GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.xOverrideMode
+  field(DESC, "GVL_Chamber_Valves.C...lve.xOverrideMode")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Chamber_Valves.CRIX_SVLS_VWC_01.iq_stValve.xOverrideMode=")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
 }
 
 record(bi, "CRIXS:CRYO:VGC:01:ERROR_RBV") {
@@ -49853,6 +50963,885 @@ record(bi, "PLC:CRIXS:VAC:FFO:02:OK_RBV") {
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
   info(archive, "VAL")
   field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIX:SVLS:PIP:1:Inverted_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PIP_1.stPump.bOutputInverted
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...p.bOutputInverted")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.bOutputInverted?")
+  field(ZNAM, "NORMAL")
+  field(ONAM, "INVERTED")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIX:SVLS:PIP:1:Inverted") {
+  # GVL_Pumps.CRIX_SVLS_PIP_1.stPump.bOutputInverted
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...p.bOutputInverted")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.bOutputInverted=")
+  field(ZNAM, "NORMAL")
+  field(ONAM, "INVERTED")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(mbbi, "CRIX:SVLS:PIP:1:STATE_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_SVLS_PIP_1.stPump.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(ZRST, "STOPPED")
+  field(ONST, "STARTING")
+  field(TWST, "RUNNING")
+  field(THST, "FAULT")
+  field(FRST, "STOPPING")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "CRIX:SVLS:PIP:1:AutoOn_timer_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PIP_1.stPump.iAutoOnTimer
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...Pump.iAutoOnTimer")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.iAutoOnTimer?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "CRIX:SVLS:PIP:1:AI_Offset_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_SVLS_PIP_1.stPump.iOffset")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.iOffset?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longout, "CRIX:SVLS:PIP:1:AI_Offset") {
+  field(DESC, "GVL_Pumps.CRIX_SVLS_PIP_1.stPump.iOffset")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.iOffset=")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:SVLS:PIP:1:PRESS_AI_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PIP_1.stPump.i_iPRESS
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...1.stPump.i_iPRESS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.i_iPRESS?")
+  field(PREC, "3")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIX:SVLS:PIP:1:HV_DI_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PIP_1.stPump.i_xHV_DI
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...1.stPump.i_xHV_DI")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.i_xHV_DI?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIX:SVLS:PIP:1:FORCE_START_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PIP_1.stPump.pv_xOvrdStart
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...ump.pv_xOvrdStart")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.pv_xOvrdStart?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE START")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIX:SVLS:PIP:1:FORCE_START") {
+  # GVL_Pumps.CRIX_SVLS_PIP_1.stPump.pv_xOvrdStart
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...ump.pv_xOvrdStart")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.pv_xOvrdStart=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "FORCE START")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:SVLS:PIP:1:HV_DO_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PIP_1.stPump.q_xHVEna_DO
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...tPump.q_xHVEna_DO")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.q_xHVEna_DO?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ai, "CRIX:SVLS:PIP:1:AT_VAC_SP_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PIP_1.stPump.rHVEna_SP
+  field(DESC, "GVL_Pumps.CRIX_SVLS_....stPump.rHVEna_SP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.rHVEna_SP?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ao, "CRIX:SVLS:PIP:1:AT_VAC_SP") {
+  # GVL_Pumps.CRIX_SVLS_PIP_1.stPump.rHVEna_SP
+  field(DESC, "GVL_Pumps.CRIX_SVLS_....stPump.rHVEna_SP")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.rHVEna_SP=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:SVLS:PIP:1:SP_HYS_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_SVLS_PIP_1.stPump.rHYS_PR")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.rHYS_PR?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ao, "CRIX:SVLS:PIP:1:SP_HYS") {
+  field(DESC, "GVL_Pumps.CRIX_SVLS_PIP_1.stPump.rHYS_PR")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.rHYS_PR=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:SVLS:PIP:1:PRESS_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_SVLS_PIP_1.stPump.rPRESS")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.rPRESS?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(waveform, "CRIX:SVLS:PIP:1:ILK_DEVICE_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PIP_1.stPump.sIlkDeviceName
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...mp.sIlkDeviceName")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt8ArrayIn")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.sIlkDeviceName?")
+  field(FTVL, "CHAR")
+  field(NELM, "80")
+  field(MPST, "On Change")
+  field(APST, "On Change")
+  info(autosaveFields_pass0, "DESC DISS SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIX:SVLS:PIP:1:Auto_On_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xAutoOn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xAutoOn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIX:SVLS:PIP:1:Auto_On") {
+  field(DESC, "GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xAutoOn")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xAutoOn=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:SVLS:PIP:1:ERROR_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xError?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIX:SVLS:PIP:1:HV_SW_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xHVEna_SW
+  field(DESC, "GVL_Pumps.CRIX_SVLS_....stPump.xHVEna_SW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xHVEna_SW?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIX:SVLS:PIP:1:HV_SW") {
+  # GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xHVEna_SW
+  field(DESC, "GVL_Pumps.CRIX_SVLS_....stPump.xHVEna_SW")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xHVEna_SW=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:SVLS:PIP:1:ILK_OK_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xILKOk")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xILKOk?")
+  field(ZNAM, "NOT OK")
+  field(ONAM, "OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIX:SVLS:PIP:1:LOGGER_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xLog")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xLog?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIX:SVLS:PIP:1:LOGGER") {
+  field(DESC, "GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xLog")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xLog=")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:SVLS:PIP:1:OVRD_ON_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xOverrideMode
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...ump.xOverrideMode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xOverrideMode?")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIX:SVLS:PIP:1:OVRD_ON") {
+  # GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xOverrideMode
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...ump.xOverrideMode")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_SVLS_PIP_1.stPump.xOverrideMode=")
+  field(ZNAM, "Override OFF")
+  field(ONAM, "Override ON")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(mbbi, "CRIX:SVLS:PTM:01:STATE_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.eState
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...1.iq_stPTM.eState")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.eState?")
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(FRVL, "4")
+  field(ZRST, "STOPPED")
+  field(ONST, "STARTING")
+  field(TWST, "RUNNING")
+  field(THST, "FAULT")
+  field(FRST, "STOPPING")
+  info(autosaveFields_pass0, "DESC DISS EISV ELSV FFSV FRSV FTSV FVSV NISV ONSV SIMS SVSV SXSV TESV THSV TTSV TVSV TWSV UDFS UNSV ZRSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "CRIX:SVLS:PTM:01:SET_SPEED_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_dSetSpd
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...q_stPTM.i_dSetSpd")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_dSetSpd?")
+  field(EGU, "Hz")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longout, "CRIX:SVLS:PTM:01:SET_SPEED") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_dSetSpd
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...q_stPTM.i_dSetSpd")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_dSetSpd=")
+  field(EGU, "Hz")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(longin, "CRIX:SVLS:PTM:01:TempBearing_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_diBrngTemp
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...tPTM.i_diBrngTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_diBrngTemp?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "CRIX:SVLS:PTM:01:TempPump_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_diBtmTemp
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...stPTM.i_diBtmTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_diBtmTemp?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "CRIX:SVLS:PTM:01:SPEED_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_diCurSpd
+  field(DESC, "GVL_Pumps.CRIX_SVLS_..._stPTM.i_diCurSpd")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_diCurSpd?")
+  field(EGU, "Hz")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "CRIX:SVLS:PTM:01:TempElec_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_diElecTemp
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...tPTM.i_diElecTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_diElecTemp?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "CRIX:SVLS:PTM:01:TempMotor_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_diMtrTemp
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...stPTM.i_diMtrTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_diMtrTemp?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "CRIX:SVLS:PTM:01:PWR_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_diPwr
+  field(DESC, "GVL_Pumps.CRIX_SVLS_....iq_stPTM.i_diPwr")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_diPwr?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "CRIX:SVLS:PTM:01:ErrorCode_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_iErrorCode
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...tPTM.i_iErrorCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_iErrorCode?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "CRIX:SVLS:PTM:01:WarningCode_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_iWarningCode
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...TM.i_iWarningCode")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_iWarningCode?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ai, "CRIX:SVLS:PTM:01:CURR_MON_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_rCurrentMon
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...PTM.i_rCurrentMon")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_rCurrentMon?")
+  field(PREC, "2")
+  field(EGU, "A")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ai, "CRIX:SVLS:PTM:01:TEMP_MON_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_rTempMon
+  field(DESC, "GVL_Pumps.CRIX_SVLS_..._stPTM.i_rTempMon")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_rTempMon?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(longin, "CRIX:SVLS:PTM:01:Power_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_uiPowerPctRbk
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...M.i_uiPowerPctRbk")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_uiPowerPctRbk?")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIX:SVLS:PTM:01:ALARM_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_xALARM
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...iq_stPTM.i_xALARM")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_xALARM?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIX:SVLS:PTM:01:ACCEL_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_xAccel
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...iq_stPTM.i_xAccel")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_xAccel?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIX:SVLS:PTM:01:AT_SPD_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_xAtSpd
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...iq_stPTM.i_xAtSpd")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_xAtSpd?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "AT SPEED")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIX:SVLS:PTM:01:FAULT_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_xFault
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...iq_stPTM.i_xFault")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_xFault?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIX:SVLS:PTM:01:TempFault_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_xTempFault
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...tPTM.i_xTempFault")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_xTempFault?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIX:SVLS:PTM:01:WARN_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_xWarn
+  field(DESC, "GVL_Pumps.CRIX_SVLS_....iq_stPTM.i_xWarn")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.i_xWarn?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIX:SVLS:PTM:01:RUN_DO_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.q_RunDO
+  field(DESC, "GVL_Pumps.CRIX_SVLS_....iq_stPTM.q_RunDO")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.q_RunDO?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIX:SVLS:PTM:01:SET_SPEED_MODE_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.q_bSetSpd
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...q_stPTM.q_bSetSpd")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.q_bSetSpd?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIX:SVLS:PTM:01:SET_SPEED_MODE") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.q_bSetSpd
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...q_stPTM.q_bSetSpd")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.q_bSetSpd=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:SVLS:PTM:01:RESET_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.q_xReset
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...iq_stPTM.q_xReset")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.q_xReset?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ai, "CRIX:SVLS:PTM:01:BP_SP_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.rBackingPressureSP
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...BackingPressureSP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.rBackingPressureSP?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ao, "CRIX:SVLS:PTM:01:BP_SP") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.rBackingPressureSP
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...BackingPressureSP")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.rBackingPressureSP=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(ai, "CRIX:SVLS:PTM:01:IP_SP_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.rInletPressureSP
+  field(DESC, "GVL_Pumps.CRIX_SVLS_....rInletPressureSP")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.rInletPressureSP?")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(ao, "CRIX:SVLS:PTM:01:IP_SP") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.rInletPressureSP
+  field(DESC, "GVL_Pumps.CRIX_SVLS_....rInletPressureSP")
+  field(PINI, "1")
+  field(DTYP, "asynFloat64")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.rInletPressureSP=")
+  field(PREC, "2")
+  field(EGU, "TORR")
+  field(HOPR, "1000")
+  field(LOPR, "0")
+  info(autosaveFields, "DESC VAL")
+  info(autosaveFields_pass0, "DESC DISS DRVH DRVL HHSV HIGH HIHI HSV LLSV LOLO LOW LSV PREC SIMS UDFS VAL")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:SVLS:PTM:01:ILK_OK_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.xExtRunOk
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...q_stPTM.xExtRunOk")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.xExtRunOk?")
+  field(ZNAM, "ILK ACTIVE")
+  field(ONAM, "ILK OK")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIX:SVLS:PTM:01:LOGGER_RBV") {
+  field(DESC, "GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.xLog")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.xLog?")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bi, "CRIX:SVLS:PTM:01:RST_SW_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.xResetSW
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...iq_stPTM.xResetSW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.xResetSW?")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIX:SVLS:PTM:01:RST_SW") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.xResetSW
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...iq_stPTM.xResetSW")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.xResetSW=")
+  field(ZNAM, "FALSE")
+  field(ONAM, "TRUE")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
+}
+
+record(bi, "CRIX:SVLS:PTM:01:RUN_SW_RBV") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.xRunSW
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...1.iq_stPTM.xRunSW")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.xRunSW?")
+  field(ZNAM, "STOP")
+  field(ONAM, "RUN")
+  info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
+  info(archive, "VAL")
+  field(ASG, "NO_WRITE")
+}
+
+record(bo, "CRIX:SVLS:PTM:01:RUN_SW") {
+  # GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.xRunSW
+  field(DESC, "GVL_Pumps.CRIX_SVLS_...1.iq_stPTM.xRunSW")
+  field(DTYP, "asynInt32")
+  field(UDFS, "0")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_Pumps.CRIX_SVLS_PTM_01.iq_stPTM.xRunSW=")
+  field(ZNAM, "STOP")
+  field(ONAM, "RUN")
+  info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
+  info(archive, "VAL")
 }
 
 record(mbbi, "CRIXS:SDS:PTM:01:STATE_RBV") {
