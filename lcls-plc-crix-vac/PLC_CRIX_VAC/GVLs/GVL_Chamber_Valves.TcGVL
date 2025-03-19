@@ -156,7 +156,7 @@ VAR_GLOBAL
 
     CRIX_SVLS_VWC_01 : FB_VRC_NO_FFO;
 
-    stCRIX_SVLS_VWC_01 : ST_VRC;
+    stCRIX_SVLS_VWC_01 : ST_VRC_NO;
 
 END_VAR]]></Declaration>
   </GVL>
