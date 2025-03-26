@@ -190,7 +190,7 @@ MAIN_VGC_01(
     fbArbiter:= GVL_PMPS.fbArbiter1);
 
 MAIN_VGC_02(i_stUSG:=TC_GCP_01.PG,
-            i_stDSG:=IM6K2_GCC_01_reader.IG,// PRG_ADS_Gauges.IM6K2_GCC_Reader.IG,
+            i_stDSG:=AT3K2_GCC_01_reader.IG,// PRG_ADS_Gauges.IM6K2_GCC_Reader.IG,
             i_xDis_DPILK:=FALSE,
             i_xPMPS_OK:=TRUE,
             i_xEPS_OK:=TRUE,

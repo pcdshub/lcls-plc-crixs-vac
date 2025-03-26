@@ -6,8 +6,8 @@ VAR_GLOBAL
 
  {attribute 'pytmc' :=' pv: TM2K2:GCC:01:reader '}
     TM2K2_GCC_01_reader : FB_TGCC_ADS;
- {attribute 'pytmc' :=' pv: IM6K2:GCC:01:reader '}
-    IM6K2_GCC_01_reader : FB_TGCC_ADS;
+ {attribute 'pytmc' :=' pv: AT3K2:GCC:01:reader '}
+    AT3K2_GCC_01_reader : FB_TGCC_ADS;
 
 END_VAR]]></Declaration>
   </GVL>
