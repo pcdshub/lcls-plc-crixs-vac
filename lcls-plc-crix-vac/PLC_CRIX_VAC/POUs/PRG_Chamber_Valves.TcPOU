@@ -309,9 +309,5 @@ CRIX_SVLS_VWC_01 (
     i_nTransitionRootID:=
 );]]></ST>
     </Implementation>
-    <LineIds Name="PRG_Chamber_Valves">
-      <LineId Id="3" Count="250" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
