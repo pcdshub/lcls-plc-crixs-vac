@@ -74,9 +74,9 @@ VAR_GLOBAL
 
     {attribute 'pytmc' := ' pv: CRIX:SVLS:PTM:01'}
     {attribute 'TcLinkTo' := 	'.i_xAtSpd		      := TIIB[SVLS_PR01 E2 (EL1004)]^Channel 1^Input;
-                               .i_xFaultNC		  := TIIB[SVLS_PR01 E2 (EL1004)]^Channel 2^Input;
-                               .q_RunDO           := TIIB[SVLS_PR01 E3 (EL2004)]^Channel 1^Output;
-                               .q_xReset          := TIIB[SVLS_PR01 E3 (EL2004)]^Channel 2^Output}
+                               .i_xFaultNC		  := TIIB[SVLS_PR01 E2 (EL1004)]^Channel 5^Input;
+                               .q_RunDO           := TIIB[SVLS_PR01 E3 (EL2004)]^Channel 2^Output;
+                               .q_xReset          := TIIB[SVLS_PR01 E3 (EL2004)]^Channel 6^Output}
     CRIX_SVLS_PTM_01 : FB_PTM_Pfeiffer;
     stCRIX_SVLS_PTM_01 : ST_PfeifferPTM;
 
@@ -88,10 +88,10 @@ VAR_GLOBAL
 
     // SIP PIP NexTORR Pumps
     {attribute 'pytmc' := ' pv: CRIX:SVLS:PIP:1 '}
-    {attribute 'TcLinkTo' := 	'.i_iPRESS		:=	TIIB[SVLS_PR01 E9 (EL3174-0002)]^AI Standard Channel 3^Value;
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:=	TIIB[SVLS_PR01 E9 (EL3174-0002)]^AI Standard Channel 1^Value;
                                  .i_xIP_ON		:= 	TIIB[SVLS_PR01 E11 (EL1124)]^Channel 1^Input;
-                                 .i_xError      :=  TIIB[SVLS_PR01 E11 (EL1124)]^Channel 2^Input;
-                                 .q_xHVEna_DO	:= 	TIIB[SVLS_PR01 E3 (EL2794)]^Channel 3^Output
+                                 .i_xError      :=  TIIB[SVLS_PR01 E11 (EL1124)]^Channel 5^Input;
+                                 .q_xHVEna_DO	:= 	TIIB[SVLS_PR01 E3 (EL2794)]^Channel 4^Output
     '}
     CRIX_SVLS_PIP_1 : FB_PIP_SIP;
 
