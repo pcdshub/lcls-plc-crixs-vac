@@ -1,11 +1,11 @@
-record(mbbi, "IM6K2:GCC:01:reader:STATE_RBV") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.eState
-  field(DESC, "GVL_ADS_Devices.IM6K..._reader.IG.eState")
+record(mbbi, "AT3K2:GCC:01:reader:STATE_RBV") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.eState
+  field(DESC, "GVL_ADS_Devices.AT3K..._reader.IG.eState")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.eState?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.eState?")
   field(ZRVL, "0")
   field(ONVL, "1")
   field(TWVL, "2")
@@ -27,40 +27,40 @@ record(mbbi, "IM6K2:GCC:01:reader:STATE_RBV") {
   field(ASG, "NO_WRITE")
 }
 
-record(longin, "IM6K2:GCC:01:reader:AutoOn_timer_RBV") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.iAutoOnTimer
-  field(DESC, "GVL_ADS_Devices.IM6K...r.IG.iAutoOnTimer")
+record(longin, "AT3K2:GCC:01:reader:AutoOn_timer_RBV") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.iAutoOnTimer
+  field(DESC, "GVL_ADS_Devices.AT3K...r.IG.iAutoOnTimer")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.iAutoOnTimer?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.iAutoOnTimer?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
   field(ASG, "NO_WRITE")
 }
 
-record(longin, "IM6K2:GCC:01:reader:PRESS_AI_RBV") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.i_iPRESS_R
-  field(DESC, "GVL_ADS_Devices.IM6K...der.IG.i_iPRESS_R")
+record(longin, "AT3K2:GCC:01:reader:PRESS_AI_RBV") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.i_iPRESS_R
+  field(DESC, "GVL_ADS_Devices.AT3K...der.IG.i_iPRESS_R")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.i_iPRESS_R?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.i_iPRESS_R?")
   info(autosaveFields_pass0, "DESC DISS HHSV HIGH HIHI HSV LLSV LOLO LOW LSV SIMS UDFS")
   info(archive, "VAL")
   field(ASG, "NO_WRITE")
 }
 
-record(bi, "IM6K2:GCC:01:reader:DISC_ACTIVE_RBV") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.i_xDisc_Active
-  field(DESC, "GVL_ADS_Devices.IM6K...IG.i_xDisc_Active")
+record(bi, "AT3K2:GCC:01:reader:DISC_ACTIVE_RBV") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.i_xDisc_Active
+  field(DESC, "GVL_ADS_Devices.AT3K...IG.i_xDisc_Active")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.i_xDisc_Active?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.i_xDisc_Active?")
   field(ZNAM, "NO DISC")
   field(ONAM, "DISC ACTIVE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -68,14 +68,14 @@ record(bi, "IM6K2:GCC:01:reader:DISC_ACTIVE_RBV") {
   field(ASG, "NO_WRITE")
 }
 
-record(bi, "IM6K2:GCC:01:reader:HV_ON_RBV") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.i_xHV_ON
-  field(DESC, "GVL_ADS_Devices.IM6K...eader.IG.i_xHV_ON")
+record(bi, "AT3K2:GCC:01:reader:HV_ON_RBV") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.i_xHV_ON
+  field(DESC, "GVL_ADS_Devices.AT3K...eader.IG.i_xHV_ON")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.i_xHV_ON?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.i_xHV_ON?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -83,14 +83,14 @@ record(bi, "IM6K2:GCC:01:reader:HV_ON_RBV") {
   field(ASG, "NO_WRITE")
 }
 
-record(bi, "IM6K2:GCC:01:reader:HV_DIS_DO_RBV") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.q_xHV_DIS
-  field(DESC, "GVL_ADS_Devices.IM6K...ader.IG.q_xHV_DIS")
+record(bi, "AT3K2:GCC:01:reader:HV_DIS_DO_RBV") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.q_xHV_DIS
+  field(DESC, "GVL_ADS_Devices.AT3K...ader.IG.q_xHV_DIS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.q_xHV_DIS?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.q_xHV_DIS?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -98,14 +98,14 @@ record(bi, "IM6K2:GCC:01:reader:HV_DIS_DO_RBV") {
   field(ASG, "NO_WRITE")
 }
 
-record(ai, "IM6K2:GCC:01:reader:SP_HYS_RBV") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.rHYS_PR
-  field(DESC, "GVL_ADS_Devices.IM6K...reader.IG.rHYS_PR")
+record(ai, "AT3K2:GCC:01:reader:SP_HYS_RBV") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.rHYS_PR
+  field(DESC, "GVL_ADS_Devices.AT3K...reader.IG.rHYS_PR")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.rHYS_PR?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.rHYS_PR?")
   field(PREC, "2")
   field(EGU, "TORR")
   field(HOPR, "1000")
@@ -116,13 +116,13 @@ record(ai, "IM6K2:GCC:01:reader:SP_HYS_RBV") {
   field(ASG, "NO_WRITE")
 }
 
-record(ao, "IM6K2:GCC:01:reader:SP_HYS") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.rHYS_PR
-  field(DESC, "GVL_ADS_Devices.IM6K...reader.IG.rHYS_PR")
+record(ao, "AT3K2:GCC:01:reader:SP_HYS") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.rHYS_PR
+  field(DESC, "GVL_ADS_Devices.AT3K...reader.IG.rHYS_PR")
   field(PINI, "1")
   field(DTYP, "asynFloat64")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.rHYS_PR=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.rHYS_PR=")
   field(PREC, "2")
   field(EGU, "TORR")
   field(HOPR, "1000")
@@ -132,14 +132,14 @@ record(ao, "IM6K2:GCC:01:reader:SP_HYS") {
   info(archive, "VAL")
 }
 
-record(ai, "IM6K2:GCC:01:reader:PRESS_RBV") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.rPRESS
-  field(DESC, "GVL_ADS_Devices.IM6K..._reader.IG.rPRESS")
+record(ai, "AT3K2:GCC:01:reader:PRESS_RBV") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.rPRESS
+  field(DESC, "GVL_ADS_Devices.AT3K..._reader.IG.rPRESS")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.rPRESS?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.rPRESS?")
   field(PREC, "2")
   field(EGU, "TORR")
   field(HOPR, "1000")
@@ -149,14 +149,14 @@ record(ai, "IM6K2:GCC:01:reader:PRESS_RBV") {
   field(ASG, "NO_WRITE")
 }
 
-record(ai, "IM6K2:GCC:01:reader:PRO_SP_RBV") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.rPRO_SP
-  field(DESC, "GVL_ADS_Devices.IM6K...reader.IG.rPRO_SP")
+record(ai, "AT3K2:GCC:01:reader:PRO_SP_RBV") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.rPRO_SP
+  field(DESC, "GVL_ADS_Devices.AT3K...reader.IG.rPRO_SP")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.rPRO_SP?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.rPRO_SP?")
   field(PREC, "2")
   field(EGU, "TORR")
   field(HOPR, "1000")
@@ -167,13 +167,13 @@ record(ai, "IM6K2:GCC:01:reader:PRO_SP_RBV") {
   field(ASG, "NO_WRITE")
 }
 
-record(ao, "IM6K2:GCC:01:reader:PRO_SP") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.rPRO_SP
-  field(DESC, "GVL_ADS_Devices.IM6K...reader.IG.rPRO_SP")
+record(ao, "AT3K2:GCC:01:reader:PRO_SP") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.rPRO_SP
+  field(DESC, "GVL_ADS_Devices.AT3K...reader.IG.rPRO_SP")
   field(PINI, "1")
   field(DTYP, "asynFloat64")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.rPRO_SP=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.rPRO_SP=")
   field(PREC, "2")
   field(EGU, "TORR")
   field(HOPR, "1000")
@@ -183,14 +183,14 @@ record(ao, "IM6K2:GCC:01:reader:PRO_SP") {
   info(archive, "VAL")
 }
 
-record(ai, "IM6K2:GCC:01:reader:VAC_SP_RBV") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.rVAC_SP
-  field(DESC, "GVL_ADS_Devices.IM6K...reader.IG.rVAC_SP")
+record(ai, "AT3K2:GCC:01:reader:VAC_SP_RBV") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.rVAC_SP
+  field(DESC, "GVL_ADS_Devices.AT3K...reader.IG.rVAC_SP")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynFloat64")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.rVAC_SP?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.rVAC_SP?")
   field(PREC, "2")
   field(EGU, "TORR")
   field(HOPR, "1000")
@@ -201,13 +201,13 @@ record(ai, "IM6K2:GCC:01:reader:VAC_SP_RBV") {
   field(ASG, "NO_WRITE")
 }
 
-record(ao, "IM6K2:GCC:01:reader:VAC_SP") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.rVAC_SP
-  field(DESC, "GVL_ADS_Devices.IM6K...reader.IG.rVAC_SP")
+record(ao, "AT3K2:GCC:01:reader:VAC_SP") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.rVAC_SP
+  field(DESC, "GVL_ADS_Devices.AT3K...reader.IG.rVAC_SP")
   field(PINI, "1")
   field(DTYP, "asynFloat64")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.rVAC_SP=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.rVAC_SP=")
   field(PREC, "2")
   field(EGU, "TORR")
   field(HOPR, "1000")
@@ -217,14 +217,14 @@ record(ao, "IM6K2:GCC:01:reader:VAC_SP") {
   info(archive, "VAL")
 }
 
-record(bi, "IM6K2:GCC:01:reader:AT_VAC_RBV") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xAT_VAC
-  field(DESC, "GVL_ADS_Devices.IM6K...reader.IG.xAT_VAC")
+record(bi, "AT3K2:GCC:01:reader:AT_VAC_RBV") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xAT_VAC
+  field(DESC, "GVL_ADS_Devices.AT3K...reader.IG.xAT_VAC")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xAT_VAC?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xAT_VAC?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -232,14 +232,14 @@ record(bi, "IM6K2:GCC:01:reader:AT_VAC_RBV") {
   field(ASG, "NO_WRITE")
 }
 
-record(bi, "IM6K2:GCC:01:reader:Auto_On_RBV") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xAutoOn
-  field(DESC, "GVL_ADS_Devices.IM6K...reader.IG.xAutoOn")
+record(bi, "AT3K2:GCC:01:reader:Auto_On_RBV") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xAutoOn
+  field(DESC, "GVL_ADS_Devices.AT3K...reader.IG.xAutoOn")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xAutoOn?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xAutoOn?")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -247,26 +247,26 @@ record(bi, "IM6K2:GCC:01:reader:Auto_On_RBV") {
   field(ASG, "NO_WRITE")
 }
 
-record(bo, "IM6K2:GCC:01:reader:Auto_On") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xAutoOn
-  field(DESC, "GVL_ADS_Devices.IM6K...reader.IG.xAutoOn")
+record(bo, "AT3K2:GCC:01:reader:Auto_On") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xAutoOn
+  field(DESC, "GVL_ADS_Devices.AT3K...reader.IG.xAutoOn")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xAutoOn=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xAutoOn=")
   field(ZNAM, "FALSE")
   field(ONAM, "TRUE")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "IM6K2:GCC:01:reader:HV_SW_RBV") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xHV_SW
-  field(DESC, "GVL_ADS_Devices.IM6K..._reader.IG.xHV_SW")
+record(bi, "AT3K2:GCC:01:reader:HV_SW_RBV") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xHV_SW
+  field(DESC, "GVL_ADS_Devices.AT3K..._reader.IG.xHV_SW")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xHV_SW?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xHV_SW?")
   field(ZNAM, "OFF")
   field(ONAM, "ON")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -274,26 +274,26 @@ record(bi, "IM6K2:GCC:01:reader:HV_SW_RBV") {
   field(ASG, "NO_WRITE")
 }
 
-record(bo, "IM6K2:GCC:01:reader:HV_SW") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xHV_SW
-  field(DESC, "GVL_ADS_Devices.IM6K..._reader.IG.xHV_SW")
+record(bo, "AT3K2:GCC:01:reader:HV_SW") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xHV_SW
+  field(DESC, "GVL_ADS_Devices.AT3K..._reader.IG.xHV_SW")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xHV_SW=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xHV_SW=")
   field(ZNAM, "OFF")
   field(ONAM, "ON")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "IM6K2:GCC:01:reader:ILK_OK_RBV") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xILKOk
-  field(DESC, "GVL_ADS_Devices.IM6K..._reader.IG.xILKOk")
+record(bi, "AT3K2:GCC:01:reader:ILK_OK_RBV") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xILKOk
+  field(DESC, "GVL_ADS_Devices.AT3K..._reader.IG.xILKOk")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xILKOk?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xILKOk?")
   field(ZNAM, "NOT OK")
   field(ONAM, "OK")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -301,14 +301,14 @@ record(bi, "IM6K2:GCC:01:reader:ILK_OK_RBV") {
   field(ASG, "NO_WRITE")
 }
 
-record(bi, "IM6K2:GCC:01:reader:LOGGER_RBV") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xLog
-  field(DESC, "GVL_ADS_Devices.IM6K...01_reader.IG.xLog")
+record(bi, "AT3K2:GCC:01:reader:LOGGER_RBV") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xLog
+  field(DESC, "GVL_ADS_Devices.AT3K...01_reader.IG.xLog")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xLog?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xLog?")
   field(ZNAM, "OFF")
   field(ONAM, "ON")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
@@ -316,26 +316,26 @@ record(bi, "IM6K2:GCC:01:reader:LOGGER_RBV") {
   field(ASG, "NO_WRITE")
 }
 
-record(bo, "IM6K2:GCC:01:reader:LOGGER") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xLog
-  field(DESC, "GVL_ADS_Devices.IM6K...01_reader.IG.xLog")
+record(bo, "AT3K2:GCC:01:reader:LOGGER") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xLog
+  field(DESC, "GVL_ADS_Devices.AT3K...01_reader.IG.xLog")
   field(DTYP, "asynInt32")
   field(UDFS, "0")
-  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xLog=")
+  field(OUT, "@asyn($(PORT),0,1)ADSPORT=851/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xLog=")
   field(ZNAM, "OFF")
   field(ONAM, "ON")
   info(autosaveFields_pass0, "COSV DESC DISS OSV SIMS UDFS VAL ZSV")
   info(archive, "VAL")
 }
 
-record(bi, "IM6K2:GCC:01:reader:PRESS_OK_RBV") {
-  # GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xPRESS_OK
-  field(DESC, "GVL_ADS_Devices.IM6K...ader.IG.xPRESS_OK")
+record(bi, "AT3K2:GCC:01:reader:PRESS_OK_RBV") {
+  # GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xPRESS_OK
+  field(DESC, "GVL_ADS_Devices.AT3K...ader.IG.xPRESS_OK")
   field(SCAN, "I/O Intr")
   field(PINI, "1")
   field(TSE, "-2")
   field(DTYP, "asynInt32")
-  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.IM6K2_GCC_01_reader.IG.xPRESS_OK?")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_ADS_Devices.AT3K2_GCC_01_reader.IG.xPRESS_OK?")
   field(ZNAM, "OFF")
   field(ONAM, "ON")
   info(autosaveFields_pass0, "DESC DISS OSV SIMS UDFS ZSV")
