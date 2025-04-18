@@ -534,21 +534,6 @@
 					<Type>BIT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Vars.iMechDRL_CurrMon</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Vars.iMechDrl_VMon</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Gauges.TC_GPI_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
 					<Name>GVL_PLC_Interfaces.xEcatBridge_TxPDO_state</Name>
 					<Comment>
 						<![CDATA[CRIX Vac
@@ -558,13 +543,6 @@ ETHERCAT BRRIDGE COM STATUS
 0: Other side is in OP state, >0: Error]]>
 					</Comment>
 					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Gauges.CRYO_GPI_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
-					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected</Name>
@@ -592,13 +570,6 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Chamber_Gauges.ROUGH_GPI_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
 					<Name>GVL_PLC_Interfaces.xPTC_MOT_Y_11_IN</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -611,8 +582,33 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Chamber_Gauges.TC_GPI_01.i_iPRESS_R</Name>
+					<Comment>
+						<![CDATA[ input Pressure // Link to analog Input]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>GVL_PLC_Interfaces.xSDS_MOT_Z_18_OUT</Name>
 					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Gauges.CRYO_GPI_01.i_iPRESS_R</Name>
+					<Comment>
+						<![CDATA[ input Pressure // Link to analog Input]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Gauges.ROUGH_GPI_01.i_iPRESS_R</Name>
+					<Comment>
+						<![CDATA[ input Pressure // Link to analog Input]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Vars.iMechDRL_CurrMon</Name>
+					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Gauges.TC_GCC_01.i_iPRESS_R</Name>
@@ -634,6 +630,10 @@ ETHERCAT BRRIDGE COM STATUS
 						<![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]>
 					</Comment>
 					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Vars.iMechDrl_VMon</Name>
+					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Gauges.CRYO_GCP_01.i_iPRESS_R</Name>
@@ -658,6 +658,20 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Chamber_Gauges.TC_GCP_01.i_iPRESS_R</Name>
+					<Comment>
+						<![CDATA[ input Pressure // Link to analog Input]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.i_iPRESS_R</Name>
+					<Comment>
+						<![CDATA[ input Pressure // Link to analog Input]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.i_iPRESS_R</Name>
 					<Comment>
 						<![CDATA[ input Pressure // Link to analog Input]]>
 					</Comment>
@@ -834,6 +848,17 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_SVLS_VWC_01.i_xOpnLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_SVLS_VWC_01.i_xClsLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_COM.K2S17_E5_CH2_stComIn</Name>
 					<Comment>
 						<![CDATA[SERIAL IO K2S17_E5_CH2 (EL6022)]]>
@@ -844,6 +869,13 @@ ETHERCAT BRRIDGE COM STATUS
 					<Name>GVL_COM.K2S17_E5_CH1_stComIn</Name>
 					<Comment>
 						<![CDATA[SERIAL IO K2S17_E5_CH1 (EL6022)]]>
+					</Comment>
+					<Type GUID="{0146173C-D895-D219-E209-CC005AC77636}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+				</Var>
+				<Var>
+					<Name>GVL_COM.CRIX_SVLS_stComIn</Name>
+					<Comment>
+						<![CDATA[SERIAL IO CRIX SVLS E4 (EL6021)]]>
 					</Comment>
 					<Type GUID="{0146173C-D895-D219-E209-CC005AC77636}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
@@ -980,6 +1012,40 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_Pumps.SDS_PTM_01.i_xRemote</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_SVLS_PTM_01.i_xAtSpd</Name>
+					<Comment>
+						<![CDATA[ Normaml operation when true]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_SVLS_PTM_01.i_xFaultNC</Name>
+					<Comment>
+						<![CDATA[ Error]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_SVLS_PTM_01.i_xWarn</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_SVLS_PTM_01.i_xRemote</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_SVLS_PIP_1.i_iPRESS</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_SVLS_PIP_1.i_xIP_ON</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_SVLS_PIP_1.i_xError</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1154,77 +1220,15 @@ ETHERCAT BRRIDGE COM STATUS
 					</Comment>
 					<Type>INT</Type>
 				</Var>
-				<Var>
-					<Name>GVL_COM.CRIX_SVLS_stComIn</Name>
-					<Comment>
-						<![CDATA[SERIAL IO CRIX SVLS E4 (EL6021)]]>
-					</Comment>
-					<Type GUID="{0146173C-D895-D219-E209-CC005AC77636}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_SVLS_PTM_01.i_xAtSpd</Name>
-					<Comment>
-						<![CDATA[ Normaml operation when true]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_SVLS_PTM_01.i_xFaultNC</Name>
-					<Comment>
-						<![CDATA[ Error]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_SVLS_PTM_01.i_xWarn</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_SVLS_PTM_01.i_xRemote</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_SVLS_PIP_1.i_iPRESS</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_SVLS_PIP_1.i_xIP_ON</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_SVLS_PIP_1.i_xError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Gauges.CRIX_SVLS_GCP_02.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_SVLS_VWC_01.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_SVLS_VWC_01.i_xClsLS</Name>
-					<Type>BOOL</Type>
-				</Var>
 			</Vars>
 			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
 				<Var>
 					<Name>PRG_Chamber_Valves.dummy_FFFO.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_Chamber_Valves.g_FastFaultOutputNA.q_xFastFaultOut</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1362,13 +1366,6 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Chamber_Gauges.TC_GCC_01.q_xHV_DIS</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_PLC_Interfaces.bCRYO_VGC_01_CLS</Name>
 					<Comment>
 						<![CDATA[I/O Outputs to CRIX Motion PLC]]>
@@ -1393,6 +1390,13 @@ ETHERCAT BRRIDGE COM STATUS
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.bSDS_VGC_01_OPN</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Chamber_Gauges.TC_GCC_01.q_xHV_DIS</Name>
+					<Comment>
+						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
+					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1472,11 +1476,19 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Chamber_Valves.CRIX_SVLS_VWC_01.q_xCLS_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_COM.K2S17_E5_CH2_stComOut</Name>
 					<Type GUID="{D6B0A42D-897A-4B90-95E8-3C741C3CE3EE}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_COM.K2S17_E5_CH1_stComOut</Name>
+					<Type GUID="{D6B0A42D-897A-4B90-95E8-3C741C3CE3EE}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+				</Var>
+				<Var>
+					<Name>GVL_COM.CRIX_SVLS_stComOut</Name>
 					<Type GUID="{D6B0A42D-897A-4B90-95E8-3C741C3CE3EE}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
@@ -1578,6 +1590,35 @@ ETHERCAT BRRIDGE COM STATUS
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Pumps.CRIX_SVLS_PTM_01.q_RunDO</Name>
+					<Comment>
+						<![CDATA[ Start/Stop for TC110 link this output to the Pumping station bit]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_SVLS_PTM_01.q_PumpingStation</Name>
+					<Comment>
+						<![CDATA[ Start/Stop interlock]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_SVLS_PTM_01.q_xRemote</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_SVLS_PTM_01.q_xReset</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Pumps.CRIX_SVLS_PIP_1.q_xHVEna_DO</Name>
+					<Comment>
+						<![CDATA[ Enable High Voltage when TRUE]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_Recirculation.RCC_VRC_01.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -1628,47 +1669,6 @@ ETHERCAT BRRIDGE COM STATUS
 					<Comment>
 						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
 					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_COM.CRIX_SVLS_stComOut</Name>
-					<Type GUID="{D6B0A42D-897A-4B90-95E8-3C741C3CE3EE}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_SVLS_PTM_01.q_RunDO</Name>
-					<Comment>
-						<![CDATA[ Start/Stop for TC110 link this output to the Pumping station bit]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_SVLS_PTM_01.q_PumpingStation</Name>
-					<Comment>
-						<![CDATA[ Start/Stop interlock]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_SVLS_PTM_01.q_xRemote</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_SVLS_PTM_01.q_xReset</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Pumps.CRIX_SVLS_PIP_1.q_xHVEna_DO</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when TRUE]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>PRG_Chamber_Valves.g_FastFaultOutputNA.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_Chamber_Valves.CRIX_SVLS_VWC_01.q_xCLS_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
@@ -2363,7 +2363,11 @@ ETHERCAT BRRIDGE COM STATUS
 				<Link VarA="PlcTask Outputs^GVL_COM.CRIX_SVLS_stComOut^D[9]" VarB="COM RxPDO-Map Outputs^Data Out 9" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E5 (EL1004)">
+				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_SVLS_VWC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Valves.CRIX_SVLS_VWC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E6 (EL2004)">
+				<Link VarA="PlcTask Outputs^GVL_Chamber_Valves.CRIX_SVLS_VWC_01.q_xCLS_DO" VarB="Channel 1^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E9 (EL3174-0002)">
 				<Link VarA="PlcTask Inputs^GVL_Chamber_Gauges.CRIX_SVLS_GCP_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>

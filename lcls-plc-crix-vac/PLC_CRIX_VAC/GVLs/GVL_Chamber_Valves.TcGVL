@@ -151,10 +151,10 @@ VAR_GLOBAL
 
     {attribute 'pytmc' :=' pv: CRIXS:SVLS:VRC:01 '}
     {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[SVLS_PR01 E5 (EL1004)]^Channel 1^Input;
-                                 .i_xClsLS	:=	TIIB[SVLS_PR01 E5 (EL1004)]^Channel 5^Input;
-                                .q_xOPN_DO	:=	TIIB[SVLS_PR01 E6 (EL2004)]^Channel 1^Input'}
+                                 .i_xClsLS	:=	TIIB[SVLS_PR01 E5 (EL1004)]^Channel 2^Input;
+                                .q_xCLS_DO	:=	TIIB[SVLS_PR01 E6 (EL2004)]^Channel 1^Output'}
 
-    CRIX_SVLS_VWC_01 : FB_VRC_NO_FFO;
+    CRIX_SVLS_VWC_01 : FB_VRC_NO;
 
     stCRIX_SVLS_VWC_01 : ST_VRC_NO;
 

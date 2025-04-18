@@ -127,7 +127,7 @@ CRIX_SVLS_PTM_01(i_xExtILKOk:=(F_TurboExtILKLogic_2(Turbo:=stCRIX_SVLS_PTM_01,
                                                                      ScrollPump:= stMECH_PRO_01)),
             iq_stPtm=> stCRIX_SVLS_PTM_01);
 
-stCRIX_SVLS_PTM_01_Pfeiffer_CTRL[1].iSerialAddress := 0;
+stCRIX_SVLS_PTM_01_Pfeiffer_CTRL[1].iSerialAddress := 1;
 stCRIX_SVLS_PTM_01_Pfeiffer_CTRL[1].xEnableComm := TRUE;
 
 fb_CRIX_SVLS_PTM_01_PfeifferCom(astPfeifferControl:=stCRIX_SVLS_PTM_01_Pfeiffer_CTRL,
