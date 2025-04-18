@@ -28,9 +28,5 @@ END_VAR
 //    iWatchdog := ADS_connection_counter // UDINT required for watchdog functionality
 //);]]></ST>
     </Implementation>
-    <LineIds Name="PRG_ADS_Gauges">
-      <LineId Id="3" Count="11" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

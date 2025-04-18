@@ -77,7 +77,7 @@ VAR_GLOBAL
                                .i_xFaultNC		  := TIIB[SVLS_PR01 E2 (EL1004)]^Channel 2^Input;
                                .q_RunDO           := TIIB[SVLS_PR01 E3 (EL2794)]^Channel 1^Output;
                                .q_xReset          := TIIB[SVLS_PR01 E3 (EL2794)]^Channel 2^Output
-	'}
+    '}
     CRIX_SVLS_PTM_01 : FB_PTM_Pfeiffer;
     stCRIX_SVLS_PTM_01 : ST_PfeifferPTM;
 

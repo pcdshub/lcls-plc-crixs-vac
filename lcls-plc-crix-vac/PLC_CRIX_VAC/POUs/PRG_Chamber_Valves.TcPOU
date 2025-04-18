@@ -51,9 +51,9 @@ VAR
     bSDS_VRC_03_ILK: BOOL;
 
     bCRIX_SVLS_VWC_01_ILK_OK: BOOL;
-	rCRIX_SVLS_VWC_01_Pres_US_SP: REAL := 0.001;
-	rCRIX_SVLS_VWC_01_Pres_DS_SP: REAL := 0.001;
-	
+    rCRIX_SVLS_VWC_01_Pres_US_SP: REAL := 0.001;
+    rCRIX_SVLS_VWC_01_Pres_DS_SP: REAL := 0.001;
+
     g_FastFaultOutputNA: FB_HardwareFFOutput;
     g_fbArbiterNA: FB_Arbiter(1);
 END_VAR
@@ -297,9 +297,9 @@ SDS_VVC_02 (
 );
 
 bCRIX_SVLS_VWC_01_ILK_OK := (rCRIX_SVLS_VWC_01_Pres_US_SP > CRIX_SVLS_GCP_01.PG.rPRESS) and CRIX_SVLS_GCP_01.PG.xAT_VAC
-							and (rCRIX_SVLS_VWC_01_Pres_DS_SP > CRIX_SVLS_GCP_02.PG.rPRESS) and CRIX_SVLS_GCP_02.PG.xAT_VAC;
+                            and (rCRIX_SVLS_VWC_01_Pres_DS_SP > CRIX_SVLS_GCP_02.PG.rPRESS) and CRIX_SVLS_GCP_02.PG.xAT_VAC;
 
-							
+
 
 CRIX_SVLS_VWC_01 (
     i_xExtILK_OK:= bCRIX_SVLS_VWC_01_ILK_OK,
@@ -307,14 +307,5 @@ CRIX_SVLS_VWC_01 (
     iq_stValve=> stCRIX_SVLS_VWC_01,
 );]]></ST>
     </Implementation>
-    <LineIds Name="PRG_Chamber_Valves">
-      <LineId Id="3" Count="235" />
-      <LineId Id="241" Count="1" />
-      <LineId Id="306" Count="0" />
-      <LineId Id="305" Count="0" />
-      <LineId Id="304" Count="0" />
-      <LineId Id="243" Count="4" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
