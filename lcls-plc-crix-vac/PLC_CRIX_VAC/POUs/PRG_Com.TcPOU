@@ -27,7 +27,18 @@ K2S17_E5_CH1_fbSerialLineControl(
     TxBuffer:= K2S17_E5_CH1_SerialTXBuffer,
     RxBuffer:= K2S17_E5_CH1_SerialRXBuffer,
     Error=> ,
-    ErrorID=> );]]></ST>
+    ErrorID=> );
+
+CRIX_SVLS_fbSerialLineControl(
+    Mode:= SERIALLINEMODE_EL6_22B,
+    pComIn:=ADR(CRIX_SVLS_stComIn),
+    pComOut:=ADR(CRIX_SVLS_stComOut),
+    SizeComIn:=SIZEOF(CRIX_SVLS_stComIn),
+    TxBuffer:=CRIX_SVLS_SerialTXBuffer,
+    RxBuffer:=CRIX_SVLS_SerialRXBuffer,
+    Error=> ,
+    ErrorID=> );
+    ]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

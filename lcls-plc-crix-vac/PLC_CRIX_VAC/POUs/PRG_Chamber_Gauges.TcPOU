@@ -32,7 +32,13 @@ SDS_GCP_01.M_SetBits(30518);
 SDS_GCP_01(PG=>);
 
 TC_GCP_01.M_SetBits(30518);
-TC_GCP_01(PG=>stTC_GCP_01);]]></ST>
+TC_GCP_01(PG=>stTC_GCP_01);
+
+CRIX_SVLS_GCP_01.M_SetBits(30518);
+CRIX_SVLS_GCP_01(PG=>stCRIX_SVLS_GCP_01);
+
+CRIX_SVLS_GCP_02.M_SetBits(30518);
+CRIX_SVLS_GCP_02(PG=>stCRIX_SVLS_GCP_02);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
