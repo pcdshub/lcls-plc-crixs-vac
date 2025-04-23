@@ -56,8 +56,8 @@ VAR
 
     g_FastFaultOutputNA: FB_HardwareFFOutput;
     g_fbArbiterNA: FB_Arbiter(1);
-	
-	bCRIX_SVLS_VRC_01_ILK_OK : BOOL;
+
+    bCRIX_SVLS_VRC_01_ILK_OK : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -319,13 +319,5 @@ CRIX_SVLS_VRC_01(i_xExtILK_OK:=bCRIX_SVLS_VRC_01_ILK_OK,
             iq_stValve =>stCRIX_SVLS_VRC_01);
 ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_Chamber_Valves">
-      <LineId Id="3" Count="245" />
-      <LineId Id="2" Count="0" />
-      <LineId Id="306" Count="1" />
-      <LineId Id="311" Count="5" />
-      <LineId Id="308" Count="0" />
-      <LineId Id="305" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
