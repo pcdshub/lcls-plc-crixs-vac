@@ -15,6 +15,9 @@ VAR
 
     fbSDS_PTM_01_ILK : FB_ChemRIXS_Turbo_ILK; //new
     SDS_PTM_01_ILK_OK : BOOL;
+
+    fbCRIX_SVLS_PTM_01_ILK: FB_ChemRIXS_Turbo_ILK;
+    CRIX_SVLS_PTM_01_xExtIlkOK: BOOL;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[// Leybold Pumps
@@ -117,6 +120,31 @@ CRIX_PTM_04_ILK_OK := F_TurboExtILK_TOF(Turbo:=CRIX_PTM_04.iq_stPTM, BackingGaug
                             InletGauge:=CRIX_GCP_03.PG, ScrollPump:= stCRIX_MECH_PRO_01, RoughingValve:=CRIX_VGC_06.iq_stValve, tDelay:=T#200S );
 
 CRIX_PTM_04(i_xExtILKOk:=CRIX_PTM_04_ILK_OK, iq_stPtm=> ); *)
+
+// Pfeiffer Turbo Pump TC110
+fbCRIX_SVLS_PTM_01_ILK(i_stValve:=stCRIX_SVLS_VRC_01,
+                  i_stPump:=stCRIX_SVLS_PTM_01,
+                  tDelay:=T#200S,
+                  bILK=>CRIX_SVLS_PTM_01_xExtIlkOK);
+
+CRIX_SVLS_PTM_01(i_xExtILKOk:=(CRIX_SVLS_PTM_01_xExtIlkOK and F_TurboExtILKLogic_2(Turbo:=stCRIX_SVLS_PTM_01,
+                                                                     BackingGauge:=ROUGH_GPI_01.PG,
+                                                                     InletGauge:=CRIX_SVLS_GCP_01.PG,
+                                                                     ScrollPump:= stMECH_PRO_01)),
+            iq_stPtm=> stCRIX_SVLS_PTM_01);
+
+stCRIX_SVLS_PTM_01_Pfeiffer_CTRL[1].iSerialAddress := 1;
+stCRIX_SVLS_PTM_01_Pfeiffer_CTRL[1].xEnableComm := TRUE;
+
+fb_CRIX_SVLS_PTM_01_PfeifferCom(astPfeifferControl:=stCRIX_SVLS_PTM_01_Pfeiffer_CTRL,
+                      astPfeifferStatus:=stCRIX_SVLS_PTM_01_Pfeiffer_RBK,
+                      SerialRXBuffer:=CRIX_SVLS_SerialRXBuffer,
+                      SerialTXBuffer:=CRIX_SVLS_SerialTXBuffer);
+
+CRIX_SVLS_PTM_01.M_Serial_IO(st_Pfeiffer_RBK:=stCRIX_SVLS_PTM_01_Pfeiffer_RBK[1], stCRIX_SVLS_PTM_01_Pfeiffer_CTRL[1]);
+
+// SIP NexTORR Ion Pump
+CRIX_SVLS_PIP_1(i_stGauge := CRIX_SVLS_GCP_02.PG, i_xOverrideMode := xSystemOverride_ChemRIXS);
 ]]></ST>
     </Implementation>
   </POU>
