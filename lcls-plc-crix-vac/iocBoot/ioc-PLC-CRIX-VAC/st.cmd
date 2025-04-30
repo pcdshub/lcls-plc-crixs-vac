@@ -1,11 +1,11 @@
-#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.6.1/bin/rhel7-x86_64/adsIoc
+#!/reg/g/pcds/epics/ioc/common/ads-ioc/R1.0.0/bin/rhel7-x86_64/adsIoc
 ################### AUTO-GENERATED DO NOT EDIT ###################
 #
 #         Project: lcls-plc-crix-vac.tsproj
 #        PLC name: PLC_CRIX_VAC (PLC_CRIX_VAC Instance)
 # Generated using: pytmc 2.17.0
-# Project version: 1c447bf
-#    Project hash: 1c447bf974fcb04a5c9cb7545d9f15ef1b88ed54
+# Project version: 32ac250
+#    Project hash: 32ac2504ba1825013b4e4065de0d70f76d09c8bc
 #     PLC IP/host: 172.21.140.47
 #      PLC Net ID: 172.21.140.47.1.1
 #  ** Production mode IOC **
@@ -23,11 +23,13 @@
 #   Tc3_Module: * -> 3.3.21.0 (Beckhoff Automation GmbH)
 #
 ################### AUTO-GENERATED DO NOT EDIT ###################
+# Run common startup commands for linux soft IOC's
+< $(IOC_COMMON)/All/pre_linux.cmd
 < envPaths
 
 epicsEnvSet("ADS_IOC_TOP", "$(TOP)" )
 
-epicsEnvSet("ENGINEER", "tparas" )
+epicsEnvSet("ENGINEER", "jjoshi" )
 epicsEnvSet("LOCATION", "PLC:CRIXS:VAC" )
 epicsEnvSet("IOCSH_PS1", "$(IOC)> " )
 epicsEnvSet("ACF_FILE", "$(ADS_IOC_TOP)/iocBoot/templates/unrestricted.acf")
@@ -43,7 +45,7 @@ epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
 epicsEnvSet("IPADDR",           "172.21.140.47")
 epicsEnvSet("AMSID",            "172.21.140.47.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "5200")
+epicsEnvSet("ADS_MAX_PARAMS",   "5222")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
@@ -85,10 +87,10 @@ dbLoadRecords("save_restoreStatus.db", "P=PLC:CRIXS:VAC:")
 dbLoadRecords("caPutLog.db", "IOC=$(IOC)")
 
 ## TwinCAT task, application, and project information databases ##
-dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:CRIXS:VAC,IDX=1")
+dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:CRIXS:VAC,IDX=1,TASK_PORT=350")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:CRIXS:VAC")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:CRIXS:VAC,PROJECT=lcls-plc-crix-vac.tsproj,HASH=1c447bf,VERSION=1c447bf,PYTMC=2.17.0,PLC_HOST=172.21.140.47")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:CRIXS:VAC,PROJECT=lcls-plc-crix-vac.tsproj,HASH=32ac250,VERSION=32ac250,PYTMC=2.17.0,PLC_HOST=172.21.140.47")
 
 #   LCLS General: * -> 2.6.0 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:CRIXS:VAC,DEPENDENCY=LCLS_General,VERSION=2.6.0,VENDOR=SLAC")
@@ -112,8 +114,8 @@ cd "$(IOC_TOP)"
 ## PLC Project Database files ##
 dbLoadRecords("PLC_CRIX_VAC.db", "PORT=$(ASYN_PORT),PREFIX=PLC:CRIXS:VAC:,IOCNAME=$(IOC),IOC=$(IOC)")
 
-# Total records: 4200
-callbackSetQueueSize(10400)
+# Total records: 4222
+callbackSetQueueSize(10444)
 
 # Autosave and archive settings:
 save_restoreSet_status_prefix("PLC:CRIXS:VAC:")
