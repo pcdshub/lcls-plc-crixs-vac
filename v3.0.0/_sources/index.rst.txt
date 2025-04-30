@@ -1,0 +1,30 @@
+lcls-plc-crix-vac
+-----------------
+
+.. toctree::
+    :maxdepth: 2
+    :caption: lcls-plc-crix-vac
+
+    lcls-plc-crix-vac_pragmas
+    lcls-plc-crix-vac_nc
+    lcls-plc-crix-vac_ethercat
+    lcls-plc-crix-vac_boxes
+    lcls-plc-crix-vac_links
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: PLC_CRIX_VAC
+
+    lcls-plc-crix-vac_PLC_CRIX_VAC_summary
+    lcls-plc-crix-vac_PLC_CRIX_VAC_epics
+    lcls-plc-crix-vac_PLC_CRIX_VAC_source
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
