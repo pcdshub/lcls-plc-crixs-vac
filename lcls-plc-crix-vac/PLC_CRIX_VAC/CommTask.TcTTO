@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <Task Name="CommTask" Id="{53983494-1787-44e1-8c24-7e4560110e14}">
+    <!--CycleTime in micro seconds.-->
+    <CycleTime>10000</CycleTime>
+    <Priority>21</Priority>
+    <PouCall>
+      <Name>PRG_COM_VLS</Name>
+    </PouCall>
+    <TaskFBGuid>{8caf66c4-7393-4be5-997b-d38d238a02b7}</TaskFBGuid>
+    <Fb_init>{1acee5e0-20d0-42cb-ab1e-961c0ddf202c}</Fb_init>
+    <Fb_exit>{3f443783-fe31-46b6-9ccd-6f3feaef12be}</Fb_exit>
+    <CycleUpdate>{827d8f6e-def1-44a5-9802-421890ac6f70}</CycleUpdate>
+    <PostCycleUpdate>{941c4840-df32-4769-9a79-c24da9afcb57}</PostCycleUpdate>
+  </Task>
+</TcPlcObject>
