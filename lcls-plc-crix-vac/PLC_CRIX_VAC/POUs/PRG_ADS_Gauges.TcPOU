@@ -6,8 +6,8 @@ VAR
     {attribute 'pytmc' :=' pv: CRIXS:TM2K2:GCC:01 '}
     TM2K2_GCC_Reader : FB_TGCC_ADS;
 
-    {attribute 'pytmc' :=' pv: CRIXS:IM6K2:GCC:01 '}
-    IM6K2_GCC_Reader : FB_TGCC_ADS;
+    //{attribute 'pytmc' :=' pv: CRIXS:AT3K2:GCC:01 '}
+    //AT3K2_GCC_Reader : FB_TGCC_ADS;
 
     // This variable needs to be instantiated for the Watchdog to work
     ADS_connection_counter : UDINT;
@@ -21,12 +21,12 @@ END_VAR
     iWatchdog := ADS_connection_counter // UDINT required for watchdog functionality
 );
 
-IM6K2_GCC_Reader(
-    sNetId := '172.21.140.69.1.1', // plc-kfe-rix-vac
-    nPort := 851, // ADS port of the PLC reading from this PLC
-    sVarName := 'PRG_KFE_RIX_VAC.fb_IM6K2_PPM_GCC_1', // Full name of the FB containing the gauge to be read
-    iWatchdog := ADS_connection_counter // UDINT required for watchdog functionality
-);]]></ST>
+//AT3K2_GCC_Reader(
+//    sNetId := '172.21.140.69.1.1', // plc-kfe-rix-vac
+//    nPort := 851, // ADS port of the PLC reading from this PLC
+//    sVarName := 'PRG_KFE_RIX_VAC.fb_AT3K2_SOLID_GCC_1', // Full name of the FB containing the gauge to be read
+//    iWatchdog := ADS_connection_counter // UDINT required for watchdog functionality
+//);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

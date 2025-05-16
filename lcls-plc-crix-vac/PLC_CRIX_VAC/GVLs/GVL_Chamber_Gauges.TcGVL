@@ -61,6 +61,17 @@ VAR_GLOBAL
 
     stTC_GCP_01 : ST_VG;
 
+    {attribute 'pytmc' :=' pv: CRIXS:SVLS:GCP:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[SVLS_PR01 E9 (EL3174-0002)]^AI Standard Channel 1^Value '}
+    CRIX_SVLS_GCP_01 : FB_972;
+
+    stCRIX_SVLS_GCP_01 : ST_VG;
+
+    {attribute 'pytmc' :=' pv: CRIXS:SVLS:GCP:02 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[SVLS_PR01 E9 (EL3174-0002)]^AI Standard Channel 2^Value '}
+    CRIX_SVLS_GCP_02 : FB_972;
+
+    stCRIX_SVLS_GCP_02 : ST_VG;
 
 END_VAR]]></Declaration>
   </GVL>

@@ -122,6 +122,67 @@ VAR_GLOBAL
                                  .D[21]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^E5 (EL6022)^COM Outputs Channel 1^Data Out 21
     '}
     K2S17_E5_CH1_stComOut		AT %Q*	:	EL6outData22B;
+
+    // SVLS PTM-01
+    CRIX_SVLS_SerialRXBuffer : ComBuffer;
+    CRIX_SVLS_SerialTXBuffer : ComBuffer;
+
+    // Serial Terminal
+    CRIX_SVLS_fbSerialLineControl: SerialLineControl;
+
+    //SERIAL IO CRIX SVLS E4 (EL6021)
+    {attribute	'TcLinkTo'	:=	'.Status:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Status;
+                                 .D[0]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 0;
+                                 .D[1]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 1;
+                                 .D[2]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 2;
+                                 .D[3]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 3;
+                                 .D[4]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 4;
+                                 .D[5]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 5;
+                                 .D[6]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 6;
+                                 .D[7]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 7;
+                                 .D[8]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 8;
+                                 .D[9]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 9;
+                                 .D[10]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 10;
+                                 .D[11]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 11;
+                                 .D[12]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 12;
+                                 .D[13]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 13;
+                                 .D[14]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 14;
+                                 .D[15]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 15;
+                                 .D[16]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 16;
+                                 .D[17]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 17;
+                                 .D[18]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 18;
+                                 .D[19]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 19;
+                                 .D[20]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 20;
+                                 .D[21]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM TxPDO-Map Inputs^Data In 21
+    '}
+    CRIX_SVLS_stComIn		AT %I*	:	EL6inData22B;
+    {attribute	'TcLinkTo'	:=	'.Ctrl:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Ctrl;
+                                 .D[0]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 0;
+                                 .D[1]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 1;
+                                 .D[2]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 2;
+                                 .D[3]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 3;
+                                 .D[4]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 4;
+                                 .D[5]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 5;
+                                 .D[6]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 6;
+                                 .D[7]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 7;
+                                 .D[8]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 8;
+                                 .D[9]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 9;
+                                 .D[10]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 10;
+                                 .D[11]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 11;
+                                 .D[12]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 12;
+                                 .D[13]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 13;
+                                 .D[14]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 14;
+                                 .D[15]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 15;
+                                 .D[16]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 16;
+                                 .D[17]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 17;
+                                 .D[18]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 18;
+                                 .D[19]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 19;
+                                 .D[20]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 20;
+                                 .D[21]:=TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EK1122)^Hoffman Box Vac EK1 (EK1100)^Term 145 (EK1122)^SVLS_PR01 E0 (EK1100)^SVLS_PR01 E4 (EL6021)^COM RxPDO-Map Outputs^Data Out 21
+    '}
+    CRIX_SVLS_stComOut		AT %Q*	:	EL6outData22B;
+
+
 END_VAR
 
 ]]></Declaration>

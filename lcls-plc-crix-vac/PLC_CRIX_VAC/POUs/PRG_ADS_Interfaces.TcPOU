@@ -19,9 +19,9 @@ END_VAR
     iWatchdog := i_iWatchdog // UDINT required for watchdog functionality
 );
 
-IM6K2_GCC_01_reader(sNetId := '172.21.140.69.1.1', // AMS NET ID of RIXS vacuum PLC being read from
+AT3K2_GCC_01_reader(sNetId := '172.21.140.69.1.1', // AMS NET ID of RIXS vacuum PLC being read from
     nPort := 851, // ADS port of the PLC reading from this PLC
-    sVarName := 'GVL_KFE_RIX_VAC.fb_IM6K2_PPM_GCC_1', // Full name of the FB containing the gauge to be read
+    sVarName := 'GVL_KFE_RIX_VAC.fb_AT3K2_SOLID_GCC_1', // Full name of the FB containing the gauge to be read
     iWatchdog := i_iWatchdog // UDINT required for watchdog functionality
 );
 
