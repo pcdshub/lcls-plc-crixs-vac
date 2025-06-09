@@ -56,6 +56,8 @@ VAR
 
     g_FastFaultOutputNA: FB_HardwareFFOutput;
     g_fbArbiterNA: FB_Arbiter(1);
+
+    bCRIX_SVLS_VRC_01_ILK_OK : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -305,7 +307,17 @@ CRIX_SVLS_VWC_01 (
     i_xExtILK_OK:= bCRIX_SVLS_VWC_01_ILK_OK,
     i_xOverrideMode:= xSystemOverride_ChemRIXS,
     iq_stValve=> stCRIX_SVLS_VWC_01,
-);]]></ST>
+);
+
+
+bCRIX_SVLS_VRC_01_ILK_OK := F_TurboGateValve_Protection_ILK(i_Turbo:=CRIX_SVLS_PTM_01.iq_stPtm,
+                                               i_stISG:=CRIX_SVLS_GCP_01.PG,
+                                               i_stBSG:=ROUGH_GPI_01.PG,
+                                                 ScrollPump:=MECH_PRO_01.stPump);
+CRIX_SVLS_VRC_01(i_xExtILK_OK:=bCRIX_SVLS_VRC_01_ILK_OK,
+            i_xOverrideMode:=xSystemOverride_ChemRIXS,
+            iq_stValve =>stCRIX_SVLS_VRC_01);
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
